@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[models/Provider.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L22)
+[models/Provider.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L22)
 
 ## Properties
 
@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[models/Provider.ts:11](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L11)
+[models/Provider.ts:11](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L11)
 
 ___
 
@@ -61,17 +61,17 @@ ___
 
 #### Defined in
 
-[models/Provider.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L17)
+[models/Provider.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L17)
 
 ___
 
 ### origins
 
-• `Optional` **origins**: `Origins`
+• `Optional` **origins**: [`Origins`](../modules.md#origins)
 
 #### Defined in
 
-[models/Provider.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L20)
+[models/Provider.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L20)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[models/Provider.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L15)
+[models/Provider.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L15)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[models/Provider.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L19)
+[models/Provider.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L19)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[models/Provider.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L18)
+[models/Provider.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L18)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[models/Provider.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L16)
+[models/Provider.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L16)
 
 ## Methods
 
@@ -127,7 +127,7 @@ Function for fetching provider authority address from blockchain
 
 #### Defined in
 
-[models/Provider.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L42)
+[models/Provider.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L42)
 
 ___
 
@@ -143,23 +143,23 @@ Function for fetching provider info from blockchain
 
 #### Defined in
 
-[models/Provider.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L34)
+[models/Provider.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L34)
 
 ___
 
 ### getOrigins
 
-▸ **getOrigins**(): `Promise`<`Origins`\>
+▸ **getOrigins**(): `Promise`<[`Origins`](../modules.md#origins)\>
 
 Fetch new Origins (createdDate, createdBy, modifiedDate and modifiedBy)
 
 #### Returns
 
-`Promise`<`Origins`\>
+`Promise`<[`Origins`](../modules.md#origins)\>
 
 #### Defined in
 
-[models/Provider.ts:74](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L74)
+[models/Provider.ts:74](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L74)
 
 ___
 
@@ -175,7 +175,7 @@ Function for fetching all TEE offers for this provider
 
 #### Defined in
 
-[models/Provider.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L58)
+[models/Provider.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L58)
 
 ___
 
@@ -191,7 +191,7 @@ Function for fetching all value offers for this provider
 
 #### Defined in
 
-[models/Provider.ts:50](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L50)
+[models/Provider.ts:50](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L50)
 
 ___
 
@@ -207,4 +207,4 @@ Function for fetching violationRate for this provider
 
 #### Defined in
 
-[models/Provider.ts:66](https://github.com/Super-Protocol/sp-sdk-js/blob/bf0e5d1/src/models/Provider.ts#L66)
+[models/Provider.ts:66](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/Provider.ts#L66)
