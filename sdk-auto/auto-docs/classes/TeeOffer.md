@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[models/TeeOffer.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L28)
+[models/TeeOffer.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L28)
 
 ## Properties
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[models/TeeOffer.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L13)
+[models/TeeOffer.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L13)
 
 ___
 
@@ -76,7 +76,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L22)
+[models/TeeOffer.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L22)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L19)
+[models/TeeOffer.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L19)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L26)
+[models/TeeOffer.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L26)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L21)
+[models/TeeOffer.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L21)
 
 ___
 
@@ -116,7 +116,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L23)
+[models/TeeOffer.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L23)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L25)
+[models/TeeOffer.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L25)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L24)
+[models/TeeOffer.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L24)
 
 ___
 
@@ -146,7 +146,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L18)
+[models/TeeOffer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L18)
 
 ___
 
@@ -156,7 +156,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L20)
+[models/TeeOffer.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L20)
 
 ___
 
@@ -166,7 +166,7 @@ ___
 
 #### Defined in
 
-[models/TeeOffer.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L17)
+[models/TeeOffer.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L17)
 
 ## Methods
 
@@ -189,7 +189,7 @@ Updates TLB in order info
 
 #### Defined in
 
-[models/TeeOffer.ts:139](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L139)
+[models/TeeOffer.ts:139](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L139)
 
 ___
 
@@ -211,7 +211,7 @@ Function for disabling TEE offer
 
 #### Defined in
 
-[models/TeeOffer.ts:196](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L196)
+[models/TeeOffer.ts:196](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L196)
 
 ___
 
@@ -233,7 +233,7 @@ Function for enabling TEE offer
 
 #### Defined in
 
-[models/TeeOffer.ts:206](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L206)
+[models/TeeOffer.ts:206](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L206)
 
 ___
 
@@ -249,7 +249,7 @@ Function for fetching offer provider from blockchain
 
 #### Defined in
 
-[models/TeeOffer.ts:64](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L64)
+[models/TeeOffer.ts:64](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L64)
 
 ___
 
@@ -265,7 +265,7 @@ Function for fetching TEE offer info from blockchain
 
 #### Defined in
 
-[models/TeeOffer.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L40)
+[models/TeeOffer.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L40)
 
 ___
 
@@ -281,7 +281,7 @@ Function for fetching last TCB addition time for this TEE offer
 
 #### Defined in
 
-[models/TeeOffer.ts:97](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L97)
+[models/TeeOffer.ts:97](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L97)
 
 ___
 
@@ -297,7 +297,7 @@ Function for fetching last TLB addition time for this TEE offer
 
 #### Defined in
 
-[models/TeeOffer.ts:89](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L89)
+[models/TeeOffer.ts:89](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L89)
 
 ___
 
@@ -313,7 +313,7 @@ Fetch offer type from blockchain (works for TEE and Value offers)
 
 #### Defined in
 
-[models/TeeOffer.ts:56](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L56)
+[models/TeeOffer.ts:56](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L56)
 
 ___
 
@@ -329,7 +329,7 @@ Fetch new Origins (createdDate, createdBy, modifiedDate and modifiedBy)
 
 #### Defined in
 
-[models/TeeOffer.ts:121](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L121)
+[models/TeeOffer.ts:121](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L121)
 
 ___
 
@@ -345,7 +345,7 @@ Function for fetching TEE offer provider from blockchain
 
 #### Defined in
 
-[models/TeeOffer.ts:48](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L48)
+[models/TeeOffer.ts:48](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L48)
 
 ___
 
@@ -361,7 +361,7 @@ Function for fetching tcb provider from blockchain
 
 #### Defined in
 
-[models/TeeOffer.ts:72](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L72)
+[models/TeeOffer.ts:72](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L72)
 
 ___
 
@@ -377,7 +377,7 @@ Function for fetching TLB provider from blockchain
 
 #### Defined in
 
-[models/TeeOffer.ts:80](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L80)
+[models/TeeOffer.ts:80](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L80)
 
 ___
 
@@ -393,7 +393,7 @@ Function for fetching amount of total locked tokens
 
 #### Defined in
 
-[models/TeeOffer.ts:113](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L113)
+[models/TeeOffer.ts:113](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L113)
 
 ___
 
@@ -409,7 +409,7 @@ Function for fetching violationRate for this TEE offer
 
 #### Defined in
 
-[models/TeeOffer.ts:105](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L105)
+[models/TeeOffer.ts:105](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L105)
 
 ___
 
@@ -432,7 +432,7 @@ Updates description in order info
 
 #### Defined in
 
-[models/TeeOffer.ts:163](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L163)
+[models/TeeOffer.ts:163](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L163)
 
 ___
 
@@ -456,7 +456,7 @@ Updates argsPublicKey and argsPublicKeyAlgo in order info
 
 #### Defined in
 
-[models/TeeOffer.ts:176](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L176)
+[models/TeeOffer.ts:176](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L176)
 
 ___
 
@@ -479,4 +479,4 @@ Updates name in order info
 
 #### Defined in
 
-[models/TeeOffer.ts:151](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/models/TeeOffer.ts#L151)
+[models/TeeOffer.ts:151](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/TeeOffer.ts#L151)

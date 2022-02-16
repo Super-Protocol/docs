@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[providers/storage/IStorageProvider.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/providers/storage/IStorageProvider.ts#L18)
+[providers/storage/IStorageProvider.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/providers/storage/IStorageProvider.ts#L18)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-[providers/storage/IStorageProvider.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/providers/storage/IStorageProvider.ts#L15)
+[providers/storage/IStorageProvider.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/providers/storage/IStorageProvider.ts#L15)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[providers/storage/IStorageProvider.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/providers/storage/IStorageProvider.ts#L10)
+[providers/storage/IStorageProvider.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/providers/storage/IStorageProvider.ts#L10)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[providers/storage/IStorageProvider.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/providers/storage/IStorageProvider.ts#L17)
+[providers/storage/IStorageProvider.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/providers/storage/IStorageProvider.ts#L17)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[providers/storage/IStorageProvider.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/providers/storage/IStorageProvider.ts#L16)
+[providers/storage/IStorageProvider.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/providers/storage/IStorageProvider.ts#L16)
 
 ___
 
@@ -137,4 +137,4 @@ ___
 
 #### Defined in
 
-[providers/storage/IStorageProvider.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/92112b5/src/providers/storage/IStorageProvider.ts#L5)
+[providers/storage/IStorageProvider.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/providers/storage/IStorageProvider.ts#L5)
