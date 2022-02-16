@@ -121,7 +121,7 @@
 
 #### Defined in
 
-[types/Ballot.ts:61](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Ballot.ts#L61)
+[types/Ballot.ts:61](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Ballot.ts#L61)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[BlockchainConnector.ts:127](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/BlockchainConnector.ts#L127)
+[BlockchainConnector.ts:127](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/BlockchainConnector.ts#L127)
 
 ___
 
@@ -161,7 +161,7 @@ ___
 
 #### Defined in
 
-[types/Epoch.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Epoch.ts#L10)
+[types/Epoch.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Epoch.ts#L10)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Staking.ts#L21)
+[types/Staking.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Staking.ts#L21)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Ballot.ts#L27)
+[types/Ballot.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Ballot.ts#L27)
 
 ___
 
@@ -234,7 +234,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Offer.ts#L46)
+[types/Offer.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Offer.ts#L46)
 
 ___
 
@@ -251,7 +251,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Offer.ts#L18)
+[types/Offer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Offer.ts#L18)
 
 ___
 
@@ -269,7 +269,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Order.ts#L19)
+[types/Order.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Order.ts#L19)
 
 ___
 
@@ -291,7 +291,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:35](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Order.ts#L35)
+[types/Order.ts:35](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Order.ts#L35)
 
 ___
 
@@ -309,7 +309,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Order.ts#L51)
+[types/Order.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Order.ts#L51)
 
 ___
 
@@ -328,7 +328,7 @@ ___
 
 #### Defined in
 
-[types/Origins.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Origins.ts#L8)
+[types/Origins.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Origins.ts#L8)
 
 ___
 
@@ -348,7 +348,7 @@ ___
 
 #### Defined in
 
-[types/Provider.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Provider.ts#L9)
+[types/Provider.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Provider.ts#L9)
 
 ___
 
@@ -367,7 +367,7 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/TcbData.ts#L13)
+[types/TcbData.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/TcbData.ts#L13)
 
 ___
 
@@ -384,7 +384,7 @@ ___
 
 #### Defined in
 
-[TIIGenerator.ts:106](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/TIIGenerator.ts#L106)
+[TIIGenerator.ts:106](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/TIIGenerator.ts#L106)
 
 ___
 
@@ -403,7 +403,7 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Staking.ts#L8)
+[types/Staking.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Staking.ts#L8)
 
 ___
 
@@ -420,7 +420,7 @@ ___
 
 #### Defined in
 
-[types/storage/StorageAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/storage/StorageAccess.ts#L3)
+[types/storage/StorageAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/storage/StorageAccess.ts#L3)
 
 ___
 
@@ -430,7 +430,7 @@ ___
 
 #### Defined in
 
-[types/storage/StorageFileAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/storage/StorageFileAccess.ts#L3)
+[types/storage/StorageFileAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/storage/StorageFileAccess.ts#L3)
 
 ___
 
@@ -450,7 +450,7 @@ ___
 
 #### Defined in
 
-[types/storage/StorageObject.ts:1](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/storage/StorageObject.ts#L1)
+[types/storage/StorageObject.ts:1](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/storage/StorageObject.ts#L1)
 
 ___
 
@@ -468,7 +468,7 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/TcbData.ts#L26)
+[types/TcbData.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/TcbData.ts#L26)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 #### Defined in
 
-[types/TeeOffer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/TeeOffer.ts#L14)
+[types/TeeOffer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/TeeOffer.ts#L14)
 
 ___
 
@@ -511,7 +511,7 @@ ___
 
 #### Defined in
 
-[TIIGenerator.ts:111](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/TIIGenerator.ts#L111)
+[TIIGenerator.ts:111](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/TIIGenerator.ts#L111)
 
 ___
 
@@ -528,7 +528,7 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Ballot.ts#L40)
+[types/Ballot.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Ballot.ts#L40)
 
 ___
 
@@ -552,7 +552,7 @@ ___
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:118](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/staticModels/OrdersFactory.ts#L118)
+[staticModels/OrdersFactory.ts:118](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/OrdersFactory.ts#L118)
 
 ___
 
@@ -576,7 +576,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:207](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/models/Order.ts#L207)
+[models/Order.ts:207](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/models/Order.ts#L207)
 
 ## Properties
 
@@ -629,7 +629,7 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Ballot.ts#L46)
+[types/Ballot.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Ballot.ts#L46)
 
 ___
 
@@ -650,7 +650,7 @@ ___
 
 #### Defined in
 
-[types/Epoch.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Epoch.ts#L2)
+[types/Epoch.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Epoch.ts#L2)
 
 ___
 
@@ -668,7 +668,7 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Staking.ts#L16)
+[types/Staking.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Staking.ts#L16)
 
 ___
 
@@ -688,7 +688,7 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Ballot.ts#L20)
+[types/Ballot.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Ballot.ts#L20)
 
 ___
 
@@ -725,7 +725,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Offer.ts#L24)
+[types/Offer.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Offer.ts#L24)
 
 ___
 
@@ -742,7 +742,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Offer.ts#L14)
+[types/Offer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Offer.ts#L14)
 
 ___
 
@@ -760,7 +760,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Order.ts#L14)
+[types/Order.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Order.ts#L14)
 
 ___
 
@@ -785,7 +785,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Order.ts#L26)
+[types/Order.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Order.ts#L26)
 
 ___
 
@@ -803,7 +803,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Order.ts#L46)
+[types/Order.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Order.ts#L46)
 
 ___
 
@@ -822,7 +822,7 @@ ___
 
 #### Defined in
 
-[types/Origins.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Origins.ts#L2)
+[types/Origins.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Origins.ts#L2)
 
 ___
 
@@ -842,7 +842,7 @@ ___
 
 #### Defined in
 
-[types/Provider.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Provider.ts#L2)
+[types/Provider.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Provider.ts#L2)
 
 ___
 
@@ -861,7 +861,7 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:7](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/TcbData.ts#L7)
+[types/TcbData.ts:7](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/TcbData.ts#L7)
 
 ___
 
@@ -880,7 +880,7 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Staking.ts#L2)
+[types/Staking.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Staking.ts#L2)
 
 ___
 
@@ -898,7 +898,7 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/TcbData.ts#L21)
+[types/TcbData.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/TcbData.ts#L21)
 
 ___
 
@@ -923,7 +923,7 @@ ___
 
 #### Defined in
 
-[types/TeeOffer.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/TeeOffer.ts#L2)
+[types/TeeOffer.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/TeeOffer.ts#L2)
 
 ___
 
@@ -940,4 +940,4 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/types/Ballot.ts#L36)
+[types/Ballot.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/types/Ballot.ts#L36)

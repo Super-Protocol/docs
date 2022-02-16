@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/BlockchainConnector.ts#L25)
+[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/BlockchainConnector.ts#L25)
 
 ## Methods
 
@@ -60,7 +60,7 @@ Promise<{
 
 #### Defined in
 
-[BlockchainConnector.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/BlockchainConnector.ts#L82)
+[BlockchainConnector.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/BlockchainConnector.ts#L82)
 
 ___
 
@@ -84,7 +84,7 @@ Needs to run this function before using blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/BlockchainConnector.ts#L32)
+[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/BlockchainConnector.ts#L32)
 
 ___
 
@@ -107,4 +107,4 @@ Needs to run this function before using any set methods in blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:65](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/BlockchainConnector.ts#L65)
+[BlockchainConnector.ts:65](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/BlockchainConnector.ts#L65)

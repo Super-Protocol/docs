@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[staticModels/Epochs.ts:11](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/staticModels/Epochs.ts#L11)
+[staticModels/Epochs.ts:11](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Epochs.ts#L11)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Function for fetching TCB last blocks list size
 
 #### Defined in
 
-[staticModels/Epochs.ts:48](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/staticModels/Epochs.ts#L48)
+[staticModels/Epochs.ts:48](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Epochs.ts#L48)
 
 ___
 
@@ -70,7 +70,7 @@ Function for fetching epoch info by index
 
 #### Defined in
 
-[staticModels/Epochs.ts:29](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/staticModels/Epochs.ts#L29)
+[staticModels/Epochs.ts:29](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Epochs.ts#L29)
 
 ___
 
@@ -92,4 +92,4 @@ Function for fetching TCB reward by epoch
 
 #### Defined in
 
-[staticModels/Epochs.ts:39](https://github.com/Super-Protocol/sp-sdk-js/blob/44bd851/src/staticModels/Epochs.ts#L39)
+[staticModels/Epochs.ts:39](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Epochs.ts#L39)
