@@ -21,7 +21,6 @@
 - [getInitedTcb](Consensus.md#getinitedtcb)
 - [getListsForVerification](Consensus.md#getlistsforverification)
 - [getTimeInited](Consensus.md#gettimeinited)
-- [isEnoughMarksAdded](Consensus.md#isenoughmarksadded)
 - [unlockRewards](Consensus.md#unlockrewards)
 
 ## Constructors
@@ -38,7 +37,7 @@
 
 #### Defined in
 
-[staticModels/Consensus.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L15)
+[staticModels/Consensus.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L15)
 
 ___
 
@@ -48,7 +47,7 @@ ___
 
 #### Defined in
 
-[staticModels/Consensus.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L27)
+[staticModels/Consensus.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L22)
 
 ## Methods
 
@@ -68,13 +67,13 @@ ___
 
 #### Defined in
 
-[staticModels/Consensus.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L19)
+[staticModels/Consensus.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L19)
 
 ___
 
 ### addTCB
 
-▸ `Static` **addTCB**(`teeOfferAddress`, `L1`, `L2`, `tcbData`, `transactionOptions?`): `Promise`<`void`\>
+▸ `Static` **addTCB**(`teeOfferAddress`, `L1Marks`, `L2Marks`, `tcbData`, `transactionOptions?`): `Promise`<`void`\>
 
 Add data to TeeConfirmationBlock and push it to Consensus
 
@@ -83,8 +82,8 @@ Add data to TeeConfirmationBlock and push it to Consensus
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `teeOfferAddress` | `string` | TCB's device offer, as key |
-| `L1` | `number`[] | marks of LastBlocks |
-| `L2` | `number`[] | marks of SuspiciousBlocks |
+| `L1Marks` | `number`[] | marks of LastBlocks |
+| `L2Marks` | `number`[] | marks of SuspiciousBlocks |
 | `tcbData` | `Object` | TEE generated |
 | `tcbData.publicData` | [`PublicData`](../modules.md#publicdata) | - |
 | `tcbData.quote` | `string` | - |
@@ -96,7 +95,7 @@ Add data to TeeConfirmationBlock and push it to Consensus
 
 #### Defined in
 
-[staticModels/Consensus.ts:94](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L94)
+[staticModels/Consensus.ts:122](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L122)
 
 ___
 
@@ -119,7 +118,7 @@ Function stake and lock TCB's reward
 
 #### Defined in
 
-[staticModels/Consensus.ts:127](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L127)
+[staticModels/Consensus.ts:149](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L149)
 
 ___
 
@@ -141,7 +140,7 @@ Function return last inited TCB of TEE offer
 
 #### Defined in
 
-[staticModels/Consensus.ts:156](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L156)
+[staticModels/Consensus.ts:178](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L178)
 
 ___
 
@@ -166,7 +165,7 @@ two lists of anothers' TCB addresses for their checking
 
 #### Defined in
 
-[staticModels/Consensus.ts:57](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L57)
+[staticModels/Consensus.ts:85](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L85)
 
 ___
 
@@ -188,28 +187,7 @@ Function return last inited TCB of TEE offer
 
 #### Defined in
 
-[staticModels/Consensus.ts:166](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L166)
-
-___
-
-### isEnoughMarksAdded
-
-▸ `Static` **isEnoughMarksAdded**(`lType`, `tcb`): `Promise`<`boolean`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `lType` | [`LType`](../enums/LType.md) |
-| `tcb` | [`TCB`](TCB.md) |
-
-#### Returns
-
-`Promise`<`boolean`\>
-
-#### Defined in
-
-[staticModels/Consensus.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L22)
+[staticModels/Consensus.ts:188](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L188)
 
 ___
 
@@ -233,4 +211,4 @@ Function unlock previously locked TCB rewards (by claimRewards)
 
 #### Defined in
 
-[staticModels/Consensus.ts:139](https://github.com/Super-Protocol/sp-sdk-js/blob/5474680/src/staticModels/Consensus.ts#L139)
+[staticModels/Consensus.ts:161](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/Consensus.ts#L161)
