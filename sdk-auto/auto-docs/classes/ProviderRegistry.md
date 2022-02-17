@@ -18,6 +18,7 @@
 - [get](ProviderRegistry.md#get)
 - [getAllProviders](ProviderRegistry.md#getallproviders)
 - [getSecurityDeposit](ProviderRegistry.md#getsecuritydeposit)
+- [onProviderRegistered](ProviderRegistry.md#onproviderregistered)
 - [refillSecurityDeposit](ProviderRegistry.md#refillsecuritydeposit)
 - [registerProvider](ProviderRegistry.md#registerprovider)
 - [returnSecurityDeposit](ProviderRegistry.md#returnsecuritydeposit)
@@ -36,7 +37,7 @@
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L17)
+[staticModels/ProviderRegistry.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L17)
 
 ___
 
@@ -46,7 +47,7 @@ ___
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L21)
+[staticModels/ProviderRegistry.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L21)
 
 ## Methods
 
@@ -68,7 +69,7 @@ Fetch provider address by provider authority account
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L46)
+[staticModels/ProviderRegistry.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L46)
 
 ___
 
@@ -84,7 +85,7 @@ Function for fetching list of all providers addresses
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L37)
+[staticModels/ProviderRegistry.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L37)
 
 ___
 
@@ -106,7 +107,41 @@ Fetch provider security deposit by provider authority account
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L54)
+[staticModels/ProviderRegistry.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L54)
+
+___
+
+### onProviderRegistered
+
+▸ `Static` **onProviderRegistered**(`callback`): () => `void`
+
+Function for adding event listeners on provider registered event in provider registry
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callback` | [`onProviderRegisteredCallback`](../modules.md#onproviderregisteredcallback) | function for processing new provider |
+
+#### Returns
+
+`fn`
+
+unsubscribe - unsubscribe function from event
+
+▸ (): `void`
+
+Function for adding event listeners on provider registered event in provider registry
+
+##### Returns
+
+`void`
+
+unsubscribe - unsubscribe function from event
+
+#### Defined in
+
+[staticModels/ProviderRegistry.ts:105](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L105)
 
 ___
 
@@ -130,7 +165,7 @@ Call this function with provider authority account (in transactionOptions)
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L82)
+[staticModels/ProviderRegistry.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L82)
 
 ___
 
@@ -154,7 +189,7 @@ Reg new provider
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:64](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L64)
+[staticModels/ProviderRegistry.ts:64](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L64)
 
 ___
 
@@ -178,4 +213,4 @@ Call this function with provider authority account (in transactionOptions)
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:94](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/ProviderRegistry.ts#L94)
+[staticModels/ProviderRegistry.ts:94](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/ProviderRegistry.ts#L94)

@@ -17,6 +17,7 @@
 
 - [createOffer](OffersFactory.md#createoffer)
 - [getAllOffers](OffersFactory.md#getalloffers)
+- [onOfferCreated](OffersFactory.md#onoffercreated)
 
 ## Constructors
 
@@ -32,7 +33,7 @@
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/OffersFactory.ts#L17)
+[staticModels/OffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OffersFactory.ts#L17)
 
 ___
 
@@ -42,7 +43,7 @@ ___
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/OffersFactory.ts#L21)
+[staticModels/OffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OffersFactory.ts#L21)
 
 ## Methods
 
@@ -67,7 +68,7 @@ Creates new offer
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:50](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/OffersFactory.ts#L50)
+[staticModels/OffersFactory.ts:50](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OffersFactory.ts#L50)
 
 ___
 
@@ -83,4 +84,38 @@ Function for fetching list of all offers addresses
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/OffersFactory.ts#L37)
+[staticModels/OffersFactory.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OffersFactory.ts#L37)
+
+___
+
+### onOfferCreated
+
+▸ `Static` **onOfferCreated**(`callback`): () => `void`
+
+Function for adding event listeners on offer created event in offers factory contract
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callback` | [`onOfferCreatedCallback`](../modules.md#onoffercreatedcallback) | function for processing created offer |
+
+#### Returns
+
+`fn`
+
+unsubscribe - unsubscribe function from event
+
+▸ (): `void`
+
+Function for adding event listeners on offer created event in offers factory contract
+
+##### Returns
+
+`void`
+
+unsubscribe - unsubscribe function from event
+
+#### Defined in
+
+[staticModels/OffersFactory.ts:70](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OffersFactory.ts#L70)

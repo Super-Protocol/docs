@@ -17,6 +17,7 @@
 
 - [createTeeOffer](TeeOffersFactory.md#createteeoffer)
 - [getAllTeeOffers](TeeOffersFactory.md#getallteeoffers)
+- [onTeeOfferCreated](TeeOffersFactory.md#onteeoffercreated)
 
 ## Constructors
 
@@ -32,7 +33,7 @@
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/TeeOffersFactory.ts#L17)
+[staticModels/TeeOffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/TeeOffersFactory.ts#L17)
 
 ___
 
@@ -42,7 +43,7 @@ ___
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/TeeOffersFactory.ts#L21)
+[staticModels/TeeOffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/TeeOffersFactory.ts#L21)
 
 ## Methods
 
@@ -67,7 +68,7 @@ Creates new TEE offer
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:49](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/TeeOffersFactory.ts#L49)
+[staticModels/TeeOffersFactory.ts:49](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/TeeOffersFactory.ts#L49)
 
 ___
 
@@ -83,4 +84,38 @@ Function for fetching list of all TEE offers addresses
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/f252afa/src/staticModels/TeeOffersFactory.ts#L37)
+[staticModels/TeeOffersFactory.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/TeeOffersFactory.ts#L37)
+
+___
+
+### onTeeOfferCreated
+
+▸ `Static` **onTeeOfferCreated**(`callback`): () => `void`
+
+Function for adding event listeners on TEE offer created event in TEE offers factory contract
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `callback` | [`onTeeOfferCreatedCallback`](../modules.md#onteeoffercreatedcallback) | function for processing created TEE offer |
+
+#### Returns
+
+`fn`
+
+unsubscribe - unsubscribe function from event
+
+▸ (): `void`
+
+Function for adding event listeners on TEE offer created event in TEE offers factory contract
+
+##### Returns
+
+`void`
+
+unsubscribe - unsubscribe function from event
+
+#### Defined in
+
+[staticModels/TeeOffersFactory.ts:70](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/TeeOffersFactory.ts#L70)
