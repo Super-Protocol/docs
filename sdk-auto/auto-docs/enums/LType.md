@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types/TcbData.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/types/TcbData.ts#L2)
+[types/TcbData.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/types/TcbData.ts#L2)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/types/TcbData.ts#L3)
+[types/TcbData.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/types/TcbData.ts#L3)

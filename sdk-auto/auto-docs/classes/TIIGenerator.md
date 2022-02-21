@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[TIIGenerator.ts:57](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/TIIGenerator.ts#L57)
+[TIIGenerator.ts:57](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/TIIGenerator.ts#L57)
 
 ___
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[TIIGenerator.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/TIIGenerator.ts#L17)
+[TIIGenerator.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/TIIGenerator.ts#L17)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[TIIGenerator.ts:103](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/TIIGenerator.ts#L103)
+[TIIGenerator.ts:103](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/TIIGenerator.ts#L103)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[TIIGenerator.ts:91](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/TIIGenerator.ts#L91)
+[TIIGenerator.ts:91](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/TIIGenerator.ts#L91)
 
 ___
 
@@ -136,4 +136,4 @@ ___
 
 #### Defined in
 
-[TIIGenerator.ts:98](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/TIIGenerator.ts#L98)
+[TIIGenerator.ts:98](https://github.com/Super-Protocol/sp-sdk-js/blob/6811aa1/src/TIIGenerator.ts#L98)
