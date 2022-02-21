@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L17)
+[staticModels/OrdersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L17)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L21)
+[staticModels/OrdersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L21)
 
 ## Methods
 
@@ -73,7 +73,7 @@ Promise<void> - Does not return address of created contract!
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:81](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L81)
+[staticModels/OrdersFactory.ts:81](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L81)
 
 ___
 
@@ -89,7 +89,7 @@ Function for fetching list of all orders addresses
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L37)
+[staticModels/OrdersFactory.ts:37](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L37)
 
 ___
 
@@ -111,7 +111,7 @@ Function for fetching order hold deposit for specific order
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:47](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L47)
+[staticModels/OrdersFactory.ts:47](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L47)
 
 ___
 
@@ -145,7 +145,7 @@ unsubscribe - unsubscribe function from event
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:57](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L57)
+[staticModels/OrdersFactory.ts:57](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L57)
 
 ___
 
@@ -169,4 +169,4 @@ Function for refilling order deposit
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:104](https://github.com/Super-Protocol/sp-sdk-js/blob/94e36db/src/staticModels/OrdersFactory.ts#L104)
+[staticModels/OrdersFactory.ts:104](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/staticModels/OrdersFactory.ts#L104)
