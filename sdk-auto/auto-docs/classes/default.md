@@ -14,6 +14,7 @@
 
 ### Methods
 
+- [getBalance](default.md#getbalance)
 - [getTransactions](default.md#gettransactions)
 - [init](default.md#init)
 - [initActionAccount](default.md#initactionaccount)
@@ -32,9 +33,31 @@
 
 #### Defined in
 
-[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/BlockchainConnector.ts#L25)
+[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L25)
 
 ## Methods
+
+### getBalance
+
+▸ `Static` **getBalance**(`address`): `Promise`<`string`\>
+
+Returns balance of blockchain platform tokens in wei
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `address` | `string` |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Defined in
+
+[BlockchainConnector.ts:76](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L76)
+
+___
 
 ### getTransactions
 
@@ -60,7 +83,7 @@ Promise<{
 
 #### Defined in
 
-[BlockchainConnector.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/BlockchainConnector.ts#L82)
+[BlockchainConnector.ts:90](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L90)
 
 ___
 
@@ -84,7 +107,7 @@ Needs to run this function before using blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/BlockchainConnector.ts#L32)
+[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L32)
 
 ___
 
@@ -107,4 +130,4 @@ Needs to run this function before using any set methods in blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:65](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/BlockchainConnector.ts#L65)
+[BlockchainConnector.ts:65](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L65)

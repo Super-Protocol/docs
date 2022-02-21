@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[types/Epoch.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Epoch.ts#L21)
+[types/Epoch.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Epoch.ts#L21)
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 #### Defined in
 
-[types/Epoch.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Epoch.ts#L20)
+[types/Epoch.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Epoch.ts#L20)
 
 ___
 
@@ -38,4 +38,4 @@ ___
 
 #### Defined in
 
-[types/Epoch.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Epoch.ts#L19)
+[types/Epoch.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Epoch.ts#L19)

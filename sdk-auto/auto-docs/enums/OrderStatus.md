@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[types/Order.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L10)
+[types/Order.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L10)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L8)
+[types/Order.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L8)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L5)
+[types/Order.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L5)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:4](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L4)
+[types/Order.ts:4](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L4)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:6](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L6)
+[types/Order.ts:6](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L6)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:7](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L7)
+[types/Order.ts:7](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L7)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L2)
+[types/Order.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L2)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L3)
+[types/Order.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L3)
 
 ___
 
@@ -104,4 +104,4 @@ ___
 
 #### Defined in
 
-[types/Order.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/067ab11/src/types/Order.ts#L9)
+[types/Order.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L9)
