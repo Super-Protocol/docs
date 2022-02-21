@@ -60,7 +60,6 @@
 - [Origins](modules.md#origins)
 - [ProviderInfo](modules.md#providerinfo)
 - [PublicData](modules.md#publicdata)
-- [SolutionHash](modules.md#solutionhash)
 - [StakeInfo](modules.md#stakeinfo)
 - [StorageAccess](modules.md#storageaccess)
 - [StorageFileAccess](modules.md#storagefileaccess)
@@ -124,7 +123,7 @@
 
 #### Defined in
 
-[types/Ballot.ts:61](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Ballot.ts#L61)
+[types/Ballot.ts:61](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Ballot.ts#L61)
 
 ___
 
@@ -143,7 +142,7 @@ ___
 
 #### Defined in
 
-[BlockchainConnector.ts:135](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L135)
+[BlockchainConnector.ts:135](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/BlockchainConnector.ts#L135)
 
 ___
 
@@ -164,7 +163,7 @@ ___
 
 #### Defined in
 
-[types/Epoch.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Epoch.ts#L10)
+[types/Epoch.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Epoch.ts#L10)
 
 ___
 
@@ -182,7 +181,7 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Staking.ts#L21)
+[types/Staking.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Staking.ts#L21)
 
 ___
 
@@ -202,7 +201,7 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Ballot.ts#L27)
+[types/Ballot.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Ballot.ts#L27)
 
 ___
 
@@ -217,13 +216,11 @@ ___
 | `allowedAccounts` | `string`[] |
 | `allowedArgs` | `string` |
 | `argsPublicKey` | `string` |
-| `argsPublicKeyAlgo` | `string` |
 | `cancelable` | `boolean` |
 | `description` | `string` |
 | `disabledAfter` | `number` |
 | `group` | [`OfferGroup`](enums/OfferGroup.md) |
 | `hash` | `string` |
-| `hashAlgo` | `string` |
 | `holdSum` | `number` |
 | `inputFormat` | `string` |
 | `linkage` | `string` |
@@ -237,7 +234,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Offer.ts#L46)
+[types/Offer.ts:44](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Offer.ts#L44)
 
 ___
 
@@ -254,7 +251,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Offer.ts#L18)
+[types/Offer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Offer.ts#L18)
 
 ___
 
@@ -272,7 +269,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L19)
+[types/Order.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Order.ts#L19)
 
 ___
 
@@ -289,12 +286,11 @@ ___
 | `encryptedRequirements` | `string` |
 | `offer` | `string` |
 | `resultPublicKey` | `string` |
-| `resultPublicKeyAlgo` | `string` |
 | `status` | [`OrderStatus`](enums/OrderStatus.md) |
 
 #### Defined in
 
-[types/Order.ts:35](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L35)
+[types/Order.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Order.ts#L34)
 
 ___
 
@@ -312,7 +308,7 @@ ___
 
 #### Defined in
 
-[types/Order.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L51)
+[types/Order.ts:49](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Order.ts#L49)
 
 ___
 
@@ -331,7 +327,7 @@ ___
 
 #### Defined in
 
-[types/Origins.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Origins.ts#L8)
+[types/Origins.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Origins.ts#L8)
 
 ___
 
@@ -351,7 +347,7 @@ ___
 
 #### Defined in
 
-[types/Provider.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Provider.ts#L9)
+[types/Provider.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Provider.ts#L9)
 
 ___
 
@@ -370,24 +366,7 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/TcbData.ts#L13)
-
-___
-
-### SolutionHash
-
-Ƭ **SolutionHash**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `hash` | `string` |
-| `hashAlgo` | `string` |
-
-#### Defined in
-
-[TIIGenerator.ts:106](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/TIIGenerator.ts#L106)
+[types/TcbData.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/TcbData.ts#L13)
 
 ___
 
@@ -406,7 +385,7 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Staking.ts#L8)
+[types/Staking.ts:8](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Staking.ts#L8)
 
 ___
 
@@ -423,7 +402,7 @@ ___
 
 #### Defined in
 
-[types/storage/StorageAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/storage/StorageAccess.ts#L3)
+[types/storage/StorageAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/storage/StorageAccess.ts#L3)
 
 ___
 
@@ -433,7 +412,7 @@ ___
 
 #### Defined in
 
-[types/storage/StorageFileAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/storage/StorageFileAccess.ts#L3)
+[types/storage/StorageFileAccess.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/storage/StorageFileAccess.ts#L3)
 
 ___
 
@@ -453,7 +432,7 @@ ___
 
 #### Defined in
 
-[types/storage/StorageObject.ts:1](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/storage/StorageObject.ts#L1)
+[types/storage/StorageObject.ts:1](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/storage/StorageObject.ts#L1)
 
 ___
 
@@ -471,7 +450,7 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/TcbData.ts#L26)
+[types/TcbData.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/TcbData.ts#L26)
 
 ___
 
@@ -484,7 +463,6 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `argsPublicKey` | `string` |
-| `argsPublicKeyAlgo` | `string` |
 | `description` | `string` |
 | `minTimeMinutes` | `number` |
 | `name` | `string` |
@@ -496,7 +474,7 @@ ___
 
 #### Defined in
 
-[types/TeeOffer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/TeeOffer.ts#L14)
+[types/TeeOffer.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/TeeOffer.ts#L13)
 
 ___
 
@@ -510,11 +488,11 @@ ___
 | :------ | :------ |
 | `args` | `any` |
 | `encryption` | `Encryption` |
-| `solutionHashes` | [`SolutionHash`](modules.md#solutionhash)[] |
+| `solutionHashes` | `string`[] |
 
 #### Defined in
 
-[TIIGenerator.ts:111](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/TIIGenerator.ts#L111)
+[TIIGenerator.ts:111](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/TIIGenerator.ts#L111)
 
 ___
 
@@ -531,7 +509,7 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Ballot.ts#L40)
+[types/Ballot.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Ballot.ts#L40)
 
 ___
 
@@ -555,7 +533,7 @@ ___
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:88](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/OffersFactory.ts#L88)
+[staticModels/OffersFactory.ts:88](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/OffersFactory.ts#L88)
 
 ___
 
@@ -579,7 +557,7 @@ ___
 
 #### Defined in
 
-[staticModels/OrdersFactory.ts:118](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/OrdersFactory.ts#L118)
+[staticModels/OrdersFactory.ts:118](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/OrdersFactory.ts#L118)
 
 ___
 
@@ -603,7 +581,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:207](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/models/Order.ts#L207)
+[models/Order.ts:207](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/Order.ts#L207)
 
 ___
 
@@ -627,7 +605,7 @@ ___
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:123](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/ProviderRegistry.ts#L123)
+[staticModels/ProviderRegistry.ts:123](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/ProviderRegistry.ts#L123)
 
 ___
 
@@ -651,7 +629,7 @@ ___
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:88](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/TeeOffersFactory.ts#L88)
+[staticModels/TeeOffersFactory.ts:88](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/TeeOffersFactory.ts#L88)
 
 ## Properties
 
@@ -677,7 +655,7 @@ ___
 
 ### BallotInfoStructure
 
-• **BallotInfoStructure**: `Object`
+• `Const` **BallotInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -704,13 +682,13 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Ballot.ts#L46)
+[types/Ballot.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Ballot.ts#L46)
 
 ___
 
 ### EpochStructure
 
-• **EpochStructure**: `Object`
+• `Const` **EpochStructure**: `Object`
 
 #### Type declaration
 
@@ -725,13 +703,13 @@ ___
 
 #### Defined in
 
-[types/Epoch.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Epoch.ts#L2)
+[types/Epoch.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Epoch.ts#L2)
 
 ___
 
 ### LockInfoStructure
 
-• **LockInfoStructure**: `Object`
+• `Const` **LockInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -743,13 +721,13 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Staking.ts#L16)
+[types/Staking.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Staking.ts#L16)
 
 ___
 
 ### ModifyRequestStructure
 
-• **ModifyRequestStructure**: `Object`
+• `Const` **ModifyRequestStructure**: `Object`
 
 #### Type declaration
 
@@ -763,13 +741,13 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Ballot.ts#L20)
+[types/Ballot.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Ballot.ts#L20)
 
 ___
 
 ### OfferInfoStructure
 
-• **OfferInfoStructure**: `Object`
+• `Const` **OfferInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -778,13 +756,11 @@ ___
 | `allowedAccounts` | `StringConstructor`[] |
 | `allowedArgs` | `StringConstructor` |
 | `argsPublicKey` | `StringConstructor` |
-| `argsPublicKeyAlgo` | `StringConstructor` |
 | `cancelable` | `BooleanConstructor` |
 | `description` | `StringConstructor` |
 | `disabledAfter` | `NumberConstructor` |
 | `group` | typeof [`OfferGroup`](enums/OfferGroup.md) |
 | `hash` | `StringConstructor` |
-| `hashAlgo` | `StringConstructor` |
 | `holdSum` | `NumberConstructor` |
 | `inputFormat` | `StringConstructor` |
 | `linkage` | `StringConstructor` |
@@ -800,13 +776,13 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Offer.ts#L24)
+[types/Offer.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Offer.ts#L24)
 
 ___
 
 ### OfferRestrictionsStructure
 
-• **OfferRestrictionsStructure**: `Object`
+• `Const` **OfferRestrictionsStructure**: `Object`
 
 #### Type declaration
 
@@ -817,13 +793,13 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Offer.ts#L14)
+[types/Offer.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Offer.ts#L14)
 
 ___
 
 ### OrderArgsStructure
 
-• **OrderArgsStructure**: `Object`
+• `Const` **OrderArgsStructure**: `Object`
 
 #### Type declaration
 
@@ -835,13 +811,13 @@ ___
 
 #### Defined in
 
-[types/Order.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L14)
+[types/Order.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Order.ts#L14)
 
 ___
 
 ### OrderInfoStructure
 
-• **OrderInfoStructure**: `Object`
+• `Const` **OrderInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -855,18 +831,17 @@ ___
 | `encryptedRequirements` | `StringConstructor` |
 | `offer` | `StringConstructor` |
 | `resultPublicKey` | `StringConstructor` |
-| `resultPublicKeyAlgo` | `StringConstructor` |
 | `status` | typeof [`OrderStatus`](enums/OrderStatus.md) |
 
 #### Defined in
 
-[types/Order.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L26)
+[types/Order.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Order.ts#L26)
 
 ___
 
 ### OrderResultStructure
 
-• **OrderResultStructure**: `Object`
+• `Const` **OrderResultStructure**: `Object`
 
 #### Type declaration
 
@@ -878,13 +853,13 @@ ___
 
 #### Defined in
 
-[types/Order.ts:46](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Order.ts#L46)
+[types/Order.ts:44](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Order.ts#L44)
 
 ___
 
 ### OriginsStructure
 
-• **OriginsStructure**: `Object`
+• `Const` **OriginsStructure**: `Object`
 
 #### Type declaration
 
@@ -897,13 +872,13 @@ ___
 
 #### Defined in
 
-[types/Origins.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Origins.ts#L2)
+[types/Origins.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Origins.ts#L2)
 
 ___
 
 ### ProviderInfoStructure
 
-• **ProviderInfoStructure**: `Object`
+• `Const` **ProviderInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -917,13 +892,13 @@ ___
 
 #### Defined in
 
-[types/Provider.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Provider.ts#L2)
+[types/Provider.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Provider.ts#L2)
 
 ___
 
 ### PublicDataStructure
 
-• **PublicDataStructure**: `Object`
+• `Const` **PublicDataStructure**: `Object`
 
 #### Type declaration
 
@@ -936,13 +911,13 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:7](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/TcbData.ts#L7)
+[types/TcbData.ts:7](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/TcbData.ts#L7)
 
 ___
 
 ### StakeInfoStructure
 
-• **StakeInfoStructure**: `Object`
+• `Const` **StakeInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -955,13 +930,13 @@ ___
 
 #### Defined in
 
-[types/Staking.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Staking.ts#L2)
+[types/Staking.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Staking.ts#L2)
 
 ___
 
 ### TcbEpochInfoStructure
 
-• **TcbEpochInfoStructure**: `Object`
+• `Const` **TcbEpochInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -973,20 +948,19 @@ ___
 
 #### Defined in
 
-[types/TcbData.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/TcbData.ts#L21)
+[types/TcbData.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/TcbData.ts#L21)
 
 ___
 
 ### TeeOfferInfoStructure
 
-• **TeeOfferInfoStructure**: `Object`
+• `Const` **TeeOfferInfoStructure**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
 | `argsPublicKey` | `StringConstructor` |
-| `argsPublicKeyAlgo` | `StringConstructor` |
 | `description` | `StringConstructor` |
 | `minTimeMinutes` | `NumberConstructor` |
 | `name` | `StringConstructor` |
@@ -998,13 +972,13 @@ ___
 
 #### Defined in
 
-[types/TeeOffer.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/TeeOffer.ts#L2)
+[types/TeeOffer.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/TeeOffer.ts#L2)
 
 ___
 
 ### VoterInfoStructure
 
-• **VoterInfoStructure**: `Object`
+• `Const` **VoterInfoStructure**: `Object`
 
 #### Type declaration
 
@@ -1015,4 +989,4 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Ballot.ts#L36)
+[types/Ballot.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Ballot.ts#L36)

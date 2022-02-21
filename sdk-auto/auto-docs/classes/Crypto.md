@@ -43,7 +43,7 @@ Promise<string> - decrypted string
 
 #### Defined in
 
-[crypto/Crypto.ts:78](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/crypto/Crypto.ts#L78)
+[crypto/Crypto.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/crypto/Crypto.ts#L82)
 
 ___
 
@@ -67,24 +67,22 @@ Decrypts data stream
 
 #### Defined in
 
-[crypto/Crypto.ts:102](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/crypto/Crypto.ts#L102)
+[crypto/Crypto.ts:109](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/crypto/Crypto.ts#L109)
 
 ___
 
 ### encrypt
 
-▸ `Static` **encrypt**(`algorithm`, `content`, `key`, `encoding?`): `Promise`<`Encryption`\>
+▸ `Static` **encrypt**(`content`, `encryption`): `Promise`<`Encryption`\>
 
 Used to encrypt data before sending it to blockchain
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `algorithm` | `CryptoAlgorithm` | `undefined` | encryption algorithm |
-| `content` | `string` | `undefined` | string data to encrypt |
-| `key` | `string` | `undefined` | key in string format (default encoding base64) |
-| `encoding` | `base64` | `Encoding.base64` | encoding of key and output data |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `content` | `string` | string data to encrypt |
+| `encryption` | `Encryption` | - |
 
 #### Returns
 
@@ -94,13 +92,13 @@ Promise<Encryption> - object what contains encrypted data, key and spec to decry
 
 #### Defined in
 
-[crypto/Crypto.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/crypto/Crypto.ts#L23)
+[crypto/Crypto.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/crypto/Crypto.ts#L24)
 
 ___
 
 ### encryptStream
 
-▸ `Static` **encryptStream**(`inputStream`, `outputStream`, `algorithm`, `encoding`, `key`): `Promise`<`Encryption`\>
+▸ `Static` **encryptStream**(`inputStream`, `outputStream`, `encryption`): `Promise`<`Encryption`\>
 
 Encrypts data stream
 
@@ -110,9 +108,7 @@ Encrypts data stream
 | :------ | :------ | :------ |
 | `inputStream` | `ReadStream` | path to file that will be encrypted |
 | `outputStream` | `WriteStream` | place where it will be saved |
-| `algorithm` | `CryptoAlgorithm` | file encryption algorithm |
-| `encoding` | `base64` | - |
-| `key` | `string` | – key that will be used to encrypt data |
+| `encryption` | `Encryption` | - |
 
 #### Returns
 
@@ -122,4 +118,4 @@ Promise<Encryption> - encryption info
 
 #### Defined in
 
-[crypto/Crypto.ts:52](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/crypto/Crypto.ts#L52)
+[crypto/Crypto.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/crypto/Crypto.ts#L54)

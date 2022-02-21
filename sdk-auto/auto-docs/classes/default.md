@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L25)
+[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/BlockchainConnector.ts#L25)
 
 ## Methods
 
@@ -55,13 +55,13 @@ Returns balance of blockchain platform tokens in wei
 
 #### Defined in
 
-[BlockchainConnector.ts:76](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L76)
+[BlockchainConnector.ts:76](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/BlockchainConnector.ts#L76)
 
 ___
 
 ### getTransactions
 
-▸ `Static` **getTransactions**(`addresses`, `startBlock?`): `Promise`<{ `lastBlock`: `number` = endBlock; `transactionsByAddress`: { [key: string]: `Transaction`[];  }  }\>
+▸ `Static` **getTransactions**(`addresses`, `startBlock?`): `Promise`<{ `lastBlock`: `number` = endBlock; `transactionsByAddress`: { `[key: string]`: `Transaction`[];  }  }\>
 
 Fetch transactions for specific addresses starting with specific block until last block
 
@@ -74,7 +74,7 @@ Fetch transactions for specific addresses starting with specific block until las
 
 #### Returns
 
-`Promise`<{ `lastBlock`: `number` = endBlock; `transactionsByAddress`: { [key: string]: `Transaction`[];  }  }\>
+`Promise`<{ `lastBlock`: `number` = endBlock; `transactionsByAddress`: { `[key: string]`: `Transaction`[];  }  }\>
 
 Promise<{
   transactionsByAddress, - found transactions sorted by addresses
@@ -83,7 +83,7 @@ Promise<{
 
 #### Defined in
 
-[BlockchainConnector.ts:90](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L90)
+[BlockchainConnector.ts:90](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/BlockchainConnector.ts#L90)
 
 ___
 
@@ -107,7 +107,7 @@ Needs to run this function before using blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L32)
+[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/BlockchainConnector.ts#L32)
 
 ___
 
@@ -130,4 +130,4 @@ Needs to run this function before using any set methods in blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:65](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/BlockchainConnector.ts#L65)
+[BlockchainConnector.ts:65](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/BlockchainConnector.ts#L65)

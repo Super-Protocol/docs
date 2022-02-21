@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[types/Superpro.ts:33](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L33)
+[types/Superpro.ts:33](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L33)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:30](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L30)
+[types/Superpro.ts:30](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L30)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:31](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L31)
+[types/Superpro.ts:31](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L31)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L19)
+[types/Superpro.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L19)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L23)
+[types/Superpro.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L23)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L17)
+[types/Superpro.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L17)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L18)
+[types/Superpro.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L18)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L20)
+[types/Superpro.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L20)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L21)
+[types/Superpro.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L21)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L22)
+[types/Superpro.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L22)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L24)
+[types/Superpro.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L24)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L32)
+[types/Superpro.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L32)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L25)
+[types/Superpro.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L25)
 
 ___
 
@@ -162,7 +162,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L26)
+[types/Superpro.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L26)
 
 ___
 
@@ -172,7 +172,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L27)
+[types/Superpro.ts:27](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L27)
 
 ___
 
@@ -182,7 +182,7 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L28)
+[types/Superpro.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L28)
 
 ___
 
@@ -192,4 +192,4 @@ ___
 
 #### Defined in
 
-[types/Superpro.ts:29](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/types/Superpro.ts#L29)
+[types/Superpro.ts:29](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/types/Superpro.ts#L29)

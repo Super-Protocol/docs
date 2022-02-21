@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[staticModels/Staking.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/Staking.ts#L13)
+[staticModels/Staking.ts:13](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/Staking.ts#L13)
 
 ## Methods
 
@@ -55,7 +55,7 @@ Fetching locked tokens info by owner address and contract name from blockchain
 
 #### Defined in
 
-[staticModels/Staking.ts:41](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/Staking.ts#L41)
+[staticModels/Staking.ts:41](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/Staking.ts#L41)
 
 ___
 
@@ -77,7 +77,7 @@ Fetching stake info by owner address from blockchain
 
 #### Defined in
 
-[staticModels/Staking.ts:31](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/Staking.ts#L31)
+[staticModels/Staking.ts:31](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/Staking.ts#L31)
 
 ___
 
@@ -100,4 +100,4 @@ Stakes tokens
 
 #### Defined in
 
-[staticModels/Staking.ts:53](https://github.com/Super-Protocol/sp-sdk-js/blob/4201548/src/staticModels/Staking.ts#L53)
+[staticModels/Staking.ts:53](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/staticModels/Staking.ts#L53)
