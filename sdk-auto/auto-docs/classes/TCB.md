@@ -51,7 +51,7 @@
 
 #### Defined in
 
-[models/TCB.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L28)
+[models/TCB.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L28)
 
 ## Properties
 
@@ -61,7 +61,7 @@
 
 #### Defined in
 
-[models/TCB.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L19)
+[models/TCB.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L19)
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L21)
+[models/TCB.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L21)
 
 ___
 
@@ -81,7 +81,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L20)
+[models/TCB.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L20)
 
 ___
 
@@ -91,7 +91,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L22)
+[models/TCB.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L22)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L15)
+[models/TCB.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L15)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L23)
+[models/TCB.ts:23](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L23)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L25)
+[models/TCB.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L25)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L24)
+[models/TCB.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L24)
 
 ___
 
@@ -141,7 +141,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L26)
+[models/TCB.ts:26](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L26)
 
 ## Methods
 
@@ -165,7 +165,7 @@ Add processed TCB data to smart-contract
 
 #### Defined in
 
-[models/TCB.ts:108](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L108)
+[models/TCB.ts:108](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L108)
 
 ___
 
@@ -189,7 +189,7 @@ Append marks for selected TCBs
 
 #### Defined in
 
-[models/TCB.ts:159](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L159)
+[models/TCB.ts:159](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L159)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-[models/TCB.ts:118](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L118)
+[models/TCB.ts:118](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L118)
 
 ___
 
@@ -219,7 +219,7 @@ Function for fetching list of TCBs from LastBlocksTable formed for veirifying
 
 #### Defined in
 
-[models/TCB.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L58)
+[models/TCB.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L58)
 
 ___
 
@@ -235,7 +235,7 @@ Function for fetching the given marks for recruited TCBs from the LastBlocksTabl
 
 #### Defined in
 
-[models/TCB.ts:74](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L74)
+[models/TCB.ts:74](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L74)
 
 ___
 
@@ -251,7 +251,7 @@ Function for fetching list of TCBs from SuspiciousBlocksTable formed for veirify
 
 #### Defined in
 
-[models/TCB.ts:66](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L66)
+[models/TCB.ts:66](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L66)
 
 ___
 
@@ -267,7 +267,7 @@ Function for fetching the given marks for recruited TCBs from the SuspiciousBloc
 
 #### Defined in
 
-[models/TCB.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L82)
+[models/TCB.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L82)
 
 ___
 
@@ -283,7 +283,7 @@ Function for fetching marks of TCB (from Consensus)
 
 #### Defined in
 
-[models/TCB.ts:126](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L126)
+[models/TCB.ts:126](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L126)
 
 ___
 
@@ -299,7 +299,7 @@ Function for fetching calimed amount of TCB reward
 
 #### Defined in
 
-[models/TCB.ts:98](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L98)
+[models/TCB.ts:98](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L98)
 
 ___
 
@@ -315,7 +315,7 @@ Function for fetching used TCB data
 
 #### Defined in
 
-[models/TCB.ts:136](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L136)
+[models/TCB.ts:136](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L136)
 
 ___
 
@@ -331,7 +331,7 @@ Function for fetching stored TCB data
 
 #### Defined in
 
-[models/TCB.ts:148](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L148)
+[models/TCB.ts:148](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L148)
 
 ___
 
@@ -347,7 +347,7 @@ Function for fetching TCB status
 
 #### Defined in
 
-[models/TCB.ts:91](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L91)
+[models/TCB.ts:91](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L91)
 
 ___
 
@@ -363,7 +363,7 @@ Function for fetching number of TCB's to request for verifying from LastBlocksTa
 
 #### Defined in
 
-[models/TCB.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L40)
+[models/TCB.ts:40](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L40)
 
 ___
 
@@ -379,4 +379,4 @@ Function for fetching number of TCB's to request for verifying from SuspiciousBl
 
 #### Defined in
 
-[models/TCB.ts:49](https://github.com/Super-Protocol/sp-sdk-js/blob/4b1d731/src/models/TCB.ts#L49)
+[models/TCB.ts:49](https://github.com/Super-Protocol/sp-sdk-js/blob/5c479d1/src/models/TCB.ts#L49)
