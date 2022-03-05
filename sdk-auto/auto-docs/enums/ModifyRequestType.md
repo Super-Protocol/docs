@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types/Ballot.ts:4](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/types/Ballot.ts#L4)
+[types/Ballot.ts:4](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/types/Ballot.ts#L4)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types/Ballot.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/types/Ballot.ts#L5)
+[types/Ballot.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/types/Ballot.ts#L5)

@@ -43,7 +43,7 @@
 
 #### Defined in
 
-[models/Offer.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L22)
+[models/Offer.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L22)
 
 ## Properties
 
@@ -53,7 +53,7 @@
 
 #### Defined in
 
-[models/Offer.ts:12](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L12)
+[models/Offer.ts:12](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L12)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[models/Offer.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L16)
+[models/Offer.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L16)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[models/Offer.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L20)
+[models/Offer.ts:20](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L20)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[models/Offer.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L17)
+[models/Offer.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L17)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[models/Offer.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L19)
+[models/Offer.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L19)
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[models/Offer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L18)
+[models/Offer.ts:18](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L18)
 
 ## Methods
 
@@ -125,7 +125,7 @@ Function for disabling offer
 
 #### Defined in
 
-[models/Offer.ts:84](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L84)
+[models/Offer.ts:84](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L84)
 
 ___
 
@@ -147,7 +147,7 @@ Function for enabling offer
 
 #### Defined in
 
-[models/Offer.ts:94](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L94)
+[models/Offer.ts:94](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L94)
 
 ___
 
@@ -163,7 +163,7 @@ Function for fetching offer info from blockchain
 
 #### Defined in
 
-[models/Offer.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L34)
+[models/Offer.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L34)
 
 ___
 
@@ -179,7 +179,7 @@ Fetch offer type from blockchain (works for TEE and Value offers)
 
 #### Defined in
 
-[models/Offer.ts:50](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L50)
+[models/Offer.ts:50](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L50)
 
 ___
 
@@ -195,7 +195,7 @@ Fetch new Origins (createdDate, createdBy, modifiedDate and modifiedBy)
 
 #### Defined in
 
-[models/Offer.ts:66](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L66)
+[models/Offer.ts:66](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L66)
 
 ___
 
@@ -211,7 +211,7 @@ Function for fetching offer provider from blockchain (works for TEE and Value of
 
 #### Defined in
 
-[models/Offer.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L42)
+[models/Offer.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L42)
 
 ___
 
@@ -227,7 +227,7 @@ Function for fetching TEE offer provider authority account from blockchain
 
 #### Defined in
 
-[models/Offer.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L58)
+[models/Offer.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L58)
 
 ___
 
@@ -249,7 +249,7 @@ Checks if this offer contains restrictions of a certain type
 
 #### Defined in
 
-[models/Offer.ts:114](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L114)
+[models/Offer.ts:114](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L114)
 
 ___
 
@@ -271,4 +271,4 @@ Checks if offer (offerAddress) match restrictions in this offer
 
 #### Defined in
 
-[models/Offer.ts:104](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/models/Offer.ts#L104)
+[models/Offer.ts:104](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/models/Offer.ts#L104)

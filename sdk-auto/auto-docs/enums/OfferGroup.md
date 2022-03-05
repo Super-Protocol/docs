@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[types/Offer.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/types/Offer.ts#L9)
+[types/Offer.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/types/Offer.ts#L9)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/3ba23f7/src/types/Offer.ts#L10)
+[types/Offer.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/244429e/src/types/Offer.ts#L10)
