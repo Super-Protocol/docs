@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[staticModels/SuperproToken.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/SuperproToken.ts#L10)
+[staticModels/SuperproToken.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/staticModels/SuperproToken.ts#L10)
 
 ## Methods
 
@@ -56,7 +56,7 @@ Approve tokens for specific address
 
 #### Defined in
 
-[staticModels/SuperproToken.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/SuperproToken.ts#L51)
+[staticModels/SuperproToken.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/staticModels/SuperproToken.ts#L51)
 
 ___
 
@@ -78,7 +78,7 @@ Fetching balance of SuperProtocol tokens on address
 
 #### Defined in
 
-[staticModels/SuperproToken.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/SuperproToken.ts#L28)
+[staticModels/SuperproToken.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/staticModels/SuperproToken.ts#L28)
 
 ___
 
@@ -102,4 +102,4 @@ Transfers specific amount of SP tokens to specific address
 
 #### Defined in
 
-[staticModels/SuperproToken.ts:39](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/SuperproToken.ts#L39)
+[staticModels/SuperproToken.ts:39](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/staticModels/SuperproToken.ts#L39)

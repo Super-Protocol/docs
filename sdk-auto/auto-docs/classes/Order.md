@@ -49,7 +49,7 @@
 
 #### Defined in
 
-[models/Order.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L36)
+[models/Order.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L36)
 
 ## Properties
 
@@ -59,7 +59,7 @@
 
 #### Defined in
 
-[models/Order.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L25)
+[models/Order.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L25)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:33](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L33)
+[models/Order.ts:33](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L33)
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:29](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L29)
+[models/Order.ts:29](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L29)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:30](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L30)
+[models/Order.ts:30](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L30)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L34)
+[models/Order.ts:34](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L34)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L32)
+[models/Order.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L32)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:31](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L31)
+[models/Order.ts:31](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L31)
 
 ## Methods
 
@@ -141,7 +141,7 @@ Function for updating status of contract
 
 #### Defined in
 
-[models/Order.ts:114](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L114)
+[models/Order.ts:114](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L114)
 
 ___
 
@@ -166,7 +166,7 @@ Completes order
 
 #### Defined in
 
-[models/Order.ts:132](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L132)
+[models/Order.ts:132](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L132)
 
 ___
 
@@ -193,7 +193,7 @@ Promise<void> - Does not return address of created contract!
 
 #### Defined in
 
-[models/Order.ts:152](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L152)
+[models/Order.ts:152](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L152)
 
 ___
 
@@ -207,7 +207,7 @@ ___
 
 #### Defined in
 
-[models/Order.ts:53](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L53)
+[models/Order.ts:53](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L53)
 
 ___
 
@@ -223,7 +223,7 @@ Function for fetching order info from blockchain
 
 #### Defined in
 
-[models/Order.ts:48](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L48)
+[models/Order.ts:48](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L48)
 
 ___
 
@@ -239,7 +239,7 @@ Function for fetching order result from blockchain
 
 #### Defined in
 
-[models/Order.ts:61](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L61)
+[models/Order.ts:61](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L61)
 
 ___
 
@@ -255,7 +255,7 @@ Fetch new Origins (createdDate, createdBy, modifiedDate and modifiedBy)
 
 #### Defined in
 
-[models/Order.ts:85](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L85)
+[models/Order.ts:85](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L85)
 
 ___
 
@@ -271,7 +271,7 @@ Function for fetching parent order from blockchain
 
 #### Defined in
 
-[models/Order.ts:77](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L77)
+[models/Order.ts:77](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L77)
 
 ___
 
@@ -287,7 +287,7 @@ Function for fetching sub orders from blockchain
 
 #### Defined in
 
-[models/Order.ts:69](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L69)
+[models/Order.ts:69](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L69)
 
 ___
 
@@ -321,7 +321,7 @@ unsubscribe - function unsubscribing from event
 
 #### Defined in
 
-[models/Order.ts:191](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L191)
+[models/Order.ts:191](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L191)
 
 ___
 
@@ -343,7 +343,7 @@ Starts suspended order
 
 #### Defined in
 
-[models/Order.ts:123](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L123)
+[models/Order.ts:123](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L123)
 
 ___
 
@@ -367,7 +367,7 @@ Function for updating status of contract
 
 #### Defined in
 
-[models/Order.ts:101](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L101)
+[models/Order.ts:101](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L101)
 
 ___
 
@@ -389,7 +389,7 @@ Function for withdrawing change from order
 
 #### Defined in
 
-[models/Order.ts:180](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L180)
+[models/Order.ts:180](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L180)
 
 ___
 
@@ -411,4 +411,4 @@ Function for withdrawing profit from order
 
 #### Defined in
 
-[models/Order.ts:170](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/models/Order.ts#L170)
+[models/Order.ts:170](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/models/Order.ts#L170)
