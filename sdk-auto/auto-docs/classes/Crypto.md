@@ -43,7 +43,7 @@ Promise<string> - decrypted string
 
 #### Defined in
 
-[crypto/Crypto.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/7510059/src/crypto/Crypto.ts#L82)
+[crypto/Crypto.ts:82](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/crypto/Crypto.ts#L82)
 
 ___
 
@@ -67,7 +67,7 @@ Decrypts data stream
 
 #### Defined in
 
-[crypto/Crypto.ts:109](https://github.com/Super-Protocol/sp-sdk-js/blob/7510059/src/crypto/Crypto.ts#L109)
+[crypto/Crypto.ts:109](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/crypto/Crypto.ts#L109)
 
 ___
 
@@ -92,7 +92,7 @@ Promise<Encryption> - object what contains encrypted data, key and spec to decry
 
 #### Defined in
 
-[crypto/Crypto.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/7510059/src/crypto/Crypto.ts#L24)
+[crypto/Crypto.ts:24](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/crypto/Crypto.ts#L24)
 
 ___
 
@@ -118,4 +118,4 @@ Promise<Encryption> - encryption info
 
 #### Defined in
 
-[crypto/Crypto.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/7510059/src/crypto/Crypto.ts#L54)
+[crypto/Crypto.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/crypto/Crypto.ts#L54)
