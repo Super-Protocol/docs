@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[staticModels/Superpro.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/staticModels/Superpro.ts#L9)
+[staticModels/Superpro.ts:9](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/Superpro.ts#L9)
 
 ## Methods
 
@@ -53,7 +53,7 @@ Fetching address of contract by name
 
 #### Defined in
 
-[staticModels/Superpro.ts:30](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/staticModels/Superpro.ts#L30)
+[staticModels/Superpro.ts:30](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/Superpro.ts#L30)
 
 ___
 
@@ -75,4 +75,4 @@ Fetching config parameter value by name
 
 #### Defined in
 
-[staticModels/Superpro.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/1c37a1d/src/staticModels/Superpro.ts#L42)
+[staticModels/Superpro.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/ed94f28/src/staticModels/Superpro.ts#L42)
