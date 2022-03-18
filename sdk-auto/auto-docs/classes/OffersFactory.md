@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/OffersFactory.ts#L17)
+[staticModels/OffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/OffersFactory.ts#L17)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/OffersFactory.ts#L21)
+[staticModels/OffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/OffersFactory.ts#L21)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Creates new offer
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:55](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/OffersFactory.ts#L55)
+[staticModels/OffersFactory.ts:55](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/OffersFactory.ts#L55)
 
 ___
 
@@ -84,7 +84,7 @@ Function for fetching list of all offers addresses
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/OffersFactory.ts#L42)
+[staticModels/OffersFactory.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/OffersFactory.ts#L42)
 
 ___
 
@@ -118,4 +118,4 @@ unsubscribe - unsubscribe function from event
 
 #### Defined in
 
-[staticModels/OffersFactory.ts:75](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/OffersFactory.ts#L75)
+[staticModels/OffersFactory.ts:75](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/OffersFactory.ts#L75)

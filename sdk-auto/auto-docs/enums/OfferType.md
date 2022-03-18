@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[types/Offer.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/types/Offer.ts#L5)
+[types/Offer.ts:5](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/types/Offer.ts#L5)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:4](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/types/Offer.ts#L4)
+[types/Offer.ts:4](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/types/Offer.ts#L4)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/types/Offer.ts#L3)
+[types/Offer.ts:3](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/types/Offer.ts#L3)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[types/Offer.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/types/Offer.ts#L2)
+[types/Offer.ts:2](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/types/Offer.ts#L2)

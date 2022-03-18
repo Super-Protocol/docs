@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L17)
+[staticModels/ProviderRegistry.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L17)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L21)
+[staticModels/ProviderRegistry.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L21)
 
 ## Methods
 
@@ -69,7 +69,7 @@ Fetch provider address by provider authority account
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L51)
+[staticModels/ProviderRegistry.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L51)
 
 ___
 
@@ -85,7 +85,7 @@ Function for fetching list of all providers addresses
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L42)
+[staticModels/ProviderRegistry.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L42)
 
 ___
 
@@ -107,7 +107,7 @@ Fetch provider security deposit by provider authority account
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:59](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L59)
+[staticModels/ProviderRegistry.ts:59](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L59)
 
 ___
 
@@ -141,7 +141,7 @@ unsubscribe - unsubscribe function from event
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:112](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L112)
+[staticModels/ProviderRegistry.ts:112](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L112)
 
 ___
 
@@ -165,7 +165,7 @@ Call this function with provider authority account (in transactionOptions)
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:89](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L89)
+[staticModels/ProviderRegistry.ts:89](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L89)
 
 ___
 
@@ -189,7 +189,7 @@ Reg new provider
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:69](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L69)
+[staticModels/ProviderRegistry.ts:69](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L69)
 
 ___
 
@@ -213,4 +213,4 @@ Call this function with provider authority account (in transactionOptions)
 
 #### Defined in
 
-[staticModels/ProviderRegistry.ts:101](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/ProviderRegistry.ts#L101)
+[staticModels/ProviderRegistry.ts:101](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/ProviderRegistry.ts#L101)

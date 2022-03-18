@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[staticModels/Voting.ts:11](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/Voting.ts#L11)
+[staticModels/Voting.ts:11](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Voting.ts#L11)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[staticModels/Voting.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/Voting.ts#L15)
+[staticModels/Voting.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Voting.ts#L15)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Creates ballot for replacing contract (updating address of contract in main conf
 
 #### Defined in
 
-[staticModels/Voting.ts:39](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/Voting.ts#L39)
+[staticModels/Voting.ts:39](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Voting.ts#L39)
 
 ___
 
@@ -92,7 +92,7 @@ Creates ballot for updating params value (in main config contract)
 
 #### Defined in
 
-[staticModels/Voting.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/Voting.ts#L58)
+[staticModels/Voting.ts:58](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Voting.ts#L58)
 
 ___
 
@@ -108,7 +108,7 @@ Function for fetching list of all ballots addresses
 
 #### Defined in
 
-[staticModels/Voting.ts:74](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/Voting.ts#L74)
+[staticModels/Voting.ts:74](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Voting.ts#L74)
 
 ___
 
@@ -130,4 +130,4 @@ Function for fetching list of all ballots for specific user addresses
 
 #### Defined in
 
-[staticModels/Voting.ts:85](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/staticModels/Voting.ts#L85)
+[staticModels/Voting.ts:85](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Voting.ts#L85)
