@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/BlockchainConnector.ts#L25)
+[BlockchainConnector.ts:25](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/BlockchainConnector.ts#L25)
 
 ## Methods
 
@@ -55,7 +55,7 @@ Returns balance of blockchain platform tokens in wei
 
 #### Defined in
 
-[BlockchainConnector.ts:97](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/BlockchainConnector.ts#L97)
+[BlockchainConnector.ts:97](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/BlockchainConnector.ts#L97)
 
 ___
 
@@ -83,7 +83,7 @@ Promise<{
 
 #### Defined in
 
-[BlockchainConnector.ts:111](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/BlockchainConnector.ts#L111)
+[BlockchainConnector.ts:111](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/BlockchainConnector.ts#L111)
 
 ___
 
@@ -107,7 +107,7 @@ Needs to run this function before using blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/BlockchainConnector.ts#L32)
+[BlockchainConnector.ts:32](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/BlockchainConnector.ts#L32)
 
 ___
 
@@ -130,4 +130,4 @@ Needs to run this function before using any set methods in blockchain connector
 
 #### Defined in
 
-[BlockchainConnector.ts:86](https://github.com/Super-Protocol/sp-sdk-js/blob/d074eb7/src/BlockchainConnector.ts#L86)
+[BlockchainConnector.ts:86](https://github.com/Super-Protocol/sp-sdk-js/blob/e26d314/src/BlockchainConnector.ts#L86)
