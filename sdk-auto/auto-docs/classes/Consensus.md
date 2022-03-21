@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[staticModels/Consensus.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L15)
+[staticModels/Consensus.ts:15](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L15)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[staticModels/Consensus.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L22)
+[staticModels/Consensus.ts:22](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L22)
 
 ## Methods
 
@@ -67,7 +67,7 @@ ___
 
 #### Defined in
 
-[staticModels/Consensus.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L19)
+[staticModels/Consensus.ts:19](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L19)
 
 ___
 
@@ -95,7 +95,7 @@ Add data to TeeConfirmationBlock and push it to Consensus
 
 #### Defined in
 
-[staticModels/Consensus.ts:127](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L127)
+[staticModels/Consensus.ts:127](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L127)
 
 ___
 
@@ -118,7 +118,7 @@ Function stake and lock TCB's reward
 
 #### Defined in
 
-[staticModels/Consensus.ts:154](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L154)
+[staticModels/Consensus.ts:154](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L154)
 
 ___
 
@@ -140,7 +140,7 @@ Function return last inited TCB of TEE offer
 
 #### Defined in
 
-[staticModels/Consensus.ts:184](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L184)
+[staticModels/Consensus.ts:184](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L184)
 
 ___
 
@@ -165,7 +165,7 @@ two lists of anothers' TCB addresses for their checking
 
 #### Defined in
 
-[staticModels/Consensus.ts:90](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L90)
+[staticModels/Consensus.ts:90](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L90)
 
 ___
 
@@ -187,7 +187,7 @@ Function return last inited TCB of TEE offer
 
 #### Defined in
 
-[staticModels/Consensus.ts:194](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L194)
+[staticModels/Consensus.ts:194](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L194)
 
 ___
 
@@ -211,4 +211,4 @@ Function unlock previously locked TCB rewards (by claimRewards)
 
 #### Defined in
 
-[staticModels/Consensus.ts:167](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Consensus.ts#L167)
+[staticModels/Consensus.ts:167](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Consensus.ts#L167)

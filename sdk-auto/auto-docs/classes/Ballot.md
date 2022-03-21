@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[models/Ballot.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/models/Ballot.ts#L16)
+[models/Ballot.ts:16](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/models/Ballot.ts#L16)
 
 ## Properties
 
@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[models/Ballot.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/models/Ballot.ts#L10)
+[models/Ballot.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/models/Ballot.ts#L10)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[models/Ballot.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/models/Ballot.ts#L14)
+[models/Ballot.ts:14](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/models/Ballot.ts#L14)
 
 ## Methods
 
@@ -67,4 +67,4 @@ Function for fetching order info from blockchain
 
 #### Defined in
 
-[models/Ballot.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/models/Ballot.ts#L28)
+[models/Ballot.ts:28](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/models/Ballot.ts#L28)

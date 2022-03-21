@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[staticModels/Suspicious.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Suspicious.ts#L10)
+[staticModels/Suspicious.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Suspicious.ts#L10)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Function for fetching TCB suspect list size
 
 #### Defined in
 
-[staticModels/Suspicious.ts:59](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Suspicious.ts#L59)
+[staticModels/Suspicious.ts:59](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Suspicious.ts#L59)
 
 ___
 
@@ -72,7 +72,7 @@ Function generates a list of blocks to be checked in a random way
 
 #### Defined in
 
-[staticModels/Suspicious.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Suspicious.ts#L36)
+[staticModels/Suspicious.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Suspicious.ts#L36)
 
 ___
 
@@ -88,4 +88,4 @@ Function for fetching TCB suspect list
 
 #### Defined in
 
-[staticModels/Suspicious.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/Suspicious.ts#L51)
+[staticModels/Suspicious.ts:51](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/Suspicious.ts#L51)

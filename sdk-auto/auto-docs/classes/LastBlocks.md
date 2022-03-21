@@ -32,7 +32,7 @@
 
 #### Defined in
 
-[staticModels/LastBlocks.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/LastBlocks.ts#L10)
+[staticModels/LastBlocks.ts:10](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/LastBlocks.ts#L10)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Function for fetching TCB last blocks list size
 
 #### Defined in
 
-[staticModels/LastBlocks.ts:55](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/LastBlocks.ts#L55)
+[staticModels/LastBlocks.ts:55](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/LastBlocks.ts#L55)
 
 ___
 
@@ -71,7 +71,7 @@ Function generates a list of blocks to be checked in a random way
 
 #### Defined in
 
-[staticModels/LastBlocks.ts:35](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/LastBlocks.ts#L35)
+[staticModels/LastBlocks.ts:35](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/LastBlocks.ts#L35)
 
 ___
 
@@ -87,4 +87,4 @@ Function for fetching TCB last blocks list
 
 #### Defined in
 
-[staticModels/LastBlocks.ts:47](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/LastBlocks.ts#L47)
+[staticModels/LastBlocks.ts:47](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/LastBlocks.ts#L47)

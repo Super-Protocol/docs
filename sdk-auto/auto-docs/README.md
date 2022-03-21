@@ -16,6 +16,12 @@ IMPORTANT: you should have access to this repo from your local machine via githu
 
 This repo doesn't have code to test new functionality during development, so you will need to install this module in test repo (where you plan to use this module) using yarn link (for hot reloading)
 
+1. Login to private npm registry using your GitHub login and personal token (see [Authenticating to GitHub Packages](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#authenticating-to-github-packages))
+
+   ```
+   npm login --scope=@super-protocol --registry=https://npm.pkg.github.com
+   ```
+
 1. Install dependencies:
 
     ```
@@ -33,7 +39,7 @@ This repo doesn't have code to test new functionality during development, so you
    ```
    yarn link sp-sdk-js
    ```
-   
+
 ## Deploy
 
 1. Update version in `package.json` file to your new version:
@@ -43,7 +49,7 @@ This repo doesn't have code to test new functionality during development, so you
 1. Commit your changes:
    ```
    git add .
-   git commit -m"deploy v0.0.6" 
+   git commit -m"deploy v0.0.6"
    ```
 1. Create git tag:
    ```

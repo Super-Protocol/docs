@@ -33,7 +33,7 @@
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/TeeOffersFactory.ts#L17)
+[staticModels/TeeOffersFactory.ts:17](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/TeeOffersFactory.ts#L17)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/TeeOffersFactory.ts#L21)
+[staticModels/TeeOffersFactory.ts:21](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/TeeOffersFactory.ts#L21)
 
 ## Methods
 
@@ -68,7 +68,7 @@ Creates new TEE offer
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/TeeOffersFactory.ts#L54)
+[staticModels/TeeOffersFactory.ts:54](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/TeeOffersFactory.ts#L54)
 
 ___
 
@@ -84,7 +84,7 @@ Function for fetching list of all TEE offers addresses
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/TeeOffersFactory.ts#L42)
+[staticModels/TeeOffersFactory.ts:42](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/TeeOffersFactory.ts#L42)
 
 ___
 
@@ -118,4 +118,4 @@ unsubscribe - unsubscribe function from event
 
 #### Defined in
 
-[staticModels/TeeOffersFactory.ts:75](https://github.com/Super-Protocol/sp-sdk-js/blob/7d2af19/src/staticModels/TeeOffersFactory.ts#L75)
+[staticModels/TeeOffersFactory.ts:75](https://github.com/Super-Protocol/sp-sdk-js/blob/0eeb728/src/staticModels/TeeOffersFactory.ts#L75)
