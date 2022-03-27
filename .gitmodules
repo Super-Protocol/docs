@@ -1,0 +1,3 @@
+[submodule "sp-sdk-js"]
+	path = sp-sdk-js
+	url = https://github.com/Super-Protocol/sp-sdk-js
