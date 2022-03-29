@@ -12,7 +12,7 @@ const config = {
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
-    favicon: "img/favicon.ico",
+    favicon: "static/favicon.ico",
     organizationName: "Super Protocol", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
     plugins: [
@@ -34,6 +34,7 @@ const config = {
                 path: "whitepaper",
                 routeBasePath: "/",
                 sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
+                editUrl: "https://github.com/Super-Protocol/docs/tree/main/whitepaper",
             },
         ],
     ],
@@ -47,11 +48,10 @@ const config = {
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    editUrl:
-                        "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
                 },
-                theme: {},
+                theme: {
+                    customCss: [require.resolve('./src/css/custom.css')],
+                },
             }),
         ],
     ],
@@ -63,7 +63,7 @@ const config = {
                 title: "Super Protocol",
                 logo: {
                     alt: "Super Protocol Logo",
-                    src: "img/logo.svg",
+                    src: "navbar/images/logo.svg",
                 },
                 items: [
                     {
@@ -89,7 +89,7 @@ const config = {
                         items: [
                             {
                                 label: "Whitepaper",
-                                to: "/whitepaper/abstract/",
+                                to: "/",
                             },
                             {
                                 label: "Documentation",

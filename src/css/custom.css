@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+:root {
+    --ifm-font-family-base: "Montserrat", Arial, sans-serif;
+}
+
+.navbar__title {
+    font-weight: 500;
+    font-size: 22px;
+    margin-left: 6px;
+}
