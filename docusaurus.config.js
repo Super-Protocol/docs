@@ -18,11 +18,22 @@ const config = {
     plugins: [
         [
             "docusaurus-plugin-typedoc",
-
-            // Plugin / TypeDoc options
             {
                 entryPoints: ["sp-sdk-js/src/index.ts"],
                 tsconfig: "sp-sdk-js/tsconfig.json",
+                out: "sdk",
+                sidebar: {
+                    categoryLabel: "SDK",
+                }
+            },
+        ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "whitepaper",
+                path: "whitepaper",
+                routeBasePath: "/",
+                sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
             },
         ],
     ],
@@ -32,10 +43,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    sidebarPath: require.resolve("./sidebars.js"),
-                    // Please change this to your repo.
-                    editUrl:
-                        "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+                    sidebarPath: require.resolve("./sidebarsDocs.js"),
                 },
                 blog: {
                     showReadingTime: true,
@@ -60,9 +68,16 @@ const config = {
                 items: [
                     {
                         type: "doc",
-                        docId: "api/index",
+                        docId: "index",
                         position: "left",
-                        label: "API Reference",
+                        label: "Whitepaper",
+                        docsPluginId: "whitepaper",
+                    },
+                    {
+                        type: "doc",
+                        docId: "sdk/index",
+                        position: "left",
+                        label: "Documentation",
                     },
                 ],
             },
@@ -70,11 +85,15 @@ const config = {
                 style: "dark",
                 links: [
                     {
-                        title: "Docs",
+                        title: "About project",
                         items: [
                             {
-                                label: "API Reference",
-                                to: "/docs/api/index",
+                                label: "Whitepaper",
+                                to: "/whitepaper/abstract/",
+                            },
+                            {
+                                label: "Documentation",
+                                to: "/docs/sdk/",
                             },
                         ],
                     },
