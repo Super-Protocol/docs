@@ -15,27 +15,26 @@ const config = {
     organizationName: "Super Protocol", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
     plugins: [
-        [
-            "docusaurus-plugin-typedoc",
-            {
-                entryPoints: ["sources/sp-sdk-js/src/index.ts"],
-                tsconfig: "sources/sp-sdk-js/tsconfig.json",
-                out: "sdk",
-                sidebar: {
-                    categoryLabel: "SDK",
-                },
-            },
-        ],
-        [
-            "@docusaurus/plugin-content-docs",
-            {
-                id: "whitepaper",
-                path: "whitepaper",
-                routeBasePath: "/",
-                sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
-                editUrl: "https://github.com/Super-Protocol/docs/tree/main/whitepaper",
-            },
-        ],
+        // [
+        //     "docusaurus-plugin-typedoc",
+        //     {
+        //         entryPoints: ["sources/sp-sdk-js/src/index.ts"],
+        //         tsconfig: "sources/sp-sdk-js/tsconfig.json",
+        //         out: "sdk",
+        //         sidebar: {
+        //             categoryLabel: "SDK",
+        //         },
+        //     },
+        // ],
+        // [
+        //     "@docusaurus/plugin-content-docs",
+        //     {
+        //         path: "whitepaper",
+        //         routeBasePath: "/",
+        //         sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
+        //         editUrl: "https://github.com/Super-Protocol/docs/tree/main/whitepaper",
+        //     },
+        // ],
     ],
     presets: [
         [
@@ -43,7 +42,9 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    sidebarPath: require.resolve("./sidebarsDocs.js"),
+                    path: "whitepaper",
+                    routeBasePath: "/",
+                    sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
                 },
                 blog: {
                     showReadingTime: true,
@@ -65,19 +66,19 @@ const config = {
                     src: "navbar/images/logo.svg",
                 },
                 items: [
-                    {
-                        type: "doc",
-                        docId: "index",
-                        position: "left",
-                        label: "Whitepaper",
-                        docsPluginId: "whitepaper",
-                    },
-                    {
-                        type: "doc",
-                        docId: "sdk/index",
-                        position: "left",
-                        label: "Documentation",
-                    },
+                    // {
+                    //     type: "doc",
+                    //     docId: "index",
+                    //     position: "left",
+                    //     label: "Whitepaper",
+                    //     // docsPluginId: "whitepaper",
+                    // },
+                    // {
+                    //     type: "doc",
+                    //     docId: "sdk/index",
+                    //     position: "left",
+                    //     label: "Documentation",
+                    // },
                 ],
             },
             prism: {

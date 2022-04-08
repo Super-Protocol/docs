@@ -581,26 +581,6 @@ ___
 
 [staticModels/TeeOffersFactory.ts:93](https://github.com/Super-Protocol/sp-sdk-js/blob/bbd7f28/src/staticModels/TeeOffersFactory.ts#L93)
 
-## Properties
-
-### getStorageProvider
-
-• **getStorageProvider**: (`storageAccess`: [`StorageAccess`](modules.md#storageaccess)) => [`IStorageProvider`](interfaces/IStorageProvider.md)
-
-#### Type declaration
-
-▸ (`storageAccess`): [`IStorageProvider`](interfaces/IStorageProvider.md)
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `storageAccess` | [`StorageAccess`](modules.md#storageaccess) |
-
-##### Returns
-
-[`IStorageProvider`](interfaces/IStorageProvider.md)
-
 ## Variables
 
 ### BallotInfoStructure
@@ -940,3 +920,23 @@ ___
 #### Defined in
 
 [types/Ballot.ts:36](https://github.com/Super-Protocol/sp-sdk-js/blob/bbd7f28/src/types/Ballot.ts#L36)
+
+## Functions
+
+### getStorageProvider
+
+▸ **getStorageProvider**(`storageAccess`): [`IStorageProvider`](interfaces/IStorageProvider.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `storageAccess` | [`StorageAccess`](modules.md#storageaccess) |
+
+#### Returns
+
+[`IStorageProvider`](interfaces/IStorageProvider.md)
+
+#### Defined in
+
+[providers/storage/getStorageProvider.ts:6](https://github.com/Super-Protocol/sp-sdk-js/blob/bbd7f28/src/providers/storage/getStorageProvider.ts#L6)
