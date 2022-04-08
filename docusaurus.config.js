@@ -7,7 +7,6 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: "Super Protocol",
-    tagline: "Dinosaurs are cool",
     url: "https://docs.dev.superprotocol.com",
     baseUrl: "/",
     onBrokenLinks: "throw",
@@ -19,12 +18,12 @@ const config = {
         [
             "docusaurus-plugin-typedoc",
             {
-                entryPoints: ["sp-sdk-js/src/index.ts"],
-                tsconfig: "sp-sdk-js/tsconfig.json",
+                entryPoints: ["sources/sp-sdk-js/src/index.ts"],
+                tsconfig: "sources/sp-sdk-js/tsconfig.json",
                 out: "sdk",
                 sidebar: {
                     categoryLabel: "SDK",
-                }
+                },
             },
         ],
         [
@@ -50,7 +49,7 @@ const config = {
                     showReadingTime: true,
                 },
                 theme: {
-                    customCss: [require.resolve('./src/css/custom.css')],
+                    customCss: [require.resolve("./src/css/custom.css")],
                 },
             }),
         ],
@@ -80,25 +79,6 @@ const config = {
                         label: "Documentation",
                     },
                 ],
-            },
-            footer: {
-                style: "dark",
-                links: [
-                    {
-                        title: "About project",
-                        items: [
-                            {
-                                label: "Whitepaper",
-                                to: "/",
-                            },
-                            {
-                                label: "Documentation",
-                                to: "/docs/sdk/",
-                            },
-                        ],
-                    },
-                ],
-                copyright: `Copyright © ${new Date().getFullYear()} SuperProtocol, Inc. Built with Docusaurus.`,
             },
             prism: {
                 theme: lightCodeTheme,
