@@ -2,7 +2,7 @@ name: Create and publish a Docker image
 
 on:
   push:
-    branches: ['main']
+    branches: ['main', 'whitepaper-preview']
 
 env:
   REGISTRY: ghcr.io
