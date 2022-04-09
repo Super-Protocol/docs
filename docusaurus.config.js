@@ -7,11 +7,11 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: "Super Protocol",
-    url: "https://docs.dev.superprotocol.com",
+    url: "https://docs.superprotocol.com",
     baseUrl: "/",
     onBrokenLinks: "throw",
     onBrokenMarkdownLinks: "warn",
-    favicon: "static/favicon.ico",
+    favicon: "favicon.ico",
     organizationName: "Super Protocol", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
     plugins: [
