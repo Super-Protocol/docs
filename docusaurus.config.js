@@ -66,13 +66,13 @@ const config = {
                     src: "navbar/images/logo.svg",
                 },
                 items: [
-                    // {
-                    //     type: "doc",
-                    //     docId: "index",
-                    //     position: "left",
-                    //     label: "Whitepaper",
-                    //     // docsPluginId: "whitepaper",
-                    // },
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Whitepaper",
+                        // docsPluginId: "whitepaper",
+                    },
                     // {
                     //     type: "doc",
                     //     docId: "sdk/index",
