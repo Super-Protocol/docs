@@ -18,7 +18,7 @@ Last update: Apr 12, 2022
 |Abstract|Published|
 |Goals|Published|
 |Target Audience|Published|
-|[High-Level Description of the Protocol](https://docs.google.com/document/d/1zFEJLwi9S6jxl9Qj1t8QaXxO96IKZmsMdBU2PXDeemo/edit#heading=h.ojlzevyvobso)|Published|
+|[High-Level Description of the Protocol](/high-level-description)|Published|
 |[Protocol use cases](https://docs.google.com/document/d/1zFEJLwi9S6jxl9Qj1t8QaXxO96IKZmsMdBU2PXDeemo/edit#heading=h.wru83y96cvxg)|Published|
 |Tokenomics|*Coming soon*|
 |Architecture|*Coming soon*|
