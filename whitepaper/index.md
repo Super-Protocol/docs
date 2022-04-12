@@ -7,7 +7,7 @@ sidebar_position: 1
 custom_edit_url: null
 ---
 # Whitepaper Status and Updates
-**Important!** This Whitepaper is a work in progress and will be regularly updated in the upcoming weeks. At the moment only a small portion of it is published. Join our social networks and never miss our updates. All links are available on our site [Super Protocol - Web3 Confidential Super Cloud](https://superprotocol.com/).
+**Important!** This Whitepaper is a work in progress and will be regularly updated in the coming weeks.  Only a small portion of it has been published to date. Go ahead and join our social networks to stay tuned and never miss out on our updates. All links are available on our website [Super Protocol - Web3 Confidential Super Cloud](https://superprotocol.com/).
 
 Last update: Apr 12, 2022
 
@@ -15,10 +15,16 @@ Last update: Apr 12, 2022
 
 |**Section**|**Status**|
 | :- | :- |
-|Abstract|Published|
-|Goals|Published|
-|Target Audience|Published|
+|[Abstract](/abstract)|Published|
+|[Goals](/goals)|Published|
+|[Target Audience](/target-audience)|Published|
 |[High-Level Description of the Protocol](/high-level-description)|Published|
-|[Protocol use cases](https://docs.google.com/document/d/1zFEJLwi9S6jxl9Qj1t8QaXxO96IKZmsMdBU2PXDeemo/edit#heading=h.wru83y96cvxg)|Published|
+|[Protocol use cases](/use-cases)|Published|
 |Tokenomics|*Coming soon*|
 |Architecture|*Coming soon*|
+|TEE Provider|*Coming soon*|
+|TEE Confirmation Protocol|*Coming soon*|
+|Data Provider|*Coming soon*|
+|Storage Provider|*Coming soon*|
+|Client Infrastructure|*Coming soon*|
+|Blockchain Solution|*Coming soon*|
