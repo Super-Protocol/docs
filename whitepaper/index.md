@@ -21,9 +21,9 @@ Last update: Apr 12, 2022
 |[High-Level Description of the Protocol](/high-level-description)|Published|
 |[Protocol use cases](/use-cases)|Published|
 |Tokenomics|*Coming soon*|
-|Architecture|*Coming soon*|
+|[Architecture](/architecture)|*Coming soon*|
 |TEE Provider|*Coming soon*|
-|TEE Confirmation Protocol|*Coming soon*|
+|[TEE Confirmation Protocol](/tee-confirmation-protocol)|*Coming soon*|
 |Data Provider|*Coming soon*|
 |Storage Provider|*Coming soon*|
 |Client Infrastructure|*Coming soon*|
