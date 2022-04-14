@@ -62,10 +62,10 @@ To support the algorithm execution, the smart contract for TEE offers stores the
 The Consensus Algorithm consists of the following steps:
 
 1. **TCBs Generation**
-   1. The device accesses the smart contract to verify the L1![](tee-confirmation-protocol-formula-01.png)blocks from the latest TCBs list and L2![](tee-confirmation-protocol-formula-02.png)the suspicious TCBs list.
-      The total number of blocks to be checked equalsL=L1+L2![](tee-confirmation-protocol-formula-03.png)
+   1. The device accesses the smart contract to verify the ![](tee-confirmation-protocol-formula-01.png)blocks from the latest TCBs list and ![](tee-confirmation-protocol-formula-02.png)the suspicious TCBs list.
+      The total number of blocks to be checked equals ![](tee-confirmation-protocol-formula-03.png)
 
-***NB!** Due to the peculiarities of the blockchain implementation, the* L2![](tee-confirmation-protocol-formula-02.png) *blocks can be provided in segments via accessing the smart contract for several times.*
+***NB!** Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.png) *blocks can be provided in segments via accessing the smart contract for several times.*
 
 
 1. The device launches the blocks verification application in the TEE and generates TCBs that contain the results for blocks verification and data on processing power. Such blocks are signed by the device.
@@ -74,17 +74,17 @@ The Consensus Algorithm consists of the following steps:
 1. The device accesses the smart contract to store a new TCB.
 1. **Keeping track of TCBs**. The smart contract takes TCB marks into account and carries out the following actions:
    1. Copies all the blocks that have not passed the verification (from the latest TCBs list) and puts them into the suspicious TCBs list.
-   1. If the number of marks for the suspicious blocks equals some value K![](tee-confirmation-protocol-formula-04.png), then the decision is made. The following condition is checked: if the number of the negative marks is higher than that of the positive ones, the block is considered to be**a malicious block**. Otherwise, the block is tagged as honest. After the decision is made, the block is removed from the suspicious TCBs list.
+   1. If the number of marks for the suspicious blocks equals some value ![](tee-confirmation-protocol-formula-04.png), then the decision is made. The following condition is checked: if the number of the negative marks is higher than that of the positive ones, the block is considered to be**a malicious block**. Otherwise, the block is tagged as honest. After the decision is made, the block is removed from the suspicious TCBs list.
 1. **Penalties for malicious providers.** If the block has been declared as a malicious block, then:
    1. It loses its reward. The reward is distributed proportionally to the processing power among the active devices in the system (within the last 24 hours).
    1. The device that has issued the block receives a penalty point.
 
 1. If the device receives *P* penalty points it is blocked without the possibility of being recovered. The security deposit is distributed proportionally to the processing power among the active devices in the system (within the last 24 hours). All the blocks issued by the device are removed from all the lists.
-1. **Reward Payment.** The device receives a reward (unless it is blocked) according to the following formulaRi=R∗Pi∑j=0N24Pj![](tee-confirmation-protocol-formula-05.png)
+1. **Reward Payment.** The device receives a reward (unless it is blocked) according to the following formula ![](tee-confirmation-protocol-formula-05.png)
 
-where R![](tee-confirmation-protocol-formula-06.png) is the total reward for all the devices within the 24-hour period (established in the protocol settings), 
-Pi![](tee-confirmation-protocol-formula-07.png) is the power of the i❑![](tee-confirmation-protocol-formula-08.png) device, 
-N24![](tee-confirmation-protocol-formula-09.png) is the number of devices active within the last 24 hours, 
+where ![](tee-confirmation-protocol-formula-06.png) is the total reward for all the devices within the 24-hour period (established in the protocol settings), 
+![](tee-confirmation-protocol-formula-07.png) is the power of the ![](tee-confirmation-protocol-formula-08.png) device, 
+![](tee-confirmation-protocol-formula-09.png) is the number of devices active within the last 24 hours, 
 
 ` `The reward is transferred to the security deposit of the device as a deferred payment. The staking rate is also calculated based on the reward.
 ## TCBs Generation
@@ -153,7 +153,7 @@ Let us consider each attack and how the consensus handles them.
 
 **Spam attack**
 
-The spam attack allows the attackers to flood smart contracts with fake devices. To ensure protection against this, the provider makes a security deposit, and a part of the deposit is  reserved for the TEE offer registration. Tools such as garbage collection, which is used to remove unnecessary old entries in smart contracts on the blockchain and penalties for not fulfilling the orders are also utilized.
+The spam attack allows the attackers to flood smart contracts with fake devices. To ensure protection against this, the provider makes a security deposit, and a part of the deposit is reserved for the TEE offer registration. Tools such as garbage collection, which is used to remove unnecessary old entries in smart contracts on the blockchain and penalties for not fulfilling the orders are also utilized.
 
 **False computing power attack**
 
@@ -168,7 +168,7 @@ Only after an end-to-end verification is done, the device is allowed to operate 
 
 **51% attack**
 
-This attack involves the attackers gaining control of more than 50% of hashing power  compared to honest devices.
+This attack involves the attackers gaining control of more than 50% of hashing power compared to honest devices.
 
 To perform this attack, the adversary is required to register a TEE Provider and buy a lot of genuine TEE devices equal in number to those already registered. Once the devices have passed the verification, false blocks are generated to take over the network.
 

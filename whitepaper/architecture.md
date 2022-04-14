@@ -21,7 +21,7 @@ custom_edit_url: null
 The security is ensured through both the use of an individual public and private key pair and encryption of the network connection channel. The gateways and validator nodes provide additional security when transferring data between blockchain networks.
 
 1. **Provider solutions.** Each solution includes an execution controller that allows processing and further distribution of requests from the blockchain. The main solution types are as follows:
-   1. **TEE Provider.** The solution is used to execute confidential orders for solution confidential execution within the TEE. The TEE Provider publishes the public key signed by the device in advance to enable trusted loader attestation.
+   1. **TEE Provider.** The solution is used to fulfill orders for confidential execution within the TEE. The TEE Provider publishes the public key signed by the device in advance to enable trusted loader attestation.
 
 The Execution Controller receives the request for device allocation and solution execution. Then, the trusted loader is launched within the TEE. If the solution is encrypted, the loader decrypts it using the private key and then executes it.
 
