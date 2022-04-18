@@ -22,23 +22,23 @@ custom_edit_url: null
 3. **Provider solutions.** Each solution includes an execution controller that allows processing and further distribution of requests from the blockchain. The main solution types are as follows:
    1. **TEE Provider.** The solution is used to fulfill orders for confidential execution within the TEE. The TEE Provider publishes the public key signed by the device in advance to enable trusted loader attestation.
 
-   The Execution Controller receives the request for device allocation and solution execution. Then, the trusted loader is launched within the TEE. If the solution is encrypted, the loader decrypts it using the private key and then executes it.
+      The Execution Controller receives the request for device allocation and solution execution. Then, the trusted loader is launched within the TEE. If the solution is encrypted, the loader decrypts it using the private key and then executes it.
 
-   Once executed, the results are encrypted for the customer and stored in the selected data storage.
+      Once executed, the results are encrypted for the customer and stored in the selected data storage.
 
-   The TEE provider also receives a fixed reward for online presence via the TEE Confirmation Protocol (see further sections).
+      The TEE provider also receives a fixed reward for online presence via the TEE Confirmation Protocol (see further sections).
 
    2. **Storage Provider.** The solution provides access to the data storage, usually distributed, such as Filecoin or Arweave. Scripts, applications, containers, solution execution results, among other things, can be stored in the data storage.
 
-   The Execution Controller receives the request to allocate storage space and returns the encrypted storage access settings for the blockchain.
+      The Execution Controller receives the request to allocate storage space and returns the encrypted storage access settings for the blockchain.
 
    3. **Data Provider**. The solution is used to provide the provider's data for processing. These processes are conducted in the TEE environment, which guarantees complete data confidentiality.
 
-   The execution controller receives the request, checks the necessary dependencies (typically these would be the solution, TEE, and storage) and returns the URL of the encrypted data along with the key to then decrypt it into the blockchain. The key is encrypted with the trusted loader public key.
+      The execution controller receives the request, checks the necessary dependencies (typically these would be the solution, TEE, and storage) and returns the URL of the encrypted data along with the key to then decrypt it into the blockchain. The key is encrypted with the trusted loader public key.
 
    4. **Solution Provider.** Solution Provider is responsible for various solutions such as scripts, applications, and containers.
 
-   The Execution Controller receives the request for a solution and returns the URL of the encrypted solution along with the key to then decrypt it into the blockchain. The key is encrypted with the trusted loader key.
+      The Execution Controller receives the request for a solution and returns the URL of the encrypted solution along with the key to then decrypt it into the blockchain. The key is encrypted with the trusted loader key.
 ## Protocol Speed
 Polygon has been chosen as the main network. Polygon supports the execution of up to [7,200 transactions per second](https://twitter.com/0xpolygon/status/1283467641076584448?lang=en). A minimum of 4 transactions is required to process one request. Thus, Super Protocol allows you to process up to 1,800 orders per second. There are no limitations on the data volume provided as the protocol allows the use of any file storage.
 ## Security
