@@ -63,7 +63,10 @@ The Consensus Algorithm consists of the following steps:
 
 1. **TCBs Generation.**
    1. The device accesses the smart contract to verify the ![](tee-confirmation-protocol-formula-01.svg) blocks from the latest TCBs list and ![](tee-confirmation-protocol-formula-02.svg) the suspicious TCBs list.
-      The total number of blocks to be checked equals ![](tee-confirmation-protocol-formula-03.svg). ***NB!** Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
+      The total number of blocks to be checked equals ![](tee-confirmation-protocol-formula-03.svg).
+    
+   ***NB!** Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
+   
    2. The device launches the blocks verification application in the TEE and generates TCBs that contain the results for blocks verification and data on processing power. Such blocks are signed by the device.
       During the verification, the signature of each TCB is checked, as well as the hash of the Confirmation Application that was running on it.
    3. The device accesses the smart contract to store a new TCB.
@@ -77,9 +80,13 @@ The Consensus Algorithm consists of the following steps:
 4. **Reward Payment.** The device receives a reward (unless it is blocked) according to the following formula:
    
    ![](tee-confirmation-protocol-formula-05.svg)
+
    where:
+
    ![](tee-confirmation-protocol-formula-06.svg) is the total reward for all the devices within the 24-hour period (established in the protocol settings), 
+   
    ![](tee-confirmation-protocol-formula-07.svg) is the power of the ![](tee-confirmation-protocol-formula-08.svg) device, 
+   
    ![](tee-confirmation-protocol-formula-09.svg) is the number of devices active within the last 24 hours.
 
    The reward is transferred to the security deposit of the device as a deferred payment. The staking rate is also calculated based on the reward.
