@@ -61,30 +61,22 @@ To support the algorithm execution, the smart contract for TEE offers stores the
 
 The Consensus Algorithm consists of the following steps:
 
-1. **TCBs Generation**
+1. **TCBs Generation.**
    1. The device accesses the smart contract to verify the ![](tee-confirmation-protocol-formula-01.svg) blocks from the latest TCBs list and ![](tee-confirmation-protocol-formula-02.svg) the suspicious TCBs list.
       The total number of blocks to be checked equals ![](tee-confirmation-protocol-formula-03.svg)
-
-***NB!** Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
-
-
-1. The device launches the blocks verification application in the TEE and generates TCBs that contain the results for blocks verification and data on processing power. Such blocks are signed by the device.
-
-   During the verification, the signature of each TCB is checked, as well as the hash of the Confirmation Application that was running on it.
-2. The device accesses the smart contract to store a new TCB.
+      ***NB!** Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
+   1. The device launches the blocks verification application in the TEE and generates TCBs that contain the results for blocks verification and data on processing power. Such blocks are signed by the device.
+      During the verification, the signature of each TCB is checked, as well as the hash of the Confirmation Application that was running on it.
+   1. The device accesses the smart contract to store a new TCB.
 3. **Keeping track of TCBs.** The smart contract takes TCB marks into account and carries out the following actions:
    1. Copies all the blocks that have not passed the verification (from the latest TCBs list) and puts them into the suspicious TCBs list.
    1. If the number of marks for the suspicious blocks equals some value ![](tee-confirmation-protocol-formula-04.svg), then the decision is made. The following condition is checked: if the number of the negative marks is higher than that of the positive ones, the block is considered to be **a malicious block**. Otherwise, the block is tagged as honest. After the decision is made, the block is removed from the suspicious TCBs list.
 4. **Penalties for malicious providers.** If the block has been declared as a malicious block, then:
    1. It loses its reward. The reward is distributed proportionally to the processing power among the active devices in the system (within the last 24 hours).
    1. The device that has issued the block receives a penalty point.
-
 5. If the device receives ![](tee-confirmation-protocol-formula-10.svg) penalty points it is blocked without the possibility of being recovered. The security deposit is distributed proportionally to the processing power among the active devices in the system (within the last 24 hours). All the blocks issued by the device are removed from all the lists.
 6. **Reward Payment.** The device receives a reward (unless it is blocked) according to the following formula:
-<p align="center">
-  <img src={require('./tee-confirmation-protocol-formula-05.svg').default} />
-</p>
-
+   <p align="center">![](tee-confirmation-protocol-formula-10.svg)</p>
 where ![](tee-confirmation-protocol-formula-06.svg) is the total reward for all the devices within the 24-hour period (established in the protocol settings), 
 ![](tee-confirmation-protocol-formula-07.svg) is the power of the ![](tee-confirmation-protocol-formula-08.svg) device, 
 ![](tee-confirmation-protocol-formula-09.svg) is the number of devices active within the last 24 hours, 
