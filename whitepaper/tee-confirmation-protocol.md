@@ -74,7 +74,7 @@ The Consensus Algorithm consists of the following steps:
 2. The device accesses the smart contract to store a new TCB.
 3. **Keeping track of TCBs**. The smart contract takes TCB marks into account and carries out the following actions:
    1. Copies all the blocks that have not passed the verification (from the latest TCBs list) and puts them into the suspicious TCBs list.
-   1. If the number of marks for the suspicious blocks equals some value ![](tee-confirmation-protocol-formula-04.png), then the decision is made. The following condition is checked: if the number of the negative marks is higher than that of the positive ones, the block is considered to be**a malicious block**. Otherwise, the block is tagged as honest. After the decision is made, the block is removed from the suspicious TCBs list.
+   1. If the number of marks for the suspicious blocks equals some value ![](tee-confirmation-protocol-formula-04.svg), then the decision is made. The following condition is checked: if the number of the negative marks is higher than that of the positive ones, the block is considered to be**a malicious block**. Otherwise, the block is tagged as honest. After the decision is made, the block is removed from the suspicious TCBs list.
 4. **Penalties for malicious providers.** If the block has been declared as a malicious block, then:
    1. It loses its reward. The reward is distributed proportionally to the processing power among the active devices in the system (within the last 24 hours).
    1. The device that has issued the block receives a penalty point.
