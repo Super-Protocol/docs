@@ -65,7 +65,7 @@ The Consensus Algorithm consists of the following steps:
    1. The device accesses the smart contract to verify the ![](tee-confirmation-protocol-formula-01.svg) blocks from the latest TCBs list and ![](tee-confirmation-protocol-formula-02.svg) the suspicious TCBs list.
       The total number of blocks to be checked equals ![](tee-confirmation-protocol-formula-03.svg).
     
-   ***NB!** Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
+   ***NB!*** *Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
    
    2. The device launches the blocks verification application in the TEE and generates TCBs that contain the results for blocks verification and data on processing power. Such blocks are signed by the device.
       During the verification, the signature of each TCB is checked, as well as the hash of the Confirmation Application that was running on it.
