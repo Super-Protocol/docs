@@ -75,6 +75,7 @@ The Consensus Algorithm consists of the following steps:
    2. The device that has issued the block receives a penalty point.
    3. If the device receives ![](tee-confirmation-protocol-formula-10.svg) penalty points it is blocked without the possibility of being recovered. The security deposit is distributed proportionally to the processing power among the active devices in the system (within the last 24 hours). All the blocks issued by the device are removed from all the lists.
 4. **Reward Payment.** The device receives a reward (unless it is blocked) according to the following formula:
+   
    ![](tee-confirmation-protocol-formula-05.svg)
    where:
    ![](tee-confirmation-protocol-formula-06.svg) is the total reward for all the devices within the 24-hour period (established in the protocol settings), 
