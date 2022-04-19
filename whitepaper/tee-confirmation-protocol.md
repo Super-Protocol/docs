@@ -62,7 +62,7 @@ To support the algorithm execution, the smart contract for TEE offers stores the
 The Consensus Algorithm consists of the following steps:
 
 1. **TCBs Generation.**
-   1. The device accesses the smart contract to verify the ![](tee-confirmation-protocol-formula-01.svg) blocks from the latest TCBs list and ![](tee-confirmation-protocol-formula-02.svg) the suspicious TCBs list.
+   1. The device accesses the smart contract to verify ![](tee-confirmation-protocol-formula-01.svg) blocks from the latest TCBs list and ![](tee-confirmation-protocol-formula-02.svg) blocks from the suspicious TCBs list.
       The total number of blocks to be checked equals ![](tee-confirmation-protocol-formula-03.svg).
     
       ***NB!*** *Due to the peculiarities of the blockchain implementation, the* ![](tee-confirmation-protocol-formula-02.svg) *blocks can be provided in segments via accessing the smart contract for several times.*
