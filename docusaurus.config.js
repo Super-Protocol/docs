@@ -14,7 +14,17 @@ const config = {
     favicon: "favicon.ico",
     organizationName: "Super Protocol", // Usually your GitHub org/user name.
     projectName: "docs", // Usually your repo name.
-    plugins: [],
+    plugins: [
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "getting-started",
+                path: "getting-started",
+                routeBasePath: "/getting-started",
+                sidebarPath: require.resolve("./sidebarsGettingStarted.js"),
+            },
+        ],
+    ],
     presets: [
         [
             "classic",
@@ -45,6 +55,13 @@ const config = {
                     src: "navbar/images/logo.svg",
                 },
                 items: [
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Getting Started",
+                        docsPluginId: "getting-started",
+                    },
                     {
                         type: "doc",
                         docId: "index",
