@@ -12,12 +12,12 @@ This layer is where the secure solution execution takes place i.e. the processin
 In order to run applications within TEE and transfer data to it, a trusted loader mechanism has been developed. For this purpose, each TEE device generates a loader block by running it in block generation mode:
 
 <p align="center">
-  <img src={require('./tee-provider-01.png').default} />
+  <img src={require('./images/tee-provider-01.png').default} />
 </p>
 
 TEE supports the generation of unique keys tied to both the hash of executable code within TEE and the processor. For example, Intel's EGETKEY method inside the enclave is used for this exact operation. Once the key is obtained, the loader generates a pair of keys for asymmetric encryption, writes them to the disk for recovery when needed, and encrypts them with a unique key bound to the loader hash:
 
-Storage=EGETKEY(PubKey,PrivKey)![](tee-provider-formula-01.svg)
+![](images/tee-provider-formula-01.svg)
 
 The public key—*PubKey*—is written to the TEE Loader Block and signed with the TEE key. The resulting block is written to the blockchain and linked to the TEE device.
 
@@ -26,7 +26,7 @@ Providers can encrypt their data using this key and be sure that it can be decry
 Along with the order, the TEE execution controller receives encrypted input data parameters (TII) from the sub-order results. They are used to decrypt the solution, data, etc. Only the loader can decrypt these parameters, decode the solutions and data, and pass additional arguments to the solutions. On top of that, each encrypted parameter contains the hash of the solution that is allowed to output the parameter:
 
 <p align="center">
-  <img src={require('./tee-provider-02.png').default} />
+  <img src={require('./images/tee-provider-02.png').default} />
 </p>
 
 ## Confidential execution
@@ -35,19 +35,19 @@ In order to execute the solution in the TEE area, the TEE provider's execution c
 The loader then decrypts and executes the solution by conducting local attestation of the running solution and giving it the correct keys over the attested channel:
 
 <p align="center">
-  <img src={require('./tee-provider-03.png').default} />
+  <img src={require('./images/tee-provider-03.png').default} />
 </p>
 
 The solution can read encrypted data both from the installed provider server (2) and via the passed arguments (1) (e.g., link to distributed file storage and access key).
 
 <p align="center">
-  <img src={require('./tee-provider-04.png').default} />
+  <img src={require('./images/tee-provider-04.png').default} />
 </p>
 
 The following procedure is used to assemble solutions and data:
 
 <p align="center">
-  <img src={require('./tee-provider-05.png').default} />
+  <img src={require('./images/tee-provider-05.png').default} />
 </p>
 
 The output of the solution is encrypted and stored in the remote distributed storage.
@@ -55,7 +55,7 @@ The output of the solution is encrypted and stored in the remote distributed sto
 You can also use a whole TEE cluster for parallelization and additional protection. In this case, you need to deploy a TEE coordinator to attest and manage the machine cluster. The coordinator distributes the execution of the solution to the TEE machines:
 
 <p align="center">
-  <img src={require('./tee-provider-06.png').default} />
+  <img src={require('./images/tee-provider-06.png').default} />
 </p>
 
 ## Confidential aggregation
@@ -65,7 +65,7 @@ Data providers can coordinate with each other and execute the same solution on t
 
 1. The master provider runs a program to aggregate the results and gives it the encrypted results along with the keys encrypted for the trusted loader
 ## Supported TEEs (first-priority)
-The Aggregion team has significant experience using Intel SGX for confidential processing of big data. Their expertise will help simplify the migration of their existing solution to Super Protocol and the creation of the necessary infrastructure.
+The team has significant experience using Intel SGX for confidential processing of big data. Their expertise will help simplify the migration of their existing solution to Super Protocol and the creation of the necessary infrastructure.
 
 The currently available solutions are described below. Note that only Intel SGX and AMD SEV solutions are available for use. Despite that, Super Protocol includes support for other solutions, including GPU:
 
@@ -75,45 +75,45 @@ The currently available solutions are described below. Note that only Intel SGX 
    Intel Software Guard (Intel SGX) extensions protect against many known and active threats. They add another layer of protection [helping to reduce the attack surface of the system](https://www.intel.ru/content/www/ru/ru/architecture-and-technology/software-guard-extensions.html).
 
 <p align="center">
-  <img src={require('./tee-provider-07.png').default} />
+  <img src={require('./images/tee-provider-07.png').default} />
 </p>
 
-1. **AMD SEV**
+2. **AMD SEV**
    AMD offers the [Secure Encrypted Virtualization](https://www.amd.com/ru/processors/amd-secure-encrypted-virtualization) (SEV) technology that has emerged with the release of the EPYC processors. It is a hardware feature that encrypts memory for each virtual machine so that only the guest itself has access to the data.
 
-As a result, the information is unavailable to other VMs, containers, and untrusted hypervisors.
+   As a result, the information is unavailable to other VMs, containers, and untrusted hypervisors.
 
 <p align="center">
-  <img src={require('./tee-provider-08.png').default} />
+  <img src={require('./images/tee-provider-08.png').default} />
 </p>
 
-1. **AMD Secure Processor**
+3. **AMD Secure Processor**
    AMD also offers the [AMD Secure Processor](http://al-tm.ru/stati/stati-po-setyam/texnologiya-amd-secure-processor-\(psp\)) technology on certain hybrid AMD processors with the ARM processor on the same chip. The ARM TrustZone technology with a system-based approach to security acts as a protective "layer" for the hardware and creates a safe environment by separating the CPU in two virtual "realms". Important tasks are executed in the AMD Secure Processor "safe realm" while other tasks are processed in normal mode. This helps ensure that important data and trusted applications are stored and processed securely. It also helps protect the integrity and confidentiality of key resources such as the user interface and service provider materials.
 
 <p align="center">
-  <img src={require('./tee-provider-09.png').default} />
+  <img src={require('./images/tee-provider-09.png').default} />
 </p>
 
-1. **ARM Confidential Computing Architecture (CCA)**
-   ARM releases new Armv9 processor architecture based on the [ARM ](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2)[Confidential Compute Architecture](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2) technology. CCA's goal is to get the most out of the current software stack situation, where applications running on a device need to trust the operating system and the hypervisor on which they run. In the traditional security model, more privileged software layers have full access to the lower layers, which becomes a problem if the operating system or hypervisor is compromised.
+4. **ARM Confidential Computing Architecture (CCA)**
+   ARM released a new Armv9 processor architecture based on the [ARM ](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2)[Confidential Compute Architecture](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2) technology. CCA's goal is to get the most out of the current software stack situation, where applications running on a device need to trust the operating system and the hypervisor on which they run. In the traditional security model, more privileged software layers have full access to the lower layers, which becomes a problem if the operating system or hypervisor is compromised.
 
    CCA introduces a new concept of dynamically created "realms", which can be seen as secure containerized runtime environments that are completely non-transparent to the operating system or hypervisor. The hypervisor will still be used but it will focus on planning and resource allocation. The "realm manager" is used to control the realms.
 
 <p align="center">
-  <img src={require('./tee-provider-10.png').default} />
+  <img src={require('./images/tee-provider-10.png').default} />
 </p>
 
-1. **Graviton**
+5. **Graviton**
+   INESC-ID / IST, University of Lisbon proposed the idea of creating TEE on GPU.
+
+   [Graviton](https://www.microsoft.com/en-us/research/uploads/prod/2018/09/Graviton-Trusted-Execution-Environments-on-GPUs.pdf) is an architecture for supporting trusted runtime environments on GPUs. It allows applications to offload code and data that should be protected to the GPU and run the code in isolation from other code running on the GPU as well as from all the software on the host, including the device driver, operating system, hypervisor, etc.
+
+   The hardware complexity of Graviton integration with existing GPUs is relatively low; all changes are limited to peripheral components such as the GPU command processor, while the existing GPU, its cores, MMU, and memory controller require no modification.
 
 <p align="center">
-  <img src={require('./tee-provider-11.png').default} />
+  <img src={require('./images/tee-provider-11.png').default} />
 </p>
 
-INESC-ID / IST, University of Lisbon proposed the idea of creating TEE on GPU.
-
-[Graviton](https://www.microsoft.com/en-us/research/uploads/prod/2018/09/Graviton-Trusted-Execution-Environments-on-GPUs.pdf) is an architecture for supporting trusted runtime environments on GPUs. It allows applications to offload code and data that should be protected to the GPU and run the code in isolation from other code running on the GPU as well as from all the software on the host, including the device driver, operating system, hypervisor, etc.
-
-The hardware complexity of Graviton integration with existing GPUs is relatively low; all changes are limited to peripheral components such as the GPU command processor, while the existing GPU, its cores, MMU, and memory controller require no modification.
 ## Computation types supported by our TEE
 TEE implements so-called attested computations and programs. They require that the user's execution expectations are met and that the code is actually executed in isolation on a given remote machine.
 
@@ -124,13 +124,13 @@ Unlike ZK-SNARKs and MPCs, Super Protocol uses hardware protection rather than a
 When using the standard MPC-based algorithmic protection, the data must be encrypted before it can be used and, resulting in the data also being returned encrypted:
 
 <p align="center">
-  <img src={require('./tee-provider-12.png').default} />
+  <img src={require('./images/tee-provider-12.png').default} />
 </p>
 
 With TEE, data encryption and computations take place inside the protected area of the processor:
 
 <p align="center">
-  <img src={require('./tee-provider-13.png').default} />
+  <img src={require('./images/tee-provider-13.png').default} />
 </p>
 
 The result is immediately encrypted within the TEE area to ensure complete confidentiality of the data once it is processed.
@@ -145,11 +145,11 @@ To summarize, let's have a look at the comparison table:
 
 ||**Security**|**Speed**|**Scalable**|**Any application**|**Distribution**|
 | :- | :- | :- | :- | :- | :- |
-|**TEE**|Yes|Yes|No|Yes|No|
-|**MPC**|Yes|No|Yes|No|Yes|
-|**Simple Application**|No|Yes|No|Yes|No|
-|**Cloud Application**|No|Yes|Yes|Yes|No|
-|**TEE Super Protocol solution**|Yes|Yes|Yes|Yes|Yes|
+|**TEE**|**Yes**|**Yes**|No|**Yes**|No|
+|**MPC**|**Yes**|No|**Yes**|No|**Yes**|
+|**Simple Application**|No|**Yes**|No|**Yes**|No|
+|**Cloud Application**|No|**Yes**|**Yes**|**Yes**|No|
+|**TEE Super Protocol solution**|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|
 
 ## Speed and performance
 Storing unencrypted code and data at the processor level allows TEE solutions and applications to be executed much faster compared to the scenarios where complex cryptography is used.
@@ -158,7 +158,7 @@ The code at the TEE level executes almost [as fast as normal code](https://mediu
 ## Fault tolerance
 
 <p align="center">
-  <img src={require('./tee-provider-14.png').default} />
+  <img src={require('./images/tee-provider-14.png').default} />
 </p>
 
 The entire Super Protocol stack is built on the use of distributed systems. At the heart of such systems is the blockchain, with which the value customer and the value provider interact. For the results of completed orders, the blockchain also provides references to the distributed storage.
@@ -196,11 +196,11 @@ Due to the possibility of taking TEE outside the perimeter of the value provider
 1. **Transmission channel attacks.** The channel between the TEE and the value provider is cryptographically protected, however the attacker can obtain secondary information such as the source IP address and conduct further analysis. In this regard, super protocol has the capability of proxy data transmission:
 
 <p align="center">
-  <img src={require('./tee-provider-15.png').default} />
+  <img src={require('./images/tee-provider-15.png').default} />
 </p>
 
 For additional protection, we can split data processing into several TEE areas and set up secure channels in between them, as well as collect the results similar to the the aggregation scheme of multiple value providers:
 
 <p align="center">
-  <img src={require('./tee-provider-16.png').default} />
+  <img src={require('./images/tee-provider-16.png').default} />
 </p>

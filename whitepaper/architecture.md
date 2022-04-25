@@ -11,7 +11,7 @@ custom_edit_url: null
 **Super Protocol** consists of three layers: 
 
 <p align="center">
-  <img src={require('./architecture-01.png').default} />
+  <img src={require('./images/architecture-01.png').default} />
 </p>
 
 1. **Client Infrastructure.** At this layer there are applications for connecting to data provisioning services with integrated support for external APIs. The protocol SDK is used for exchanging requests with the blockchain in different programming languages.

@@ -11,7 +11,7 @@ custom_edit_url: null
 Effectively, data could be in three states: at rest, in transit and in use. Traditionally, a variety of encryption methods have been used to protect data in storage or during transmission. However, data remained vulnerable during processing. Confidential computing resorts to hardware protection during processing to solve this problem.
 
 <p align="center">
-  <img src={require('./goals-01.png').default} />
+  <img src={require('./images/goals-01.png').default} />
 </p>
 
 Confidential computing is rapidly gaining popularity among today's cloud service providers and consumers of such services in large companies. Google calls this a [breakthrough](https://cloud.google.com/confidential-computing) technology, while [Gartner anticipates](https://www.r3.com/gartner-2021-privacy-enhancing-computation/) that by 2025, 50% of large companies will be using confidential computing. However, unlike traditional cloud services, where trust in the provider is a key factor, Super Protocol is a decentralized trustless system, which makes confidential computing an indispensable element at the core of the protocol itself.

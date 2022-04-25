@@ -10,7 +10,7 @@ custom_edit_url: null
 # High-Level Description of the Protocol
 
 <p align="center">
-  <img src={require('./high-level-01.png').default} />
+  <img src={require('./images/high-level-01.png').default} />
 </p>
 
 From a bird’s eye view, Super Protocol involves the interactions shown in the above diagram. The interactions include the following entities:
