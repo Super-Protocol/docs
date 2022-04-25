@@ -12,7 +12,7 @@ The launch of [Bitcoin](https://bitcoin.org/en/) in 2009 introduced the world to
 The key Web3 concept is to create open, decentralized alternatives for all the platforms and applications at the core of modern Internet. At the moment there are quite a few ongoing projects that are trying to implement this idea. Little by little, they are filling the gaps that currently exist in the decentralized world.
 
 <p align="center">
-  <img src={require('./abstract-01.png').default} />
+  <img src={require('./images/abstract-01.png').default} />
 </p>
 
 But decentralization is not the only defining feature of the Web3 concept. It is expected that the following technologies will play a key role in the future: Big Data, AI, IoT, and VR/AR. These technologies require a lot of computational capacity and access to data, know-how and specific tools for creating cutting edge products. The lion’s share of the cloud services market at the moment is [controlled by only three corporations](https://www.canalys.com/newsroom/global-cloud-market-Q121). The same corporations and a number of other similar entities also control most of the data and technologies that will be fundamental for the Internet of the future.
