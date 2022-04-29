@@ -70,16 +70,18 @@ The team has significant experience using Intel SGX for confidential processing 
 The currently available solutions are described below. Note that only Intel SGX and AMD SEV solutions are available for use. Despite that, Super Protocol includes support for other solutions, including GPU:
 
 1. **Intel SGX**
+   
    Application and solution developers can now greatly enhance data security with new hardware controls for cloud and enterprise environments. Intel Software Guard Extensions (Intel SGX) provides hardware-based memory encryption that isolates specific application code and data in memory. Intel SGX allows placing the user-level code in private areas of memory called enclaves, which isolate the code from processes running at more privileged levels.
 
-   Intel Software Guard (Intel SGX) extensions protect against many known and active threats. They add another layer of protection [helping to reduce the attack surface of the system](https://www.intel.ru/content/www/ru/ru/architecture-and-technology/software-guard-extensions.html).
+   Intel Software Guard (Intel SGX) extensions protect against many known and active threats. They add another layer of protection [helping to reduce the attack surface of the system](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html).
 
 <p align="center">
   <img src={require('./images/tee-provider-07.png').default} />
 </p>
 
 2. **AMD SEV**
-   AMD offers the [Secure Encrypted Virtualization](https://www.amd.com/ru/processors/amd-secure-encrypted-virtualization) (SEV) technology that has emerged with the release of the EPYC processors. It is a hardware feature that encrypts memory for each virtual machine so that only the guest itself has access to the data.
+   
+   AMD offers the [Secure Encrypted Virtualization](https://www.amd.com/system/files/TechDocs/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf) (SEV) technology that has emerged with the release of the EPYC processors. It is a hardware feature that encrypts memory for each virtual machine so that only the guest itself has access to the data.
 
    As a result, the information is unavailable to other VMs, containers, and untrusted hypervisors.
 
@@ -87,14 +89,16 @@ The currently available solutions are described below. Note that only Intel SGX 
   <img src={require('./images/tee-provider-08.png').default} />
 </p>
 
-3. **AMD Secure Processor**
-   AMD also offers the [AMD Secure Processor](http://al-tm.ru/stati/stati-po-setyam/texnologiya-amd-secure-processor-\(psp\)) technology on certain hybrid AMD processors with the ARM processor on the same chip. The ARM TrustZone technology with a system-based approach to security acts as a protective "layer" for the hardware and creates a safe environment by separating the CPU in two virtual "realms". Important tasks are executed in the AMD Secure Processor "safe realm" while other tasks are processed in normal mode. This helps ensure that important data and trusted applications are stored and processed securely. It also helps protect the integrity and confidentiality of key resources such as the user interface and service provider materials.
+3. **AMD Platform Security Processor**
+   
+   AMD also offers the [AMD Platform Security Processor](https://en.wikipedia.org/wiki/AMD_Platform_Security_Processor) technology on certain hybrid AMD processors with the ARM processor on the same chip. The ARM TrustZone technology with a system-based approach to security acts as a protective "layer" for the hardware and creates a safe environment by separating the CPU in two virtual "realms". Important tasks are executed in the AMD Platform Security Processor "safe realm" while other tasks are processed in normal mode. This helps ensure that important data and trusted applications are stored and processed securely. It also helps protect the integrity and confidentiality of key resources such as the user interface and service provider materials.
 
 <p align="center">
   <img src={require('./images/tee-provider-09.png').default} />
 </p>
 
 4. **ARM Confidential Computing Architecture (CCA)**
+
    ARM released a new Armv9 processor architecture based on the [ARM ](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2)[Confidential Compute Architecture](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2) technology. CCA's goal is to get the most out of the current software stack situation, where applications running on a device need to trust the operating system and the hypervisor on which they run. In the traditional security model, more privileged software layers have full access to the lower layers, which becomes a problem if the operating system or hypervisor is compromised.
 
    CCA introduces a new concept of dynamically created "realms", which can be seen as secure containerized runtime environments that are completely non-transparent to the operating system or hypervisor. The hypervisor will still be used but it will focus on planning and resource allocation. The "realm manager" is used to control the realms.
@@ -104,6 +108,7 @@ The currently available solutions are described below. Note that only Intel SGX 
 </p>
 
 5. **Graviton**
+   
    INESC-ID / IST, University of Lisbon proposed the idea of creating TEE on GPU.
 
    [Graviton](https://www.microsoft.com/en-us/research/uploads/prod/2018/09/Graviton-Trusted-Execution-Environments-on-GPUs.pdf) is an architecture for supporting trusted runtime environments on GPUs. It allows applications to offload code and data that should be protected to the GPU and run the code in isolation from other code running on the GPU as well as from all the software on the host, including the device driver, operating system, hypervisor, etc.
