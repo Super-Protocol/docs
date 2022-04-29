@@ -9,9 +9,7 @@ custom_edit_url: null
 # Whitepaper Status and Updates
 **Important!** This Whitepaper is a work in progress and will be regularly updated in the coming weeks.  Only a portion of it has been published to date. Go ahead and join our social networks to stay tuned and never miss out on our updates. All links are available on our website [Super Protocol - Web3 Confidential Super Cloud](https://superprotocol.com/).
 
-Last update: April 25, 2022
-
-
+Last update: April 29, 2022
 
 |**Section**|**Status**|
 | :- | :- |
@@ -22,9 +20,10 @@ Last update: April 25, 2022
 |[Protocol use cases](/use-cases)|Published|
 |Tokenomics|*Coming soon*|
 |[Architecture](/architecture)|Published|
-|[TEE Provider](/tee-provider)|**New!**|
+|[TEE Provider](/tee-provider)|Published|
 |[TEE Confirmation Protocol](/tee-confirmation-protocol)|Published|
-|Data Provider|*Coming soon*|
-|Storage Provider|*Coming soon*|
+|[Data Provider](/data-provider)|**New!**|
+|[Storage Provider](/storage-provider)|**New!**|
 |Client Infrastructure|*Coming soon*|
-|Blockchain Solution|*Coming soon*|
+|[Blockchain Solution (Part 1)](/blockchain-solution)|**New!**|
+|Blockchain Solution (Part 2)|*Coming soon*|
