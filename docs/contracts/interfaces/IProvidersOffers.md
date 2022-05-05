@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "IProvidersOffers"
+title: "IProvidersOffers"
+sidebar_label: "IProvidersOffers"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -233,8 +233,8 @@ sidebar_position: 0
 [IProviders-getProviderTokenReceiver-address-]: IProviders.md#IProviders-getProviderTokenReceiver-address-
 [IProviders-getProviderSecurityDeposit-address-]: IProviders.md#IProviders-getProviderSecurityDeposit-address-
 [IProviders-getProviderRequiredSecDepo-address-uint256-]: IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
-[IProvidersOffers]: IProvidersOffers.md#IProvidersOffers
-[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
+[IProvidersOffers]: #IProvidersOffers
+[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: #IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
 [IStaking]: IStaking.md#IStaking
 [IStaking-stake-uint256-]: IStaking.md#IStaking-stake-uint256-
 [IStaking-stakeFor-address-uint256-]: IStaking.md#IStaking-stakeFor-address-uint256-
@@ -244,10 +244,10 @@ sidebar_position: 0
 [IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
 [IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
 [IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
+[ISuperpro]: ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
 [ISuperproToken]: ISuperproToken.md#ISuperproToken
 [ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
 [ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
@@ -362,33 +362,15 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `IProvidersOffers`
 
 
 
 ## Functions
-### owner
+### isProviderHasEnoughSecurityDeposit
 ```solidity
-  function owner(
-  ) external returns (address)
-```
-
-
-
-
-### getToken
-```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
-```
-
-
-
-
-### getConfigParam
-```solidity
-  function getConfigParam(
-  ) external returns (uint256)
+  function isProviderHasEnoughSecurityDeposit(
+  ) external returns (bool)
 ```
 
 

@@ -1,7 +1,7 @@
 ---
-id: "Staking"
-title: "Staking"
-sidebar_label: "Staking"
+id: "ProvidersOffers"
+title: "ProvidersOffers"
+sidebar_label: "ProvidersOffers"
 sidebar_position: 0
 ---
 [AppFacet]: AppFacet.md#AppFacet
@@ -117,32 +117,32 @@ sidebar_position: 0
 [Providers-ProviderSecurityDepoRefilled-address-uint256-]: Providers.md#Providers-ProviderSecurityDepoRefilled-address-uint256-
 [Providers-ProviderSecurityDepoUnlocked-address-uint256-]: Providers.md#Providers-ProviderSecurityDepoUnlocked-address-uint256-
 [Providers-ProviderPenalty-address-uint256-]: Providers.md#Providers-ProviderPenalty-address-uint256-
-[ProvidersOffers]: ProvidersOffers.md#ProvidersOffers
-[ProvidersOffers-_pointer-address-]: ProvidersOffers.md#ProvidersOffers-_pointer-address-
-[ProvidersOffers-isProviderHasEnabledOffers-address-]: ProvidersOffers.md#ProvidersOffers-isProviderHasEnabledOffers-address-
-[ProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: ProvidersOffers.md#ProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
-[ProvidersOffers-getProviderOffersState-address-]: ProvidersOffers.md#ProvidersOffers-getProviderOffersState-address-
-[ProvidersOffers-getProviderRequiredSecDepo-address-uint256-]: ProvidersOffers.md#ProvidersOffers-getProviderRequiredSecDepo-address-uint256-
-[ProvidersOffers-getProviderRecentlyEnabledValueOffersCount-address-]: ProvidersOffers.md#ProvidersOffers-getProviderRecentlyEnabledValueOffersCount-address-
-[ProvidersOffers-getProviderRecentlyEnabledTeeOffersCount-address-]: ProvidersOffers.md#ProvidersOffers-getProviderRecentlyEnabledTeeOffersCount-address-
-[ProvidersOffers-getProviderValueOffers-address-]: ProvidersOffers.md#ProvidersOffers-getProviderValueOffers-address-
-[ProvidersOffers-getProviderTeeOffers-address-]: ProvidersOffers.md#ProvidersOffers-getProviderTeeOffers-address-
-[ProvidersOffers-gcProviderOffers-address-]: ProvidersOffers.md#ProvidersOffers-gcProviderOffers-address-
-[ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-]: ProvidersOffers.md#ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-
-[ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ProvidersOffers.md#ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[Staking]: #Staking
-[Staking-getStakeInfo-address-]: #Staking-getStakeInfo-address-
-[Staking-getLockedTokensInfo-address-]: #Staking-getLockedTokensInfo-address-
-[Staking-stake-uint256-]: #Staking-stake-uint256-
-[Staking-stakeFor-address-uint256-]: #Staking-stakeFor-address-uint256-
-[Staking-unstake-uint256-]: #Staking-unstake-uint256-
-[Staking-lockTokens-address-uint256-uint256-]: #Staking-lockTokens-address-uint256-uint256-
-[Staking-unlockTokens-address-uint256-]: #Staking-unlockTokens-address-uint256-
-[Staking-confiscateTokensFrom-address-uint256-]: #Staking-confiscateTokensFrom-address-uint256-
-[Staking-TokensStaked-address-uint256-uint256-]: #Staking-TokensStaked-address-uint256-uint256-
-[Staking-TokensUnstaked-address-uint256-uint256-]: #Staking-TokensUnstaked-address-uint256-uint256-
-[Staking-TokensLocked-address-uint256-uint256-]: #Staking-TokensLocked-address-uint256-uint256-
-[Staking-TokensUnlocked-address-uint256-uint256-]: #Staking-TokensUnlocked-address-uint256-uint256-
+[ProvidersOffers]: #ProvidersOffers
+[ProvidersOffers-_pointer-address-]: #ProvidersOffers-_pointer-address-
+[ProvidersOffers-isProviderHasEnabledOffers-address-]: #ProvidersOffers-isProviderHasEnabledOffers-address-
+[ProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: #ProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
+[ProvidersOffers-getProviderOffersState-address-]: #ProvidersOffers-getProviderOffersState-address-
+[ProvidersOffers-getProviderRequiredSecDepo-address-uint256-]: #ProvidersOffers-getProviderRequiredSecDepo-address-uint256-
+[ProvidersOffers-getProviderRecentlyEnabledValueOffersCount-address-]: #ProvidersOffers-getProviderRecentlyEnabledValueOffersCount-address-
+[ProvidersOffers-getProviderRecentlyEnabledTeeOffersCount-address-]: #ProvidersOffers-getProviderRecentlyEnabledTeeOffersCount-address-
+[ProvidersOffers-getProviderValueOffers-address-]: #ProvidersOffers-getProviderValueOffers-address-
+[ProvidersOffers-getProviderTeeOffers-address-]: #ProvidersOffers-getProviderTeeOffers-address-
+[ProvidersOffers-gcProviderOffers-address-]: #ProvidersOffers-gcProviderOffers-address-
+[ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-]: #ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-
+[ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: #ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
+[Staking]: Staking.md#Staking
+[Staking-getStakeInfo-address-]: Staking.md#Staking-getStakeInfo-address-
+[Staking-getLockedTokensInfo-address-]: Staking.md#Staking-getLockedTokensInfo-address-
+[Staking-stake-uint256-]: Staking.md#Staking-stake-uint256-
+[Staking-stakeFor-address-uint256-]: Staking.md#Staking-stakeFor-address-uint256-
+[Staking-unstake-uint256-]: Staking.md#Staking-unstake-uint256-
+[Staking-lockTokens-address-uint256-uint256-]: Staking.md#Staking-lockTokens-address-uint256-uint256-
+[Staking-unlockTokens-address-uint256-]: Staking.md#Staking-unlockTokens-address-uint256-
+[Staking-confiscateTokensFrom-address-uint256-]: Staking.md#Staking-confiscateTokensFrom-address-uint256-
+[Staking-TokensStaked-address-uint256-uint256-]: Staking.md#Staking-TokensStaked-address-uint256-uint256-
+[Staking-TokensUnstaked-address-uint256-uint256-]: Staking.md#Staking-TokensUnstaked-address-uint256-uint256-
+[Staking-TokensLocked-address-uint256-uint256-]: Staking.md#Staking-TokensLocked-address-uint256-uint256-
+[Staking-TokensUnlocked-address-uint256-uint256-]: Staking.md#Staking-TokensUnlocked-address-uint256-uint256-
 [Superpro]: Superpro.md#Superpro
 [Superpro-onlyAdmin--]: Superpro.md#Superpro-onlyAdmin--
 [Superpro-SUPERPRO_STORAGE_CONFIG-bytes32]: Superpro.md#Superpro-SUPERPRO_STORAGE_CONFIG-bytes32
@@ -362,113 +362,116 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `Staking`
+## `ProvidersOffers`
 
 
 
 ## Functions
-### getStakeInfo
+### _pointer
 ```solidity
-  function getStakeInfo(
-  ) public returns (struct StakeInfo ret)
+  function _pointer(
+  ) internal returns (struct ProviderOffersData)
 ```
 
 
 
 
-### getLockedTokensInfo
+### isProviderHasEnabledOffers
 ```solidity
-  function getLockedTokensInfo(
-  ) external returns (struct LockedTokens ret)
+  function isProviderHasEnabledOffers(
+  ) public returns (bool)
 ```
 
 
 
 
-### stake
+### isProviderHasEnoughSecurityDeposit
 ```solidity
-  function stake(
+  function isProviderHasEnoughSecurityDeposit(
+  ) public returns (bool)
+```
+
+
+
+
+### getProviderOffersState
+```solidity
+  function getProviderOffersState(
+  ) public returns (struct ProviderOffersState)
+```
+
+
+
+
+### getProviderRequiredSecDepo
+```solidity
+  function getProviderRequiredSecDepo(
+  ) public returns (uint256)
+```
+
+
+
+
+### getProviderRecentlyEnabledValueOffersCount
+```solidity
+  function getProviderRecentlyEnabledValueOffersCount(
+  ) public returns (uint256)
+```
+
+
+
+
+### getProviderRecentlyEnabledTeeOffersCount
+```solidity
+  function getProviderRecentlyEnabledTeeOffersCount(
+  ) public returns (uint256)
+```
+
+
+
+
+### getProviderValueOffers
+```solidity
+  function getProviderValueOffers(
+  ) external returns (uint256[])
+```
+
+
+
+
+### getProviderTeeOffers
+```solidity
+  function getProviderTeeOffers(
+  ) external returns (uint256[])
+```
+
+
+
+
+### gcProviderOffers
+```solidity
+  function gcProviderOffers(
   ) public
 ```
 
 
 
 
-### stakeFor
+### addProviderOffer
 ```solidity
-  function stakeFor(
+  function addProviderOffer(
   ) public
 ```
 
 
 
 
-### unstake
+### setProviderOfferState
 ```solidity
-  function unstake(
+  function setProviderOfferState(
   ) public
 ```
 
-
-
-
-### lockTokens
-```solidity
-  function lockTokens(
-  ) public
-```
-
-
-
-
-### unlockTokens
-```solidity
-  function unlockTokens(
-  ) public
-```
-
-
-
-
-### confiscateTokensFrom
-```solidity
-  function confiscateTokensFrom(
-  ) public
-```
-
-
-
-
-## Events
-### TokensStaked
-```solidity
-  event TokensStaked(
-  )
-```
-
-
-
-### TokensUnstaked
-```solidity
-  event TokensUnstaked(
-  )
-```
-
-
-
-### TokensLocked
-```solidity
-  event TokensLocked(
-  )
-```
-
-
-
-### TokensUnlocked
-```solidity
-  event TokensUnlocked(
-  )
-```
 
 
 

@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "IProviders"
+title: "IProviders"
+sidebar_label: "IProviders"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -227,12 +227,12 @@ sidebar_position: 0
 [IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
 [IOrders]: IOrders.md#IOrders
 [IOrders-getOrder-uint256-]: IOrders.md#IOrders-getOrder-uint256-
-[IProviders]: IProviders.md#IProviders
-[IProviders-isProviderRegistered-address-]: IProviders.md#IProviders-isProviderRegistered-address-
-[IProviders-getProviderActionAccount-address-]: IProviders.md#IProviders-getProviderActionAccount-address-
-[IProviders-getProviderTokenReceiver-address-]: IProviders.md#IProviders-getProviderTokenReceiver-address-
-[IProviders-getProviderSecurityDeposit-address-]: IProviders.md#IProviders-getProviderSecurityDeposit-address-
-[IProviders-getProviderRequiredSecDepo-address-uint256-]: IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
+[IProviders]: #IProviders
+[IProviders-isProviderRegistered-address-]: #IProviders-isProviderRegistered-address-
+[IProviders-getProviderActionAccount-address-]: #IProviders-getProviderActionAccount-address-
+[IProviders-getProviderTokenReceiver-address-]: #IProviders-getProviderTokenReceiver-address-
+[IProviders-getProviderSecurityDeposit-address-]: #IProviders-getProviderSecurityDeposit-address-
+[IProviders-getProviderRequiredSecDepo-address-uint256-]: #IProviders-getProviderRequiredSecDepo-address-uint256-
 [IProvidersOffers]: IProvidersOffers.md#IProvidersOffers
 [IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
 [IStaking]: IStaking.md#IStaking
@@ -244,10 +244,10 @@ sidebar_position: 0
 [IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
 [IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
 [IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
+[ISuperpro]: ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
 [ISuperproToken]: ISuperproToken.md#ISuperproToken
 [ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
 [ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
@@ -362,32 +362,50 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `IProviders`
 
 
 
 ## Functions
-### owner
+### isProviderRegistered
 ```solidity
-  function owner(
+  function isProviderRegistered(
+  ) external returns (bool)
+```
+
+
+
+
+### getProviderActionAccount
+```solidity
+  function getProviderActionAccount(
   ) external returns (address)
 ```
 
 
 
 
-### getToken
+### getProviderTokenReceiver
 ```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
+  function getProviderTokenReceiver(
+  ) external returns (address)
 ```
 
 
 
 
-### getConfigParam
+### getProviderSecurityDeposit
 ```solidity
-  function getConfigParam(
+  function getProviderSecurityDeposit(
+  ) external returns (uint256)
+```
+
+
+
+
+### getProviderRequiredSecDepo
+```solidity
+  function getProviderRequiredSecDepo(
   ) external returns (uint256)
 ```
 

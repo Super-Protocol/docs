@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "OrdersStorageAccessor"
+title: "OrdersStorageAccessor"
+sidebar_label: "OrdersStorageAccessor"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -208,53 +208,53 @@ sidebar_position: 0
 [LibDiamond-DiamondStorage]: ../diamond/libraries/LibDiamond.md#LibDiamond-DiamondStorage
 [DiamondInit]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit
 [DiamondInit-init--]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit-init--
-[IOffers]: IOffers.md#IOffers
-[IOffers-isOfferEnabled-uint256-]: IOffers.md#IOffers-isOfferEnabled-uint256-
-[IOffers-isOfferCancelable-uint256-]: IOffers.md#IOffers-isOfferCancelable-uint256-
-[IOffers-isOfferAllowedForConsumer-uint256-address-]: IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
-[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
-[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
-[IOffers-isProviderHasEnabledOffers-address-]: IOffers.md#IOffers-isProviderHasEnabledOffers-address-
-[IOffers-getProviderRequiredSecDepo-address-uint256-]: IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
-[IOffers-getOfferType-uint256-]: IOffers.md#IOffers-getOfferType-uint256-
-[IOffers-getOfferGroup-uint256-]: IOffers.md#IOffers-getOfferGroup-uint256-
-[IOffers-getOfferProviderAuthority-uint256-]: IOffers.md#IOffers-getOfferProviderAuthority-uint256-
-[IOffers-getOfferDisabledAfter-uint256-]: IOffers.md#IOffers-getOfferDisabledAfter-uint256-
-[IOffers-getOfferHoldDeposit-uint256-]: IOffers.md#IOffers-getOfferHoldDeposit-uint256-
-[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
-[IOffers-gcProviderOffers-address-]: IOffers.md#IOffers-gcProviderOffers-address-
-[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
-[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[IOrders]: IOrders.md#IOrders
-[IOrders-getOrder-uint256-]: IOrders.md#IOrders-getOrder-uint256-
-[IProviders]: IProviders.md#IProviders
-[IProviders-isProviderRegistered-address-]: IProviders.md#IProviders-isProviderRegistered-address-
-[IProviders-getProviderActionAccount-address-]: IProviders.md#IProviders-getProviderActionAccount-address-
-[IProviders-getProviderTokenReceiver-address-]: IProviders.md#IProviders-getProviderTokenReceiver-address-
-[IProviders-getProviderSecurityDeposit-address-]: IProviders.md#IProviders-getProviderSecurityDeposit-address-
-[IProviders-getProviderRequiredSecDepo-address-uint256-]: IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
-[IProvidersOffers]: IProvidersOffers.md#IProvidersOffers
-[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
-[IStaking]: IStaking.md#IStaking
-[IStaking-stake-uint256-]: IStaking.md#IStaking-stake-uint256-
-[IStaking-stakeFor-address-uint256-]: IStaking.md#IStaking-stakeFor-address-uint256-
-[IStaking-unstake-uint256-]: IStaking.md#IStaking-unstake-uint256-
-[IStaking-lockTokens-address-uint256-uint256-]: IStaking.md#IStaking-lockTokens-address-uint256-uint256-
-[IStaking-unlockTokens-address-uint256-]: IStaking.md#IStaking-unlockTokens-address-uint256-
-[IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
-[IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
-[IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
-[ISuperproToken]: ISuperproToken.md#ISuperproToken
-[ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
-[ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
-[ISuperproToken-transferFrom-address-address-uint256-]: ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
-[ISuperproToken-allowance-address-address-]: ISuperproToken.md#ISuperproToken-allowance-address-address-
-[ISuperproToken-approve-address-uint256-]: ISuperproToken.md#ISuperproToken-approve-address-uint256-
-[ISuperproToken-burnFrom-address-uint256-]: ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
+[IOffers]: ../interfaces/IOffers.md#IOffers
+[IOffers-isOfferEnabled-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferEnabled-uint256-
+[IOffers-isOfferCancelable-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferCancelable-uint256-
+[IOffers-isOfferAllowedForConsumer-uint256-address-]: ../interfaces/IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
+[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: ../interfaces/IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
+[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
+[IOffers-isProviderHasEnabledOffers-address-]: ../interfaces/IOffers.md#IOffers-isProviderHasEnabledOffers-address-
+[IOffers-getProviderRequiredSecDepo-address-uint256-]: ../interfaces/IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
+[IOffers-getOfferType-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferType-uint256-
+[IOffers-getOfferGroup-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferGroup-uint256-
+[IOffers-getOfferProviderAuthority-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferProviderAuthority-uint256-
+[IOffers-getOfferDisabledAfter-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferDisabledAfter-uint256-
+[IOffers-getOfferHoldDeposit-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferHoldDeposit-uint256-
+[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
+[IOffers-gcProviderOffers-address-]: ../interfaces/IOffers.md#IOffers-gcProviderOffers-address-
+[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: ../interfaces/IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
+[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ../interfaces/IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
+[IOrders]: ../interfaces/IOrders.md#IOrders
+[IOrders-getOrder-uint256-]: ../interfaces/IOrders.md#IOrders-getOrder-uint256-
+[IProviders]: ../interfaces/IProviders.md#IProviders
+[IProviders-isProviderRegistered-address-]: ../interfaces/IProviders.md#IProviders-isProviderRegistered-address-
+[IProviders-getProviderActionAccount-address-]: ../interfaces/IProviders.md#IProviders-getProviderActionAccount-address-
+[IProviders-getProviderTokenReceiver-address-]: ../interfaces/IProviders.md#IProviders-getProviderTokenReceiver-address-
+[IProviders-getProviderSecurityDeposit-address-]: ../interfaces/IProviders.md#IProviders-getProviderSecurityDeposit-address-
+[IProviders-getProviderRequiredSecDepo-address-uint256-]: ../interfaces/IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
+[IProvidersOffers]: ../interfaces/IProvidersOffers.md#IProvidersOffers
+[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: ../interfaces/IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
+[IStaking]: ../interfaces/IStaking.md#IStaking
+[IStaking-stake-uint256-]: ../interfaces/IStaking.md#IStaking-stake-uint256-
+[IStaking-stakeFor-address-uint256-]: ../interfaces/IStaking.md#IStaking-stakeFor-address-uint256-
+[IStaking-unstake-uint256-]: ../interfaces/IStaking.md#IStaking-unstake-uint256-
+[IStaking-lockTokens-address-uint256-uint256-]: ../interfaces/IStaking.md#IStaking-lockTokens-address-uint256-uint256-
+[IStaking-unlockTokens-address-uint256-]: ../interfaces/IStaking.md#IStaking-unlockTokens-address-uint256-
+[IStaking-confiscateTokensFrom-address-uint256-]: ../interfaces/IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
+[IStaking-getStakeInfo-address-]: ../interfaces/IStaking.md#IStaking-getStakeInfo-address-
+[IStaking-getLockedTokensInfo-address-]: ../interfaces/IStaking.md#IStaking-getLockedTokensInfo-address-
+[ISuperpro]: ../interfaces/ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ../interfaces/ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ../interfaces/ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ../interfaces/ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
+[ISuperproToken]: ../interfaces/ISuperproToken.md#ISuperproToken
+[ISuperproToken-mint-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-mint-address-uint256-
+[ISuperproToken-transfer-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-transfer-address-uint256-
+[ISuperproToken-transferFrom-address-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
+[ISuperproToken-allowance-address-address-]: ../interfaces/ISuperproToken.md#ISuperproToken-allowance-address-address-
+[ISuperproToken-approve-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-approve-address-uint256-
+[ISuperproToken-burnFrom-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
 [OriginsHelper]: ../libs/OriginsHelper.md#OriginsHelper
 [OriginsHelper-init-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-init-struct-Origins-
 [OriginsHelper-update-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-update-struct-Origins-
@@ -331,64 +331,46 @@ sidebar_position: 0
 [SafeMath-sub-uint256-uint256-string-]: ../openzeppelin/contracts/utils/math/SafeMath.md#SafeMath-sub-uint256-uint256-string-
 [SafeMath-div-uint256-uint256-string-]: ../openzeppelin/contracts/utils/math/SafeMath.md#SafeMath-div-uint256-uint256-string-
 [SafeMath-mod-uint256-uint256-string-]: ../openzeppelin/contracts/utils/math/SafeMath.md#SafeMath-mod-uint256-uint256-string-
-[MarksStorageAccessor]: ../storages/MarksStorageAccessor.md#MarksStorageAccessor
-[MarksStorageAccessor-MARKS_STORAGE_REGISTRY-bytes32]: ../storages/MarksStorageAccessor.md#MarksStorageAccessor-MARKS_STORAGE_REGISTRY-bytes32
-[MarksStorageAccessor-getMarksStorage--]: ../storages/MarksStorageAccessor.md#MarksStorageAccessor-getMarksStorage--
-[MarksStorageAccessor-ProviderMarksCount]: ../storages/MarksStorageAccessor.md#MarksStorageAccessor-ProviderMarksCount
-[MarksStorageAccessor-MarksStorage]: ../storages/MarksStorageAccessor.md#MarksStorageAccessor-MarksStorage
-[OffersStorageAccessor]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor
-[OffersStorageAccessor-OFFERS_STORAGE-bytes32]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor-OFFERS_STORAGE-bytes32
-[OffersStorageAccessor-getOffersStorage--]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor-getOffersStorage--
-[OffersStorageAccessor-Offer]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor-Offer
-[OffersStorageAccessor-ValueOffer]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor-ValueOffer
-[OffersStorageAccessor-TeeOffer]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor-TeeOffer
-[OffersStorageAccessor-OffersStorage]: ../storages/OffersStorageAccessor.md#OffersStorageAccessor-OffersStorage
-[OrdersStorageAccessor]: ../storages/OrdersStorageAccessor.md#OrdersStorageAccessor
-[OrdersStorageAccessor-ORDERS_STORAGE-bytes32]: ../storages/OrdersStorageAccessor.md#OrdersStorageAccessor-ORDERS_STORAGE-bytes32
-[OrdersStorageAccessor-getOrdersStorage--]: ../storages/OrdersStorageAccessor.md#OrdersStorageAccessor-getOrdersStorage--
-[OrdersStorageAccessor-Order]: ../storages/OrdersStorageAccessor.md#OrdersStorageAccessor-Order
-[OrdersStorageAccessor-OrdersStorage]: ../storages/OrdersStorageAccessor.md#OrdersStorageAccessor-OrdersStorage
-[ProvidersOffersStorageAccessor]: ../storages/ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor
-[ProvidersOffersStorageAccessor-PROVIDERS_OFFERS_STORAGE_REGISTRY-bytes32]: ../storages/ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor-PROVIDERS_OFFERS_STORAGE_REGISTRY-bytes32
-[ProvidersOffersStorageAccessor-getProvidersOffersStorage--]: ../storages/ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor-getProvidersOffersStorage--
-[ProvidersOffersStorageAccessor-Storage]: ../storages/ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor-Storage
-[ProvidersStorageAccessor]: ../storages/ProvidersStorageAccessor.md#ProvidersStorageAccessor
-[ProvidersStorageAccessor-PROVIDERS_STORAGE_REGISTRY-bytes32]: ../storages/ProvidersStorageAccessor.md#ProvidersStorageAccessor-PROVIDERS_STORAGE_REGISTRY-bytes32
-[ProvidersStorageAccessor-getProvidersStorage--]: ../storages/ProvidersStorageAccessor.md#ProvidersStorageAccessor-getProvidersStorage--
-[ProvidersStorageAccessor-ProviderData]: ../storages/ProvidersStorageAccessor.md#ProvidersStorageAccessor-ProviderData
-[ProvidersStorageAccessor-ProvidersStorage]: ../storages/ProvidersStorageAccessor.md#ProvidersStorageAccessor-ProvidersStorage
-[StakingStorageAccessor]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor
-[StakingStorageAccessor-STAKING_STORAGE-bytes32]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-STAKING_STORAGE-bytes32
-[StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
-[StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
+[MarksStorageAccessor]: MarksStorageAccessor.md#MarksStorageAccessor
+[MarksStorageAccessor-MARKS_STORAGE_REGISTRY-bytes32]: MarksStorageAccessor.md#MarksStorageAccessor-MARKS_STORAGE_REGISTRY-bytes32
+[MarksStorageAccessor-getMarksStorage--]: MarksStorageAccessor.md#MarksStorageAccessor-getMarksStorage--
+[MarksStorageAccessor-ProviderMarksCount]: MarksStorageAccessor.md#MarksStorageAccessor-ProviderMarksCount
+[MarksStorageAccessor-MarksStorage]: MarksStorageAccessor.md#MarksStorageAccessor-MarksStorage
+[OffersStorageAccessor]: OffersStorageAccessor.md#OffersStorageAccessor
+[OffersStorageAccessor-OFFERS_STORAGE-bytes32]: OffersStorageAccessor.md#OffersStorageAccessor-OFFERS_STORAGE-bytes32
+[OffersStorageAccessor-getOffersStorage--]: OffersStorageAccessor.md#OffersStorageAccessor-getOffersStorage--
+[OffersStorageAccessor-Offer]: OffersStorageAccessor.md#OffersStorageAccessor-Offer
+[OffersStorageAccessor-ValueOffer]: OffersStorageAccessor.md#OffersStorageAccessor-ValueOffer
+[OffersStorageAccessor-TeeOffer]: OffersStorageAccessor.md#OffersStorageAccessor-TeeOffer
+[OffersStorageAccessor-OffersStorage]: OffersStorageAccessor.md#OffersStorageAccessor-OffersStorage
+[OrdersStorageAccessor]: #OrdersStorageAccessor
+[OrdersStorageAccessor-ORDERS_STORAGE-bytes32]: #OrdersStorageAccessor-ORDERS_STORAGE-bytes32
+[OrdersStorageAccessor-getOrdersStorage--]: #OrdersStorageAccessor-getOrdersStorage--
+[OrdersStorageAccessor-Order]: #OrdersStorageAccessor-Order
+[OrdersStorageAccessor-OrdersStorage]: #OrdersStorageAccessor-OrdersStorage
+[ProvidersOffersStorageAccessor]: ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor
+[ProvidersOffersStorageAccessor-PROVIDERS_OFFERS_STORAGE_REGISTRY-bytes32]: ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor-PROVIDERS_OFFERS_STORAGE_REGISTRY-bytes32
+[ProvidersOffersStorageAccessor-getProvidersOffersStorage--]: ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor-getProvidersOffersStorage--
+[ProvidersOffersStorageAccessor-Storage]: ProvidersOffersStorageAccessor.md#ProvidersOffersStorageAccessor-Storage
+[ProvidersStorageAccessor]: ProvidersStorageAccessor.md#ProvidersStorageAccessor
+[ProvidersStorageAccessor-PROVIDERS_STORAGE_REGISTRY-bytes32]: ProvidersStorageAccessor.md#ProvidersStorageAccessor-PROVIDERS_STORAGE_REGISTRY-bytes32
+[ProvidersStorageAccessor-getProvidersStorage--]: ProvidersStorageAccessor.md#ProvidersStorageAccessor-getProvidersStorage--
+[ProvidersStorageAccessor-ProviderData]: ProvidersStorageAccessor.md#ProvidersStorageAccessor-ProviderData
+[ProvidersStorageAccessor-ProvidersStorage]: ProvidersStorageAccessor.md#ProvidersStorageAccessor-ProvidersStorage
+[StakingStorageAccessor]: StakingStorageAccessor.md#StakingStorageAccessor
+[StakingStorageAccessor-STAKING_STORAGE-bytes32]: StakingStorageAccessor.md#StakingStorageAccessor-STAKING_STORAGE-bytes32
+[StakingStorageAccessor-getStakingStorage--]: StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
+[StakingStorageAccessor-StakingStorage]: StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `OrdersStorageAccessor`
 
 
 
 ## Functions
-### owner
+### getOrdersStorage
 ```solidity
-  function owner(
-  ) external returns (address)
-```
-
-
-
-
-### getToken
-```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
-```
-
-
-
-
-### getConfigParam
-```solidity
-  function getConfigParam(
-  ) external returns (uint256)
+  function getOrdersStorage(
+  ) internal returns (struct OrdersStorageAccessor.OrdersStorage ds)
 ```
 
 

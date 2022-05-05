@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "ISuperproToken"
+title: "ISuperproToken"
+sidebar_label: "ISuperproToken"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -244,17 +244,17 @@ sidebar_position: 0
 [IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
 [IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
 [IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
-[ISuperproToken]: ISuperproToken.md#ISuperproToken
-[ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
-[ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
-[ISuperproToken-transferFrom-address-address-uint256-]: ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
-[ISuperproToken-allowance-address-address-]: ISuperproToken.md#ISuperproToken-allowance-address-address-
-[ISuperproToken-approve-address-uint256-]: ISuperproToken.md#ISuperproToken-approve-address-uint256-
-[ISuperproToken-burnFrom-address-uint256-]: ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
+[ISuperpro]: ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
+[ISuperproToken]: #ISuperproToken
+[ISuperproToken-mint-address-uint256-]: #ISuperproToken-mint-address-uint256-
+[ISuperproToken-transfer-address-uint256-]: #ISuperproToken-transfer-address-uint256-
+[ISuperproToken-transferFrom-address-address-uint256-]: #ISuperproToken-transferFrom-address-address-uint256-
+[ISuperproToken-allowance-address-address-]: #ISuperproToken-allowance-address-address-
+[ISuperproToken-approve-address-uint256-]: #ISuperproToken-approve-address-uint256-
+[ISuperproToken-burnFrom-address-uint256-]: #ISuperproToken-burnFrom-address-uint256-
 [OriginsHelper]: ../libs/OriginsHelper.md#OriginsHelper
 [OriginsHelper-init-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-init-struct-Origins-
 [OriginsHelper-update-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-update-struct-Origins-
@@ -362,33 +362,60 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `ISuperproToken`
 
 
 
 ## Functions
-### owner
+### mint
 ```solidity
-  function owner(
-  ) external returns (address)
+  function mint(
+  ) external
 ```
 
 
 
 
-### getToken
+### transfer
 ```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
+  function transfer(
+  ) external returns (bool)
 ```
 
 
 
 
-### getConfigParam
+### transferFrom
 ```solidity
-  function getConfigParam(
+  function transferFrom(
+  ) external returns (bool)
+```
+
+
+
+
+### allowance
+```solidity
+  function allowance(
   ) external returns (uint256)
+```
+
+
+
+
+### approve
+```solidity
+  function approve(
+  ) external returns (bool)
+```
+
+
+
+
+### burnFrom
+```solidity
+  function burnFrom(
+  ) external
 ```
 
 

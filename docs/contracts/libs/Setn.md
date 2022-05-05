@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "Setn"
+title: "Setn"
+sidebar_label: "Setn"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -208,72 +208,72 @@ sidebar_position: 0
 [LibDiamond-DiamondStorage]: ../diamond/libraries/LibDiamond.md#LibDiamond-DiamondStorage
 [DiamondInit]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit
 [DiamondInit-init--]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit-init--
-[IOffers]: IOffers.md#IOffers
-[IOffers-isOfferEnabled-uint256-]: IOffers.md#IOffers-isOfferEnabled-uint256-
-[IOffers-isOfferCancelable-uint256-]: IOffers.md#IOffers-isOfferCancelable-uint256-
-[IOffers-isOfferAllowedForConsumer-uint256-address-]: IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
-[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
-[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
-[IOffers-isProviderHasEnabledOffers-address-]: IOffers.md#IOffers-isProviderHasEnabledOffers-address-
-[IOffers-getProviderRequiredSecDepo-address-uint256-]: IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
-[IOffers-getOfferType-uint256-]: IOffers.md#IOffers-getOfferType-uint256-
-[IOffers-getOfferGroup-uint256-]: IOffers.md#IOffers-getOfferGroup-uint256-
-[IOffers-getOfferProviderAuthority-uint256-]: IOffers.md#IOffers-getOfferProviderAuthority-uint256-
-[IOffers-getOfferDisabledAfter-uint256-]: IOffers.md#IOffers-getOfferDisabledAfter-uint256-
-[IOffers-getOfferHoldDeposit-uint256-]: IOffers.md#IOffers-getOfferHoldDeposit-uint256-
-[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
-[IOffers-gcProviderOffers-address-]: IOffers.md#IOffers-gcProviderOffers-address-
-[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
-[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[IOrders]: IOrders.md#IOrders
-[IOrders-getOrder-uint256-]: IOrders.md#IOrders-getOrder-uint256-
-[IProviders]: IProviders.md#IProviders
-[IProviders-isProviderRegistered-address-]: IProviders.md#IProviders-isProviderRegistered-address-
-[IProviders-getProviderActionAccount-address-]: IProviders.md#IProviders-getProviderActionAccount-address-
-[IProviders-getProviderTokenReceiver-address-]: IProviders.md#IProviders-getProviderTokenReceiver-address-
-[IProviders-getProviderSecurityDeposit-address-]: IProviders.md#IProviders-getProviderSecurityDeposit-address-
-[IProviders-getProviderRequiredSecDepo-address-uint256-]: IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
-[IProvidersOffers]: IProvidersOffers.md#IProvidersOffers
-[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
-[IStaking]: IStaking.md#IStaking
-[IStaking-stake-uint256-]: IStaking.md#IStaking-stake-uint256-
-[IStaking-stakeFor-address-uint256-]: IStaking.md#IStaking-stakeFor-address-uint256-
-[IStaking-unstake-uint256-]: IStaking.md#IStaking-unstake-uint256-
-[IStaking-lockTokens-address-uint256-uint256-]: IStaking.md#IStaking-lockTokens-address-uint256-uint256-
-[IStaking-unlockTokens-address-uint256-]: IStaking.md#IStaking-unlockTokens-address-uint256-
-[IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
-[IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
-[IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
-[ISuperproToken]: ISuperproToken.md#ISuperproToken
-[ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
-[ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
-[ISuperproToken-transferFrom-address-address-uint256-]: ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
-[ISuperproToken-allowance-address-address-]: ISuperproToken.md#ISuperproToken-allowance-address-address-
-[ISuperproToken-approve-address-uint256-]: ISuperproToken.md#ISuperproToken-approve-address-uint256-
-[ISuperproToken-burnFrom-address-uint256-]: ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
-[OriginsHelper]: ../libs/OriginsHelper.md#OriginsHelper
-[OriginsHelper-init-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-init-struct-Origins-
-[OriginsHelper-update-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-update-struct-Origins-
-[ProviderHelper]: ../libs/ProviderHelper.md#ProviderHelper
-[ProviderHelper-clear-struct-OffersSet-contract-IOffers-]: ../libs/ProviderHelper.md#ProviderHelper-clear-struct-OffersSet-contract-IOffers-
-[ProviderHelper-updDisableAfter-uint256---contract-IOffers-]: ../libs/ProviderHelper.md#ProviderHelper-updDisableAfter-uint256---contract-IOffers-
-[ProviderHelper-offerTumbler-struct-ProviderOffersData-bool-bool-]: ../libs/ProviderHelper.md#ProviderHelper-offerTumbler-struct-ProviderOffersData-bool-bool-
-[ProviderHelper-addDelayDisable-struct-ProviderOffersData-bool-uint256-]: ../libs/ProviderHelper.md#ProviderHelper-addDelayDisable-struct-ProviderOffersData-bool-uint256-
-[ProviderHelper-addOffer-struct-ProviderOffersData-bool-uint256-]: ../libs/ProviderHelper.md#ProviderHelper-addOffer-struct-ProviderOffersData-bool-uint256-
-[Set]: ../libs/Set.md#Set
-[Set-isEmpty-struct-AddressHashSet-]: ../libs/Set.md#Set-isEmpty-struct-AddressHashSet-
-[Set-add-struct-AddressHashSet-address-]: ../libs/Set.md#Set-add-struct-AddressHashSet-address-
-[Set-isExists-struct-AddressHashSet-address-]: ../libs/Set.md#Set-isExists-struct-AddressHashSet-address-
-[Set-remove-struct-AddressHashSet-address-]: ../libs/Set.md#Set-remove-struct-AddressHashSet-address-
-[Setn]: ../libs/Setn.md#Setn
-[Setn-isEmpty-struct-OffersSet-]: ../libs/Setn.md#Setn-isEmpty-struct-OffersSet-
-[Setn-add-struct-OffersSet-uint256-]: ../libs/Setn.md#Setn-add-struct-OffersSet-uint256-
-[Setn-isExists-struct-OffersSet-uint256-]: ../libs/Setn.md#Setn-isExists-struct-OffersSet-uint256-
-[Setn-remove-struct-OffersSet-uint256-]: ../libs/Setn.md#Setn-remove-struct-OffersSet-uint256-
+[IOffers]: ../interfaces/IOffers.md#IOffers
+[IOffers-isOfferEnabled-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferEnabled-uint256-
+[IOffers-isOfferCancelable-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferCancelable-uint256-
+[IOffers-isOfferAllowedForConsumer-uint256-address-]: ../interfaces/IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
+[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: ../interfaces/IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
+[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
+[IOffers-isProviderHasEnabledOffers-address-]: ../interfaces/IOffers.md#IOffers-isProviderHasEnabledOffers-address-
+[IOffers-getProviderRequiredSecDepo-address-uint256-]: ../interfaces/IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
+[IOffers-getOfferType-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferType-uint256-
+[IOffers-getOfferGroup-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferGroup-uint256-
+[IOffers-getOfferProviderAuthority-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferProviderAuthority-uint256-
+[IOffers-getOfferDisabledAfter-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferDisabledAfter-uint256-
+[IOffers-getOfferHoldDeposit-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferHoldDeposit-uint256-
+[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
+[IOffers-gcProviderOffers-address-]: ../interfaces/IOffers.md#IOffers-gcProviderOffers-address-
+[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: ../interfaces/IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
+[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ../interfaces/IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
+[IOrders]: ../interfaces/IOrders.md#IOrders
+[IOrders-getOrder-uint256-]: ../interfaces/IOrders.md#IOrders-getOrder-uint256-
+[IProviders]: ../interfaces/IProviders.md#IProviders
+[IProviders-isProviderRegistered-address-]: ../interfaces/IProviders.md#IProviders-isProviderRegistered-address-
+[IProviders-getProviderActionAccount-address-]: ../interfaces/IProviders.md#IProviders-getProviderActionAccount-address-
+[IProviders-getProviderTokenReceiver-address-]: ../interfaces/IProviders.md#IProviders-getProviderTokenReceiver-address-
+[IProviders-getProviderSecurityDeposit-address-]: ../interfaces/IProviders.md#IProviders-getProviderSecurityDeposit-address-
+[IProviders-getProviderRequiredSecDepo-address-uint256-]: ../interfaces/IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
+[IProvidersOffers]: ../interfaces/IProvidersOffers.md#IProvidersOffers
+[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: ../interfaces/IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
+[IStaking]: ../interfaces/IStaking.md#IStaking
+[IStaking-stake-uint256-]: ../interfaces/IStaking.md#IStaking-stake-uint256-
+[IStaking-stakeFor-address-uint256-]: ../interfaces/IStaking.md#IStaking-stakeFor-address-uint256-
+[IStaking-unstake-uint256-]: ../interfaces/IStaking.md#IStaking-unstake-uint256-
+[IStaking-lockTokens-address-uint256-uint256-]: ../interfaces/IStaking.md#IStaking-lockTokens-address-uint256-uint256-
+[IStaking-unlockTokens-address-uint256-]: ../interfaces/IStaking.md#IStaking-unlockTokens-address-uint256-
+[IStaking-confiscateTokensFrom-address-uint256-]: ../interfaces/IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
+[IStaking-getStakeInfo-address-]: ../interfaces/IStaking.md#IStaking-getStakeInfo-address-
+[IStaking-getLockedTokensInfo-address-]: ../interfaces/IStaking.md#IStaking-getLockedTokensInfo-address-
+[ISuperpro]: ../interfaces/ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ../interfaces/ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ../interfaces/ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ../interfaces/ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
+[ISuperproToken]: ../interfaces/ISuperproToken.md#ISuperproToken
+[ISuperproToken-mint-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-mint-address-uint256-
+[ISuperproToken-transfer-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-transfer-address-uint256-
+[ISuperproToken-transferFrom-address-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
+[ISuperproToken-allowance-address-address-]: ../interfaces/ISuperproToken.md#ISuperproToken-allowance-address-address-
+[ISuperproToken-approve-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-approve-address-uint256-
+[ISuperproToken-burnFrom-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
+[OriginsHelper]: OriginsHelper.md#OriginsHelper
+[OriginsHelper-init-struct-Origins-]: OriginsHelper.md#OriginsHelper-init-struct-Origins-
+[OriginsHelper-update-struct-Origins-]: OriginsHelper.md#OriginsHelper-update-struct-Origins-
+[ProviderHelper]: ProviderHelper.md#ProviderHelper
+[ProviderHelper-clear-struct-OffersSet-contract-IOffers-]: ProviderHelper.md#ProviderHelper-clear-struct-OffersSet-contract-IOffers-
+[ProviderHelper-updDisableAfter-uint256---contract-IOffers-]: ProviderHelper.md#ProviderHelper-updDisableAfter-uint256---contract-IOffers-
+[ProviderHelper-offerTumbler-struct-ProviderOffersData-bool-bool-]: ProviderHelper.md#ProviderHelper-offerTumbler-struct-ProviderOffersData-bool-bool-
+[ProviderHelper-addDelayDisable-struct-ProviderOffersData-bool-uint256-]: ProviderHelper.md#ProviderHelper-addDelayDisable-struct-ProviderOffersData-bool-uint256-
+[ProviderHelper-addOffer-struct-ProviderOffersData-bool-uint256-]: ProviderHelper.md#ProviderHelper-addOffer-struct-ProviderOffersData-bool-uint256-
+[Set]: Set.md#Set
+[Set-isEmpty-struct-AddressHashSet-]: Set.md#Set-isEmpty-struct-AddressHashSet-
+[Set-add-struct-AddressHashSet-address-]: Set.md#Set-add-struct-AddressHashSet-address-
+[Set-isExists-struct-AddressHashSet-address-]: Set.md#Set-isExists-struct-AddressHashSet-address-
+[Set-remove-struct-AddressHashSet-address-]: Set.md#Set-remove-struct-AddressHashSet-address-
+[Setn]: #Setn
+[Setn-isEmpty-struct-OffersSet-]: #Setn-isEmpty-struct-OffersSet-
+[Setn-add-struct-OffersSet-uint256-]: #Setn-add-struct-OffersSet-uint256-
+[Setn-isExists-struct-OffersSet-uint256-]: #Setn-isExists-struct-OffersSet-uint256-
+[Setn-remove-struct-OffersSet-uint256-]: #Setn-remove-struct-OffersSet-uint256-
 [SuperproTokenMock]: ../mocks/SuperproTokenMock.md#SuperproTokenMock
 [SuperproTokenMock-superpro-contract-ISuperpro]: ../mocks/SuperproTokenMock.md#SuperproTokenMock-superpro-contract-ISuperpro
 [SuperproTokenMock-constructor-uint256-]: ../mocks/SuperproTokenMock.md#SuperproTokenMock-constructor-uint256-
@@ -362,33 +362,42 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `Setn`
 
 
 
 ## Functions
-### owner
+### isEmpty
 ```solidity
-  function owner(
-  ) external returns (address)
+  function isEmpty(
+  ) internal returns (bool)
 ```
 
 
 
 
-### getToken
+### add
 ```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
+  function add(
+  ) internal
 ```
 
 
 
 
-### getConfigParam
+### isExists
 ```solidity
-  function getConfigParam(
-  ) external returns (uint256)
+  function isExists(
+  ) internal returns (bool)
+```
+
+
+
+
+### remove
+```solidity
+  function remove(
+  ) internal
 ```
 
 

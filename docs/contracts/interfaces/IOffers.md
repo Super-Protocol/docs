@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "IOffers"
+title: "IOffers"
+sidebar_label: "IOffers"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -208,23 +208,23 @@ sidebar_position: 0
 [LibDiamond-DiamondStorage]: ../diamond/libraries/LibDiamond.md#LibDiamond-DiamondStorage
 [DiamondInit]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit
 [DiamondInit-init--]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit-init--
-[IOffers]: IOffers.md#IOffers
-[IOffers-isOfferEnabled-uint256-]: IOffers.md#IOffers-isOfferEnabled-uint256-
-[IOffers-isOfferCancelable-uint256-]: IOffers.md#IOffers-isOfferCancelable-uint256-
-[IOffers-isOfferAllowedForConsumer-uint256-address-]: IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
-[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
-[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
-[IOffers-isProviderHasEnabledOffers-address-]: IOffers.md#IOffers-isProviderHasEnabledOffers-address-
-[IOffers-getProviderRequiredSecDepo-address-uint256-]: IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
-[IOffers-getOfferType-uint256-]: IOffers.md#IOffers-getOfferType-uint256-
-[IOffers-getOfferGroup-uint256-]: IOffers.md#IOffers-getOfferGroup-uint256-
-[IOffers-getOfferProviderAuthority-uint256-]: IOffers.md#IOffers-getOfferProviderAuthority-uint256-
-[IOffers-getOfferDisabledAfter-uint256-]: IOffers.md#IOffers-getOfferDisabledAfter-uint256-
-[IOffers-getOfferHoldDeposit-uint256-]: IOffers.md#IOffers-getOfferHoldDeposit-uint256-
-[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
-[IOffers-gcProviderOffers-address-]: IOffers.md#IOffers-gcProviderOffers-address-
-[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
-[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
+[IOffers]: #IOffers
+[IOffers-isOfferEnabled-uint256-]: #IOffers-isOfferEnabled-uint256-
+[IOffers-isOfferCancelable-uint256-]: #IOffers-isOfferCancelable-uint256-
+[IOffers-isOfferAllowedForConsumer-uint256-address-]: #IOffers-isOfferAllowedForConsumer-uint256-address-
+[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: #IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
+[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: #IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
+[IOffers-isProviderHasEnabledOffers-address-]: #IOffers-isProviderHasEnabledOffers-address-
+[IOffers-getProviderRequiredSecDepo-address-uint256-]: #IOffers-getProviderRequiredSecDepo-address-uint256-
+[IOffers-getOfferType-uint256-]: #IOffers-getOfferType-uint256-
+[IOffers-getOfferGroup-uint256-]: #IOffers-getOfferGroup-uint256-
+[IOffers-getOfferProviderAuthority-uint256-]: #IOffers-getOfferProviderAuthority-uint256-
+[IOffers-getOfferDisabledAfter-uint256-]: #IOffers-getOfferDisabledAfter-uint256-
+[IOffers-getOfferHoldDeposit-uint256-]: #IOffers-getOfferHoldDeposit-uint256-
+[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: #IOffers-getOfferClosingPrice-uint256-uint256-uint256-
+[IOffers-gcProviderOffers-address-]: #IOffers-gcProviderOffers-address-
+[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: #IOffers-addProviderOffer-address-uint256-enum-OfferType-
+[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: #IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
 [IOrders]: IOrders.md#IOrders
 [IOrders-getOrder-uint256-]: IOrders.md#IOrders-getOrder-uint256-
 [IProviders]: IProviders.md#IProviders
@@ -244,10 +244,10 @@ sidebar_position: 0
 [IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
 [IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
 [IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
+[ISuperpro]: ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
 [ISuperproToken]: ISuperproToken.md#ISuperproToken
 [ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
 [ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
@@ -362,33 +362,150 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `IOffers`
 
 
 
 ## Functions
-### owner
+### isOfferEnabled
 ```solidity
-  function owner(
+  function isOfferEnabled(
+  ) external returns (bool)
+```
+
+
+
+
+### isOfferCancelable
+```solidity
+  function isOfferCancelable(
+  ) external returns (bool)
+```
+
+
+
+
+### isOfferAllowedForConsumer
+```solidity
+  function isOfferAllowedForConsumer(
+  ) external returns (bool)
+```
+
+
+
+
+### isOfferRestrictedByOfferType
+```solidity
+  function isOfferRestrictedByOfferType(
+  ) external returns (bool)
+```
+
+
+
+
+### isOfferRestrictionsPermitOtherOffer
+```solidity
+  function isOfferRestrictionsPermitOtherOffer(
+  ) external returns (bool)
+```
+
+
+
+
+### isProviderHasEnabledOffers
+```solidity
+  function isProviderHasEnabledOffers(
+  ) external returns (bool)
+```
+
+
+
+
+### getProviderRequiredSecDepo
+```solidity
+  function getProviderRequiredSecDepo(
+  ) external returns (uint256)
+```
+
+
+
+
+### getOfferType
+```solidity
+  function getOfferType(
+  ) external returns (enum OfferType)
+```
+
+
+
+
+### getOfferGroup
+```solidity
+  function getOfferGroup(
+  ) external returns (enum OfferGroup)
+```
+
+
+
+
+### getOfferProviderAuthority
+```solidity
+  function getOfferProviderAuthority(
   ) external returns (address)
 ```
 
 
 
 
-### getToken
+### getOfferDisabledAfter
 ```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
+  function getOfferDisabledAfter(
+  ) external returns (uint256)
 ```
 
 
 
 
-### getConfigParam
+### getOfferHoldDeposit
 ```solidity
-  function getConfigParam(
+  function getOfferHoldDeposit(
   ) external returns (uint256)
+```
+
+
+
+
+### getOfferClosingPrice
+```solidity
+  function getOfferClosingPrice(
+  ) external returns (uint256)
+```
+
+
+
+
+### gcProviderOffers
+```solidity
+  function gcProviderOffers(
+  ) external
+```
+
+
+
+
+### addProviderOffer
+```solidity
+  function addProviderOffer(
+  ) external
+```
+
+
+
+
+### setProviderOfferState
+```solidity
+  function setProviderOfferState(
+  ) external
 ```
 
 

@@ -1,6 +1,6 @@
 [submodule "sp-sdk-js"]
 	path = sources/sp-sdk-js
 	url = https://github.com/Super-Protocol/sp-sdk-js
-[submodule "contracts"]
+[submodule "sources/contracts/repo"]
 	path = sources/contracts/repo
-	url = https://github.com/Super-Protocol/contracts
+	url = https://github.com/Super-Protocol/sp-contracts-v2

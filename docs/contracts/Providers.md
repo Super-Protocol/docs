@@ -1,7 +1,7 @@
 ---
-id: "Staking"
-title: "Staking"
-sidebar_label: "Staking"
+id: "Providers"
+title: "Providers"
+sidebar_label: "Providers"
 sidebar_position: 0
 ---
 [AppFacet]: AppFacet.md#AppFacet
@@ -92,31 +92,31 @@ sidebar_position: 0
 [Orders-OrderAwaitingPaymentChanged-address-uint256-bool-]: Orders.md#Orders-OrderAwaitingPaymentChanged-address-uint256-bool-
 [Orders-OrderEncryptedResultUpdated-address-uint256-string-]: Orders.md#Orders-OrderEncryptedResultUpdated-address-uint256-string-
 [Orders-OrderDepositSpentChanged-address-uint256-uint256-]: Orders.md#Orders-OrderDepositSpentChanged-address-uint256-uint256-
-[Providers]: Providers.md#Providers
-[Providers-onlyRegistered--]: Providers.md#Providers-onlyRegistered--
-[Providers-onlyNotRegistered--]: Providers.md#Providers-onlyNotRegistered--
-[Providers-_providerPointer-address-]: Providers.md#Providers-_providerPointer-address-
-[Providers-isProviderRegistered-address-]: Providers.md#Providers-isProviderRegistered-address-
-[Providers-getProvidersCount--]: Providers.md#Providers-getProvidersCount--
-[Providers-getProviderActionAccount-address-]: Providers.md#Providers-getProviderActionAccount-address-
-[Providers-getProviderTokenReceiver-address-]: Providers.md#Providers-getProviderTokenReceiver-address-
-[Providers-getProviderInfo-address-]: Providers.md#Providers-getProviderInfo-address-
-[Providers-getProviderOrigins-address-]: Providers.md#Providers-getProviderOrigins-address-
-[Providers-getProviderViolationRate-address-]: Providers.md#Providers-getProviderViolationRate-address-
-[Providers-getProviderSecurityDeposit-address-]: Providers.md#Providers-getProviderSecurityDeposit-address-
-[Providers-getProvidersAuths--]: Providers.md#Providers-getProvidersAuths--
-[Providers-registerProvider-struct-ProviderInfo-]: Providers.md#Providers-registerProvider-struct-ProviderInfo-
-[Providers-modifyProvider-struct-ProviderInfo-]: Providers.md#Providers-modifyProvider-struct-ProviderInfo-
-[Providers-refillProviderSecurityDepo-uint256-]: Providers.md#Providers-refillProviderSecurityDepo-uint256-
-[Providers-returnProviderSecurityDepo-uint256-]: Providers.md#Providers-returnProviderSecurityDepo-uint256-
-[Providers-incrProviderViolationRate-address-]: Providers.md#Providers-incrProviderViolationRate-address-
-[Providers-chargePenalty-uint256-uint256-]: Providers.md#Providers-chargePenalty-uint256-uint256-
-[Providers-ProviderRegistered-address-]: Providers.md#Providers-ProviderRegistered-address-
-[Providers-ProviderModified-address-]: Providers.md#Providers-ProviderModified-address-
-[Providers-ProviderViolationRateIncremented-address-uint256-]: Providers.md#Providers-ProviderViolationRateIncremented-address-uint256-
-[Providers-ProviderSecurityDepoRefilled-address-uint256-]: Providers.md#Providers-ProviderSecurityDepoRefilled-address-uint256-
-[Providers-ProviderSecurityDepoUnlocked-address-uint256-]: Providers.md#Providers-ProviderSecurityDepoUnlocked-address-uint256-
-[Providers-ProviderPenalty-address-uint256-]: Providers.md#Providers-ProviderPenalty-address-uint256-
+[Providers]: #Providers
+[Providers-onlyRegistered--]: #Providers-onlyRegistered--
+[Providers-onlyNotRegistered--]: #Providers-onlyNotRegistered--
+[Providers-_providerPointer-address-]: #Providers-_providerPointer-address-
+[Providers-isProviderRegistered-address-]: #Providers-isProviderRegistered-address-
+[Providers-getProvidersCount--]: #Providers-getProvidersCount--
+[Providers-getProviderActionAccount-address-]: #Providers-getProviderActionAccount-address-
+[Providers-getProviderTokenReceiver-address-]: #Providers-getProviderTokenReceiver-address-
+[Providers-getProviderInfo-address-]: #Providers-getProviderInfo-address-
+[Providers-getProviderOrigins-address-]: #Providers-getProviderOrigins-address-
+[Providers-getProviderViolationRate-address-]: #Providers-getProviderViolationRate-address-
+[Providers-getProviderSecurityDeposit-address-]: #Providers-getProviderSecurityDeposit-address-
+[Providers-getProvidersAuths--]: #Providers-getProvidersAuths--
+[Providers-registerProvider-struct-ProviderInfo-]: #Providers-registerProvider-struct-ProviderInfo-
+[Providers-modifyProvider-struct-ProviderInfo-]: #Providers-modifyProvider-struct-ProviderInfo-
+[Providers-refillProviderSecurityDepo-uint256-]: #Providers-refillProviderSecurityDepo-uint256-
+[Providers-returnProviderSecurityDepo-uint256-]: #Providers-returnProviderSecurityDepo-uint256-
+[Providers-incrProviderViolationRate-address-]: #Providers-incrProviderViolationRate-address-
+[Providers-chargePenalty-uint256-uint256-]: #Providers-chargePenalty-uint256-uint256-
+[Providers-ProviderRegistered-address-]: #Providers-ProviderRegistered-address-
+[Providers-ProviderModified-address-]: #Providers-ProviderModified-address-
+[Providers-ProviderViolationRateIncremented-address-uint256-]: #Providers-ProviderViolationRateIncremented-address-uint256-
+[Providers-ProviderSecurityDepoRefilled-address-uint256-]: #Providers-ProviderSecurityDepoRefilled-address-uint256-
+[Providers-ProviderSecurityDepoUnlocked-address-uint256-]: #Providers-ProviderSecurityDepoUnlocked-address-uint256-
+[Providers-ProviderPenalty-address-uint256-]: #Providers-ProviderPenalty-address-uint256-
 [ProvidersOffers]: ProvidersOffers.md#ProvidersOffers
 [ProvidersOffers-_pointer-address-]: ProvidersOffers.md#ProvidersOffers-_pointer-address-
 [ProvidersOffers-isProviderHasEnabledOffers-address-]: ProvidersOffers.md#ProvidersOffers-isProviderHasEnabledOffers-address-
@@ -130,19 +130,19 @@ sidebar_position: 0
 [ProvidersOffers-gcProviderOffers-address-]: ProvidersOffers.md#ProvidersOffers-gcProviderOffers-address-
 [ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-]: ProvidersOffers.md#ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-
 [ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ProvidersOffers.md#ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[Staking]: #Staking
-[Staking-getStakeInfo-address-]: #Staking-getStakeInfo-address-
-[Staking-getLockedTokensInfo-address-]: #Staking-getLockedTokensInfo-address-
-[Staking-stake-uint256-]: #Staking-stake-uint256-
-[Staking-stakeFor-address-uint256-]: #Staking-stakeFor-address-uint256-
-[Staking-unstake-uint256-]: #Staking-unstake-uint256-
-[Staking-lockTokens-address-uint256-uint256-]: #Staking-lockTokens-address-uint256-uint256-
-[Staking-unlockTokens-address-uint256-]: #Staking-unlockTokens-address-uint256-
-[Staking-confiscateTokensFrom-address-uint256-]: #Staking-confiscateTokensFrom-address-uint256-
-[Staking-TokensStaked-address-uint256-uint256-]: #Staking-TokensStaked-address-uint256-uint256-
-[Staking-TokensUnstaked-address-uint256-uint256-]: #Staking-TokensUnstaked-address-uint256-uint256-
-[Staking-TokensLocked-address-uint256-uint256-]: #Staking-TokensLocked-address-uint256-uint256-
-[Staking-TokensUnlocked-address-uint256-uint256-]: #Staking-TokensUnlocked-address-uint256-uint256-
+[Staking]: Staking.md#Staking
+[Staking-getStakeInfo-address-]: Staking.md#Staking-getStakeInfo-address-
+[Staking-getLockedTokensInfo-address-]: Staking.md#Staking-getLockedTokensInfo-address-
+[Staking-stake-uint256-]: Staking.md#Staking-stake-uint256-
+[Staking-stakeFor-address-uint256-]: Staking.md#Staking-stakeFor-address-uint256-
+[Staking-unstake-uint256-]: Staking.md#Staking-unstake-uint256-
+[Staking-lockTokens-address-uint256-uint256-]: Staking.md#Staking-lockTokens-address-uint256-uint256-
+[Staking-unlockTokens-address-uint256-]: Staking.md#Staking-unlockTokens-address-uint256-
+[Staking-confiscateTokensFrom-address-uint256-]: Staking.md#Staking-confiscateTokensFrom-address-uint256-
+[Staking-TokensStaked-address-uint256-uint256-]: Staking.md#Staking-TokensStaked-address-uint256-uint256-
+[Staking-TokensUnstaked-address-uint256-uint256-]: Staking.md#Staking-TokensUnstaked-address-uint256-uint256-
+[Staking-TokensLocked-address-uint256-uint256-]: Staking.md#Staking-TokensLocked-address-uint256-uint256-
+[Staking-TokensUnlocked-address-uint256-uint256-]: Staking.md#Staking-TokensUnlocked-address-uint256-uint256-
 [Superpro]: Superpro.md#Superpro
 [Superpro-onlyAdmin--]: Superpro.md#Superpro-onlyAdmin--
 [Superpro-SUPERPRO_STORAGE_CONFIG-bytes32]: Superpro.md#Superpro-SUPERPRO_STORAGE_CONFIG-bytes32
@@ -362,77 +362,149 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `Staking`
+## `Providers`
 
 
 
 ## Functions
-### getStakeInfo
+### _providerPointer
 ```solidity
-  function getStakeInfo(
-  ) public returns (struct StakeInfo ret)
+  function _providerPointer(
+  ) internal returns (struct ProvidersStorageAccessor.ProviderData)
 ```
 
 
 
 
-### getLockedTokensInfo
+### isProviderRegistered
 ```solidity
-  function getLockedTokensInfo(
-  ) external returns (struct LockedTokens ret)
+  function isProviderRegistered(
+  ) public returns (bool)
 ```
 
 
 
 
-### stake
+### getProvidersCount
 ```solidity
-  function stake(
+  function getProvidersCount(
+  ) public returns (uint256)
+```
+
+
+
+
+### getProviderActionAccount
+```solidity
+  function getProviderActionAccount(
+  ) public returns (address)
+```
+
+
+
+
+### getProviderTokenReceiver
+```solidity
+  function getProviderTokenReceiver(
+  ) public returns (address)
+```
+
+
+
+
+### getProviderInfo
+```solidity
+  function getProviderInfo(
+  ) public returns (struct ProviderInfo)
+```
+
+
+
+
+### getProviderOrigins
+```solidity
+  function getProviderOrigins(
+  ) public returns (struct Origins)
+```
+
+
+
+
+### getProviderViolationRate
+```solidity
+  function getProviderViolationRate(
+  ) public returns (uint256)
+```
+
+
+
+
+### getProviderSecurityDeposit
+```solidity
+  function getProviderSecurityDeposit(
+  ) public returns (uint256)
+```
+
+
+
+
+### getProvidersAuths
+```solidity
+  function getProvidersAuths(
+  ) public returns (address[])
+```
+
+
+
+
+### registerProvider
+```solidity
+  function registerProvider(
   ) public
 ```
 
 
 
 
-### stakeFor
+### modifyProvider
 ```solidity
-  function stakeFor(
+  function modifyProvider(
   ) public
 ```
 
 
 
 
-### unstake
+### refillProviderSecurityDepo
 ```solidity
-  function unstake(
+  function refillProviderSecurityDepo(
   ) public
 ```
 
 
 
 
-### lockTokens
+### returnProviderSecurityDepo
 ```solidity
-  function lockTokens(
+  function returnProviderSecurityDepo(
   ) public
 ```
 
 
 
 
-### unlockTokens
+### incrProviderViolationRate
 ```solidity
-  function unlockTokens(
+  function incrProviderViolationRate(
   ) public
 ```
 
 
 
 
-### confiscateTokensFrom
+### chargePenalty
 ```solidity
-  function confiscateTokensFrom(
+  function chargePenalty(
   ) public
 ```
 
@@ -440,33 +512,49 @@ sidebar_position: 0
 
 
 ## Events
-### TokensStaked
+### ProviderRegistered
 ```solidity
-  event TokensStaked(
+  event ProviderRegistered(
   )
 ```
 
 
 
-### TokensUnstaked
+### ProviderModified
 ```solidity
-  event TokensUnstaked(
+  event ProviderModified(
   )
 ```
 
 
 
-### TokensLocked
+### ProviderViolationRateIncremented
 ```solidity
-  event TokensLocked(
+  event ProviderViolationRateIncremented(
   )
 ```
 
 
 
-### TokensUnlocked
+### ProviderSecurityDepoRefilled
 ```solidity
-  event TokensUnlocked(
+  event ProviderSecurityDepoRefilled(
+  )
+```
+
+
+
+### ProviderSecurityDepoUnlocked
+```solidity
+  event ProviderSecurityDepoUnlocked(
+  )
+```
+
+
+
+### ProviderPenalty
+```solidity
+  event ProviderPenalty(
   )
 ```
 

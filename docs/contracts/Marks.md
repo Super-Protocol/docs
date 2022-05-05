@@ -1,7 +1,7 @@
 ---
-id: "Staking"
-title: "Staking"
-sidebar_label: "Staking"
+id: "Marks"
+title: "Marks"
+sidebar_label: "Marks"
 sidebar_position: 0
 ---
 [AppFacet]: AppFacet.md#AppFacet
@@ -13,10 +13,10 @@ sidebar_position: 0
 [AppFacet-getProvidersOffers--]: AppFacet.md#AppFacet-getProvidersOffers--
 [AppFacet-getOffers--]: AppFacet.md#AppFacet-getOffers--
 [AppFacet-getOrders--]: AppFacet.md#AppFacet-getOrders--
-[Marks]: Marks.md#Marks
-[Marks-getProviderMarks-address-]: Marks.md#Marks-getProviderMarks-address-
-[Marks-getOrderMark-uint256-]: Marks.md#Marks-getOrderMark-uint256-
-[Marks-setOrderMark-uint256-enum-Mark-]: Marks.md#Marks-setOrderMark-uint256-enum-Mark-
+[Marks]: #Marks
+[Marks-getProviderMarks-address-]: #Marks-getProviderMarks-address-
+[Marks-getOrderMark-uint256-]: #Marks-getOrderMark-uint256-
+[Marks-setOrderMark-uint256-enum-Mark-]: #Marks-setOrderMark-uint256-enum-Mark-
 [Offers]: Offers.md#Offers
 [Offers-onlyProviderActionAccount-uint256-]: Offers.md#Offers-onlyProviderActionAccount-uint256-
 [Offers-notBlocked-uint256-]: Offers.md#Offers-notBlocked-uint256-
@@ -130,19 +130,19 @@ sidebar_position: 0
 [ProvidersOffers-gcProviderOffers-address-]: ProvidersOffers.md#ProvidersOffers-gcProviderOffers-address-
 [ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-]: ProvidersOffers.md#ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-
 [ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ProvidersOffers.md#ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[Staking]: #Staking
-[Staking-getStakeInfo-address-]: #Staking-getStakeInfo-address-
-[Staking-getLockedTokensInfo-address-]: #Staking-getLockedTokensInfo-address-
-[Staking-stake-uint256-]: #Staking-stake-uint256-
-[Staking-stakeFor-address-uint256-]: #Staking-stakeFor-address-uint256-
-[Staking-unstake-uint256-]: #Staking-unstake-uint256-
-[Staking-lockTokens-address-uint256-uint256-]: #Staking-lockTokens-address-uint256-uint256-
-[Staking-unlockTokens-address-uint256-]: #Staking-unlockTokens-address-uint256-
-[Staking-confiscateTokensFrom-address-uint256-]: #Staking-confiscateTokensFrom-address-uint256-
-[Staking-TokensStaked-address-uint256-uint256-]: #Staking-TokensStaked-address-uint256-uint256-
-[Staking-TokensUnstaked-address-uint256-uint256-]: #Staking-TokensUnstaked-address-uint256-uint256-
-[Staking-TokensLocked-address-uint256-uint256-]: #Staking-TokensLocked-address-uint256-uint256-
-[Staking-TokensUnlocked-address-uint256-uint256-]: #Staking-TokensUnlocked-address-uint256-uint256-
+[Staking]: Staking.md#Staking
+[Staking-getStakeInfo-address-]: Staking.md#Staking-getStakeInfo-address-
+[Staking-getLockedTokensInfo-address-]: Staking.md#Staking-getLockedTokensInfo-address-
+[Staking-stake-uint256-]: Staking.md#Staking-stake-uint256-
+[Staking-stakeFor-address-uint256-]: Staking.md#Staking-stakeFor-address-uint256-
+[Staking-unstake-uint256-]: Staking.md#Staking-unstake-uint256-
+[Staking-lockTokens-address-uint256-uint256-]: Staking.md#Staking-lockTokens-address-uint256-uint256-
+[Staking-unlockTokens-address-uint256-]: Staking.md#Staking-unlockTokens-address-uint256-
+[Staking-confiscateTokensFrom-address-uint256-]: Staking.md#Staking-confiscateTokensFrom-address-uint256-
+[Staking-TokensStaked-address-uint256-uint256-]: Staking.md#Staking-TokensStaked-address-uint256-uint256-
+[Staking-TokensUnstaked-address-uint256-uint256-]: Staking.md#Staking-TokensUnstaked-address-uint256-uint256-
+[Staking-TokensLocked-address-uint256-uint256-]: Staking.md#Staking-TokensLocked-address-uint256-uint256-
+[Staking-TokensUnlocked-address-uint256-uint256-]: Staking.md#Staking-TokensUnlocked-address-uint256-uint256-
 [Superpro]: Superpro.md#Superpro
 [Superpro-onlyAdmin--]: Superpro.md#Superpro-onlyAdmin--
 [Superpro-SUPERPRO_STORAGE_CONFIG-bytes32]: Superpro.md#Superpro-SUPERPRO_STORAGE_CONFIG-bytes32
@@ -362,113 +362,35 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `Staking`
+## `Marks`
 
 
 
 ## Functions
-### getStakeInfo
+### getProviderMarks
 ```solidity
-  function getStakeInfo(
-  ) public returns (struct StakeInfo ret)
+  function getProviderMarks(
+  ) external returns (struct MarksStorageAccessor.ProviderMarksCount)
 ```
 
 
 
 
-### getLockedTokensInfo
+### getOrderMark
 ```solidity
-  function getLockedTokensInfo(
-  ) external returns (struct LockedTokens ret)
+  function getOrderMark(
+  ) external returns (enum Mark)
 ```
 
 
 
 
-### stake
+### setOrderMark
 ```solidity
-  function stake(
-  ) public
+  function setOrderMark(
+  ) external
 ```
 
-
-
-
-### stakeFor
-```solidity
-  function stakeFor(
-  ) public
-```
-
-
-
-
-### unstake
-```solidity
-  function unstake(
-  ) public
-```
-
-
-
-
-### lockTokens
-```solidity
-  function lockTokens(
-  ) public
-```
-
-
-
-
-### unlockTokens
-```solidity
-  function unlockTokens(
-  ) public
-```
-
-
-
-
-### confiscateTokensFrom
-```solidity
-  function confiscateTokensFrom(
-  ) public
-```
-
-
-
-
-## Events
-### TokensStaked
-```solidity
-  event TokensStaked(
-  )
-```
-
-
-
-### TokensUnstaked
-```solidity
-  event TokensUnstaked(
-  )
-```
-
-
-
-### TokensLocked
-```solidity
-  event TokensLocked(
-  )
-```
-
-
-
-### TokensUnlocked
-```solidity
-  event TokensUnlocked(
-  )
-```
 
 
 

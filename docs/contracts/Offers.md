@@ -1,7 +1,7 @@
 ---
-id: "Staking"
-title: "Staking"
-sidebar_label: "Staking"
+id: "Offers"
+title: "Offers"
+sidebar_label: "Offers"
 sidebar_position: 0
 ---
 [AppFacet]: AppFacet.md#AppFacet
@@ -17,40 +17,40 @@ sidebar_position: 0
 [Marks-getProviderMarks-address-]: Marks.md#Marks-getProviderMarks-address-
 [Marks-getOrderMark-uint256-]: Marks.md#Marks-getOrderMark-uint256-
 [Marks-setOrderMark-uint256-enum-Mark-]: Marks.md#Marks-setOrderMark-uint256-enum-Mark-
-[Offers]: Offers.md#Offers
-[Offers-onlyProviderActionAccount-uint256-]: Offers.md#Offers-onlyProviderActionAccount-uint256-
-[Offers-notBlocked-uint256-]: Offers.md#Offers-notBlocked-uint256-
-[Offers-isOfferEnabled-uint256-]: Offers.md#Offers-isOfferEnabled-uint256-
-[Offers-isOfferCancelable-uint256-]: Offers.md#Offers-isOfferCancelable-uint256-
-[Offers-isOfferAllowedForConsumer-uint256-address-]: Offers.md#Offers-isOfferAllowedForConsumer-uint256-address-
-[Offers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: Offers.md#Offers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
-[Offers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: Offers.md#Offers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
-[Offers-getOffersCount--]: Offers.md#Offers-getOffersCount--
-[Offers-getOfferType-uint256-]: Offers.md#Offers-getOfferType-uint256-
-[Offers-getOfferGroup-uint256-]: Offers.md#Offers-getOfferGroup-uint256-
-[Offers-getOfferOrigins-uint256-]: Offers.md#Offers-getOfferOrigins-uint256-
-[Offers-getOfferProviderAuthority-uint256-]: Offers.md#Offers-getOfferProviderAuthority-uint256-
-[Offers-getOfferDisabledAfter-uint256-]: Offers.md#Offers-getOfferDisabledAfter-uint256-
-[Offers-getOfferHoldDeposit-uint256-]: Offers.md#Offers-getOfferHoldDeposit-uint256-
-[Offers-getOfferClosingPrice-uint256-uint256-uint256-]: Offers.md#Offers-getOfferClosingPrice-uint256-uint256-uint256-
-[Offers-getTeeOfferLastTcbReward-uint256-]: Offers.md#Offers-getTeeOfferLastTcbReward-uint256-
-[Offers-getTeeOfferViolationRate-uint256-]: Offers.md#Offers-getTeeOfferViolationRate-uint256-
-[Offers-getValueOffer-uint256-]: Offers.md#Offers-getValueOffer-uint256-
-[Offers-getTeeOffer-uint256-]: Offers.md#Offers-getTeeOffer-uint256-
-[Offers-setOfferName-uint256-string-]: Offers.md#Offers-setOfferName-uint256-string-
-[Offers-setOfferPublicKey-uint256-string-]: Offers.md#Offers-setOfferPublicKey-uint256-string-
-[Offers-setOfferDescription-uint256-string-]: Offers.md#Offers-setOfferDescription-uint256-string-
-[Offers-setTeeOfferTlb-uint256-string-]: Offers.md#Offers-setTeeOfferTlb-uint256-string-
-[Offers-createValueOffer-address-struct-ValueOfferInfo-bytes32-]: Offers.md#Offers-createValueOffer-address-struct-ValueOfferInfo-bytes32-
-[Offers-createTeeOffer-address-struct-TeeOfferInfo-bytes32-]: Offers.md#Offers-createTeeOffer-address-struct-TeeOfferInfo-bytes32-
-[Offers-enableOffer-uint256-]: Offers.md#Offers-enableOffer-uint256-
-[Offers-disableOffer-uint256-]: Offers.md#Offers-disableOffer-uint256-
-[Offers-incrTeeOfferViolationRate-uint256-]: Offers.md#Offers-incrTeeOfferViolationRate-uint256-
-[Offers-OfferCreated-address-bytes32-uint256-]: Offers.md#Offers-OfferCreated-address-bytes32-uint256-
-[Offers-TeeOfferCreated-address-bytes32-uint256-]: Offers.md#Offers-TeeOfferCreated-address-bytes32-uint256-
-[Offers-OfferEnabled-address-uint256-enum-OfferType-]: Offers.md#Offers-OfferEnabled-address-uint256-enum-OfferType-
-[Offers-OfferDisabled-address-uint256-enum-OfferType-]: Offers.md#Offers-OfferDisabled-address-uint256-enum-OfferType-
-[Offers-TeeOfferViolationRateChanged-address-uint256-uint256-]: Offers.md#Offers-TeeOfferViolationRateChanged-address-uint256-uint256-
+[Offers]: #Offers
+[Offers-onlyProviderActionAccount-uint256-]: #Offers-onlyProviderActionAccount-uint256-
+[Offers-notBlocked-uint256-]: #Offers-notBlocked-uint256-
+[Offers-isOfferEnabled-uint256-]: #Offers-isOfferEnabled-uint256-
+[Offers-isOfferCancelable-uint256-]: #Offers-isOfferCancelable-uint256-
+[Offers-isOfferAllowedForConsumer-uint256-address-]: #Offers-isOfferAllowedForConsumer-uint256-address-
+[Offers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: #Offers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
+[Offers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: #Offers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
+[Offers-getOffersCount--]: #Offers-getOffersCount--
+[Offers-getOfferType-uint256-]: #Offers-getOfferType-uint256-
+[Offers-getOfferGroup-uint256-]: #Offers-getOfferGroup-uint256-
+[Offers-getOfferOrigins-uint256-]: #Offers-getOfferOrigins-uint256-
+[Offers-getOfferProviderAuthority-uint256-]: #Offers-getOfferProviderAuthority-uint256-
+[Offers-getOfferDisabledAfter-uint256-]: #Offers-getOfferDisabledAfter-uint256-
+[Offers-getOfferHoldDeposit-uint256-]: #Offers-getOfferHoldDeposit-uint256-
+[Offers-getOfferClosingPrice-uint256-uint256-uint256-]: #Offers-getOfferClosingPrice-uint256-uint256-uint256-
+[Offers-getTeeOfferLastTcbReward-uint256-]: #Offers-getTeeOfferLastTcbReward-uint256-
+[Offers-getTeeOfferViolationRate-uint256-]: #Offers-getTeeOfferViolationRate-uint256-
+[Offers-getValueOffer-uint256-]: #Offers-getValueOffer-uint256-
+[Offers-getTeeOffer-uint256-]: #Offers-getTeeOffer-uint256-
+[Offers-setOfferName-uint256-string-]: #Offers-setOfferName-uint256-string-
+[Offers-setOfferPublicKey-uint256-string-]: #Offers-setOfferPublicKey-uint256-string-
+[Offers-setOfferDescription-uint256-string-]: #Offers-setOfferDescription-uint256-string-
+[Offers-setTeeOfferTlb-uint256-string-]: #Offers-setTeeOfferTlb-uint256-string-
+[Offers-createValueOffer-address-struct-ValueOfferInfo-bytes32-]: #Offers-createValueOffer-address-struct-ValueOfferInfo-bytes32-
+[Offers-createTeeOffer-address-struct-TeeOfferInfo-bytes32-]: #Offers-createTeeOffer-address-struct-TeeOfferInfo-bytes32-
+[Offers-enableOffer-uint256-]: #Offers-enableOffer-uint256-
+[Offers-disableOffer-uint256-]: #Offers-disableOffer-uint256-
+[Offers-incrTeeOfferViolationRate-uint256-]: #Offers-incrTeeOfferViolationRate-uint256-
+[Offers-OfferCreated-address-bytes32-uint256-]: #Offers-OfferCreated-address-bytes32-uint256-
+[Offers-TeeOfferCreated-address-bytes32-uint256-]: #Offers-TeeOfferCreated-address-bytes32-uint256-
+[Offers-OfferEnabled-address-uint256-enum-OfferType-]: #Offers-OfferEnabled-address-uint256-enum-OfferType-
+[Offers-OfferDisabled-address-uint256-enum-OfferType-]: #Offers-OfferDisabled-address-uint256-enum-OfferType-
+[Offers-TeeOfferViolationRateChanged-address-uint256-uint256-]: #Offers-TeeOfferViolationRateChanged-address-uint256-uint256-
 [Orders]: Orders.md#Orders
 [Orders-onlyProviderActionAccount-uint256-]: Orders.md#Orders-onlyProviderActionAccount-uint256-
 [Orders-onlyConsumer-uint256-]: Orders.md#Orders-onlyConsumer-uint256-
@@ -130,19 +130,19 @@ sidebar_position: 0
 [ProvidersOffers-gcProviderOffers-address-]: ProvidersOffers.md#ProvidersOffers-gcProviderOffers-address-
 [ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-]: ProvidersOffers.md#ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-
 [ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ProvidersOffers.md#ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[Staking]: #Staking
-[Staking-getStakeInfo-address-]: #Staking-getStakeInfo-address-
-[Staking-getLockedTokensInfo-address-]: #Staking-getLockedTokensInfo-address-
-[Staking-stake-uint256-]: #Staking-stake-uint256-
-[Staking-stakeFor-address-uint256-]: #Staking-stakeFor-address-uint256-
-[Staking-unstake-uint256-]: #Staking-unstake-uint256-
-[Staking-lockTokens-address-uint256-uint256-]: #Staking-lockTokens-address-uint256-uint256-
-[Staking-unlockTokens-address-uint256-]: #Staking-unlockTokens-address-uint256-
-[Staking-confiscateTokensFrom-address-uint256-]: #Staking-confiscateTokensFrom-address-uint256-
-[Staking-TokensStaked-address-uint256-uint256-]: #Staking-TokensStaked-address-uint256-uint256-
-[Staking-TokensUnstaked-address-uint256-uint256-]: #Staking-TokensUnstaked-address-uint256-uint256-
-[Staking-TokensLocked-address-uint256-uint256-]: #Staking-TokensLocked-address-uint256-uint256-
-[Staking-TokensUnlocked-address-uint256-uint256-]: #Staking-TokensUnlocked-address-uint256-uint256-
+[Staking]: Staking.md#Staking
+[Staking-getStakeInfo-address-]: Staking.md#Staking-getStakeInfo-address-
+[Staking-getLockedTokensInfo-address-]: Staking.md#Staking-getLockedTokensInfo-address-
+[Staking-stake-uint256-]: Staking.md#Staking-stake-uint256-
+[Staking-stakeFor-address-uint256-]: Staking.md#Staking-stakeFor-address-uint256-
+[Staking-unstake-uint256-]: Staking.md#Staking-unstake-uint256-
+[Staking-lockTokens-address-uint256-uint256-]: Staking.md#Staking-lockTokens-address-uint256-uint256-
+[Staking-unlockTokens-address-uint256-]: Staking.md#Staking-unlockTokens-address-uint256-
+[Staking-confiscateTokensFrom-address-uint256-]: Staking.md#Staking-confiscateTokensFrom-address-uint256-
+[Staking-TokensStaked-address-uint256-uint256-]: Staking.md#Staking-TokensStaked-address-uint256-uint256-
+[Staking-TokensUnstaked-address-uint256-uint256-]: Staking.md#Staking-TokensUnstaked-address-uint256-uint256-
+[Staking-TokensLocked-address-uint256-uint256-]: Staking.md#Staking-TokensLocked-address-uint256-uint256-
+[Staking-TokensUnlocked-address-uint256-uint256-]: Staking.md#Staking-TokensUnlocked-address-uint256-uint256-
 [Superpro]: Superpro.md#Superpro
 [Superpro-onlyAdmin--]: Superpro.md#Superpro-onlyAdmin--
 [Superpro-SUPERPRO_STORAGE_CONFIG-bytes32]: Superpro.md#Superpro-SUPERPRO_STORAGE_CONFIG-bytes32
@@ -362,77 +362,239 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `Staking`
+## `Offers`
 
 
 
 ## Functions
-### getStakeInfo
+### isOfferEnabled
 ```solidity
-  function getStakeInfo(
-  ) public returns (struct StakeInfo ret)
+  function isOfferEnabled(
+  ) public returns (bool)
 ```
 
 
 
 
-### getLockedTokensInfo
+### isOfferCancelable
 ```solidity
-  function getLockedTokensInfo(
-  ) external returns (struct LockedTokens ret)
+  function isOfferCancelable(
+  ) public returns (bool)
 ```
 
 
 
 
-### stake
+### isOfferAllowedForConsumer
 ```solidity
-  function stake(
+  function isOfferAllowedForConsumer(
+  ) public returns (bool)
+```
+
+
+
+
+### isOfferRestrictionsPermitOtherOffer
+```solidity
+  function isOfferRestrictionsPermitOtherOffer(
+  ) public returns (bool)
+```
+
+
+
+
+### isOfferRestrictedByOfferType
+```solidity
+  function isOfferRestrictedByOfferType(
+  ) public returns (bool)
+```
+
+
+
+
+### getOffersCount
+```solidity
+  function getOffersCount(
+  ) public returns (uint256)
+```
+
+
+
+
+### getOfferType
+```solidity
+  function getOfferType(
+  ) public returns (enum OfferType)
+```
+
+
+
+
+### getOfferGroup
+```solidity
+  function getOfferGroup(
+  ) public returns (enum OfferGroup)
+```
+
+
+
+
+### getOfferOrigins
+```solidity
+  function getOfferOrigins(
+  ) public returns (struct Origins)
+```
+
+
+
+
+### getOfferProviderAuthority
+```solidity
+  function getOfferProviderAuthority(
+  ) public returns (address)
+```
+
+
+
+
+### getOfferDisabledAfter
+```solidity
+  function getOfferDisabledAfter(
+  ) public returns (uint256)
+```
+
+
+
+
+### getOfferHoldDeposit
+```solidity
+  function getOfferHoldDeposit(
+  ) public returns (uint256)
+```
+
+
+
+
+### getOfferClosingPrice
+```solidity
+  function getOfferClosingPrice(
+  ) external returns (uint256)
+```
+
+
+
+
+### getTeeOfferLastTcbReward
+```solidity
+  function getTeeOfferLastTcbReward(
+  ) public returns (uint256)
+```
+
+
+
+
+### getTeeOfferViolationRate
+```solidity
+  function getTeeOfferViolationRate(
+  ) public returns (uint256)
+```
+
+
+
+
+### getValueOffer
+```solidity
+  function getValueOffer(
+  ) public returns (struct ValueOfferInfo, address, uint256)
+```
+
+
+
+
+### getTeeOffer
+```solidity
+  function getTeeOffer(
+  ) public returns (struct TeeOfferInfo, address, uint256)
+```
+
+
+
+
+### setOfferName
+```solidity
+  function setOfferName(
   ) public
 ```
 
 
 
 
-### stakeFor
+### setOfferPublicKey
 ```solidity
-  function stakeFor(
+  function setOfferPublicKey(
   ) public
 ```
 
 
 
 
-### unstake
+### setOfferDescription
 ```solidity
-  function unstake(
+  function setOfferDescription(
   ) public
 ```
 
 
 
 
-### lockTokens
+### setTeeOfferTlb
 ```solidity
-  function lockTokens(
+  function setTeeOfferTlb(
+  ) external
+```
+
+
+
+
+### createValueOffer
+```solidity
+  function createValueOffer(
   ) public
 ```
 
 
 
 
-### unlockTokens
+### createTeeOffer
 ```solidity
-  function unlockTokens(
+  function createTeeOffer(
   ) public
 ```
 
 
 
 
-### confiscateTokensFrom
+### enableOffer
 ```solidity
-  function confiscateTokensFrom(
+  function enableOffer(
+  ) public
+```
+
+
+
+
+### disableOffer
+```solidity
+  function disableOffer(
+  ) public
+```
+
+
+
+
+### incrTeeOfferViolationRate
+```solidity
+  function incrTeeOfferViolationRate(
   ) public
 ```
 
@@ -440,33 +602,41 @@ sidebar_position: 0
 
 
 ## Events
-### TokensStaked
+### OfferCreated
 ```solidity
-  event TokensStaked(
+  event OfferCreated(
   )
 ```
 
 
 
-### TokensUnstaked
+### TeeOfferCreated
 ```solidity
-  event TokensUnstaked(
+  event TeeOfferCreated(
   )
 ```
 
 
 
-### TokensLocked
+### OfferEnabled
 ```solidity
-  event TokensLocked(
+  event OfferEnabled(
   )
 ```
 
 
 
-### TokensUnlocked
+### OfferDisabled
 ```solidity
-  event TokensUnlocked(
+  event OfferDisabled(
+  )
+```
+
+
+
+### TeeOfferViolationRateChanged
+```solidity
+  event TeeOfferViolationRateChanged(
   )
 ```
 

@@ -1,7 +1,7 @@
 ---
-id: "ISuperpro"
-title: "ISuperpro"
-sidebar_label: "ISuperpro"
+id: "Diamond"
+title: "Diamond"
+sidebar_label: "Diamond"
 sidebar_position: 0
 ---
 [AppFacet]: ../AppFacet.md#AppFacet
@@ -154,107 +154,107 @@ sidebar_position: 0
 [Superpro-setConfigParam-enum-ParamName-uint256-]: ../Superpro.md#Superpro-setConfigParam-enum-ParamName-uint256-
 [Superpro-setConfigParams-struct-SuperproParams-]: ../Superpro.md#Superpro-setConfigParams-struct-SuperproParams-
 [Superpro-ConfigStorage]: ../Superpro.md#Superpro-ConfigStorage
-[Diamond]: ../diamond/Diamond.md#Diamond
-[Diamond-constructor-address-address-]: ../diamond/Diamond.md#Diamond-constructor-address-address-
-[Diamond-fallback--]: ../diamond/Diamond.md#Diamond-fallback--
-[Diamond-receive--]: ../diamond/Diamond.md#Diamond-receive--
-[DiamondCutFacet]: ../diamond/facets/DiamondCutFacet.md#DiamondCutFacet
-[DiamondCutFacet-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: ../diamond/facets/DiamondCutFacet.md#DiamondCutFacet-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-
-[DiamondLoupeFacet]: ../diamond/facets/DiamondLoupeFacet.md#DiamondLoupeFacet
-[DiamondLoupeFacet-facets--]: ../diamond/facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facets--
-[DiamondLoupeFacet-facetFunctionSelectors-address-]: ../diamond/facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facetFunctionSelectors-address-
-[DiamondLoupeFacet-facetAddresses--]: ../diamond/facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facetAddresses--
-[DiamondLoupeFacet-facetAddress-bytes4-]: ../diamond/facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facetAddress-bytes4-
-[DiamondLoupeFacet-supportsInterface-bytes4-]: ../diamond/facets/DiamondLoupeFacet.md#DiamondLoupeFacet-supportsInterface-bytes4-
-[OwnershipFacet]: ../diamond/facets/OwnershipFacet.md#OwnershipFacet
-[OwnershipFacet-transferOwnership-address-]: ../diamond/facets/OwnershipFacet.md#OwnershipFacet-transferOwnership-address-
-[OwnershipFacet-owner--]: ../diamond/facets/OwnershipFacet.md#OwnershipFacet-owner--
-[IDiamondCut]: ../diamond/interfaces/IDiamondCut.md#IDiamondCut
-[IDiamondCut-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: ../diamond/interfaces/IDiamondCut.md#IDiamondCut-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-
-[IDiamondCut-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: ../diamond/interfaces/IDiamondCut.md#IDiamondCut-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-
-[IDiamondCut-FacetCut]: ../diamond/interfaces/IDiamondCut.md#IDiamondCut-FacetCut
-[IDiamondCut-FacetCutAction]: ../diamond/interfaces/IDiamondCut.md#IDiamondCut-FacetCutAction
-[IDiamondLoupe]: ../diamond/interfaces/IDiamondLoupe.md#IDiamondLoupe
-[IDiamondLoupe-facets--]: ../diamond/interfaces/IDiamondLoupe.md#IDiamondLoupe-facets--
-[IDiamondLoupe-facetFunctionSelectors-address-]: ../diamond/interfaces/IDiamondLoupe.md#IDiamondLoupe-facetFunctionSelectors-address-
-[IDiamondLoupe-facetAddresses--]: ../diamond/interfaces/IDiamondLoupe.md#IDiamondLoupe-facetAddresses--
-[IDiamondLoupe-facetAddress-bytes4-]: ../diamond/interfaces/IDiamondLoupe.md#IDiamondLoupe-facetAddress-bytes4-
-[IDiamondLoupe-Facet]: ../diamond/interfaces/IDiamondLoupe.md#IDiamondLoupe-Facet
-[IERC165]: ../diamond/interfaces/IERC165.md#IERC165
-[IERC165-supportsInterface-bytes4-]: ../diamond/interfaces/IERC165.md#IERC165-supportsInterface-bytes4-
-[IERC173]: ../diamond/interfaces/IERC173.md#IERC173
-[IERC173-owner--]: ../diamond/interfaces/IERC173.md#IERC173-owner--
-[IERC173-transferOwnership-address-]: ../diamond/interfaces/IERC173.md#IERC173-transferOwnership-address-
-[IERC173-OwnershipTransferred-address-address-]: ../diamond/interfaces/IERC173.md#IERC173-OwnershipTransferred-address-address-
-[LibDiamond]: ../diamond/libraries/LibDiamond.md#LibDiamond
-[LibDiamond-DIAMOND_STORAGE_POSITION-bytes32]: ../diamond/libraries/LibDiamond.md#LibDiamond-DIAMOND_STORAGE_POSITION-bytes32
-[LibDiamond-diamondStorage--]: ../diamond/libraries/LibDiamond.md#LibDiamond-diamondStorage--
-[LibDiamond-setContractOwner-address-]: ../diamond/libraries/LibDiamond.md#LibDiamond-setContractOwner-address-
-[LibDiamond-contractOwner--]: ../diamond/libraries/LibDiamond.md#LibDiamond-contractOwner--
-[LibDiamond-enforceIsContractOwner--]: ../diamond/libraries/LibDiamond.md#LibDiamond-enforceIsContractOwner--
-[LibDiamond-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: ../diamond/libraries/LibDiamond.md#LibDiamond-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-
-[LibDiamond-addFunctions-address-bytes4---]: ../diamond/libraries/LibDiamond.md#LibDiamond-addFunctions-address-bytes4---
-[LibDiamond-replaceFunctions-address-bytes4---]: ../diamond/libraries/LibDiamond.md#LibDiamond-replaceFunctions-address-bytes4---
-[LibDiamond-removeFunctions-address-bytes4---]: ../diamond/libraries/LibDiamond.md#LibDiamond-removeFunctions-address-bytes4---
-[LibDiamond-addFacet-struct-LibDiamond-DiamondStorage-address-]: ../diamond/libraries/LibDiamond.md#LibDiamond-addFacet-struct-LibDiamond-DiamondStorage-address-
-[LibDiamond-addFunction-struct-LibDiamond-DiamondStorage-bytes4-uint96-address-]: ../diamond/libraries/LibDiamond.md#LibDiamond-addFunction-struct-LibDiamond-DiamondStorage-bytes4-uint96-address-
-[LibDiamond-removeFunction-struct-LibDiamond-DiamondStorage-address-bytes4-]: ../diamond/libraries/LibDiamond.md#LibDiamond-removeFunction-struct-LibDiamond-DiamondStorage-address-bytes4-
-[LibDiamond-initializeDiamondCut-address-bytes-]: ../diamond/libraries/LibDiamond.md#LibDiamond-initializeDiamondCut-address-bytes-
-[LibDiamond-enforceHasContractCode-address-string-]: ../diamond/libraries/LibDiamond.md#LibDiamond-enforceHasContractCode-address-string-
-[LibDiamond-OwnershipTransferred-address-address-]: ../diamond/libraries/LibDiamond.md#LibDiamond-OwnershipTransferred-address-address-
-[LibDiamond-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: ../diamond/libraries/LibDiamond.md#LibDiamond-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-
-[LibDiamond-FacetAddressAndPosition]: ../diamond/libraries/LibDiamond.md#LibDiamond-FacetAddressAndPosition
-[LibDiamond-FacetFunctionSelectors]: ../diamond/libraries/LibDiamond.md#LibDiamond-FacetFunctionSelectors
-[LibDiamond-DiamondStorage]: ../diamond/libraries/LibDiamond.md#LibDiamond-DiamondStorage
-[DiamondInit]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit
-[DiamondInit-init--]: ../diamond/upgradeInitializers/DiamondInit.md#DiamondInit-init--
-[IOffers]: IOffers.md#IOffers
-[IOffers-isOfferEnabled-uint256-]: IOffers.md#IOffers-isOfferEnabled-uint256-
-[IOffers-isOfferCancelable-uint256-]: IOffers.md#IOffers-isOfferCancelable-uint256-
-[IOffers-isOfferAllowedForConsumer-uint256-address-]: IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
-[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
-[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
-[IOffers-isProviderHasEnabledOffers-address-]: IOffers.md#IOffers-isProviderHasEnabledOffers-address-
-[IOffers-getProviderRequiredSecDepo-address-uint256-]: IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
-[IOffers-getOfferType-uint256-]: IOffers.md#IOffers-getOfferType-uint256-
-[IOffers-getOfferGroup-uint256-]: IOffers.md#IOffers-getOfferGroup-uint256-
-[IOffers-getOfferProviderAuthority-uint256-]: IOffers.md#IOffers-getOfferProviderAuthority-uint256-
-[IOffers-getOfferDisabledAfter-uint256-]: IOffers.md#IOffers-getOfferDisabledAfter-uint256-
-[IOffers-getOfferHoldDeposit-uint256-]: IOffers.md#IOffers-getOfferHoldDeposit-uint256-
-[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
-[IOffers-gcProviderOffers-address-]: IOffers.md#IOffers-gcProviderOffers-address-
-[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
-[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[IOrders]: IOrders.md#IOrders
-[IOrders-getOrder-uint256-]: IOrders.md#IOrders-getOrder-uint256-
-[IProviders]: IProviders.md#IProviders
-[IProviders-isProviderRegistered-address-]: IProviders.md#IProviders-isProviderRegistered-address-
-[IProviders-getProviderActionAccount-address-]: IProviders.md#IProviders-getProviderActionAccount-address-
-[IProviders-getProviderTokenReceiver-address-]: IProviders.md#IProviders-getProviderTokenReceiver-address-
-[IProviders-getProviderSecurityDeposit-address-]: IProviders.md#IProviders-getProviderSecurityDeposit-address-
-[IProviders-getProviderRequiredSecDepo-address-uint256-]: IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
-[IProvidersOffers]: IProvidersOffers.md#IProvidersOffers
-[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
-[IStaking]: IStaking.md#IStaking
-[IStaking-stake-uint256-]: IStaking.md#IStaking-stake-uint256-
-[IStaking-stakeFor-address-uint256-]: IStaking.md#IStaking-stakeFor-address-uint256-
-[IStaking-unstake-uint256-]: IStaking.md#IStaking-unstake-uint256-
-[IStaking-lockTokens-address-uint256-uint256-]: IStaking.md#IStaking-lockTokens-address-uint256-uint256-
-[IStaking-unlockTokens-address-uint256-]: IStaking.md#IStaking-unlockTokens-address-uint256-
-[IStaking-confiscateTokensFrom-address-uint256-]: IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
-[IStaking-getStakeInfo-address-]: IStaking.md#IStaking-getStakeInfo-address-
-[IStaking-getLockedTokensInfo-address-]: IStaking.md#IStaking-getLockedTokensInfo-address-
-[ISuperpro]: #ISuperpro
-[ISuperpro-owner--]: #ISuperpro-owner--
-[ISuperpro-getToken--]: #ISuperpro-getToken--
-[ISuperpro-getConfigParam-enum-ParamName-]: #ISuperpro-getConfigParam-enum-ParamName-
-[ISuperproToken]: ISuperproToken.md#ISuperproToken
-[ISuperproToken-mint-address-uint256-]: ISuperproToken.md#ISuperproToken-mint-address-uint256-
-[ISuperproToken-transfer-address-uint256-]: ISuperproToken.md#ISuperproToken-transfer-address-uint256-
-[ISuperproToken-transferFrom-address-address-uint256-]: ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
-[ISuperproToken-allowance-address-address-]: ISuperproToken.md#ISuperproToken-allowance-address-address-
-[ISuperproToken-approve-address-uint256-]: ISuperproToken.md#ISuperproToken-approve-address-uint256-
-[ISuperproToken-burnFrom-address-uint256-]: ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
+[Diamond]: #Diamond
+[Diamond-constructor-address-address-]: #Diamond-constructor-address-address-
+[Diamond-fallback--]: #Diamond-fallback--
+[Diamond-receive--]: #Diamond-receive--
+[DiamondCutFacet]: facets/DiamondCutFacet.md#DiamondCutFacet
+[DiamondCutFacet-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: facets/DiamondCutFacet.md#DiamondCutFacet-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-
+[DiamondLoupeFacet]: facets/DiamondLoupeFacet.md#DiamondLoupeFacet
+[DiamondLoupeFacet-facets--]: facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facets--
+[DiamondLoupeFacet-facetFunctionSelectors-address-]: facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facetFunctionSelectors-address-
+[DiamondLoupeFacet-facetAddresses--]: facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facetAddresses--
+[DiamondLoupeFacet-facetAddress-bytes4-]: facets/DiamondLoupeFacet.md#DiamondLoupeFacet-facetAddress-bytes4-
+[DiamondLoupeFacet-supportsInterface-bytes4-]: facets/DiamondLoupeFacet.md#DiamondLoupeFacet-supportsInterface-bytes4-
+[OwnershipFacet]: facets/OwnershipFacet.md#OwnershipFacet
+[OwnershipFacet-transferOwnership-address-]: facets/OwnershipFacet.md#OwnershipFacet-transferOwnership-address-
+[OwnershipFacet-owner--]: facets/OwnershipFacet.md#OwnershipFacet-owner--
+[IDiamondCut]: interfaces/IDiamondCut.md#IDiamondCut
+[IDiamondCut-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: interfaces/IDiamondCut.md#IDiamondCut-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-
+[IDiamondCut-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: interfaces/IDiamondCut.md#IDiamondCut-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-
+[IDiamondCut-FacetCut]: interfaces/IDiamondCut.md#IDiamondCut-FacetCut
+[IDiamondCut-FacetCutAction]: interfaces/IDiamondCut.md#IDiamondCut-FacetCutAction
+[IDiamondLoupe]: interfaces/IDiamondLoupe.md#IDiamondLoupe
+[IDiamondLoupe-facets--]: interfaces/IDiamondLoupe.md#IDiamondLoupe-facets--
+[IDiamondLoupe-facetFunctionSelectors-address-]: interfaces/IDiamondLoupe.md#IDiamondLoupe-facetFunctionSelectors-address-
+[IDiamondLoupe-facetAddresses--]: interfaces/IDiamondLoupe.md#IDiamondLoupe-facetAddresses--
+[IDiamondLoupe-facetAddress-bytes4-]: interfaces/IDiamondLoupe.md#IDiamondLoupe-facetAddress-bytes4-
+[IDiamondLoupe-Facet]: interfaces/IDiamondLoupe.md#IDiamondLoupe-Facet
+[IERC165]: interfaces/IERC165.md#IERC165
+[IERC165-supportsInterface-bytes4-]: interfaces/IERC165.md#IERC165-supportsInterface-bytes4-
+[IERC173]: interfaces/IERC173.md#IERC173
+[IERC173-owner--]: interfaces/IERC173.md#IERC173-owner--
+[IERC173-transferOwnership-address-]: interfaces/IERC173.md#IERC173-transferOwnership-address-
+[IERC173-OwnershipTransferred-address-address-]: interfaces/IERC173.md#IERC173-OwnershipTransferred-address-address-
+[LibDiamond]: libraries/LibDiamond.md#LibDiamond
+[LibDiamond-DIAMOND_STORAGE_POSITION-bytes32]: libraries/LibDiamond.md#LibDiamond-DIAMOND_STORAGE_POSITION-bytes32
+[LibDiamond-diamondStorage--]: libraries/LibDiamond.md#LibDiamond-diamondStorage--
+[LibDiamond-setContractOwner-address-]: libraries/LibDiamond.md#LibDiamond-setContractOwner-address-
+[LibDiamond-contractOwner--]: libraries/LibDiamond.md#LibDiamond-contractOwner--
+[LibDiamond-enforceIsContractOwner--]: libraries/LibDiamond.md#LibDiamond-enforceIsContractOwner--
+[LibDiamond-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: libraries/LibDiamond.md#LibDiamond-diamondCut-struct-IDiamondCut-FacetCut---address-bytes-
+[LibDiamond-addFunctions-address-bytes4---]: libraries/LibDiamond.md#LibDiamond-addFunctions-address-bytes4---
+[LibDiamond-replaceFunctions-address-bytes4---]: libraries/LibDiamond.md#LibDiamond-replaceFunctions-address-bytes4---
+[LibDiamond-removeFunctions-address-bytes4---]: libraries/LibDiamond.md#LibDiamond-removeFunctions-address-bytes4---
+[LibDiamond-addFacet-struct-LibDiamond-DiamondStorage-address-]: libraries/LibDiamond.md#LibDiamond-addFacet-struct-LibDiamond-DiamondStorage-address-
+[LibDiamond-addFunction-struct-LibDiamond-DiamondStorage-bytes4-uint96-address-]: libraries/LibDiamond.md#LibDiamond-addFunction-struct-LibDiamond-DiamondStorage-bytes4-uint96-address-
+[LibDiamond-removeFunction-struct-LibDiamond-DiamondStorage-address-bytes4-]: libraries/LibDiamond.md#LibDiamond-removeFunction-struct-LibDiamond-DiamondStorage-address-bytes4-
+[LibDiamond-initializeDiamondCut-address-bytes-]: libraries/LibDiamond.md#LibDiamond-initializeDiamondCut-address-bytes-
+[LibDiamond-enforceHasContractCode-address-string-]: libraries/LibDiamond.md#LibDiamond-enforceHasContractCode-address-string-
+[LibDiamond-OwnershipTransferred-address-address-]: libraries/LibDiamond.md#LibDiamond-OwnershipTransferred-address-address-
+[LibDiamond-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-]: libraries/LibDiamond.md#LibDiamond-DiamondCut-struct-IDiamondCut-FacetCut---address-bytes-
+[LibDiamond-FacetAddressAndPosition]: libraries/LibDiamond.md#LibDiamond-FacetAddressAndPosition
+[LibDiamond-FacetFunctionSelectors]: libraries/LibDiamond.md#LibDiamond-FacetFunctionSelectors
+[LibDiamond-DiamondStorage]: libraries/LibDiamond.md#LibDiamond-DiamondStorage
+[DiamondInit]: upgradeInitializers/DiamondInit.md#DiamondInit
+[DiamondInit-init--]: upgradeInitializers/DiamondInit.md#DiamondInit-init--
+[IOffers]: ../interfaces/IOffers.md#IOffers
+[IOffers-isOfferEnabled-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferEnabled-uint256-
+[IOffers-isOfferCancelable-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferCancelable-uint256-
+[IOffers-isOfferAllowedForConsumer-uint256-address-]: ../interfaces/IOffers.md#IOffers-isOfferAllowedForConsumer-uint256-address-
+[IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-]: ../interfaces/IOffers.md#IOffers-isOfferRestrictedByOfferType-uint256-enum-OfferType-
+[IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-]: ../interfaces/IOffers.md#IOffers-isOfferRestrictionsPermitOtherOffer-uint256-uint256-
+[IOffers-isProviderHasEnabledOffers-address-]: ../interfaces/IOffers.md#IOffers-isProviderHasEnabledOffers-address-
+[IOffers-getProviderRequiredSecDepo-address-uint256-]: ../interfaces/IOffers.md#IOffers-getProviderRequiredSecDepo-address-uint256-
+[IOffers-getOfferType-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferType-uint256-
+[IOffers-getOfferGroup-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferGroup-uint256-
+[IOffers-getOfferProviderAuthority-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferProviderAuthority-uint256-
+[IOffers-getOfferDisabledAfter-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferDisabledAfter-uint256-
+[IOffers-getOfferHoldDeposit-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferHoldDeposit-uint256-
+[IOffers-getOfferClosingPrice-uint256-uint256-uint256-]: ../interfaces/IOffers.md#IOffers-getOfferClosingPrice-uint256-uint256-uint256-
+[IOffers-gcProviderOffers-address-]: ../interfaces/IOffers.md#IOffers-gcProviderOffers-address-
+[IOffers-addProviderOffer-address-uint256-enum-OfferType-]: ../interfaces/IOffers.md#IOffers-addProviderOffer-address-uint256-enum-OfferType-
+[IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ../interfaces/IOffers.md#IOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
+[IOrders]: ../interfaces/IOrders.md#IOrders
+[IOrders-getOrder-uint256-]: ../interfaces/IOrders.md#IOrders-getOrder-uint256-
+[IProviders]: ../interfaces/IProviders.md#IProviders
+[IProviders-isProviderRegistered-address-]: ../interfaces/IProviders.md#IProviders-isProviderRegistered-address-
+[IProviders-getProviderActionAccount-address-]: ../interfaces/IProviders.md#IProviders-getProviderActionAccount-address-
+[IProviders-getProviderTokenReceiver-address-]: ../interfaces/IProviders.md#IProviders-getProviderTokenReceiver-address-
+[IProviders-getProviderSecurityDeposit-address-]: ../interfaces/IProviders.md#IProviders-getProviderSecurityDeposit-address-
+[IProviders-getProviderRequiredSecDepo-address-uint256-]: ../interfaces/IProviders.md#IProviders-getProviderRequiredSecDepo-address-uint256-
+[IProvidersOffers]: ../interfaces/IProvidersOffers.md#IProvidersOffers
+[IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-]: ../interfaces/IProvidersOffers.md#IProvidersOffers-isProviderHasEnoughSecurityDeposit-address-
+[IStaking]: ../interfaces/IStaking.md#IStaking
+[IStaking-stake-uint256-]: ../interfaces/IStaking.md#IStaking-stake-uint256-
+[IStaking-stakeFor-address-uint256-]: ../interfaces/IStaking.md#IStaking-stakeFor-address-uint256-
+[IStaking-unstake-uint256-]: ../interfaces/IStaking.md#IStaking-unstake-uint256-
+[IStaking-lockTokens-address-uint256-uint256-]: ../interfaces/IStaking.md#IStaking-lockTokens-address-uint256-uint256-
+[IStaking-unlockTokens-address-uint256-]: ../interfaces/IStaking.md#IStaking-unlockTokens-address-uint256-
+[IStaking-confiscateTokensFrom-address-uint256-]: ../interfaces/IStaking.md#IStaking-confiscateTokensFrom-address-uint256-
+[IStaking-getStakeInfo-address-]: ../interfaces/IStaking.md#IStaking-getStakeInfo-address-
+[IStaking-getLockedTokensInfo-address-]: ../interfaces/IStaking.md#IStaking-getLockedTokensInfo-address-
+[ISuperpro]: ../interfaces/ISuperpro.md#ISuperpro
+[ISuperpro-owner--]: ../interfaces/ISuperpro.md#ISuperpro-owner--
+[ISuperpro-getToken--]: ../interfaces/ISuperpro.md#ISuperpro-getToken--
+[ISuperpro-getConfigParam-enum-ParamName-]: ../interfaces/ISuperpro.md#ISuperpro-getConfigParam-enum-ParamName-
+[ISuperproToken]: ../interfaces/ISuperproToken.md#ISuperproToken
+[ISuperproToken-mint-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-mint-address-uint256-
+[ISuperproToken-transfer-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-transfer-address-uint256-
+[ISuperproToken-transferFrom-address-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-transferFrom-address-address-uint256-
+[ISuperproToken-allowance-address-address-]: ../interfaces/ISuperproToken.md#ISuperproToken-allowance-address-address-
+[ISuperproToken-approve-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-approve-address-uint256-
+[ISuperproToken-burnFrom-address-uint256-]: ../interfaces/ISuperproToken.md#ISuperproToken-burnFrom-address-uint256-
 [OriginsHelper]: ../libs/OriginsHelper.md#OriginsHelper
 [OriginsHelper-init-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-init-struct-Origins-
 [OriginsHelper-update-struct-Origins-]: ../libs/OriginsHelper.md#OriginsHelper-update-struct-Origins-
@@ -362,33 +362,33 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: ../storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `ISuperpro`
+## `Diamond`
 
 
 
 ## Functions
-### owner
+### constructor
 ```solidity
-  function owner(
-  ) external returns (address)
+  function constructor(
+  ) public
 ```
 
 
 
 
-### getToken
+### fallback
 ```solidity
-  function getToken(
-  ) external returns (contract ISuperproToken)
+  function fallback(
+  ) external
 ```
 
 
 
 
-### getConfigParam
+### receive
 ```solidity
-  function getConfigParam(
-  ) external returns (uint256)
+  function receive(
+  ) external
 ```
 
 

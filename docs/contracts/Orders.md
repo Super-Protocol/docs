@@ -1,7 +1,7 @@
 ---
-id: "Staking"
-title: "Staking"
-sidebar_label: "Staking"
+id: "Orders"
+title: "Orders"
+sidebar_label: "Orders"
 sidebar_position: 0
 ---
 [AppFacet]: AppFacet.md#AppFacet
@@ -51,47 +51,47 @@ sidebar_position: 0
 [Offers-OfferEnabled-address-uint256-enum-OfferType-]: Offers.md#Offers-OfferEnabled-address-uint256-enum-OfferType-
 [Offers-OfferDisabled-address-uint256-enum-OfferType-]: Offers.md#Offers-OfferDisabled-address-uint256-enum-OfferType-
 [Offers-TeeOfferViolationRateChanged-address-uint256-uint256-]: Offers.md#Offers-TeeOfferViolationRateChanged-address-uint256-uint256-
-[Orders]: Orders.md#Orders
-[Orders-onlyProviderActionAccount-uint256-]: Orders.md#Orders-onlyProviderActionAccount-uint256-
-[Orders-onlyConsumer-uint256-]: Orders.md#Orders-onlyConsumer-uint256-
-[Orders-isOrderValid-uint256-]: Orders.md#Orders-isOrderValid-uint256-
-[Orders-isOrderStarted-uint256-]: Orders.md#Orders-isOrderStarted-uint256-
-[Orders-isOrderCompleted-uint256-]: Orders.md#Orders-isOrderCompleted-uint256-
-[Orders-getOrdersCount--]: Orders.md#Orders-getOrdersCount--
-[Orders-getOrderHoldDeposit-uint256-]: Orders.md#Orders-getOrderHoldDeposit-uint256-
-[Orders-getOrderPrice-uint256-]: Orders.md#Orders-getOrderPrice-uint256-
-[Orders-getOrderOrigins-uint256-]: Orders.md#Orders-getOrderOrigins-uint256-
-[Orders-getOrderProfitWithdrawn-uint256-]: Orders.md#Orders-getOrderProfitWithdrawn-uint256-
-[Orders-getOrderChangeWithdrawn-uint256-]: Orders.md#Orders-getOrderChangeWithdrawn-uint256-
-[Orders-getOrderParentOrder-uint256-]: Orders.md#Orders-getOrderParentOrder-uint256-
-[Orders-getOrder-uint256-]: Orders.md#Orders-getOrder-uint256-
-[Orders-getOrderSubOrders-uint256-]: Orders.md#Orders-getOrderSubOrders-uint256-
-[Orders-getAwaitingPayment-uint256-]: Orders.md#Orders-getAwaitingPayment-uint256-
-[Orders-getDepositSpent-uint256-]: Orders.md#Orders-getDepositSpent-uint256-
-[Orders-setAwaitingPayment-uint256-bool-]: Orders.md#Orders-setAwaitingPayment-uint256-bool-
-[Orders-setDepositSpent-uint256-uint256-]: Orders.md#Orders-setDepositSpent-uint256-uint256-
-[Orders-createOrder-struct-OrderInfo-uint256-bool-bytes32-]: Orders.md#Orders-createOrder-struct-OrderInfo-uint256-bool-bytes32-
-[Orders-startOrder-uint256-]: Orders.md#Orders-startOrder-uint256-
-[Orders-completeOrder-uint256-enum-OrderStatus-string-]: Orders.md#Orders-completeOrder-uint256-enum-OrderStatus-string-
-[Orders-updateOrderPrice-uint256-uint256-]: Orders.md#Orders-updateOrderPrice-uint256-uint256-
-[Orders-processOrder-uint256-]: Orders.md#Orders-processOrder-uint256-
-[Orders-updateOrderResult-uint256-string-]: Orders.md#Orders-updateOrderResult-uint256-string-
-[Orders-cancelOrder-uint256-]: Orders.md#Orders-cancelOrder-uint256-
-[Orders-createSubOrder-uint256-struct-OrderInfo-struct-SubOrderParams-]: Orders.md#Orders-createSubOrder-uint256-struct-OrderInfo-struct-SubOrderParams-
-[Orders-refillOrder-uint256-uint256-]: Orders.md#Orders-refillOrder-uint256-uint256-
-[Orders-withdrawChange-uint256-]: Orders.md#Orders-withdrawChange-uint256-
-[Orders-withdrawProfit-uint256-]: Orders.md#Orders-withdrawProfit-uint256-
-[Orders-OrderCreated-address-bytes32-uint256-uint256-]: Orders.md#Orders-OrderCreated-address-bytes32-uint256-uint256-
-[Orders-OrderStatusUpdated-uint256-enum-OrderStatus-]: Orders.md#Orders-OrderStatusUpdated-uint256-enum-OrderStatus-
-[Orders-OrderPriceUpdated-uint256-uint256-]: Orders.md#Orders-OrderPriceUpdated-uint256-uint256-
-[Orders-SubOrderCreated-address-bytes32-uint256-uint256-uint256-]: Orders.md#Orders-SubOrderCreated-address-bytes32-uint256-uint256-uint256-
-[Orders-OrderStarted-address-uint256-]: Orders.md#Orders-OrderStarted-address-uint256-
-[Orders-OrderDepositRefilled-address-uint256-uint256-]: Orders.md#Orders-OrderDepositRefilled-address-uint256-uint256-
-[Orders-OrderChangedWithdrawn-address-uint256-uint256-]: Orders.md#Orders-OrderChangedWithdrawn-address-uint256-uint256-
-[Orders-OrderProfitWithdrawn-address-uint256-uint256-]: Orders.md#Orders-OrderProfitWithdrawn-address-uint256-uint256-
-[Orders-OrderAwaitingPaymentChanged-address-uint256-bool-]: Orders.md#Orders-OrderAwaitingPaymentChanged-address-uint256-bool-
-[Orders-OrderEncryptedResultUpdated-address-uint256-string-]: Orders.md#Orders-OrderEncryptedResultUpdated-address-uint256-string-
-[Orders-OrderDepositSpentChanged-address-uint256-uint256-]: Orders.md#Orders-OrderDepositSpentChanged-address-uint256-uint256-
+[Orders]: #Orders
+[Orders-onlyProviderActionAccount-uint256-]: #Orders-onlyProviderActionAccount-uint256-
+[Orders-onlyConsumer-uint256-]: #Orders-onlyConsumer-uint256-
+[Orders-isOrderValid-uint256-]: #Orders-isOrderValid-uint256-
+[Orders-isOrderStarted-uint256-]: #Orders-isOrderStarted-uint256-
+[Orders-isOrderCompleted-uint256-]: #Orders-isOrderCompleted-uint256-
+[Orders-getOrdersCount--]: #Orders-getOrdersCount--
+[Orders-getOrderHoldDeposit-uint256-]: #Orders-getOrderHoldDeposit-uint256-
+[Orders-getOrderPrice-uint256-]: #Orders-getOrderPrice-uint256-
+[Orders-getOrderOrigins-uint256-]: #Orders-getOrderOrigins-uint256-
+[Orders-getOrderProfitWithdrawn-uint256-]: #Orders-getOrderProfitWithdrawn-uint256-
+[Orders-getOrderChangeWithdrawn-uint256-]: #Orders-getOrderChangeWithdrawn-uint256-
+[Orders-getOrderParentOrder-uint256-]: #Orders-getOrderParentOrder-uint256-
+[Orders-getOrder-uint256-]: #Orders-getOrder-uint256-
+[Orders-getOrderSubOrders-uint256-]: #Orders-getOrderSubOrders-uint256-
+[Orders-getAwaitingPayment-uint256-]: #Orders-getAwaitingPayment-uint256-
+[Orders-getDepositSpent-uint256-]: #Orders-getDepositSpent-uint256-
+[Orders-setAwaitingPayment-uint256-bool-]: #Orders-setAwaitingPayment-uint256-bool-
+[Orders-setDepositSpent-uint256-uint256-]: #Orders-setDepositSpent-uint256-uint256-
+[Orders-createOrder-struct-OrderInfo-uint256-bool-bytes32-]: #Orders-createOrder-struct-OrderInfo-uint256-bool-bytes32-
+[Orders-startOrder-uint256-]: #Orders-startOrder-uint256-
+[Orders-completeOrder-uint256-enum-OrderStatus-string-]: #Orders-completeOrder-uint256-enum-OrderStatus-string-
+[Orders-updateOrderPrice-uint256-uint256-]: #Orders-updateOrderPrice-uint256-uint256-
+[Orders-processOrder-uint256-]: #Orders-processOrder-uint256-
+[Orders-updateOrderResult-uint256-string-]: #Orders-updateOrderResult-uint256-string-
+[Orders-cancelOrder-uint256-]: #Orders-cancelOrder-uint256-
+[Orders-createSubOrder-uint256-struct-OrderInfo-struct-SubOrderParams-]: #Orders-createSubOrder-uint256-struct-OrderInfo-struct-SubOrderParams-
+[Orders-refillOrder-uint256-uint256-]: #Orders-refillOrder-uint256-uint256-
+[Orders-withdrawChange-uint256-]: #Orders-withdrawChange-uint256-
+[Orders-withdrawProfit-uint256-]: #Orders-withdrawProfit-uint256-
+[Orders-OrderCreated-address-bytes32-uint256-uint256-]: #Orders-OrderCreated-address-bytes32-uint256-uint256-
+[Orders-OrderStatusUpdated-uint256-enum-OrderStatus-]: #Orders-OrderStatusUpdated-uint256-enum-OrderStatus-
+[Orders-OrderPriceUpdated-uint256-uint256-]: #Orders-OrderPriceUpdated-uint256-uint256-
+[Orders-SubOrderCreated-address-bytes32-uint256-uint256-uint256-]: #Orders-SubOrderCreated-address-bytes32-uint256-uint256-uint256-
+[Orders-OrderStarted-address-uint256-]: #Orders-OrderStarted-address-uint256-
+[Orders-OrderDepositRefilled-address-uint256-uint256-]: #Orders-OrderDepositRefilled-address-uint256-uint256-
+[Orders-OrderChangedWithdrawn-address-uint256-uint256-]: #Orders-OrderChangedWithdrawn-address-uint256-uint256-
+[Orders-OrderProfitWithdrawn-address-uint256-uint256-]: #Orders-OrderProfitWithdrawn-address-uint256-uint256-
+[Orders-OrderAwaitingPaymentChanged-address-uint256-bool-]: #Orders-OrderAwaitingPaymentChanged-address-uint256-bool-
+[Orders-OrderEncryptedResultUpdated-address-uint256-string-]: #Orders-OrderEncryptedResultUpdated-address-uint256-string-
+[Orders-OrderDepositSpentChanged-address-uint256-uint256-]: #Orders-OrderDepositSpentChanged-address-uint256-uint256-
 [Providers]: Providers.md#Providers
 [Providers-onlyRegistered--]: Providers.md#Providers-onlyRegistered--
 [Providers-onlyNotRegistered--]: Providers.md#Providers-onlyNotRegistered--
@@ -130,19 +130,19 @@ sidebar_position: 0
 [ProvidersOffers-gcProviderOffers-address-]: ProvidersOffers.md#ProvidersOffers-gcProviderOffers-address-
 [ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-]: ProvidersOffers.md#ProvidersOffers-addProviderOffer-address-uint256-enum-OfferType-
 [ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-]: ProvidersOffers.md#ProvidersOffers-setProviderOfferState-address-uint256-enum-OfferType-bool-uint256-
-[Staking]: #Staking
-[Staking-getStakeInfo-address-]: #Staking-getStakeInfo-address-
-[Staking-getLockedTokensInfo-address-]: #Staking-getLockedTokensInfo-address-
-[Staking-stake-uint256-]: #Staking-stake-uint256-
-[Staking-stakeFor-address-uint256-]: #Staking-stakeFor-address-uint256-
-[Staking-unstake-uint256-]: #Staking-unstake-uint256-
-[Staking-lockTokens-address-uint256-uint256-]: #Staking-lockTokens-address-uint256-uint256-
-[Staking-unlockTokens-address-uint256-]: #Staking-unlockTokens-address-uint256-
-[Staking-confiscateTokensFrom-address-uint256-]: #Staking-confiscateTokensFrom-address-uint256-
-[Staking-TokensStaked-address-uint256-uint256-]: #Staking-TokensStaked-address-uint256-uint256-
-[Staking-TokensUnstaked-address-uint256-uint256-]: #Staking-TokensUnstaked-address-uint256-uint256-
-[Staking-TokensLocked-address-uint256-uint256-]: #Staking-TokensLocked-address-uint256-uint256-
-[Staking-TokensUnlocked-address-uint256-uint256-]: #Staking-TokensUnlocked-address-uint256-uint256-
+[Staking]: Staking.md#Staking
+[Staking-getStakeInfo-address-]: Staking.md#Staking-getStakeInfo-address-
+[Staking-getLockedTokensInfo-address-]: Staking.md#Staking-getLockedTokensInfo-address-
+[Staking-stake-uint256-]: Staking.md#Staking-stake-uint256-
+[Staking-stakeFor-address-uint256-]: Staking.md#Staking-stakeFor-address-uint256-
+[Staking-unstake-uint256-]: Staking.md#Staking-unstake-uint256-
+[Staking-lockTokens-address-uint256-uint256-]: Staking.md#Staking-lockTokens-address-uint256-uint256-
+[Staking-unlockTokens-address-uint256-]: Staking.md#Staking-unlockTokens-address-uint256-
+[Staking-confiscateTokensFrom-address-uint256-]: Staking.md#Staking-confiscateTokensFrom-address-uint256-
+[Staking-TokensStaked-address-uint256-uint256-]: Staking.md#Staking-TokensStaked-address-uint256-uint256-
+[Staking-TokensUnstaked-address-uint256-uint256-]: Staking.md#Staking-TokensUnstaked-address-uint256-uint256-
+[Staking-TokensLocked-address-uint256-uint256-]: Staking.md#Staking-TokensLocked-address-uint256-uint256-
+[Staking-TokensUnlocked-address-uint256-uint256-]: Staking.md#Staking-TokensUnlocked-address-uint256-uint256-
 [Superpro]: Superpro.md#Superpro
 [Superpro-onlyAdmin--]: Superpro.md#Superpro-onlyAdmin--
 [Superpro-SUPERPRO_STORAGE_CONFIG-bytes32]: Superpro.md#Superpro-SUPERPRO_STORAGE_CONFIG-bytes32
@@ -362,111 +362,338 @@ sidebar_position: 0
 [StakingStorageAccessor-getStakingStorage--]: storages/StakingStorageAccessor.md#StakingStorageAccessor-getStakingStorage--
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
-## `Staking`
+## `Orders`
 
 
 
 ## Functions
-### getStakeInfo
+### isOrderValid
 ```solidity
-  function getStakeInfo(
-  ) public returns (struct StakeInfo ret)
+  function isOrderValid(
+  ) public returns (bool)
 ```
 
 
 
 
-### getLockedTokensInfo
+### isOrderStarted
 ```solidity
-  function getLockedTokensInfo(
-  ) external returns (struct LockedTokens ret)
+  function isOrderStarted(
+  ) public returns (bool)
 ```
 
 
 
 
-### stake
+### isOrderCompleted
 ```solidity
-  function stake(
+  function isOrderCompleted(
+  ) public returns (bool)
+```
+
+
+
+
+### getOrdersCount
+```solidity
+  function getOrdersCount(
+  ) public returns (uint256)
+```
+
+
+
+
+### getOrderHoldDeposit
+```solidity
+  function getOrderHoldDeposit(
+  ) external returns (uint256)
+```
+
+
+
+
+### getOrderPrice
+```solidity
+  function getOrderPrice(
+  ) external returns (uint256)
+```
+
+
+
+
+### getOrderOrigins
+```solidity
+  function getOrderOrigins(
+  ) public returns (struct Origins)
+```
+
+
+
+
+### getOrderProfitWithdrawn
+```solidity
+  function getOrderProfitWithdrawn(
+  ) external returns (bool)
+```
+
+
+
+
+### getOrderChangeWithdrawn
+```solidity
+  function getOrderChangeWithdrawn(
+  ) external returns (bool)
+```
+
+
+
+
+### getOrderParentOrder
+```solidity
+  function getOrderParentOrder(
+  ) public returns (uint256)
+```
+
+
+
+
+### getOrder
+```solidity
+  function getOrder(
+  ) public returns (address, struct OrderInfo, struct OrderResult)
+```
+
+
+
+
+### getOrderSubOrders
+```solidity
+  function getOrderSubOrders(
+  ) public returns (uint256[])
+```
+
+
+
+
+### getAwaitingPayment
+```solidity
+  function getAwaitingPayment(
+  ) public returns (bool)
+```
+
+
+
+
+### getDepositSpent
+```solidity
+  function getDepositSpent(
+  ) public returns (uint256)
+```
+
+
+
+
+### setAwaitingPayment
+```solidity
+  function setAwaitingPayment(
   ) public
 ```
 
 
 
 
-### stakeFor
+### setDepositSpent
 ```solidity
-  function stakeFor(
+  function setDepositSpent(
   ) public
 ```
 
 
 
 
-### unstake
+### createOrder
 ```solidity
-  function unstake(
+  function createOrder(
   ) public
 ```
 
 
 
 
-### lockTokens
+### startOrder
 ```solidity
-  function lockTokens(
+  function startOrder(
   ) public
 ```
 
 
 
 
-### unlockTokens
+### completeOrder
 ```solidity
-  function unlockTokens(
+  function completeOrder(
   ) public
 ```
 
 
 
 
-### confiscateTokensFrom
+### updateOrderPrice
 ```solidity
-  function confiscateTokensFrom(
+  function updateOrderPrice(
+  ) external
+```
+
+
+
+
+### processOrder
+```solidity
+  function processOrder(
+  ) external
+```
+
+
+
+
+### updateOrderResult
+```solidity
+  function updateOrderResult(
+  ) external
+```
+
+
+
+
+### cancelOrder
+```solidity
+  function cancelOrder(
   ) public
+```
+
+
+
+
+### createSubOrder
+```solidity
+  function createSubOrder(
+  ) public
+```
+
+
+
+
+### refillOrder
+```solidity
+  function refillOrder(
+  ) external
+```
+
+
+
+
+### withdrawChange
+```solidity
+  function withdrawChange(
+  ) external
+```
+
+
+
+
+### withdrawProfit
+```solidity
+  function withdrawProfit(
+  ) external
 ```
 
 
 
 
 ## Events
-### TokensStaked
+### OrderCreated
 ```solidity
-  event TokensStaked(
+  event OrderCreated(
   )
 ```
 
 
 
-### TokensUnstaked
+### OrderStatusUpdated
 ```solidity
-  event TokensUnstaked(
+  event OrderStatusUpdated(
   )
 ```
 
 
 
-### TokensLocked
+### OrderPriceUpdated
 ```solidity
-  event TokensLocked(
+  event OrderPriceUpdated(
   )
 ```
 
 
 
-### TokensUnlocked
+### SubOrderCreated
 ```solidity
-  event TokensUnlocked(
+  event SubOrderCreated(
+  )
+```
+
+
+
+### OrderStarted
+```solidity
+  event OrderStarted(
+  )
+```
+
+
+
+### OrderDepositRefilled
+```solidity
+  event OrderDepositRefilled(
+  )
+```
+
+
+
+### OrderChangedWithdrawn
+```solidity
+  event OrderChangedWithdrawn(
+  )
+```
+
+
+
+### OrderProfitWithdrawn
+```solidity
+  event OrderProfitWithdrawn(
+  )
+```
+
+
+
+### OrderAwaitingPaymentChanged
+```solidity
+  event OrderAwaitingPaymentChanged(
+  )
+```
+
+
+
+### OrderEncryptedResultUpdated
+```solidity
+  event OrderEncryptedResultUpdated(
+  )
+```
+
+
+
+### OrderDepositSpentChanged
+```solidity
+  event OrderDepositSpentChanged(
   )
 ```
 
