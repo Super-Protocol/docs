@@ -41,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "solc-0.8.4": "npm:solc@^0.8.13"
+    "solc-0.8.9": "npm:solc@0.8.9"
   }
 }
