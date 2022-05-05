@@ -36,6 +36,15 @@ const config = {
                 editUrl: "https://github.com/Super-Protocol/docs/tree/main/whitepaper",
             },
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "getting-started",
+                path: "getting-started",
+                routeBasePath: "/getting-started",
+                sidebarPath: require.resolve("./sidebarsGettingStarted.js"),
+            },
+        ],
     ],
     presets: [
         [
@@ -65,6 +74,13 @@ const config = {
                     src: "navbar/images/logo.svg",
                 },
                 items: [
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Getting Started",
+                        docsPluginId: "getting-started",
+                    },
                     {
                         type: "doc",
                         docId: "index",
