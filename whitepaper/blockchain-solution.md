@@ -251,10 +251,163 @@ This chain of possible restrictions allows the provided data to be processed wit
 
 In terms of offer groups, only the following restrictions are possible:
 
-
 <p align="center">
   <img src={require('./images/blockchain-solution-06.png').default} />
 </p>
 
 1. The INPUT offer can restrict the list of supported PROCESSING, INPUT, and OUTPUT offers
-1. PROCESSING (TEE) and OUTPUT offers cannot impose restrictions
+2. PROCESSING (TEE) and OUTPUT offers cannot impose restrictions
+
+## Orders
+In order to execute a provider offer, an order should be created by using the appropriate smart contract. The order creator must assign offers taking into account all restrictions and requirements the order possesses and pay a security deposit, which will be held for the duration of the order execution. The deposit amount is equal to the sum of deposits specified in all used offers. However, it should be noted that the final deposit cannot be less than the minimum deposit for the order set out by the protocol - *orderMinimumDeposit*.
+
+The total deposit to be held is calculated according to the formula below:
+
+![](images/blockchain-solution-formula-01.svg)
+
+The results of the execution or encountered errors are later added up to the order by the provider. To maintain confidentiality, the arguments in the order must be encrypted using the public key specified in the offer. Also, both the result and the error string are encrypted using the public key of the result, which is specified in the order along with the encryption algorithm.
+
+**OrderArgs public argument structure:**
+
+|**Name**|**Type**|**Description**|
+| :- | :- | :- |
+|slots|number|number of rented slots. Set during the TEE order creation.|
+|inputOffers|guid[]|INPUT offers are part of the overall processing. Set during the TEE order creation, if necessary.|
+|selectedOffers|guid[]|offers the customer has selected to meet the order restrictions|
+
+
+**Order record structure:**
+
+|**Name**|**Type**|**Description**|
+| :- | :- | :- |
+|consumer|account|account of the offer consumer|
+|offer|guid|unique offer identifier|
+|id|guid|unique order identifier|
+|resultPublicKey|string|public key and algorithm used to encrypt the result in JSON format|
+|args|OrderArgs|public arguments are mainly used for processing within a smart contract|
+|encryptedArgs|string|list of arguments encrypted using the public key of the arguments specified in the offer|
+|status|string|order status (suspended, blocked, new, processing, stopping, done, error, canceling, canceled)|
+|encryptedResult|string|results of the order execution encrypted using the results public key|
+|orderPrice|number|current value of the order. Can be changed by the provider during processing.|
+|depositSpent|number|amount of deposit spent. Can be changed by the provider during processing.|
+
+**Contract interface:**
+
+|**Name and description**|**Access**|**Execution location**|
+| :- | :- | :- |
+|**create(Order order, uint256 holdDeposit, bool suspended) public returns (Order)**|any|blockchain|
+|Order creation. When this method is called, *HoldDeposit* is paid. The "suspended" status is necessary when blocking sub-orders need to be created before the order can be executed. The provider cannot execute the order until the order status is marked as "new".|||
+|**createSubOrder(guid orderId, Order subOrder, bool blockParentOrder) public returns (Order)**|<p>order.consumer</p><p></p><p>order.provider.actionAccount</p>|blockchain|
+|Sub-orders are created by the customer (to assemble the entire order chain) or the provider (normally at the execution controller level). When calculating *HoldDeposit* for a sub-order, the *orderMinimumDeposit* is not taken into account in the system settings. *HoldDeposit* for a sub-order is transferred from the *HoldDeposit* of the main order*.* Once created, such an order becomes a regular one. If the *blockParentOrder* parameter is set to true, the sub-order will block the main order if its status is "suspended" or "blocked".|||
+|**start(guid orderId)**|order.consumer|blockchain|
+|Updates the order status from "suspended" to "blocked" if there are blocking sub-orders, or to "new" if there are none.|||
+|**updateOrderPrice(guid orderId, uint256 orderPrice)**|order.provider.actionAccount|blockchain|
+|Order price update. The price may be higher than the original.|||
+|**updateOrderDepositSpent(guid orderId, uint256 depositSpent)**|order.provider.actionAccount|blockchain|
+|Updates the deposit spent by the provider.|||
+|**complete(guid orderId, status OrderStatus, string encryptedResult)**|order.provider.actionAccount|blockchain|
+|Order completion. The results output or error values in the *encryptedResult* parameter are assigned as required. After the method has been executed, the order is complete and nothing more can be done to it.|||
+|**cancelOrder(guid orderId) public returns(bool)**|order.consumer|blockchain|
+|<p>Request to stop execution of the order on the consumer's side. The order status is changed to "canceling", the provider saves the end result of the order and moves the order to "canceled" status. If the offer is of cancelable type, smart contract immediately refunds the remaining deposit based on the proportion of time running or *depositSpent*. If the offer is of non-cancellable type, the provider sets a fee for their work after the order is complete.</p><p></p><p>***This method works only when all sub-orders are stopped.***</p>|||
+|**refillOrder(guid orderId, uint256 orderAmount)**|order.consumer|blockchain|
+|Replenishment of the deposit by the customer. Normally required when renewing a rental. It can also be used to obtain additional results if that is supported by the provider’s offer.|||
+|**withdrawProfit(guid orderId) public**|order.provider.tokenReceiver|SDK + blockchain|
+|Order profit withdrawal by the provider. Available after the order is executed. In this case, the profit is transferred to deferred payments for the number of days specified in the protocol settings (*profitWithdrawDelayDays*).|||
+|**withdrawChange(guid orderId) public**|order.consumer|SDK + blockchain|
+|Deposit balance withdrawal by the customer. Available order execution and price update.|||
+|**getStatus(guid orderId) public returns (string)**|any|SDK|
+|Retrieving the order status.|||
+|**getEncryptedResult(guid orderId) public returns (string)**|any|SDK|
+|Retrieving the encrypted order result string (if present). It can be decrypted using the private key of *order.resultPublicKey*.|||
+|**getOrderPrice(guid orderId) public returns (uint256)**|any|SDK|
+|Retrieving the current or final price of the order.|||
+|**getDepositSpent(guid orderId) public returns (uint256)**|any|SDK|
+|Getting the amount of the deposit spent.|||
+|**setAwaitingPayment(uint256 orderId, bool value) public**|order.provider.actionAccount|blockchain|
+|Setting or resetting the awaiting payment flag to signal the need for a deposit replenishment.|||
+|**getAwaitingPayment(uint256 orderId) public view returns (bool)**|any|SDK|
+|Getting the awaiting payment flag.|||
+|**setOrderMark(guid orderId, bool positive) public**|order.consumer|blockchain|
+|Giving a positive or negative rating to the provider based on the completed order. This can be triggered an unlimited number of times, depending on how the provider deals with potential errors and inaccuracies in the order. However, any order can only have a single rating. The score is given to *offer.provider*.|||
+|**getProviderRating(guid providerId) public returns (fixed128x18)**|any|SDK|
+|Retrieving a provider rating based on the rating formula (described below).|||
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-07.png').default} />
+</p>
+
+Smart contract methods allow anyone to create orders. When additional orders related to the main order are created, the *createSubOrder* method is called with the main order ID passed as one of the parameters. This allows users to avoid paying for each sub-order as *HoldDeposit* already includes these fees.
+
+The methods also allow both the provider to set a final order price that does not exceed *minDeposit* and the customer to receive the change.
+
+When creating a sub-order, the following procedure must be considered:
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-08.png').default} />
+</p>
+
+1. The PROCESSING (TEE) group can only have a single OUTPUT sub-order, which is specified in the *args.selectedOffers* offer list.
+2. The PROCESSING (TEE) group can have any INPUT sub-order, which is specified in the *args.inputOffers* offer list. However, INPUT offer restrictions must be respected.
+3. The INPUT group offer can only have a single sub-order, which is from the OUTPUT group only. It is specified in the *args.selectedOffers* offer list. However, INPUT offer restrictions must be respected.
+4. The OUTPUT group can have no sub-orders.
+5. When creating any order or sub-order, *args.selectedOffers* is specified if the offer contains a requirement regarding different types of offers.
+
+### Order state transition diagram
+During processing of the order, its status is subject to change according to the diagram below. Also, to indicate the lack of a deposit, the *AwaitingPayment* flag is used.
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-09.png').default} />
+</p>
+
+### Workflow
+When creating a complex order with dependencies, the customer creates the main order (normally for TEE) and sub-orders. The customer sets up all the required offers in *args.selectedOffers*. If the main order is created for TEE, the customer also configures all INPUT offers in the *args.inputOffers* field:
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-10.png').default} />
+</p>
+
+Let us consider different scenarios for using the ordering system.
+
+### Hardware rental
+For hardware rentals, an order is created for the TEE offer and *args.selectedOffers* specifies the offer for OUTPUT, where the results will be uploaded to if needed. The number of rental minutes is also specified, and the customer pays for the entire period of time.
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-11.png').default} />
+</p>
+
+Since we cannot rent a TEE alone, we have to choose a solution offer to run in it. If the solution uses a base image, such as Alpine, which is also represented as a solution offer, you need to specify it in *args.inputOffers* as well. You can also pass a link to your own solution in the parameters instead of using solution offers.
+
+An OUTPUT is specified for each solution, if required.
+
+The customer executes the *cancelOrder* method to terminate the hardware rental and the order is immediately terminated since all the TEE offers are of the cancelable type.
+
+Rental can be renewed as follows:
+
+1. The TEE provider initially assigns an awaiting payment flag to the order using the *setAwaitingPayment* method and sets a new order amount
+2. The customer pays the missing amount using the *refillOrder* method
+
+### Algorithm for choosing a suitable TEE
+If you need to create an order for a TEE offer, and there are several candidates (or the offer is not specified at all), you have to select one manually. To do this, the SDK uses an algorithm to select the suitable TEE:
+
+1. Firstly, all offers matching the TEE parameters are searched for. To do this, all properties of the INPUT solutions are analyzed, and their values are added together. These values must be less than those in the TEE offer:
+
+    <p align="center">
+      <img src={require('./images/blockchain-solution-12.png').default} />
+    </p>
+
+2. Secondly, in order to check TEE availability, the algorithm looks for the required number of available slots among suitable devices. If there are free slots available, this TEE offer can be used:
+
+    <p align="center">
+      <img src={require('./images/blockchain-solution-13.png').default} />
+    </p>
+
+    If there are no available offers, the least loaded candidates are selected.
+
+3. Thirdly, if there is more than one candidate, the selection is carried out randomly, so the TEE order is created, and the TEE is rented out.
+
+### Container infrastructure deployment
+It is often necessary to deploy multiple containers on a single TEE device so that they can communicate with one another without the need for external access.
+
+For example, we may want to deploy a DBMS container, a computing application providing a service to merge processed results, or a web server.
+
+For this purpose, an order is created at the SDK level for the desired device with the total number of slots required in the "suspended" status. From there sub-orders are created for the desired containers. The order status is then changed to "blocked" until all sub-orders are completed.

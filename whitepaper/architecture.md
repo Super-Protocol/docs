@@ -42,8 +42,48 @@ custom_edit_url: null
 ## Protocol Speed
 Polygon has been chosen as the main network. Polygon supports the execution of up to [7,200 transactions per second](https://twitter.com/0xpolygon/status/1283467641076584448?lang=en). A minimum of 4 transactions is required to process one request. Thus, Super Protocol allows you to process up to 1,800 orders per second. There are no limitations on the data volume provided as the protocol allows the use of any file storage.
 ## Security
-Since confidentiality is the core feature of Super Protocol, data is secured at all stages of processing. On the Data Provider side, the encrypted data is immediately transferred to the TEE. It can only be decrypted by the trusted loader to execute a particular solution. The solutions for processing run in the TEE and the results are encrypted and stored in the external storage.
+Since confidentiality is the core feature of Super Protocol, data is secured at all stages of processing.
 
-The protocol also allows the content of the solutions to be hidden, if it is considered a trade secret. In this case the Solution Provider can provide an encrypted solution.
+The protocol also allows the content of the solutions to be hidden, if it is considered a trade secret. In this case, the Solution Provider can provide an encrypted solution.
 
-Now let us take a look at each layer individually.
+If we consider the overall scheme of data transformation, we can distinguish the following levels:
+
+1. **Client.** With apps, sites, and other secure access mechanisms, our customers obtain the outputs they need through requests to the blockchain layer. To protect the data, the customer provides the public key of the asymmetric encryption algorithm ![](images/architecture-formula-01.svg).
+
+2. **Blockchain**. At this layer, the Super Protocol smart contracts are used to place value orders with their arguments encrypted with the ![](images/architecture-formula-02.svg) public key of the value provider's offer. Also, the offer determines the execution solution:
+
+   ![](images/architecture-formula-03.svg) (1)
+
+   ![](images/architecture-formula-04.svg) (2)
+
+   Once the order is processed, the result is returned as access to the decentralized repository encrypted with the order's public key.
+
+   ![](images/architecture-formula-05.svg) (3)
+
+3. **TEE**. This layer receives orders and obtains access to unprotected data ![](images/architecture-formula-06.svg) of the value provider.
+
+   ![](images/architecture-formula-07.svg) (4)
+
+   All data processing (4) takes place at the hardware level in encrypted areas to guarantee confidentiality. In addition, each running TEE layer is remotely attested to ensure its integrity and protection against tampering.
+
+   At this layer, data can be transformed by the operation of the solution (2), its startup parameters (1) decrypted using the private key of the order ![](images/architecture-formula-08.svg), and external data ![](images/architecture-formula-09.svg):
+
+   ![](images/architecture-formula-10.svg)
+
+   All external operations, including temporary files ![](images/architecture-formula-11.svg) and storages ![](images/architecture-formula-12.svg), are performed in encrypted form using only the internally generated key ![](images/architecture-formula-13.svg) and symmetric algorithm ![](images/architecture-formula-14.svg):
+
+   ![](images/architecture-formula-15.svg) (6)
+
+   ![](images/architecture-formula-16.svg) (7)
+
+   The output (5) is encrypted using the encryption algorithm ![](images/architecture-formula-17.svg) and the public key ![](images/architecture-formula-18.svg):
+
+   ![](images/architecture-formula-19.svg) (8)
+
+4. **Decentralized storage**. All query results are stored in the distributed decentralized repository. The repository is accessed via the link ![](images/architecture-formula-20.svg) and the results are decrypted using the private key of the order ![](images/architecture-formula-21.svg):
+
+   ![](images/architecture-formula-22.svg) (9)
+
+   Once the result is retrieved from the repository (8) using the link (9), it must be decrypted:
+
+   ![](images/architecture-formula-23.svg)
