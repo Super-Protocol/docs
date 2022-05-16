@@ -367,12 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### getOrdersStorage
-```solidity
-  function getOrdersStorage(
-  ) internal returns (struct OrdersStorageAccessor.OrdersStorage ds)
-```
-
-
-
-

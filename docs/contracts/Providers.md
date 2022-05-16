@@ -363,19 +363,10 @@ sidebar_position: 0
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
 ## `Providers`
-
+Contains logic controlling the list of registered service providers.
 
 
 ## Functions
-### _providerPointer
-```solidity
-  function _providerPointer(
-  ) internal returns (struct ProvidersStorageAccessor.ProviderData)
-```
-
-
-
-
 ### isProviderRegistered
 ```solidity
   function isProviderRegistered(
@@ -460,103 +451,173 @@ sidebar_position: 0
 ### registerProvider
 ```solidity
   function registerProvider(
+    struct ProviderInfo info
   ) public
 ```
+Register new service provider in the system.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`info` | struct ProviderInfo | Information about new provider.
 
 ### modifyProvider
 ```solidity
   function modifyProvider(
+    struct ProviderInfo info
   ) public
 ```
+Updates the registered provider information.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`info` | struct ProviderInfo | New information about new provider.
 
 ### refillProviderSecurityDepo
 ```solidity
   function refillProviderSecurityDepo(
+    uint256 amount
   ) public
 ```
+Locks additional tokens from the provider's stake as offers security deposit.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`amount` | uint256 | Tokens amount.
 
 ### returnProviderSecurityDepo
 ```solidity
   function returnProviderSecurityDepo(
+    uint256 amount
   ) public
 ```
+Unlocks tokens from the provider's security deposit and return them to it stake.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`amount` | uint256 | Tokens amount.
 
 ### incrProviderViolationRate
 ```solidity
   function incrProviderViolationRate(
+    address providerAuth
   ) public
 ```
+Increments violation rate of given provider.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`providerAuth` | address | Provider authority address.
 
 ### chargePenalty
 ```solidity
   function chargePenalty(
+    uint256 teeOfferId,
+    uint256 amount
   ) public
 ```
+Confiscates tokens from the provider (TEE) that violated the rules.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`teeOfferId` | uint256 | Provider authority address.
+|`amount` | uint256 | Tokens amount.
 
 ## Events
 ### ProviderRegistered
 ```solidity
   event ProviderRegistered(
+    address auth
   )
 ```
+Emitted when a new provider is registred.
 
 
-
+#### Parameters:
+| Name                           | Type          | Description                                    |
+| :----------------------------- | :------------ | :--------------------------------------------- |
+|`auth`| address | Provider authority address.
 ### ProviderModified
 ```solidity
   event ProviderModified(
+    address auth
   )
 ```
+Emitted when a provider info is updated.
 
 
-
+#### Parameters:
+| Name                           | Type          | Description                                    |
+| :----------------------------- | :------------ | :--------------------------------------------- |
+|`auth`| address | Provider authority address.
 ### ProviderViolationRateIncremented
 ```solidity
   event ProviderViolationRateIncremented(
+    address auth,
+    uint256 newViolationRate
   )
 ```
+Emitted when a provider violation rate is incremented.
 
 
-
+#### Parameters:
+| Name                           | Type          | Description                                    |
+| :----------------------------- | :------------ | :--------------------------------------------- |
+|`auth`| address | Provider authority address.
+|`newViolationRate`| uint256 | New violation rate.
 ### ProviderSecurityDepoRefilled
 ```solidity
   event ProviderSecurityDepoRefilled(
+    address auth,
+    uint256 amount
   )
 ```
+Emitted when a provider security depo is refilled.
 
 
-
+#### Parameters:
+| Name                           | Type          | Description                                    |
+| :----------------------------- | :------------ | :--------------------------------------------- |
+|`auth`| address | Provider authority address.
+|`amount`| uint256 | Refill amount.
 ### ProviderSecurityDepoUnlocked
 ```solidity
   event ProviderSecurityDepoUnlocked(
+    address auth,
+    uint256 amount
   )
 ```
+Emitted when a provider security depo is unlocked.
 
 
-
+#### Parameters:
+| Name                           | Type          | Description                                    |
+| :----------------------------- | :------------ | :--------------------------------------------- |
+|`auth`| address | Provider authority address.
+|`amount`| uint256 | Unlocked amount.
 ### ProviderPenalty
 ```solidity
   event ProviderPenalty(
+    address auth,
+    uint256 charge
   )
 ```
+Emitted when the provider was penalized.
 
 
-
+#### Parameters:
+| Name                           | Type          | Description                                    |
+| :----------------------------- | :------------ | :--------------------------------------------- |
+|`auth`| address | Provider authority address.
+|`charge`| uint256 | Penalty amount.

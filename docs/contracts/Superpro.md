@@ -367,15 +367,6 @@ sidebar_position: 0
 
 
 ## Functions
-### getConfigStorage
-```solidity
-  function getConfigStorage(
-  ) internal returns (struct Superpro.ConfigStorage ds)
-```
-
-
-
-
 ### getVersion
 ```solidity
   function getVersion(

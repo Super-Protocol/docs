@@ -20,5 +20,8 @@ module.exports = {
     pathToId(str) {
         const parsed = path.parse(str);
         return path.join(parsed.dir, parsed.name).replace("/", ".");
+    },
+    onlyPublicMethods(methods) {
+        return methods.filter((m) => m.visibility == "public" || m.visibility == "external");
     }
 };

@@ -367,12 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### getOffersStorage
-```solidity
-  function getOffersStorage(
-  ) internal returns (struct OffersStorageAccessor.OffersStorage ds)
-```
-
-
-
-

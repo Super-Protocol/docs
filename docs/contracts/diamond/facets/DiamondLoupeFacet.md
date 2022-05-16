@@ -384,7 +384,7 @@ Gets all facets and their selectors.
 ```solidity
   function facetFunctionSelectors(
     address _facet
-  ) external returns (bytes4[] facetFunctionSelectors_)
+  ) external returns (bytes4[])
 ```
 Gets all the function selectors provided by a facet.
 
@@ -394,11 +394,14 @@ Gets all the function selectors provided by a facet.
 | :--- | :--- | :------------------------------------------------------------------- |
 |`_facet` | address | The facet address.
 
-
+#### Return Values:
+| Name                           | Type          | Description                                                                  |
+| :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
+|`function`| address | selectors of given facet.
 ### facetAddresses
 ```solidity
   function facetAddresses(
-  ) external returns (address[] facetAddresses_)
+  ) external returns (address[])
 ```
 Get all the facet addresses used by a diamond.
 

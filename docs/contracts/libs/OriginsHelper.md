@@ -367,21 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### init
-```solidity
-  function init(
-  ) internal
-```
-
-
-
-
-### update
-```solidity
-  function update(
-  ) internal
-```
-
-
-
-

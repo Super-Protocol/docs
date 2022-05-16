@@ -363,19 +363,10 @@ sidebar_position: 0
 [StakingStorageAccessor-StakingStorage]: storages/StakingStorageAccessor.md#StakingStorageAccessor-StakingStorage
 
 ## `ProvidersOffers`
-
+Contains logic controlling the list of provider offers.
 
 
 ## Functions
-### _pointer
-```solidity
-  function _pointer(
-  ) internal returns (struct ProviderOffersData)
-```
-
-
-
-
 ### isProviderHasEnabledOffers
 ```solidity
   function isProviderHasEnabledOffers(
@@ -397,21 +388,41 @@ sidebar_position: 0
 ### getProviderOffersState
 ```solidity
   function getProviderOffersState(
+    address providerAuth
   ) public returns (struct ProviderOffersState)
 ```
+Returns number of enabled provider offers.
 
 
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`providerAuth` | address | Provider authority address.
 
-
+#### Return Values:
+| Name                           | Type          | Description                                                                  |
+| :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
+|`stats`| address | of provider offers.
 ### getProviderRequiredSecDepo
 ```solidity
   function getProviderRequiredSecDepo(
+    address providerAuth,
+    uint256 additional
   ) public returns (uint256)
 ```
+Calculates required amount of tokens to secure all of provider offers.
 
 
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`providerAuth` | address | Provider authority address.
+|`additional` | uint256 | Additional amount to add to the result value.
 
-
+#### Return Values:
+| Name                           | Type          | Description                                                                  |
+| :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
+|`requiredAmount`| address | of tokens.
 ### getProviderRecentlyEnabledValueOffersCount
 ```solidity
   function getProviderRecentlyEnabledValueOffersCount(
@@ -451,11 +462,16 @@ sidebar_position: 0
 ### gcProviderOffers
 ```solidity
   function gcProviderOffers(
+    address providerAuth
   ) public
 ```
+Clears list of pending offers.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`providerAuth` | address | Provider authority address.
 
 ### addProviderOffer
 ```solidity
@@ -469,9 +485,22 @@ sidebar_position: 0
 ### setProviderOfferState
 ```solidity
   function setProviderOfferState(
+    address providerAuth,
+    uint256 offerId,
+    enum OfferType offerType,
+    bool enabled,
+    uint256 disabledAfter
   ) public
 ```
+Enable/Disable provider offer by application.
 
 
-
+#### Parameters:
+| Name | Type | Description                                                          |
+| :--- | :--- | :------------------------------------------------------------------- |
+|`providerAuth` | address | Provider authority address.
+|`offerId` | uint256 | Provider offer id.
+|`offerType` | enum OfferType | Provider offer type.
+|`enabled` | bool | New state of offer.
+|`disabledAfter` | uint256 | Number of seconds to delay disabling the offer.
 

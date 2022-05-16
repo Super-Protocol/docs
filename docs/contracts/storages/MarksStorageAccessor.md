@@ -367,12 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### getMarksStorage
-```solidity
-  function getMarksStorage(
-  ) internal returns (struct MarksStorageAccessor.MarksStorage ds)
-```
-
-
-
-

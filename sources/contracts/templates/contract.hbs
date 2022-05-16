@@ -12,7 +12,7 @@ sidebar_position: 0
 {{#if ownFunctions}}
 ## Functions
 {{/if}}
-{{#ownFunctions}}
+{{#each (onlyPublicMethods ownFunctions)}}
 ### {{name}}
 ```solidity
   function {{name}}(
@@ -35,7 +35,7 @@ sidebar_position: 0
 | :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
 {{#natspec.returns}}
 |`{{param}}`| {{#lookup ../args.types @index}}{{/lookup}} | {{{description}}}{{/natspec.returns}}{{/if}}
-{{/ownFunctions}}
+{{/each}}
 {{#if ownEvents}}
 ## Events
 {{/if}}

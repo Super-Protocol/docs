@@ -367,12 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### getProvidersStorage
-```solidity
-  function getProvidersStorage(
-  ) internal returns (struct ProvidersStorageAccessor.ProvidersStorage ds)
-```
-
-
-
-

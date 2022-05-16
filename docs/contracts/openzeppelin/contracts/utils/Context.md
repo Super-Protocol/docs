@@ -374,21 +374,3 @@ is concerned).
 This contract is only required for intermediate, library-like contracts.
 
 ## Functions
-### _msgSender
-```solidity
-  function _msgSender(
-  ) internal returns (address)
-```
-
-
-
-
-### _msgData
-```solidity
-  function _msgData(
-  ) internal returns (bytes)
-```
-
-
-
-

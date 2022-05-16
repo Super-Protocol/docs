@@ -367,39 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### isEmpty
-```solidity
-  function isEmpty(
-  ) internal returns (bool)
-```
-
-
-
-
-### add
-```solidity
-  function add(
-  ) internal
-```
-
-
-
-
-### isExists
-```solidity
-  function isExists(
-  ) internal returns (bool)
-```
-
-
-
-
-### remove
-```solidity
-  function remove(
-  ) internal
-```
-
-
-
-

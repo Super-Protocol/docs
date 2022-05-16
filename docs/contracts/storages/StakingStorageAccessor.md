@@ -367,12 +367,3 @@ sidebar_position: 0
 
 
 ## Functions
-### getStakingStorage
-```solidity
-  function getStakingStorage(
-  ) internal returns (struct StakingStorageAccessor.StakingStorage ds)
-```
-
-
-
-
