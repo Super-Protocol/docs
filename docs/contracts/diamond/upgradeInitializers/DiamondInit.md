@@ -370,9 +370,7 @@ sidebar_position: 0
 ### init
 ```solidity
   function init(
-  ) external
+  ) external 
 ```
-
-
 
 

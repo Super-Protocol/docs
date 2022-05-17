@@ -374,8 +374,6 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOrderMark
 ```solidity
   function getOrderMark(
@@ -383,14 +381,10 @@ sidebar_position: 0
 ```
 
 
-
-
 ### setOrderMark
 ```solidity
   function setOrderMark(
-  ) external
+  ) external 
 ```
-
-
 
 

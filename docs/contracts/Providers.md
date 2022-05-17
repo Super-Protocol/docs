@@ -374,15 +374,11 @@ Contains logic controlling the list of registered service providers.
 ```
 
 
-
-
 ### getProvidersCount
 ```solidity
   function getProvidersCount(
   ) public returns (uint256)
 ```
-
-
 
 
 ### getProviderActionAccount
@@ -392,15 +388,11 @@ Contains logic controlling the list of registered service providers.
 ```
 
 
-
-
 ### getProviderTokenReceiver
 ```solidity
   function getProviderTokenReceiver(
   ) public returns (address)
 ```
-
-
 
 
 ### getProviderInfo
@@ -410,15 +402,11 @@ Contains logic controlling the list of registered service providers.
 ```
 
 
-
-
 ### getProviderOrigins
 ```solidity
   function getProviderOrigins(
   ) public returns (struct Origins)
 ```
-
-
 
 
 ### getProviderViolationRate
@@ -428,15 +416,11 @@ Contains logic controlling the list of registered service providers.
 ```
 
 
-
-
 ### getProviderSecurityDeposit
 ```solidity
   function getProviderSecurityDeposit(
   ) public returns (uint256)
 ```
-
-
 
 
 ### getProvidersAuths
@@ -446,13 +430,11 @@ Contains logic controlling the list of registered service providers.
 ```
 
 
-
-
 ### registerProvider
 ```solidity
   function registerProvider(
     struct ProviderInfo info
-  ) public
+  ) public onlyNotRegistered 
 ```
 Register new service provider in the system.
 
@@ -461,12 +443,11 @@ Register new service provider in the system.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`info` | struct ProviderInfo | Information about new provider.
-
 ### modifyProvider
 ```solidity
   function modifyProvider(
     struct ProviderInfo info
-  ) public
+  ) public onlyRegistered 
 ```
 Updates the registered provider information.
 
@@ -475,12 +456,11 @@ Updates the registered provider information.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`info` | struct ProviderInfo | New information about new provider.
-
 ### refillProviderSecurityDepo
 ```solidity
   function refillProviderSecurityDepo(
     uint256 amount
-  ) public
+  ) public onlyRegistered 
 ```
 Locks additional tokens from the provider's stake as offers security deposit.
 
@@ -489,12 +469,11 @@ Locks additional tokens from the provider's stake as offers security deposit.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`amount` | uint256 | Tokens amount.
-
 ### returnProviderSecurityDepo
 ```solidity
   function returnProviderSecurityDepo(
     uint256 amount
-  ) public
+  ) public 
 ```
 Unlocks tokens from the provider's security deposit and return them to it stake.
 
@@ -503,12 +482,11 @@ Unlocks tokens from the provider's security deposit and return them to it stake.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`amount` | uint256 | Tokens amount.
-
 ### incrProviderViolationRate
 ```solidity
   function incrProviderViolationRate(
     address providerAuth
-  ) public
+  ) public onlyApp 
 ```
 Increments violation rate of given provider.
 
@@ -517,13 +495,12 @@ Increments violation rate of given provider.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`providerAuth` | address | Provider authority address.
-
 ### chargePenalty
 ```solidity
   function chargePenalty(
     uint256 teeOfferId,
     uint256 amount
-  ) public
+  ) public onlyApp 
 ```
 Confiscates tokens from the provider (TEE) that violated the rules.
 
@@ -533,7 +510,6 @@ Confiscates tokens from the provider (TEE) that violated the rules.
 | :--- | :--- | :------------------------------------------------------------------- |
 |`teeOfferId` | uint256 | Provider authority address.
 |`amount` | uint256 | Tokens amount.
-
 ## Events
 ### ProviderRegistered
 ```solidity

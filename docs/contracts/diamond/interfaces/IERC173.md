@@ -375,7 +375,6 @@ sidebar_position: 0
 Get the address of the owner
 
 
-
 #### Return Values:
 | Name                           | Type          | Description                                                                  |
 | :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
@@ -384,7 +383,7 @@ Get the address of the owner
 ```solidity
   function transferOwnership(
     address _newOwner
-  ) external
+  ) external 
 ```
 Set the address of the new owner of the contract
 
@@ -394,7 +393,6 @@ Set _newOwner to address(0) to renounce any ownership.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`_newOwner` | address | The address of the new owner of the contract
-
 ## Events
 ### OwnershipTransferred
 ```solidity

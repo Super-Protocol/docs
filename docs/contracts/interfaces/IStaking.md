@@ -370,55 +370,43 @@ sidebar_position: 0
 ### stake
 ```solidity
   function stake(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### stakeFor
 ```solidity
   function stakeFor(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### unstake
 ```solidity
   function unstake(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### lockTokens
 ```solidity
   function lockTokens(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### unlockTokens
 ```solidity
   function unlockTokens(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### confiscateTokensFrom
 ```solidity
   function confiscateTokensFrom(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### getStakeInfo
@@ -428,14 +416,10 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getLockedTokensInfo
 ```solidity
   function getLockedTokensInfo(
   ) external returns (struct LockedTokens)
 ```
-
-
 
 

@@ -392,7 +392,7 @@ allowances. See {IERC20-approve}.
 ### constructor
 ```solidity
   function constructor(
-  ) public
+  ) public 
 ```
 
 Sets the values for {name} and {symbol}.
@@ -402,8 +402,6 @@ The default value of {decimals} is 18. To select a different value for
 
 All two of these values are immutable: they can only be set once during
 construction.
-
-
 ### name
 ```solidity
   function name(
@@ -411,8 +409,6 @@ construction.
 ```
 
 Returns the name of the token.
-
-
 ### symbol
 ```solidity
   function symbol(
@@ -421,8 +417,6 @@ Returns the name of the token.
 
 Returns the symbol of the token, usually a shorter version of the
 name.
-
-
 ### decimals
 ```solidity
   function decimals(
@@ -440,8 +434,6 @@ overridden;
 NOTE: This information is only used for _display_ purposes: it in
 no way affects any of the arithmetic of the contract, including
 {IERC20-balanceOf} and {IERC20-transfer}.
-
-
 ### totalSupply
 ```solidity
   function totalSupply(
@@ -449,8 +441,6 @@ no way affects any of the arithmetic of the contract, including
 ```
 
 See {IERC20-totalSupply}.
-
-
 ### balanceOf
 ```solidity
   function balanceOf(
@@ -458,8 +448,6 @@ See {IERC20-totalSupply}.
 ```
 
 See {IERC20-balanceOf}.
-
-
 ### transfer
 ```solidity
   function transfer(
@@ -472,8 +460,6 @@ Requirements:
 
 - `to` cannot be the zero address.
 - the caller must have a balance of at least `amount`.
-
-
 ### allowance
 ```solidity
   function allowance(
@@ -481,8 +467,6 @@ Requirements:
 ```
 
 See {IERC20-allowance}.
-
-
 ### approve
 ```solidity
   function approve(
@@ -497,8 +481,6 @@ NOTE: If `amount` is the maximum `uint256`, the allowance is not updated on
 Requirements:
 
 - `spender` cannot be the zero address.
-
-
 ### transferFrom
 ```solidity
   function transferFrom(
@@ -519,8 +501,6 @@ Requirements:
 - `from` must have a balance of at least `amount`.
 - the caller must have allowance for ``from``'s tokens of at least
 `amount`.
-
-
 ### increaseAllowance
 ```solidity
   function increaseAllowance(
@@ -537,8 +517,6 @@ Emits an {Approval} event indicating the updated allowance.
 Requirements:
 
 - `spender` cannot be the zero address.
-
-
 ### decreaseAllowance
 ```solidity
   function decreaseAllowance(
@@ -557,5 +535,3 @@ Requirements:
 - `spender` cannot be the zero address.
 - `spender` must have allowance for the caller of at least
 `subtractedValue`.
-
-

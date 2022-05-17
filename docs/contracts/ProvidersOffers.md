@@ -374,15 +374,11 @@ Contains logic controlling the list of provider offers.
 ```
 
 
-
-
 ### isProviderHasEnoughSecurityDeposit
 ```solidity
   function isProviderHasEnoughSecurityDeposit(
   ) public returns (bool)
 ```
-
-
 
 
 ### getProviderOffersState
@@ -430,15 +426,11 @@ Calculates required amount of tokens to secure all of provider offers.
 ```
 
 
-
-
 ### getProviderRecentlyEnabledTeeOffersCount
 ```solidity
   function getProviderRecentlyEnabledTeeOffersCount(
   ) public returns (uint256)
 ```
-
-
 
 
 ### getProviderValueOffers
@@ -448,8 +440,6 @@ Calculates required amount of tokens to secure all of provider offers.
 ```
 
 
-
-
 ### getProviderTeeOffers
 ```solidity
   function getProviderTeeOffers(
@@ -457,13 +447,11 @@ Calculates required amount of tokens to secure all of provider offers.
 ```
 
 
-
-
 ### gcProviderOffers
 ```solidity
   function gcProviderOffers(
     address providerAuth
-  ) public
+  ) public onlyApp 
 ```
 Clears list of pending offers.
 
@@ -472,14 +460,11 @@ Clears list of pending offers.
 | Name | Type | Description                                                          |
 | :--- | :--- | :------------------------------------------------------------------- |
 |`providerAuth` | address | Provider authority address.
-
 ### addProviderOffer
 ```solidity
   function addProviderOffer(
-  ) public
+  ) public onlyApp 
 ```
-
-
 
 
 ### setProviderOfferState
@@ -490,7 +475,7 @@ Clears list of pending offers.
     enum OfferType offerType,
     bool enabled,
     uint256 disabledAfter
-  ) public
+  ) public onlyApp 
 ```
 Enable/Disable provider offer by application.
 
@@ -503,4 +488,3 @@ Enable/Disable provider offer by application.
 |`offerType` | enum OfferType | Provider offer type.
 |`enabled` | bool | New state of offer.
 |`disabledAfter` | uint256 | Number of seconds to delay disabling the offer.
-

@@ -376,8 +376,6 @@ _Available since v4.1._
 ```
 
 Returns the name of the token.
-
-
 ### symbol
 ```solidity
   function symbol(
@@ -385,8 +383,6 @@ Returns the name of the token.
 ```
 
 Returns the symbol of the token.
-
-
 ### decimals
 ```solidity
   function decimals(
@@ -394,5 +390,3 @@ Returns the symbol of the token.
 ```
 
 Returns the decimals places of the token.
-
-

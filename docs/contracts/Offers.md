@@ -374,15 +374,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### isOfferCancelable
 ```solidity
   function isOfferCancelable(
   ) public returns (bool)
 ```
-
-
 
 
 ### isOfferAllowedForConsumer
@@ -392,15 +388,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### isOfferRestrictionsPermitOtherOffer
 ```solidity
   function isOfferRestrictionsPermitOtherOffer(
   ) public returns (bool)
 ```
-
-
 
 
 ### isOfferRestrictedByOfferType
@@ -410,15 +402,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOffersCount
 ```solidity
   function getOffersCount(
   ) public returns (uint256)
 ```
-
-
 
 
 ### getOfferType
@@ -428,15 +416,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOfferGroup
 ```solidity
   function getOfferGroup(
   ) public returns (enum OfferGroup)
 ```
-
-
 
 
 ### getOfferOrigins
@@ -446,15 +430,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOfferProviderAuthority
 ```solidity
   function getOfferProviderAuthority(
   ) public returns (address)
 ```
-
-
 
 
 ### getOfferDisabledAfter
@@ -464,15 +444,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOfferHoldDeposit
 ```solidity
   function getOfferHoldDeposit(
   ) public returns (uint256)
 ```
-
-
 
 
 ### getOfferClosingPrice
@@ -482,15 +458,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getTeeOfferLastTcbReward
 ```solidity
   function getTeeOfferLastTcbReward(
   ) public returns (uint256)
 ```
-
-
 
 
 ### getTeeOfferViolationRate
@@ -500,15 +472,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getValueOffer
 ```solidity
   function getValueOffer(
   ) public returns (struct ValueOfferInfo, address, uint256)
 ```
-
-
 
 
 ### getTeeOffer
@@ -518,87 +486,67 @@ sidebar_position: 0
 ```
 
 
-
-
 ### setOfferName
 ```solidity
   function setOfferName(
-  ) public
+  ) public onlyProviderActionAccount(offerId) notBlocked(offerId) 
 ```
-
-
 
 
 ### setOfferPublicKey
 ```solidity
   function setOfferPublicKey(
-  ) public
+  ) public onlyProviderActionAccount(offerId) notBlocked(offerId) 
 ```
-
-
 
 
 ### setOfferDescription
 ```solidity
   function setOfferDescription(
-  ) public
+  ) public onlyProviderActionAccount(offerId) notBlocked(offerId) 
 ```
-
-
 
 
 ### setTeeOfferTlb
 ```solidity
   function setTeeOfferTlb(
-  ) external
+  ) external onlyProviderActionAccount(offerId) notBlocked(offerId) 
 ```
-
-
 
 
 ### createValueOffer
 ```solidity
   function createValueOffer(
-  ) public
+  ) public 
 ```
-
-
 
 
 ### createTeeOffer
 ```solidity
   function createTeeOffer(
-  ) public
+  ) public 
 ```
-
-
 
 
 ### enableOffer
 ```solidity
   function enableOffer(
-  ) public
+  ) public onlyProviderActionAccount(offerId) notBlocked(offerId) 
 ```
-
-
 
 
 ### disableOffer
 ```solidity
   function disableOffer(
-  ) public
+  ) public onlyProviderActionAccount(offerId) notBlocked(offerId) 
 ```
-
-
 
 
 ### incrTeeOfferViolationRate
 ```solidity
   function incrTeeOfferViolationRate(
-  ) public
+  ) public onlyApp 
 ```
-
-
 
 
 ## Events

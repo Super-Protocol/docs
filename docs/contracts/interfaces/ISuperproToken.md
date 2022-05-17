@@ -370,10 +370,8 @@ sidebar_position: 0
 ### mint
 ```solidity
   function mint(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### transfer
@@ -383,15 +381,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### transferFrom
 ```solidity
   function transferFrom(
   ) external returns (bool)
 ```
-
-
 
 
 ### allowance
@@ -401,8 +395,6 @@ sidebar_position: 0
 ```
 
 
-
-
 ### approve
 ```solidity
   function approve(
@@ -410,14 +402,10 @@ sidebar_position: 0
 ```
 
 
-
-
 ### burnFrom
 ```solidity
   function burnFrom(
-  ) external
+  ) external 
 ```
-
-
 
 

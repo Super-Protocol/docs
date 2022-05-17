@@ -373,7 +373,7 @@ sidebar_position: 0
     struct IDiamondCut.FacetCut[] _diamondCut,
     address _init,
     bytes _calldata
-  ) external
+  ) external 
 ```
 Add/replace/remove any number of functions and optionally execute
         a function with delegatecall
@@ -386,4 +386,3 @@ Add/replace/remove any number of functions and optionally execute
 |`_init` | address | The address of the contract or facet to execute _calldata
 |`_calldata` | bytes | A function call, including function selector and arguments
                  _calldata is executed with delegatecall on _init
-

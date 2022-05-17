@@ -374,15 +374,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### isOfferCancelable
 ```solidity
   function isOfferCancelable(
   ) external returns (bool)
 ```
-
-
 
 
 ### isOfferAllowedForConsumer
@@ -392,15 +388,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### isOfferRestrictedByOfferType
 ```solidity
   function isOfferRestrictedByOfferType(
   ) external returns (bool)
 ```
-
-
 
 
 ### isOfferRestrictionsPermitOtherOffer
@@ -410,15 +402,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### isProviderHasEnabledOffers
 ```solidity
   function isProviderHasEnabledOffers(
   ) external returns (bool)
 ```
-
-
 
 
 ### getProviderRequiredSecDepo
@@ -428,15 +416,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOfferType
 ```solidity
   function getOfferType(
   ) external returns (enum OfferType)
 ```
-
-
 
 
 ### getOfferGroup
@@ -446,15 +430,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOfferProviderAuthority
 ```solidity
   function getOfferProviderAuthority(
   ) external returns (address)
 ```
-
-
 
 
 ### getOfferDisabledAfter
@@ -464,15 +444,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getOfferHoldDeposit
 ```solidity
   function getOfferHoldDeposit(
   ) external returns (uint256)
 ```
-
-
 
 
 ### getOfferClosingPrice
@@ -482,32 +458,24 @@ sidebar_position: 0
 ```
 
 
-
-
 ### gcProviderOffers
 ```solidity
   function gcProviderOffers(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### addProviderOffer
 ```solidity
   function addProviderOffer(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### setProviderOfferState
 ```solidity
   function setProviderOfferState(
-  ) external
+  ) external 
 ```
-
-
 
 

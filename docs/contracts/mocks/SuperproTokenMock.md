@@ -370,18 +370,14 @@ sidebar_position: 0
 ### constructor
 ```solidity
   function constructor(
-  ) public
+  ) public ERC20(,) 
 ```
-
-
 
 
 ### mint
 ```solidity
   function mint(
-  ) public
+  ) public 
 ```
-
-
 
 

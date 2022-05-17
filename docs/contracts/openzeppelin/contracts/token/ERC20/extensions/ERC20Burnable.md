@@ -372,18 +372,16 @@ recognized off-chain (via event analysis).
 ### burn
 ```solidity
   function burn(
-  ) public
+  ) public 
 ```
 
 Destroys `amount` tokens from the caller.
 
 See {ERC20-_burn}.
-
-
 ### burnFrom
 ```solidity
   function burnFrom(
-  ) public
+  ) public 
 ```
 
 Destroys `amount` tokens from `account`, deducting from the caller's
@@ -395,5 +393,3 @@ Requirements:
 
 - the caller must have allowance for ``accounts``'s tokens of at least
 `amount`.
-
-

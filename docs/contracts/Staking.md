@@ -374,8 +374,6 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getLockedTokensInfo
 ```solidity
   function getLockedTokensInfo(
@@ -383,60 +381,46 @@ sidebar_position: 0
 ```
 
 
-
-
 ### stake
 ```solidity
   function stake(
-  ) public
+  ) public 
 ```
-
-
 
 
 ### stakeFor
 ```solidity
   function stakeFor(
-  ) public
+  ) public 
 ```
-
-
 
 
 ### unstake
 ```solidity
   function unstake(
-  ) public
+  ) public 
 ```
-
-
 
 
 ### lockTokens
 ```solidity
   function lockTokens(
-  ) public
+  ) public onlyApp 
 ```
-
-
 
 
 ### unlockTokens
 ```solidity
   function unlockTokens(
-  ) public
+  ) public onlyApp 
 ```
-
-
 
 
 ### confiscateTokensFrom
 ```solidity
   function confiscateTokensFrom(
-  ) public
+  ) public onlyApp 
 ```
-
-
 
 
 ## Events

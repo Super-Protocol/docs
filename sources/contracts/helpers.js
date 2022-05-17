@@ -23,5 +23,11 @@ module.exports = {
     },
     onlyPublicMethods(methods) {
         return methods.filter((m) => m.visibility == "public" || m.visibility == "external");
+    },
+    json(o) {
+        return JSON.stringify(o);
+    },
+    keys(o) {
+        return Object.keys(o);
     }
 };

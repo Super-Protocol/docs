@@ -374,8 +374,6 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getToken
 ```solidity
   function getToken(
@@ -383,14 +381,10 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getConfigParam
 ```solidity
   function getConfigParam(
   ) external returns (uint256)
 ```
-
-
 
 

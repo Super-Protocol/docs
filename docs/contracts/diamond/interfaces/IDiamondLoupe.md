@@ -375,7 +375,6 @@ sidebar_position: 0
 Gets all facet addresses and their four byte function selectors.
 
 
-
 #### Return Values:
 | Name                           | Type          | Description                                                                  |
 | :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
@@ -394,7 +393,6 @@ Gets all the function selectors supported by a specific facet.
 | :--- | :--- | :------------------------------------------------------------------- |
 |`_facet` | address | The facet address.
 
-
 ### facetAddresses
 ```solidity
   function facetAddresses(
@@ -402,8 +400,6 @@ Gets all the function selectors supported by a specific facet.
 ```
 Get all the facet addresses used by a diamond.
 @return
-
-
 
 ### facetAddress
 ```solidity

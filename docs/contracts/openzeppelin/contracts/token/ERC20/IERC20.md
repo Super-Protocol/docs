@@ -374,8 +374,6 @@ Interface of the ERC20 standard as defined in the EIP.
 ```
 
 Returns the amount of tokens in existence.
-
-
 ### balanceOf
 ```solidity
   function balanceOf(
@@ -383,8 +381,6 @@ Returns the amount of tokens in existence.
 ```
 
 Returns the amount of tokens owned by `account`.
-
-
 ### transfer
 ```solidity
   function transfer(
@@ -396,8 +392,6 @@ Moves `amount` tokens from the caller's account to `to`.
 Returns a boolean value indicating whether the operation succeeded.
 
 Emits a {Transfer} event.
-
-
 ### allowance
 ```solidity
   function allowance(
@@ -409,8 +403,6 @@ allowed to spend on behalf of `owner` through {transferFrom}. This is
 zero by default.
 
 This value changes when {approve} or {transferFrom} are called.
-
-
 ### approve
 ```solidity
   function approve(
@@ -429,8 +421,6 @@ desired value afterwards:
 https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
 
 Emits an {Approval} event.
-
-
 ### transferFrom
 ```solidity
   function transferFrom(
@@ -444,8 +434,6 @@ allowance.
 Returns a boolean value indicating whether the operation succeeded.
 
 Emits a {Transfer} event.
-
-
 ## Events
 ### Transfer
 ```solidity

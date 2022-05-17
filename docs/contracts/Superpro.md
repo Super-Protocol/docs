@@ -374,15 +374,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getToken
 ```solidity
   function getToken(
   ) public returns (address)
 ```
-
-
 
 
 ### getConfigParam
@@ -392,32 +388,24 @@ sidebar_position: 0
 ```
 
 
-
-
 ### setVersion
 ```solidity
   function setVersion(
-  ) public
+  ) public onlyAdmin 
 ```
-
-
 
 
 ### setConfigParam
 ```solidity
   function setConfigParam(
-  ) public
+  ) public onlyAdmin 
 ```
-
-
 
 
 ### setConfigParams
 ```solidity
   function setConfigParams(
-  ) public
+  ) public onlyAdmin 
 ```
-
-
 
 

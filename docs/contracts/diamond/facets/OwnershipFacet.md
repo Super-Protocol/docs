@@ -370,10 +370,8 @@ sidebar_position: 0
 ### transferOwnership
 ```solidity
   function transferOwnership(
-  ) external
+  ) external 
 ```
-
-
 
 
 ### owner
@@ -381,7 +379,5 @@ sidebar_position: 0
   function owner(
   ) external returns (address owner_)
 ```
-
-
 
 

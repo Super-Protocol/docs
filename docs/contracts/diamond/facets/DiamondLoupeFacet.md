@@ -375,7 +375,6 @@ sidebar_position: 0
 Gets all facets and their selectors.
 
 
-
 #### Return Values:
 | Name                           | Type          | Description                                                                  |
 | :----------------------------- | :------------ | :--------------------------------------------------------------------------- |
@@ -406,8 +405,6 @@ Gets all the function selectors provided by a facet.
 Get all the facet addresses used by a diamond.
 
 
-
-
 ### facetAddress
 ```solidity
   function facetAddress(
@@ -432,7 +429,5 @@ If facet is not found return address(0).
   function supportsInterface(
   ) external returns (bool)
 ```
-
-
 
 

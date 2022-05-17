@@ -374,15 +374,11 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getProviderActionAccount
 ```solidity
   function getProviderActionAccount(
   ) external returns (address)
 ```
-
-
 
 
 ### getProviderTokenReceiver
@@ -392,8 +388,6 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getProviderSecurityDeposit
 ```solidity
   function getProviderSecurityDeposit(
@@ -401,14 +395,10 @@ sidebar_position: 0
 ```
 
 
-
-
 ### getProviderRequiredSecDepo
 ```solidity
   function getProviderRequiredSecDepo(
   ) external returns (uint256)
 ```
-
-
 
 
