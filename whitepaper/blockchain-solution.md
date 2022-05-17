@@ -23,7 +23,7 @@ To ensure order processing, the blockchain environment provides an infrastructur
 - **TEE Offers**
 - **Orders**
 
-Now let’s take a look at each smart contract in detail.
+Now let’s take a look at each smart contract in detail. 
 ## Basic smart contract for the Super Protocol Config system
 It contains information on the other smart contracts in the system. This contract is used to update current information about the system and the system settings. It also contains a link to its later version, if it ever existed. The contract contains several system configurations:
 
@@ -411,3 +411,146 @@ It is often necessary to deploy multiple containers on a single TEE device so th
 For example, we may want to deploy a DBMS container, a computing application providing a service to merge processed results, or a web server.
 
 For this purpose, an order is created at the SDK level for the desired device with the total number of slots required in the "suspended" status. From there sub-orders are created for the desired containers. The order status is then changed to "blocked" until all sub-orders are completed.
+
+## Example of Big Data Processing using the protocol
+### Timeline
+For example, let us take a look at the Big Data Processing order cycle. Here is the diagram of the sequence of activities:
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-14.png').default} />
+</p>
+
+Initially, the following participants are registered in the blockchain smart contract system:
+
+- Provider offering solutions for data processing
+- Provider offering TEE for confidential execution
+- Provider offering storage for saving results
+- Provider offering processing of their big data
+
+These providers then create offers for execution. However, the data offer does impose limitations on the range of solutions that can work with it.
+
+
+Also, if necessary, INPUT offers can limit OUTPUT (Storage) lists with respect to saving the results of the execution. This may be necessary if, for example, the solution is generated dynamically and written in encrypted form.
+
+In order to get the result of data processing, the customer creates an order for a TEE offer in the "suspended" state and pays the *HoldDeposit* described above. The customer also creates sub-orders for the data and solution and then runs the order for TEE.
+
+Data and solution providers execute their orders by providing the respective data and solution in encrypted form for the trusted loader. After that, the TEE order is processed.
+
+The TEE provider receives and executes the order by performing the following steps:
+
+1. A trusted solution loader starts up.
+1. The loader uploads the encrypted solution and data, decrypts the data, and runs the solution.
+1. Once executed, the solution encrypts the result for the customer and saves it as a data segment.
+1. The loader completes the TEE order.
+
+The TEE provider then publishes the result and completes the order, and also the held tokens are distributed to the recipient.
+### Entity interaction in the Big Data Processing example
+A complete structure of the big data processing order may look as follows:
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-15.png').default} />
+</p>
+
+Each EXECUTION and INPUT offer here requires an OUTPUT to save the results of the corresponding order.
+
+Let us take a closer look at the stages of interaction between the entities in this example:
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-16.png').default} />
+</p>
+
+When a data processing customer creates an order on the blockchain network, they order TEE in the first place and from there create sub-orders for data and solution. The TEE order gets blocked until the sub-orders are successfully completed.
+
+The execution controller on the data provider side receives this order and stores the segment for processing in encrypted form or alternatively provides a link to access the encrypted data.
+
+Similarly, the execution controller on the solution provider side receives this order and stores the solution in encrypted form or alternatively provides a link to access the encrypted data.
+
+The order for TEE is processed then. After receiving the order, the TEE execution controller downloads the encrypted solution and data and starts the trusted solution loader in the TEE area, which decrypts the keys, solutions, and data. The solutions are then launched along with the data in the TEE area.
+
+Once executed, the results are encrypted and saved in the storage. The key itself is encrypted with the customer's public key using the DHIES algorithm. The TEE execution controller completes the order by storing the encrypted data link for the data provider:
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-17.png').default} />
+</p>
+
+## Payment mechanism
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-18.png').default} />
+</p>
+
+There is a deferred payment mechanism. It is configured within  the smart contract of Super Protocol and usually equates to three months. This is necessary to ensure the continuous quality of service providers. Also, deferred payments are used to automatically replenish the security deposit when penalties are paid out of it.
+
+## Penalty mechanism
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-19.png').default} />
+</p>
+
+During the result update performed by the provider, the smart contract checks the error code and issues a penalty, if necessary. The penalty is paid out of  the security deposit. Afterwards, the security deposit is automatically replenished by the deferred payments. It can also be replenished by calling the corresponding function in the basic Super Protocol smart contract.
+
+The error code itself is signed inside TEE by the solution loader and ensures that the provider cannot change it. The provider can be penalized for delaying a request execution as early as during the smart contract check.
+
+Each provider is responsible for the fulfillment of the assigned order. The providers of composite orders (with dependencies) are also responsible for providing the data and ensuring that it meets the declared parameters.
+## Provider ratings
+The smart contract for orders not only supports the assignment of a rating to a provider based on completed orders but is also capable of changing it, if necessary. This is done based on the lower bound of the [Wilson confidence interval](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval) for the Bernoulli parameter. The formula for the bounds of the confidence interval is the following:
+
+![](images/blockchain-solution-formula-02.svg)
+
+Here ![](images/blockchain-solution-formula-03.svg) is the fraction of positive scores, ![](images/blockchain-solution-formula-04.svg) is the quantile ![](images/blockchain-solution-formula-05.svg) of the standard normal distribution, and ![](images/blockchain-solution-formula-06.svg) is the total number of scores.
+
+This formula uses a weighting of scores based on the value of the completed order. The total weight of all orders will be calculated by the formula:
+
+![](images/blockchain-solution-formula-07.svg)
+
+In this case, the weight of positive ratings will be determined as follows:
+
+![](images/blockchain-solution-formula-08.svg)
+
+Based on this, the proportion of positive scores will be determined by the formula:
+
+![](images/blockchain-solution-formula-09.svg)
+
+![](images/blockchain-solution-formula-10.svg) should be used as the total number of scores.
+
+When creating an order, the arguments must be encrypted with the *Offer.argsPublicKey* using an asymmetric encryption algorithm as follows:
+
+![](images/blockchain-solution-formula-11.svg)
+
+The provider also decrypts the arguments using their private key, processes the arguments inside TEE using a linked solution and encrypts the result with the public key of the order:
+
+![](images/blockchain-solution-formula-12.svg)
+
+![](images/blockchain-solution-formula-13.svg)
+
+## Super Protocol roles
+The table below shows the permissions to Super Protocol smart contracts depending on the user role:
+
+|**Role**|**ERC-20**|**Staking**|**Provider Registry**|**TEE Offers**|**Value Offers**|**Orders**|
+| :- | :- | :- | :- | :- | :- | :- |
+|Token Holder|Transfers, approves|Stakes|||||
+|Provider Authority|||<p>Manages provider registry record,</p><p>manages security deposit</p>||||
+|Provider Token Receiver||||Receives rewards||Receives payments|
+|Provider Action Account||||Manages offers|Manages offers|Processes orders|
+|Consumer||||||Manages order, manages payment deposit|
+
+## Interaction between blockchains
+Super Protocol supports the use of multiple blockchain networks simultaneously. One of the networks acts as the root chain with the smart contract processing system, while the others are child chains that pass both execution of transactions (through the messaging mechanism) and smart contract tokens to the root network and also in turn receive the results back.
+
+The user can work with either network through the same smart contract interface.
+### Sidechain solution
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-20.png').default} />
+</p>
+
+If Sidechain solutions are used, the entire logic is represented as an overlay on top of the blockchains. In order to pay for services in the Super Protocol system, the consumer uses tokens on the root network and wrapped tokens provided by Sidechain gateways on the child network.
+
+In the case of Ethereum and Polygon networks, the [State Transfer](https://docs.polygon.technology/docs/develop/l1-l2-communication/state-transfer) mechanism is used for RPC.
+### Parachain
+
+<p align="center">
+  <img src={require('./images/blockchain-solution-21.png').default} />
+</p>
+
+In systems with parallel blockchain networks (Parachains), the interaction is already implemented at the level of the internal validation network (relay chain), so there is no need to wrap the token, and only RPC messages are transferred there. The [Polkadot](https://polkadot.network/technology/) network is one of the clearest examples of such solutions.

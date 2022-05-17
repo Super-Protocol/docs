@@ -86,4 +86,4 @@ If we consider the overall scheme of data transformation, we can distinguish the
 
    Once the result is retrieved from the repository (8) using the link (9), it must be decrypted:
 
-   ![](images/architecture-formula-23.svg)
+   ![](images/architecture-formula-23.svg) 
