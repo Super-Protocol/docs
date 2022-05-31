@@ -24,6 +24,15 @@ const config = {
                 sidebarPath: require.resolve("./sidebarsGettingStarted.js"),
             },
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "faq",
+                path: "faq",
+                routeBasePath: "/faq",
+                sidebarPath: require.resolve("./sidebarsFAQ.js"),
+            },
+        ],
     ],
     presets: [
         [
@@ -67,6 +76,13 @@ const config = {
                         docId: "index",
                         position: "left",
                         label: "Whitepaper",
+                    },
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "FAQ",
+                        docsPluginId: "faq",
                     },
                 ],
             },
