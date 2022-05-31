@@ -521,7 +521,7 @@ The provider also decrypts the arguments using their private key, processes the 
 
 ![](images/blockchain-solution-formula-12.svg)
 
-![](images/blockchain-solution-formula-13.svg)
+![](images/blockchain-solution-formula-13.svg) 
 
 ## Super Protocol roles
 The table below shows the permissions to Super Protocol smart contracts depending on the user role:

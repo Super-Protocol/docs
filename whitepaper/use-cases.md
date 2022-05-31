@@ -1,8 +1,8 @@
 ---
 id: "use-cases"
-title: "Protocol use cases"
+title: "Protocol Use Cases"
 slug: "/use-cases"
-sidebar_label: "Protocol use cases"
+sidebar_label: "Protocol Use Cases"
 sidebar_position: 6
 custom_edit_url: null
 ---
