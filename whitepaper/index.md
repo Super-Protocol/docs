@@ -26,6 +26,4 @@ Last update: May 31, 2022
 |[Data Provider](/data-provider)|Published|
 |[Storage Provider](/storage-provider)|Published|
 |[Client Infrastructure](/client-infrastructure)|Published|
-|[Blockchain Solution (Part 1)](/blockchain-solution)|Published|
-|[Blockchain Solution (Part 2)](/blockchain-solution#orders)|Published|
-|[Blockchain Solution (Part 3)](/blockchain-solution#example-of-big-data-processing-using-the-protocol)|Published|
+|[Blockchain Solution](/blockchain-solution)|Published|
