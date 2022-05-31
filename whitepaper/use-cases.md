@@ -7,7 +7,7 @@ sidebar_position: 6
 custom_edit_url: null
 ---
 
-# Protocol use cases
+# Protocol Use Cases
 ## Confidential computing on demand
 Super Protocol is based on confidential computing. Therefore, the basic use case involves renting computing power for a wide range of different tasks. The long-term goal of our protocol development is to create a full analogue of the largest cloud service providers in the Web3 concept.
 
