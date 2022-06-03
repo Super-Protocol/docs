@@ -10,25 +10,25 @@ custom_edit_url: null
 ## What is Super Protocol?
 Super Protocol combines blockchain with the most advanced confidential computing technologies on the market to create a universal decentralized cloud computing platform. Super Protocol thus offers a Web3 alternative to traditional cloud service providers and makes it possible for anyone to contribute to the development of innovative technologies for the future Internet.
 
-A modern ecosystem owned by a large cloud service provider may offer hundreds of services, but nevertheless it is a closed ecosystem. Super Protocol permissionless community-driven nature allows for a potentially unlimited combinations of computational capacity, public and private data, and innovative services, integrated into the same open protocol.
+A modern ecosystem owned by a large cloud service provider may offer hundreds of services, but nevertheless it is a closed ecosystem. Super Protocol's permissionless community-driven nature allows for a potentially unlimited combinations of computational capacity, public and private data, and innovative services, integrated into the same open protocol.
 
 Key points:
 
 - Web3 confidential super cloud
 - Powerful combination of blockchain and confidential computing technologies
-- Rich ecosystem of computational resources, products, services and data
+- Rich ecosystem of computational resources, products, services, and data
 ## Why is the project called Super Protocol?
 Super Protocol is the next generation of cloud computing. It is a decentralized confidential SUPER cloud that is tailored for Web3.
 
-In a broad sense a PROTOCOL is represented as a set of rules that is used by participating parties to communicate with one another.
+In a broad sense, PROTOCOL is represented as a set of rules used by participating parties to communicate with one another.
 
 Thus, Super Protocol is a decentralized permissionless platform that allows the community to efficiently work with each other in order to create a new Web3 super cloud.
 ## What does Super Protocol bring to this world?
-- A Web3 super cloud for general computing accessible for everyone and suitable for any kind of workload: dApps, traditional web applications or complex computations.
+- A Web3 super cloud for general computing accessible for everyone and suitable for any kind of workload: dApps, traditional web applications, or complex computations.
 - A massive ecosystem with lots of computational capacity, public and private data, and innovative services that offers opportunities for exponential growth and innovation.
 - A decentralized and unstoppable infrastructure for Web3 projects.
 ## Why will Super Protocol make the world a better place?
-Modern Internet is governed by huge corporations, which decide the vector of their business development and target audience. The main motive behind it is their own success in the market. There are plenty of examples how huge corporations use technological and financial superiority, as well as influence in order to take advantage of the small business.
+Modern Internet is governed by huge corporations, which decide the vector of their business development and target audience. The main motive behind it is their own success in the market. There are plenty of examples of how huge corporations use technological and financial superiority, as well as influence in order to take advantage of the small business.
 
 Main goal of Web3 in general and Super Protocol in particular is transferring technology to its users which brings everyone equal opportunities for creating new products and services.
 ## What is the competition of Super Protocol?
