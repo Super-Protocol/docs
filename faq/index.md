@@ -10,7 +10,7 @@ custom_edit_url: null
 ## What is Super Protocol?
 Super Protocol combines blockchain with the most advanced confidential computing technologies on the market to create a universal decentralized cloud computing platform. Super Protocol thus offers a Web3 alternative to traditional cloud service providers and makes it possible for anyone to contribute to the development of innovative technologies for the future Internet.
 
-A modern ecosystem owned by a large cloud service provider may offer hundreds of services, but nevertheless it is a closed ecosystem. Super Protocol's permissionless community-driven nature allows for a potentially unlimited combinations of computational capacity, public and private data, and innovative services, integrated into the same open protocol.
+A modern ecosystem owned by a large cloud service provider may offer hundreds of services, but nevertheless it is a closed ecosystem. Super Protocol's permissionless community-driven nature allows for potentially unlimited combinations of computational capacity, public and private data, and innovative services, integrated into the same open protocol.
 
 Key points:
 
