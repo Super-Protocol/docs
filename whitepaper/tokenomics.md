@@ -29,9 +29,9 @@ In order to minimize the negative impact of token inflation, as well as the poss
 |Demand Stimulus|5.0%|3 months|Linearly over 33 months after the lock-up period|
 |Staking Rewards|7.5%||Linearly over 36 months|
 |Liquidity Rewards|10.0%||2% after the TGE, the rest linearly over 36 months|
-|Pre-seed|5.0%|3 months|Linearly over 33 months after the lock-up period|
-|Private Rounds|15.0%|3 months|Linearly over 33 months after the lock-up period|
-|Team|20.0%|3 months|Linearly over 33 months after the lock-up period|
+|Pre-seed|5.0%|3 months|Linearly on a block-by-block basis over 33 months after the lock-up period|
+|Private Rounds|15.0%|3 months|Linearly on a block-by-block basis over 33 months after the lock-up period|
+|Team|20.0%|3 months|Linearly on a block-by-block basis over 33 months after the lock-up period|
 |DAO|20.0%||1% after the TGE, the rest linearly over 36 months|
 
 ### Public token sale
