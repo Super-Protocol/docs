@@ -10,6 +10,13 @@ sidebar_position: 0
 
 
 ## Functions
+### incrProviderViolationRate
+```solidity
+  function incrProviderViolationRate(
+  ) external 
+```
+
+
 ### isProviderRegistered
 ```solidity
   function isProviderRegistered(
@@ -42,6 +49,13 @@ sidebar_position: 0
 ```solidity
   function getProviderRequiredSecDepo(
   ) external returns (uint256)
+```
+
+
+### confiscateSecurityDeposit
+```solidity
+  function confiscateSecurityDeposit(
+  ) external 
 ```
 
 
