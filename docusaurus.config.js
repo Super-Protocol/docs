@@ -33,6 +33,15 @@ const config = {
                 sidebarPath: require.resolve("./sidebarsFAQ.js"),
             },
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "cli",
+                path: "cli",
+                routeBasePath: "/cli",
+                sidebarPath: require.resolve("./sidebarsCLI.js"),
+            },
+        ],
     ],
     presets: [
         [
@@ -83,6 +92,13 @@ const config = {
                         position: "left",
                         label: "FAQ",
                         docsPluginId: "faq",
+                    },
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "CLI",
+                        docsPluginId: "cli",
                     },
                 ],
             },
