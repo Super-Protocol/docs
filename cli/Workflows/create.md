@@ -5,7 +5,7 @@ slug: "/workflows/create"
 sidebar_label: "workflows create"
 ---
 
-# spctl workflows download
+# spctl workflows create
 
 ## Usage:
 
