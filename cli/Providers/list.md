@@ -10,14 +10,14 @@ sidebar_label: "providers list"
 ## Usage:
 
 ```shell
-$ spctl providers list [--fields <fields>] [--limit  <number>] [--cursor <string>] [--config <config>]
+$ spctl providers list [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
 ```
 
 list all providers
 
 ## Description:
 
-Get list of all providers
+Get a list of all providers
 
 ## Options:
 
