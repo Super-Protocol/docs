@@ -5,7 +5,7 @@ slug: "/files/upload"
 sidebar_label: "files upload"
 ---
 
-# spctl files download
+# spctl files upload
 
 ## Usage:
 
