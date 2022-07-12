@@ -10,14 +10,14 @@ sidebar_label: "orders list"
 ## Usage:
 
 ```shell
-$ spctl orders list [--fields <fields>] [--limit  <number>] [--cursor <string>] [--config <config>]
+$ spctl orders list [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
 ```
 
 list all orders
 
 ## Description:
 
-Get list of all orders
+Get a list of all orders
 
 ## Options:
 
