@@ -10,14 +10,14 @@ sidebar_label: "offers list"
 ## Usage:
 
 ```shell
-$ spctl offers list <type> [--fields <fields>] [--limit  <number>] [--cursor <string>] [--config <config>]
+$ spctl offers list <type> [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
 ```
 
 list all offers
 
 ## Description:
 
-Get list of all offers
+Get a list of all offers
 
 ## Arguments:
 
