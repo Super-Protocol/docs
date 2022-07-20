@@ -12,7 +12,7 @@ sidebar_label: "solutions prepare"
 ```shell
 $ spctl solutions prepare <solutionPath> <solutionKeyPath> \
     --pack-solution <packSolution> \
-    --base-image-path <pathToContainerImage> | --base-image-resource <containerImageResurce> \
+    --base-image-path <pathToContainerImage> | --base-image-resource <containerImageResource> \
     --sgx-thread-num <threadNum> \
     --sgx-enclave-size <enclaveSize> \
     --sgx-loader-internal-size <internalSize> \
@@ -26,7 +26,7 @@ prepares a solution
 
 ## Description:
 
-Prepares a solution in `<solutionPath>`, sign it with `<solutionKeyPath>`
+Prepares a solution in `<solutionPath>`, signs it with `<solutionKeyPath>`
 
 ## Arguments:
 
@@ -46,6 +46,6 @@ Prepares a solution in `<solutionPath>`, sign it with `<solutionKeyPath>`
 |`--write-default-manifest`|`false`|Write a default manifest for solutions with empty sgxMrEnclave|
 |`--hash-algo`|`sha256`|Hash calculation algorithm for solution|
 |`--sgx-thread-num`||A number of enclave threads|
-|`--sgx-enclave-size`||Whole enclave size (#M or #G), must be some of power of 2|
+|`--sgx-enclave-size`||Entire enclave size (#M or #G), must be some value to the power of 2|
 |`--sgx-loader-internal-size`||Size of the internal enclave structs (#M or #G)|
 |`--sgx-stack-size`||Size of the enclave thread stack (#K, #M or #G)|
