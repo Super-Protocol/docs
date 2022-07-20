@@ -17,7 +17,7 @@ replenish deposit for order
 
 ## Description:
 
-Replenish deposit for order with specified id at `<amount>`
+Replenish deposit for order with specified id by `<amount>`
 
 ## Arguments:
 
