@@ -29,8 +29,8 @@ In order to minimize the negative impact of token inflation, as well as the poss
 |Demand Stimulus|5.0%|3 months|Linearly over 33 months after the lock-up period|
 |Staking Rewards|7.5%||Linearly over 36 months|
 |Liquidity Rewards|10.0%||2% after the TGE, the rest linearly over 36 months|
-|Pre-seed|5.0%|3 months|Linearly on a block-by-block basis over 33 months after the lock-up period|
-|Private Rounds|15.0%|3 months|Linearly on a block-by-block basis over 33 months after the lock-up period|
+|Pre-seed|5.0%|3 months|Linearly on a block-by-block basis over 21 months after the lock-up period|
+|Private Rounds|15.0%|3 months|Linearly on a block-by-block basis over 21 months after the lock-up period|
 |Team|20.0%|3 months|Linearly on a block-by-block basis over 33 months after the lock-up period|
 |DAO|20.0%||1% after the TGE, the rest linearly over 36 months|
 
@@ -110,7 +110,7 @@ Once the public sale is complete, a promo staking program on Ethereum will be la
 - Rewards for TEE Providers: 100 million (10%) tokens
 - Stimulating demand for protocol products and services: 50 million (5%) tokens
 
-Investors, founders, advisers and project team will start receiving tokens 3 months after the TGE. A total of 400 million (40%) tokens will be unlocked for them over a period of 3 years.
+Investors, founders, advisers and project team will start receiving tokens 3 months after the TGE. A total of 400 million (40%) tokens will be unlocked for them over a period of up to 3 years (2 years for investors).
 
 The distribution of tokens over time since the start of the project is shown in the diagram below.
 
