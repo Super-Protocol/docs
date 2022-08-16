@@ -1,16 +1,14 @@
 ---
-id: "spctl-solutions-generate-key"
+id: "cli-solutions-generate-key"
 title: "Generate key for solution"
-slug: "/spctl/solutions/generate-key"
-sidebar_label: "solutions generate-key"
+slug: "/cli/solutions/generate-key"
+sidebar_label: "generate-key"
 ---
-
-# spctl solutions generate-key
 
 ## Usage:
 
 ```shell
-$ spctl solutions generate-key <outputPath> [--config <config>]
+$ CLI solutions generate-key <outputPath> [--config <config>]
 ```
 
 generates a solution key

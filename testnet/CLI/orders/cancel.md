@@ -1,16 +1,14 @@
 ---
-id: "spctl-orders-cancel"
+id: "cli-orders-cancel"
 title: "Cancel order"
-slug: "/spctl/orders/cancel"
-sidebar_label: "orders cancel"
+slug: "/cli/orders/cancel"
+sidebar_label: "cancel"
 ---
-
-# spctl orders cancel
 
 ## Usage:
 
 ```shell
-$ spctl orders cancel <id> [--config <config>]
+$ CLI orders cancel <id> [--config <config>]
 ```
 
 cancel order

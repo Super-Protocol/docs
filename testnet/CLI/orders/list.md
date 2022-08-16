@@ -1,16 +1,14 @@
 ---
-id: "spctl-orders-list"
+id: "cli-orders-list"
 title: "List orders"
-slug: "/spctl/orders/list"
-sidebar_label: "orders list"
+slug: "/cli/orders/list"
+sidebar_label: "list"
 ---
-
-# spctl orders list
 
 ## Usage:
 
 ```shell
-$ spctl orders list [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
+$ CLI orders list [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
 ```
 
 list all orders

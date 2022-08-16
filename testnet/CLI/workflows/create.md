@@ -1,16 +1,14 @@
 ---
-id: "spctl-workflows-create"
+id: "cli-workflows-create"
 title: "Create workflow"
-slug: "/spctl/workflows/create"
+slug: "/cli/workflows/create"
 sidebar_label: "workflows create"
 ---
-
-# spctl workflows create
 
 ## Usage:
 
 ```shell
-$ spctl workflows create --tee <id> --storage <id> --solution <id|filepath> [--data <id|filepath>] [--config <config>]
+$ CLI workflows create --tee <id> --storage <id> --solution <id|filepath> [--data <id|filepath>] [--config <config>]
 ```
 
 сreate workflow orders

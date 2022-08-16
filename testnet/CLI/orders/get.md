@@ -1,16 +1,14 @@
 ---
-id: "spctl-orders-get"
+id: "cli-orders-get"
 title: "Get order"
-slug: "/spctl/orders/get"
-sidebar_label: "orders get"
+slug: "/cli/orders/get"
+sidebar_label: "get"
 ---
-
-# spctl orders get
 
 ## Usage:
 
 ```shell
-$ spctl orders get <id> [--fields <fields>] [--suborders <boolean>] [--suborders_fields <fields>] [--config <config>]
+$ CLI orders get <id> [--fields <fields>] [--suborders <boolean>] [--suborders_fields <fields>] [--config <config>]
 ```
 
 get order
