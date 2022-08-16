@@ -1,16 +1,14 @@
 ---
-id: "spctl-files-download"
+id: "cli-files-download"
 title: "Download file"
-slug: "/spctl/files/download"
-sidebar_label: "files download"
+slug: "/cli/files/download"
+sidebar_label: "download"
 ---
-
-# spctl files download
 
 ## Usage:
 
 ```shell
-$ spctl files download <resourcePath> <localPath> [--config <config>]
+$ CLI files download <resourcePath> <localPath> [--config <config>]
 ```
 
 download and decrypt file from remote storage

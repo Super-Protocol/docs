@@ -1,16 +1,14 @@
 ---
-id: "spctl-solutions-prepare"
+id: "cli-solutions-prepare"
 title: "Prepare solution"
-slug: "/spctl/solutions/prepare"
-sidebar_label: "solutions prepare"
+slug: "/cli/solutions/prepare"
+sidebar_label: "prepare"
 ---
-
-# spctl solutions prepare
 
 ## Usage:
 
 ```shell
-$ spctl solutions prepare <solutionPath> <solutionKeyPath> \
+$ CLI solutions prepare <solutionPath> <solutionKeyPath> \
     --pack-solution <packSolution> \
     --base-image-path <pathToContainerImage> | --base-image-resource <containerImageResource> \
     --sgx-thread-num <threadNum> \

@@ -1,16 +1,14 @@
 ---
-id: "spctl-orders-replenish-deposit"
-title: "replenish-deposit order"
-slug: "/spctl/orders/replenish-deposit"
-sidebar_label: "orders replenish-deposit"
+id: "cli-orders-replenish-deposit"
+title: "Replenish order deposit"
+slug: "/cli/orders/replenish-deposit"
+sidebar_label: "replenish-deposit"
 ---
-
-# spctl orders replenish-deposit
 
 ## Usage:
 
 ```shell
-$ spctl orders replenish-deposit <id> <amount> [--config <config>]
+$ CLI orders replenish-deposit <id> <amount> [--config <config>]
 ```
 
 replenish deposit for order

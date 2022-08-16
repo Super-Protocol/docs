@@ -1,16 +1,14 @@
 ---
-id: "spctl-offers-list"
+id: "cli-offers-list"
 title: "List offers"
-slug: "/spctl/offers/list"
-sidebar_label: "offers list"
+slug: "/cli/offers/list"
+sidebar_label: "list"
 ---
-
-# spctl offers list
 
 ## Usage:
 
 ```shell
-$ spctl offers list <type> [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
+$ CLI offers list <type> [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
 ```
 
 list all offers

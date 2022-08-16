@@ -1,16 +1,14 @@
 ---
-id: "spctl-providers-list"
+id: "cli-providers-list"
 title: "List providers"
-slug: "/spctl/providers/list"
-sidebar_label: "providers list"
+slug: "/cli/providers/list"
+sidebar_label: "list"
 ---
-
-# spctl providers list
 
 ## Usage:
 
 ```shell
-$ spctl providers list [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
+$ CLI providers list [--fields <fields>] [--limit <number>] [--cursor <string>] [--config <config>]
 ```
 
 list all providers

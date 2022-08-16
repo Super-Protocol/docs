@@ -1,16 +1,14 @@
 ---
-id: "spctl-files-upload"
+id: "cli-files-upload"
 title: "Upload file"
-slug: "/spctl/files/upload"
-sidebar_label: "files upload"
+slug: "/cli/files/upload"
+sidebar_label: "upload"
 ---
-
-# spctl files upload
 
 ## Usage:
 
 ```shell
-$ spctl files upload <localPath> [--output <path>] [--metadata <path>] [--config <config>]
+$ CLI files upload <localPath> [--output <path>] [--metadata <path>] [--config <config>]
 ```
 
 upload a file or a directory to the remote storage 

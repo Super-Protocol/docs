@@ -1,16 +1,14 @@
 ---
-id: "spctl-providers-get"
+id: "cli-providers-get"
 title: "Get provider"
-slug: "/spctl/providers/get"
-sidebar_label: "providers get"
+slug: "/cli/providers/get"
+sidebar_label: "get"
 ---
-
-# spctl providers get
 
 ## Usage:
 
 ```shell
-$ spctl providers get <id> [--fields <fields>] [--config <config>]
+$ CLI providers get <id> [--fields <fields>] [--config <config>]
 ```
 
 get provider
