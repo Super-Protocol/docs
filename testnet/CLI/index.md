@@ -9,9 +9,9 @@ custom_edit_url: null
 
 !! This section is under construction !!
 
-* [providers](./cli/providers)
-* [offers](./cli/offers)
-* [orders](./cli/orders)
-* [solutions](./cli/solutions)
-* [files](./cli/files)
-* [workflows](./cli/workflows)
+* [providers](./providers)
+* [offers](./offers)
+* [orders](./orders)
+* [solutions](./solutions)
+* [files](./files)
+* [workflows](./workflows)
