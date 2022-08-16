@@ -17,7 +17,7 @@ At this point in order to participate in Super Protocol Testnet one needs to com
 
 To get access to Super Protocol Testnet please fill in the [testnet application form](https://superprotocol.typeform.com/testnet). After that wait for the invitation letter from our team with test account and access token. Please, be patient. We have received a lot of applications, and we have limited computational resources at the moment.  But rest assured that all applications will be processed and everyone will get their invitation letter.
 
-In the meantime we invite you to check manuals for our [Web User Interface](/testnet/web-ui) and [Command-line Interface (CLI)](./cli) as well as [solutions](/testnet/solutions) that are already deployed on Super Protocol Testnet.
+In the meantime we invite you to check manuals for our [Web User Interface](/testnet/web-ui) and [Command-line Interface (CLI)](./cli) as well as [solutions](https://github.com/Super-Protocol/solutions) that are already deployed on Super Protocol Testnet.
 
 ## How to start using Super Protocol
 
