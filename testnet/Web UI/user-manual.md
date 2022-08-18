@@ -19,7 +19,7 @@ When you open Web UI for the first time you will be asked to provide an access t
 
 ## Connecting a wallet
 
-At the moment Web UI supports only Metamask wallet. Please use [this guide](./metamask) to configure it before you can connect it to Web UI.
+At the moment Web UI supports only Metamask wallet. Please use [this guide](testnet/web-ui/metamask) to configure it before you can connect it to Web UI.
 
 To connect the wallet click on the **Connect wallet** button in the top right corner. After that select the account that was sent to you in the invitation letter.
 
