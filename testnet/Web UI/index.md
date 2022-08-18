@@ -15,6 +15,6 @@ Link to Web UI: https://rocket-girl.testnet.superprotocol.com/
 
 ## Getting started
 
-Before you can use Web UI you need to configure Metamask to work with Matic Testnet Mumbai. Please refer to [this guide](./web-ui/metamask) to do that.
+Before you can use Web UI you need to configure Metamask to work with Matic Testnet Mumbai. Please refer to [this guide](./metamask) to do that.
 
-To get familiar with the interface and basic functions please use [this manual](./web-ui/user-manual).
+To get familiar with the interface and basic functions please use [this manual](./user-manual).
