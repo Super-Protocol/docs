@@ -32,7 +32,16 @@ const config = {
                 routeBasePath: "/faq",
                 sidebarPath: require.resolve("./sidebarsFAQ.js"),
             },
-        ]
+        ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "testnet",
+                path: "testnet",
+                routeBasePath: "/testnet",
+                sidebarPath: require.resolve("./sidebarsTestnet.js"),
+            },
+        ],
     ],
     presets: [
         [
@@ -81,7 +90,14 @@ const config = {
                         position: "left",
                         label: "FAQ",
                         docsPluginId: "faq",
-                    }
+                    },
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Testnet",
+                        docsPluginId: "testnet",
+                    },
                 ],
             },
             prism: {
