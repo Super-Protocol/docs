@@ -10,7 +10,7 @@ Display detailed information on order with `id`
 ## Usage
 
 ```
-$ spctl orders get <id> [OPTIONS]
+spctl orders get <id> [OPTIONS]
 ```
 
 ## Arguments

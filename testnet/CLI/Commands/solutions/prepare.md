@@ -10,7 +10,7 @@ Prepare a solution for deployment
 ## Usage
 
 ```
-$ spctl solutions prepare <solutionPath> <solutionKeyPath> [OPTIONS]
+spctl solutions prepare <solutionPath> <solutionKeyPath> [OPTIONS]
 ```
 
 ## Arguments

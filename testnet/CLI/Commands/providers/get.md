@@ -10,7 +10,7 @@ Display detailed information on provider with `address`
 ## Usage
 
 ```
-$ spctl providers get <id> [OPTIONS]
+spctl providers get <id> [OPTIONS]
 ```
 
 ## Arguments

@@ -10,7 +10,7 @@ Download the content of an offer with `id` (only for offers that allows this ope
 ## Usage
 
 ```
-$ spctl offers download-content <id> [OPTIONS]
+spctl offers download-content <id> [OPTIONS]
 ```
 
 ## Arguments

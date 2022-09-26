@@ -10,7 +10,7 @@ Withdraw unspent deposit from a completed order with `id`
 ## Usage
 
 ```
-$ spctl orders replenish-deposit <id> <amount> [OPTIONS]
+spctl orders replenish-deposit <id> <amount> [OPTIONS]
 ```
 
 ## Arguments

@@ -9,7 +9,7 @@ Manage Super Protocol orders
 ## Usage
 
 ```
-$ spctl orders <command>
+spctl orders <command>
 ```
 
 ## Child commands

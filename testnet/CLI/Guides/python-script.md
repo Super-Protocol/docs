@@ -28,13 +28,13 @@ Your solution will use the base Python image that is already available on Super 
 Use the following CLI command to download the base image and save it to the current directory:
 
 ```
-$ spctl offers download-content --save-to ./ 3
+spctl offers download-content 3
 ```
 
 Load the image to Docker:
 
 ```
-$ docker load -i python3.8-base-solution-image-0.2.0.image.tar.gz
+docker load -i python3.8-base-solution-image-0.2.0.image.tar.gz
 ```
 
 ## Create new solution
@@ -117,7 +117,7 @@ Pillow~=9.2.0
 Run the following command in the solution root directory to download the required libraries:
 
 ```
-$ pip3 install -r requirements.txt -t ./run/pypi/lib/python3.8/site-packages
+pip3 install -r requirements.txt -t ./run/pypi/lib/python3.8/site-packages
 ```
 
 **Check yourself!** If done correctly, there should the content of `run` directory should look as follows:
@@ -137,7 +137,7 @@ Create additional subdirectory `input-0001` in `inputs` directory. Place `text-f
 Run the following command in the solution root directory run the solution in a Docker container:
 
 ```
-$ docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output:/sp/output \
+docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output:/sp/output \
 --entrypoint /usr/bin/python3 -w /sp/run -e PYTHONPATH="${PYTHONPATH}:/sp/run/pypi/lib/python3.8/site-packages" \
 gsc-python3.8-base-solution:latest entrypoint.py
 ```
@@ -151,7 +151,7 @@ Before running your solution on Super Protocol you need to pack, encrypt and upl
 First of all, run the following command in the directory where you placed the CLI file to generate the signing key:
 
 ```
-$ spctl solutions generate-key signing-key
+spctl solutions generate-key signing-key
 ```
 
 **Note.** You don't need to generate new key for every solution, you can reuse the existing one.
@@ -159,39 +159,39 @@ $ spctl solutions generate-key signing-key
 Pack your solution with the following command:
 
 ```
-$ spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
+spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
 --base-image-path python3.8-base-solution-image-0.2.0.image.tar.gz \
 <your solution root directory>/run signing-key
 ```
 
 Upload your solution to the storage:
 ```
-$ spctl files upload solution.tar.gz --output solution.json --filename solution.tar.gz
+spctl files upload solution.tar.gz --output solution.json --filename solution.tar.gz
 ```
 
 ## Prepare the data
 
 Pack both test input directories into separate tar.gz archives:
 ```
-$ tar -czvf input-1.tar.gz -C <your solution root directory>/inputs/input-0001 .
+tar -czvf input-1.tar.gz -C <your solution root directory>/inputs/input-0001 .
 ```
 ```
-$ tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
+tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
 ```
 
 Upload archives to the storage:
 ```
-$ spctl files upload input-1.tar.gz --output input-1.json --filename input-1.tar.gz
+spctl files upload input-1.tar.gz --output input-1.json --filename input-1.tar.gz
 ```
 ```
-$ spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
+spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
 ```
 
 ## Run the solution on Super Protocol
 
 In order to run prepared solution with the data on Super Protocol, run the following command:
 ```
-$ spctl workflows create --tee 1 --storage 13 --solution 3 \
+spctl workflows create --tee 1 --storage 13 --solution 3 \
 --solution solution.json --data input-1.json --data input-2.json
 ```
 
@@ -203,12 +203,12 @@ Additionally, a sub-order for storage will be created after the calculation is c
 
 At the end of its execution the command will show the ID of the parent TEE order that is created. Use this ID to check status of the order:
 ```
-$ spctl orders get <order ID>
+spctl orders get <order ID>
 ```
 
 When status is `Done` run the following command to download the results:
 ```
-$ spctl orders download-result <order ID>
+spctl orders download-result <order ID>
 ```
 
 In your CLI directory there should be new file `result.tar.gz`. In the archive, you should find the same result that you got earlier during local testing, as well as a log file. If any errors occur while executing the script, they will be in this log file.
