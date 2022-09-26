@@ -10,7 +10,7 @@ List TEE offers
 ## Usage
 
 ```
-$ spctl offers list tee [OPTIONS]
+spctl offers list tee [OPTIONS]
 ```
 
 ## Options

@@ -10,7 +10,7 @@ Create new orders
 ## Usage
 
 ```
-$ spctl workflows create [OPTIONS]
+spctl workflows create [OPTIONS]
 ```
 
 ## Options

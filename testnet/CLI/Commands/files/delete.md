@@ -10,7 +10,7 @@ Delete a file in the remote storage using resource file `<resourcePath>`
 ## Usage
 
 ```
-$ spctl files delete <resourcePath> [OPTIONS]
+spctl files delete <resourcePath> [OPTIONS]
 ```
 
 ## Arguments

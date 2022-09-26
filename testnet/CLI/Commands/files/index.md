@@ -11,7 +11,7 @@ Manage files in third-party storages
 ## Usage
 
 ```
-$ spctl files <command>
+spctl files <command>
 ```
 
 ## Child commands

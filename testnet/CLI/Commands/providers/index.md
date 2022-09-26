@@ -9,7 +9,7 @@ Manage Super Protocol providers
 ## Usage
 
 ```
-$ spctl providers <command>
+spctl providers <command>
 ```
 
 ## Child commands

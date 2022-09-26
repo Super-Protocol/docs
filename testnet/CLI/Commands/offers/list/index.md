@@ -10,7 +10,7 @@ List offers
 ## Usage
 
 ```
-$ spctl offers list <command>
+spctl offers list <command>
 ```
 
 ## Child commands
