@@ -1,10 +1,8 @@
 ---
 id: "index"
-title: "Getting started"
+title: "Super Protocol Public Testnet"
 slug: "/"
-sidebar_label: "Getting started"
 sidebar_position: 0
-custom_edit_url: null
 ---
 
 ## Introduction

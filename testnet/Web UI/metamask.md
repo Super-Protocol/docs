@@ -1,5 +1,5 @@
 ---
-id: "metamask"
+id: "web-ui-metamask"
 title: "Metamask Configuration"
 slug: "/web-ui/metamask/"
 sidebar_label: "Metamask Configuration"

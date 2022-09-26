@@ -18,10 +18,10 @@ const config = {
         [
             "@docusaurus/plugin-content-docs",
             {
-                id: "getting-started",
-                path: "getting-started",
-                routeBasePath: "/getting-started",
-                sidebarPath: require.resolve("./sidebarsGettingStarted.js"),
+                id: "whitepaper",
+                path: "whitepaper",
+                routeBasePath: "/whitepaper",
+                sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
             },
         ],
         [
@@ -49,9 +49,8 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    path: "whitepaper",
+                    path: "getting-started",
                     routeBasePath: "/",
-                    sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
                 },
                 blog: {
                     showReadingTime: true,
@@ -62,7 +61,6 @@ const config = {
             }),
         ],
     ],
-
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
@@ -78,13 +76,13 @@ const config = {
                         docId: "index",
                         position: "left",
                         label: "Getting Started",
-                        docsPluginId: "getting-started",
                     },
                     {
                         type: "doc",
                         docId: "index",
                         position: "left",
                         label: "Whitepaper",
+                        docsPluginId: "whitepaper",
                     },
                     {
                         type: "doc",

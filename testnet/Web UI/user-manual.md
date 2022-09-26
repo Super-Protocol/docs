@@ -1,5 +1,5 @@
 ---
-id: "user-manual"
+id: "web-ui-user-manual"
 title: "User Manual"
 slug: "/web-ui/user-manual/"
 sidebar_label: "User Manual"
@@ -28,6 +28,14 @@ To connect the wallet click on the **Connect wallet** button in the top right co
 If everything is done correctly you will see your account number as well as token balance.
 
 <p align="center"><img src={require('./images/um-03.png').default}/></p>
+
+If you see an error below, this means that you have connected an incorrect account.
+
+<p align="center"><img src={require('./images/um-16.png').default}/></p>
+
+In this case, open Metamask and disconnect your account. After that, click on the **Connect wallet** button in the UI again and select the account that was sent to you in the invitation letter.
+
+<p align="center"><img src={require('./images/um-17.png').default}/></p>
 
 ## Getting tokens
 
@@ -97,7 +105,7 @@ Fill in all fields on the form:
 
 <p align="center"><img src={require('./images/um-11.png').default}/></p>
 
-After filling the fields click **Create** button. You will be asked several times to sign transactions in Metamask wallet. Please sigh every transaction and wait until the whole process is finished.
+After filling the fields click **Create** button. You will be asked several times to sign transactions in Metamask wallet. Please sigh every transaction and wait until the whole creation process is finished.
 
 <p align="center"><img src={require('./images/um-12.png').default}/></p>
 
