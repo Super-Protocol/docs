@@ -14,4 +14,4 @@ Before you can use Web UI you need to configure Metamask to work with Matic Test
 
 To get familiar with the interface and basic functions please use [this manual](/testnet/web-ui/user-manual).
 
-Link to Web UI: https://rocket-girl.testnet.superprotocol.com/
+Link to Web UI: https://testnet.superprotocol.com/
