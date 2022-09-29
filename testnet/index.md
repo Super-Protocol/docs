@@ -1,6 +1,6 @@
 ---
 id: "index"
-title: "Super Protocol Public Testnet"
+title: "Public Testnet"
 slug: "/"
 sidebar_position: 0
 ---

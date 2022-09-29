@@ -42,6 +42,15 @@ const config = {
                 sidebarPath: require.resolve("./sidebarsTestnet.js"),
             },
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "getting-started",
+                path: "getting-started",
+                routeBasePath: "/getting-started",
+                sidebarPath: require.resolve("./sidebarsGettingStarted.js"),
+            },
+        ],
     ],
     presets: [
         [
