@@ -25,4 +25,6 @@ There are currently two ways to interact with the protocol:
 
 ## Support
 
-If you have any questions or feedback, please feel free to use Testnet channel on our [Discord server](https://discord.com/invite/superprotocol).
+Before contacting support, please make sure that your problem is not already covered in [known issues and limitations](/testnet/known-issues).
+
+If you have any questions or feedback, feel free to use Testnet channel on our [Discord server](https://discord.com/invite/superprotocol).
