@@ -2,8 +2,6 @@
 id: "cli-files"
 title: "Files"
 slug: "/cli/commands/files"
-sidebar_label: "files"
-sidebar_position: 6
 ---
 
 Manage files in third-party storages

@@ -2,11 +2,9 @@
 id: "storage-provider"
 title: "Storage Provider"
 slug: "/storage-provider"
-sidebar_label: "Storage Provider"
 sidebar_position: 12
-custom_edit_url: null
 ---
-# Storage provider
+
 To store value segments and any other results, the provider can use decentralized repositories, which are enumerated on the order creation list alongside their own solutions. The outputs are encrypted with the order result key within the TEE area.
 
 One possible solution is to use [Arweave](https://www.arweave.org/whitepaper.pdf) distributed storage with Proof of Access technology.

@@ -2,12 +2,11 @@
 id: "architecture"
 title: "Architecture"
 slug: "/architecture"
-sidebar_label: "Architecture"
 sidebar_position: 8
-custom_edit_url: null
 ---
-# Architecture
+
 ## Overview
+
 **Super Protocol** consists of three layers: 
 
 <p align="center">
@@ -39,9 +38,13 @@ custom_edit_url: null
    4. **Solution Provider.** Solution Provider is responsible for various solutions such as scripts, applications, and containers.
 
       The Execution Controller receives the request for a solution and returns the URL of the encrypted solution along with the key to then decrypt it into the blockchain. The key is encrypted with the trusted loader key.
+
 ## Protocol Speed
+
 Polygon has been chosen as the main network. Polygon supports the execution of up to [7,200 transactions per second](https://twitter.com/0xpolygon/status/1283467641076584448?lang=en). A minimum of 4 transactions is required to process one request. Thus, Super Protocol allows you to process up to 1,800 orders per second. There are no limitations on the data volume provided as the protocol allows the use of any file storage.
+
 ## Security
+
 Since confidentiality is the core feature of Super Protocol, data is secured at all stages of processing.
 
 The protocol also allows the content of the solutions to be hidden, if it is considered a trade secret. In this case, the Solution Provider can provide an encrypted solution.

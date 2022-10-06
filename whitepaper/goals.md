@@ -2,12 +2,10 @@
 id: "goals"
 title: "Goals"
 slug: "/goals"
-sidebar_label: "Goals"
 sidebar_position: 3
-custom_edit_url: null
 ---
 
-# Goals
+
 Effectively, data could be in three states: at rest, in transit and in use. Traditionally, a variety of encryption methods have been used to protect data in storage or during transmission. However, data remained vulnerable during processing. Confidential computing resorts to hardware protection during processing to solve this problem.
 
 <p align="center">

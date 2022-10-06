@@ -2,21 +2,21 @@
 id: "tee-confirmation-protocol"
 title: "TEE Confirmation Protocol"
 slug: "/tee-confirmation-protocol"
-sidebar_label: "TEE Confirmation Protocol"
 sidebar_position: 10
-custom_edit_url: null
 ---
-# TEE Confirmation Protocol
+
 ## Model overview
+
 Each TEE device receives a fixed reward for being on the network. However, the following issues have to be solved:
 
 1. You need to make sure that the TEE device really possesses all the compulsory features and can support confidential calculations.
-1. You need to get the appropriate parameters for the TEE device in order to use it properly and pay the reward.
-1. The TEE device has to be connected to the network and be ready to process the requests.
-1. If there are any network intruders that pose as TEE devices, the system has to be able to identify and remove them with minimal inconvenience to honest devices.
-1. The protocol has to operate within the smart contract system, which also imposes certain limitations.
+2. You need to get the appropriate parameters for the TEE device in order to use it properly and pay the reward.
+3. The TEE device has to be connected to the network and be ready to process the requests.
+4. If there are any network intruders that pose as TEE devices, the system has to be able to identify and remove them with minimal inconvenience to honest devices.
+5. The protocol has to operate within the smart contract system, which also imposes certain limitations.
 
 ## TEE Confirmation Block
+
 The TEE Confirmation Protocol is designed as a solution to all the abovementioned issues. Its main component is the TEE Confirmation Block (TCB), which is obtained as a result of the **Confirmation Application** execution within the TEE:
 
 <p align="center">
@@ -27,15 +27,15 @@ The TCB consists of:
 
 1. TEE Consensus Block that contains:
    1. Unique Device ID
-   1. Equipment Benchmark Results
-   1. Valid (confirmed) TCB IDs
-   1. Invalid (declined) TCB IDs
+   2. Equipment Benchmark Results
+   3. Valid (confirmed) TCB IDs
+   4. Invalid (declined) TCB IDs
 
-1. TEE device Report that includes such key points as:
+2. TEE device Report that includes such key points as:
    1. Running Confirmation Application Hash
-   1. TEE Consensus Block Hash
+   2. TEE Consensus Block Hash
 
-1. TEE Device Signature and certificate chains for signature verification
+3. TEE Device Signature and certificate chains for signature verification
 
 Created TCBs are written into the blockchain, but this is not a valid condition for their trustworthiness. In order to verify the TCB, you have to verify the report signature. This verification is carried out by the TEE devices during the Confirmation Application execution. The verification results for the evaluated TCBs are stored in a newly generated TCB of the verifying device. Thus, the continuous verification network is created.
 
@@ -46,7 +46,9 @@ In fact, the verification can be applied to the latest blocks as well as to othe
 </p>
 
 The technical limitations of the blockchain do not allow all the devices to verify all the blocks, which is why the Consensus Algorithm has been developed.
+
 ## Consensus Algorithm
+
 The algorithm is implemented in the smart contract for TEE offers and cannot be applied to external data or carry out complex checks. That is why the consensus is based only on the received verification results performed by the TEE devices in TCBs.
 
 To support the algorithm execution, the smart contract for TEE offers stores the following tables:
@@ -90,7 +92,9 @@ The Consensus Algorithm consists of the following steps:
    ![](images/tee-confirmation-protocol-formula-09.svg) is the number of devices active within the last 24 hours.
 
    The reward is transferred to the security deposit of the device as a deferred payment. The staking rate is also calculated based on the reward.
+
 ## TCBs Generation
+
 To receive a TCB, the Execution Controller of the TEE device queries (1) the blockchain network for other TCB blocks to verify and report on them. Among these blocks, the block belonging to the device is not submitted. Then the Controller runs the Confirmation Application (2) on the device, which performs the following actions:
 
 - Checks hardware
@@ -105,6 +109,7 @@ To receive a TCB, the Execution Controller of the TEE device queries (1) the blo
 After the application execution, the Execution Controller receives the result (4) and stores it in the blockchain (5) as the TEE Provider binds it to the TEE device. The device can only generate new TCBs once every 24 hours. If it attempts to access the smart contract earlier, it will not be able to receive blocks for verification or save a new block.
 
 All the blocks submitted for verification are bound to the device and checked by the smart contract when receiving a new block.
+
 ## Keeping track of TCBs
 
 <p align="center">
@@ -132,6 +137,7 @@ In fact, all the blocks that the malicious block has given positive marks to wil
 </p>
 
 ## Reward Payment
+
 The device receives the reward proportional to its share of the total power of the devices active within the last 24 hours:
 
 <p align="center">
@@ -145,12 +151,14 @@ The corresponding record is added to the Blocks and Rewards Registry:
 </p>
 
 Each reward is transferred to the security deposit as a deferred payment. The staking rate is also calculated based on the reward.
+
 ## Possible attacks
+
 The following attacks on the consensus protocol are possible:
 
 1. Spam attack
-1. False computing power attack
-1. 51% attack
+2. False computing power attack
+3. 51% attack
 
 Let us consider each attack and how the consensus handles them.
 

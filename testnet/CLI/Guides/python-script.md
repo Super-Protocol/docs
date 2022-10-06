@@ -15,7 +15,9 @@ The following systems are supported:
 - macOS x64
 - Windows (WSL only) x64
 
-**Note!** ARM-based CPUs such as Apple M1 are not supported.
+:::note
+ARM-based CPUs such as Apple M1 are not supported.
+:::
 
 Additional required software:
 - Docker
@@ -104,7 +106,9 @@ if __name__ == '__main__':
 
 ```
 
-**Note.** File `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file.
+:::note
+File `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file.
+:::
 
 The script above requires `arial.ttf` font file in `run` directory. You can download it [here](https://www.freefontspro.com/14454/arial.ttf).
 
@@ -154,7 +158,9 @@ First of all, run the following command in the directory where you placed the CL
 spctl solutions generate-key signing-key
 ```
 
-**Note.** You don't need to generate new key for every solution, you can reuse the existing one.
+:::note
+You don't need to generate new key for every solution, you can reuse the existing one.
+:::
 
 Pack your solution with the following command:
 
@@ -195,7 +201,7 @@ spctl workflows create --tee 1 --storage 13 --solution 3 \
 --solution solution.json --data input-1.json --data input-2.json
 ```
 
-**Note.** The command above creates 2 orders:
+The command above creates 2 orders:
 - TEE: a parent order for computational resources (TEE offer with ID=1). Only this particular node can decrypt your solution and data, and only in a trusted execution environment, so even the owner of that node cannot access and modify the code, data, or results.
 - Solution: a sub-order for the base image (Solution offer with ID=3).
 

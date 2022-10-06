@@ -2,9 +2,7 @@
 id: "abstract"
 title: "Abstract"
 slug: "/abstract"
-sidebar_label: "Abstract"
 sidebar_position: 2
-custom_edit_url: null
 ---
 # Abstract
 The launch of [Bitcoin](https://bitcoin.org/en/) in 2009 introduced the world to two key technologies that would later form the basis  of [Web3](https://ethereum.org/en/developers/docs/web2-vs-web3/#top) concept:  decentralized digital currency and blockchain with a distributed consensus mechanism. The subsequent development of these technologies—and first and foremost, of the [Ethereum](https://ethereum.org/en/) network, which supported [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) [smart contracts](https://en.wikipedia.org/wiki/Smart_contract)—gave rise to a multitude of brand new distributed systems and applications, which attracted millions of users and billions of dollars. Among them, there are such areas as [DeFi](https://en.wikipedia.org/wiki/Decentralized_finance), [NFT](https://en.wikipedia.org/wiki/Non-fungible_token), and [GameFi](https://academy.binance.com/en/articles/what-is-gamefi-and-how-does-it-work). Decentralized solutions proved to be highly popular—to the point where the existing capacity appeared to be unable to satisfy the rapidly growing demand. As a result, [transaction costs on the Ethereum network rose to the level of dozens and even hundreds of dollars](https://etherscan.io/chart/avg-txfee-usd).

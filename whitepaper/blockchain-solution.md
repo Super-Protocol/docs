@@ -2,11 +2,9 @@
 id: "blockchain-solution"
 title: "Blockchain Solution"
 slug: "/blockchain-solution"
-sidebar_label: "Blockchain Solution"
 sidebar_position: 14
-custom_edit_url: null
 ---
-# Blockchain solution
+
 ## Overview
 
 <p align="center">
@@ -23,8 +21,10 @@ To ensure order processing, the blockchain environment provides an infrastructur
 - **TEE Offers**
 - **Orders**
 
-Now let’s take a look at each smart contract in detail. 
+Now let’s take a look at each smart contract in detail.
+
 ## Basic smart contract for the Super Protocol Config system
+
 It contains information on the other smart contracts in the system. This contract is used to update current information about the system and the system settings. It also contains a link to its later version, if it ever existed. The contract contains several system configurations:
 
 **General smart contract configuration:**
@@ -68,7 +68,9 @@ It contains information on the other smart contracts in the system. This contrac
 |getPenaltiesCount(address provider) public returns (uint64)|any|SDK|
 
 The smart contract makes it possible to set configurations.
+
 ## Staking smart contract
+
 This smart contract allows tokens to be held for profit.
 
 **Held tokens record structure:**
@@ -125,7 +127,9 @@ Smart contract methods allow the registration of a provider and the modification
 To be able to register, the provider accesses the provider registry smart contract and invokes the registration method. The provider has to pay the security deposit in the first place. If the security deposit decreases below the required level during the process (in cases where penalties have been applied and no replenishment has been made), all of the provider's offers cannot be used to create and fulfill the orders.
 
 The *returnSecurityDeposit* method allows the withdrawal of the entire remaining security deposit, provided that all offers (regular and TEE) of the data provider are disabled.
+
 ## TEE offers
+
 This smart contract contains offers for the use of the TEE resource. In the Super Protocol system, the price for using TEE depends on the number of hours rented under the offer. One offer corresponds to one TEE device.
 
 
@@ -233,6 +237,7 @@ In order to  add a new offer, the provider accesses the offer smart contract and
 Also, the offer may simply involve the provision of a service, such as a solution. In this case, the property field contains the characteristics of the service provided, while the *resultUrl* field contains the basic *Url* of the solution. A unique identifier can be used as an argument. When the *resultUrl* is set, the smart contract immediately executes the order.
 
 ### Offer dependencies
+
 Let us consider an example of offer dependencies based on a system of restrictions, starting from the basic data offer:
 
 <p align="center">
@@ -259,6 +264,7 @@ In terms of offer groups, only the following restrictions are possible:
 2. PROCESSING (TEE) and OUTPUT offers cannot impose restrictions
 
 ## Orders
+
 In order to execute a provider offer, an order should be created by using the appropriate smart contract. The order creator must assign offers taking into account all restrictions and requirements the order possesses and pay a security deposit, which will be held for the duration of the order execution. The deposit amount is equal to the sum of deposits specified in all used offers. However, it should be noted that the final deposit cannot be less than the minimum deposit for the order set out by the protocol - *orderMinimumDeposit*.
 
 The total deposit to be held is calculated according to the formula below:
@@ -353,6 +359,7 @@ When creating a sub-order, the following procedure must be considered:
 5. When creating any order or sub-order, *args.selectedOffers* is specified if the offer contains a requirement regarding different types of offers.
 
 ### Order state transition diagram
+
 During processing of the order, its status is subject to change according to the diagram below. Also, to indicate the lack of a deposit, the *AwaitingPayment* flag is used.
 
 <p align="center">
@@ -360,6 +367,7 @@ During processing of the order, its status is subject to change according to the
 </p>
 
 ### Workflow
+
 When creating a complex order with dependencies, the customer creates the main order (normally for TEE) and sub-orders. The customer sets up all the required offers in *args.selectedOffers*. If the main order is created for TEE, the customer also configures all INPUT offers in the *args.inputOffers* field:
 
 <p align="center">
@@ -369,6 +377,7 @@ When creating a complex order with dependencies, the customer creates the main o
 Let us consider different scenarios for using the ordering system.
 
 ### Hardware rental
+
 For hardware rentals, an order is created for the TEE offer and *args.selectedOffers* specifies the offer for OUTPUT, where the results will be uploaded to if needed. The number of rental minutes is also specified, and the customer pays for the entire period of time.
 
 <p align="center">
@@ -387,6 +396,7 @@ Rental can be renewed as follows:
 2. The customer pays the missing amount using the *refillOrder* method
 
 ### Algorithm for choosing a suitable TEE
+
 If you need to create an order for a TEE offer, and there are several candidates (or the offer is not specified at all), you have to select one manually. To do this, the SDK uses an algorithm to select the suitable TEE:
 
 1. Firstly, all offers matching the TEE parameters are searched for. To do this, all properties of the INPUT solutions are analyzed, and their values are added together. These values must be less than those in the TEE offer:
@@ -406,6 +416,7 @@ If you need to create an order for a TEE offer, and there are several candidates
 3. Thirdly, if there is more than one candidate, the selection is carried out randomly, so the TEE order is created, and the TEE is rented out.
 
 ### Container infrastructure deployment
+
 It is often necessary to deploy multiple containers on a single TEE device so that they can communicate with one another without the need for external access.
 
 For example, we may want to deploy a DBMS container, a computing application providing a service to merge processed results, or a web server.
@@ -413,7 +424,9 @@ For example, we may want to deploy a DBMS container, a computing application pro
 For this purpose, an order is created at the SDK level for the desired device with the total number of slots required in the "suspended" status. From there sub-orders are created for the desired containers. The order status is then changed to "blocked" until all sub-orders are completed.
 
 ## Example of Big Data Processing using the protocol
+
 ### Timeline
+
 For example, let us take a look at the Big Data Processing order cycle. Here is the diagram of the sequence of activities:
 
 <p align="center">
@@ -444,7 +457,9 @@ The TEE provider receives and executes the order by performing the following ste
 1. The loader completes the TEE order.
 
 The TEE provider then publishes the result and completes the order, and also the held tokens are distributed to the recipient.
+
 ### Entity interaction in the Big Data Processing example
+
 A complete structure of the big data processing order may look as follows:
 
 <p align="center">
@@ -524,6 +539,7 @@ The provider also decrypts the arguments using their private key, processes the 
 ![](images/blockchain-solution-formula-13.svg) 
 
 ## Super Protocol roles
+
 The table below shows the permissions to Super Protocol smart contracts depending on the user role:
 
 |**Role**|**ERC-20**|**Staking**|**Provider Registry**|**TEE Offers**|**Value Offers**|**Orders**|
@@ -535,9 +551,11 @@ The table below shows the permissions to Super Protocol smart contracts dependin
 |Consumer||||||Manages order, manages payment deposit|
 
 ## Interaction between blockchains
+
 Super Protocol supports the use of multiple blockchain networks simultaneously. One of the networks acts as the root chain with the smart contract processing system, while the others are child chains that pass both execution of transactions (through the messaging mechanism) and smart contract tokens to the root network and also in turn receive the results back.
 
 The user can work with either network through the same smart contract interface.
+
 ### Sidechain solution
 
 <p align="center">
@@ -547,6 +565,7 @@ The user can work with either network through the same smart contract interface.
 If Sidechain solutions are used, the entire logic is represented as an overlay on top of the blockchains. In order to pay for services in the Super Protocol system, the consumer uses tokens on the root network and wrapped tokens provided by Sidechain gateways on the child network.
 
 In the case of Ethereum and Polygon networks, the [State Transfer](https://docs.polygon.technology/docs/develop/l1-l2-communication/state-transfer) mechanism is used for RPC.
+
 ### Parachain
 
 <p align="center">

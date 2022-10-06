@@ -2,9 +2,7 @@
 id: "index"
 title: "Whitepaper Status and Updates"
 slug: "/"
-sidebar_label: "Whitepaper Status and Updates"
 sidebar_position: 1
-custom_edit_url: null
 ---
 
 **Important!** This Whitepaper is a work in progress and will be regularly updated.  Go ahead and join our social networks to stay tuned and never miss out on our updates. All links are available on [our website](https://superprotocol.com/).

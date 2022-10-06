@@ -2,13 +2,13 @@
 id: "tokenomics"
 title: "Tokenomics"
 slug: "/tokenomics"
-sidebar_label: "Tokenomics"
 sidebar_position: 7
-custom_edit_url: null
 ---
-# Tokenomics
+
 ## Initial supply breakdown
+
 ### Token Generation Event (TGE)
+
 Total supply (fixed): 1 billion
 
 Super Protocol lacks the ability to mint new tokens, which can negatively affect the token's market price in the long term, as there have been many examples in the market.
@@ -20,7 +20,6 @@ The structure of the initial token distribution is shown in the graph below.
 </p>
 
 In order to minimize the negative impact of token inflation, as well as the possibilities for price manipulation, most of the tokens will be distributed within a 3 year timeframe according to the table below.
-
 
 |**Category**|**Share**|**Lock-up Period**|**Distribution Schedule**|
 | :- | :- | :- | :- |
@@ -35,6 +34,7 @@ In order to minimize the negative impact of token inflation, as well as the poss
 |DAO|20.0%||1% after the TGE, the rest linearly over 36 months|
 
 ### Public token sale
+
 In terms of raising blockchain investments, projects have come a long way from independently conducting public token sales (ICO), then placing the project on centralized exchanges (IEO), all the way to using decentralized exchange platforms (IDO) for these purposes.
 
 <p align="center">
@@ -58,7 +58,9 @@ The key goals of conducting a public sale are as follows:
 - filling the treasury with stablecoins, which will be used to form liquidity pools on DEXs and for other protocol development objectives
 
 In order to ensure fair pricing and reward early adopters, all unsold tokens during the public sale will enter the secondary token distribution program. Under this program, all buyers who have purchased the token above the closing sales price will be compensated, whilst early buyers of the token will also be rewarded.
+
 ### Protocol rewards
+
 Super Protocol has various rewards that will be distributed over a 3 year period to develop the protocol and cover running costs until the project reaches self-sustainability.
 
 
@@ -68,7 +70,9 @@ Super Protocol has various rewards that will be distributed over a 3 year period
 |<p>Demand</p><p>Stimulus</p>|5%|Rewards, which are intended to stimulate demand from consumers of products and services offered on the protocol|
 |<p>Staking</p><p>Rewards</p>|7.5%|Rewards, which are intended to ensure an acceptable level of profitability for the stakers until the project has reached self-sustainability.|
 |<p>Liquidity</p><p>Rewards</p>|10%|Rewards, which are intended for liquidity providers under liquidity farming programs on key DEXs.|
+
 ### DAO (Treasury)
+
 In the early stages, the DAO Treasury Multisig will have access to liquidity. Multisig owners will be able to run small and urgent project support programs. Later, when the project community gains traction, a full-fledged DAO will be created and the management of the treasury will be handed over to it.
 
 The treasury funds will be allocated for the following purposes:
@@ -78,7 +82,9 @@ The treasury funds will be allocated for the following purposes:
 - Bounty programs
 - Hackathons
 - Marketing & PR, and more
+
 ### Team and Investors
+
 Super Protocol is a high-tech infrastructural Web3 project that requires significant investment, in-depth market knowledge and unique expertise in cutting-edge technology, as well as a highly professional team with experience from a variety of fields.
 
 The Super Protocol project builds on the experience and knowledge that the founders and team have been accumulating since 2015 in the field of distributed confidential computing and private blockchains. The unique expertise and use of cutting-edge technology has created an innovative platform for sensitive cloud computing that has the potential to become an integral part of the future Web3 infrastructure.
@@ -88,6 +94,7 @@ For the first three years, the project will be financed by funds raised through 
 The venture capital funds that invest in Super Protocol are so-called smart money, which do not invest in the project for super-profits, but are full-fledged partners. This partnership creates synergies by drawing on the unique external experience and expertise gained through participation in a large number of Web3 projects. The funds also provide opportunities for multiplier effects from joint collaborations with projects already in their portfolio. Thus, all Super Protocol participants will be able to benefit from such an investment, which will be reflected in a subsequent increase in the token's price.
 
 Investors who have invested in a pre-seed round will receive 5% of the total token supply. Founders, advisers and project team will be allocated 20% of the tokens. Another 15% of tokens are set aside to raise additional funds during private rounds.
+
 ## Token flow and distribution schedule
 
 <p align="center">

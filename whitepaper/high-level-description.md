@@ -2,12 +2,8 @@
 id: "high-level-description"
 title: "High-Level Description of the Protocol"
 slug: "/high-level-description"
-sidebar_label: "High-Level Description of the Protocol"
 sidebar_position: 5
-custom_edit_url: null
 ---
-
-# High-Level Description of the Protocol
 
 <p align="center">
   <img src={require('./images/high-level-01.png').default} />

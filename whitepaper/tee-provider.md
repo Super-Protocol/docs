@@ -2,13 +2,13 @@
 id: "TEE Provider"
 title: "TEE Provider"
 slug: "/tee-provider"
-sidebar_label: "TEE Provider"
 sidebar_position: 9
-custom_edit_url: null
 ---
-# TEE provider
+
 This layer is where the secure solution execution takes place i.e. the processing of the provided value to obtain the result.
+
 ## Trusted loader mechanism
+
 In order to run applications within TEE and transfer data to it, a trusted loader mechanism has been developed. For this purpose, each TEE device generates a loader block by running it in block generation mode:
 
 <p align="center">
@@ -22,7 +22,9 @@ TEE supports the generation of unique keys tied to both the hash of executable c
 The public key—*PubKey*—is written to the TEE Loader Block and signed with the TEE key. The resulting block is written to the blockchain and linked to the TEE device.
 
 Providers can encrypt their data using this key and be sure that it can be decrypted only by the selected loader.
+
 ## Passing parameters to the loader
+
 Along with the order, the TEE execution controller receives encrypted input data parameters (TII) from the sub-order results. They are used to decrypt the solution, data, etc. Only the loader can decrypt these parameters, decode the solutions and data, and pass additional arguments to the solutions. On top of that, each encrypted parameter contains the hash of the solution that is allowed to output the parameter:
 
 <p align="center">
@@ -30,6 +32,7 @@ Along with the order, the TEE execution controller receives encrypted input data
 </p>
 
 ## Confidential execution
+
 In order to execute the solution in the TEE area, the TEE provider's execution controller loads the encrypted solution and starts a trusted solution loader in the TEE area with the task of executing the solution using the TII parameters encrypted with the loader's public key.
 
 The loader then decrypts and executes the solution by conducting local attestation of the running solution and giving it the correct keys over the attested channel:
@@ -51,7 +54,9 @@ The following procedure is used to assemble solutions and data:
 </p>
 
 The output of the solution is encrypted and stored in the remote distributed storage.
+
 ## Cluster execution
+
 You can also use a whole TEE cluster for parallelization and additional protection. In this case, you need to deploy a TEE coordinator to attest and manage the machine cluster. The coordinator distributes the execution of the solution to the TEE machines:
 
 <p align="center">
@@ -59,12 +64,15 @@ You can also use a whole TEE cluster for parallelization and additional protecti
 </p>
 
 ## Confidential aggregation
+
 Data providers can coordinate with each other and execute the same solution on their databases at the same time and then aggregate the results. In this case, the data must not fall outside the confidential TEE area. This mechanism requires mutual agreement between the parties. One of the providers is designated as the master who takes orders and so the processing is done in two steps:
 
 1. First, the solutions are executed on each provider's piece of data and the results are stored in an encrypted form with the providers' keys
 
-1. The master provider runs a program to aggregate the results and gives it the encrypted results along with the keys encrypted for the trusted loader
+2. The master provider runs a program to aggregate the results and gives it the encrypted results along with the keys encrypted for the trusted loader
+
 ## Supported TEEs (first-priority)
+
 The team has significant experience using Intel SGX for confidential processing of big data. Their expertise will help simplify the migration of their existing solution to Super Protocol and the creation of the necessary infrastructure.
 
 The currently available solutions are described below. Note that only Intel SGX and AMD SEV solutions are available for use. Despite that, Super Protocol includes support for other solutions, including GPU:
@@ -120,10 +128,13 @@ The currently available solutions are described below. Note that only Intel SGX 
 </p>
 
 ## Computation types supported by our TEE
+
 TEE implements so-called attested computations and programs. They require that the user's execution expectations are met and that the code is actually executed in isolation on a given remote machine.
 
 If the attested program stores any information internally at runtime, it must guarantee [minimum leakage](https://eprint.iacr.org/2016/014), which means that the input/output of the attested program must not leak any information other than the unavoidable leakage predicted by a fair code execution.
+
 ## Difference between SP and ZK/MPC
+
 Unlike ZK-SNARKs and MPCs, Super Protocol uses hardware protection rather than algorithmic protection.
 
 When using the standard MPC-based algorithmic protection, the data must be encrypted before it can be used and, resulting in the data also being returned encrypted:
@@ -157,9 +168,11 @@ To summarize, let's have a look at the comparison table:
 |**TEE Super Protocol solution**|**Yes**|**Yes**|**Yes**|**Yes**|**Yes**|
 
 ## Speed and performance
+
 Storing unencrypted code and data at the processor level allows TEE solutions and applications to be executed much faster compared to the scenarios where complex cryptography is used.
 
 The code at the TEE level executes almost [as fast as normal code](https://medium.com/@danny_harnik/impressions-of-intel-sgx-performance-22442093595a).
+
 ## Fault tolerance
 
 <p align="center">
@@ -173,13 +186,17 @@ The main Super Protocol blockchain is Polygon. The Polygon blockchain network us
 As a distributed storage, it is proposed to use systems based on the same principle as PBFT. An example of such a system could be Filecoin. Also, in order to add extra fault tolerance for important data, backup mechanisms can be applied.
 
 Ensuring client fault tolerance is an important task for developers who connect to the network via the SDK. The SDK itself supports asynchronous threaded access to resources for this purpose.
+
 ## Security
+
 TEE areas provide the opportunity to validate code and data contained inside in order to determine their integrity as well as limit potential attacks. Ideally, the attacker can only control the consumption of resources.
 
 However, implementing TEE to protect multi-party computations is not just a matter of code migration. The trust model associated with TEE differs significantly from the cryptographic approaches in MPC. Using TEE requires making additional security assumptions and a modified trusted computing base (TCB), whereas the security assumptions in cryptography are often much simpler. The security properties of each TEE must be carefully examined to determine whether they meet the computational requirements or not. Besides that, a great deal of attention must be paid to avoid accidental leakage of secrets through side channels and when exchanging data between trusted and untrusted components.
 
 For this purpose, Super Protocol provides a core feature: a solution loader that validates solutions before they are loaded and executed. All data outside the TEE must be encrypted in both transmission and use states.
+
 ### Known TEE issues and their fixes
+
 Although hardware technology is attractive, it should not be used carelessly in applications that guarantee confidentiality of computing. Premature use of these technologies can lead to unintentional exposure.
 
 For example, in a cuckoo attack, the malware can redirect messages intended for the local Trusted Platform Module (TPM) to a different computer controlled by the attacker. The attacker can then stealthily take control of all communications between the victim and the local TPM. To prevent this, a secure channel to the local TPM must be set up.
@@ -193,12 +210,14 @@ There have also been several attacks on AMD SEV. The [SEVered](https://arxiv.org
 There are also attacks specific to Intel TXT and ARM TrustZone. Each technology has its own strengths and weaknesses, so it is important to choose the right technology (or technologies) for each specific threat model, computing environment, or application.
 
 To summarize, the main disadvantage of trusted computing primitives is the possible leakage in data exchange between trusted and untrusted components. The proper use of hardware technologies will require a careful assessment of whether the chosen primitive meets all the required security features of a particular solution.
+
 ### Hiding data sources
+
 Due to the possibility of taking TEE outside the perimeter of the value provider, there is a mechanism for proxying queries. If we consider possible attacks on the TEE boundaries, the following types can be distinguished:
 
 1. **Software attacks.** This type of attack is ruled out because TEE guarantees processor-level protection.
-1. **Hardware attacks.** Hardware vulnerabilities are described in detail in the section dedicated to known attacks. The protocol supports the ability to check the TEE version to determine if it is secure enough to perform the desired execution.
-1. **Transmission channel attacks.** The channel between the TEE and the value provider is cryptographically protected, however the attacker can obtain secondary information such as the source IP address and conduct further analysis. In this regard, super protocol has the capability of proxy data transmission:
+2. **Hardware attacks.** Hardware vulnerabilities are described in detail in the section dedicated to known attacks. The protocol supports the ability to check the TEE version to determine if it is secure enough to perform the desired execution.
+3. **Transmission channel attacks.** The channel between the TEE and the value provider is cryptographically protected, however the attacker can obtain secondary information such as the source IP address and conduct further analysis. In this regard, super protocol has the capability of proxy data transmission:
 
 <p align="center">
   <img src={require('./images/tee-provider-15.png').default} />
