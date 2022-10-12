@@ -42,6 +42,17 @@ const config = {
                 sidebarPath: require.resolve("./sidebarsTestnet.js"),
             },
         ],
+        [
+            "@docusaurus/plugin-client-redirects",
+            {
+                redirects: [
+                    {
+                        from: '/getting-started',
+                        to: '/',
+                    }
+                ]
+            }
+        ],
     ],
     presets: [
         [
