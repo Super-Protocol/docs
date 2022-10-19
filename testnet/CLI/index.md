@@ -6,7 +6,7 @@ slug: "/cli/"
 
 ## Introduction
 
-Super Protocol CLI is a powerful tool for developers. It supports all functions that are currently available in the protocol.
+Super Protocol CLI is a powerful tool for developers. It supports all the functionality currently available in the protocol.
 
 ## Installation
 

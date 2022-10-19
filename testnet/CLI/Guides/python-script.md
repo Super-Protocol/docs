@@ -1,12 +1,12 @@
 ---
 id: "cli-guides-python-script"
-title: "Execution of a Python Script"
+title: "Execution of Python Script"
 slug: "/cli/guides/python-script"
 ---
 
 ## Pre-requisites
 
-Before you can use this guide, you need to receive an invitation letter with personal credentials to access the Super Protocol Testnet. If you don't have it please use [Getting Started guide](/testnet).
+Before you can use this guide, you need to receive an invitation letter with personal credentials to access the Super Protocol Testnet. If you don't have it, please refer to [Getting Started guide](/testnet).
 
 In order to deploy your own solutions you need [Command-line Interface (CLI)](/testnet/cli).
 
@@ -23,9 +23,9 @@ Additional required software:
 - Docker
 - OpenSSL
 
-## Downloading the Python base image
+## Downloading Python base image
 
-Your solution will use the base Python image that is already available on Super Protocol. Therefore, in order to test it locally, as well as prepare the solution for deployment, you need to download the base image and upload it to Docker.
+Your solution will be using base Python image that is already available on Super Protocol. Therefore, in order to test it locally, as well as prepare the solution for deployment, you need to download the base image and upload it to Docker.
 
 Use the following CLI command to download the base image and save it to the current directory:
 
@@ -107,7 +107,7 @@ if __name__ == '__main__':
 ```
 
 :::note
-File `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file.
+File `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place.
 :::
 
 The script above requires `arial.ttf` font file in `run` directory. You can download it [here](https://www.freefontspro.com/14454/arial.ttf).
@@ -124,21 +124,21 @@ Run the following command in the solution root directory to download the require
 pip3 install -r requirements.txt -t ./run/pypi/lib/python3.8/site-packages
 ```
 
-**Check yourself!** If done correctly, there should the content of `run` directory should look as follows:
+**Double-check yourself!** If done correctly, the content of `run` directory should look as follows:
 - `pypi`: Python libraries
 - `arial.ttf`: font file
 - `entrypoint.py`: Python script
 
 ## Test the solution
 
-In order to test the solution you need some data as an input. Create subdirectory `input-0001` in `inputs` directory. In this new subdirectory create `text-file-1.txt` file with the following text:
+In order to test the solution, you need some data as an input. Create subdirectory `input-0001` in `inputs` directory. In this new subdirectory create `text-file-1.txt` file with the following text:
 ```
 Super Protocol is awesome!
 ```
 
-Create additional subdirectory `input-0001` in `inputs` directory. Place `text-file-2.txt` file in this new subdirectory with any text you like.
+Now in the same way place `text-file-2.txt` file in this new subdirectory with any text you like.
 
-Run the following command in the solution root directory run the solution in a Docker container:
+Run the following command in the solution root directory to launch the solution inside a Docker container:
 
 ```
 docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output:/sp/output \
@@ -150,7 +150,7 @@ If done correctly, `output` directory should have two subdirectories `input-0001
 
 ## Prepare the solution
 
-Before running your solution on Super Protocol you need to pack, encrypt and upload it to a storage.
+Before running your own solution on Super Protocol, you need to pack, encrypt and upload it to a storage.
 
 First of all, run the following command in the directory where you placed the CLI file to generate the signing key:
 
@@ -159,10 +159,10 @@ spctl solutions generate-key signing-key
 ```
 
 :::note
-You don't need to generate new key for every solution, you can reuse the existing one.
+You don't need to generate a new key for every solution, you can just reuse the existing one.
 :::
 
-Pack your solution with the following command:
+Next up, pack your solution with the following command:
 
 ```
 spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
@@ -170,7 +170,7 @@ spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifes
 <your solution root directory>/run signing-key
 ```
 
-Upload your solution to the storage:
+Now upload your solution to the storage:
 ```
 spctl files upload solution.tar.gz --output solution.json --filename solution.tar.gz
 ```
@@ -195,28 +195,28 @@ spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.g
 
 ## Run the solution on Super Protocol
 
-In order to run prepared solution with the data on Super Protocol, run the following command:
+In order to run your prepared solution with the data on Super Protocol, run the following command:
 ```
 spctl workflows create --tee 1 --storage 13 --solution 3 \
 --solution solution.json --data input-1.json --data input-2.json
 ```
 
 The command above creates 2 orders:
-- TEE: a parent order for computational resources (TEE offer with ID=1). Only this particular node can decrypt your solution and data, and only in a trusted execution environment, so even the owner of that node cannot access and modify the code, data, or results.
+- TEE: a parent order for computational resources (TEE offer with ID=1). Only this particular node can decrypt your solution and data, and only in a trusted execution environment, so even the owner of that node themselves cannot access and modify the code, data, or results.
 - Solution: a sub-order for the base image (Solution offer with ID=3).
 
 Additionally, a sub-order for storage will be created after the calculation is complete to temporarily store the results (Storage offer with ID=13).
 
-At the end of its execution the command will show the ID of the parent TEE order that is created. Use this ID to check status of the order:
+At the end of execution the command will show the ID of the parent TEE order that is created. Use this ID to check the status of the order:
 ```
 spctl orders get <order ID>
 ```
 
-When status is `Done` run the following command to download the results:
+When the status is `Done`, run the following command to download the results:
 ```
 spctl orders download-result <order ID>
 ```
 
-In your CLI directory there should be new file `result.tar.gz`. In the archive, you should find the same result that you got earlier during local testing, as well as a log file. If any errors occur while executing the script, they will be in this log file.
+In your CLI directory there should be a new file called `result.tar.gz`. In the archive you should find the same result that you got earlier during local testing, as well as a log file. If any errors occur during the execution of the script, they will be recorded to this log file.
 
-If the order status is "Error", you can still download its results, but instead of an archive, there will be a `result.txt` file with an error message.
+If the order status is "Error", you can still download the results, but instead of an archive there will be a `result.txt` file with an error message.

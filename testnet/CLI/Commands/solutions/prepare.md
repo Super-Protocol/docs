@@ -5,7 +5,7 @@ slug: "/cli/commands/solutions/prepare"
 sidebar_label: "prepare"
 ---
 
-Prepare a solution for deployment
+Prepare solution for deployment
 
 ## Usage
 
