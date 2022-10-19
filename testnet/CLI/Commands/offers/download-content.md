@@ -5,7 +5,7 @@ slug: "/cli/commands/offers/download-content"
 sidebar_label: "download-content"
 ---
 
-Download the content of an offer with `id` (only for offers that allows this operation)
+Download the content of an offer with `id` (only for offers that allow this operation)
 
 ## Usage
 
