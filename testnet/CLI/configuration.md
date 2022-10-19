@@ -4,9 +4,9 @@ title: "Configuration"
 slug: "/cli/configuration/"
 ---
 
-In order to use Super Protocol CLI tool you need to create `config.json` file in the same directory where you put `spctl` file. You can get the [example](https://github.com/Super-Protocol/ctl/blob/master/config.example.json) of the file from the repository. Alternatively, just use of the CLI commands and the tool will create an empty `config.json` file for you.
+In order to use Super Protocol CLI tool, you need to create `config.json` file in the same directory where you put `spctl` file. You can obtain the [sample](https://github.com/Super-Protocol/ctl/blob/master/config.example.json) of `config.json` file from the repository. Alternatively, you can make use of the CLI commands and the tool will automatically create an empty `config.json` file for you.
 
-Open `config.json` file and fill in the parameters in accordance with instructions below.
+Open `config.json` file and fill in the parameters in accordance with the instructions below.
 
 ## backend
 
@@ -19,17 +19,17 @@ This section contains parameters needed to connect to Super Protocol backend. Th
 
 ## blockchain
 
-This section contains parameters needed to connect to the blockchain. 
+This section contains parameters needed to establish a connection to the blockchain. 
 
 |**Parameter**|**Description**|
 | :- | :- |
-|rpcUrl|`https://wandering-snowy-sun.matic-testnet.quiknode.pro/98e3f8f8fe7ef3c53743ba59fbe6fd6771638d61/`<br/><br/>**Note.** Your can use a different node but Super Protocol team will not be able to provide any support related to it.|
+|rpcUrl|`https://wandering-snowy-sun.matic-testnet.quiknode.pro/98e3f8f8fe7ef3c53743ba59fbe6fd6771638d61/`<br/><br/>**Note.** You can use a different node, but the Super Protocol team will not be able to provide any support associated with it.|
 |smartContractAddress|`0x2Bb91A63BC4956Ae4dAC5dBe9B068da0bD1D035d`|
 |accountPrivateKey|Your personal private key from the Testnet invitation email|
 
 ## storage
 
-Before you can deploy your own solutions or use your own data on Super Protocol you need to encrypt and upload them to some storage that TEE providers could access. See [these guides](/testnet/cli/storages) for information about the supported storages and how to configure them.
+Before you can deploy your own solutions or use your own data on Super Protocol, you need to encrypt and upload them to some storage that TEE providers could have access to. See [these guides](/testnet/cli/storages) for information on the supported storages and how to configure them.
 
 |**Parameter**|**Description**|
 | :- | :- |
@@ -44,7 +44,7 @@ This section contains parameters related to the creation of new orders.
 
 ### resultEncryption
 
-TEE providers always encrypt results of before uploading them to storage. Parameters below are related to this encryption.
+TEE providers always encrypt results before uploading them to the storage. The parameters below are related to this encryption.
 
 |**Parameter**|**Description**|
 | :- | :- |

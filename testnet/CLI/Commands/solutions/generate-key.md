@@ -5,7 +5,7 @@ slug: "/cli/commands/solutions/generate-key"
 sidebar_label: "generate-key"
 ---
 
-Generate a solution signing key
+Generate solution signing key
 
 ## Usage
 

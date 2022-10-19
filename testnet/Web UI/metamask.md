@@ -20,7 +20,7 @@ To be able to use Web UI you need to complete the steps below:
    |Parameter|Value|
    | :- | :- |
    |Network Name|Matic Testnet Mumbai<br/><br/>**Note.** You can change this value if you like.|
-   |New RPC URL|https://wandering-snowy-sun.matic-testnet.quiknode.pro/98e3f8f8fe7ef3c53743ba59fbe6fd6771638d61<br/><br/>**Note.** You can use different node, but we highly recommend to use this one. Some nodes, especially free ones, could have some limitations in terms of maximum number of consecutive transactions and their size. You could encounter some errors because of that.|
+   |New RPC URL|https://wandering-snowy-sun.matic-testnet.quiknode.pro/98e3f8f8fe7ef3c53743ba59fbe6fd6771638d61<br/><br/>**Note.** You can use a different node, but we highly recommend that you use this one. Some nodes, especially free ones, may have some limitations on the maximum number of consecutive transactions and their size. Because of this, you may encounter some errors.|
    |Chain ID|80001|
    |Currency Symbol|MATIC|
    |Block Explorer URL|https://mumbai.polygonscan.com|
@@ -30,6 +30,6 @@ To be able to use Web UI you need to complete the steps below:
    <p align="center"><img src={require('./images/mm-setup-04.png').default}/></p>
    <p align="center"><img src={require('./images/mm-setup-05.png').default}/></p>
 
-5. Make sure that imported account number is the same that was provided in the Testnet invitation letter.
+5. Make sure that the imported account number is the same as the one that was provided in the Testnet invitation letter.
 
    <p align="center"><img src={require('./images/mm-setup-06.png').default}/></p>
