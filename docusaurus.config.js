@@ -3,6 +3,8 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -22,6 +24,8 @@ const config = {
                 path: "whitepaper",
                 routeBasePath: "/whitepaper",
                 sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
+                remarkPlugins: [math],
+                rehypePlugins: [katex],
             },
         ],
         [
@@ -31,6 +35,8 @@ const config = {
                 path: "faq",
                 routeBasePath: "/faq",
                 sidebarPath: require.resolve("./sidebarsFAQ.js"),
+                remarkPlugins: [math],
+                rehypePlugins: [katex],
             },
         ],
         [
@@ -40,6 +46,8 @@ const config = {
                 path: "testnet",
                 routeBasePath: "/testnet",
                 sidebarPath: require.resolve("./sidebarsTestnet.js"),
+                remarkPlugins: [math],
+                rehypePlugins: [katex],
             },
         ],
         [
@@ -62,6 +70,8 @@ const config = {
                 docs: {
                     path: "getting-started",
                     routeBasePath: "/",
+                    remarkPlugins: [math],
+                    rehypePlugins: [katex],
                 },
                 blog: {
                     showReadingTime: true,
@@ -116,6 +126,12 @@ const config = {
                 darkTheme: darkCodeTheme,
             },
         }),
+    stylesheets: [
+        {
+            href: '/katex/katex.min.css',
+            type: 'text/css',
+        },
+    ],
 };
 
 module.exports = config;
