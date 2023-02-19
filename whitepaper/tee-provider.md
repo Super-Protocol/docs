@@ -28,7 +28,7 @@ Providers can encrypt their data using this key and be sure that it can be decry
 Along with the order, the TEE execution controller receives encrypted input data parameters (TII) from the sub-order results. They are used to decrypt the solution, data, etc. Only the loader can decrypt these parameters, decode the solutions and data, and pass additional arguments to the solutions. On top of that, each encrypted parameter contains the hash of the solution that is allowed to output the parameter:
 
 <p align="center">
-  <img src={require('./images/tee-provider-02.png').default} />
+  <img src={require('./images/parameterTransfer.png').default} />
 </p>
 
 ## Confidential execution
@@ -109,7 +109,7 @@ The currently available solutions are described below. Note that only Intel SGX 
 
    ARM released a new Armv9 processor architecture based on the [ARM ](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2)[Confidential Compute Architecture](https://www.anandtech.com/show/16584/arm-announces-armv9-architecture/2) technology. CCA's goal is to get the most out of the current software stack situation, where applications running on a device need to trust the operating system and the hypervisor on which they run. In the traditional security model, more privileged software layers have full access to the lower layers, which becomes a problem if the operating system or hypervisor is compromised.
 
-   CCA introduces a new concept of dynamically created "realms", which can be seen as secure containerized runtime environments that are completely non-transparent to the operating system or hypervisor. The hypervisor will still be used but it will focus on planning and resource allocation. The "realm manager" is used to control the realms.
+   CCA introduces a new concept of dynamically created "realms", which can be seen as secure containerized runtime environments that are completely non-transparent to the operating system or hypervisor. The hypervisor will still be used, but it will focus on planning and resource allocation. The "realm manager" is used to control the realms.
 
 <p align="center">
   <img src={require('./images/tee-provider-10.png').default} />
@@ -223,7 +223,7 @@ Due to the possibility of taking TEE outside the perimeter of the value provider
   <img src={require('./images/tee-provider-15.png').default} />
 </p>
 
-For additional protection, we can split data processing into several TEE areas and set up secure channels in between them, as well as collect the results similar to the the aggregation scheme of multiple value providers:
+For additional protection, we can split data processing into several TEE areas and set up secure channels in between them, as well as collect the results similar to the aggregation scheme of multiple value providers:
 
 <p align="center">
   <img src={require('./images/tee-provider-16.png').default} />
