@@ -227,12 +227,14 @@ To provide hardware, the provider has to define a maximum configuration *hardwar
 It is also necessary to set options for the usage of the equipment through the setup of slots and options, for example it could be as follows:
 
 **slots:**
+
 |**slotId**|**CPU**|**RAM**|**SSD**|**HDD**|**Usage**|
 | :- | :- | :- | :- | :- | :- |
 |1|3|64 Gb|256 Gb|-|0.01 TEE PerHour|
 
 
 **options:**
+
 |**optionId**|**Bandwidth**|**Traffic**|**ExternalPort**|**Usage**|
 | :- | :- | :- | :- | :- |
 |1|10 Mbit|1024 Mb|-|0.01 TEE Fixed|
@@ -244,6 +246,8 @@ For the most optimal use of the equipment, it is recommended to set slots and op
 Each TEE device participates in a validation protocol, in which all its characteristics are updated.
 
 If the TEE device has not sent a TCB within 48 hours, it is removed from the list of active devices.
+
+
 ## Value offers
 ### Overview
 This smart contract contains offers for certain values. It is also possible to create a combined value using the required values of other types. For example, the provider allows its data to be processed by another provider's solution within a secure TEE area and the encrypted result is stored in the distributed storage.
