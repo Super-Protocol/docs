@@ -93,6 +93,7 @@ This smart contract allows tokens to be held for profit.
 |stakeFor(address beneficiary, uint256 amount)|any|blockchain|
 
 Smart contract methods allow tokens to be stored so that they can later be released and rewarded for  staking.
+
 ## Provider Registry
 This smart contract contains information about providers, their properties, as well as some other information. In order to be included in the registry, the provider must pay the security fee, which is immediately transferred to the provider's deposit and further kept there.
 
@@ -128,6 +129,42 @@ To be able to register, the provider accesses the provider registry smart contra
 
 The *returnSecurityDeposit* method allows the withdrawal of the entire remaining security deposit, provided that all offers (regular and TEE) of the data provider are disabled.
 
+## Slots and options
+
+The Slot, Option, and Usage entities are used to solve the problem of resource provisioning and utilization, as well as pricing:
+
+<p align="center">
+  <img src={require('./images/Slots.png').default} />
+</p>
+
+
+### Slot
+A slot is a minimal piece of equipment that is used to allocate capacity for order processing. The slot includes the following:
+
+- **BCPUCores - the number of provided processor cores in the slot. The power of the cores is calculated using the consensus protocol**
+- **RAM - the amount of provided memory in a slot in bytes. The memory speed is calculated using the consensus protocol**
+- **SSD / HDD - provided capacity of SSD and/or HDD in a slot in bytes. Disk speed is calculated by consensus protocol**
+
+### Option
+
+An option is an additional unit of provided equipment and services. The option includes the following:
+
+- **Bandwidth of the network provided in the option in bps**
+- **Maximum amount of traffic provided in the option in bytes**
+- **External port, which is available for use/forwarding in the solution offer. If it's specified in the TEE offer, then it's a flag to provide an external (static) IP address for executing the order with any port bound**
+
+Slots as well as options can be summed up (to be described later) and their sum represents the rented equipment for the execution of the order.
+
+### Usage
+
+The *SlotUsage* entity describes the usage scenarios of a slot or option. It includes the following:
+
+- ***Price* is the price of use**
+- ***PriceType* is a type of price, which can be *PerHour* (per hour) or *Fixed* (fixed price)**
+- ***minTimeMinutes* is a minimum usage in minutes**
+- ***maxTimeMinutes* is a maximum usage in minutes**
+
+
 ## TEE offers
 
 This smart contract contains offers for the use of the TEE resource. In the Super Protocol system, the price for using TEE depends on the number of hours rented under the offer. One offer corresponds to one TEE device.
@@ -138,13 +175,13 @@ This smart contract contains offers for the use of the TEE resource. In the Supe
 |**Name**|**Type**|**Description**|
 | :- | :- | :- |
 |providerAuthority|address|unique provider identifier|
-|id|guid|unique offer identifier|
+|id|guid|incremental offer identifier. This identifier is unique for all types of offers, including value offers|
 |name|string|offer name|
 |description|string|offer description|
 |teeType|string|TEE: CPU/GPU type|
-|slots|number|maximum amount of resources to be used; for example, a 4-core processor can provide 1 core and hence 4 slots to use.|
-|minTimeMinutes|number|minimum TEE usage time in minutes|
-|properties|string|<p>device specifications in json format, for example:</p><p>{ “max\_mem”\_mb: 512,</p><p>“max\_disk”\_gb: 256,</p><p>“cpu\_passmark”: 5000,</p><p>“disk\_type”: ”ssd” }</p><p></p><p>**Can be set and modified by the consensus protocol only.**</p>|
+|hardwareInfo|{SlotInfo; OptionInfo}|complete specifications of the device, consisting of the slot and all available options as well as the price per hour. A fixed price is not allowed|
+|slots|[{SlotInfo; SlotUsage}]|array of provided slots and their conditions of use. In the TEE offer, the price type of slots is always *PerHour*|
+|options|[{OptionInfoSlotUsage}]|array of provided options and their conditions of use|
 |TCBId|guid|TEE Confirmation Block|
 |TLB|binary|TEE Loader Block|
 |argsPublicKey|string|public key and encryption algorithm for arguments in JSON format when placing an order for execution|
@@ -155,6 +192,13 @@ This smart contract contains offers for the use of the TEE resource. In the Supe
 | :- | :- | :- |
 |create(TEEOffer offer) public returns (TEEOffer)|Provider.actionAccount|blockchain|
 |setOfferName(uint256 offerId, string name)|offer.provider.actionAccount|blockchain|
+|setHardwareInfo(SlotInfo slot, OptionInfo option)|offer.provider.actionAccount|blockchain|
+|addSlot({SlotInfo, SlotUsage}) returns slotId|offer.provider.actionAccount|blockchain|
+|updateSlot(slotId, {SlotInfo, SlotUsage})|offer.provider.actionAccount|blockchain|
+|deleteSlot(slotId)|offer.provider.actionAccount|blockchain|
+|addOption({OptionInfo, SlotUsage}) returns optionId|offer.provider.actionAccount|blockchain|
+|updateOption(optionId, {OptionInfo, SlotUsage})|offer.provider.actionAccount|blockchain|
+|deleteOption(optionId)|offer.provider.actionAccount|blockchain|
 |setOfferPublicKey(uint256 offerId, string publicKey)|offer.provider.actionAccount|blockchain|
 |setOfferDescription(uint256 offerId, string description)|offer.provider.actionAccount|blockchain|
 |setTeeOfferTlb(uint256 offerId, string tlb)|offer.provider.actionAccount|blockchain|
@@ -165,7 +209,7 @@ This smart contract contains offers for the use of the TEE resource. In the Supe
 |listAll(bool withDisabled = false) public returns (TEEOffer[])|any|SDK|
 |get(guid offerId) public returns (TEEOffer)|any|SDK|
 
-Smart contract methods allow the provider to create a TEE offer, modify it, or mark it as disabled. For each TEE provider offer, a portion (TEEOfferSecDeposit) of the security deposit is blocked. This is to ensure protection against spam attacks and operation of the TEE consensus protocol. If the available deposit amount is insufficient, the offer will not be registered.
+Smart contract methods allow the provider to create a TEE offer, modify it, or mark it as disabled. For registering each provider's TEE offer, a portion *TEEOfferSecDeposit* of the security deposit is blocked. This is to ensure protection against spam attacks and operation of the TEE consensus protocol. If the available deposit amount is insufficient, the offer will not be registered.
 
 <p align="center">
   <img src={require('./images/blockchain-solution-03.png').default} />
@@ -173,11 +217,37 @@ Smart contract methods allow the provider to create a TEE offer, modify it, or m
 
 In order to add a new TEE offer, the provider accesses the TEE offer smart contract and invokes the offer creation method.
 
-The “slots” field contains the maximum number of devices provided per unit of time. A TEE can be rented for at least *minTimeMinutes* minutes.
+To provide hardware, the provider has to define a maximum configuration *hardwareInfo*, for example this could be as follows:
+
+
+|**CPU**|**RAM**|**SSD**|**HDD**|**Bandwidth**|**Traffic**|**ExternalPort**|
+| :- | :- | :- | :- | :- | :- |:- |
+|24|512 Gb|2048 Gb|-|100 Mbit|Unlimited|True|
+
+It is also necessary to set options for the usage of the equipment through the setup of slots and options, for example it could be as follows:
+
+**slots:**
+
+|**slotId**|**CPU**|**RAM**|**SSD**|**HDD**|**Usage**|
+| :- | :- | :- | :- | :- | :- |
+|1|3|64 Gb|256 Gb|-|0.01 TEE PerHour|
+
+
+**options:**
+
+|**optionId**|**Bandwidth**|**Traffic**|**ExternalPort**|**Usage**|
+| :- | :- | :- | :- | :- |
+|1|10 Mbit|1024 Mb|-|0.01 TEE Fixed|
+|2|20 Mbit|1024 Mb|-|0.02 TEE Fixed|
+|3|-|-|True|0.1 TEE Fixed|
+
+For the most optimal use of the equipment, it is recommended to set slots and options that divide the overall configuration evenly.
 
 Each TEE device participates in a validation protocol, in which all its characteristics are updated.
 
 If the TEE device has not sent a TCB within 48 hours, it is removed from the list of active devices.
+
+
 ## Value offers
 ### Overview
 This smart contract contains offers for certain values. It is also possible to create a combined value using the required values of other types. For example, the provider allows its data to be processed by another provider's solution within a secure TEE area and the encrypted result is stored in the distributed storage.
@@ -196,12 +266,10 @@ The offer describes the cost of using it and the minimum order deposit. To maint
 |name|string|offer name|
 |description|string|offer description|
 |linkage|string|linkage spec, for example, for docker|
-|holdSum|number|minimum deposit to place an order for offer execution|
 |restrictions|string|possible restrictions and requirements for various provider offers. Used when creating an order. E.g.: ‘{“TEE”: [GUID1, GUID2], “Storage”, “Solution”: [GUID3, GUID4]}’|
-|properties|string|device specifications in json format, e.g.: {“max\_mem\_mb”: 512}.|
-|maxDurationTimeMinutes|number|maximum order execution duration in minutes|
-|inputFormat|string|input data format , e.g., “PartiQL”, “binary”|
-|outputFormat|string|output data format , e.g., “JSON”, “binary”|
+|slots|[{SlotInfo; OptionInfo; SlotUsage}]|array of provided configurations and conditions for their use|
+|input|string|input data format|
+|output|string|output data format|
 |allowedArgs|dictionary|dictionary of allowed arguments in the following format: [name:string, value: string[]]|
 |allowedAccounts|account[]|list of accounts allowed to place an order based on this offer. If the list is empty, all are allowed|
 |argsPublicKey|string|public key and algorithm for  encrypting arguments in JSON format when the order is being placed for fulfillment|
@@ -218,23 +286,26 @@ The offer describes the cost of using it and the minimum order deposit. To maint
 |setOfferDescription(uint256 offerId, string description)|offer.provider.actionAccount|blockchain|
 |enable(guid offerId)|offer.provider.actionAccount|blockchain|
 |disable(guid offerId)|offer.provider.actionAccount|blockchain|
+|addSlot(SlotInfo slot, OptionInfo option, SlotUsage usage) returns slotId|offer.provider.actionAccount|blockchain|
+|updateSlot(uint256 slotId, SlotInfo slot, OptionInfo option, SlotUsage usage)|offer.provider.actionAccount|blockchain|
+|deleteSlot(uint256 slotId)|offer.provider.actionAccount|blockchain|
 |listOf(guid providerId) public returns (Offer[])|any|SDK|
 |listAll(bool withDisabled = false) public returns (Offer[])|any|SDK|
 |get(guid offerId) public returns (Offer)|any|SDK|
 
 Smart contract methods allow the provider to create a script execution offer, modify it, or mark it as disabled.
 
-***You can only change the name and description of the offer.***
+***In an offer, you can change everything except for the hash, if it is already set.***
 
 <p align="center">
   <img src={require('./images/blockchain-solution-04.png').default} />
 </p>
 
-For each provider offer, a portion of the security deposit (offerSecDeposit) is blocked. This is to ensure protection against spam attacks. If the available deposit amount is insufficient, the offer will not be registered.
+For registering each provider's offer, a portion of the security deposit *offerSecDeposit* is blocked. This is to ensure protection against spam attacks. If the available deposit amount is insufficient, the offer will not be registered.
 
 In order to  add a new offer, the provider accesses the offer smart contract and invokes the offer creation method. Each offer may impose restrictions on execution. For example, an offer for big data processing imposes restrictions on the solutions that are allowed to process that data, on the TEE that can be used for execution, and on the Storage for preparing the data to be processed.
 
-Also, the offer may simply involve the provision of a service, such as a solution. In this case, the property field contains the characteristics of the service provided, while the *resultUrl* field contains the basic *Url* of the solution. A unique identifier can be used as an argument. When the *resultUrl* is set, the smart contract immediately executes the order.
+If *resultUrl* is set, then smart contract immediately executes the order.
 
 ### Offer dependencies
 
@@ -265,11 +336,33 @@ In terms of offer groups, only the following restrictions are possible:
 
 ## Orders
 
-In order to execute a provider offer, an order should be created by using the appropriate smart contract. The order creator must assign offers taking into account all restrictions and requirements the order possesses and pay a security deposit, which will be held for the duration of the order execution. The deposit amount is equal to the sum of deposits specified in all used offers. However, it should be noted that the final deposit cannot be less than the minimum deposit for the order set out by the protocol - *orderMinimumDeposit*.
+In order to execute a provider offer, an order should be created by using the appropriate smart contract. The order creator must choose offers also taking into account all restrictions and requirements the order possesses and pay a security deposit, which will be held for the duration of the order execution. During the order creation, the execution configuration and additional options are formed. The prices are copied from the chosen offers:
 
-The total deposit to be held is calculated according to the formula below:
+<p align="center">
+  <img src={require('./images/OrderSlots.png').default} />
+</p>
+
+### Calculation of minimum deposit for an order
+
+Since the price type comes in two kinds - fixed and hourly, the deposit calculation is performed as the sum of the calculations for each type of price.
+
+If a slot or an option is linked to a fixed price when creating an order, then that price is the final price for the selected slot or option.
+
+If a slot or an option is linked to an hourly price when creating an order, then the final price is determined by the formula as follows:
+
+Price = *usage.minTimeMinutes* * usage.Price / 60
+
+That way, by getting the price for the Virtual Machine and all the options, you can calculate a minimum deposit to fulfill the order.
+
+However, it should be noted that the resulting deposit cannot be less than the minimum deposit for the order set out by the protocol - *orderMinimumDeposit*.
+
+In the event that an order is created with suborders, the minimum deposit is equal to the sum of all minimum deposits of the suborders. In this case, the resulting amount also should not be less than *orderMinimumDeposit*.
+
+In this case, the total deposit to be held is calculated according to the formula below:
 
 ![](images/blockchain-solution-formula-01.svg)
+
+Smart contracts control only the fact that the deposit is not less than *orderMinimumDeposit*, the rest of the control is done through the SDK and rental systems.
 
 The results of the execution or encountered errors are later added up to the order by the provider. To maintain confidentiality, the arguments in the order must be encrypted using the public key specified in the offer. Also, both the result and the error string are encrypted using the public key of the result, which is specified in the order along with the encryption algorithm.
 
@@ -277,9 +370,8 @@ The results of the execution or encountered errors are later added up to the ord
 
 |**Name**|**Type**|**Description**|
 | :- | :- | :- |
-|slots|number|number of rented slots. Set during the TEE order creation.|
 |inputOffers|guid[]|INPUT offers are part of the overall processing. Set during the TEE order creation, if necessary.|
-|selectedOffers|guid[]|offers the customer has selected to meet the order restrictions|
+|outputOffer|guid|offer selected by the customer to save the results of the order|
 
 
 **Order record structure:**
@@ -294,17 +386,27 @@ The results of the execution or encountered errors are later added up to the ord
 |encryptedArgs|string|list of arguments encrypted using the public key of the arguments specified in the offer|
 |status|string|order status (suspended, blocked, new, processing, stopping, done, error, canceling, canceled)|
 |encryptedResult|string|results of the order execution encrypted using the results public key|
-|orderPrice|number|current value of the order. Can be changed by the provider during processing.|
-|depositSpent|number|amount of deposit spent. Can be changed by the provider during processing.|
+|orderPrice|number|current value of the order. Can be changed by the provider during processing|
+|depositSpent|number|amount of deposit spent. Can be changed by the provider during processing|
+|optionsDepositSpent|number|The amount of deposit already spent on options. Can be changed by the provider during runtime. It makes sense for TEE orders so that the customer can see the additional expense|
+|selectedUsage|SelectedUsage|The structure in which the selected order parameters are stored when the order is created. **It is considered a smart contract and cannot be changed**|
+
+
+**SelectedUsage:**
+|**Name**|**Type**|**Description**|
+| :- | :- | :- |
+|vm|{SlotInfo; SlotUsage}|Total slot of the rented machine and price of use|
+|options|[{OptionInfo; SlotUsage}]|Selected options and the price for their use|
+
 
 **Contract interface:**
 
 |**Name and description**|**Access**|**Execution location**|
 | :- | :- | :- |
-|**create(Order order, uint256 holdDeposit, bool suspended) public returns (Order)**|any|blockchain|
-|Order creation. When this method is called, *HoldDeposit* is paid. The "suspended" status is necessary when blocking sub-orders need to be created before the order can be executed. The provider cannot execute the order until the order status is marked as "new".|||
-|**createSubOrder(guid orderId, Order subOrder, bool blockParentOrder) public returns (Order)**|<p>order.consumer</p><p></p><p>order.provider.actionAccount</p>|blockchain|
-|Sub-orders are created by the customer (to assemble the entire order chain) or the provider (normally at the execution controller level). When calculating *HoldDeposit* for a sub-order, the *orderMinimumDeposit* is not taken into account in the system settings. *HoldDeposit* for a sub-order is transferred from the *HoldDeposit* of the main order*.* Once created, such an order becomes a regular one. If the *blockParentOrder* parameter is set to true, the sub-order will block the main order if its status is "suspended" or "blocked".|||
+|**create(Order order, uint64 slotId, uint64 slotCount, [{optionId: count}] options),uint256 deposit, bool suspended) public returns (Order)**|any|blockchain|
+|Order creation. When this method is called, *Deposit* is paid. The "suspended" status is necessary when blocking sub-orders need to be created before the order can be executed. The provider cannot execute the order until the order status is marked as "new".|||
+|**createSubOrder(guid orderId, Order subOrder, uint64 slotId, uint64 slotCount, [{optionId: count}] options), uint256 depositbool blockParentOrder) public returns (Order)**|<p>order.consumer</p><p></p><p>order.provider.actionAccount</p>|blockchain|
+|Sub-orders are created by the customer (to assemble the entire order chain) or the provider (normally at the execution controller level). The Deposit specified when creating a sub-order is taken from the main deposit of the parent order and must not exceed it. In this case, the parental deposit is reduced by the transferred amount. Once created, such an order becomes a regular one. If *blockParentOrder* parameter is set to true, the sub-order will block the main order if its status is "suspended" or "blocked".|||
 |**start(guid orderId)**|order.consumer|blockchain|
 |Updates the order status from "suspended" to "blocked" if there are blocking sub-orders, or to "new" if there are none.|||
 |**updateOrderPrice(guid orderId, uint256 orderPrice)**|order.provider.actionAccount|blockchain|
@@ -342,9 +444,9 @@ The results of the execution or encountered errors are later added up to the ord
   <img src={require('./images/blockchain-solution-07.png').default} />
 </p>
 
-Smart contract methods allow anyone to create orders. When additional orders related to the main order are created, the *createSubOrder* method is called with the main order ID passed as one of the parameters. This allows users to avoid paying for each sub-order as *HoldDeposit* already includes these fees.
+Smart contract methods allow anyone to create orders. When additional orders related to the main order are created, the *createSubOrder* method is called with the main order ID passed as one of the parameters. This allows users to avoid paying for each sub-order as *Deposit* already includes these fees.
 
-The methods also allow both the provider to set a final order price that does not exceed *minDeposit* and the customer to receive the change.
+The methods also allow both the provider to set a final order Price that does not exceed *Deposit* and the customer to receive the change.
 
 When creating a sub-order, the following procedure must be considered:
 
@@ -352,11 +454,11 @@ When creating a sub-order, the following procedure must be considered:
   <img src={require('./images/blockchain-solution-08.png').default} />
 </p>
 
-1. The PROCESSING (TEE) group can only have a single OUTPUT sub-order, which is specified in the *args.selectedOffers* offer list.
+1. The PROCESSING (TEE) group can only have a single OUTPUT sub-order, which is specified in the *args.outputOffer* offer argument.
 2. The PROCESSING (TEE) group can have any INPUT sub-order, which is specified in the *args.inputOffers* offer list. However, INPUT offer restrictions must be respected.
-3. The INPUT group offer can only have a single sub-order, which is from the OUTPUT group only. It is specified in the *args.selectedOffers* offer list. However, INPUT offer restrictions must be respected.
+3. The INPUT group offer can only have a single sub-order, which is from the OUTPUT group only. It is specified in the *args.outputOffer* offer argument. However, INPUT offer restrictions must be respected.
 4. The OUTPUT group can have no sub-orders.
-5. When creating any order or sub-order, *args.selectedOffers* is specified if the offer contains a requirement regarding different types of offers.
+5. When creating any order or sub-order, *args.outputOffer* is specified to explicitly specify an offer for saving data.
 
 ### Order state transition diagram
 
@@ -368,17 +470,17 @@ During processing of the order, its status is subject to change according to the
 
 ### Workflow
 
-When creating a complex order with dependencies, the customer creates the main order (normally for TEE) and sub-orders. The customer sets up all the required offers in *args.selectedOffers*. If the main order is created for TEE, the customer also configures all INPUT offers in the *args.inputOffers* field:
+When creating a complex order with dependencies, the customer creates the main order (normally for TEE) and sub-orders. The customer sets up an offer for saving the result of the order in  *args.outputOffer*. If the main order is created for TEE, the customer also configures all INPUT offers in the *args.inputOffers* field:
 
 <p align="center">
-  <img src={require('./images/blockchain-solution-10.png').default} />
+  <img src={require('./images/OutputOffer.png').default} />
 </p>
 
 Let us consider different scenarios for using the ordering system.
 
 ### Hardware rental
 
-For hardware rentals, an order is created for the TEE offer and *args.selectedOffers* specifies the offer for OUTPUT, where the results will be uploaded to if needed. The number of rental minutes is also specified, and the customer pays for the entire period of time.
+For hardware rentals, an order is created for the TEE offer and *args.outputOffer* specifies the offer for OUTPUT, where the results will be uploaded to if needed. The number of rental minutes is also specified, and the customer pays for the entire period of time.
 
 <p align="center">
   <img src={require('./images/blockchain-solution-11.png').default} />
@@ -452,9 +554,9 @@ Data and solution providers execute their orders by providing the respective dat
 The TEE provider receives and executes the order by performing the following steps:
 
 1. A trusted solution loader starts up.
-1. The loader uploads the encrypted solution and data, decrypts the data, and runs the solution.
-1. Once executed, the solution encrypts the result for the customer and saves it as a data segment.
-1. The loader completes the TEE order.
+2. The loader uploads the encrypted solution and data, decrypts the data, and runs the solution.
+3. Once executed, the solution encrypts the result for the customer and saves it as a data segment.
+4. The loader completes the TEE order.
 
 The TEE provider then publishes the result and completes the order, and also the held tokens are distributed to the recipient.
 
