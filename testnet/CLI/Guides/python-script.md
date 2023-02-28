@@ -36,7 +36,7 @@ spctl offers download-content 3
 Load the image to Docker:
 
 ```
-docker load -i python3.8-base-solution-image-0.2.0.image.tar.gz
+docker load -i python3.10-base-solution-image-0.0.2.image.tar.gz
 ```
 
 ## Create new solution
@@ -121,7 +121,7 @@ Pillow~=9.2.0
 Run the following command in the solution root directory to download the required libraries:
 
 ```
-pip3 install -r requirements.txt -t ./run/pypi/lib/python3.8/site-packages
+pip3 install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
 
 **Double-check yourself!** If done correctly, the content of `run` directory should look as follows:
@@ -142,8 +142,8 @@ Run the following command in the solution root directory to launch the solution 
 
 ```
 docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output:/sp/output \
---entrypoint /usr/bin/python3 -w /sp/run -e PYTHONPATH="${PYTHONPATH}:/sp/run/pypi/lib/python3.8/site-packages" \
-gsc-python3.8-base-solution:latest entrypoint.py
+--entrypoint /usr/bin/python3 -w /sp/run -e PYTHONPATH="${PYTHONPATH}:/sp/run/pypi/lib/python3.10/site-packages" \
+gsc-python3.10-base-solution:latest entrypoint.py
 ```
 
 If done correctly, `output` directory should have two subdirectories `input-0001` and `input-0002` with `png` files with the same text as in the input files.
@@ -166,7 +166,7 @@ Next up, pack your solution with the following command:
 
 ```
 spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
---base-image-path python3.8-base-solution-image-0.2.0.image.tar.gz \
+--base-image-path python3.10-base-solution-image-0.0.2.image.tar.gz \
 <your solution root directory>/run signing-key
 ```
 
