@@ -9,7 +9,7 @@ Create new orders
 ## Usage
 
 ```
-spctl orders <command>
+spctl workflows <command>
 ```
 
 ## Child commands
