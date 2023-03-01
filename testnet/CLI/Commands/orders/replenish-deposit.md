@@ -5,7 +5,7 @@ slug: "/cli/commands/orders/replenish-deposit"
 sidebar_label: "replenish-deposit"
 ---
 
-Withdraw unspent deposit from a completed order with `id`
+Replenish order deposit with `id` by `amount`
 
 ## Usage
 
