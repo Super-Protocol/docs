@@ -17,8 +17,8 @@ spctl orders <command>
 |**Command**|**Description**|
 | :- | :- |
 |[cancel](/testnet/cli/commands/orders/cancel)|Cancel order with `id`|
-|[download-result](/testnet/cli/commands/orders/download-result)|Download result of order with `id`|
+|[download-result](/testnet/cli/commands/orders/download-result)|Download order result with `id`|
 |[get](/testnet/cli/commands/orders/get)|Display detailed information on order with `id`|
 |[list](/testnet/cli/commands/orders/list)|List orders|
-|[replenish-deposit](/testnet/cli/commands/orders/replenish-deposit)|Withdraw unspent deposit from a completed order with `id`|
-|[withdraw-deposit](/testnet/cli/commands/orders/download-result)|Withdraw unspent deposit from a completed order with `id`|
+|[replenish-deposit](/testnet/cli/commands/orders/replenish-deposit)|Replenish order deposit with `id` by `amount`|
+|[withdraw-deposit](/testnet/cli/commands/orders/withdraw-deposit)|Withdraw unspent deposit from a completed order with `id`|

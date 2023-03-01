@@ -5,7 +5,7 @@ slug: "/cli/commands/orders/download-result"
 sidebar_label: "download-result"
 ---
 
-Download result of order with `id`
+Download order result with `id`
 
 ## Usage
 

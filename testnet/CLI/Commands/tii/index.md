@@ -4,7 +4,7 @@ title: "TII"
 slug: "/cli/commands/tii"
 ---
 
-Prepare custom resource to be processed without sharing the source.
+Prepare custom resource to be processed without sharing the source
 
 ## Usage
 
