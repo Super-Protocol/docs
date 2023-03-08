@@ -20,7 +20,7 @@ To be able to use Web UI you need to complete the steps below:
    |Parameter|Value|
    | :- | :- |
    |Network Name|Matic Testnet Mumbai<br/><br/>**Note.** You can change this value if you like.|
-   |New RPC URL|https://wandering-snowy-sun.matic-testnet.quiknode.pro/98e3f8f8fe7ef3c53743ba59fbe6fd6771638d61<br/><br/>**Note.** You can use a different node, but we highly recommend that you use this one. Some nodes, especially free ones, may have some limitations on the maximum number of consecutive transactions and their size. Because of this, you may encounter some errors.|
+   |New RPC URL|https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206<br/><br/>**Note.** You can use a different node, but we highly recommend that you use this one. Some nodes, especially free ones, may have some limitations on the maximum number of consecutive transactions and their size. Because of this, you may encounter some errors.|
    |Chain ID|80001|
    |Currency Symbol|MATIC|
    |Block Explorer URL|https://mumbai.polygonscan.com|
