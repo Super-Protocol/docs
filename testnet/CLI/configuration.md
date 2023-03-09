@@ -23,7 +23,7 @@ This section contains parameters needed to establish a connection to the blockch
 
 |**Parameter**|**Description**|
 | :- | :- |
-|rpcUrl|`https://wandering-snowy-sun.matic-testnet.quiknode.pro/98e3f8f8fe7ef3c53743ba59fbe6fd6771638d61/`<br/><br/>**Note.** You can use a different node, but the Super Protocol team will not be able to provide any support associated with it.|
+|rpcUrl|`https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206`<br/><br/>**Note.** You can use a different node, but the Super Protocol team will not be able to provide any support associated with it.|
 |smartContractAddress|`0x2Bb91A63BC4956Ae4dAC5dBe9B068da0bD1D035d`|
 |accountPrivateKey|Your personal private key from the Testnet invitation email|
 |authorityAccountPrivateKey|Required for offer creation. Leave this field blank if you are not a provider.|
