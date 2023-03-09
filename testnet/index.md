@@ -1,6 +1,6 @@
 ---
 id: "index"
-title: "Public Testnet"
+title: "Getting started"
 slug: "/"
 sidebar_position: 0
 ---
