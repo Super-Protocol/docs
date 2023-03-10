@@ -1,6 +1,6 @@
 ---
 id: "index"
-title: "Getting Started"
+title: "Introduction"
 slug: "/"
 ---
 

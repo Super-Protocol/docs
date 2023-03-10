@@ -1,0 +1,10 @@
+name: Check build
+on: ['pull_request']
+
+jobs:
+  check-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn install
+      - run: yarn build
