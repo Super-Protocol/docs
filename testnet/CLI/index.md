@@ -1,6 +1,6 @@
 ---
 id: "cli-index"
-title: "CLI"
+title: "CLI Documentation"
 slug: "/cli/"
 ---
 
