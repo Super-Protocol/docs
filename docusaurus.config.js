@@ -55,7 +55,7 @@ const config = {
             {
                 redirects: [
                     {
-                        from: '/testnet',
+                        from: '/getting-started',
                         to: '/',
                     }
                 ]
@@ -68,7 +68,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    path: "testnet",
+                    path: "getting-started",
                     routeBasePath: "/",
                     remarkPlugins: [math],
                     rehypePlugins: [katex],
@@ -92,6 +92,12 @@ const config = {
                     src: "navbar/images/logo.svg",
                 },
                 items: [
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Getting Started",
+                    },
                     {
                         type: "doc",
                         docId: "index",
