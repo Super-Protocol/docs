@@ -141,13 +141,8 @@ Also please keep in mind that for testnet purposes the site will remain online o
 <p>
   <img width="621" height="310" src={require('./../images/marketplace_13.png').default}/>
 </p>
-
 <p>
-  <img width="622" height="310" src={require('./../images/marketplace_14.png').default}/>
-</p>
-
-<p>
-  <img width="620" height="289" src={require('./../images/marketplace_15.png').default}/>
+  <img width="620" height="289" src={require('./../images/marketplace_14.png').default}/>
 </p>
 
 You will also see that other orders have been created. These are for the Tunnel Clients and Servers, which is the technology that makes hosting work in a confidential environment (which cannot be accessed from the internet directly). The more Clients and Servers you have supporting your hosting - the more stable and fault resistant it is. 
@@ -161,7 +156,7 @@ You will also see that other orders have been created. These are for the Tunnel 
 You are all set! Go to your new website and please don’t forget to tell the world all about it on Twitter (or anywhere else). We’d really appreciate it!</div><br/>
 
 <p>
-  <img width="621" height="448" src={require('./../images/marketplace_16.png').default}/>
+  <img width="621" height="448" src={require('./../images/marketplace_15.png').default}/>
 </p>
 
 
