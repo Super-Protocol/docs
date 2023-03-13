@@ -29,11 +29,11 @@ Open Marketplace at <a href="https://marketplace.superprotocol.com" target="_bla
 Hosting Launcher is the app that enables the operations of decentralized confidential hosting.
 
 <p>
-  <img width="621" height="310" src={require('./../images/marketplace_1.png').default}/>
+  <img width="807" height="403" src={require('./../images/marketplace_1.png').default}/>
 </p>
 
 <p>
-  <img width="619" height="310" src={require('./../images/marketplace_2.png').default}/>
+  <img width="807" height="403" src={require('./../images/marketplace_2.png').default}/>
 </p>
 
 Besides the descriptions, you can also see in the Restricted tab that this Solution offer requires another offer: a NodeJS base image. It is added to Order automatically.
