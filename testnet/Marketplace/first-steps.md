@@ -22,12 +22,12 @@ If your token doesn’t work, please contact our support in Discord.
 
 You don’t need to login if you just want to browse the Marketplace offers, but if you want to create orders, then you’ll need to login with Metamask. Please complete the steps below:
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 1. Install Metamask</b><br/>
 Download and install the Metamask browser extension from its <a href="https://metamask.io/" target="_blank">official website</a>. Create a new wallet or import your existing one during the setup process. Skip this step if you have Metamask already installed.</div><br/>
 
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 2. Add a new network</b><br/>
 Open Metamask. Click on <b>My Accounts</b> (icon in top right corner), then click on Settings, then go to the <b>Networks</b> section and click on the <b>Add a network</b> button.</div><br/>
 
@@ -38,7 +38,7 @@ Open Metamask. Click on <b>My Accounts</b> (icon in top right corner), then clic
   <img width="619" height="342" src={require('./../images/metamask_2.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 3. Fill in the parameters</b><br/>
 Set the following parameters and press <b>Save</b>.</div><br/>
 
@@ -63,7 +63,7 @@ https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206
 | Currency Symbol | MATIC |
 | Block Explorer URL | [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com) |
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 4. Import account</b><br/>
 Open again <b>My Accounts</b> and click on <b>Import Account</b>. Select type <b>Private Key</b> and enter the private key that you received from the Super Protocol team. Then click on the <b>Import</b> button.</div><br/>
 
@@ -77,7 +77,7 @@ Testnet Private Key looks something like this: 0xb8371e9b2mr9f6e2b9e5ec1ead09b73
   <img width="383" height="488" src={require('./../images/metamask_5.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 5. Check account number</b><br/>
 Make sure that the imported account number is the same as the one that was provided in the Testnet invitation letter.</div><br/>
 
@@ -93,7 +93,7 @@ It is also probably a good idea to rename this account: Super Protocol Testnet o
 
 At this point we assume that you have done all the steps in the previous section and correctly configured Metamask.
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 1. Press Connect Wallet</b><br/>
 Go to Marketplace: <a target="_blank" href="https://marketplace.superprotocol.com">https://marketplace.superprotocol.com</a>. To connect the wallet, click on the <b>Connect Wallet</b> button in the top right corner.</div><br/> 
 
@@ -104,7 +104,7 @@ Go to Marketplace: <a target="_blank" href="https://marketplace.superprotocol.co
   <img width="364" height="165" src={require('./../images/metamask_8.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 2. Select Metamask account</b><br/>
 The Metamask app will open. Select the account that you have configured in the previous section (the one sent in the invitation letter).</div><br/> 
 

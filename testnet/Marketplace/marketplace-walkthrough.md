@@ -22,7 +22,7 @@ There are four types of offers in the Marketplace. In most cases you will need a
 
 **Storage** – providers of decentralized storages, where the computation results are stored.
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 1. Add a Solution</b><br/>
 Open Marketplace at <a href="https://marketplace.superprotocol.com" target="_blank">https://marketplace.superprotocol.com</a>. Go to the <b>Solutions</b> tab and click on the <b>Hosting Launcher</b> offer. It will open a window with a detailed description. Click on the <b>Add to Order</b> button.</div><br/>
 
@@ -38,7 +38,7 @@ Hosting Launcher is the app that enables the operations of decentralized confide
 
 Besides the descriptions, you can also see in the Restricted tab that this Solution offer requires another offer: a NodeJS base image. It is added to Order automatically.
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 2a. Add a Dataset</b><br/>
 Now we need a website to host. Go to the <b>Data</b> tab and add the <b>Demo Static Website</b> to the order.</div><br/>
 
@@ -50,7 +50,7 @@ The Demo Static Website is a simple static site that we made to illustrate the c
   <img width="619" height="310" src={require('./../images/marketplace_3.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 2b. Or add your own data</b><br/>
 Alternatively, there is also an option to host your own static website. Press the <b>Order</b> button and then <b>Add Your Own</b> button. Upload your site in an archive.</div><br/>
 
@@ -60,7 +60,7 @@ Before uploading your own data all files and folders must be packaged into a TAR
   <img width="619" height="313" src={require('./../images/marketplace_4.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 3. Add a Compute</b><br/>
 Now it’s time to select the provider of confidential computing resources. Go to the <b>Compute</b> tab and add one of the compute offers to the order using the <b>[+] button</b>.</div><br/>
 
@@ -72,7 +72,7 @@ It’s best to select the Compute offer with the fewest orders in the queue.
   <img width="620" height="310" src={require('./../images/marketplace_5.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 4. Add a Storage</b><br/>
 Finally, we complete the assembly of the order by adding the <b>Storage</b> provider. Go to the Storage tab and add the <b>StorJ</b> offer to the order.</div><br/>
 
@@ -84,7 +84,7 @@ Decentralized storage is where the results of the computation are placed (becaus
 
 ## 2. Creating Order
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 5. Checkout Order</b><br/>
 It is time to create the order. Open the <b>Order</b> window and press the <b>Checkout</b> button.</div><br/>
 
@@ -92,7 +92,7 @@ It is time to create the order. Open the <b>Order</b> window and press the <b>Ch
   <img width="619" height="311" src={require('./../images/marketplace_7.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 6. Set up passphrase</b><br/>
 Either insert your own passphrase or generate a new one. Then press the <b>Place Order</b> button. Save your passphrase! You won’t be able to access your results without it.</div><br/>
 
@@ -100,7 +100,7 @@ Either insert your own passphrase or generate a new one. Then press the <b>Place
   <img width="619" height="312" src={require('./../images/marketplace_8.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 7. Confirm transactions</b><br/>
 Now you need to confirm the transaction in Metamask. Its window will open automatically, but if it doesn’t, open it manually from the browser. Press the <b>Confirm</b> button.</div><br/>
 
@@ -110,7 +110,7 @@ Now you need to confirm the transaction in Metamask. Its window will open automa
 
 ## 3. Getting Results
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 8. Go to the order</b><br/>
 The order has been created and is now being executed. If not forwarded to it automatically, press the <b>All Orders</b> button and then click on the last order in the list.</div><br/>
 
@@ -122,7 +122,7 @@ The order has been created and is now being executed. If not forwarded to it aut
   <img width="620" height="312" src={require('./../images/marketplace_11.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 9. Just wait, really</b><br/>
 It takes a few minutes, depending on how many workloads the server is processing.</div><br/>
 
@@ -130,7 +130,7 @@ It takes a few minutes, depending on how many workloads the server is processing
   <img width="620" height="313" src={require('./../images/marketplace_12.png').default}/>
 </p>
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 10. Get result</b><br/>
 The order changes to status <b>Done</b>. Press the <b>Get Result</b> button and enter your passphrase. You will see the link - this is your website URL.</div><br/>
 
@@ -156,7 +156,7 @@ You will also see that other orders have been created. These are for the Tunnel 
 
 **Tunnel Server** – The server side of the tunnels. It is responsible for protection against DDOS attacks and holds the Public Ingress (public static IP) which routes to the Client.
 
-<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 11. Like and share!</b><br/>
 You are all set! Go to your new website and please don’t forget to tell the world all about it on Twitter (or anywhere else). We’d really appreciate it!</div><br/>
 
