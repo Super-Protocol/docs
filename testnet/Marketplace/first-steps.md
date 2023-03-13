@@ -46,15 +46,6 @@ Set the following parameters and press <b>Save</b>.</div><br/>
   <img width="621" height="484" src={require('./../images/metamask_3.png').default}/>
 </p>
 
-Parameter
-Value
-Network Name
-Matic Testnet Mumbai
-
-Note. You can change this value if you like.
-New RPC URL
-https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206 
-
 | Parameter | Value |
 | --- | ----------- |
 | Network Name | Matic Testnet Mumbai <br /><br />*Note. You can change this value if you like.*|
