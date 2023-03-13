@@ -23,8 +23,8 @@ There are four types of offers in the Marketplace. In most cases you will need a
 *Storage* – providers of decentralized storages, where the computation results are stored.
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
-*Step 1. Add a Solution*<br/>
-Open Marketplace at <a href="https://marketplace.superprotocol.com" target="_blank">https://marketplace.superprotocol.com</a>. Go to the *Solutions* tab and click on the *Hosting Launcher* offer. It will open a window with a detailed description. Click on the *Add to Order* button.</div><br/>
+<b>Step 1. Add a Solution</b><br/>
+Open Marketplace at <a href="https://marketplace.superprotocol.com" target="_blank">https://marketplace.superprotocol.com</a>. Go to the <b>Solutions</b> tab and click on the <b>Hosting Launcher</b> offer. It will open a window with a detailed description. Click on the <b>Add to Order</b> button.</div><br/>
 
 Hosting Launcher is the app that enables the operations of decentralized confidential hosting.
 
