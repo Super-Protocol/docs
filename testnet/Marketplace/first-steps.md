@@ -22,9 +22,9 @@ If your token doesn’t work, please contact our support in Discord.
 
 You don’t need to login if you just want to browse the Marketplace offers, but if you want to create orders, then you’ll need to login with Metamask. Please complete the steps below:
 
-**Step 1. Install Metamask**
-
-Download and install the Metamask browser extension from its [official website](https://metamask.io/). Create a new wallet or import your existing one during the setup process. Skip this step if you have Metamask already installed.
+<div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
+<b>Step 1. Install Metamask</b><br/>
+Download and install the Metamask browser extension from its <a href="https://metamask.io/" target="_blank">official website</a>. Create a new wallet or import your existing one during the setup process. Skip this step if you have Metamask already installed.</div><br/>
 
 **Step 2. Add a new network**
 
