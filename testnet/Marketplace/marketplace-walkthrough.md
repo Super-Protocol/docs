@@ -14,16 +14,16 @@ First of all, we need to browse the Marketplace and select the necessary compone
 
 There are four types of offers in the Marketplace. In most cases you will need all four to create an order. 
 
-**Solutions** – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
+<strong>Solutions</strong> – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
 
-**Data** – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
+<strong>Data</strong> – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
 
-**Compute** – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
+<strong>Compute</strong> – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
 
-**Storage** – providers of decentralized storages, where the computation results are stored.
+<strong>Storage</strong> – providers of decentralized storages, where the computation results are stored.
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
-<b>Step 1. Add a Solution</b><br/>
+<strong>Step 1. Add a Solution</strong><br/>
 Open Marketplace at <a href="https://marketplace.superprotocol.com" target="_blank">https://marketplace.superprotocol.com</a>. Go to the <b>Solutions</b> tab and click on the <b>Hosting Launcher</b> offer. It will open a window with a detailed description. Click on the <b>Add to Order</b> button.</div><br/>
 
 Hosting Launcher is the app that enables the operations of decentralized confidential hosting.
