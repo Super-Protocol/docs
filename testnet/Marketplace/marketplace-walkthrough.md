@@ -8,19 +8,19 @@ To better understand how Marketplace works, let’s take a step-by-step walkthro
 
 As an example we’ll use the scenario of hosting a static webpage in a confidential decentralized environment. However, the process for other types of offers is almost the same.
 
-## 1. Assembling Order
+## 1. Assembling the Order
 
 First of all, we need to browse the Marketplace and select the necessary components to create an order. The basic component is an Offer.
 
 There are four types of offers in the Marketplace. In most cases you will need all four to create an order. 
 
-*Solutions* – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
+**Solutions** – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
 
-*Data* – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
+**Data** – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
 
-*Compute* – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
+**Compute** – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
 
-*Storage* – providers of decentralized storages, where the computation results are stored.
+**Storage** – providers of decentralized storages, where the computation results are stored.
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
 <b>Step 1. Add a Solution</b><br/>
@@ -36,7 +36,7 @@ Hosting Launcher is the app that enables the operations of decentralized confide
   <img width="807" height="403" src={require('./../images/marketplace_2.png').default}/>
 </p>
 
-Besides the descriptions, you can also see in the Restricted tab that this Solution offer requires another offer: a NodeJS base image. It is added to Order automatically.
+You can also see in the **Restricted** tab that this Solution requires another offer: a NodeJS base image. It is added to Order automatically.
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
 <b>Step 2a. Add a Dataset</b><br/>
