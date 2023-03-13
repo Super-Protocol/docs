@@ -29,11 +29,11 @@ Open Marketplace at <a href="https://marketplace.superprotocol.com" target="_bla
 Hosting Launcher is the app that enables the operations of decentralized confidential hosting.
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_1.png').default}/>
+  <img src={require('./../images/marketplace_1.png').default}/>
 </p>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_2.png').default}/>
+  <img src={require('./../images/marketplace_2.png').default}/>
 </p>
 
 You can also see in the **Restricted** tab that this Solution requires another offer: a NodeJS base image. It is added to Order automatically.
@@ -47,7 +47,7 @@ The **Show compatible with order** filter narrows down the selection only to the
 The Demo Static Website is a simple static site that we made to illustrate the capabilities of the decentralized confidential hosting functionality. This version of Testnet only supports static sites, but in the coming months we will upgrade to hosting of full stack dynamic apps.
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_3.png').default}/>
+  <img src={require('./../images/marketplace_3.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
@@ -57,19 +57,17 @@ Alternatively, there is also an option to host your own static website. Press th
 Before uploading your own data all files and folders must be packaged into a TAR or TAR.GZ (TGZ) archive. There must be an index.html file at the root. Do not place all data in a single folder before archiving - the app won’t be able to read it.
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_4.png').default}/>
+  <img src={require('./../images/marketplace_4.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
 <b>Step 3. Add a Compute</b><br/>
-Now it’s time to select the provider of confidential computing resources. Go to the <b>Compute</b> tab and add one of the compute offers to the order using the <b>[+] button</b>.</div><br/>
-
-The Trusted Execution Environment (TEE) in the compute machine is where the Tunnel Provisioner app will meet the Tunnel Demo Dataset (or your own data) to set up a confidential hosting environment.
+Now it’s time to select the provider of confidential computing resources. Go to the <b>Compute</b> tab and add one of the compute offers to the order using the <b>[+]</b> button.</div><br/>
 
 It’s best to select the Compute offer with the fewest orders in the queue. 
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_5.png').default}/>
+  <img src={require('./../images/marketplace_5.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
@@ -79,7 +77,7 @@ Finally, we complete the assembly of the order by adding the <b>Storage</b> prov
 Decentralized storage is where the results of the computation are placed (because the Compute provider does not store the results) and also where the solutions and data offers are stored by the providers. This architecture ensures complete decentralization.
 
 <p>
-  <img width="619" height="311" src={require('./../images/marketplace_6.png').default}/>
+  <img src={require('./../images/marketplace_6.png').default}/>
 </p>
 
 ## 2. Creating Order
@@ -89,7 +87,7 @@ Decentralized storage is where the results of the computation are placed (becaus
 It is time to create the order. Open the <b>Order</b> window and press the <b>Checkout</b> button.</div><br/>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_7.png').default}/>
+  <img src={require('./../images/marketplace_7.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
@@ -97,7 +95,7 @@ It is time to create the order. Open the <b>Order</b> window and press the <b>Ch
 Either insert your own passphrase or generate a new one. Then press the <b>Place Order</b> button. Save your passphrase! You won’t be able to access your results without it.</div><br/>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_8.png').default}/>
+  <img src={require('./../images/marketplace_8.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
@@ -105,7 +103,7 @@ Either insert your own passphrase or generate a new one. Then press the <b>Place
 Now you need to confirm the transaction in Metamask. Its window will open automatically, but if it doesn’t, open it manually from the browser. Press the <b>Confirm</b> button.</div><br/>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_9.png').default}/>
+  <img src={require('./../images/marketplace_9.png').default}/>
 </p>
 
 ## 3. Getting Results
@@ -115,11 +113,11 @@ Now you need to confirm the transaction in Metamask. Its window will open automa
 The order has been created and is now being executed. If not forwarded to it automatically, press the <b>All Orders</b> button and then click on the last order in the list.</div><br/>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_10.png').default}/>
+  <img src={require('./../images/marketplace_10.png').default}/>
 </p>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_11.png').default}/>
+  <img src={require('./../images/marketplace_11.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
@@ -127,7 +125,7 @@ The order has been created and is now being executed. If not forwarded to it aut
 It takes a few minutes, depending on how many workloads the server is processing.</div><br/>
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_12.png').default}/>
+  <img src={require('./../images/marketplace_12.png').default}/>
 </p>
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
@@ -139,10 +137,10 @@ The link to your new website will take 2-3 minutes to go live after the order is
 Also please keep in mind that for testnet purposes the site will remain online only for 72 hours. But you are always free to create new orders.
 
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_13.png').default}/>
+  <img src={require('./../images/marketplace_13.png').default}/>
 </p>
 <p>
-  <img width="807" height="403" src={require('./../images/marketplace_14.png').default}/>
+  <img src={require('./../images/marketplace_14.png').default}/>
 </p>
 
 You will also see that other orders have been created. These are for the Tunnel Clients and Servers, which is the technology that makes hosting work in a confidential environment (which cannot be accessed from the internet directly). The more Clients and Servers you have supporting your hosting - the more stable and fault resistant it is. 
