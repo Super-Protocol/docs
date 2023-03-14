@@ -29,7 +29,7 @@ Testnet is now taking applications to participate. Please fill out the [testnet 
 
 To monitor network performance and workloads we will be issuing testnet invites in daily batches. If you are an approved participant of Testnet Phase 1, there is no need to re-apply. We will send you the updated credentials shortly. 
 
-Please read the [First Steps](https://docs.superprotocol.com/testnet/marketplace/first-steps/) and [Marketplace Walkthrough](https://docs.superprotocol.com/testnet/marketplace/marketplace-walkthrough/) guides to get you started.
+Please read the [First Steps](/testnet/marketplace/first-steps/) and [Marketplace Walkthrough](/testnet/marketplace/marketplace-walkthrough/) guides to get you started.
 
 ## Support
 
