@@ -21,6 +21,7 @@ Architecturally, Marketplace is built on top of Super Protocol and as such its d
 Please keep in mind that Marketplace is the user-friendly tool. For advanced capabilities of Super Protocol please use CLI.
 
 There is a mobile version of the Marketplace, but currently it operates in a view-only mode.
+
 Please read the [First Steps](/testnet/marketplace/first-steps/) and [Marketplace Walkthrough](/testnet/marketplace/marketplace-walkthrough/) guides to get you started.
 
 ## Coming Up Next
@@ -33,4 +34,4 @@ In the coming releases we plan to add new functionality to the Marketplace UI:
 - Reputation system: users can rate offers and providers.
 - Fully functioning mobile version.
 
-And this is just the top of the iceberg! 
+And this is just the top of the iceberg! We’ll keep you posted with more details.
