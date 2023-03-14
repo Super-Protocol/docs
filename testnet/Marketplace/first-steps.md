@@ -16,7 +16,7 @@ The token looks something like this:
 
 eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
 
-If your token doesn’t work, please contact our support in Discord. 
+If your token doesn’t work, please contact us in [Discord](https://discord.com/invite/superprotocol). 
 
 ## 2. Metamask Configuration
 
