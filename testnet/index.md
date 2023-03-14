@@ -9,7 +9,7 @@ sidebar_position: 0
 
 The Testnet is an operational work-in-progress version of Super Protocol. It is continuously updated with new releases and functionality as the project is heading towards mainnet.  
 
-The latest release is Testnet 2 and it contains the following major updates:
+The latest public release is Testnet 2, launched on March 13, 2023. It contains the following major updates:
 - <b>Decentralized confidential hosting.</b> The users can now host their own static websites on the Super Protocol network. The system of tunnels is used where the Tunnel Client holds the applications and data in a confidential enclave and the Tunnel Server is responsible for public ingress (public static IP’s) that routes to the Client. More tunnels means more stability and resistance to attacks.
 - <b>Marketplace UI.</b> The brand new user-friendly UI that is replacing the RocketGirl UI from Testnet 1. This is the user interface that we will be evolving with new functionality and it will carry on to the mainnet.
 
