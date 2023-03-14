@@ -2,6 +2,7 @@
 id: "marketplace-index"
 title: "Marketplace"
 slug: "/marketplace/"
+sidebar_position: 1
 ---
 
 ## What is Marketplace?
