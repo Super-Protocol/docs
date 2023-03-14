@@ -14,13 +14,13 @@ First of all, we need to browse the Marketplace and select the necessary compone
 
 There are four types of offers in the Marketplace. In most cases you will need all four to create an order. 
 
-<b>Solutions</b> – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
+- <b>Solutions</b> – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
 
-<b>Data</b> – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
+- <b>Data</b> – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
 
-<b>Compute</b> – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
+- <b>Compute</b> – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
 
-<b>Storage</b> – providers of decentralized storages, where the computation results are stored.
+- <b>Storage</b> – providers of decentralized storages, where the computation results are stored.
 
 <div style={{'background-color':'#F8E6D0',padding: 12 + 'px'}}>
 <b>Step 1. Add a Solution</b><br/>
