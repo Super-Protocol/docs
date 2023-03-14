@@ -6,7 +6,7 @@ slug: "/marketplace/first-steps/"
 
 ## 1. Getting Access
 
-When you open the Marketplace for the first time, you will be asked to provide an access token. Please use the access token that you received in the Testnet invitation letter.
+When you open the [Marketplace](https://marketplace.superprotocol.com/) for the first time, you will be asked to provide an access token. Please use the access token that you received in the Testnet invitation letter.
 
 <p>
   <img width="303" height="213" src={require('./../images/access_token.png').default}/>
@@ -20,7 +20,7 @@ If your token doesn’t work, please contact us in [Discord](https://discord.com
 
 ## 2. Metamask Configuration
 
-You don’t need to login if you just want to browse the Marketplace offers, but if you want to create orders, then you’ll need to login with Metamask. Please complete the steps below:
+Metamask login is not required to browse the Marketplace offers, but if you want to create orders, then you’ll need to configure Metamask for testnet. Please complete the steps below:
 
 <div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 1. Install Metamask</b><br/>
@@ -29,7 +29,7 @@ Download and install the Metamask browser extension from its <a href="https://me
 
 <div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 2. Add a new network</b><br/>
-Open Metamask. Click on <b>My Accounts</b> (icon in top right corner), then click on Settings, then go to the <b>Networks</b> section and click on the <b>Add a network</b> button.</div><br/>
+Open Metamask. Click on <b>My Accounts</b> (avatar in the top right corner), then click on Settings, then go to the <b>Networks</b> section and click on the <b>Add a network</b> button.</div><br/>
 
 <p>
   <img width="329" height="488" src={require('./../images/metamask_1.png').default}/>
@@ -72,7 +72,7 @@ Testnet Private Key looks something like this: 0xb8371e9b2mr9f6e2b9e5ec1ead09b73
 <b>Step 5. Check account number</b><br/>
 Make sure that the imported account number is the same as the one that was provided in the Testnet invitation letter.</div><br/>
 
-Testnet Account number looks something like this: 0xDe0f32cH7a2c3d85a3E578972EC7764154e75380
+Testnet account number looks something like this: 0xDe0f32cH7a2c3d85a3E578972EC7764154e75380
 
 <p>
   <img width="623" height="170" src={require('./../images/metamask_6.png').default}/>
@@ -86,7 +86,7 @@ At this point we assume that you have done all the steps in the previous section
 
 <div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 1. Press Connect Wallet</b><br/>
-Go to Marketplace: <a target="_blank" href="https://marketplace.superprotocol.com">https://marketplace.superprotocol.com</a>. To connect the wallet, click on the <b>Connect Wallet</b> button in the top right corner.</div><br/> 
+Go to the [Marketplace](https://marketplace.superprotocol.com). To connect the wallet, click on the <b>Connect Wallet</b> button in the top right corner.</div><br/> 
 
 <p>
   <img width="360" height="227" src={require('./../images/metamask_7.png').default}/>
@@ -105,7 +105,7 @@ If everything is done correctly, you will see your account number as well as you
   <img width="622" height="64" src={require('./../images/metamask_9.png').default}/>
 </p>
 
-If you see the error below, it means that you are trying to connect the wrong Metamask account.
+If you see the error below, it means that you are trying to connect with the wrong Metamask account.
 
 <p>
   <img width="321" height="321" src={require('./../images/metamask_10.png').default}/>
@@ -121,9 +121,9 @@ And then again click on the Connect Wallet button in the Marketplace and select 
 
 ## 4. Receiving Tokens
 
-There are two types of tokens that are used in Super Protocol and you will need both of them to fully use Marketplace:
+There are two types of tokens that are used in Super Protocol and you will need both of them:
 
-1. MATIC token is used for gas fees as the Polygon blockchain native token (Matic Testnet Mumbai).
+1. MATIC token is used to pay for transactions on Polygon blockchain.
 2. TEE token is used to pay for offers and receive payments in Super Protocol.
 
 To get tokens, use the corresponding links in the top menu. 
