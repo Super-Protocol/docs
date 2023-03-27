@@ -14,13 +14,26 @@ First of all, we need to browse the Marketplace and select the necessary compone
 
 There are four types of offers in the Marketplace. In most cases you will need all four to create an order. 
 
-- <b>Solutions</b> – the programs offered by the community and the Super Protocol team, as well as any required base images (Python, JavaScript, etc). 
+- <b>Solutions</b> – the programs offered by the community and the Super Protocol team, as well as any required base images such as Python and JavaScript. 
 
-- <b>Data</b> – complementary to Solutions, the data is used by the solutions (photo, audio, webpages, etc). You can use datasets from the Marketplace or upload your own.
+- <b>Data</b> – complementary to Solutions, data can be anything at: photo, audio, webpages, text, etc. You can use datasets from the Marketplace or upload your own.
 
-- <b>Compute</b> – providers of confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
+- <b>Compute</b> – confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
 
-- <b>Storage</b> – providers of decentralized storages, where the computation results are stored.
+- <b>Storage</b> – decentralized storages, where the computation results are stored.
+
+
+<div class="warning" style='padding:0.1em; background-color:#E9D8FD; color:#69337A'>
+<span>
+<p style='margin-top:1em; text-align:center'>
+<b>On the importance of sentence length</b></p>
+<p style='margin-left:1em;'>
+This sentence has five words. Here are five more words. Five-word sentences are fine. But several together bocome monotonous. Listen to what is happening. The writing is getting boring. The sound of it drones. It's like a stuck record. The ear demands some variety.<br><br>
+    Now listen. I vary the sentence length, and I create music. Music. The writing sings. It has a pleasent rhythm, a lilt, a harmony. I use short sentences. And I use sentences of medium length. And sometimes when I am certain the reader is rested, I will engage him with a sentence of considerable length, a sentence that burns with energy and builds with all the impetus of a crescendo, the roll of the drums, the crash of the cymbals -- sounds that say listen to this, it is important.
+</p>
+<p style='margin-bottom:1em; margin-right:1em; text-align:right; font-family:Georgia'> <b>- Gary Provost</b> <i>(100 Ways to Improve Your Writing, 1985)</i>
+</p></span>
+</div>
 
 <div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
 <b>Step 1. Add a Solution</b><br/>
