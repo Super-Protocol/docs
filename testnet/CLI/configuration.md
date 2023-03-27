@@ -24,7 +24,7 @@ This section contains parameters needed to establish a connection to the blockch
 |**Parameter**|**Description**|
 | :- | :- |
 |rpcUrl|`https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206`<br/><br/>**Note.** You can use a different node, but the Super Protocol team will not be able to provide any support associated with it.|
-|smartContractAddress|`0x2Bb91A63BC4956Ae4dAC5dBe9B068da0bD1D035d`|
+|smartContractAddress|`0x7765A6A28D46F09A6197082aa2f62Cb8E4CCF6B7`|
 |accountPrivateKey|Your personal private key from the Testnet invitation email|
 |authorityAccountPrivateKey|Required for offer creation. Leave this field blank if you are not a provider.|
 
