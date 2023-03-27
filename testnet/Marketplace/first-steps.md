@@ -28,8 +28,11 @@ Download and install the Metamask browser extension from its <a href="https://me
 
 
 <div style={{'background-color':'rgba(255, 217, 170,0.5)',padding: 12 + 'px'}}>
-<b>Step 2. Add a new network</b><br/>
-Open Metamask. Click on <b>My Accounts</b> (avatar in the top right corner), then click on <b>Settings</b>, then go to the <b>Networks</b> section, click on the <b>Add a network</b> button and then scroll down and click on <b>Add a network manually</div.><br/>
+  <b>Step 2. Add a new network</b>
+  <br/>
+  Open Metamask. Click on <b>My Accounts</b> (avatar in the top right corner), then click on <b>Settings</b>, then go to the <b>Networks</b> section, click on the <b>Add a network</b> button and then scroll down and click on <b>Add a network manually</b>
+</div>
+<br/>
 
 <p>
   <img width="329" height="488" src={require('./../images/metamask_1.png').default}/>
