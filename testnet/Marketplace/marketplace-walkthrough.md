@@ -12,7 +12,7 @@ As an example we’ll use the scenario of hosting a static webpage in a confiden
 
 First of all, we need to browse the Marketplace and select the necessary components to create an order. The basic component is an Offer.
 
-There are four types of offers in the Marketplace. In most cases you will need all four to create an order. 
+There are four types of offers in the Marketplace. In most cases you will need all four to create an order.
 
 - <b>Solutions</b> – the programs offered by the community and the Super Protocol team, as well as any required base images such as Python and JavaScript. 
 
