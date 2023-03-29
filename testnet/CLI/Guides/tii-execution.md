@@ -24,7 +24,7 @@ This example continues the [Execution of python script](/testnet/cli/guides/pyth
 spctl tii generate --offer 1 --output ./solution-tii.json ./solution.json
 ```
 
-It will generate a `solution-tii.json` file, which is encrypted with the public key of Compute offer with id 1. The public key is retrieved from blockchain. From now on, `solution-tii.json` can only be run on Compute offer 1, as no other providers are able to decrypt it. Let's execute newly created TII on Super Protocol:
+It will generate a `solution-tii.json` file, which is encrypted with the public key of Compute offer with ID 1. The public key is retrieved from blockchain. From now on, `solution-tii.json` can only be run on Compute offer 1, as no other providers are able to decrypt it. Let's execute newly created TII on Super Protocol:
 
 ```
 spctl workflows create --tee 1 --storage 13 --solution 3 \
