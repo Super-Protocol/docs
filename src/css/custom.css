@@ -1,10 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 :root {
-    --ifm-font-family-base: "Montserrat", Arial, sans-serif;
+    --ifm-font-family-base: "Poppins";
 }
 
+
+.admonitionIcon_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+  margin-right: 0 !important;
+}
+
+
 .navbar__title {
-    font-weight: 500;
-    font-size: 22px;
+    font-weight: 300;
+    font-size: 20px;
     margin-left: 6px;
+}
+
+
+[data-theme='dark'] {
+  --ifm-color-primary: #489cc7;
+  --ifm-color-primary-dark: #398fbb;
+  --ifm-color-primary-darker: #3687b0;
+  --ifm-color-primary-darkest: #2c6f91;
+  --ifm-color-primary-light: #5da7cd;
+  --ifm-color-primary-lighter: #67add1;
+  --ifm-color-primary-lightest: #86beda;
 }
