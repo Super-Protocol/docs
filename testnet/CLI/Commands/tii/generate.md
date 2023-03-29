@@ -6,6 +6,9 @@ sidebar_label: "generate"
 ---
 
 Generate TII from an uploaded resource
+что нужно чтобы нго сгенерировать
+prerequisites
+TII file is generated from a resource file that is created by upload command.
 
 ## Usage
 
