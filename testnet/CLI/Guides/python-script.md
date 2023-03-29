@@ -172,7 +172,8 @@ spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifes
 
 Now upload your solution to the storage:
 ```
-spctl files upload solution.tar.gz --output solution.json --filename solution.tar.gz
+spctl files upload solution.tar.gz --output solution.json \
+--filename solution.tar.gz --metadata ./metadata.json
 ```
 
 ## Prepare the data
