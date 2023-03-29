@@ -4,8 +4,6 @@ title: "Confidential execution"
 slug: "/cli/guides/confidential-execution"
 ---
 
-## Confidential execution
-
 You probably know that you can run your own solutions on the Super Protocol network. If not, head over to the [Execution of python script](/testnet/cli/guides/python-script) guide that explains how to prepare custom solutions and data.
 
 This article will elaborate further on the `solution` concept.
