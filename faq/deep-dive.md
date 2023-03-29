@@ -7,8 +7,8 @@ sidebar_position: 3
 custom_edit_url: null
 ---
 # Deep dive in Super Protocol
-## What is a TEE Provider?
-TEE Provider is an owner of a hardware that they offer as computing power on Super Protocol in exchange for payments and additional rewards.
+## What is a Compute Provider?
+Compute Provider is an owner of a hardware that they offer as computing power on Super Protocol in exchange for payments and additional rewards. The hardware has to be enabled with confidential computing through TEE.
 
 TEE stands for Trusted Execution Environment technology, which enables confidential computing and helps protect your data and code from any third party access and manipulation, even from the owner of the hardware themselves.
 
