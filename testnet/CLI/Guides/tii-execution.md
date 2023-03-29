@@ -4,31 +4,31 @@ title: "Confidential execution"
 slug: "/cli/guides/confidential-execution"
 ---
 
-You probably know that you can run your own solutions on the Super Protocol network. If not, head over to the [Execution of python script](/testnet/cli/guides/python-script) guide that explains how to prepare custom solutions and data.
+You might already be aware that you can run your custom solutions on the Super Protocol network. If not, check out the [Execution of python script](/testnet/cli/guides/python-script) guide, which explains how to prepare custom solutions and data.
 
-This article will elaborate further on the `solution` concept.
+This article delves deeper into the `solution` concept.
 
-To make sure, that the source code is unmodified and is executed in secure environment, a TII file is generated. For example, it is performed when the `workflows create` command is run with solution file passed as `--solution` option. This way the TII is generated in runtime and encrypted, so it cannot be accessed even by the workflow creator. 
+To guarantee that the source code remains unaltered and executes in a secure environment, a TII file is generated. For instance, this occurs when the `workflows create` command runs with the solution file passed using the `--solution` option. This process generates the TII at runtime and encrypts it, ensuring it remains inaccessible even to the workflow creator.
 
 :::note
 To learn more about TII and its execution, refer to our [whitepaper](/whitepaper/tee-provider#passing-parameters-to-the-loader)
 :::
 
-In some cases, you might want to generate a TII and have a full access to it. For example, to be able to share your solution with others but without revealing your source code. Remote storage resource is not an option as it gives read access to the original file, while the TII is encrypted by a hardware key and can only be decrypted in TEE area.
+In certain situations, you may want to generate a TII and maintain full control over it. For example, to be able to share your solution with others without disclosing your source code. Using a remote storage resource isn't viable since it allows read access to the original file, while the TII is encrypted with a hardware key and can only be decrypted in the TEE area.
 
-To generate a TII you need to have your solution [prepared](/testnet/cli/commands/solutions/prepare) and [uploaded](/testnet/cli/commands/files/upload) to remote storage. Note, that a generated `metadata.json` file plays crucial role, as it contains hash and mrenclave which verify the authenticity of the source.
+To generate a TII, your solution must be [prepared](/testnet/cli/commands/solutions/prepare) and [uploaded](/testnet/cli/commands/files/upload) to remote storage. Keep in mind that the generated `metadata.json` file is crucial, as it contains a hash and an mrenclave, which verify the source's authenticity.
 
-This example continues the [Execution of python script](/testnet/cli/guides/python-script) guide. When you are all set, run a command:
+This example builds upon the [Execution of python script](/testnet/cli/guides/python-script) guide. Once you're ready, execute a command:
 
 ```
 spctl tii generate --offer 1 --output ./solution-tii.json ./solution.json
 ```
 
-It will generate a `solution-tii.json` file, which is encrypted with the public key of Compute offer with ID 1. The public key is retrieved from blockchain. From now on, `solution-tii.json` can only be run on Compute offer 1, as no other providers are able to decrypt it. Let's execute newly created TII on Super Protocol:
+This command generates a `solution-tii.json` file encrypted with the public key of Compute offer with ID 1. The public key is retrieved from the blockchain. From this point forward, `solution-tii.json` can only run on Compute offer 1, as other providers cannot decrypt it. Now, let's execute the newly created TII on the Super Protocol:
 
 ```
 spctl workflows create --tee 1 --storage 13 --solution 3 \
 --solution ./solution-tii.json --data input-1.json --data input-2.json
 ```
 
-You can now securely share your `./solution-tii.json` so that other people can run the solution with own data.
+You can securely share your `./solution-tii.json` file, allowing others to run the solution with their own data.
