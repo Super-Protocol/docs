@@ -132,8 +132,6 @@ If this is your first time using SP Testnet, Metamask will ask you to approve th
 :::
 
 <img src={require('./../images/marketplace_16.png').default}/>
-<img src={require('./../images/marketplace_17.png').default}/>
-<img src={require('./../images/marketplace_18.png').default}/>
 
 <br/>
 <br/>
