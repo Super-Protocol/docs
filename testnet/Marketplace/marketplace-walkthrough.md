@@ -125,9 +125,23 @@ Either input your own passphrase or generate a new one. Then press the `Place Or
 <br/>
 <br/>
 
-:::info Step 7. Confirm transactions.
+:::info Step 7a. Confirm Metamask Spending Cap.
 
-Now you need to confirm the transaction in Metamask. If its window doesn't open automatically or hangs on the loader screen, open it manually from the browser extensions. Press the `Confirm` button.
+If this is your first time using SP Testnet, Metamask will ask you to approve the maximum spend allowed from this smart contract. [This feature](https://support.metamask.io/hc/en-us/articles/6055177143579-How-to-customize-token-approvals-with-a-spending-cap) is made by Metamask for your protection. But for purposes of Testnet you can set unlimited cap. Press "Use Default", then "Next" at the next screen, and "Approve" at the next screen again. You only have to do this once. 
+
+:::
+
+<img src={require('./../images/marketplace_16.png').default}/>
+<img src={require('./../images/marketplace_17.png').default}/>
+<img src={require('./../images/marketplace_18.png').default}/>
+
+<br/>
+<br/>
+<br/>
+
+:::info Step 7b. Confirm transactions.
+
+After you have set up the Spending Cap for this smart contract, further approvals are much easier: just press the `Confirm` button when Metamask prompts for approval. If its window doesn't open automatically or hangs on the loader screen, open it manually from the browser extensions. 
 
 :::
 
