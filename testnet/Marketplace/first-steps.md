@@ -4,23 +4,11 @@ title: "First Steps"
 slug: "/marketplace/first-steps/"
 ---
 
-## 1. Getting Access
 
-When you open the [Marketplace](https://marketplace.superprotocol.com/) for the first time, you will be asked to provide an access token. Please use the access token that you received in the Testnet invitation letter.
 
-<p>
-  <img width="303" height="213" src={require('./../images/access_token.png').default}/>
-</p>
+## 1. Setting up Metamask
 
-The token looks something like this: 
-
-> eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
-
-If your token doesn’t work, please contact us in [Discord](https://discord.com/invite/superprotocol). 
-
-## 2. Metamask Configuration
-
-Metamask login is not required to browse the Marketplace offers, but if you want to create orders, then you’ll need to configure Metamask for testnet. Please complete the steps below:
+Metamask login is not required to browse the Marketplace offers, but if you want to create orders, then you’ll need to configure Metamask specifically for Super Protocol testnet - your usual configuration will not work.  Please complete the steps below:
 
 
 :::info Step 1. Install Metamask.
@@ -110,6 +98,20 @@ Testnet account number looks something like this:
 
 It is also probably a good idea to rename this account: Super Protocol Testnet or anything you like. Just to make sure you’ll use the correct account when connecting to the Marketplace in the next section.
 
+## 2. Accessing Marketplace
+
+When you open the [Marketplace](https://marketplace.superprotocol.com/) for the first time, you will be asked to provide an access token. Please use the access token that you received in the Testnet invitation letter.
+
+<p>
+  <img width="303" height="213" src={require('./../images/access_token.png').default}/>
+</p>
+
+The token looks something like this: 
+
+> eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
+
+If your token doesn’t work, please contact us in [Discord](https://discord.com/invite/superprotocol). 
+
 ## 3. Connecting Wallet
 
 At this point we assume that you have done all the steps in the previous section and correctly configured Metamask.
@@ -160,6 +162,8 @@ In this case, open Metamask and disconnect this account.
 </p>
 
 And then again click on the `Connect Wallet` button in the Marketplace and select the account that you configured for Testnet. 
+
+
 
 ## 4. Receiving Tokens
 
