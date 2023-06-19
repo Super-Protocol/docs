@@ -32,36 +32,39 @@ Here are examples for several workflows.
 
 Create Image Classification workflow with sample images
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 4,3 --solution 2,1 --data 11,10 --data 12,11 --storage 18,17
+./spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 7,3 --solution 5,1 --data 13,9 --data 14,10 --storage 20,16
 ```
 
 Create Speech Recognition workflow with sample images
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 5,4 --solution 2,1 --data 13,12 --data 14,13 --storage 18,17
+./spctl workflows create --tee 2,2 --tee-slot-count 3 --solution 8,4 --solution 2,1 --data 15,11 --data 16,12 --storage 20,16
 ```
 
 Create Face Recognition workflow with sample images
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 6,5 --solution 2,1 --data 15,14 --data 16,15 --storage 18,17
+./spctl workflows create --tee 3,3 --tee-slot-count 3 --solution 9,5 --solution 2,1 --data 17,13 --data 18,14 --storage 20,16
 ```
 
 ## Offers and provided slots table
 |**Offer Id**|**Description**|**Slot Id**|
 | :- | :- | :- |
-|1|TEE Offer|1|
-|2|Python Base Image|1|
-|3|NodeJS Base Image|2|
-|4|Image Classification Solution|3|
-|5|Speech Recognition Solution|4|
-|6|Face Recognition Solution|5|
-|8|Tunnel Server Solution|7|
-|9|Tunnel Client Solution|8|
-|10|Hosting Launcher Solution|9|
-|11|Image Classification Dataset #1|10|
-|12|Image Classification Dataset #2|11|
-|13|Speech Recognition Dataset #1|12|
-|14|Speech Recognition Dataset #2|13|
-|15|Face Recognition Dataset #1|14|
-|16|Face Recognition Dataset #2|15|
-|17|Demo Static Website|16|
-|18|Storj DCS Offer|17|
+|1|TEE Offer #1|1|
+|2|TEE Offer #2|2|
+|3|TEE Offer #3|3|
+|4|TEE Offer #4|4|
+|5|Python Base Image|1|
+|6|NodeJS Base Image|2|
+|7|Image Classification Solution|3|
+|8|Speech Recognition Solution|4|
+|9|Face Recognition Solution|5|
+|10|Tunnel Server Solution|6|
+|11|Tunnel Client Solution|7|
+|12|Hosting Launcher Solution|8|
+|13|Image Classification Dataset #1|9|
+|14|Image Classification Dataset #2|10|
+|15|Speech Recognition Dataset #1|11|
+|16|Speech Recognition Dataset #2|12|
+|17|Face Recognition Dataset #1|13|
+|18|Face Recognition Dataset #2|14|
+|19|Demo Static Website|15|
+|20|Storj DCS Offer|16|
