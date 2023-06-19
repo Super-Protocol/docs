@@ -198,7 +198,7 @@ spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.g
 
 In order to run your prepared solution with the data on Super Protocol, run the following command:
 ```
-spctl workflows create --tee 1 --storage 13 --solution 3 \
+spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 13,12 --solution 4,3 \
 --solution solution.json --data input-1.json --data input-2.json
 ```
 

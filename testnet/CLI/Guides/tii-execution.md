@@ -27,7 +27,7 @@ spctl tii generate --offer 1 --output ./solution-tii.json ./solution.json
 This command generates a `solution-tii.json` file encrypted with the public key of Compute offer with ID 1. The public key is retrieved from the blockchain. From this point forward, `solution-tii.json` can only run on Compute offer 1, as other providers cannot decrypt it. Now, let's execute the newly created TII on the Super Protocol:
 
 ```
-spctl workflows create --tee 1 --storage 13 --solution 3 \
+spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 13,12 --solution 4,3 \
 --solution ./solution-tii.json --data input-1.json --data input-2.json
 ```
 
