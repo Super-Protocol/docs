@@ -22,8 +22,8 @@ spctl workflows create [OPTIONS]
 |`--tee <id,slotId>`|TEE offer `id` with the `slotId` (required)|
 |`--tee-slot-count <count>`|Number of using TEE slots (required)|
 |`--storage <id,slotId>`|Storage offer `id` (required)|
-|`--solution {<id,slotId> \| <path>}`|Solution offer `id` with `slotId` or resource/tii file `path` (required and accepts multiple values)|
-|`--data {<id,slotId> \| <path>}`|Data offer `id` with `slotId` or resource/tii file `path` (accepts multiple values)|
+|`--solution {<id,slotId> | <path>}`|Solution offer `id` with `slotId` or resource/tii file `path` (required and accepts multiple values)|
+|`--data {<id,slotId> | <path>}`|Data offer `id` with `slotId` or resource/tii file `path` (accepts multiple values)|
 |`--deposit <amount>`|`Amount` of the payment deposit in TEE tokens (if not specified, the minimum deposit required is used)|
 |`--config <path>`|`Path` to the configuration file. Defaoul value `./config.json`|
 
