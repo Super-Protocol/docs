@@ -37,12 +37,12 @@ Create Image Classification workflow with sample images
 
 Create Speech Recognition workflow with sample images
 ```
-./spctl workflows create --tee 2,2 --tee-slot-count 3 --solution 8,4 --solution 2,1 --data 15,11 --data 16,12 --storage 20,16
+./spctl workflows create --tee 2,2 --tee-slot-count 3 --solution 8,4 --solution 5,1 --data 15,11 --data 16,12 --storage 20,16
 ```
 
 Create Face Recognition workflow with sample images
 ```
-./spctl workflows create --tee 3,3 --tee-slot-count 3 --solution 9,5 --solution 2,1 --data 17,13 --data 18,14 --storage 20,16
+./spctl workflows create --tee 3,3 --tee-slot-count 3 --solution 9,5 --solution 5,1 --data 17,13 --data 18,14 --storage 20,16
 ```
 
 ## Offers and provided slots table
