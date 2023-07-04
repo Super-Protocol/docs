@@ -50,7 +50,7 @@ Set the following parameters and press `Save`.
 | Parameter | Value |
 | --- | ----------- |
 | Network Name | Matic Testnet Mumbai <br /><br />*Note. You can change the network name if you'd like.*|
-| New RPC URL | [https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206](https://matic.getblock.io/testnet/85482b49-c3cc-4a91-9db0-044560a53206)|
+| New RPC URL | [https://mumbai.polygon.superprotocol.com/hesoyam](https://mumbai.polygon.superprotocol.com/hesoyam)|
 | Chain ID | 80001 |
 | Currency Symbol | MATIC |
 | Block Explorer URL | [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com) |
