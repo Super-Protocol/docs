@@ -61,6 +61,17 @@ const config = {
                 ]
             }
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "community",
+                path: "community",
+                routeBasePath: "/community",
+                sidebarPath: require.resolve("./sidebarsCommunity.js"),
+                remarkPlugins: [math],
+                rehypePlugins: [katex],
+            },
+        ],
     ],
     presets: [
         [
@@ -118,6 +129,13 @@ const config = {
                         position: "left",
                         label: "Testnet",
                         docsPluginId: "testnet",
+                    },
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Community",
+                        docsPluginId: "community",
                     },
                 ],
             },
