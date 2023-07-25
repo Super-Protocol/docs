@@ -32,13 +32,15 @@ The initial goals of Phase A are:
 * Learn new skills with off-chain confidential computing;
 * Provide feedback to help us improve Super Protocol.
 
-Focus areas of interest:
+Focus areas of interest (may and should be combined):
 
-| Area | Description |
-| ----- | -- |
-| GameFi | Complex web applications (such as [Super Chat](/testnet/chat/)) that require external public IP (via tunnels).|
-| DeFi | Static web pages (HTML, CSS, JavaScript) that require external public IP (via tunnels).|
-| AI | Building Web3 oracles that provide a way for smart-contracts to exchange data with external off-chain sources. |
+| Areas | Description |
+| ---------- | -- |
+| Games | Web3 games: blockchains, smart-contracts, crypto, NFTs and other digital assets, DAO.|
+| DeFi | Decentralized finance and GameFi. Example: confidential off-chain computing for DEX.|
+| AI | This is a big one. Confidentiality will allow AI to train on sensitive personal data.|
+| Oracles | Confidentiality may enable oracles to process sensitive private data from off-chain.|
+| DID | Decentralized identity. Confidentiality may be used in identity processing such as KYC. |
 
 Super Protocol team will provide:
 * Computing resources for development of your apps;
@@ -53,13 +55,13 @@ Technical use cases:
 | Smart-contracts and oracles | Building Web3 oracles that provide a way for smart-contracts to exchange data with external off-chain sources. |
 | Smart-contracts with off-chain computing | Offload the heavy lifting to off-chain computing environments to remove limitations imposed by smart-contracts. |
 | Python-based solutions | Such as AI/ML Python scripts for computations on data that do not require internet access. |
-| Node.js-based solutions |  |
+| Node.js-based solutions | ? |
 
 ### How to apply?
 
 Please fill out this **application form**. 
 
-We anticipate an overwhelming number of requests, so please be patient. This will be a highly selective process. We expect to begin in early September 2023 with the core closed group of developers and then gradually add new members.
+We anticipate an overwhelming number of requests, so please be patient. This will be a highly selective process. We expect to start Phase A in early September 2023 with the core closed group of developers and then gradually add new members.
 
 Any questions may be addressed to our [Discord](https://discord.com/invite/superprotocol) server.
 
@@ -72,3 +74,4 @@ The centerpiece technology of Super Protocol is hardware protection of data in u
 This technology widely expands the scope of what is possible with development of Web3 applications (dApps). Because the so called 'enclave' (also Trusted Execution Environment, TEE) protects data in use from any unauthorized third parties, code may be executed openly without encryption. Super Protocol is natively integrated with blockchain and smart-contracts, so you may be run the whole app or just a service of a dApp, using off-chain computing to remove the limitations imposed by smart-contracts
 
 Super Protocol is fully decentralized, uncensored, and allows only machines enabled with Intel SGX processors. Confidentiality ensures that even the owners of the host machines will not have access to data executed in the TEE, meaning that you trust the verifiable technology, not some anonymous human or organization.
+
