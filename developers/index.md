@@ -1,10 +1,10 @@
 ---
 id: "index"
 title: "Developers"
-slug: "/"
+slug: "/developers/"
 ---
 
-# Community
+# For Developers
 
 ### What is the Super Dev Community?
 
@@ -12,27 +12,23 @@ Super Protocol is a Web3 infrastructure project, and as such it is only as good 
 
 We believe that decentralized confidential computing is the future foundation of Web3 and we are building a whole Web3 cloud service to prove it. We hope that you will believe it too.
 
-### Who are the candidates?
+### What is the goal here?
 
-Community building is a process. We invite you to apply to participate in Phase A.
+To be frank, the goal is to experiment. This is not meant to be a rigid, formal exercise. The Super Protocol solution is ready for third party apps - and we really want to see what you'll come up with!
 
-You are:
-* Passionate about decentralization and Web3 technologies;
-* Curious about confidential computing (you don't have to be an expert);
-* Experienced in developing Web3 apps and dApps;
-* Enthusiastic about learning and trying new things;
-* A team player, willing to share feedback, contribute and be patient about technical issues that inevitably arise during testnet;
-* Willing to be the pioneer at the edge of innovations and get the bragging rights!
-* Comfortable sharing your knowledge and helping new members of the community who will come after you (optional, but desirable).
+Specifically for this exercise we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines provided by different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. It's certainly the first of a kind. 
 
-### What is the goal?
+So, here's the idea: we want to gather a reasonably small group of Web3 developers, put them together in a closed Slack channel, and and see what comes out of it. It has elements of both an incubator and a hackathon: you have the ideas and the skills, and we have the confidential computing resources and technical knowledge of Super Protocol (of course). Let's create something awesome!
 
-The initial goals of Phase A are:
-* To build Web3 applications rooted in the principles of decentralization and confidentiality. It's your choice what to build;
-* Learn new skills with off-chain confidential computing;
-* Provide feedback to help us improve Super Protocol.
+We plan to begin this exercise around mid-September 2023 and have something to show by the end of the year.
 
-Focus areas of interest (may and should be combined):
+What do you say?
+
+### What are we building?
+
+It's up to you what to build - but we would prefer it to be Web3 related in some way and run inside a TEE.
+
+Here are some ideas from us:
 
 | Areas | Description |
 | ---------- | -- |
@@ -42,12 +38,7 @@ Focus areas of interest (may and should be combined):
 | Oracles | Confidentiality may enable oracles to process sensitive private data from off-chain.|
 | DID | Decentralized identity. Confidentiality may be used in identity processing such as KYC. |
 
-Super Protocol team will provide:
-* Computing resources for development of your apps;
-* Technical documentation on Super Protocol and simple example apps for reference;
-* Mentorship and guidance on building for decentralized confidential computing.
-
-Technical use cases:
+Also we are going to build sample mini-applications to be used as reference during development. Here are the technical use cases:
 
 | Use Case | Description |
 | -- | -- |
@@ -55,23 +46,24 @@ Technical use cases:
 | Smart-contracts and oracles | Building Web3 oracles that provide a way for smart-contracts to exchange data with external off-chain sources. |
 | Smart-contracts with off-chain computing | Offload the heavy lifting to off-chain computing environments to remove limitations imposed by smart-contracts. |
 | Python-based solutions | Such as AI/ML Python scripts for computations on data that do not require internet access. |
-| Node.js-based solutions | ? |
+| Node.js-based solutions | Various Node.js apps that do not require internet access. |
+
+### Who are the candidates?
+
+We would like you to be:
+* Passionate about decentralization and Web3 technologies.
+* Curious about confidential computing (you don't have to be an expert).
+* Experienced in developing Web3 apps and dApps.
+* Enthusiastic about learning and trying new things.
+* A team player, willing to share feedback, contribute and be patient about technical issues that inevitably arise during testnet.
+* Willing to be the pioneer at the edge of innovations and get the bragging rights!
+* Comfortable sharing your knowledge and helping new members of the community who will come after you (optional, but desirable).
 
 ### How to apply?
 
-Please fill out this **application form**. 
+Please fill out this **[application form](https://forms.gle/8VyGcVdtvESfuw1w7)**. 
 
-We anticipate an overwhelming number of requests, so please be patient. This will be a highly selective process. We expect to start Phase A in early September 2023 with the core closed group of developers and then gradually add new members.
+We anticipate an overwhelming number of requests, so please be patient. This will be a highly selective process. We plan to begin this exercise in mid-September 2023 with the core closed group of developers and then gradually add new members.
 
 Any questions may be addressed to our [Discord](https://discord.com/invite/superprotocol) server.
-
-### Why Super Protocol?
-
-[Super Protocol](https://superprotocol.com/) is a Web3 confidential cloud and marketplace, on a mission to provide confidentail computing resources to Web3 projects ([whitepaper](/whitepaper/)). Super Protocol focus is on computing, while data storage is outsourced to integrated decentralized storages. The Marketplace allows developers to monetize their solutions and data in confidential environment without the risk of losing control.
-
-The centerpiece technology of Super Protocol is hardware protection of data in use, also known as [confidential computing](https://www.intel.com/content/www/us/en/security/confidential-computing.html). 
-
-This technology widely expands the scope of what is possible with development of Web3 applications (dApps). Because the so called 'enclave' (also Trusted Execution Environment, TEE) protects data in use from any unauthorized third parties, code may be executed openly without encryption. Super Protocol is natively integrated with blockchain and smart-contracts, so you may be run the whole app or just a service of a dApp, using off-chain computing to remove the limitations imposed by smart-contracts
-
-Super Protocol is fully decentralized, uncensored, and allows only machines enabled with Intel SGX processors. Confidentiality ensures that even the owners of the host machines will not have access to data executed in the TEE, meaning that you trust the verifiable technology, not some anonymous human or organization.
 
