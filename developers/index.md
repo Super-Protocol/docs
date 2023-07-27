@@ -12,23 +12,17 @@ Super Protocol is a Web3 infrastructure project, and as such it is only as good 
 
 We believe that decentralized confidential computing is the future foundation of Web3 and we are building a whole Web3 cloud service to prove it. We hope that you will believe it too.
 
-### What is the goal here?
+### What's the plan?
 
-To be frank, the goal is to experiment. This is not meant to be a rigid, formal exercise. The Super Protocol solution is ready for third party apps - and we really want to see what you'll come up with!
+We have a private Slack channel for the Web3 developers who want to build apps on Super Protocol.
 
-Specifically for this exercise we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines provided by different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. It's certainly the first of a kind. 
+Our team will provide technical expertise and support: guides, instruments, sample mini-apps for reference, and confidential computing resources. 
 
-So, here's the idea: we want to gather a reasonably small group of Web3 developers, put them together in a closed Slack channel, and and see what comes out of it. It has elements of both an incubator and a hackathon: you have the ideas and the skills, and we have the confidential computing resources and technical knowledge of Super Protocol (of course). Let's make something awesome!
+To illustrate the capabilities of Super Protocol to the developer community we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines sourced from different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. 
 
-We plan to begin this exercise around mid-September 2023 and have something to show by the end of the year.
+It's up to you what to build - but it has to be Web3 related in some way and run inside a TEE.
 
-What do you say?
-
-### What are we building?
-
-It's up to you what to build - but we would prefer it to be Web3 related in some way and run inside a TEE.
-
-Here are some ideas from us:
+Here are some ideas from us (may and should be combined):
 
 | Areas | Description |
 | ---------- | -- |
@@ -38,7 +32,7 @@ Here are some ideas from us:
 | Oracles | Confidentiality may enable oracles to process sensitive private data from off-chain.|
 | DID | Decentralized identity. Confidentiality may be used in identity processing such as KYC. |
 
-Also we are going to build sample mini-applications to be used as reference during development. Here are the technical use cases:
+Also here are the technical use cases:
 
 | Use Case | Description |
 | -- | -- |
@@ -63,7 +57,7 @@ We would like you to be:
 
 Please fill out this **[application form](https://forms.gle/8VyGcVdtvESfuw1w7)**. 
 
-We anticipate an overwhelming number of requests, so please be patient. This will be a highly selective process. We plan to begin this exercise in mid-September 2023 with the core closed group of developers and then gradually add new members.
+We anticipate an overwhelming number of requests, so please be patient. This will be a highly selective process - our development team is relatively small and we can only support a limited number of developers at a time. We plan to begin in mid-September 2023 with a core group and gradually add new members.
 
 Any questions may be addressed to our [Discord](https://discord.com/invite/superprotocol) server.
 
