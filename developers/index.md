@@ -1,7 +1,7 @@
 ---
 id: "index"
-title: "Community"
-slug: "/community/"
+title: "Developers"
+slug: "/developers/"
 ---
 
 # Community
