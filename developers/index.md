@@ -1,7 +1,7 @@
 ---
 id: "index"
 title: "Developers"
-slug: "/developers/"
+slug: "/"
 ---
 
 # For Developers
@@ -18,7 +18,7 @@ To be frank, the goal is to experiment. This is not meant to be a rigid, formal 
 
 Specifically for this exercise we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines provided by different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. It's certainly the first of a kind. 
 
-So, here's the idea: we want to gather a reasonably small group of Web3 developers, put them together in a closed Slack channel, and and see what comes out of it. It has elements of both an incubator and a hackathon: you have the ideas and the skills, and we have the confidential computing resources and technical knowledge of Super Protocol (of course). Let's create something awesome!
+So, here's the idea: we want to gather a reasonably small group of Web3 developers, put them together in a closed Slack channel, and and see what comes out of it. It has elements of both an incubator and a hackathon: you have the ideas and the skills, and we have the confidential computing resources and technical knowledge of Super Protocol (of course). Let's make something awesome!
 
 We plan to begin this exercise around mid-September 2023 and have something to show by the end of the year.
 
