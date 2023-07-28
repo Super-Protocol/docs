@@ -16,11 +16,15 @@ We believe that decentralized confidential computing is the future foundation of
 
 We have a private Slack channel for the Web3 developers who want to build apps on Super Protocol.
 
-Our team will provide confidential computing resources, technical expertise and support: guides, instruments, and sample mini-apps for reference. 
-
-To showcase the capabilities of Super Protocol to the developer community we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines sourced from different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. 
-
 It's up to you what to build - but it has to be Web3 related in some way and run inside a TEE.
+
+Our team will provide confidential computing resources, technical expertise and support: guides, tutorials, instruments, SDK and application examples for reference. 
+
+:::note Web3 chat example app
+
+To showcase the capabilities of Super Protocol to the developer community we have built an example Web3 application: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). Have a look.
+
+:::
 
 Here are some ideas from us (may and should be combined):
 
@@ -32,7 +36,7 @@ Here are some ideas from us (may and should be combined):
 | Oracles | Confidentiality may enable oracles to process sensitive private data from off-chain.|
 | DID | Decentralized identity. Confidentiality may be used in identity processing such as KYC. |
 
-Also here are the technical use cases for which we will provide reference apps:
+Also here are the technical use cases for which we will provide example apps:
 
 | Use Case | Description |
 | -- | -- |
@@ -45,12 +49,10 @@ Also here are the technical use cases for which we will provide reference apps:
 ### Who are the candidates?
 
 We would like you to be:
-* Passionate about decentralization and Web3 technologies.
-* Curious about confidential computing (you don't have to be an expert).
 * Experienced in developing Web3 apps and dApps.
+* Curious about confidential computing (you don't have to be an expert).
 * Enthusiastic about learning and trying new things.
 * A team player, willing to share feedback, contribute and be patient about technical issues that inevitably arise during testnet.
-* Willing to be the pioneer at the edge of innovations and get the bragging rights!
 * Comfortable sharing your knowledge and helping new members of the community who will come after you (optional, but desirable).
 
 ### How to apply?
