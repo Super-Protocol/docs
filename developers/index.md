@@ -16,9 +16,9 @@ We believe that decentralized confidential computing is the future foundation of
 
 We have a private Slack channel for the Web3 developers who want to build apps on Super Protocol.
 
-Our team will provide technical expertise and support: guides, instruments, sample mini-apps for reference, and confidential computing resources. 
+Our team will provide confidential computing resources, technical expertise and support: guides, instruments, and sample mini-apps for reference. 
 
-To illustrate the capabilities of Super Protocol to the developer community we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines sourced from different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. 
+To showcase the capabilities of Super Protocol to the developer community we have built a proof-of-concept app: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html), on multiple machines sourced from different cloud providers. Chat data is saved and synchronized via decentralized storage ([Storj](https://www.storj.io/)). Tunnels provide public external IPs, improve load balancing, reduce DDOS attacks and hide inbound traffic from the host machines. 
 
 It's up to you what to build - but it has to be Web3 related in some way and run inside a TEE.
 
@@ -32,7 +32,7 @@ Here are some ideas from us (may and should be combined):
 | Oracles | Confidentiality may enable oracles to process sensitive private data from off-chain.|
 | DID | Decentralized identity. Confidentiality may be used in identity processing such as KYC. |
 
-Also here are the technical use cases:
+Also here are the technical use cases for which we will provide reference apps:
 
 | Use Case | Description |
 | -- | -- |
