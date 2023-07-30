@@ -56,26 +56,12 @@ You can also see in the `Restricted` tab that this Solution requires another off
 
 <br/>
 
-:::info Step 2a. Add Super Chat dataset
+:::info Step 2. Add Super Chat dataset
 Go to the `Data` tab and add the `Super Chat Config` offer to the order.
 
 :::
 
 <img src={require('./../images/marketplace_3.png').default}/>
-
-<br/>
-<br/>
-<br/>
-
-:::info Step 2b. Or - Add static web content.
-
-There is also an option to deploy your own static website. Press the `Order` button and then `Add Your Own` button. Upload your site in an archive. Alternatively, you can also select `Demo Static Website` from the `Data` tab to deploy our ready-made template.
-
-:::
-
-Before uploading your own data all files and folders must be packaged into a TAR or TAR.GZ (TGZ) archive. There must be an index.html file at the root of the archive. Do not group all data into an additional folder before archiving - the app won’t be able to read it. For reference you can download the Static Demo Website offer [here](https://github.com/Super-Protocol/datasets/blob/main/Demo%20Static%20Website/Demo%20Static%20Website.tar.gz?raw=true).
-
-<img src={require('./../images/marketplace_4.png').default}/>  
 
 <br/>
 <br/>
