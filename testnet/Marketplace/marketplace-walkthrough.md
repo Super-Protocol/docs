@@ -61,6 +61,8 @@ Go to the `Data` tab and add the `Super Chat Config` offer to the order.
 
 :::
 
+Note: The `Super Chat Config` data offer contains the necessary pre-configured settings to make deployment of Super Chat through the Marketplace more user-friendly. The actual chat solution deployed is `Tunnel Client: Super Chat` (see Step 10).
+
 <img src={require('./../images/marketplace_3.png').default}/>
 
 <br/>
@@ -159,7 +161,7 @@ If not forwarded to the order automatically, press the `All Orders` button and t
 
 :::info Step 9. Just wait, really.
 
-Processing takes about 15-20 minutes, depending on how many workloads the machine is processing. You might need to refresh the page to see the status change.
+Processing takes about 30 minutes, depending on how many workloads the machine is processing. You might need to refresh the page to see the status change.
 
 :::
 
