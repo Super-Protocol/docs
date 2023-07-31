@@ -31,9 +31,9 @@ Here are some ideas from us (may and should be combined):
 | Areas | Description |
 | ---------- | -- |
 | Games | Web3 games: blockchains, smart-contracts, crypto, NFTs and other digital assets, DAO.|
-| DeFi | Decentralized finance and GameFi. Example: confidential off-chain computing for DEX.|
 | AI | This is a big one. Confidentiality will allow AI to train on sensitive personal data.|
 | Oracles | Confidentiality may enable oracles to process sensitive private data from off-chain.|
+| DeFi | Decentralized finance and GameFi. Example: confidential off-chain computing for DEX, such as an order book.|
 | DID | Decentralized identity. Confidentiality may be used in identity processing such as KYC. |
 
 Also here are the technical use cases for which we will provide example apps:
