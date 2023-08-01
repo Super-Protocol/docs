@@ -23,7 +23,7 @@ Since this is testnet, there are some limitations on performance:
 
 Testnet Phase 3 is now taking applications to participate.
 
-- If you are a new user and have never applied to participate, please fill out the [Testnet Participation Form](https://superprotocol.typeform.com/testnet). 
+- If you are a new user and have never applied to participate, please fill out the [Testnet Participation Form](https://superprotocol.typeform.com/testnetm). 
 - If you have already filled the Testnet Participation Form: we will be in touch! Please be patient as we are processing an overwhelming amount of requests. To monitor network performance and workloads we are issuing Testnet invites in daily batches.
 - If you have previously applied for Testnet Phase 1 or 2, then there is no need to re-apply. We will send you the updated credentials shortly.
 - If you have already received the Testnet Phase 3 credentials, please read the [First Steps](/testnet/marketplace/first-steps/) and [Marketplace Walkthrough](/testnet/marketplace/marketplace-walkthrough/) guides to get you started.
