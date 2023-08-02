@@ -98,6 +98,12 @@ Testnet account number looks something like this:
 
 It is also probably a good idea to rename this account: Super Protocol Testnet or anything you like. Just to make sure you’ll use the correct account when connecting to the Marketplace in the next section.
 
+:::caution Do not use this account outside of Testnet!
+
+We have generated these ERC-20 accounts for use during Tesnet only. Please do put your own personal funds into it or use in any other way. Our team has the private keys to Testnet accounts.
+
+:::
+
 ## 2. Accessing Marketplace
 
 When you open the [Marketplace](https://marketplace.superprotocol.com/) for the first time, you will be asked to provide an access token. Please use the access token that you received in the Testnet invitation letter.
