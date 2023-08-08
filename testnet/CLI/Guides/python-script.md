@@ -30,7 +30,7 @@ Your solution will be using base Python image that is already available on Super
 Use the following CLI command to download the base image and save it to the current directory:
 
 ```
-spctl offers download-content 3
+spctl offers download-content 5
 ```
 
 Load the image to Docker:
@@ -204,9 +204,9 @@ spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 20,16 --solution 5
 
 The command above creates 2 orders:
 - TEE: a parent order for computational resources (TEE offer with ID=1). Only this particular node can decrypt your solution and data, and only in a trusted execution environment, so even the owner of that node themselves cannot access and modify the code, data, or results.
-- Solution: a sub-order for the base image (Solution offer with ID=3).
+- Solution: a sub-order for the base image (Solution offer with ID=5).
 
-Additionally, a sub-order for storage will be created after the calculation is complete to temporarily store the results (Storage offer with ID=13).
+Additionally, a sub-order for storage will be created after the calculation is complete to temporarily store the results (Storage offer with ID=20).
 
 At the end of execution the command will show the ID of the parent TEE order that is created. Use this ID to check the status of the order:
 ```

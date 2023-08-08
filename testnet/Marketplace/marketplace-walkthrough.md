@@ -4,27 +4,40 @@ title: "Marketplace Walkthrough"
 slug: "/marketplace/marketplace-walkthrough/"
 ---
 
-To better understand how Marketplace works, let’s take a step-by-step walkthrough.
-
-As an example we’ll use the scenario of hosting a static webpage in a confidential decentralized environment. 
-
-:::note Demo Video
-
-You can also watch a short narrated [demo video](https://youtu.be/vbEuh90ocJA) of this walkthrough.
-
-:::
+## 1. Understanding Offers
 
 To create an order we will need to select the necessary components. The basic component is an Offer. There are four types of offers in the Marketplace. You will need all four to create an order.
 
--  **Solutions** – the applications offered by the community and the Super Protocol team, as well as any required base images such as Python and JavaScript. 
+-  **Solutions** – the applications offered by the community and the Super Protocol team, any required base images such as Python and Node.js, as well as the tunnel clients and server. 
 
-- **Data** – data can be anything that is used by a solution: photo, audio, webpages, text, etc. You can use datasets from the Marketplace or upload your own.
+- **Data** – data can be anything that is used by a solution: webpages, configs, photo, audio, webpages, text, databases, etc. You can use datasets from the Marketplace or upload your own.
 
-- **Compute** – confidential computing resources, machines where the solutions and data are executed in the Trusted Execution Environment (TEE).
+- **Compute** – confidential computing resources, machines where the solutions and data are executed inside the Trusted Execution Environment (TEE).
 
 - **Storage** – decentralized storages where the offers and computation results are stored.
 
-## 1. Building the Order
+Here is the list of proper combinations of Solutions+Data currently available in the Marketplace:
+
+| Solution | Data | Description |
+| :-- | :-------- | 
+| Hosting Launcher | Super Chat Config|
+| Hosting Launcher | Demo Static Website| 
+| Hosting Launcher | Upload your own static web content| 
+| Face Recognition | Face Recognition Dataset #1<br/>Face Recognition Dataset #2<br/>Upload your own data (images)|
+| Speech Recognition | Speech Recognition Dataset #1<br/>Speech Recognition Dataset #2<br/>Upload your own data (audio files)| 
+| Image Classification | Image Classification Dataset #1<br/>Image Classification Dataset #2<br/>Upload your own data (images+table)|
+
+:::caution Attention!
+
+In a single order you can deploy **only one** dataset with Hosting Launcher. Either a dynamic app or a static webpage. For ML scripts you can use multiple datasets at the same time.
+
+:::
+
+## 2. Building the Order
+
+To better understand how Marketplace works, let’s take a step-by-step walkthrough.
+
+As an example we’ll deploy the [Super Chat app](/testnet/chat), a technological demo developed by the Super Protocol team to show how complex dynamic web apps can be run in decentralized confidential environments (TEE).
 
 Let's begin by going to the Marketplace at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/testnet/marketplace/first-steps/).
 
@@ -35,39 +48,22 @@ Go to the `Solutions` tab and click on the `Hosting Launcher` offer. It will ope
 
 :::
 
-Hosting Launcher is the app that enables the operations of decentralized confidential hosting.
-
 <img src={require('./../images/marketplace_1.png').default}/>
 
 <img src={require('./../images/marketplace_2.png').default}/>
 
-You can also see in the `Restricted` tab that this Solution requires another offer: a NodeJS base image. It is added to Order automatically.
+You can also see in the `Restricted` tab that this Solution requires another offer: a `NodeJS base image`. It is added to the order automatically.
 
 <br/>
 
-:::info Step 2a. Add a Dataset
-
-Now we need a website to host. Go to the `Data` tab and add the `Demo Static Website` offer to the order.
+:::info Step 2. Add Super Chat dataset
+Go to the `Data` tab and add the `Super Chat Config` offer to the order.
 
 :::
 
-The Demo Static Website is a simple static site that we made to illustrate the capabilities of the decentralized confidential hosting functionality. This version of Testnet only supports static sites, but in the coming months we will upgrade to hosting of full stack dynamic apps.
+Note: The `Super Chat Config` data offer contains the necessary pre-configured settings to make deployment of Super Chat through the Marketplace more user-friendly. The actual chat solution deployed is `Tunnel Client: Super Chat` (see Step 10).
 
 <img src={require('./../images/marketplace_3.png').default}/>
-
-<br/>
-<br/>
-<br/>
-
-:::info Step 2b. Add your own data.
-
-Alternatively, there is also an option to host your own static website. Press the `Order` button and then `Add Your Own` button. Upload your site in an archive.
-
-:::
-
-Before uploading your own data all files and folders must be packaged into a TAR or TAR.GZ (TGZ) archive. There must be an index.html file at the root of the archive. Do not group all data into an additional folder before archiving - the app won’t be able to read it. For reference you can download the Static Demo Website offer [here](https://github.com/Super-Protocol/datasets/blob/main/Demo%20Static%20Website/Demo%20Static%20Website.tar.gz?raw=true).
-
-<img src={require('./../images/marketplace_4.png').default}/>  
 
 <br/>
 <br/>
@@ -93,11 +89,11 @@ Finally, we complete the assembly of the order by adding the Storage provider. G
 
 :::
 
-Decentralized storage is where the results of the computation are placed (because the Compute provider does not store the results) and also where the solutions and data offers are stored by the providers. This architecture ensures complete decentralization.
+Decentralized storage is where the Super Chat app saves the encrypted chat rooms and conversations. This architecture ensures complete decentralization.
 
 <img src={require('./../images/marketplace_6.png').default}/>
 
-## 2. Creating Order
+## 3. Creating Order
 
 Now that all the offers have been added, it's time to create the order.
 
@@ -131,7 +127,7 @@ If this is your first time using SP Testnet, Metamask will ask you to approve th
 
 :::
 
-<img src={require('./../images/marketplace_16.png').default}/>
+<img src={require('./../images/marketplace_9a.png').default}/>
 
 <br/>
 <br/>
@@ -143,11 +139,11 @@ After you have set up the Spending Cap for this smart contract, further approval
 
 :::
 
-<img src={require('./../images/marketplace_9.png').default}/>
+<img src={require('./../images/marketplace_9b.png').default}/>
 
-## 3. Getting Results
+## 4. Getting Results
 
-At this point your order is either waiting in queue (status `New`) or is being executed (status `Processing`). The solutions (Hosting Launcher and NodeJS) and the data (Demo Static Website) are being transferred from StorJ to the Compute TEE and launched there in a confidential container. 
+At this point your order is either waiting in queue (status `New`) or is being executed (status `Processing`). 
 
 :::info Step 8. Go to the order.
 
@@ -165,7 +161,7 @@ If not forwarded to the order automatically, press the `All Orders` button and t
 
 :::info Step 9. Just wait, really.
 
-Processing takes about 15-20 minutes, depending on how many workloads the machine is processing. You might need to refresh the page to see the status change.
+Processing takes about 30 minutes, depending on how many workloads the machine is processing. You might need to refresh the page to see the status change.
 
 :::
 
@@ -177,37 +173,39 @@ Processing takes about 15-20 minutes, depending on how many workloads the machin
 
 :::info Step 10. Get result.
 
-The order changes to status `Done`. Press the `Get Result` button and enter your passphrase. You will see the link - this is your brand new website URL.
+The order changes to status `Done`. Press the `Get Result` button and enter your passphrase. You will see the link - this is your brand new Super Chat URL.
 
 :::
 
 Please keep in mind that for testnet purposes the site will remain ***online only for 72 hours***. But you are always free to create new orders.
 
-For types of orders othan hosting (Face Recognition, etc) you will find your results in the TAR.GZ archive that will download automatically.
-
 <img src={require('./../images/marketplace_13.png').default}/>
 
 <img src={require('./../images/marketplace_14.png').default}/>
 
-You will also see that other orders have been created. These are for the Tunnel Clients and Tunnel Servers, the tunneling network protocol that makes hosting work in a confidential environment (which cannot be accessed from the internet directly). The more Clients and Servers you have supporting your hosting - the more stable and fault resistant it is. 
+You will also see created orders for the `Tunnel Clients` and `Tunnel Servers`. Tunnel technology provides communication between public and private networks. Unlike the Hosting Launcher order, which is Done, you will see that the Tunnel orders are still processing - which simply means that they are running, this is normal.
 
-**Tunnel Client** – The client side of the tunnels. It is responsible for performance and contains the applications and data in a confidential enclave (TEE).
+For testnet purposes, the proportion is 2x2: two server tunnels and two client tunnels. This is the minimum to achieve decentralization.
 
-**Tunnel Server** – The server side of the tunnels. It is responsible for protection against DDOS attacks and holds the Public Ingress (public static IP) which routes to the Client.
+**Tunnel Client** – The client side of the tunnels. It is responsible for performance and runs with the applications and data in a confidential enclave (TEE). For instance, the Node.js app (such as Super Chat) is executed here, called Tunnel Client: Super Chat.
 
+**Tunnel Server** – The server side of the tunnels. It is responsible for load balancing, protection against DDOS attacks and holds the Public Ingress (public static IP) which routes to the Client.
+
+You can use the `Private key for created orders` to open the results of the Tunnel server orders and see the IP and the port of the server.
+
+<img src={require('./../images/marketplace_15.png').default}/>
+
+<img src={require('./../images/marketplace_16.png').default}/>
+
+
+<br/>
+<br/>
 <br/>
 
 :::info Step 11. Like and share!
 
-You are all set! Go to your new website and please don’t forget to tell the world all about it on Twitter (or anywhere else). We’d really appreciate it!
+You are all set! Go to your new domain and please don’t forget to tell the world all about it on Twitter (or anywhere else). We’d really appreciate it!
 
 :::
 
-<img src={require('./../images/marketplace_15.png').default}/>
-
-
-
-
-
-
-
+<img src={require('./../images/marketplace_17.png').default}/>

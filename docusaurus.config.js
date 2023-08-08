@@ -61,6 +61,17 @@ const config = {
                 ]
             }
         ],
+        [
+            "@docusaurus/plugin-content-docs",
+            {
+                id: "developers",
+                path: "developers",
+                routeBasePath: "/developers",
+                sidebarPath: require.resolve("./sidebarsDevelopers.js"),
+                remarkPlugins: [math],
+                rehypePlugins: [katex],
+            },
+        ],
     ],
     presets: [
         [
@@ -118,6 +129,13 @@ const config = {
                         position: "left",
                         label: "Testnet",
                         docsPluginId: "testnet",
+                    },
+                    {
+                        type: "doc",
+                        docId: "index",
+                        position: "left",
+                        label: "Developers",
+                        docsPluginId: "developers",
                     },
                 ],
             },
