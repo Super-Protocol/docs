@@ -22,3 +22,4 @@ Minecraft - популярная игра, любимая многими. В э�
 
 Например, можно создать директорию scripts и поместить туда следующий файл, назовём его `prepare-solution.sh`
 
+{% @github-files/github-code-block url="https://github.com/Super-Protocol/solutions/blob/067f4c0c5fdfbcb7bf7336b10c17355f24f7a29c/Tunnel%20Client/minecraft/scripts/prepare-solution.sh" %}
