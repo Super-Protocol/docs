@@ -7,6 +7,7 @@
     * [tunnel-clients](developers/Guides/tunnel-clients/README.md)
       * [minecraft](developers/Guides/tunnel-clients/minecraft/README.md)
         * [Предварительная настройка](developers/Guides/tunnel-clients/minecraft/minecraft.md)
+        * [Minecraft server](developers/Guides/tunnel-clients/minecraft/minecraft-server.md)
         * [Deploy в TEE](developers/Guides/tunnel-clients/minecraft/minecraft-1.md)
 * [faq](faq/README.md)
   * [DAO and Token](faq/dao-token.md)

@@ -25,7 +25,7 @@ Minecraft - популярная игра, любимая многими. В э�
 
 В качестве примера, мы будем использовать сервер [flying-squid](https://github.com/PrismarineJS/flying-squid) и клиент [prismarine-web-client](https://github.com/PrismarineJS/prismarine-web-client).
 
-Код проекта, процедуру сборки и запуска на локальном компьютере можно посмотреть [здесь](https://github.com/Super-Protocol/solutions/tree/mc/deploy/Tunnel%20Client/minecraft).
+Код, описание процедуры сборки и запуска проекта на локальном компьютере можно посмотреть [здесь](https://github.com/Super-Protocol/solutions/tree/mc/deploy/Tunnel%20Client/minecraft).
 
 ### Подготовка
 
