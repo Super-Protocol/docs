@@ -13,126 +13,97 @@ layout:
     visible: true
 ---
 
-# Предварительная настройка
+# Предварительная настройка и локальный запуск
 
-Minecraft - популярная игра, любимая многими. В этой статье мы представим простой гайд по запуску сервера и клиента Minecraft на платформе Super Protocol.
+Minecraft - популярная игра, любимая многими. В этом обзоре мы представим простой гайд по запуску сервера и клиента Minecraft на платформе Super Protocol.
 
-Здесь описывается пример, который демонстрирует возможность запуска динамических приложений в TEE, используя такие инструменты, как _Tunnel Client_ и _Tunnel Server_.
+Здесь описывается пример, который демонстрирует возможность запуска динамических приложений в TEE, используя такие инструменты, как Туннель Сервер и Туннель Клиент.
 
-С помощью этого руководства Вы можете запустить своё приложение в TEE, действуя шаг за шагом по аналогии.
+С помощью этого руководства Вы можете запустить своё приложение в TEE, действуя шаг за шагом, по аналогии.
 
-Для запуска игры необходим сервер и web-клиент к нему.
+Для запуска игры необходим Minecraft сервер и web-клиент к нему.
 
 В качестве примера, мы будем использовать сервер [flying-squid](https://github.com/PrismarineJS/flying-squid) и клиент [prismarine-web-client](https://github.com/PrismarineJS/prismarine-web-client).
 
-Код, описание процедуры сборки и запуска проекта на локальном компьютере можно посмотреть [здесь](https://github.com/Super-Protocol/solutions/tree/mc/deploy/Tunnel%20Client/minecraft).
+Для начала, нам необходимо загрузить исходный код [проекта](https://github.com/Super-Protocol/solutions):
 
-### Подготовка
-
-Создадим директорию `minecraft` и перейдём в неё:
-
-```sh
-$ mkdir minecraft
-$ cd minecraft
+```bash
+git clone https://github.com/Super-Protocol/solutions
+cd solutions
 ```
 
-Инициализируем проект TypeScript и установим основные зависимости.
-
-При инициализации проекта все поля можно пропустить, кроме поля `entry point (index.js)`, укажем путь к основному файлу: `src/app.ts`.
-
-```sh
-$ yarn init
-$ yarn add @types/node typescript 
-$ yarn add -D ts-node
-```
-
-Создадим файл `tsconfig.json`, необходимый tsc и ts-node для компиляции TypeScript в JavaScript и скопируем в него следующие настройки:
-
-```json
-{
-  "compilerOptions": {
-    "target": "ES2021",
-    "module": "commonjs",
-    "lib": ["es7"],
-    "composite": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
-    "strict": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "pretty": true,
-    "inlineSourceMap": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-  },
-  "include": [
-    "src", "test"],
-  "exclude": []
-}
-```
-
-Для удобства сборки и дальнейшей модификаций создадим дополнительный конфигурационный файл `tsconfig.build.json` и поместим в него следующие настройки:
-
-```json
-{
-  "compilerOptions": {
-    "rootDir": "src"
-  },
-  "extends": "./tsconfig.json",
-  "include": ["src"],
-  "exclude": ["**/*/__mocks__"]
-}
-```
-
-Создадим директорию для исходного кода и поместим в неё файл с тестовой командой:
-
-```sh
-$ mkdir src
-$ echo "console.log('Hello Minecraft!')" > src/app.ts
-```
-
-Соберём проект командой:
+Для безопасного запуска решения в TEE необходимо обеспечить защищённый канал между браузером пользователя и web-сервером клиента Minecraft. Для этого необходимо модифицировать файл клиента Minecraft [/client/server.js](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/minecraft/client/server.js) (строки 42-45), а именно, добавить https-сервер, в конструктор которого передать приватный ключ и сертификат. Делается это следующей командой:
 
 ```
-$ yarn tsc --build tsconfig.build.json
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.crt -sha256 -days 365 -nodes -subj "/CN=localhost"
 ```
 
-Теперь у нас появилась директория `dist` с JavaScript файлами `app.js` и `app.d.js`.
-
-Запустим:
+В результате у вас будет два файла: `cert.crt` и `key.pem` в каталоге, из которого вы выполнили эту команду. Чтобы поместить ключ и сертификат в наш файл `.env`, нам нужно преобразовать содержимое этих файлов в одну строку. Вы можете сделать это с помощью следующей команды:
 
 ```
-$ node ./dist/app.js
-# Hello Minecraft!
+$ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' cert.crt
+# -----BEGIN CERTIFICATE-----\nMIIFCTCCAvGgAwIBA...
 ```
 
-Для целей разработки можно запускать решение без предварительной компиляции:
-
 ```
-$ yarn ts-node ./src/app.ts
-# Hello Minecraft!
-# ✨  Done in 2.36s.
+$ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' key.pem
+# -----BEGIN PRIVATE KEY-----\nMIIJQwIBADANBgkqh...
 ```
 
-Для удобства запуска приложения предварительно настроим скрипты в файле `package.json`. Перед секцией "dependencies" добавим следующее:
+Кроме этого, необходимо переименовать файл `.env.example` в `.env` и скопировать в него соответствующие строки из двух предыдущих команд. В результате должно получиться примерно следующее:
 
 ```
-"scripts": {
-  "build": "tsc --build --force tsconfig.build.json",
-  "start": "node ./dist/app.js",
-  "dev": "ts-node ./src/app.ts"
-},
+HTTPS_PORT=8888
+TLS_CERT="-----BEGIN CERTIFICATE-----\nMIIFCTCCAvGgAwIBA..."
+TLS_KEY="-----BEGIN PRIVATE KEY-----\nMIIJQwIBADANBgkqh..."
 ```
 
-Клонируем репозиторий Minecraft-клиента в корневую директорию проекта и переименуем эту папку:
+> Обратите внимание, что значения TLS\_CERT и TLS\_KEY должны быть указаны в кавычках.
 
+После этого вы можете удалить файлы `cert.crt` и `key.pem`.
+
+Далее, в корне проекта, в директории `src`, находится файл server.js, который запускает Minecraft сервер и клиент, создавая два потока.
+
+```javascript
+runWorker(resolve(__dirname, "..", "server/mc-server.js"));
+runWorker(resolve(__dirname, "..", "client/server.js"));
 ```
-$ git clone https://github.com/PrismarineJS/prismarine-web-client.git
-$ mv prismarine-web-client client
+
+Теперь мы можем установить все зависимости и запустить приложение в `dev mode`:
+
+```bash
+yarn dependencies
+yarn build:all
+yarn dev
 ```
+
+Или вы можете использовать docker-compose для запуска решения в контейнере:
+
+```yaml
+version: '3.8'
+
+services:
+  sp-minecraft:
+    image: node:16-buster
+    container_name: sp-minecraft
+    platform: linux/amd64
+    env_file:
+      - .env
+    volumes:
+      - ./:/sp/run
+    entrypoint: ["/bin/sh","-c"]
+    command:
+      - |
+        yarn --cwd /sp/run build:all 
+        yarn --cwd /sp/run start
+    ports:
+      - "8888:8888"
+```
+
+```bash
+docker-compose up
+```
+
+UI будет доступен по адресу: [https://localhost:8888/](https://localhost:8888/)
 
 На этом предварительная настройка закончена.
