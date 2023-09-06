@@ -55,33 +55,6 @@ layout:
 
 Для её запуска необходим `config.json`, который кодируется в формат base64 и, так же, помещается в GitHub Secrets под именем `TESTNET_SPCTL_CONFIG_BASE64`. Описание структуры файла можно посмотреть в документации [здесь](https://docs.superprotocol.com/testnet/cli/configuration/), там же можно скачать пример файла. В итоге, у Вас должно получиться примерно следующее:
 
-<pre class="language-json"><code class="lang-json">
-{
-   "backend":{
-      "url":"https://bff.dev.superprotocol.com/graphql",
-      "accessToken":"Ваш личный токен доступа из электронного письма с приглашением Testnet"
-   },
-   "blockchain":{
-      "rpcUrl":"https://mumbai.polygon.superprotocol.com/over9000",
-      "smartContractAddress":"0x988442478D67a6fE93811Bc1bdA9a3EcAc516008",
-      "accountPrivateKey":"Ваш личный закрытый ключ из письма-приглашения Testnet"
-   },
-   "storage":{
-      "type":"STORJ",
-      "bucket":"inputs-dev",
-      "writeAccessToken":"Токен для предоставление доступа к STORJ на запись",
-      "readAccessToken":"Токен для предоставление доступа к STORJ на чтение"
-   },
-   "workflow":{
-      "resultEncryption":{
-         "algo":"ECIES",
-         "key":"Приватный ключ для шифрования результатов заказа. Используйте команду генерирования ключа рабочих процессов, чтобы сгенерировать этот ключ",
-         "encoding":"base64"
-      }
-   }
-}
-</code></pre>
-
 Закодировать `config.json` в формат base64 можно командой:
 
 ```bash
