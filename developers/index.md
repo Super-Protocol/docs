@@ -1,7 +1,8 @@
 ---
 id: "index"
-title: "Developers"
+title: "For Developers"
 slug: "/"
+sidebar_position: 0
 ---
 
 # For Developers
