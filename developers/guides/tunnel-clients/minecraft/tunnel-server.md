@@ -60,23 +60,23 @@ layout:
 <pre class="language-json"><code class="lang-json">{
     "backend": {
       "url": "https://bff.dev.superprotocol.com/graphql",
-      "accessToken": "<a data-footnote-ref href="#user-content-fn-1">Ваш личный токен доступа из электронного письма с приглашением Testnet</a>"
+      "accessToken": "Ваш личный токен доступа из электронного письма с приглашением Testnet"
     },
     "blockchain": {
       "rpcUrl": "https://mumbai.polygon.superprotocol.com/over9000",
       "smartContractAddress": "0x988442478D67a6fE93811Bc1bdA9a3EcAc516008",
-      "accountPrivateKey": "<a data-footnote-ref href="#user-content-fn-2">Ваш личный закрытый ключ из письма-приглашения Testnet</a>"
+      "accountPrivateKey": "Ваш личный закрытый ключ из письма-приглашения Testnet"
     },
     "storage": {
       "type": "STORJ",
       "bucket": "inputs-dev",
-      "writeAccessToken": "<a data-footnote-ref href="#user-content-fn-3">Токен для предоставление доступа к STORJ на запись</a>",
-      "readAccessToken": "<a data-footnote-ref href="#user-content-fn-4">Токен для предоставление доступа к STORJ на чтение</a>"
+      "writeAccessToken": "Токен для предоставление доступа к STORJ на запись",
+      "readAccessToken": "Токен для предоставление доступа к STORJ на чтение"
     },
     "workflow": {
       "resultEncryption": {
         "algo": "ECIES",
-        "key": "<a data-footnote-ref href="#user-content-fn-5">Приватный ключ для шифрования результатов заказа. Используйте команду генерирования ключа рабочих процессов, чтобы сгенерировать этот ключ</a>",
+        "key": "Приватный ключ для шифрования результатов заказа. Используйте команду генерирования ключа рабочих процессов, чтобы сгенерировать этот ключ",
         "encoding": "base64"
       }
     }

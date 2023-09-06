@@ -29,7 +29,7 @@ vars.TUNNEL_SERVER_MRENCLAVE=22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd
 
 В результате, в GitHub Secrets и в GitHub Variables должно быть следующее содержимое:
 
-<figure><img src="../../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Secrets</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1).png" alt="" /><figcaption><p>Secrets</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Variables</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt="" /><figcaption><p>Variables</p></figcaption></figure>
 

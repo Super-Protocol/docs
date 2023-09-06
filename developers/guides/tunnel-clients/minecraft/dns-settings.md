@@ -37,4 +37,4 @@ layout:
 
 Проконтролировать запущенные ордеры можно на маркетплейсе Super Protocol.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Marketplace</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt="" /><figcaption><p>Marketplace</p></figcaption></figure>
