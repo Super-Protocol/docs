@@ -33,8 +33,8 @@ layout:
 Запись типа TXT      "r=superprotocol;ip=<IP сервера>"
 ```
 
-После этого, решение будет доступно по Вашему доменному имени...
+После этого, решение будет доступно по Вашему доменному имени.
 
 Проконтролировать запущенные ордеры можно на маркетплейсе Super Protocol.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt="" /><figcaption><p>Marketplace</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Marketplace</p></figcaption></figure>
