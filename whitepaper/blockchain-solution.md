@@ -1,7 +1,8 @@
 ---
 id: blockchain-solution
 title: Blockchain Solution
-slug: /blockchain-solution
+slug: /bloc
+  kchain-solution
 sidebar_position: 14
 ---
 
@@ -9,7 +10,7 @@ sidebar_position: 14
 
 ### Overview
 
-![](%7Brequire\('./images/blockchain-solution-01.png'\).default%7D)
+![](images%2Fblockchain-solution-01.png)
 
 To ensure order processing, the blockchain environment provides an infrastructure with several smart contracts:
 
@@ -122,7 +123,7 @@ This smart contract contains information about providers, their properties, as w
 
 Smart contract methods allow the registration of a provider and the modification of its properties.
 
-![](%7Brequire\('./images/blockchain-solution-02.png'\).default%7D)
+![](images%2Fblockchain-solution-02.png)
 
 To be able to register, the provider accesses the provider registry smart contract and invokes the registration method. The provider has to pay the security deposit in the first place. If the security deposit decreases below the required level during the process (in cases where penalties have been applied and no replenishment has been made), all of the provider's offers cannot be used to create and fulfill the orders.
 
@@ -132,7 +133,7 @@ The _returnSecurityDeposit_ method allows the withdrawal of the entire remaining
 
 The Slot, Option, and Usage entities are used to solve the problem of resource provisioning and utilization, as well as pricing:
 
-![](%7Brequire\('./images/Slots.png'\).default%7D)
+![](images%2FSlots.png)
 
 #### Slot
 
@@ -206,8 +207,7 @@ This smart contract contains offers for the use of the TEE resource. In the Supe
 
 Smart contract methods allow the provider to create a TEE offer, modify it, or mark it as disabled. For registering each provider's TEE offer, a portion _TEEOfferSecDeposit_ of the security deposit is blocked. This is to ensure protection against spam attacks and operation of the TEE consensus protocol. If the available deposit amount is insufficient, the offer will not be registered.
 
-![](%7Brequire\('./images/blockchain-solution-03.png'\).default%7D)
-
+![](images%2Fblockchain-solution-03.png)
 In order to add a new TEE offer, the provider accesses the TEE offer smart contract and invokes the offer creation method.
 
 To provide hardware, the provider has to define a maximum configuration _hardwareInfo_, for example this could be as follows:
@@ -289,7 +289,7 @@ Smart contract methods allow the provider to create a script execution offer, mo
 
 _**In an offer, you can change everything except for the hash, if it is already set.**_
 
-![](%7Brequire\('./images/blockchain-solution-04.png'\).default%7D)
+![](images%2Fblockchain-solution-04.png)
 
 For registering each provider's offer, a portion of the security deposit _offerSecDeposit_ is blocked. This is to ensure protection against spam attacks. If the available deposit amount is insufficient, the offer will not be registered.
 
@@ -301,7 +301,7 @@ If _resultUrl_ is set, then smart contract immediately executes the order.
 
 Let us consider an example of offer dependencies based on a system of restrictions, starting from the basic data offer:
 
-![](%7Brequire\('./images/blockchain-solution-05.png'\).default%7D)
+![](images%2Fblockchain-solution-05.png)
 
 The following restrictions are shown on the diagram:
 
@@ -315,7 +315,7 @@ This chain of possible restrictions allows the provided data to be processed wit
 
 In terms of offer groups, only the following restrictions are possible:
 
-![](%7Brequire\('./images/blockchain-solution-06.png'\).default%7D)
+![](images%2Fblockchain-solution-06.png)
 
 1. The INPUT offer can restrict the list of supported PROCESSING, INPUT, and OUTPUT offers
 2. PROCESSING (TEE) and OUTPUT offers cannot impose restrictions
@@ -324,7 +324,7 @@ In terms of offer groups, only the following restrictions are possible:
 
 In order to execute a provider offer, an order should be created by using the appropriate smart contract. The order creator must choose offers also taking into account all restrictions and requirements the order possesses and pay a security deposit, which will be held for the duration of the order execution. During the order creation, the execution configuration and additional options are formed. The prices are copied from the chosen offers:
 
-![](%7Brequire\('./images/OrderSlots.png'\).default%7D)
+![](images%2FOrderSlots.png)
 
 #### Calculation of minimum deposit for an order
 
@@ -344,7 +344,7 @@ In the event that an order is created with suborders, the minimum deposit is equ
 
 In this case, the total deposit to be held is calculated according to the formula below:
 
-![](images/blockchain-solution-formula-01.svg)
+![](images%2Fblockchain-solution-formula-01.svg)
 
 Smart contracts control only the fact that the deposit is not less than _orderMinimumDeposit_, the rest of the control is done through the SDK and rental systems.
 
@@ -422,7 +422,7 @@ The results of the execution or encountered errors are later added up to the ord
 | **getProviderRating(guid providerId) public returns (fixed128x18)**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | any                                                      | SDK                    |
 | Retrieving a provider rating based on the rating formula (described below).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |                                                          |                        |
 
-![](%7Brequire\('./images/blockchain-solution-07.png'\).default%7D)
+![](images%2Fblockchain-solution-07.png)
 
 Smart contract methods allow anyone to create orders. When additional orders related to the main order are created, the _createSubOrder_ method is called with the main order ID passed as one of the parameters. This allows users to avoid paying for each sub-order as _Deposit_ already includes these fees.
 
@@ -430,7 +430,7 @@ The methods also allow both the provider to set a final order Price that does no
 
 When creating a sub-order, the following procedure must be considered:
 
-![](%7Brequire\('./images/blockchain-solution-08.png'\).default%7D)
+![](images%2Fblockchain-solution-08.png)
 
 1. The PROCESSING (TEE) group can only have a single OUTPUT sub-order, which is specified in the _args.outputOffer_ offer argument.
 2. The PROCESSING (TEE) group can have any INPUT sub-order, which is specified in the _args.inputOffers_ offer list. However, INPUT offer restrictions must be respected.
@@ -442,13 +442,13 @@ When creating a sub-order, the following procedure must be considered:
 
 During processing of the order, its status is subject to change according to the diagram below. Also, to indicate the lack of a deposit, the _AwaitingPayment_ flag is used.
 
-![](%7Brequire\('./images/blockchain-solution-09.png'\).default%7D)
+![](images%2Fblockchain-solution-09.png)
 
 #### Workflow
 
 When creating a complex order with dependencies, the customer creates the main order (normally for TEE) and sub-orders. The customer sets up an offer for saving the result of the order in _args.outputOffer_. If the main order is created for TEE, the customer also configures all INPUT offers in the _args.inputOffers_ field:
 
-![](%7Brequire\('./images/OutputOffer.png'\).default%7D)
+![](images%2FOutputOffer.png)
 
 Let us consider different scenarios for using the ordering system.
 
@@ -456,7 +456,7 @@ Let us consider different scenarios for using the ordering system.
 
 For hardware rentals, an order is created for the TEE offer and _args.outputOffer_ specifies the offer for OUTPUT, where the results will be uploaded to if needed. The number of rental minutes is also specified, and the customer pays for the entire period of time.
 
-![](%7Brequire\('./images/blockchain-solution-11.png'\).default%7D)
+![](images%2Fblockchain-solution-11.png)
 
 Since we cannot rent a TEE alone, we have to choose a solution offer to run in it. If the solution uses a base image, such as Alpine, which is also represented as a solution offer, you need to specify it in _args.inputOffers_ as well. You can also pass a link to your own solution in the parameters instead of using solution offers.
 
@@ -475,10 +475,10 @@ If you need to create an order for a TEE offer, and there are several candidates
 
 1.  Firstly, all offers matching the TEE parameters are searched for. To do this, all properties of the INPUT solutions are analyzed, and their values are added together. These values must be less than those in the TEE offer:
 
-    ![](%7Brequire\('./images/blockchain-solution-12.png'\).default%7D)
+    ![](images%2Fblockchain-solution-12.png)
 2.  Secondly, in order to check TEE availability, the algorithm looks for the required number of available slots among suitable devices. If there are free slots available, this TEE offer can be used:
 
-    ![](%7Brequire\('./images/blockchain-solution-13.png'\).default%7D)
+    ![](images%2Fblockchain-solution-13.png)
 
     If there are no available offers, the least loaded candidates are selected.
 3. Thirdly, if there is more than one candidate, the selection is carried out randomly, so the TEE order is created, and the TEE is rented out.
@@ -497,7 +497,7 @@ For this purpose, an order is created at the SDK level for the desired device wi
 
 For example, let us take a look at the Big Data Processing order cycle. Here is the diagram of the sequence of activities:
 
-![](%7Brequire\('./images/blockchain-solution-14.png'\).default%7D)
+![](images%2Fblockchain-solution-14.png)
 
 Initially, the following participants are registered in the blockchain smart contract system:
 
@@ -527,13 +527,13 @@ The TEE provider then publishes the result and completes the order, and also the
 
 A complete structure of the big data processing order may look as follows:
 
-![](%7Brequire\('./images/blockchain-solution-15.png'\).default%7D)
+![](images%2Fblockchain-solution-15.png)
 
 Each EXECUTION and INPUT offer here requires an OUTPUT to save the results of the corresponding order.
 
 Let us take a closer look at the stages of interaction between the entities in this example:
 
-![](%7Brequire\('./images/blockchain-solution-16.png'\).default%7D)
+![](images%2Fblockchain-solution-16.png)
 
 When a data processing customer creates an order on the blockchain network, they order TEE in the first place and from there create sub-orders for data and solution. The TEE order gets blocked until the sub-orders are successfully completed.
 
@@ -545,17 +545,17 @@ The order for TEE is processed then. After receiving the order, the TEE executio
 
 Once executed, the results are encrypted and saved in the storage. The key itself is encrypted with the customer's public key using the DHIES algorithm. The TEE execution controller completes the order by storing the encrypted data link for the data provider:
 
-![](%7Brequire\('./images/blockchain-solution-17.png'\).default%7D)
+![](images%2Fblockchain-solution-17.png)
 
 ### Payment mechanism
 
-![](%7Brequire\('./images/blockchain-solution-18.png'\).default%7D)
+![](images%2Fblockchain-solution-18.png)
 
 There is a deferred payment mechanism. It is configured within the smart contract of Super Protocol and usually equates to three months. This is necessary to ensure the continuous quality of service providers. Also, deferred payments are used to automatically replenish the security deposit when penalties are paid out of it.
 
 ### Penalty mechanism
 
-![](%7Brequire\('./images/blockchain-solution-19.png'\).default%7D)
+![](images%2Fblockchain-solution-19.png)
 
 During the result update performed by the provider, the smart contract checks the error code and issues a penalty, if necessary. The penalty is paid out of the security deposit. Afterwards, the security deposit is automatically replenished by the deferred payments. It can also be replenished by calling the corresponding function in the basic Super Protocol smart contract.
 
@@ -567,7 +567,7 @@ Each provider is responsible for the fulfillment of the assigned order. The prov
 
 The smart contract for orders not only supports the assignment of a rating to a provider based on completed orders but is also capable of changing it, if necessary. This is done based on the lower bound of the [Wilson confidence interval](https://en.wikipedia.org/wiki/Binomial\_proportion\_confidence\_interval#Wilson\_score\_interval) for the Bernoulli parameter. The formula for the bounds of the confidence interval is the following:
 
-![](images/blockchain-solution-formula-02.svg)
+![](images%2Fblockchain-solution-formula-02.svg)
 
 Here ![](images/blockchain-solution-formula-03.svg) is the fraction of positive scores, ![](images/blockchain-solution-formula-04.svg) is the quantile ![](images/blockchain-solution-formula-05.svg) of the standard normal distribution, and ![](images/blockchain-solution-formula-06.svg) is the total number of scores.
 
@@ -615,7 +615,7 @@ The user can work with either network through the same smart contract interface.
 
 #### Sidechain solution
 
-![](%7Brequire\('./images/blockchain-solution-20.png'\).default%7D)
+![](images%2Fblockchain-solution-20.png)
 
 If Sidechain solutions are used, the entire logic is represented as an overlay on top of the blockchains. In order to pay for services in the Super Protocol system, the consumer uses tokens on the root network and wrapped tokens provided by Sidechain gateways on the child network.
 
@@ -623,6 +623,6 @@ In the case of Ethereum and Polygon networks, the [State Transfer](https://docs.
 
 #### Parachain
 
-![](%7Brequire\('./images/blockchain-solution-21.png'\).default%7D)
+![](images%2Fblockchain-solution-21.png)
 
 In systems with parallel blockchain networks (Parachains), the interaction is already implemented at the level of the internal validation network (relay chain), so there is no need to wrap the token, and only RPC messages are transferred there. The [Polkadot](https://polkadot.network/technology/) network is one of the clearest examples of such solutions.
