@@ -1,8 +1,7 @@
 ---
 id: blockchain-solution
 title: Blockchain Solution
-slug: /bloc
-  kchain-solution
+slug: /blockchain-solution
 sidebar_position: 14
 ---
 
