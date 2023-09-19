@@ -6,7 +6,7 @@
   * [Guides](developers/guides/README.md)
     * [tunnel-clients](developers/guides/tunnel-clients/README.md)
       * [minecraft](developers/guides/tunnel-clients/minecraft/README.md)
-        * [Предварительная настройка и локальный запуск](developers/guides/tunnel-clients/minecraft/run-local.md)
+        * [Предварительная настройка и локальный запуск](developers/guides/tunnel-clients/minecraft/run-local.mdx)
         * [Подготовка решения для деплоя в TEE](developers/guides/tunnel-clients/minecraft/prepare.md)
         * [Механизм туннелирования](developers/guides/tunnel-clients/minecraft/tunnels.md)
         * [Туннель Сервер](developers/guides/tunnel-clients/minecraft/tunnel-server.md)

@@ -1,15 +1,8 @@
 ---
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+id: "dns-settings"
+title: "Настройка DNS-записей"
+slug: "/guides/tunnel-clients/minecraft/dns-settings"
+sidebar_position: 6
 ---
 
 # Настройка DNS-записей
@@ -37,4 +30,4 @@ layout:
 
 Проконтролировать запущенные ордеры можно на маркетплейсе Super Protocol.
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt="" /><figcaption><p>Marketplace</p></figcaption></figure>
+![marketplace.png](images%2Fmarketplace.png)

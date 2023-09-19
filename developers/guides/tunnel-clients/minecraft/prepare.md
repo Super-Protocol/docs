@@ -1,16 +1,8 @@
 ---
-description: Introduction
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+id: "prepare"
+title: "Подготовка решения для деплоя в TEE"
+slug: "/guides/tunnel-clients/minecraft/prepare"
+sidebar_position: 2
 ---
 
 # Подготовка решения для деплоя в TEE
@@ -19,7 +11,25 @@ layout:
 
 Например, можно создать директорию scripts и поместить туда следующий файл, назовём его `prepare-solution.sh`
 
-{% @github-files/github-code-block url="https://github.com/Super-Protocol/solutions/blob/067f4c0c5fdfbcb7bf7336b10c17355f24f7a29c/Tunnel%20Client/minecraft/scripts/prepare-solution.sh" %}
+```bash
+#!/bin/bash
+set -e
+
+solution_path=$1
+
+# cd to one directory up of current script
+REAL_PATH=$(realpath "$0")
+LOCAL_PATH=$(dirname "$REAL_PATH")
+cd "$LOCAL_PATH"
+cd ..
+
+echo "Install dependencies for client & sever module"
+yarn dependencies-scripts
+yarn build:all
+
+echo "Copy files"
+cp -R dist node_modules package.json yarn.lock server client "$solution_path"
+```
 
 Для запуска скрипта ему необходимо передать параметр, путь к директории, куда будут копироваться файлы, необходимые для запуска в TEE.
 

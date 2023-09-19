@@ -1,16 +1,8 @@
 ---
-description: Introduction
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+id: "tunnels"
+title: "Механизм туннелирования"
+slug: "/guides/tunnel-clients/minecraft/tunnels"
+sidebar_position: 3
 ---
 
 # Механизм туннелирования
@@ -51,15 +43,15 @@ layout:
 
 1. Разворачивает локальный HTTPS сервер туннелируемого решения. Для этого решение должно предоставлять файл `server.js` в одной из папок входных данных:
 
-```bash
-/content, /content/dist, /content/build
-```
+    ```bash
+    /content, /content/dist, /content/build
+    ```
+    
+    и принимать следующие переменные окружения:
 
-и принимать следующие переменные окружения:
-
-* HTTPS\_PORT. Порт, на котором нужно развернуть локальный HTTPS сервер, к которому будет установлено туннелируемое подключение.
-* TLS\_CERT. Сертификат HTTPS сервера.
-* TLS\_KEY. Приватный ключ HTTPS сервера.
+   * HTTPS\_PORT. Порт, на котором нужно развернуть локальный HTTPS сервер, к которому будет установлено туннелируемое подключение.
+   * TLS\_CERT. Сертификат HTTPS сервера.
+   * TLS\_KEY. Приватный ключ HTTPS сервера.
 
 2. Считывает сертификат домена и токен для подключения к серверу из файла конфигурации `config.json`.
 3. Присоединяется к Туннель Серверу и передает ему токен и сертификат домена с приватным ключом для регистрации и обработки входных подключений.

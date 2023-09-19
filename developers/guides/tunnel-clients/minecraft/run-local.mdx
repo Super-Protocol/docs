@@ -1,25 +1,11 @@
 ---
-description: Introduction
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
+id: "run-local"
+title: "Предварительная настройка и локальный запуск"
+slug: "/guides/tunnel-clients/minecraft/run-local"
+sidebar_position: 1
 ---
 
 # Предварительная настройка и локальный запуск
-
-Minecraft - популярная игра, любимая многими. В этом обзоре мы представим простой гайд по запуску сервера и клиента Minecraft на платформе Super Protocol.
-
-Здесь описывается пример, который демонстрирует возможность запуска динамических приложений в TEE, используя такие инструменты, как Туннель Сервер и Туннель Клиент.
-
-С помощью этого руководства Вы можете запустить своё приложение в TEE, действуя шаг за шагом, по аналогии.
 
 Для запуска игры необходим Minecraft сервер и web-клиент к нему.
 
@@ -94,7 +80,7 @@ services:
     entrypoint: ["/bin/sh","-c"]
     command:
       - |
-        yarn --cwd /sp/run build:all 
+        yarn --cwd /sp/run build:all
         yarn --cwd /sp/run start
     ports:
       - "8888:8888"
