@@ -49,7 +49,9 @@ TLS_CERT="-----BEGIN CERTIFICATE-----\nMIIFCTCCAvGgAwIBA..."
 TLS_KEY="-----BEGIN PRIVATE KEY-----\nMIIJQwIBADANBgkqh..."
 ```
 
-> Обратите внимание, что значения TLS\_CERT и TLS\_KEY должны быть указаны в кавычках.
+<AdmonitionWrapper type="caution">
+Значения TLS_CERT и TLS_KEY должны быть указаны в кавычках.
+</AdmonitionWrapper>
 
 После этого можно удалить файлы `cert.crt` и `key.pem`.
 
@@ -69,9 +71,9 @@ yarn build:all
 yarn dev
 ```
 
-:::info
-Обратите внимание, что для запуска этого решения необходима версия 16 Node.js.
-:::
+<AdmonitionWrapper type="caution">
+Для запуска этого решения необходима Node.js v16.
+</AdmonitionWrapper>
 
 Также, для удобства, можно использовать docker-compose для запуска решения в контейнере:
 
