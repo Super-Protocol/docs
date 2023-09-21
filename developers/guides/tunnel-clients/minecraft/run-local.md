@@ -66,6 +66,7 @@ runWorker(resolve(__dirname, "..", "client/server.js"));
 Теперь можно установить все зависимости и запустить приложение в `dev mode`:
 
 ```shell
+cd minecraft
 yarn dependencies
 yarn build:all
 yarn dev
