@@ -7,6 +7,12 @@ sidebar_position: 1
 
 # Предварительная настройка
 
+Для выполнения последовательности всех действий необходимо установить 
+[Node.js](https://nodejs.org/en/download/package-manager) v16, 
+[yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) и 
+[TypeScript](https://www.typescriptlang.org/download), а также, [Docker](https://docs.docker.com/engine/install/) и 
+[Docker Compose](https://docs.docker.com/compose/install/).
+
 Для запуска игры необходим Minecraft-сервер и web-клиент к нему.
 В качестве примера будем использовать сервер [flying-squid](https://github.com/PrismarineJS/flying-squid) и клиент [prismarine-web-client](https://github.com/PrismarineJS/prismarine-web-client).
 
@@ -14,7 +20,7 @@ sidebar_position: 1
 
 ```shell
 git clone https://github.com/Super-Protocol/solutions
-cd solutions
+cd solutions/Tunnel\ Client/minecraft/
 ```
 
 Для безопасного запуска решения в TEE необходимо обеспечить защищённый канал между браузером пользователя и web-сервером 
@@ -41,7 +47,13 @@ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' key.pem
 ```
 
 Кроме этого, необходимо переименовать файл `.env.example` в `.env` и скопировать в него соответствующие строки из двух 
-предыдущих команд. В результате должно получиться примерно следующее:
+предыдущих команд. 
+
+```shell
+mv .env.example .env
+```
+
+В результате должно получиться примерно следующее:
 
 ```dotenv
 HTTPS_PORT=8888
