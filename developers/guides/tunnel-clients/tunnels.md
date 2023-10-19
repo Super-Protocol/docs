@@ -1,8 +1,8 @@
 ---
 id: "tunnels"
 title: "Механизм туннелирования"
-slug: "/guides/tunnel-clients/minecraft/tunnels"
-sidebar_position: 3
+slug: "/guides/tunnel-clients/tunnels"
+sidebar_position: 0
 ---
 
 # Механизм туннелирования

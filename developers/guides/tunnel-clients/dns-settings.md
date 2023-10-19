@@ -1,13 +1,13 @@
 ---
 id: "dns-settings"
 title: "Настройка DNS-записей"
-slug: "/guides/tunnel-clients/minecraft/dns-settings"
-sidebar_position: 6
+slug: "/guides/tunnel-clients/dns-settings"
+sidebar_position: 4
 ---
 
 # Настройка DNS-записей
 
-После запуска туннель-сервера создаёт `OfferId`, который можно посмотреть в артефактах GiHub Actions.
+После запуска туннель-сервер создаёт `OfferId`, который можно посмотреть в артефактах GiHub Actions.
 
 Чтобы узнать IP адрес сервера, на котором запущено решение, нужно выполнить команду:
 

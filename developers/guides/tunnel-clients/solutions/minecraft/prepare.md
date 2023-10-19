@@ -1,7 +1,7 @@
 ---
 id: "prepare"
 title: "Подготовка решения для деплоя в TEE"
-slug: "/guides/tunnel-clients/minecraft/prepare"
+slug: "/guides/tunnel-clients/solutions/minecraft/prepare"
 sidebar_position: 2
 ---
 
@@ -51,9 +51,7 @@ cd minecraft
 └── yarn.lock
 ```
 
-:::info
+<AdmonitionWrapper type="info">
 Запускать вручную скрипт не нужно. Эта информация приведена для общего понимания процесса. Его запуск будет 
 происходить автоматически, что будет описано далее.
-:::
-
-Some changes
+</AdmonitionWrapper>
