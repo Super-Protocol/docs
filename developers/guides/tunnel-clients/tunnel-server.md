@@ -1,19 +1,19 @@
 ---
 id: "tunnel-server"
 title: "Туннель-сервер"
-slug: "/guides/tunnel-clients/minecraft/tunnel-server"
-sidebar_position: 4
+slug: "/guides/tunnel-clients/tunnel-server"
+sidebar_position: 2
 ---
 
 # Туннель-сервер
 
-Полный код туннель-сервера можно посмотреть [здесь](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-server-deploy.yml).
+Полный код workflow туннель-сервера можно посмотреть [здесь](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-server-deploy.yml).
 
 1. Get previous build for solution.
    
    Первый шаг отвечает за загрузку артефакта предыдущего запуска сервера. В рамках архитектуры этого проекта необходимо, 
    чтобы в определённый момент времени был запущен только один экземпляр сервера. Нужно, чтобы текущий запуск сервера 
-   мог прервать уже запущенный экземпляр. По результату этого шага артефакт сохраняется в виде файла в рабочую 
+   мог прервать работу уже запущенного экземпляра. По результату этого шага артефакт сохраняется в виде файла в рабочую 
    директорию GitHub Actions. Для выполнения этого шага необходимо в GitHub Secrets сохранить свой персональный токен 
    с названием `NPM_TOKEN_GH`. Токен можно сгенерировать в личном кабинете GitHub.
 
@@ -71,7 +71,7 @@ sidebar_position: 4
 3. _Prepare tunnel server data._  
    
    На этом этапе происходит подготовка данных для запуска туннель-сервера. Первый параметр, который нужно подготовить и 
-   сохранить в GitHub Secrets, это `MINECRAFT_SERVER_TOKEN`. Это случайное значение, которое будет использоваться
+   сохранить в GitHub Secrets, это `SOLUTION_SERVER_TOKEN`. Это случайное значение, которое будет использоваться
    сервером для идентификации клиента. Сформировать его можно следующим образом:
 
    ``` shell

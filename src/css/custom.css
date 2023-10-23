@@ -3,9 +3,11 @@
     --ifm-font-family-base: "Lunasima";
 }
 
+/*
 [class*='admonitionIcon'] {
   margin-right: 0 !important;
 }
+*/
 
 .navbar__title {
     font-weight: 300;
