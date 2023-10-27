@@ -64,7 +64,7 @@ div[class*="docItemCol_"] {
     max-width: 100% !important;
 }
 
-[class*="docItemContainer_"] {
+div[class*="docItemContainer_"] {
     width: 75% !important;
     margin: auto;
 }
