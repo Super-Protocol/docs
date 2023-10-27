@@ -5,8 +5,6 @@ slug: "/guides/tunnel-clients/solutions/minecraft/prepare"
 sidebar_position: 2
 ---
 
-# Подготовка решения для деплоя в TEE
-
 На этом шаге необходимо создать скрипт для production-сборки и подготовки её для деплоя в TEE.
 
 Например, можно создать директорию scripts и поместить туда файл, `prepare-solution.sh`:

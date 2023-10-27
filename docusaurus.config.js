@@ -158,7 +158,6 @@ const config = {
       type: "text/css",
     },
   ],
-  clientModules: ["/components/TocHighlighter.js"],
 };
 
 module.exports = config;

@@ -23,12 +23,6 @@ p {
     font-weight: 400;
 }
 
-/*
-[class*='admonitionIcon'] {
-  margin-right: 0 !important;
-}
-*/
-
 /* navbar */
 .navbar__logo {
     height: 1.4em;
@@ -76,7 +70,6 @@ div.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-L
 }
 
 /* TOC */
-
 .col--3 {
     --ifm-col-width: 250px;
 }
@@ -92,16 +85,10 @@ div.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-L
     padding-left: 8px;
 }
 
-.highlight {
-    color: #2c6f91;
-    border-left: #2c6f91 solid 2px;
+.table-of-contents__link--active {
+    border-left: var(--ifm-color-primary-darkest) solid 2px;
     margin-left: -2px;
 }
-
-
-
-
-
 
 [data-theme='dark'] {
   --ifm-color-primary: #489cc7;
