@@ -60,11 +60,11 @@ p {
 }
 
 /* main content */
-div.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+div[class*="docItemCol_"] {
     max-width: 100% !important;
 }
 
-div.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+div[class*="docItemContainer_"] {
     width: 75% !important;
     margin: auto;
 }
