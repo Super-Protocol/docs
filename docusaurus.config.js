@@ -106,34 +106,34 @@ const config = {
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Introduction",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "FAQ",
             docsPluginId: "faq",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Testnet",
             docsPluginId: "testnet",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Developers",
             docsPluginId: "developers",
           },
@@ -150,6 +150,7 @@ const config = {
       type: "text/css",
     },
   ],
+  clientModules: ["/components/TocHighlighter.js"],
 };
 
 module.exports = config;
