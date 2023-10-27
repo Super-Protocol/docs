@@ -65,7 +65,7 @@ p {
     padding: 4px 0 0 4px;
 }
 
-/* TOC */
+/* main content */
 div.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
     max-width: 100% !important;
 }
@@ -75,10 +75,28 @@ div.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-L
     margin: auto;
 }
 
+/* TOC */
+
 .col--3 {
     --ifm-col-width: 250px;
 }
 
+.table-of-contents__left-border {
+    border-left: none;
+}
+
+.table-of-contents li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 8px;
+}
+
+.highlight {
+    color: #2c6f91;
+    border-left: #2c6f91 solid 2px;
+    margin-left: -2px;
+}
 
 
 
