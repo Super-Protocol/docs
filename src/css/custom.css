@@ -3,17 +3,104 @@
     --ifm-font-family-base: "Lunasima";
 }
 
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
 /*
 [class*='admonitionIcon'] {
   margin-right: 0 !important;
 }
 */
 
+/* navbar */
+.navbar__logo {
+    height: 1.4em;
+}
+
 .navbar__title {
     font-weight: 300;
     font-size: 20px;
-    margin-left: 6px;
+    margin-left: 0;
 }
+
+.navbar__items {
+    font-size: 14px;
+}
+
+/* sidebar */
+.theme-doc-sidebar-container {
+    font-size: 14px;
+}
+
+.menu__list-item:not(:first-child) {
+    margin-top: 0;
+}
+
+.theme-doc-sidebar-item-category-level-2,
+.theme-doc-sidebar-item-category-level-3,
+.theme-doc-sidebar-item-category-level-4,
+.theme-doc-sidebar-item-category-level-5,
+.theme-doc-sidebar-item-link-level-2,
+.theme-doc-sidebar-item-link-level-3,
+.theme-doc-sidebar-item-link-level-4,
+.theme-doc-sidebar-item-link-level-5 {
+    border-left: #333 solid 1px;
+    padding: 4px 0 0 4px;
+}
+
+/* main content */
+div.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width: 100% !important;
+}
+
+div.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    width: 75% !important;
+    margin: auto;
+}
+
+/* TOC */
+
+.col--3 {
+    --ifm-col-width: 250px;
+}
+
+.table-of-contents__left-border {
+    border-left: none;
+}
+
+.table-of-contents li a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 8px;
+}
+
+.highlight {
+    color: #2c6f91;
+    border-left: #2c6f91 solid 2px;
+    margin-left: -2px;
+}
+
+
+
+
 
 
 [data-theme='dark'] {
