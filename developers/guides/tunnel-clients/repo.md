@@ -48,13 +48,13 @@ sidebar_position: 2
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' privkey.pem
    ```
 
-   Нужно скопировать эти значения в `SOLUTION_SSL_KEY_BASE64` и `SOLUTION_SSL_CERTIFICATE_BASE64`, в кодировке base64.
+   Нужно скопировать эти значения в `SOLUTION_SSL_CERTIFICATE_BASE64` и `SOLUTION_SSL_KEY_BASE64`, в кодировке base64.
 
    Закодировать значения в base64 можно следующими командами:
 
    ```shell title="config.json"
-    echo "<YOUR_KEY>" | base64
-    echo "<YOUR_CERTIFICATE>" | base64
+   echo "<YOUR_CERTIFICATE>" | base64
+   echo "<YOUR_KEY>" | base64
    ```
    
 2. `TUNNEL_SERVER_MRSIGNER` и `TUNNEL_SERVER_MRENCLAVE`. Для корректной работы туннель-клиента необходимо в GitHub Variables 
