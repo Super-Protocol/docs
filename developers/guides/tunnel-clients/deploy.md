@@ -1,21 +1,23 @@
 ---
 id: "dns-settings"
-title: "Настройка DNS-записей"
-slug: "/guides/tunnel-clients/dns-settings"
+title: "Сборка и Deploy"
+slug: "/guides/tunnel-clients/deploy"
 sidebar_position: 4
 ---
 
-# Настройка DNS-записей
+В процессе разработки своего решения Вам необходимо протестировать его в среде Super Protocol.
+Для этого Вам необходимо:
+
+1. Запустить GitHub Action туннель-клиента.
+2. Запустить GitHub Action туннель-сервера и настроить Ваш DNS на тот IP-адрес, который выделил Вам сервер. 
 
 После запуска туннель-сервер создаёт `OfferId`, который можно посмотреть в артефактах GiHub Actions.
 
-Чтобы узнать IP адрес сервера, на котором запущено решение, нужно выполнить команду:
+Чтобы узнать IP адрес сервера, на котором запущено решение, нужно выполнить команду с помощью утилиты [spctl](https://docs.superprotocol.com/testnet/cli/):
 
 ```shell
 ./spctl orders download-result <OrderId>
 ```
-
-Как установить и настроить утилиту spctl, можно посмотреть в [документации](https://docs.superprotocol.com/testnet/cli/).
 
 В результате команда вернёт файл `result.txt`, в котором будет IP адрес сервера.
 

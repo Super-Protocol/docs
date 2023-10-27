@@ -83,9 +83,17 @@ const config = {
           routeBasePath: "/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          admonitions: {
+            tag: ":::",
+            keywords: ["note", "tip", "info", "caution", "danger"],
+          },
         },
         blog: {
           showReadingTime: true,
+          admonitions: {
+            tag: ":::",
+            keywords: ["note", "tip", "info", "caution", "danger"],
+          },
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
@@ -106,34 +114,34 @@ const config = {
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Introduction",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "FAQ",
             docsPluginId: "faq",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Testnet",
             docsPluginId: "testnet",
           },
           {
             type: "doc",
             docId: "index",
-            position: "left",
+            position: "right",
             label: "Developers",
             docsPluginId: "developers",
           },

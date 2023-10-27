@@ -38,9 +38,9 @@ mv .env.example .env
 
 Их необходимо поместить в качестве значений констант `TLS_CERT` и `TLS_KEY` в файле `.env`.
 
-<AdmonitionWrapper type="caution">
+:::caution
 Обратите внимание, значения TLS_CERT и TLS_KEY в файле .env должны быть указаны в кавычках.
-</AdmonitionWrapper>
+:::
 
 В корне проекта, в директории `src`, находится файл server.ts, который запускает Minecraft-сервер и Minecraft-клиент, 
 создавая два потока.
@@ -59,9 +59,9 @@ yarn build:all
 yarn dev
 ```
 
-<AdmonitionWrapper type="caution">
+:::caution
 Обратите внимание, для запуска этого решения необходима Node.js v16.
-</AdmonitionWrapper>
+:::
 
 Также, для удобства, можно использовать docker-compose для запуска решения в контейнере:
 
