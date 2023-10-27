@@ -83,9 +83,17 @@ const config = {
           routeBasePath: "/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
+          admonitions: {
+            tag: ":::",
+            keywords: ["note", "tip", "info", "caution", "danger"],
+          },
         },
         blog: {
           showReadingTime: true,
+          admonitions: {
+            tag: ":::",
+            keywords: ["note", "tip", "info", "caution", "danger"],
+          },
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
@@ -150,7 +158,6 @@ const config = {
       type: "text/css",
     },
   ],
-  clientModules: ["/components/TocHighlighter.js"],
 };
 
 module.exports = config;
