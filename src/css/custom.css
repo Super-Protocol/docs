@@ -45,9 +45,22 @@
     padding: 4px 0 0 4px;
 }
 
-.menu__list-item-collapsible {
-
+/* TOC */
+div.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    max-width: 100% !important;
 }
+
+div.docItemContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    width: 75% !important;
+    margin: auto;
+}
+
+.col--3 {
+    --ifm-col-width: 250px;
+}
+
+
+
 
 
 
