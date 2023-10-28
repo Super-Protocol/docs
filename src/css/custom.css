@@ -86,21 +86,23 @@ div[class*="docItemContainer_"] {
 }
 
 .table-of-contents__link--active {
-    border-left: var(--ifm-color-primary) solid 2px;
+    border-left: var(--ifm-color-toc-border-select) solid 2px;
     margin-left: -2px;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #489cc7;
-  --ifm-color-primary-dark: #398fbb;
-  --ifm-color-primary-darker: #3687b0;
-  --ifm-color-primary-darkest: #2c6f91;
-  --ifm-color-primary-light: #5da7cd;
-  --ifm-color-primary-lighter: #67add1;
-  --ifm-color-primary-lightest: #86beda;
-    --ifm-color-border-select: #333;
+    --ifm-color-primary: #489cc7;
+    --ifm-color-primary-dark: #398fbb;
+    --ifm-color-primary-darker: #3687b0;
+    --ifm-color-primary-darkest: #2c6f91;
+    --ifm-color-primary-light: #5da7cd;
+    --ifm-color-primary-lighter: #67add1;
+    --ifm-color-primary-lightest: #86beda;
+    --ifm-color-border-select: var(--ifm-color-gray-800);
+    --ifm-color-toc-border-select: var(--ifm-color-primary-darkest);
 }
 
 [data-theme='light'] {
-    --ifm-color-border-select: #ccc;
+    --ifm-color-border-select: var(--ifm-color-secondary-dark);
+    --ifm-color-toc-border-select: var(--ifm-color-primary);
 }
