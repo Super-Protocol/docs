@@ -1,7 +1,7 @@
 ---
 id: "prepare"
 title: "Подготовка решения для деплоя в TEE"
-slug: "/guides/tunnel-clients/solutions/minecraft/prepare"
+slug: "/guides/nodejs_tunnels/solutions/minecraft/prepare"
 sidebar_position: 2
 ---
 

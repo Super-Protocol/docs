@@ -1,7 +1,7 @@
 ---
-id: "tunnel-server"
-title: "Настройка репозитория"
-slug: "/guides/tunnel-clients/repo"
+id: "repo"
+title: "Configuring Repository"
+slug: "/guides/nodejs_tunnels/repo"
 sidebar_position: 2
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "minecraft"
 title: "Minecraft"
-slug: "/guides/tunnel-clients/solutions/minecraft"
+slug: "/guides/nodejs_tunnels/solutions/minecraft"
 sidebar_position: 0
 ---
 

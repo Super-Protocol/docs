@@ -1,7 +1,7 @@
 ---
 id: "solution"
-title: "Создание своего решения"
-slug: "/guides/tunnel-clients/solution"
+title: "Creating Solution"
+slug: "/guides/nodejs_tunnels/solution"
 sidebar_position: 3
 ---
 ## Основные шаги

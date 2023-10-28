@@ -1,7 +1,7 @@
 ---
-id: "prepare"
-title: "Предварительная настройка"
-slug: "/guides/tunnel-clients/prepare"
+id: "initial set-up"
+title: "Initial Set-up"
+slug: "/guides/nodejs_tunnels/setup"
 sidebar_position: 1
 ---
 

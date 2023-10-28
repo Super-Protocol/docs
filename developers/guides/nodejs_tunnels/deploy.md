@@ -1,7 +1,7 @@
 ---
-id: "dns-settings"
-title: "Сборка и Deploy"
-slug: "/guides/tunnel-clients/deploy"
+id: "deploy"
+title: "Assembly and Deploy"
+slug: "/guides/nodejs_tunnels/deploy"
 sidebar_position: 4
 ---
 

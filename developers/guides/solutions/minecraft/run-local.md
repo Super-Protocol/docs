@@ -1,7 +1,7 @@
 ---
 id: "run-local"
 title: "Предварительная настройка"
-slug: "/guides/tunnel-clients/minecraft/run-local"
+slug: "/guides/nodejs_tunnels/minecraft/run-local"
 sidebar_position: 1
 ---
 
