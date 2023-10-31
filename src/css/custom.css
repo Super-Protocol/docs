@@ -65,7 +65,7 @@ div[class*="docItemCol_"] {
 }
 
 div[class*="docItemContainer_"] {
-    width: 75% !important;
+    width: 85% !important;
     margin: auto;
 }
 
@@ -90,6 +90,10 @@ div[class*="docItemContainer_"] {
     margin-left: -2px;
 }
 
+.menu__caret:before {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem
+}
+
 [data-theme='dark'] {
     --ifm-color-primary: #489cc7;
     --ifm-color-primary-dark: #398fbb;
@@ -104,5 +108,5 @@ div[class*="docItemContainer_"] {
 
 [data-theme='light'] {
     --ifm-color-border-select: var(--ifm-color-secondary-dark);
-    --ifm-color-toc-border-select: var(--ifm-color-primary);
+    --ifm-color-toc-border-select: var(--ifm-color-primary-lighter);
 }
