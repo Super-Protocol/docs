@@ -55,7 +55,7 @@ p {
 .theme-doc-sidebar-item-link-level-3,
 .theme-doc-sidebar-item-link-level-4,
 .theme-doc-sidebar-item-link-level-5 {
-    border-left: #333 solid 1px;
+    border-left: var(--ifm-color-border-select) solid 1px;
     padding: 4px 0 0 4px;
 }
 
@@ -65,7 +65,7 @@ div[class*="docItemCol_"] {
 }
 
 div[class*="docItemContainer_"] {
-    width: 75% !important;
+    width: 85% !important;
     margin: auto;
 }
 
@@ -86,16 +86,27 @@ div[class*="docItemContainer_"] {
 }
 
 .table-of-contents__link--active {
-    border-left: var(--ifm-color-primary-darkest) solid 2px;
+    border-left: var(--ifm-color-toc-border-select) solid 2px;
     margin-left: -2px;
 }
 
+.menu__caret:before {
+    background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem
+}
+
 [data-theme='dark'] {
-  --ifm-color-primary: #489cc7;
-  --ifm-color-primary-dark: #398fbb;
-  --ifm-color-primary-darker: #3687b0;
-  --ifm-color-primary-darkest: #2c6f91;
-  --ifm-color-primary-light: #5da7cd;
-  --ifm-color-primary-lighter: #67add1;
-  --ifm-color-primary-lightest: #86beda;
+    --ifm-color-primary: #489cc7;
+    --ifm-color-primary-dark: #398fbb;
+    --ifm-color-primary-darker: #3687b0;
+    --ifm-color-primary-darkest: #2c6f91;
+    --ifm-color-primary-light: #5da7cd;
+    --ifm-color-primary-lighter: #67add1;
+    --ifm-color-primary-lightest: #86beda;
+    --ifm-color-border-select: var(--ifm-color-gray-800);
+    --ifm-color-toc-border-select: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='light'] {
+    --ifm-color-border-select: var(--ifm-color-secondary-dark);
+    --ifm-color-toc-border-select: var(--ifm-color-primary-lighter);
 }
