@@ -1,6 +1,6 @@
 ---
 id: "deploy"
-title: "Assembly and Deploy"
+title: "4. Assembly and Deploy"
 slug: "/guides/nodejs_tunnels/deploy"
 sidebar_position: 4
 ---

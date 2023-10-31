@@ -1,6 +1,6 @@
 ---
-id: "Static"
-title: "Static Content with Tunnels"
-slug: "/static_tunnels"
+id: "static1"
+title: "Static"
+slug: "/static1"
 sidebar_position: 1
 ---

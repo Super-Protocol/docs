@@ -1,8 +1,8 @@
 ---
-id: "blockchain"
-title: "Blockchain Integration"
-slug: "/blockchain"
-sidebar_position: 1
+id: "nodejs_blockchain"
+title: "Node.js with Blockchain"
+slug: "/guides/nodejs_blockchain"
+sidebar_position: 3
 ---
 
-Андрей нарисует схему в течении недели (7 ноя)
+здесь какие-то общие слова про наши возможности интеграции с блокчейном и смарт-контрактами

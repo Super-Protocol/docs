@@ -1,6 +1,6 @@
 ---
 id: "initial set-up"
-title: "Initial Set-up"
+title: "1. Initial Set-up"
 slug: "/guides/nodejs_tunnels/setup"
 sidebar_position: 1
 ---

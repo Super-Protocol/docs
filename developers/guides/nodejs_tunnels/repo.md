@@ -1,6 +1,6 @@
 ---
 id: "repo"
-title: "Configuring Repository"
+title: "2. Configuring Repository"
 slug: "/guides/nodejs_tunnels/repo"
 sidebar_position: 2
 ---
