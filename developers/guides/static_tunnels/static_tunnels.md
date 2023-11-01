@@ -1,8 +1,8 @@
 ---
-id: "static_tunnels"
-title: "Static Content with Tunnels"
-slug: "/static_tunnels"
-sidebar_position: 2
+id: "static_guide"
+title: "Static Guide"
+slug: "/static_guide"
+sidebar_position: 5
 ---
 
 ## Tunnel Server Data

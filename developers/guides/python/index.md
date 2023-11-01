@@ -1,6 +1,6 @@
 ---
 id: "Python"
 title: "Python"
-slug: "/python"
+slug: "/guides/python"
 sidebar_position: 1
 ---

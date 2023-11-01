@@ -1,6 +1,6 @@
 ---
 id: "cli-commands"
-title: "CLI Commands"
+title: "CLI Overview Commands"
 slug: "/cli/commands/"
 ---
 

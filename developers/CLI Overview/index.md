@@ -2,6 +2,8 @@
 id: "cli-index"
 title: "CLI Overview"
 slug: "/cli/"
+sidebar_position: 2
+
 ---
 
 ## Introduction

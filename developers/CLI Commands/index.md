@@ -1,7 +1,7 @@
 ---
-id: "nodejs_blockchain"
-title: "Node.js with Blockchain"
-slug: "/nodejs_blockchain"
+id: "cli_commands"
+title: "CLI Commands"
+slug: "/cli_commands"
 sidebar_position: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "First Steps"
 title: "First Steps"
-slug: "/first_steps"
+slug: "/guides/python/first_steps"
 sidebar_position: 1
 ---
 
