@@ -60,10 +60,6 @@ p {
 }
 
 /* main content */
-div[class*="docItemCol_"] {
-    max-width: 100% !important;
-}
-
 div[class*="docItemContainer_"] {
     width: 85% !important;
     margin: auto;
@@ -72,6 +68,8 @@ div[class*="docItemContainer_"] {
 /* TOC */
 .col--3 {
     --ifm-col-width: 250px;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .table-of-contents__left-border {
