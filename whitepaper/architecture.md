@@ -1,7 +1,7 @@
 ---
-id: "architecture"
+id: "Architecture"
 title: "Architecture"
-slug: "/architecture"
+slug: "/Architecture"
 sidebar_position: 8
 ---
 

@@ -2,6 +2,8 @@
 id: "cli-guides-managing-offers"
 title: "Managing offers"
 slug: "/cli/guides/managing-offers"
+sidebar_position: 3
+
 ---
 
 ## Pre-requisites

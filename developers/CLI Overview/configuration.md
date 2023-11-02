@@ -1,7 +1,9 @@
 ---
 id: "cli-configuration"
-title: "Configuration"
+title: "Configuring"
 slug: "/cli/configuration/"
+sidebar_position: 2
+
 ---
 
 In order to use Super Protocol CLI tool, you need to create `config.json` file in the same directory where you put `spctl` file. You can obtain the [sample](https://github.com/Super-Protocol/ctl/blob/master/config.example.json) of `config.json` file from the repository. Alternatively, you can make use of the CLI commands and the tool will automatically create an empty `config.json` file for you.
