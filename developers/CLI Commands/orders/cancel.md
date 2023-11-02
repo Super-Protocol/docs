@@ -1,7 +1,7 @@
 ---
 id: "cli-orders-cancel"
 title: "Cancel order"
-slug: "/cli/commands/orders/cancel"
+slug: "/cli_commands/orders/cancel"
 sidebar_label: "cancel"
 ---
 

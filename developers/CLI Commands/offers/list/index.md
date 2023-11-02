@@ -1,7 +1,7 @@
 ---
 id: "cli-offers-list"
 title: "List offers"
-slug: "/cli/commands/offers/list"
+slug: "/cli_commands/offers/list"
 sidebar_label: "list"
 ---
 

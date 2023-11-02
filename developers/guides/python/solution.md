@@ -1,7 +1,7 @@
 ---
 id: "solution"
 title: "Preparing Solution"
-slug: "/solution_prep"
+slug: "/guides/python/solution_prep"
 sidebar_position: 2
 ---
 

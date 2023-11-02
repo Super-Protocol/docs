@@ -1,7 +1,7 @@
 ---
 id: "cli-files-upload"
 title: "Upload file"
-slug: "/cli/commands/files/upload"
+slug: "ya/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 

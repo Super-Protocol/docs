@@ -1,7 +1,7 @@
 ---
 id: "cli-guides-confidential-execution"
 title: "Confidential execution"
-slug: "/cli/guides/confidential-execution"
+slug: "/cli_overview/confidential-execution"
 sidebar_position: 4
 
 ---

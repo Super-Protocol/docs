@@ -1,7 +1,7 @@
 ---
 id: "cli-orders-withdraw-deposit"
 title: "Withdraw order deposit"
-slug: "/cli/commands/orders/withdraw-deposit"
+slug: "/cli_commands/orders/withdraw-deposit"
 sidebar_label: "withdraw-deposit"
 ---
 

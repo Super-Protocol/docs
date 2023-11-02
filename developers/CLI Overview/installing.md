@@ -1,7 +1,7 @@
 ---
 id: "installing-cli"
 title: "Installing"
-slug: "/installing_cli"
+slug: "/cli_overview/installing_cli"
 sidebar_position: 1
 
 ---

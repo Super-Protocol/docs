@@ -1,7 +1,7 @@
 ---
 id: "cli-files"
 title: "Files"
-slug: "/cli/commands/files"
+slug: "/cli_commands/files"
 ---
 
 Manage files in third-party storages

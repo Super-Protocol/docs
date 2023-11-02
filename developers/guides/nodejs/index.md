@@ -1,6 +1,6 @@
 ---
 id: "Node.js"
 title: "Node.js"
-slug: "/nodejs"
+slug: "/guides/nodejs"
 sidebar_position: 2
 ---

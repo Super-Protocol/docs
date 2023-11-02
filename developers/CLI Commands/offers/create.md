@@ -1,8 +1,7 @@
 ---
 id: "cli-offers-create"
 title: "Create offer"
-slug: "/cli/commands/offers/create"
-sidebar_label: "create"
+slug: "/cli_commands/offers/create"
 ---
 
 Create a new offer

@@ -1,7 +1,7 @@
 ---
 id: "exec"
 title: "Execution and Result"
-slug: "/exec"
+slug: "/guides/python/exec"
 sidebar_position: 4
 ---
 

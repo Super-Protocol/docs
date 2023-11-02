@@ -1,7 +1,7 @@
 ---
 id: "cli-orders-download-result"
 title: "Download order result"
-slug: "/cli/commands/orders/download-result"
+slug: "/cli_commands/orders/download-result"
 sidebar_label: "download-result"
 ---
 

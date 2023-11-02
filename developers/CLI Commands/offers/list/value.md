@@ -1,7 +1,7 @@
 ---
 id: "cli-offers-list-value"
 title: "List value offers"
-slug: "/cli/commands/offers/list/value"
+slug: "/cli_commands/offers/list/value"
 sidebar_label: "value"
 ---
 

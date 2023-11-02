@@ -1,7 +1,7 @@
 ---
 id: "cli-orders-replenish-deposit"
 title: "Replenish order deposit"
-slug: "/cli/commands/orders/replenish-deposit"
+slug: "/cli_commands/orders/replenish-deposit"
 sidebar_label: "replenish-deposit"
 ---
 

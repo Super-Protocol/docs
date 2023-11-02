@@ -1,7 +1,7 @@
 ---
 id: "cli-providers-get"
 title: "Get provider"
-slug: "/cli/commands/providers/get"
+slug: "/cli_commands/providers/get"
 sidebar_label: "get"
 ---
 

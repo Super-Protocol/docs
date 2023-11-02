@@ -1,7 +1,7 @@
 ---
 id: "cli-tii-generate"
 title: "Generate TII"
-slug: "/cli/commands/tii/generate"
+slug: "/cli_commands/tii/generate"
 sidebar_label: "generate"
 ---
 

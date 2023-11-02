@@ -1,7 +1,7 @@
 ---
 id: "cli-offers"
 title: "Offers"
-slug: "/cli/commands/offers"
+slug: "/cli_commands/offers"
 ---
 
 Manage Super Protocol offers

@@ -1,7 +1,7 @@
 ---
 id: "cli-guides-managing-offers"
 title: "Managing offers"
-slug: "/cli/guides/managing-offers"
+slug: "/cli_overview/managing-offers"
 sidebar_position: 3
 
 ---

@@ -1,7 +1,7 @@
 ---
 id: "marketplace_offers"
 title: "Marketplace Offers"
-slug: "/marketplace_offers"
+slug: "/cli_overview/marketplace_offers"
 sidebar_position: 5
 ---
 

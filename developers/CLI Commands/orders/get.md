@@ -1,7 +1,7 @@
 ---
 id: "cli-orders-get"
 title: "Get order"
-slug: "/cli/commands/orders/get"
+slug: "/cli_commands/orders/get"
 sidebar_label: "get"
 ---
 

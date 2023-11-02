@@ -1,7 +1,7 @@
 ---
 id: "static_guide"
 title: "Static Guide"
-slug: "/static_guide"
+slug: "/guides/static_tunnels/static_guide"
 sidebar_position: 5
 ---
 

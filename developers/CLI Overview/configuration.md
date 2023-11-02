@@ -1,7 +1,7 @@
 ---
 id: "cli-configuration"
 title: "Configuring"
-slug: "/cli/configuration/"
+slug: "/cli_overview/configuration/"
 sidebar_position: 2
 
 ---

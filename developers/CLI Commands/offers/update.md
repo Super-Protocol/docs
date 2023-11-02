@@ -1,7 +1,7 @@
 ---
 id: "cli-offers-update"
 title: "Update offer"
-slug: "/cli/commands/offers/update"
+slug: "/cli_commands/offers/update"
 sidebar_label: "update"
 ---
 

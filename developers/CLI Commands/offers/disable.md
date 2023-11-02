@@ -1,8 +1,7 @@
 ---
 id: "cli-offers-disable"
 title: "Disable offer"
-slug: "/cli/commands/offers/disable"
-sidebar_label: "disable"
+slug: "/cli_commands/offers/disable"
 ---
 
 Disable offer

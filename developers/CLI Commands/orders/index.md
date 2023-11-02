@@ -1,7 +1,7 @@
 ---
 id: "cli-orders"
 title: "Orders"
-slug: "/cli/commands/orders"
+slug: "/cli_commands/orders"
 ---
 
 Manage Super Protocol orders

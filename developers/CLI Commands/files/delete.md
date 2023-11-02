@@ -1,7 +1,7 @@
 ---
 id: "cli-files-delete"
 title: "Delete file"
-slug: "/cli/commands/files/delete"
+slug: "/cli_commands/files/delete"
 sidebar_label: "delete"
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "data"
 title: "Preparing Data"
-slug: "/data_prep"
+slug: "/guides/python/data_prep"
 sidebar_position: 3
 ---
 

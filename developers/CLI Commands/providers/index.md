@@ -1,7 +1,7 @@
 ---
 id: "cli-providers"
 title: "Providers"
-slug: "/cli/commands/providers"
+slug: "/cli_commands/providers"
 ---
 
 Manage Super Protocol providers

@@ -1,7 +1,7 @@
 ---
 id: "cli-solutions"
 title: "Solutions"
-slug: "/cli/commands/solutions"
+slug: "/cli_commands/solutions"
 ---
 
 Prepare solutions to be deployed on Super Protocol

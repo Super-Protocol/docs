@@ -1,7 +1,7 @@
 ---
 id: "cli-solutions-generate-key"
 title: "Generate a key"
-slug: "/cli/commands/solutions/generate-key"
+slug: "/cli_commands/solutions/generate-key"
 sidebar_label: "generate-key"
 ---
 

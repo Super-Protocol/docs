@@ -1,7 +1,7 @@
 ---
 id: "blockchain_integration"
 title: "Blockchain Integration"
-slug: "/blockchain_integration"
+slug: "/guides/nodejs_blockchain/blockchain_integration"
 sidebar_position: 10
 ---
 

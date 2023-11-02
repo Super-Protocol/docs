@@ -1,7 +1,7 @@
 ---
 id: "cli-files-download"
 title: "Download file"
-slug: "/cli/commands/files/download"
+slug: "/cli_commands/files/download"
 sidebar_label: "download"
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "tunnels"
 title: "Tunnels"
-slug: "/tunnels"
+slug: "/architecture/tunnels"
 sidebar_position: 1
 ---
 

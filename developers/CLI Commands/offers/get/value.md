@@ -1,7 +1,7 @@
 ---
 id: "cli-offers-get-value"
 title: "Get value offer"
-slug: "/cli/commands/offers/get/value"
+slug: "/cli_commands/offers/get/value"
 sidebar_label: "value"
 ---
 

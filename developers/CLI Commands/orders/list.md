@@ -1,7 +1,7 @@
 ---
 id: "cli-orders-list"
 title: "List orders"
-slug: "/cli/commands/orders/list"
+slug: "/cli_commands/orders/list"
 sidebar_label: "list"
 ---
 

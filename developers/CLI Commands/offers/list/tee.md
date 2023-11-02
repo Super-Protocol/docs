@@ -1,7 +1,7 @@
 ---
 id: "cli-offers-list-tee"
 title: "List TEE offers"
-slug: "/cli/commands/offers/list/tee"
+slug: "/cli_commands/offers/list/tee"
 sidebar_label: "tee"
 ---
 

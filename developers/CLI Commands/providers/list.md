@@ -1,7 +1,7 @@
 ---
 id: "cli-providers-list"
 title: "List providers"
-slug: "/cli/commands/providers/list"
+slug: "/cli_commands/providers/list"
 sidebar_label: "list"
 ---
 

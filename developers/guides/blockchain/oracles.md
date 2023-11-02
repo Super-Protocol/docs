@@ -1,7 +1,7 @@
 ---
 id: "oracles"
 title: "Example: Oracles"
-slug: "/guides/oracles"
+slug: "/guides/nodejs_blockchain/oracles"
 sidebar_position: 10
 ---
 
