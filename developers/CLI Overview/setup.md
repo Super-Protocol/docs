@@ -1,9 +1,45 @@
 ---
-id: "cli-configuration"
-title: "Configuring"
-slug: "/cli_overview/configuration/"
-sidebar_position: 2
+id: "setup_cli"
+title: "Setting Up"
+slug: "/cli_overview/setup_cli"
+sidebar_position: 1
 
+---
+
+## Introduction
+
+Super Protocol CLI is a powerful tool for developers. It supports all the functionality currently available in the protocol.
+
+## Installation
+
+Linux:
+```
+curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
+sudo install spctl /usr/local/bin/spctl
+```
+
+macOS:
+```
+curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-macos-x64 -o spctl
+sudo install spctl /usr/local/bin/spctl
+```
+
+:::note
+Windows is not supported, please use WSL
+:::
+
+Alternatively, you can download CLI from [GitHub repository](https://github.com/Super-Protocol/ctl). It will be constantly updated in the future so follow the announcements in our social networks.
+
+## Getting started
+
+Before you can use CLI you need to create a configuration file. Please refer to [this guide](/testnet/cli/configuration) to do that.
+
+To get familiar with the available commands please use [commands documentation](/testnet/cli/commands).
+
+If you want to deploy your own solutions on Super Protocol, check [our guides section](/testnet/cli/guides).
+
+
+## Configuring
 ---
 
 In order to use Super Protocol CLI tool, you need to create `config.json` file in the same directory where you put `spctl` file. You can obtain the [sample](https://github.com/Super-Protocol/ctl/blob/master/config.example.json) of `config.json` file from the repository. Alternatively, you can make use of the CLI commands and the tool will automatically create an empty `config.json` file for you.
@@ -21,7 +57,7 @@ This section contains parameters needed to connect to Super Protocol backend. Th
 
 ## blockchain
 
-This section contains parameters needed to establish a connection to the blockchain. 
+This section contains parameters needed to establish a connection to the blockchain.
 
 |**Parameter**|**Description**|
 | :- | :- |

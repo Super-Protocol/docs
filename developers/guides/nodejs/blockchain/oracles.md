@@ -5,27 +5,19 @@ slug: "/guides/nodejs_blockchain/oracles"
 sidebar_position: 10
 ---
 
-Пример с оракулами от Влада
+# Confidential Oracles
 
-https://automatic-silver-2cc.notion.site/SP-Oracle-demo-cde23dc6b00445fcbfb61587b19a2b8f
+### **Goal**
 
+The goal of this example is to show process of deploying and operating an oracle with the following criteria:
 
-# SP Oracle demo.
+* The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [CoinAPI](https://rest.coinapi.io/v1/exchangerate/BTC/USD).
 
-### 🎯 **Задача “демо”:**
+* The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
-Показать процесс развертывания и работы оракула на специально подготовленном примере.
+* Our DApp (smart contract) should be able to read this data and ensure that it is: **a)** Up-to-date (by verifying the timestamp) and **b)** Available to be read on-chain.
 
-а. **Сервис оракула** должен публиковать курс BCT/USD каждые 10 минут, по средством обращения к открытому API: https://rest.coinapi.io/v1/exchangerate/BTC/USD
-
-b. **Смарт-контракт оракула**, должен получать и хранить данные от скрипта оракула и проверять, что именно этот скрипт был выполнен и выполнен в TEE.
-
-c. Наш **DApp** (смарт-контракт) должен иметь возможность прочитать эти данные и убедиться что они:
-
-- актуальны (сверка timestamp)
-- доступны для чтения on-chain
-
-### 🛠 **Используемые инструменты:**
+### **Instruments Used**
 
 [**polygonscan**](https://mumbai.polygonscan.com/) - обозреватель блоков, через который будем наглядно демонстрировать работу смарт-контрактов в сети Polygon (тестовая сеть Mumbai).
 
@@ -102,7 +94,7 @@ https://eu1.storj.io/buckets/upload/
 
 <Highlight color="red">Расписать подробнее</Highlight>
 
-### Создать ключ для шифрования
+### Создать ключ для подписи анклава
 
 <Highlight color="red">Расписать подробнее</Highlight>
 
