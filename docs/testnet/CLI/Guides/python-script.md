@@ -6,7 +6,7 @@ slug: "/cli/guides/python-script"
 
 ## Pre-requisites
 
-Before you can use this guide, you need to receive an invitation letter with personal credentials to access the Super Protocol Testnet. If you don't have it, please refer to [Getting Started guide](/testnet).
+Before you can use this guide, you need to receive an invitation letter with personal credentials to access the Super Protocol Testnet. If you don't have it, please refer to [Getting Started guide](/docs/content/04-testnet-testnet).
 
 In order to deploy your own solutions you need [Command-line Interface (CLI)](/testnet/cli).
 

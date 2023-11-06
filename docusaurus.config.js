@@ -21,9 +21,9 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "whitepaper",
-        path: "whitepaper",
+        path: "./docs/whitepaper",
         routeBasePath: "/whitepaper",
-        sidebarPath: require.resolve("./sidebarsWhitepaper.js"),
+        //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
@@ -32,9 +32,9 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "faq",
-        path: "faq",
+        path: "./docs/faq",
         routeBasePath: "/faq",
-        sidebarPath: require.resolve("./sidebarsFAQ.js"),
+        //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
@@ -43,9 +43,9 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "testnet",
-        path: "testnet",
+        path: "./docs/testnet",
         routeBasePath: "/testnet",
-        sidebarPath: require.resolve("./sidebarsTestnet.js"),
+        //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
@@ -65,9 +65,9 @@ const config = {
       "@docusaurus/plugin-content-docs",
       {
         id: "developers",
-        path: "developers",
+        path: "./docs/developers",
         routeBasePath: "/developers",
-        sidebarPath: require.resolve("./sidebarsDevelopers.js"),
+        //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
@@ -79,21 +79,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "introduction",
+          path: "./docs/introduction",
           routeBasePath: "/",
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          /*admonitions: {
-            tag: ":::",
-            keywords: ["note", "tip", "info", "caution", "danger"],
-          },*/
+          //sidebarPath: "./sidebars.js",
         },
         blog: {
           showReadingTime: true,
-          /*admonitions: {
-            tag: ":::",
-            keywords: ["note", "tip", "info", "caution", "danger"],
-          },*/
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
