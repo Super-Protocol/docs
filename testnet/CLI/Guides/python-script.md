@@ -1,6 +1,6 @@
 ---
 id: "cli-guides-python-script"
-title: "Execution of Python Script"
+title: "Execution of python Script"
 slug: "/cli/guides/python-script"
 ---
 
