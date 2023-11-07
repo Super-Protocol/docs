@@ -1,7 +1,7 @@
 ---
-id: "cli-offers-update"
+id: "cli-Marketplace GUI Offers-update"
 title: "Update offer"
-slug: "/cli_commands/offers/update"
+slug: "/cli_commands/Marketplace GUI Offers/update"
 sidebar_label: "update"
 ---
 

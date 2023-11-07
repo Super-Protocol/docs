@@ -1,7 +1,9 @@
 ---
-id: "cli-offers"
+id: "cli-Marketplace GUI Offers"
 title: "Offers"
-slug: "/cli_commands/offers"
+slug: "/cli_commands/Marketplace GUI Offers"
+sidebar_position: 2
+
 ---
 
 Manage Super Protocol offers

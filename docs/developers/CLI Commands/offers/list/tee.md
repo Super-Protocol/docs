@@ -1,7 +1,7 @@
 ---
-id: "cli-offers-list-tee"
-title: "List TEE offers"
-slug: "/cli_commands/offers/list/tee"
+id: "cli-Marketplace GUI Offers-list-tee"
+title: "List TEE Marketplace GUI Offers"
+slug: "/cli_commands/Marketplace GUI Offers/list/tee"
 sidebar_label: "tee"
 ---
 
