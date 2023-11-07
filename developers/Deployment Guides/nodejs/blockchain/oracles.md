@@ -7,7 +7,12 @@ sidebar_position: 10
 
 # Confidential Oracles
 
-### **Goal**
+## **About This App**
+
+<Highlight color="red">краткое общее описание приложения</Highlight>
+
+
+## **Goal**
 
 The goal of this example is to show process of deploying and operating an oracle with the following criteria:
 
@@ -17,7 +22,7 @@ The goal of this example is to show process of deploying and operating an oracle
 
 * Our DApp (smart contract) should be able to read this data and ensure that it is: **a)** Up-to-date (by verifying the timestamp) and **b)** Available to be read on-chain.
 
-### **Instruments Used**
+## **Instruments Used**
 
 [**polygonscan**](https://mumbai.polygonscan.com/) - обозреватель блоков, через который будем наглядно демонстрировать работу смарт-контрактов в сети Polygon (тестовая сеть Mumbai).
 
@@ -31,44 +36,37 @@ The goal of this example is to show process of deploying and operating an oracle
 
 <Highlight color="red">битые ссылки</Highlight>
 
-
-## Кастомизация
-
-Возможности быстрой кастомизации оракул-скрипта под собственные задачи:
-
-### Cмена блокчейна
-* при переходе на другой EVM совместимый блокчейн достаточно просто заменить адрес ноды в конфигурационном `input` файле
-* при переходе на другой тип блокчейна, необходимо заменить сервис `blockchan.provider.ts` и заменить смарт-контракты на совместимые с данным блокчейном.
-
-### Смена API
-* необходимо заменить сервис `exchangeApi.service.ts` на новый 
-* добавить `dto` файлы с объектами из API
-* добавить соответствующие `dto` типы в конечный **DApp**.
-
-### Расширение до офф-чейн вычислений
-* необходимо создать новый сервис с бизнес-логикой и подключить его в `index.js`
-* расширить `blockchan.provider.ts` для публикации разных типов вычислений
-* обязательно подписывать все публикуемые данные сессионным ключом.
-
 ---
 
-## Развертывание контракта с x509
+## **Step 1. Deploying an "x509 verifier" smart contract**
 
-Мы исходим из того, что “владельцем” смарт-контракта, отвечающего за проверку квоты и сертификатов может отличаться от “владельца” оракула, т.е. быть внешним агентом. Давайте развернем такой сервис самостоятельно:
+We begin with the assumption that the "owner" of the smart contract responsible for checking quotas and certificates may differ from the "owner" of the oracle, i.e., it can be an external agent. Let's deploy such a service:
 
-### Разворачиваем контракт “верификатор X509”
+<Highlight color="red">нужно больше контекста. Почему здесь нужен х501? если это не очевидно для разработчиков</Highlight>
+
+### Deploying the smart-contract
+
+<Highlight color="red">это контракт который мы скачали? это путь на него?</Highlight>
 
 `npx hardhat verify-x509 --cert test/certs/certC.pem --network mumbai`
 
+<Highlight color="red">как адрес этого контракта связан с предыдущей строчкой?</Highlight>
+
 Address: [0xB7fc844b3c8Aa1016BC5D93289dF748B9CEc6f94](https://mumbai.polygonscan.com/address/0xb7fc844b3c8aa1016bc5d93289df748b9cec6f94#readContract)
 
-### Публикуем его код на Polygonscan (для удобства демонстрации)
+### Publishing the smart-contract
+
+<Highlight color="red">причем тут Полискан? в чем удобство демонстрации?</Highlight>
+
+Polygonscan (для удобства демонстрации)
 
 `npx hardhat verify-x509 --cert test/certs/certC.pem --network mumbai --address <>`
 
 ---
 
-## Сборка сервис оракула
+## **Step 2. Building the oracle service**
+
+<Highlight color="red">что за билд? что за скрипт? нужен контекст. Это тот файл который мы скачали?</Highlight>
 
 собрать скрипт в билд файл
 
@@ -78,11 +76,13 @@ npm i
 npm run build
 ```
 
-## Подготовка скрипта для работы в TEE
+## **Step 3. Preparing the script for deployment on Super Protocol**
+
+<Highlight color="red">тут хорошо бы чуть больше контекста о том что происходит в этом разделе</Highlight>
 
 ###  Убедиться что на Storj нет одноименных файлов с нашим скриптом.
 
-<Highlight color="red">Это как? нужно завести аккаунт на StorJ?</Highlight>
+<Highlight color="red">А причем тут StorJ? для чего он нужен сейчас?</Highlight>
 
 https://eu1.storj.io/buckets/upload/
 
@@ -181,3 +181,22 @@ address: `0xdEee3438481Be71D2370A02F72652A907506F330`
 Готово!
 Теперь можно наблюдать за работой оракула из обозревателя блоков
 
+
+
+## Кастомизация
+
+Возможности быстрой кастомизации оракул-скрипта под собственные задачи:
+
+### Cмена блокчейна
+* при переходе на другой EVM совместимый блокчейн достаточно просто заменить адрес ноды в конфигурационном `input` файле
+* при переходе на другой тип блокчейна, необходимо заменить сервис `blockchan.provider.ts` и заменить смарт-контракты на совместимые с данным блокчейном.
+
+### Смена API
+* необходимо заменить сервис `exchangeApi.service.ts` на новый
+* добавить `dto` файлы с объектами из API
+* добавить соответствующие `dto` типы в конечный **DApp**.
+
+### Расширение до офф-чейн вычислений
+* необходимо создать новый сервис с бизнес-логикой и подключить его в `index.js`
+* расширить `blockchan.provider.ts` для публикации разных типов вычислений
+* обязательно подписывать все публикуемые данные сессионным ключом.
