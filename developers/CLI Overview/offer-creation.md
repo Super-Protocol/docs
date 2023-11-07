@@ -24,7 +24,7 @@ Then, execute the following command:
 spctl offers create <type> --path ./offerInfo.json
 ```
 
-You can check the offer was created correctly by executing [offers get-info](/testnet/cli/commands/offers/get-info) command.
+You can check the offer was created correctly by executing [offers get-info](/developers/cli_commands/offers/get-info) command.
 
 ## Offer modification
 
@@ -40,4 +40,4 @@ Then fill in the `offerInfo.json` file according to the displayed data, making a
 spctl offers update <type> <id> --path ./offerInfo.json
 ```
 
-You can ensure update is applied correctly by executing [offers get-info](/testnet/cli/commands/offers/get-info) command again.
+You can ensure update is applied correctly by executing [offers get-info](/developers/cli_commands/offers/get-info) command again.

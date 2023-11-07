@@ -16,11 +16,11 @@ spctl offers <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[create](/testnet/cli/commands/offers/create)|Create offer|
-|[disable](/testnet/cli/commands/offers/list)|Disable offer|
-|[download-content](/testnet/cli/commands/offers/download-content)|Download the content of an offer with `id` (only for offers that allow this operation)|
-|[enable](/testnet/cli/commands/offers/list)|Enable offer|
-|[get](/testnet/cli/commands/offers/get)|Display detailed information on offer with `id`|
-|[get-info](/testnet/cli/commands/offers/list)|Get offer info property|
-|[list](/testnet/cli/commands/offers/list)|List offers|
-|[update](/testnet/cli/commands/offers/list)|Update offer info|
+|[create](/developers/cli_commands/offers/create)|Create offer|
+|[disable](/developers/cli_commands/offers/list)|Disable offer|
+|[download-content](/developers/cli_commands/offers/download-content)|Download the content of an offer with `id` (only for offers that allow this operation)|
+|[enable](/developers/cli_commands/offers/list)|Enable offer|
+|[get](/developers/cli_commands/offers/get)|Display detailed information on offer with `id`|
+|[get-info](/developers/cli_commands/offers/list)|Get offer info property|
+|[list](/developers/cli_commands/offers/list)|List offers|
+|[update](/developers/cli_commands/offers/list)|Update offer info|

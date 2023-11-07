@@ -18,7 +18,7 @@ To learn more about TII and its execution, refer to our [whitepaper](/whitepaper
 
 In certain situations, you may want to generate a TII and maintain full control over it. For example, to be able to share your solution with others without disclosing your source code. Using a remote storage resource isn't viable since it allows read access to the original file, while the TII is encrypted with a hardware key and can only be decrypted in the TEE area.
 
-To generate a TII, your solution must be [prepared](/testnet/cli/commands/solutions/prepare) and [uploaded](/testnet/cli/commands/files/upload) to remote storage. Keep in mind that the generated `metadata.json` file is crucial, as it contains a hash and an mrenclave, which verify the source's authenticity.
+To generate a TII, your solution must be [prepared](/developers/cli_commands/solutions/prepare) and [uploaded](/developers/cli_commands/files/upload) to remote storage. Keep in mind that the generated `metadata.json` file is crucial, as it contains a hash and an mrenclave, which verify the source's authenticity.
 
 This example builds upon the [Execution of python script](/testnet/cli/guides/python-script) guide. Once you're ready, execute a command:
 

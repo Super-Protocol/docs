@@ -16,4 +16,4 @@ spctl tii <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[generate](/testnet/cli/commands/tii/generate)|Generate TII|
+|[generate](/developers/cli_commands/tii/generate)|Generate TII|
