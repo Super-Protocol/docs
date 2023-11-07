@@ -10,19 +10,19 @@ sidebar_position: 1
 На вход туннель клиенту подаются данные, в которых в корне должен быть файл config.json в следующем формате:
 
 
-```
+```json
 {
-"tunnels": [
-{
-"sgxMrSigner": "TUNNEL_SERVER_MRSIGNER",
-"sgxMrEnclave": "TUNNEL_SERVER_MRENCLAVE"
-}
-],
-"authToken": "AUTH_TOKEN",
-"site": {
-"cert": "./website-fullchain.crt",
-"key": "./website-private-key.pem"
-}
+  "tunnels": [
+    {
+      "sgxMrSigner": "TUNNEL_SERVER_MRSIGNER",
+      "sgxMrEnclave": "TUNNEL_SERVER_MRENCLAVE"
+    }
+  ],
+  "authToken": "AUTH_TOKEN",
+  "site": {
+  "cert": "./website-fullchain.crt",
+  "key": "./website-private-key.pem"
+  }
 }
 ```
 А также должна быть папка content с содержимым.
