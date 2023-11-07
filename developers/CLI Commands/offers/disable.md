@@ -1,7 +1,7 @@
 ---
-id: "cli-offers-disable"
+id: "cli-Marketplace GUI Offers-disable"
 title: "Disable offer"
-slug: "/cli_commands/offers/disable"
+slug: "/cli_commands/Marketplace GUI Offers/disable"
 ---
 
 Disable offer

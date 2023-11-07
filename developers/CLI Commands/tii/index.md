@@ -2,6 +2,8 @@
 id: "cli-tii"
 title: "TII"
 slug: "/cli_commands/tii"
+sidebar_position: 6
+
 ---
 
 Prepare custom resource to be processed without sharing the source

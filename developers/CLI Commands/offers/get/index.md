@@ -1,7 +1,7 @@
 ---
-id: "cli-offers-get"
+id: "cli-Marketplace GUI Offers-get"
 title: "Get offer"
-slug: "/cli_commands/offers/get"
+slug: "/cli_commands/Marketplace GUI Offers/get"
 sidebar_label: "get"
 ---
 

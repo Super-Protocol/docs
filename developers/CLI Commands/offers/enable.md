@@ -1,7 +1,7 @@
 ---
-id: "cli-offers-enable"
+id: "cli-Marketplace GUI Offers-enable"
 title: "Enable offer"
-slug: "/cli_commands/offers/enable"
+slug: "/cli_commands/Marketplace GUI Offers/enable"
 sidebar_label: "enable"
 ---
 
