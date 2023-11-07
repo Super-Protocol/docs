@@ -22,9 +22,9 @@ To create an order we will need to select the necessary components. The basic co
 
 To better understand how Marketplace works, let’s take a step-by-step walkthrough.
 
-As an example we’ll deploy the [Super Chat app](/testnet/chat), a technological demo developed by the Super Protocol team to show how complex dynamic web apps can be run in decentralized confidential environments (TEE).
+As an example we’ll deploy the [Super Chat app](/developers/chat), a technological demo developed by the Super Protocol team to show how complex dynamic web apps can be run in decentralized confidential environments (TEE).
 
-Let's begin by going to the Marketplace at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/testnet/marketplace/first-steps/).
+Let's begin by going to the Marketplace at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/developers/marketplace/first-steps/).
 
 
 :::info Step 1. Add a solution.

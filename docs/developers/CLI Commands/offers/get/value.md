@@ -1,7 +1,7 @@
 ---
-id: "cli-Marketplace GUI Offers-get-value"
+id: "cli-commands-offers-get-value"
 title: "Get value offer"
-slug: "/cli_commands/Marketplace GUI Offers/get/value"
+slug: "/cli_commands/offers/get/value"
 sidebar_label: "value"
 ---
 

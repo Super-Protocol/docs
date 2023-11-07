@@ -23,7 +23,7 @@ Our team will provide confidential computing resources, technical expertise and 
 
 :::note Web3 chat example app
 
-To showcase the capabilities of Super Protocol to the developer community we have built an example Web3 application: [Super Chat](/testnet/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). Have a look.
+To showcase the capabilities of Super Protocol to the developer community we have built an example Web3 application: [Super Chat](/developers/chat). It's a complex web app that runs entirely inside of [Trusted Execution Environment](https://www.intel.com/content/www/us/en/architecture-and-technology/software-guard-extensions.html). Have a look.
 
 :::
 
@@ -41,7 +41,7 @@ Also here are the technical use cases for which we will provide example apps:
 
 | Use Case | Description |
 | -- | -- |
-| Dynamic web apps with tunnels | Complex web applications (such as [Super Chat](/testnet/chat/)) that require external public IP (via tunnels).|
+| Dynamic web apps with tunnels | Complex web applications (such as [Super Chat](/developers/chat/)) that require external public IP (via tunnels).|
 | Smart-contracts and oracles | Building Web3 oracles that provide a way for smart-contracts to exchange data with external off-chain sources. |
 | Smart-contracts with off-chain computing | Offload the heavy lifting to off-chain computing environments to remove limitations imposed by smart-contracts. |
 | Python-based solutions | Such as AI/ML Python scripts for computations on data that do not require internet access. |

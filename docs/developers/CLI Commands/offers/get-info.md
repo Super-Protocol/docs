@@ -1,7 +1,7 @@
 ---
-id: "cli-Marketplace GUI Offers-get-info"
+id: "cli-commands-offers-get-info"
 title: "Get offer info"
-slug: "/cli_commands/Marketplace GUI Offers/get-info"
+slug: "/cli_commands/offers/get-info"
 sidebar_label: "get-info"
 ---
 

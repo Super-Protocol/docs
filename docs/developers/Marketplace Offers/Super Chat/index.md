@@ -22,7 +22,7 @@ Super Chat is a solution offer that you can deploy on Super Protocol. But since 
 
 There are two ways of gaining access:
 
-1. **Deploy your own**. Testers can easily deploy Super Chat using the Marketplace UI or CLI. Follow [this guide](/testnet/marketplace). You need to be approved for Testnet 3 - apply [here](/testnet/) if you don't have your access token. 
+1. **Deploy your own**. Testers can easily deploy Super Chat using the Marketplace UI or CLI. Follow [this guide](/developers/marketplace). You need to be approved for Testnet 3 - apply [here](/testnet/) if you don't have your access token. 
 2. **Join a friend**. Find someone from Testnet 3 who has already deployed their Super Chat app. Once there, you can create your own chat room or join someone else's. Our [Discord](https://discord.com/invite/superprotocol) server could be a good place to start looking.
 
 :::note What are instances and domains?

@@ -18,7 +18,7 @@ sidebar_position: 2
 
 2. `SPCTL_CONFIG_BASE64`. Так же, необходим `config.json`, который нужно закодировать в формат base64 и поместить в 
    GitHub Secrets под именем `SPCTL_CONFIG_BASE64`. 
-   Описание структуры файла можно посмотреть в документации [здесь](https://docs.superprotocol.com/testnet/cli/configuration/), там же можно скачать шаблон этого файла.
+   Описание структуры файла можно посмотреть в документации [здесь](https://docs.superprotocol.com/developers/cli/configuration/), там же можно скачать шаблон этого файла.
 
    Закодировать `config.json` в формат base64 можно командой:
 

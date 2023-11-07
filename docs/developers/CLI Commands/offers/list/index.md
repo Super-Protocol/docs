@@ -1,7 +1,7 @@
 ---
-id: "cli-Marketplace GUI Offers-list"
+id: "cli-commands-offers-list"
 title: "List Marketplace GUI Offers"
-slug: "/cli_commands/Marketplace GUI Offers/list"
+slug: "/cli_commands/offers/list"
 sidebar_label: "list"
 ---
 

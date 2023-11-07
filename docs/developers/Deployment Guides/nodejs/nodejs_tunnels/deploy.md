@@ -13,7 +13,7 @@ sidebar_position: 4
 
 После запуска туннель-сервер создаёт `OfferId`, который можно посмотреть в артефактах GiHub Actions.
 
-Чтобы узнать IP адрес сервера, на котором запущено решение, нужно выполнить команду с помощью утилиты [spctl](https://docs.superprotocol.com/testnet/cli/):
+Чтобы узнать IP адрес сервера, на котором запущено решение, нужно выполнить команду с помощью утилиты [spctl](https://docs.superprotocol.com/developers/cli/):
 
 ```shell
 ./spctl orders download-result <OrderId>

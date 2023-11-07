@@ -1,7 +1,7 @@
 ---
 id: "setup_cli"
 title: "Setting Up"
-slug: "/cli_overview/setup_cli"
+slug: "/cli_guides/setup"
 sidebar_position: 1
 
 ---
@@ -32,11 +32,11 @@ Alternatively, you can download CLI from [GitHub repository](https://github.com/
 
 ## Getting started
 
-Before you can use CLI you need to create a configuration file. Please refer to [this guide](/testnet/cli/configuration) to do that.
+Before you can use CLI you need to create a configuration file. Please refer to [this guide](/developers/cli_guides) to do that.
 
-To get familiar with the available commands please use [commands documentation](/testnet/cli/commands).
+To get familiar with the available commands please use [commands documentation](/developers/cli_commands).
 
-If you want to deploy your own solutions on Super Protocol, check [our guides section](/testnet/cli/guides).
+If you want to deploy your own solutions on Super Protocol, check [our guides section](/developers/cli_guides).
 
 
 ## Configuring
@@ -68,7 +68,7 @@ This section contains parameters needed to establish a connection to the blockch
 
 ## storage
 
-Before you can deploy your own solutions or use your own data on Super Protocol, you need to encrypt and upload them to some storage that TEE providers could have access to. See [these guides](/testnet/cli/storages) for information on the supported storages and how to configure them.
+Before you can deploy your own solutions or use your own data on Super Protocol, you need to encrypt and upload them to some storage that TEE providers could have access to. See [these guides](/developers/cli_guides/storages) for information on the supported storages and how to configure them.
 
 |**Parameter**|**Description**|
 | :- | :- |
@@ -88,7 +88,7 @@ TEE providers always encrypt results before uploading them to the storage. The p
 |**Parameter**|**Description**|
 | :- | :- |
 |algo|`ECIES`<br/><br/>**Note.** More algorithms will be supported in the future.|
-|key|Private key for order results encryption. Public key derived from it is used by TEE providers to encrypt order results. Use [workflows generate-key](/testnet/cli/commands/workflows/generate-key) command to generate this key.|
+|key|Private key for order results encryption. Public key derived from it is used by TEE providers to encrypt order results. Use [workflows generate-key](/developers/cli/commands/workflows/generate-key) command to generate this key.|
 |encoding|`base64`<br/><br/>**Note.** More types will be supported in the future.|
 
 

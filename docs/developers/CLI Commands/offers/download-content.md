@@ -1,7 +1,7 @@
 ---
-id: "cli-Marketplace GUI Offers-download-content"
+id: "cli-commands-offers-download-content"
 title: "Download content from an offer"
-slug: "/cli_commands/Marketplace GUI Offers/download-content"
+slug: "/cli_commands/offers/download-content"
 ---
 
 Download the content of an offer with `id` (only for offers that allow this operation)

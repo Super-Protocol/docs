@@ -1,7 +1,7 @@
 ---
-id: "cli-Marketplace GUI Offers-create"
+id: "cli-commands-offers-create"
 title: "Create offer"
-slug: "/cli_commands/Marketplace GUI Offers/create"
+slug: "/cli_commands/offers/create"
 ---
 
 Create a new offer

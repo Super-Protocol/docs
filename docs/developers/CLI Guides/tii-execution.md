@@ -1,12 +1,12 @@
 ---
 id: "cli-Deployment Guides-confidential-execution"
 title: "Confidential execution"
-slug: "/cli_overview/confidential-execution"
+slug: "/cli_guides/confidential-execution"
 sidebar_position: 4
 
 ---
 
-You might already be aware that you can run your custom solutions on the Super Protocol network. If not, check out the [Execution of python script](/testnet/cli/guides/python-script) guide, which explains how to prepare custom solutions and data.
+You might already be aware that you can run your custom solutions on the Super Protocol network. If not, check out the [Execution of python script](/developers/deployment_guides/python) guide, which explains how to prepare custom solutions and data.
 
 This article delves deeper into the `solution` concept.
 
@@ -20,7 +20,7 @@ In certain situations, you may want to generate a TII and maintain full control 
 
 To generate a TII, your solution must be [prepared](/developers/cli_commands/solutions/prepare) and [uploaded](/developers/cli_commands/files/upload) to remote storage. Keep in mind that the generated `metadata.json` file is crucial, as it contains a hash and an mrenclave, which verify the source's authenticity.
 
-This example builds upon the [Execution of python script](/testnet/cli/guides/python-script) guide. Once you're ready, execute a command:
+This example builds upon the [Execution of python script](/developers/deployment_guides/python) guide. Once you're ready, execute a command:
 
 ```
 spctl tii generate --offer 1 --output ./solution-tii.json ./solution.json

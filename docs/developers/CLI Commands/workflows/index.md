@@ -18,5 +18,5 @@ spctl workflows <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[generate-key](/testnet/cli/commands/workflows/generate-key)|Generate private key to encrypt order results|
-|[create](/testnet/cli/commands/workflows/create)|Create new orders|
+|[generate-key](/developers/cli/commands/workflows/generate-key)|Generate private key to encrypt order results|
+|[create](/developers/cli/commands/workflows/create)|Create new orders|

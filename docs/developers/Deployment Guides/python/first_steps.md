@@ -1,7 +1,7 @@
 ---
 id: "First Steps"
 title: "First Steps"
-slug: "/Deployment Guides/python/first_steps"
+slug: "/deployment_guides/python/first_steps"
 sidebar_position: 1
 ---
 
@@ -9,7 +9,7 @@ sidebar_position: 1
 
 Before you can use this guide, you need to receive an invitation letter with personal credentials to access the Super Protocol Testnet. If you don't have it, please refer to [Getting Started guide](https://docs.dev.superprotocol.com/testnet).
 
-In order to deploy your own solutions you need [Command-line Interface (CLI)](https://docs.dev.superprotocol.com/testnet/cli).
+In order to deploy your own solutions you need [Command-line Interface (CLI)](https://docs.dev.superprotocol.com/developers/cli).
 
 The following systems are supported:
 
