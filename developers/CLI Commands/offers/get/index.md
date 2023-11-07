@@ -17,5 +17,5 @@ spctl offers get <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[tee](/testnet/cli/commands/offers/get/tee)|Display detailed information on TEE offer with `id`|
-|[value](/testnet/cli/commands/offers/get/value)|Display detailed information on value offer with `id`|
+|[tee](/developers/cli_commands/offers/get/tee)|Display detailed information on TEE offer with `id`|
+|[value](/developers/cli_commands/offers/get/value)|Display detailed information on value offer with `id`|

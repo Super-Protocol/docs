@@ -18,5 +18,5 @@ spctl solutions <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[generate-key](/testnet/cli/commands/solutions/generate-key)|Generate solution signing key|
-|[prepare](/testnet/cli/commands/solutions/prepare)|Prepare solution for deployment|
+|[generate-key](/developers/cli_commands/solutions/generate-key)|Generate solution signing key|
+|[prepare](/developers/cli_commands/solutions/prepare)|Prepare solution for deployment|

@@ -18,5 +18,5 @@ spctl providers <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[get](/testnet/cli/commands/providers/get)|Display detailed information on provider with `address`|
-|[list](/testnet/cli/commands/providers/list)|List providers|
+|[get](/developers/cli_commands/providers/get)|Display detailed information on provider with `address`|
+|[list](/developers/cli_commands/providers/list)|List providers|

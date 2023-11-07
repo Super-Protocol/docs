@@ -17,5 +17,5 @@ spctl offers list <command>
 
 |**Command**|**Description**|
 | :- | :- |
-|[tee](/testnet/cli/commands/offers/list/tee)|List TEE offers|
-|[value](/testnet/cli/commands/offers/list/value)|List value offers|
+|[tee](/developers/cli_commands/offers/list/tee)|List TEE offers|
+|[value](/developers/cli_commands/offers/list/value)|List value offers|
