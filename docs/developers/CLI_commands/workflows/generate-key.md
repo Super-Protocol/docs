@@ -1,7 +1,7 @@
 ---
-id: "cli-workflows-generate-key"
+id: "generate-key"
 title: "Generate private key"
-slug: "/developers/cli_commands/workflows/generate-key"
+slug: "/cli_commands/workflows/generate-key"
 sidebar_label: "generate-key"
 ---
 

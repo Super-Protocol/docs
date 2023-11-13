@@ -1,7 +1,7 @@
 ---
 id: "cli_commands"
 title: "CLI Commands"
-slug: "/developers/cli_commands"
+slug: "/cli_commands"
 sidebar_position: 7
 ---
 

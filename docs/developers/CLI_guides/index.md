@@ -1,7 +1,7 @@
 ---
 id: "cli_guides"
 title: "CLI Guides"
-slug: "/developers/cli_guides"
+slug: "/cli_guides"
 sidebar_position: 6
 ---
 

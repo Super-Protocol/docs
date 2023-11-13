@@ -1,7 +1,7 @@
 ---
 id: "configuring_cli"
 title: "Configuring CLI"
-slug: "/developers/cli_guides/configuring"
+slug: "/cli_guides/configuring"
 sidebar_position: 2
 
 ---
