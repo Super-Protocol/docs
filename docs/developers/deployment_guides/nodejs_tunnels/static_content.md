@@ -4,43 +4,66 @@ title: "Example: Static Content"
 slug: "/developers/guides/nodejs_tunnels/static_content"
 sidebar_position: 8
 ---
+ 
+## Overview and Prerequisites
 
-## Tunnel Server Data
-1. Generate a UUID Token
+что требуется?
+
+## Setting up Tunnel Server
+
+### Generate a UUID Token
+
     1. You can generate one using the website [UUID Generator](https://fusionauth.io/dev-tools/uuid-generator).
     2. For security purposes, it's better to create a script to generate the token.
-2. Save it in a file named `auth-token` (without any file extension).
-3. Create an archive using the command:
+
+Save it in a file named `auth-token` (without any file extension).
+
+You'll need to insert the token into `config.json` in subsequent steps.
+
+### Create an archive 
+
+using the command:
+
 ```
 tar -czvf tunnel-server-data.tar.gz auth-token
 ```
+
 This will result in `tunnel-server-data.tar.gz`.
-4) Upload it to StorJ using the command:
+
+### Upload archive to StorJ 
+
+using the command:
+
 ```
 spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
 ```
 This will produce `tunnel-server-data.json`.
-5) Create a tunnel server order:
+
+### Create a tunnel server order
+
 ```
 spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16
 ```
 
-6. You'll need to insert the token into `config.json` in subsequent steps.
-## Tunnel Client Data
+Remember the resulting order ID.
 
-### Static Website
+## Setting up Tunnel Client
+
+### Content structure
+
+This is the internal structure. The website files are placed in the `content` dir.
 
 - config.json
 - content
     - index.html
     - css, etc.
-- config.json
 - private.pem
 - cert.crt
 
-### Structure of config.json
+### Set up the config.json 
 
-1. The JSON file should have the following structure:
+The JSON file should have the following structure:
+
 ```
 {
   "tunnels": [
@@ -56,34 +79,73 @@ spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 6,2 --solution 10
   }
 }
 ```
-- `sgxMrSigner` and `sgxMrEnclave` are identifiers for the tunnel server that the client trusts. The current values are accurate for the testnet.
-- `authToken` is the token that you saved in the `auth-token` file from the first section.
-- The `cert` and `key` fields specify the relative paths to the SSL certificate and key files, respectively.
-2. Create an archive using the command:
+
+* `sgxMrSigner` and `sgxMrEnclave` are identifiers for the tunnel server that the client trusts. The current values are accurate for the testnet.
+* `authToken` is the token that you saved in the `auth-token` file from the first section.
+* The `cert` and `key` fields specify the relative paths to the SSL certificate and key files, respectively.
+
+### Create an archive 
+
+using the command:
+
 ```
 tar -czvf tunnel-client-data.tar.gz private.pem cert.crt content config.json
 ```
-This will result in `tunnel-client-data.tar.gz`.
-3. Upload it to StorJ using the command:
+This will result in `tunnel-client-data.tar.gz`. 
+
+### Upload archive to StorJ 
+
+using the command:
+
 ```
 spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 ```
 This will produce `tunnel-client-data.json`.
 
-# Launching the Website on the Tunnel
+### Create the tunnel client order 
 
-1. Execute the order using the command:
+using the command:
+
 ```
 spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 6,2 --solution 11,7 --data tunnel-client-data.json --storage 20,16
 ```
-2. Retrieve the result of the first tunnel server order using the command:
+
+Remember the resulting order ID.
+
+## Retrieving the results
+
+### Check Order Status
+
+You can check the status of the server and client tunnels using that ID in the following [command](/developers/cli_commands/orders/get):
+
 ```
-spctl orders download-result {tunnel-server-order-number}
+spctl orders get <tunnel server order ID>
+spctl orders get <tunnel client order ID>
 ```
 
-3. The result will be a JSON of the form: `{ip: www.xxx.yyy.zzz, port: 443}`.
-4. Go to your host's DNS settings and add two DNS records:
+When the both orders turn to status `Done` proceed to the next step.
+
+### Retrieve result
+
+<Highlight color="red">//а как делать схему 2х2? мы сейчас запустили 1 клиент и 1 сервер? Или 11 оффер автоматически разворачивает 2х2? А если руками то как?</Highlight>
+
+Retrieve the result of the tunnel server order using the command:
+
+```
+spctl orders download-result <tunnel server order ID>
+```
+
+The result will be a JSON in the form: `ip: www.xxx.yyy.zzz, port: 443`.
+
+## Setting up DNS
+
+Go to your host's DNS settings and add two DNS records:
     1. An A-record pointing your domain to the IP address `www.xxx.yyy.zzz`.
-    2. A TXT-record for your domain with the content: "r=superprotocol;ip=[www.xxx.yyy.zzz](http://www.xxx.yyy.zzz/)".
+    2. A TXT-record for your domain with the content: 
+`r=superprotocol;ip=[www.xxx.yyy.zzz](http://www.xxx.yyy.zzz/)`.
     3. Set the TTL to 5 minutes.
-5. Check the website.
+
+## Visiting your site.
+
+Go to `www.xxx.yyy.zzz`. You are done! Don't forget to replenish the tunnel orders with TEE tokens to make sure that your site stays up.
+

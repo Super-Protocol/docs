@@ -13,8 +13,6 @@ You can use this example as a guide to launch your own applications in a TEE, fo
 
 
 
-# Initial Set Up
-
 ## Prerequisites
 
 Для выполнения последовательности всех действий необходимо установить
@@ -112,7 +110,7 @@ docker-compose up
 UI будет доступен по адресу: [https://localhost:8888/](https://localhost:8888/)
 
 
-# Подготовка решения для деплоя в ТЕЕ
+## Prepare for deploy on Super Protocol
 
 На этом шаге необходимо создать скрипт для production-сборки и подготовки её для деплоя в TEE.
 
