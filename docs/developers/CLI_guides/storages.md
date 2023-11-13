@@ -16,7 +16,7 @@ Storj is a decentralized storage solution with free and paid offerings available
 
 Create a new bucket using [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/). Remember to save your passphrase to avoid loosing your data.
 
-Bucket name is used in CLI [config file](/developers/cli_guides/setup) (`bucket` parameter in `storage` section). 
+Bucket name is used in CLI [config file](/developers/cli_guides/configuring) (`bucket` parameter in `storage` section). 
 
 ## Creating Access Grants
 

@@ -1,7 +1,7 @@
 ---
 id: "cli-workflows-create"
 title: "Create workflow"
-slug: "/cli_commands/workflows/create"
+slug: "/developers/cli_commands/workflows/create"
 sidebar_label: "create"
 ---
 

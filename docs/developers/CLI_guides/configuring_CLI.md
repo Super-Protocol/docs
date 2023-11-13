@@ -1,7 +1,7 @@
 ---
 id: "configuring_cli"
 title: "Configuring CLI"
-slug: "/cli_guides/configuring"
+slug: "/developers/cli_guides/configuring"
 sidebar_position: 2
 
 ---
@@ -61,10 +61,10 @@ This section contains parameters related to the creation of new orders.
 
 TEE providers always encrypt results before uploading them to the storage. The parameters below are related to this encryption.
 
-|**Parameter**|**Description**|
-| :- | :- |
-|algo|`ECIES`<br/><br/>**Note.** More algorithms will be supported in the future.|
-|key|Private key for order results encryption. Public key derived from it is used by TEE providers to encrypt order results. Use [workflows generate-key](/developers/cli/commands/workflows/generate-key) command to generate this key.|
-|encoding|`base64`<br/><br/>**Note.** More types will be supported in the future.|
+|**Parameter**| **Description**                                                                                                                                                                                                                     |
+| :- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|algo| `ECIES`<br/><br/>**Note.** More algorithms will be supported in the future.                                                                                                                                                         |
+|key| Private key for order results encryption. Public key derived from it is used by TEE providers to encrypt order results. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. |
+|encoding| `base64`<br/><br/>**Note.** More types will be supported in the future.                                                                                                                                                             |
 
 

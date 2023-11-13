@@ -16,7 +16,7 @@ spctl workflows <command>
 
 ## Child commands
 
-|**Command**|**Description**|
-| :- | :- |
-|[generate-key](/developers/cli/commands/workflows/generate-key)|Generate private key to encrypt order results|
-|[create](/developers/cli/commands/workflows/create)|Create new orders|
+| **Command**                                                     |**Description**|
+|:----------------------------------------------------------------| :- |
+| [generate-key](/developers/cli_commands/workflows/generate-key) |Generate private key to encrypt order results|
+| [create](/developers/cli_commands/workflows/create)             |Create new orders|
