@@ -5,26 +5,31 @@ slug: "/deployment_guides/nodejs_tunnels/minecraft"
 sidebar_position: 6
 ---
 
-Minecraft - популярная игра, любимая многими. В этом обзоре описан процесс по запуску сервера и клиента Minecraft на платформе Super Protocol.
+This overview describes the process of launching a Minecraft server and client on the Super Protocol platform.
 
-Этот пример демонстрирует возможность запуска динамических приложений в TEE, используя такие инструменты, как туннель-сервер и туннель-клиент.
+This example demonstrates the capability to run dynamic applications in a Trusted Execution Environment (TEE) using tools such as the [Tunnel Server](/developers/architecture/tunnels/tunnel_server) and [Tunnel Client](/developers/architecture/tunnels/tunnel_client).
 
-Примером можно руководствоваться для запуска своих приложений в TEE, действуя шаг за шагом, по аналогии.
+You can use this example as a guide to launch your own applications in a TEE, following the steps outlined in a similar fashion.
 
 
 
-# Предварительная настройка
+# Initial Set Up
+
+## Prerequisites
 
 Для выполнения последовательности всех действий необходимо установить
-[Node.js](https://nodejs.org/en/download/package-manager) v16,
-[yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) и
-[TypeScript](https://www.typescriptlang.org/download), а также, [Docker](https://docs.docker.com/engine/install/) и
-[Docker Compose](https://docs.docker.com/compose/install/).
+* [Node.js](https://nodejs.org/en/download/package-manager) v16
+* [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+* [TypeScript](https://www.typescriptlang.org/download)
+* [Docker](https://docs.docker.com/engine/install/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
-Для запуска игры необходим Minecraft-сервер и web-клиент к нему.
-В качестве примера будем использовать сервер [flying-squid](https://github.com/PrismarineJS/flying-squid) и клиент [prismarine-web-client](https://github.com/PrismarineJS/prismarine-web-client).
+## Download Minecraft source code
 
-Для начала необходимо загрузить исходный код [проекта](https://github.com/Super-Protocol/solutions):
+To launch the game you will need the Minecraft server and a web client.
+In this example we'll be using [flying-squid](https://github.com/PrismarineJS/flying-squid) and web client [prismarine-web-client](https://github.com/PrismarineJS/prismarine-web-client).
+
+First step is to load the [source code](https://github.com/Super-Protocol/solutions):
 
 ```shell
 git clone https://github.com/Super-Protocol/solutions
@@ -36,6 +41,8 @@ cd solutions/Tunnel\ Client/minecraft/
 ```shell
 mv .env.example .env
 ```
+
+## Create key and certificate
 
 Для безопасного запуска решения в TEE необходимо обеспечить защищённый канал между браузером пользователя и web-сервером
 клиента Minecraft. Для этого необходимо модифицировать файл клиента Minecraft [/client/server.js](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/minecraft/client/server.js) (строки 42-45),
@@ -50,6 +57,8 @@ mv .env.example .env
 Обратите внимание, значения TLS_CERT и TLS_KEY в файле .env должны быть указаны в кавычках.
 :::
 
+## Launch Minecraft client and server
+
 В корне проекта, в директории `src`, находится файл server.ts, который запускает Minecraft-сервер и Minecraft-клиент,
 создавая два потока.
 
@@ -57,6 +66,8 @@ mv .env.example .env
 runWorker(resolve(__dirname, "..", "server/mc-server.js"));
 runWorker(resolve(__dirname, "..", "client/server.js"));
 ```
+
+## Set up dependencies
 
 Теперь можно установить все зависимости и запустить приложение в `dev mode`:
 

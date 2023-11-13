@@ -5,6 +5,8 @@ slug: "/deployment_guides/nodejs_tunnels/deploy"
 sidebar_position: 4
 ---
 
+<Highlight color="red">//такое ощущение что некоторые эти шаги пересекаются с предыдущими разделами</Highlight>
+
 В процессе разработки своего решения Вам необходимо протестировать его в среде Super Protocol.
 Для этого Вам необходимо:
 

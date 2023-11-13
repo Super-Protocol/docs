@@ -23,7 +23,7 @@ If not, the following command using [certbot](https://certbot.eff.org/) can be u
 sudo certbot certonly --manual --preferred-challenges=dns --email <YOUR_EMAIL>  --agree-tos --key-type ecdsa -d <YOUR_DOMAIN>
 ```
 
-<Highlight color="red">//не очень понятный кусок, что за TXT файл? можно ли как-то более обще описать настройку DNS для домена?</Highlight>
+<Highlight color="red">//не очень понятный кусок, какие действия нужно сделать пользователю? можно ли как-то более обще описать настройку DNS для домена?</Highlight>
 
 Please note that in this command a TXT record will need to be added in the domain's control panel in order to confirm ownership of the domain. The required parameters will appear in the prompt after running the command.
 

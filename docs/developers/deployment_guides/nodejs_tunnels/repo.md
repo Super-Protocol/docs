@@ -7,9 +7,9 @@ sidebar_position: 2
 
 For automated deployment of the solution, you can use GitHub Actions: [Tunnel Server](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-server-deploy.yml) and [Tunnel Client](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-client-deploy.yml).  
 
-<Highlight color="red">//тут не хватает контекста про github actions</Highlight>
+<Highlight color="red">//тут не хватает контекста про github actions. Также такое ощущение что за счет того что мы вынесли многие шаги в GitHub actions (где эти шаги никак не описаны), то пропущена целостность процесса. К примеру в гайде нет шагов про создание заказов, они будто вынесены за скобки.</Highlight>
 
-Для работы GitHub Actions туннель-сервера необходимо установить следующие значения:
+To set up Tunnel Server and Tunnel Client you need to perform the following steps.
 
 ## Tunnel Server
 
@@ -21,7 +21,7 @@ Save your personal token with the name `NPM_TOKEN_GH` in GitHub Secrets. This to
 
 `Config.json` (see the guide [here](/developers/cli_guides/configuring)) has to be encoded into base64 format and placed in GitHub Secrets under the name `SPCTL_CONFIG_BASE64`. Use this command to encode the `config.json` into base64:
 
-    ```shell title="config.json"
+    ```
     echo "$(cat config.json)" | base64
     ```
 
@@ -29,11 +29,8 @@ Save your personal token with the name `NPM_TOKEN_GH` in GitHub Secrets. This to
 
 Prepare and save `SOLUTION_SERVER_TOKEN` in GitHub Secrets. This is a random value that will be used by the server to identify the client. You can generate it in the following manner:
 
-   ``` shell
-   node
-   > require('crypto').randomUUID()
-   '5ea1ad2c-b627-4ea1-bcc2-40922d2344a4'
-   > .exit
+   ```
+require('crypto').randomUUID()
    ```
 
 ## Tunnel Client
@@ -58,8 +55,7 @@ You can encode values into base64 with the following commands:
 
 ### Create mrsigner and mrenclave variables
    
-`TUNNEL_SERVER_MRSIGNER` и `TUNNEL_SERVER_MRENCLAVE`. Для корректной работы туннель-клиента необходимо в GitHub Variables 
-   создать два параметра, MrSigner и MrAnclave, со значениями:
+In order for tunnel client to communicate with the tunnel server you need to create `TUNNEL_SERVER_MRSIGNER` and `TUNNEL_SERVER_MRENCLAVE` in GitHub Variables with the following parameters:
 
     ```tsconfig
     TUNNEL_SERVER_MRSIGNER=82e55c6ec7268b07e030226cc42417b89cb17ecc8b6b73bafb84fc44b0ed059c
@@ -68,7 +64,8 @@ You can encode values into base64 with the following commands:
 
 ## Check your work
 
-В результате, в GitHub Secrets и в GitHub Variables должно быть следующее содержимое:
+As result, your GitHub Secrets and GitHub Variables should look something like this:
 
    <Imager src={require('./images/secrets.png').default} />
    <Imager src={require('./images/values.png').default} />
+
