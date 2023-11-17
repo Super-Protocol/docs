@@ -15,7 +15,7 @@ sidebar_position: 3
 
 * `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов
 * `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run)
-* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/deployment_guides/nodejs_tunnels/setup); для генерации его из файла `fullchain.crt` воспользуйтесь командой
+* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/setup); для генерации его из файла `fullchain.crt` воспользуйтесь командой
 
    ```
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' fullchain.crt | base64
