@@ -126,7 +126,7 @@ my-tunnel-client-app
 │
 └───fullchain.crt       # файл с SSL сертификатами (your SSL, intermediate, root)
 │
-└───private.pem         # файл с приватным ключом от для сертификата
+└───private.pem         # файл с приватным ключом от сертификата
 ```
 
 Архиваруем папку при помощи команды:
@@ -148,7 +148,7 @@ spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет 
 ```
 Workflow was created, TEE order id: ["XXXX"]
 ```
-где XXXX - номер созданного заказа туннель-сервера
+где XXXX - номер созданного заказа туннель-клиента
 
 
 ## Setup DNS
