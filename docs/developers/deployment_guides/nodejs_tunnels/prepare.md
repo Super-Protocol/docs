@@ -7,11 +7,6 @@ sidebar_position: 1
 
 
 
-## Requirements
-
-<Highlight color="red">//какие требования?</Highlight>
-
-
 ## Prepare DNS
 
 Вам необходим собственный домен или сабдомен, к настройкам DNS которого у Вас есть доступ. 
