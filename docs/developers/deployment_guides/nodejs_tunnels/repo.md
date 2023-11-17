@@ -9,12 +9,12 @@ sidebar_position: 3
 
 Для Вашего удобвства мы подготволили репозиторий со скриптами Github Action, которые Вы можете использовать для автоматического деплоя Вашего приложения на сервера Superprotocol-а.
 
-Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/deployment_guides/nodejs_tunnels/manual_run).
+Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/developers/deployment_guides/nodejs_tunnels/manual_run).
 
 В новом или уже существующем репозитории с вашим приложением необходимо стоздать следующие secrets:
 
 * `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов
-* `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/deployment_guides/nodejs_tunnels/manual_run)
+* `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run)
 * `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/deployment_guides/nodejs_tunnels/setup); для генерации его из файла `fullchain.crt` воспользуйтесь командой
 
    ```
@@ -22,7 +22,7 @@ sidebar_position: 3
    ```
    При необходимости замените название файла на ваше
 
-* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/deployment_guides/nodejs_tunnels/setup) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
+* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/setup) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
 
    ```
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' private.pem" | base64
