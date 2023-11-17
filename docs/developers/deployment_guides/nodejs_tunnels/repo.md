@@ -1,71 +1,78 @@
 ---
 id: "repo"
-title: "2. Configure Repository"
+title: "3. Github repository"
 slug: "/deployment_guides/nodejs_tunnels/repo"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-For automated deployment of the solution, you can use GitHub Actions: [Tunnel Server](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-server-deploy.yml) and [Tunnel Client](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-client-deploy.yml).  
+## Preparing secrets and variables
 
-<Highlight color="red">//тут не хватает контекста про github actions. Также такое ощущение что за счет того что мы вынесли многие шаги в GitHub actions (где эти шаги никак не описаны), то пропущена целостность процесса. К примеру в гайде нет шагов про создание заказов, они будто вынесены за скобки.</Highlight>
+Для Вашего удобвства мы подготволили репозиторий со скриптами Github Action, которые Вы можете использовать для автоматического деплоя Вашего приложения на сервера Superprotocol-а.
 
-To set up Tunnel Server and Tunnel Client you need to perform the following steps.
+Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/deployment_guides/nodejs_tunnels/manual_run).
 
-## Tunnel Server
+В новом или уже существующем репозитории с вашим приложением необходимо стоздать следующие secrets:
 
-### Save your token to GitHub Secrets
+* `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов
+* `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/deployment_guides/nodejs_tunnels/manual_run)
+* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/deployment_guides/nodejs_tunnels/setup); для генерации его из файла `fullchain.crt` воспользуйтесь командой
 
-Save your personal token with the name `NPM_TOKEN_GH` in GitHub Secrets. This token can be generated in your GitHub account.
+   ```
+   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' fullchain.crt | base64
+   ```
+   При необходимости замените название файла на ваше
 
-### Encode Config.json into base64
+* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/deployment_guides/nodejs_tunnels/setup) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
 
-`Config.json` (see the guide [here](/developers/cli_guides/configuring)) has to be encoded into base64 format and placed in GitHub Secrets under the name `SPCTL_CONFIG_BASE64`. Use this command to encode the `config.json` into base64:
+   ```
+   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' private.pem" | base64
+   ```
+   При необходимости замените название файла на ваше
 
+* `SPCTL_CONFIG_BASE64` - сюда сохраните ваш конфиг для SPCTL в формате base64, созданный по [данному руководству](/developers/cli_guides/configuring); для этого воспользуйтесь командой
     ```
     echo "$(cat config.json)" | base64
     ```
 
-### Save server token to Github Secrets
 
-Prepare and save `SOLUTION_SERVER_TOKEN` in GitHub Secrets. This is a random value that will be used by the server to identify the client. You can generate it in the following manner:
+Так же необходимо указать 2 переменные в настройках репозитория:
 
-   ```
-require('crypto').randomUUID()
-   ```
+* `TUNNEL_SERVER_MRENCLAVE` - 82e55c6ec7268b07e030226cc42417b89cb17ecc8b6b73bafb84fc44b0ed059c
+* `TUNNEL_SERVER_MRSIGNER` - 22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513
 
-## Tunnel Client
-
-### Convert key and certificate into single line
-
-`SOLUTION_SSL_KEY_BASE64` and `SOLUTION_SSL_CERTIFICATE_BASE64`. To further work with the [key and certificate](https://docs.dev.superprotocol.com/developers/guides/tunnel-clients/prepare), it's necessary to convert the contents of these files into a single line. To do this, execute the following commands:
-
-   ```shell
-   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' fullchain.pem
-   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' privkey.pem
-   ```
-
-Copy these values into `SOLUTION_SSL_CERTIFICATE_BASE64` and `SOLUTION_SSL_KEY_BASE64` in base64 encoding.
-
-You can encode values into base64 with the following commands:
-
-   ```shell title="config.json"
-   echo "<YOUR_CERTIFICATE>" | base64
-   echo "<YOUR_KEY>" | base64
-   ```
-
-### Create mrsigner and mrenclave variables
-   
-In order for tunnel client to communicate with the tunnel server you need to create `TUNNEL_SERVER_MRSIGNER` and `TUNNEL_SERVER_MRENCLAVE` in GitHub Variables with the following parameters:
-
-    ```tsconfig
-    TUNNEL_SERVER_MRSIGNER=82e55c6ec7268b07e030226cc42417b89cb17ecc8b6b73bafb84fc44b0ed059c
-    TUNNEL_SERVER_MRENCLAVE=22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513
-    ```
-
-## Check your work
+Укажите hex-коды такими без изменения.
 
 As result, your GitHub Secrets and GitHub Variables should look something like this:
 
    <Imager src={require('./images/secrets.png').default} />
    <Imager src={require('./images/values.png').default} />
+
+
+## Run tunnel-server Github Action
+
+Скопируйте файл [minecraft-tunnel-server-deploy.yml](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-server-deploy.yml) в свой репозиторий, по пути `.github/workflows/minecraft-tunnel-client-deploy.yml`. Переимнуйте его по своему усмотрению. И замените везде слово `minecraft` на название вашего приложения.
+ 
+В этом файле больше изменений вносить никаких не нужно. Если вы внесли правильные данные в secrets, то Action должен успешно выполниться и вы должны скачать `last-orders` артефакт, где будет указан номер созданного заказа.
+
+
+## Run tunnel-client Github Action
+
+Скопируйте файл [minecraft-tunnel-client-deploy.yml](https://github.com/Super-Protocol/solutions/blob/main/.github/workflows/minecraft-tunnel-client-deploy.yml) в свой репозиторий, по пути `.github/workflows/minecraft-tunnel-client-deploy.yml`. Переимнуйте его по своему усмотрению. И замените везде слово `minecraft` на название вашего приложения.
+
+Данный Github Action предполагает, что для вашего приложения должны быть установлены зависимости, а так же оно должно быть собрано. 
+
+Создайте файл `scripts/prepare-solution.sh` где необходимо будет прописать логику сборки вашего приложения. Это скрипт будет вызывать непосредственно сам Actoin, передавая 2 паратмера:
+* _$1_ - папка, куда нужно производить сборку (к моменту вызова скрипта папка уже будет создана, `mkdir` делать не нужно)
+* _$2_ - название солюшена
+
+Изучите [наш пример](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/minecraft/scripts/prepare-solution.sh) данного скрипта для `minecraft`
+
+
+Если все сдкелано правильно - запускайте Action и точно так же в `last-orders` артефакте должен появиться номер созданного заказа.
+
+
+## Setup DNS
+
+Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.2 #Prepare and run tunnel-server solution](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution). 
+Получив ip, нужно будет создать в DNS 2 записи, как указано [п.2 #Setup DNS](http://localhost:3000/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)
 
