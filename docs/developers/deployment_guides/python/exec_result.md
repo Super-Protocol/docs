@@ -10,7 +10,7 @@ sidebar_position: 4
 Now you will need to execute together:
 
 * Your Python solution (`solution.json` uploaded to StorJ);
-* Python base image from the Marketplace (offer 5);
+* Python base image from the [Marketplace](https://marketplace.superprotocol.com/solutions?offerId=5) (offer 5);
 * Your two datasets (`input-1.json` and `input-2.json` uploaded to StorJ).
 
 Use the following [command](/developers/cli_commands/workflows/create):
@@ -44,8 +44,6 @@ spctl orders download-result <order_ID>
 
 This command downloads the `result.tar.gz` file, containing:
 1. `logs\log.txt` - a log file of the script. If any errors occur during the execution of the script, they will be recorded to this log file.
-2. `output\inner1` and `output\inner2` - directories where the script's output is stored.
-
-<Highlight color="red">//это точно правильные папки?</Highlight>
+2. `output` - directory where the script's output is stored.
 
 If the order status is `Error`, you can still download the results, but instead of an archive there will be a result.txt file with an error message.
