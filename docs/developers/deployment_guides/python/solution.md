@@ -12,7 +12,7 @@ sidebar_position: 2
 
 ## Install Python base image
 
-Your solution will be using base Python image that is already available on Super Protocol. Therefore, in order to test it locally, as well as prepare the solution for deployment, you need to download the base image and upload it to Docker.
+Your solution will be using base Python image that is already available on Super Protocol. Therefore, in order to test it locally, as well as prepare the solution for deployment, you need to download the base image and load it to Docker.
 
 ### Download Python Image
 
@@ -22,9 +22,9 @@ Use this command to download the Python image from this Super Protocol offer.&#x
 spctl offers download-content 5
 ```
 
-### Upload Python image to Docker
+### Load Python image to Docker
 
-Then use this command to upload the Python image to Docker.
+Then use this command to load the Python image to Docker.
 
 ```
 docker load -i <Python base image archive name>
@@ -42,7 +42,7 @@ And place your Python executables and libraries into the `run` folder.
 
 ## Set-up entrypoint.py
 
-For illustration purposes, we will use a simple Python code as example.
+For illustration purposes, we will use a simple Python code as example. This program processes text files in a specified input directory, generates image from each text input, and saves the images in an output directory.
 
 Create `entrypoint.py` file in `run` directory and add the following code:
 
@@ -161,7 +161,7 @@ You don't need to generate a new key for every solution, you can just reuse the 
 
 Execute the following command to prepare and pack the solution:
 
-```markdown
+```
 spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
 --base-image-path python3.10-base-solution-image-0.0.2.image.tar.gz \
 ./run signing-key
@@ -171,7 +171,7 @@ After running the command, a `metadata.json` file is generated.
 
 ## Upload the solution
 
-Solution needs to be uploaded to a decentralized storage before it may be executed in Super Protocol. The storage credentials have been configured during the CLI setup.
+Solution needs to be uploaded to a decentralized storage before it may be executed in Super Protocol. The storage credentials have been configured during the [CLI setup](/developers/cli_guides/configuring#storage).
 
 Run the following command.
 
@@ -180,4 +180,4 @@ spctl files upload solution.tar.gz --output solution.json \
 --filename solution.tar.gz --metadata ./metadata.json
 ```
 
-`Solution.json` file is created.
+`solution.json` file is created.
