@@ -1,13 +1,18 @@
 ---
 id: "static_example"
 title: "Example: Static Content"
-slug: "/developers/guides/nodejs_tunnels/static_content"
+slug: "/deployment_guides/nodejs_tunnels/static_content"
 sidebar_position: 8
 ---
- 
+
 ## Overview and Prerequisites
 
-что требуется?
+## Prerequisites
+
+Для выполнения последовательности всех действий необходимо установить
+* [Node.js](https://nodejs.org/en/download/package-manager) v16
+* [Docker](https://docs.docker.com/engine/install/)
+* [spctl](/developers/cli_guides)
 
 ## Setting up Tunnel Server
 
@@ -18,11 +23,13 @@ sidebar_position: 8
 
 Save it in a file named `auth-token` (without any file extension).
 
+This token will be used by Tunnel Server to identify Tunnel Client, which will be a website server. To securely deliver it to Cloud provider we will archive, encrypt and upload it to cloud storage.
+
 You'll need to insert the token into `config.json` in subsequent steps.
 
-### Create an archive 
+### Create an archive
 
-using the command:
+`auth-token` file will be used as input data for Tunnel Server deployment.
 
 ```
 tar -czvf tunnel-server-data.tar.gz auth-token
@@ -30,19 +37,22 @@ tar -czvf tunnel-server-data.tar.gz auth-token
 
 This will result in `tunnel-server-data.tar.gz`.
 
-### Upload archive to StorJ 
+### Upload archive to StorJ
 
-using the command:
+Solution needs to be encrypted and uploaded to a decentralized storage before it may be executed in Super Protocol. The storage credentials have been configured during the [CLI setup](/developers/cli_guides/configuring#storage).:
 
 ```
 spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
 ```
-This will produce `tunnel-server-data.json`.
+
+This command will produce `tunnel-server-data.json`.
 
 ### Create a tunnel server order
 
+You are now ready to start the Tunnel Server order. Note the parameter `--min-rent-minutes` which will deposit enough TEE tokens to ensure the tunnel is running for at least the specified period of time (in minutes). For this example we've set it to 1440 minutes which is equivalent to 24 hours.
+
 ```
-spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16
+spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16 --min-rent-minutes 1440
 ```
 
 Remember the resulting order ID.
@@ -51,16 +61,22 @@ Remember the resulting order ID.
 
 ### Content structure
 
-This is the internal structure. The website files are placed in the `content` dir.
+Create a new directory for Tunnel Client configuration files. This is the target file structure that we will set up:
 
-- config.json
-- content
-    - index.html
-    - css, etc.
-- private.pem
-- cert.crt
+```
+├── config.json
+└── content
+    ├── index.html
+    └── css, etc.
+├── private.pem
+└── cert.crt
+```
 
-### Set up the config.json 
+The website files are placed in the `content` dir. You can use any website you want or you can download a template from our [**datasets**](https://github.com/Super-Protocol/datasets/tree/main/Demo%20Static%20Website) repository
+
+Learn about obtaining `private.pem` and `cert.crt` files in [Step 1](./setup) of the Guide
+
+### Set up the config.json
 
 The JSON file should have the following structure:
 
@@ -72,7 +88,7 @@ The JSON file should have the following structure:
       "sgxMrEnclave": "f022aefb6d74aa6684761550aed6712c75bd0e1730f667037716c0a5d0cf451d"
     }
   ],
-  "authToken": "token",
+  "authToken": "<auth-token>",
   "site": {
     "cert": "./cert.crt",
     "key": "./private.pem"
@@ -84,30 +100,32 @@ The JSON file should have the following structure:
 * `authToken` is the token that you saved in the `auth-token` file from the first section.
 * The `cert` and `key` fields specify the relative paths to the SSL certificate and key files, respectively.
 
-### Create an archive 
+### Create an archive
 
-using the command:
+From inside the directory, run the command:
 
 ```
 tar -czvf tunnel-client-data.tar.gz private.pem cert.crt content config.json
 ```
-This will result in `tunnel-client-data.tar.gz`. 
 
-### Upload archive to StorJ 
+This will create an archive `tunnel-client-data.tar.gz`.
 
-using the command:
+### Upload archive to StorJ
+
+The same way as we did for Tunnel Server config file, upload `tunnel-client-data.tar.gz` to StorJ:
 
 ```
 spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 ```
+
 This will produce `tunnel-client-data.json`.
 
-### Create the tunnel client order 
+### Create the tunnel client order
 
-using the command:
+Finally, create Tunnel Client order for the same duration as you created Tunnel Server:
 
 ```
-spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 6,2 --solution 11,7 --data tunnel-client-data.json --storage 20,16
+spctl workflows create --tee 1 --solution 6,2 --solution 11,7 --data tunnel-client-data.json --storage 20,16 --min-rent-minutes 1440
 ```
 
 Remember the resulting order ID.
@@ -123,7 +141,7 @@ spctl orders get <tunnel server order ID>
 spctl orders get <tunnel client order ID>
 ```
 
-When the both orders turn to status `Done` proceed to the next step.
+You can also visit our Marketplace by url `https://marketplace.superprotocol.com/order/<your-order-ID>` for more convenient observation. Wait till the both orders turn to status `Processing`, wait for ~10 minutes (or until you see a blue button `Get Result` on Marketplace) and proceed to the next step.
 
 ### Retrieve result
 
@@ -135,17 +153,32 @@ Retrieve the result of the tunnel server order using the command:
 spctl orders download-result <tunnel server order ID>
 ```
 
-The result will be a JSON in the form: `ip: www.xxx.yyy.zzz, port: 443`.
+The result will be a JSON in the form: `ip: 255.255.255.255, port: 443`.
 
 ## Setting up DNS
 
 Go to your host's DNS settings and add two DNS records:
-    1. An A-record pointing your domain to the IP address `www.xxx.yyy.zzz`.
-    2. A TXT-record for your domain with the content: 
-`r=superprotocol;ip=[www.xxx.yyy.zzz](http://www.xxx.yyy.zzz/)`.
+    1. An A-record pointing your domain to the IP address `255.255.255.255`.
+    2. A TXT-record for your domain with the content:
+`r=superprotocol;ip=255.255.255.255`.
     3. Set the TTL to 5 minutes.
 
 ## Visiting your site.
 
-Go to `www.xxx.yyy.zzz`. You are done! Don't forget to replenish the tunnel orders with TEE tokens to make sure that your site stays up.
+And you are done! After setting up DNS let records to distribute and synchronize for several minutes. Then you can visit your site by your domain name `https://your.domain.com`. Don't forget to replenish the tunnel orders with TEE tokens to make sure that your site stays up.
 
+
+## Creating more tunnels
+
+To maintain website reliability you can create more tunnel servers and clients using other Compute Providers' offers. This way you can be sure, that if one host goes down, your site will be available through another tunnel. In other words, your website runs in a decentralized way! For example, to create the same tunnel server on another host, change `--tee` parameter for another ID (you can pick any ID from [Compute](https://marketplace.superprotocol.com/compute) section on Marketplace) in `workflows create` command:
+
+```
+spctl workflows create --tee 2 ...other params...
+```
+
+After you saw your website online with the first pair of tunnels, repeat some of the previous steps to deploy another pair:
+
+1. [Create a tunnel server order](#create-a-tunnel-server-order) - **Substitute `--tee 1` with another offer**
+2. [Create the tunnel client order](#create-the-tunnel-client-order) - **Substitute `--tee 1` with another offer**
+2. [Retrieving the results](#retrieving-the-results)
+2. [Setting up DNS](#setting-up-dns)
