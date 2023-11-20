@@ -149,7 +149,7 @@ If done correctly, `output` directory should have two subdirectories `input-0001
 
 ## Generate signing key
 
-Run the following command in the directory where you placed the CLI file to generate the signing key:
+Run the following command in the directory where you placed the CLI file to generate the signing key, which we will use to sign the solution:
 
 ```
 spctl solutions generate-key signing-key
@@ -159,7 +159,7 @@ You don't need to generate a new key for every solution, you can just reuse the 
 
 ## Pack the solution
 
-Execute the following command to prepare and pack the solution:
+When the Docker image should run within an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following command to prepare and pack the solution:
 
 ```
 spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
@@ -167,7 +167,7 @@ spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifes
 ./run signing-key
 ```
 
-After running the command, a `metadata.json` file is generated.
+After running the command, `solution.tar.gz` and `metadata.json` files are generated.
 
 ## Upload the solution
 
