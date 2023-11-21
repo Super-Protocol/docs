@@ -1,8 +1,8 @@
 ---
 id: "repo"
-title: "3. Github repository"
+title: "4. Github repository"
 slug: "/deployment_guides/nodejs_tunnels/repo"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 ## Preparing secrets and variables
@@ -15,14 +15,14 @@ sidebar_position: 3
 
 * `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов
 * `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run)
-* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/setup); для генерации его из файла `fullchain.crt` воспользуйтесь командой
+* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing); для генерации его из файла `fullchain.crt` воспользуйтесь командой
 
    ```
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' fullchain.crt | base64
    ```
    При необходимости замените название файла на ваше
 
-* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/setup) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
+* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
 
    ```
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' private.pem" | base64

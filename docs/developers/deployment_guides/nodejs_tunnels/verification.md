@@ -1,8 +1,8 @@
 ---
 id: "verification"
-title: "4. Verify Confidentiality"
+title: "5. Verify Confidentiality"
 slug: "/deployment_guides/nodejs_tunnels/verification"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 Верификация квот пока до конца не ясна.
