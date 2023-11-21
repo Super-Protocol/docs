@@ -74,7 +74,7 @@ Create a new directory for Tunnel Client configuration files. This is the target
 
 The website files are placed in the `content` dir. You can use any website you want or you can download a template from our [**datasets**](https://github.com/Super-Protocol/datasets/tree/main/Demo%20Static%20Website) repository
 
-Learn about obtaining `private.pem` and `cert.crt` files in [Step 1](./setup) of the Guide
+Learn about obtaining `private.pem` and `cert.crt` files in [Step 1](./preparing) of the Guide
 
 ### Set up the config.json
 

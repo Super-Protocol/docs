@@ -1,53 +1,9 @@
 ---
 id: "manual_run"
-title: "2. Run your app at Superptocol tunnels"
+title: "3. Run your app at Superptocol tunnels"
 slug: "/deployment_guides/nodejs_tunnels/manual_run"
-sidebar_position: 2
+sidebar_position: 3
 ---
-
-## Requirements
-
-Для запуска Вашего приложения на Superprotocol-е оно должно удовлетворять нескольким требованиям:
-* использует JavaScript и NodeJs 16 версии
-* точкой входа должен быть файл `server.js`, расположенный или в корне Вашего app или в папке `dist` или в папке `build`; необходимо учитывать, что данный файл будет запущен при помощи `worker_threads`
-* в environment-е будут доступны следующие переменные, которые необходимо использовать для запуска сервера
-    * _HTTPS_PORT_ - порт, который должен использловать сервер для старта
-    * _TLS_KEY_ - TLS ключ, который так же должен использовать сервер 
-    * _TLS_CERT_ -  TLS сертификат, который так же должен использовать сервер
-    
-    Обращаем Ваше внимание, что env-переменные _TLS_KEY_ и _TLS_CERT_ будут содержать не тот ключ и сертификат, который был сгененрирован в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/setup).
-
-Пример простого express-сервера:
-```javascript title="server.js"
-const express = require("express");
-const compression = require("compression");
-const https = require('https');
-
-if (!process.env.TLS_KEY || !process.env.TLS_CERT || !process.env.HTTPS_PORT) {
-   console.error("Error: Required environment variables TLS_KEY, TLS_CERT, and HTTPS_PORT are not set");
-   process.exit(1);
-}
-
-const app = express();
-app.use(compression());
-
-const credentials = { key: process.env.TLS_KEY, cert: process.env.TLS_CERT };
-const httpsServer = https.createServer(credentials, app);
-
-httpsServer.on('error', (error) => {
-   console.error('Server error:', error);
-});
-
-httpsServer.listen(process.env.HTTPS_PORT, () => {
-   console.log(`Server is running on https://localhost:${process.env.HTTPS_PORT}`);
-});
-```
-
-
-## SPCTL
-
-Необходимо скачать и настроить нашу CLI тулзу SPCTL. Воспользуйтесь руководством [здесь](/developers/cli_guides/configuring)
-
 
 ## Prepare and run tunnel-server solution
 
@@ -112,21 +68,23 @@ spctl orders download-result XXXX
 ```
 * `sgxMrEnclave` и `sgxMrSigner` - оставьте как в этом примере без изменения
 * `authToken` - токен с файла `auth-token`, который вы создали в предыдущем пункте
-* `site.cert` и `site.key` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/setup)
+* `site.cert` и `site.key` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing)
 
 
 Туннель-клиент требует определенную структуру каталогов и файлов для успешного запуска. Пожалуйста, подготовьnе папку `my-tunnel-client-app`, где будут размещены файлы и каталоги в такой структуре:
 
 ```
 my-tunnel-client-app
-└───content             # здесь должны быть файлы вашего приложения
-│    └───server.js      # entrypoint of youe application 
+└───content               # здесь должны быть файлы вашего приложения
+│    └───node_modules    
+│    └───package.json     
+│    └───server.js        # entrypoint of youe application 
 │
-└───config.json         # файл конфигурации, объясненный выше
+└───config.json           # файл конфигурации, объясненный выше
 │
-└───fullchain.crt       # файл с SSL сертификатами (your SSL, intermediate, root)
+└───fullchain.crt         # файл с SSL сертификатами (your SSL, intermediate, root)
 │
-└───private.pem         # файл с приватным ключом от сертификата
+└───private.pem           # файл с приватным ключом от сертификата
 ```
 
 Архиваруем папку при помощи команды:

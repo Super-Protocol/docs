@@ -1,10 +1,17 @@
 ---
-id: "initial set-up"
-title: "1. Generate SSL certificate and prepare DNS"
-slug: "/deployment_guides/nodejs_tunnels/setup"
+id: "preparing"
+title: "1. Prepare SPCTL, DNS and SSL certificate"
+slug: "/deployment_guides/nodejs_tunnels/preparing"
 sidebar_position: 1
 ---
 
+## Docker
+
+Необходимо, чтобы в вашей системе был Docker. Скачать и установить его можно с [официального сайта](https://docs.docker.com/engine/install/)
+
+## SPCTL
+
+Необходимо скачать и настроить нашу CLI тулзу SPCTL. Воспользуйтесь руководством [здесь](/developers/cli_guides/configuring).
 
 
 ## Prepare DNS
