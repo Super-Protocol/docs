@@ -1,12 +1,12 @@
 ---
 id: "verification"
-title: "4. Verify Confidentiality"
-slug: "/developers/guides/nodejs_tunnels/verification"
-sidebar_position: 4
+title: "5. Verify Confidentiality"
+slug: "/deployment_guides/nodejs_tunnels/verification"
+sidebar_position: 5
 ---
 
 Верификация квот пока до конца не ясна.
-Предварительно, зайти [сюда](https://quote-verification.dev.superprotocol.com/) и скопировать в input домен, где развернут сайт. 
+Предварительно, зайти [сюда](https://quote-verification.dev.superprotocol.com/) и скопировать в input домен, где развернут сайт.
 Но вроде как это должно быть в iframe и должен быть fingerprint клиентского сертификата для стравнения. Как будет полная ясность - добавлю.
 
 Здесь хотелось бы шаги связанные с проверкой квот. Я могу описать ту часть, которая касается Маркетплейса -- вероятно ее стоит добавить в Walkthrough самого Маркетплейса, а сделать сделать то же самое, но с более технической точки зрения.
