@@ -10,7 +10,7 @@ Enable offer
 ## Usage
 
 ```
-spctl offers enable <id>
+./spctl offers enable <id>
 ```
 
 ## Arguments

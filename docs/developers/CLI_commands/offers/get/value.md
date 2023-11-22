@@ -10,7 +10,7 @@ Display detailed information on value offer with `id`
 ## Usage
 
 ```
-spctl offers get value <id> [OPTIONS]
+./spctl offers get value <id> [OPTIONS]
 ```
 
 ## Arguments

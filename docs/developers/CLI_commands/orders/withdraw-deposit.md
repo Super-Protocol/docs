@@ -10,7 +10,7 @@ Withdraw unspent deposit from a completed order with `id`
 ## Usage
 
 ```
-spctl orders withdraw-deposit <id> [OPTIONS]
+./spctl orders withdraw-deposit <id> [OPTIONS]
 ```
 
 ## Arguments

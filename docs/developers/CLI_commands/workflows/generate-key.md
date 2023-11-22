@@ -10,7 +10,7 @@ Generate private key to encrypt order results
 ## Usage
 
 ```
-spctl workflows generate-key
+./spctl workflows generate-key
 ```
 
 ## Options

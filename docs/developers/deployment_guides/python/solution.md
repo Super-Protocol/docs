@@ -19,7 +19,7 @@ Your solution will be using base Python image that is already available on Super
 Use this command to download the Python image from this Super Protocol offer.&#x20;
 
 ```
-spctl offers download-content 5
+./spctl offers download-content 5
 ```
 
 ### Load Python image to Docker
@@ -152,7 +152,7 @@ If done correctly, `output` directory should have two subdirectories `input-0001
 Run the following command in the directory where you placed the CLI file to generate the signing key, which we will use to sign the solution:
 
 ```
-spctl solutions generate-key signing-key
+./spctl solutions generate-key signing-key
 ```
 
 You don't need to generate a new key for every solution, you can just reuse the existing one. You will need this key to receive the result.
@@ -162,7 +162,7 @@ You don't need to generate a new key for every solution, you can just reuse the 
 When the Docker image should run within an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following command to prepare and pack the solution:
 
 ```
-spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
+./spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
 --base-image-path python3.10-base-solution-image-0.0.2.image.tar.gz \
 ./run signing-key
 ```
@@ -176,7 +176,7 @@ Solution needs to be uploaded to a decentralized storage before it may be execut
 Run the following command.
 
 ```
-spctl files upload solution.tar.gz --output solution.json \
+./spctl files upload solution.tar.gz --output solution.json \
 --filename solution.tar.gz --metadata ./metadata.json
 ```
 

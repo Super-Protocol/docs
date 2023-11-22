@@ -16,7 +16,7 @@ Now you will need to execute together:
 Use the following [command](/developers/cli_commands/workflows/create):
 
 ```
-spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 20,16 --solution 5,1 \
+./spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 20,16 --solution 5,1 \
 --solution solution.json --data input-1.json --data input-2.json
 ```
 
@@ -29,7 +29,7 @@ An order ID is generated upon execution.
 You can check the order status using that ID in the following [command](/developers/cli_commands/orders/get):
 
 ```
-spctl orders get <order_ID>
+./spctl orders get <order_ID>
 ```
 
 When the status turns to `Done` proceed to the next step.
@@ -39,7 +39,7 @@ When the status turns to `Done` proceed to the next step.
 Retrieve the result with the following [command](/developers/cli_commands/orders/download-result):
 
 ```
-spctl orders download-result <order_ID>
+./spctl orders download-result <order_ID>
 ```
 
 This command downloads the `result.tar.gz` file, containing:

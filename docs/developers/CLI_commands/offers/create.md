@@ -9,7 +9,7 @@ Create a new offer
 ## Usage
 
 ```
-spctl offers create <type>
+./spctl offers create <type>
 ```
 
 ## Arguments

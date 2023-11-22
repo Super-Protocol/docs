@@ -10,7 +10,7 @@ Display detailed information on offer with `id`
 ## Usage
 
 ```
-spctl offers get <command>
+./spctl offers get <command>
 ```
 
 ## Child commands

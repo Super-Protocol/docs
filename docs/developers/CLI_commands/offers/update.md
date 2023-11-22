@@ -10,7 +10,7 @@ Update offer
 ## Usage
 
 ```
-spctl offers update <type>
+./spctl offers update <type>
 ```
 ## Arguments
 

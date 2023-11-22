@@ -10,7 +10,7 @@ Generate TII from an uploaded resource
 ## Usage
 
 ```
-spctl tii generate <resourcePath> [OPTIONS]
+./spctl tii generate <resourcePath> [OPTIONS]
 ```
 
 ## Arguments

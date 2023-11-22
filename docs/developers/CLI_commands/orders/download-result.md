@@ -10,7 +10,7 @@ Download order result with `id`
 ## Usage
 
 ```
-spctl orders download-result <id> [OPTIONS]
+./spctl orders download-result <id> [OPTIONS]
 ```
 
 ## Arguments

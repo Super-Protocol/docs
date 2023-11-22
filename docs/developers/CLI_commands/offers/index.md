@@ -11,7 +11,7 @@ Manage Super Protocol offers
 ## Usage
 
 ```
-spctl offers <command>
+./spctl offers <command>
 ```
 
 ## Child commands

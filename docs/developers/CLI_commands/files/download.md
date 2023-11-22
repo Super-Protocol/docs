@@ -10,7 +10,7 @@ Download and decrypt a file from the remote storage to `<localPath>` using resou
 ## Usage
 
 ```
-spctl files download <resourcePath> <localPath> [OPTIONS]
+./spctl files download <resourcePath> <localPath> [OPTIONS]
 ```
 
 ## Arguments

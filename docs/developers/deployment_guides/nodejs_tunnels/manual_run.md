@@ -21,7 +21,7 @@ tar -zcvf auth-token.tar.gz auth-token
 
 Шифруем и загружаем архив на StorJ при помощи SPCTL:
 ```bash
-spctl files upload auth-token.tar.gz --output auth-token.json --filename auth-token.tar.gz
+./spctl files upload auth-token.tar.gz --output auth-token.json --filename auth-token.tar.gz
 ```
 
 На выходе у вас должен создасться файл `auth-token.json`.
@@ -30,7 +30,7 @@ spctl files upload auth-token.tar.gz --output auth-token.json --filename auth-to
 
 Создаем заказ на туннель-сервер с только что загруженным токеном:
 ```bash
-spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data auth-token.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data auth-token.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
 Обратите внимание на последнюю строчку output-а, оставленного командой. Она будет иметь следующий вид
@@ -40,7 +40,7 @@ Workflow was created, TEE order id: ["XXXX"]
 где XXXX - это номер созданного заказа. Через какое-то время (от 10 до 15 минут) нужно будет загрузить результат работы ордера при помощи команды
 
 ```bash
-spctl orders download-result XXXX
+./spctl orders download-result XXXX
 ```
 
 Результатом будет файл `result.txt` с ip адрессом. Он нам пригодится в следующих шагах
@@ -94,12 +94,12 @@ tar -zcvf my-tunnel-client-app.tar.gz my-tunnel-client-app
 
 Шифруем и загружаем архив на StorJ при помощи SPCTL:
 ```bash
-spctl files upload my-tunnel-client-app.tar.gz --output my-tunnel-client-app.json --filename my-tunnel-client-app.tar.gz
+./spctl files upload my-tunnel-client-app.tar.gz --output my-tunnel-client-app.json --filename my-tunnel-client-app.tar.gz
 ```
 
 Создаем заказ на туннель-клиент с данными нашего приложения:
 ```bash
-spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
 Последняя строчка output команды будет выглядеть так

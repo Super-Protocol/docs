@@ -10,7 +10,7 @@ Prepare solution for deployment
 ## Usage
 
 ```
-spctl solutions prepare <solutionPath> <solutionKeyPath> [OPTIONS]
+./spctl solutions prepare <solutionPath> <solutionKeyPath> [OPTIONS]
 ```
 
 ## Arguments
@@ -43,5 +43,5 @@ Prepare the solution using the signing key and the base image.
 * The base image can be downloaded using the `spctl download-content 6 --save-to ~/` command.
 Please see the example below (adjusting for folder paths and file names):
 ```
-spctl solutions prepare --pack-solution my-solution.tar.gz --write-default-manifest --base-image-path ~/node16-base-solution-image-v0.1.0.tar.gz --sgx-max-threads 256 --sgx-enclave-size 16G ./my-solution/run ./my-solution/signing-key
+./spctl solutions prepare --pack-solution my-solution.tar.gz --write-default-manifest --base-image-path ~/node16-base-solution-image-v0.1.0.tar.gz --sgx-max-threads 256 --sgx-enclave-size 16G ./my-solution/run ./my-solution/signing-key
 ```

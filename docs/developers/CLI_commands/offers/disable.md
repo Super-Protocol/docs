@@ -9,7 +9,7 @@ Disable offer
 ## Usage
 
 ```
-spctl offers disable <id>
+./spctl offers disable <id>
 ```
 
 ## Arguments
