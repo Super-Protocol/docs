@@ -23,13 +23,13 @@ To generate a TII, your solution must be [prepared](/developers/cli_commands/sol
 This example builds upon the [Execution of python script](/developers/deployment_guides/python) guide. Once you're ready, execute a command:
 
 ```
-spctl tii generate --offer 1 --output ./solution-tii.json ./solution.json
+./spctl tii generate --offer 1 --output ./solution-tii.json ./solution.json
 ```
 
 This command generates a `solution-tii.json` file encrypted with the public key of Compute offer with ID 1. The public key is retrieved from the blockchain. From this point forward, `solution-tii.json` can only run on Compute offer 1, as other providers cannot decrypt it. Now, let's execute the newly created TII on the Super Protocol:
 
 ```
-spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 20,16 --solution 2,1 \
+./spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 20,16 --solution 2,1 \
 --solution ./solution-tii.json --data input-1.json --data input-2.json
 ```
 

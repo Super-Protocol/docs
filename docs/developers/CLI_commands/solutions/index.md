@@ -11,7 +11,7 @@ Prepare solutions to be deployed on Super Protocol
 ## Usage
 
 ```
-spctl solutions <command>
+./spctl solutions <command>
 ```
 
 ## Child commands

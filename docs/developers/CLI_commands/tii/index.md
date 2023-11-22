@@ -11,7 +11,7 @@ Prepare custom resource to be processed without sharing the source
 ## Usage
 
 ```
-spctl tii <command>
+./spctl tii <command>
 ```
 
 ## Child commands

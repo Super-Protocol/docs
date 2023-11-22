@@ -11,7 +11,7 @@ Create new orders
 ## Usage
 
 ```
-spctl workflows <command>
+./spctl workflows <command>
 ```
 
 ## Child commands

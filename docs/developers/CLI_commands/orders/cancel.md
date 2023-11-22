@@ -10,7 +10,7 @@ Cancel order with `id`
 ## Usage
 
 ```
-spctl orders cancel <id> [OPTIONS]
+./spctl orders cancel <id> [OPTIONS]
 ```
 
 ## Arguments

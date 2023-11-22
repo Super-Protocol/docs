@@ -10,7 +10,7 @@ List providers
 ## Usage
 
 ```
-spctl providers list [OPTIONS]
+./spctl providers list [OPTIONS]
 ```
 
 ## Options

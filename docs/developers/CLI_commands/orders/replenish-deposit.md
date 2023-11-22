@@ -10,7 +10,7 @@ Replenish order deposit with `id` by `amount`
 ## Usage
 
 ```
-spctl orders replenish-deposit <id> <amount> [OPTIONS]
+./spctl orders replenish-deposit <id> <amount> [OPTIONS]
 ```
 
 ## Arguments

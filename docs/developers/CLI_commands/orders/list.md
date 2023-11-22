@@ -10,7 +10,7 @@ List orders
 ## Usage
 
 ```
-spctl orders list [OPTIONS]
+./spctl orders list [OPTIONS]
 ```
 
 ## Options

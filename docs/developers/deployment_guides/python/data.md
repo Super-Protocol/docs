@@ -22,9 +22,9 @@ tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
 Upload archives to the storage:
 
 ```
-spctl files upload input-1.tar.gz --output input-1.json --filename input-1.tar.gz
+./spctl files upload input-1.tar.gz --output input-1.json --filename input-1.tar.gz
 ```
 
 ```
-spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
+./spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
 ```

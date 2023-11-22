@@ -10,7 +10,7 @@ Display detailed information on TEE offer with `id`
 ## Usage
 
 ```
-spctl offers get tee <id> [OPTIONS]
+./spctl offers get tee <id> [OPTIONS]
 ```
 
 ## Arguments

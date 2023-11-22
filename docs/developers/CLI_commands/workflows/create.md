@@ -12,7 +12,7 @@ To save the results, you must specify an offer for the storage provider.
 ## Usage
 
 ```
-spctl workflows create [OPTIONS]
+./spctl workflows create [OPTIONS]
 ```
 
 ## Options

@@ -10,7 +10,7 @@ List value offers
 ## Usage
 
 ```
-spctl offers list value [OPTIONS]
+./spctl offers list value [OPTIONS]
 ```
 
 ## Options

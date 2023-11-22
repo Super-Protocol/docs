@@ -10,7 +10,7 @@ Upload a file specified by the `<localPath>` argument to the remote storage
 ## Usage
 
 ```
-spctl files upload <localPath> [OPTIONS]
+./spctl files upload <localPath> [OPTIONS]
 ```
 
 ## Arguments

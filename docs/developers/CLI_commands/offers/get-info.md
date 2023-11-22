@@ -10,7 +10,7 @@ Display information on offer with `id` as it is stored in blockchain
 ## Usage
 
 ```
-spctl offers get-info <type> <id>
+./spctl offers get-info <type> <id>
 ```
 
 ## Arguments

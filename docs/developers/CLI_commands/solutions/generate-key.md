@@ -10,7 +10,7 @@ Generate solution signing key
 ## Usage
 
 ```
-spctl solutions generate-key <outputPath> [OPTIONS]
+./spctl solutions generate-key <outputPath> [OPTIONS]
 ```
 
 ## Arguments
