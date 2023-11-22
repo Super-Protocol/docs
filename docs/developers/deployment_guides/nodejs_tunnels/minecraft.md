@@ -45,7 +45,7 @@ mv .env.example .env
 Для безопасного запуска решения в TEE необходимо обеспечить защищённый канал между браузером пользователя и web-сервером
 клиента Minecraft. Для этого необходимо модифицировать файл клиента Minecraft [/client/server.js](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/minecraft/client/server.js) (строки 42-45),
 а именно, добавить https-сервер, в конструктор которого передать приватный ключ и сертификат.
-Процедура создания ключа и сертификата описана [здесь](https://docs.dev.superprotocol.com/developers/guides/tunnel-clients/ssl).
+Процедура создания ключа и сертификата описана [здесь](/developers/guides/tunnel-clients/ssl).
 
 В результате, должны получиться две строки, соответствующие файлам `cert.crt` и `key.pem`.
 
