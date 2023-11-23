@@ -5,7 +5,7 @@ slug: "/deployment_guides/nodejs_tunnels/minecraft"
 sidebar_position: 6
 ---
 
-This overview describes the process of launching a Minecraft server and client on the Super Protocol platform.
+This overview describes the process of launching a Minecraft server and client on the Super Protocol platform and locally as well.
 
 This example demonstrates the capability to run dynamic applications in a Trusted Execution Environment (TEE) using tools such as the [Tunnel Server](/developers/architecture/tunnels/tunnel_server) and [Tunnel Client](/developers/architecture/tunnels/tunnel_client).
 
@@ -50,7 +50,7 @@ docker compose up
 
 ### Manual deploy
 
-Для запуска Minecraft через собственноручно созданные офферы, вам сначала необходимо установить зависимости и сбилдить проект для linux/amd64 платформы. Для этого из каталога с Maincraft-ом запустите слудующ
+Для запуска Minecraft через собственноручно созданные офферы, вам сначала необходимо установить зависимости и сбилдить проект для linux/amd64 платформы. Для этого из каталога с Maincraft-ом запустите слудующую команду
 
 ```bash
 docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster yarn dependencies && yarn build:all
@@ -63,7 +63,12 @@ docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:1
 
 Для деплоя майнкрафта через Github Actions, вы должны использовать или существоующий Github репозиторий или создать новый. Мы рекомендуем Вам сделать [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions), чтобы структура папок сохранилась неизменной.
 
-Дальше необходимо настроить в репозитории secrets and actions, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables).
+Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables).
 
-Если все secrets and variables были настроены правильно, то уже готовые GitHub actions в репозитории задеплоят Minecraft на вашем домене с Вашем SSL сертификатом
+Если все secrets and variables были настроены правильно, то уже готовые GitHub actions `minecraft-...` в репозитории задеплоят Minecraft на вашем домене с Вашем SSL сертификатом.
 
+:::caution
+С одним SSL сертификатом может быть задеплоен только одно приложение!
+ Если Вы уже задеплоили какое-то приложение на Superprotocol-е с Вашим сертификатом, то для деплоя новго нужно сгенерировать новый (можно использовать сабдомены).
+  Для автоматического деплоя через Github Action-ы Вам так же нужно будет создать новыt `secret`-ы с новым ключом и новым сертифкатом, и заменить ими `SOLUTION_SSL_...` сикреты в `.yml`-файлах Github Action
+:::
