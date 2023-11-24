@@ -16,7 +16,7 @@ uuidgen > auth-token
 
 Архивируем токен для последующей загрузки на StorJ:
 ```bash
-tar -zcvf auth-token.tar.gz auth-token 
+tar -zcvf auth-token.tar.gz auth-token
 ```
 
 Шифруем и загружаем архив на StorJ при помощи SPCTL:
@@ -77,9 +77,9 @@ Workflow was created, TEE order id: ["XXXX"]
 my-tunnel-client-app
 ├──content               # здесь должны быть файлы вашего приложения
 │    ├──.env             # переменные среды, если они необходимы
-│    ├──node_modules    
-│    ├──package.json     
-│    └──server.js        # entrypoint of youe application 
+│    ├──node_modules
+│    ├──package.json
+│    └──server.js        # entrypoint of youe application
 │
 ├──config.json           # файл конфигурации, объясненный выше
 ├──fullchain.crt         # файл с SSL сертификатами (your SSL, intermediate, root)
@@ -132,3 +132,27 @@ Workflow was created, TEE order id: ["XXXX"]
 ## Notes
 
 При создании заказа в примере указан параметр `--min-rent-minutes 60`. Это значит, что туннель-сервер и туннель-клиент будут работать 60 минут. При необходимости замените цифру минут необходимым Вам количеством, но учите, что ВАм может понадобиться больше ТЕЕ токенов.
+
+
+## Creating more tunnels
+
+To maintain website reliability you can create more tunnel servers and clients using other Compute Providers' offers. This way you can be sure, that if one host goes down, your site will be available through another tunnel. In other words, your website runs in a decentralized way! For example, to create the same tunnel server on another host, change `--tee` parameter for another ID (you can pick any ID from [Compute](https://marketplace.superprotocol.com/compute) section on Marketplace) in `workflows create` command:
+
+```
+./spctl workflows create --tee 2 ...other params...
+```
+
+After you saw your website online for the first time, repeat some of the previous steps to deploy another couple of tunnels:
+
+1. Create the tunnel server order - **Substitute `--tee 1` with another offer**
+
+```bash
+./spctl workflows create --tee 2 --solution 6,2 --solution 10,6 --data auth-token.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+```
+
+2. Create the tunnel client order - **Substitute `--tee 1` with another offer**
+```bash
+./spctl workflows create --tee 2 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+```
+
+2. [Set up DNS](#setup-dns) with new result file retrieved from Tunnel Server order.
