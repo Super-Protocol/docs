@@ -166,19 +166,3 @@ Go to your host's DNS settings and add two DNS records:
 ## Visiting your site.
 
 And you are done! After setting up DNS let records to distribute and synchronize for several minutes. Then you can visit your site by your domain name `https://your.domain.com`. Don't forget to replenish the tunnel orders with TEE tokens to make sure that your site stays up.
-
-
-## Creating more tunnels
-
-To maintain website reliability you can create more tunnel servers and clients using other Compute Providers' offers. This way you can be sure, that if one host goes down, your site will be available through another tunnel. In other words, your website runs in a decentralized way! For example, to create the same tunnel server on another host, change `--tee` parameter for another ID (you can pick any ID from [Compute](https://marketplace.superprotocol.com/compute) section on Marketplace) in `workflows create` command:
-
-```
-./spctl workflows create --tee 2 ...other params...
-```
-
-After you saw your website online with the first pair of tunnels, repeat some of the previous steps to deploy another pair:
-
-1. [Create a tunnel server order](#create-a-tunnel-server-order) - **Substitute `--tee 1` with another offer**
-2. [Create the tunnel client order](#create-the-tunnel-client-order) - **Substitute `--tee 1` with another offer**
-2. [Retrieving the results](#retrieving-the-results)
-2. [Setting up DNS](#setting-up-dns)
