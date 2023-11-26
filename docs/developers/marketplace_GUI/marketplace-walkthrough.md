@@ -2,6 +2,7 @@
 id: "index-marketplace-walkthrough"
 title: "Walkthrough"
 slug: "/marketplace/marketplace-walkthrough/"
+sidebar_position: 2
 ---
 
 ## 1. Understanding Offers

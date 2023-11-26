@@ -1,8 +1,8 @@
 ---
-id: "verification"
-title: "5. Verify Confidentiality"
-slug: "/deployment_guides/nodejs_tunnels/verification"
-sidebar_position: 5
+id: "check_confidentiality"
+title: "Check Confidentiality"
+slug: "/marketplace_GUI/verification"
+sidebar_position: 3
 ---
 
 Верификация квот пока до конца не ясна.

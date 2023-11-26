@@ -2,7 +2,7 @@
 id: "cli-deployment_guides-confidential-execution"
 title: "Confidential Execution"
 slug: "/cli_guides/confidential-execution"
-sidebar_position: 6
+sidebar_position: 4
 
 ---
 
