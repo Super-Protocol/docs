@@ -12,7 +12,7 @@ In order to use SPCTL you will need an external storage account.
 
 Super Protocol uses external storages for three main purposes:
 
-* Storing your own solutions and data files pre-deployment as well as neccessary service files (such as auth tokens);
+* Storing your own solutions and data files pre-deployment as well as necessary service files (such as auth tokens);
 * Storing your order results;
 * Storing content for solution and data offers from the marketplace.
 

@@ -1,7 +1,7 @@
 ---
-id: "index-marketplace-walkthrough"
+id: "walkthrough"
 title: "Walkthrough"
-slug: "/marketplace/marketplace-walkthrough/"
+slug: "/marketplace/walkthrough/"
 sidebar_position: 2
 ---
 

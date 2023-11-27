@@ -6,24 +6,23 @@ sidebar_position: 3
 
 ---
 
-## Testnet access
+## Prerequisites
 
-Super Protocol is currently in Testnet phase. In order to properly set up SPCTL you will need the following Testnet credentials:
+In order to configure SPCTL you must have:
 
-* Access Token
-* Private Key
+**1. Testnet access** (get it [here](/testnet/)):
+* Access Token (`accessToken`)
+* Private Key (`accountPrivateKey`)
 
-If you have not yet applied for Testnet access, you can do it [here](/testnet/).
+**2. Storage access** (use [this guide](/developers/cli_guides/storages)):
+* Bucket name (`bucket`).
+* Access grant with *write* permission (`writeAccessToken`).
+* Access grant with *read* permission (`readAccessToken`).
 
-## Storage access
+**3. Installed SPCTL** (download it [here](/developers/CLI_guides/downloading))
 
-To configure SPCTL you will need to have completed the steps in [this guide](/developers/cli_guides/storages).
-
-Please have at hand:
-* Bucket name.
-* Access grant with *write* permission.
-* Access grant with *read* permission.
-
+**4. Results Encryption private key** (run [this command](/developers/cli_commands/workflows/generate-key)):
+* Private encryption key (`key`)
 
 ## Creating config.json
 
@@ -37,10 +36,10 @@ The best way is to download [this template](https://github.com/Super-Protocol/ct
 
 This section contains parameters needed to connect to the Super Protocol backend. The backend significantly optimizes the reading of data from the blockchain, offers and orders.
 
-|**Parameter**| **Description**                                              |
-| :- |:-------------------------------------------------------------|
-|url| `https://bff.testnet.superprotocol.com/graphql`              |
-|accessToken| Your personal Access Token from the Testnet invitation email.|
+|**Parameter**| **Description**                                                                                                                                 |
+| :- |:------------------------------------------------------------------------------------------------------------------------------------------------|
+|url| `https://bff.testnet.superprotocol.com/graphql`                                                                                                 |
+|accessToken| Your personal Access Token from the Testnet invitation email. If you don't have this token, you can apply for Testnet access [here](/testnet/). |
 
 ### Blockchain
 
@@ -50,37 +49,32 @@ This section contains parameters needed to establish a connection to the Polygon
 | :- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |rpcUrl| `https://mumbai.polygon.superprotocol.com/hesoyam`<br/><br/>**Note.** You can use a different node, but the Super Protocol team will not be able to support it. |
 |smartContractAddress| `0xf96266Ec42f8D7ccf5831eBCaD3f4851967e9D45`                                                                                                                    |
-|accountPrivateKey| Your personal private key from the Testnet invitation email.                                                                                                    |
+|accountPrivateKey| Your personal Private Key from the Testnet invitation email. If you don't have this token, you can apply for Testnet access [here](/testnet/).                  |
 |authorityAccountPrivateKey| Required to create offers. Leave this blank for now.                                                                                                            |
 
 ### Storage
 
+This section governs your credentials with the storage providers. You will need to have completed the steps in [this guide](/developers/cli_guides/storages).
 
-
-Before you can deploy your own solutions or use your own data on Super Protocol, you need to encrypt and upload them to some storage that TEE providers could have access to. 
-
-
-See [these guides](/developers/cli_guides/storages) for information on the supported storages and how to configure them.
-
-|**Parameter**|**Description**|
-| :- | :- |
-|type|`STORJ`<br/><br/>**Note.** More storage types will be supported in the future.|
-|bucket|STORJ bucket. Your encrypted solutions and data are uploaded to this bucket.|
-|writeAccessToken|STORJ access grant with `write` permission for the specified bucket. This token is used by CLI to upload your encrypted solutions and data to the specified bucket.|
-|readAccessToken|STORJ access grant with `read` permission for the specified bucket. This token is used by TEE providers to access your encrypted solutions and data.|
+|**Parameter**| **Description**                                                                                                                                          |
+| :- |:---------------------------------------------------------------------------------------------------------------------------------------------------------|
+|type| `STORJ`                                                                                                                                                  |
+|bucket| STORJ bucket name. Your encrypted solutions and data are uploaded to this bucket.                                                                        |
+|writeAccessToken| STORJ access grant with *write* permission for the specified bucket. This token is used to upload your encrypted solutions and data.                     |
+|readAccessToken| STORJ access grant with *read* permission for the specified bucket. This token is used by Compute providers to access your encrypted solutions and data. |
 
 ### Workflow
 
 This section contains parameters related to the creation of new orders.
 
-### resultEncryption
+#### resultEncryption
 
-TEE providers always encrypt results before uploading them to the storage. The parameters below are related to this encryption.
+Compute providers always encrypt order results before uploading them to your storage. This encryption is configured by parameters below.
 
-|**Parameter**| **Description**                                                                                                                                                                                                                     |
-| :- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|algo| `ECIES`<br/><br/>**Note.** More algorithms will be supported in the future.                                                                                                                                                         |
-|key| Private key for order results encryption. Public key derived from it is used by TEE providers to encrypt order results. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. |
-|encoding| `base64`<br/><br/>**Note.** More types will be supported in the future.                                                                                                                                                             |
+|**Parameter**| **Description**                                                                                                                                                                                                                                                                                                                             |
+| :- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|algo| `ECIES`                                                                                                                                                                                                                                                                                                                                     |
+|key| Private key for order results encryption. Public key derived from it is used by Compute providers to encrypt order results. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. <br/><br/>**Note.** Keep this key safe. You won't be able to receive your order results without it. |
+|encoding| `base64`                                                                                                                                                                                                                                                                                                                                    |
 
 

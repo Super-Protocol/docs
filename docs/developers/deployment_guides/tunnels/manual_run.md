@@ -1,7 +1,7 @@
 ---
 id: "manual_run"
 title: "3. Run your app at Superprotocol tunnels"
-slug: "/deployment_guides/nodejs_tunnels/manual_run"
+slug: "/deployment_guides/tunnels/manual_run"
 sidebar_position: 3
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "minecraft"
 title: "Example: Minecraft"
-slug: "/deployment_guides/nodejs_tunnels/minecraft"
+slug: "/deployment_guides/tunnels/minecraft"
 sidebar_position: 6
 ---
 

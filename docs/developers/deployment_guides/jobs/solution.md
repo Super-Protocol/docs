@@ -1,7 +1,7 @@
 ---
 id: "solution"
 title: "1. Preparing Solution"
-slug: "/deployment_guides/python/solution_prep"
+slug: "/deployment_guides/jobs/solution_prep"
 sidebar_position: 2
 ---
 

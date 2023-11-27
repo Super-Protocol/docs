@@ -1,11 +1,11 @@
 ---
 id: "index"
-title: "For Developers"
+title: "Getting Started"
 slug: "/"
 sidebar_position: 0
 ---
 
-# For Developers
+# Getting Started
 
 ### What is the Super Dev Community?
 

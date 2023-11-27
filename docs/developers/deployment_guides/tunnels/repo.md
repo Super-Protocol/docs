@@ -1,7 +1,7 @@
 ---
 id: "repo"
 title: "4. Github repository"
-slug: "/deployment_guides/nodejs_tunnels/repo"
+slug: "/deployment_guides/tunnels/repo"
 sidebar_position: 4
 ---
 

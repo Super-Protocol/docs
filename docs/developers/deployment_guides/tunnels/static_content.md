@@ -1,7 +1,7 @@
 ---
 id: "static_example"
 title: "Example: Static Content"
-slug: "/deployment_guides/nodejs_tunnels/static_content"
+slug: "/deployment_guides/tunnels/static_content"
 sidebar_position: 8
 ---
 

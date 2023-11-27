@@ -1,7 +1,7 @@
 ---
 id: "exec"
 title: "3. Execution and Result"
-slug: "/deployment_guides/python/exec"
+slug: "/deployment_guides/jobs/exec"
 sidebar_position: 4
 ---
 

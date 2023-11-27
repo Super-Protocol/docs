@@ -1,7 +1,7 @@
 ---
 id: "superchat"
 title: "Example: SuperChat"
-slug: "/deployment_guides/nodejs_tunnels/superchat"
+slug: "/deployment_guides/tunnels/superchat"
 sidebar_position: 7
 ---
 

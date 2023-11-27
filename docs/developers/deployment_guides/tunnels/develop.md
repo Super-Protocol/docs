@@ -1,7 +1,7 @@
 ---
 id: "develop"
 title: "2. Development and testing"
-slug: "/deployment_guides/nodejs_tunnels/develop"
+slug: "/deployment_guides/tunnels/develop"
 sidebar_position: 2
 ---
 

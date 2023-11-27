@@ -1,7 +1,7 @@
 ---
 id: "Python"
 title: "Python"
-slug: "/deployment_guides/python"
+slug: "/deployment_guides/jobs"
 sidebar_position: 1
 ---
 

@@ -1,7 +1,7 @@
 ---
-id: "nodejs_tunnels"
+id: "tunnels"
 title: "Node.js with Tunnels"
-slug: "/deployment_guides/nodejs_tunnels"
+slug: "/deployment_guides/tunnels"
 sidebar_position: 3
 ---
 

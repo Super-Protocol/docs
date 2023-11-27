@@ -1,7 +1,7 @@
 ---
 id: "data"
 title: "2. Preparing Data"
-slug: "/deployment_guides/python/data_prep"
+slug: "/deployment_guides/jobs/data_prep"
 sidebar_position: 3
 ---
 

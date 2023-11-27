@@ -1,7 +1,7 @@
 ---
 id: "preparing"
 title: "1. Prepare SPCTL, DNS and SSL certificate"
-slug: "/deployment_guides/nodejs_tunnels/preparing"
+slug: "/deployment_guides/tunnels/preparing"
 sidebar_position: 1
 ---
 
