@@ -57,6 +57,10 @@ We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github
 
 <Highlight color="red">нужно больше контекста. Почему здесь нужен х501? если это не очевидно для разработчиков</Highlight>
 
+:::caution
+Для нормальной работы, необходимо установить переменную окружения MUMBAI_URL, указав путь к Mumbai Polygon ноде, например, это может быть https://mumbai.polygon.superprotocol.com/hesoyam
+:::
+
 ### Deploy the smart-contract
 
 This command will deploy the verifier contract to the polygon testnet network.
