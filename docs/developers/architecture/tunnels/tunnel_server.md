@@ -1,7 +1,7 @@
 ---
 id: "tunnel_server"
 title: "Tunnel Server"
-slug: "/architecture/tunnels/tunnel_server"
+slug: "/architecture/tunnels/server"
 sidebar_position: 2
 ---
 

@@ -2,7 +2,7 @@
 id: "cli-solutions"
 title: "Solutions"
 slug: "/cli_commands/solutions"
-sidebar_position: 5
+sidebar_position: 2
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 id: "chat-index"
 title: "Super Chat"
-slug: "/marketplace_offers/chat/"
+slug: "/offers/superchat/"
 ---
 
 # Super Chat

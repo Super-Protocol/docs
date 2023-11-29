@@ -1,6 +1,6 @@
 ---
 id: "index"
-title: "Getting Started"
+title: "Join Testnet"
 slug: "/"
 sidebar_position: 0
 ---
@@ -12,12 +12,6 @@ The Testnet is an operational work-in-progress version of Super Protocol. It is 
 The latest public release is Testnet Phase 3, launched on July 31, 2023. It contains the following major updates:
 - **Support for dynamic Node.js applications.** Complex applications on Node.js can now be deployed in Super Protocol.
 - **Decentralized confidential Web3 chat.** [Super Chat](/developers/marketplace_offers/chat) is a technological demo developed by the Super Protocol team. By this example we want to show how complex dynamic web apps on Node.js can be run in decentralized confidential environments (TEE).
-
-## Known Issues and Limitations
-
-Since this is testnet, there are some limitations on performance:
-- The domains will only be live for 72 hours. This is a limit we imposed to ensure consistent performance on Testnet.
-- Mobile version of Marketplace is currently view-only. We will adopt full functionality in future releases.
 
 ## How to participate?
 

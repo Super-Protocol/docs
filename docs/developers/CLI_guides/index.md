@@ -9,7 +9,23 @@ sidebar_position: 6
 
 Super Protocol has a powerful CLI tool called **SPCTL** (Super Protocol Control). Through this tool you can create and manage orders, providers, keys, workflows, files on external storages, and more. See the full list of commands [here](/developers/cli_commands/).
 
-CLI guides:
+## Getting Started with SPCTL
+
+To start working with Super Protocol using CLI you'll need to do this sequence of steps:
+
+1. Set up storage access using [this guide](/developers/cli_guides/storages).
+
+2. Download SPCTL [here](/developers/CLI_guides/downloading).
+
+3. Generate private encryption key using [this command](/developers/cli_commands/workflows/generate-key).
+
+4. Set up config.json using [this guide](/developers/cli_guides/configuring).
+
+5. Use [this command](/developers/cli_commands/tokens/request) to receive TEE and MATIC tokens, you will need them to create orders (testnet only). You'll need to repeat this step occasionally to refill your wallet balance.
+
+And you're done! 
+
+## CLI Guides
 
 | **Guide**                                               | **Description**                                                                                                                                                                       |
 |:--------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -17,21 +33,3 @@ CLI guides:
 | [Downloading SPCTL](/developers/CLI_guides/downloading) | Guide on downloading SPCTL. |
 | [Configuring SPCTL](/developers/cli_guides/configuring) | Guide on setting up your SPCTL with your storage, encryption and Super Protocol infrastructure.                                                                                       |
 | Confidential Execution                                  |                                                                                                                                                                                       |
-
-## Getting Started with SPCTL
-
-To start working with Super Protocol using CLI you'll need to do this sequence of steps.
-
-1. Get Testnet access [here](/testnet/).
-
-2. Set up storage access using [this guide](/developers/cli_guides/storages).
-
-3. Download SPCTL [here](/developers/CLI_guides/downloading).
-
-4. Generate private encryption key using [this command](/developers/cli_commands/workflows/generate-key).
-
-5. Set up config.json using [this guide](/developers/cli_guides/configuring).
-
-6. Set up Marketplace using [this guide](/developers/marketplace/first-steps/) to get your test TEE tokens (this step applicable only during Testnet).
-
-And you're done. We can recommend at first to follow the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to get a hang of Super Protocol logic.

@@ -2,7 +2,7 @@
 id: "cli-commands-offers"
 title: "Offers"
 slug: "/cli_commands/offers"
-sidebar_position: 2
+sidebar_position: 6
 
 ---
 

@@ -2,7 +2,7 @@
 id: "cli-tii"
 title: "TII"
 slug: "/cli_commands/tii"
-sidebar_position: 6
+sidebar_position: 8
 
 ---
 

@@ -2,7 +2,7 @@
 id: "cli-orders"
 title: "Orders"
 slug: "/cli_commands/orders"
-sidebar_position: 4
+sidebar_position: 5
 
 ---
 

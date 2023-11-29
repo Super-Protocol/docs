@@ -40,5 +40,5 @@ Grants must be related to the same bucket that was created earlier. When creatin
 
 Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to create two access grants:
 - With *write* permission. It will be used to upload your encrypted data and solutions to the bucket. 
-- With *read* permission. It will be used by Compute providers to download your encrypted data and solutions. 
+- With *read* permission. It will be used by Compute providers to download your encrypted data and solutions.
 
