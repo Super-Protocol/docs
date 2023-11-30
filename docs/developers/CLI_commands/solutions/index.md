@@ -1,6 +1,6 @@
 ---
 id: "cli-solutions"
-title: "Solutions"
+title: "solutions"
 slug: "/cli_commands/solutions"
 sidebar_position: 2
 

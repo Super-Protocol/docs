@@ -1,6 +1,6 @@
 ---
 id: "cli-files"
-title: "Files"
+title: "files"
 slug: "/cli_commands/files"
 sidebar_position: 3
 

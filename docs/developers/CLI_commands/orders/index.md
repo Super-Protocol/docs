@@ -1,6 +1,6 @@
 ---
 id: "cli-orders"
-title: "Orders"
+title: "orders"
 slug: "/cli_commands/orders"
 sidebar_position: 5
 

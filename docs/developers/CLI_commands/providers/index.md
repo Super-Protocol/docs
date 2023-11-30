@@ -1,6 +1,6 @@
 ---
 id: "cli-providers"
-title: "Providers"
+title: "providers"
 slug: "/cli_commands/providers"
 sidebar_position: 7
 
