@@ -22,8 +22,8 @@ sidebar_position: 2
 Создайте папку `superprotocol-test-app` на одном уровне с CLI файлом `spctl`. Добавьте `express`, как dependency, и создайте файл `server.js`.
 ```bash
 mkdir superprotocol-test-app
-cd superprotocol-test-app && npm add express && cd ..
-touch server.js
+docker run --platform linux/amd64 -v $PWD/superprotocol-test-app:/home/node -w /home/node node:16-buster-slim npm add express 
+touch superprotocol-test-app/server.js
 ```
 
 Добавьте следующий код в файл `server.js` при помощи любого удобного вам текстового редактора

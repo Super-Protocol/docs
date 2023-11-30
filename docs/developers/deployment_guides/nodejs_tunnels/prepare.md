@@ -9,6 +9,10 @@ sidebar_position: 1
 
 Необходимо, чтобы в вашей системе был Docker. Скачать и установить его можно с [официального сайта](https://docs.docker.com/engine/install/)
 
+## Git
+
+Необходимо установить Git CLI. Используйте инструкцию [отсюда](https://github.com/git-guides/install-git)
+
 ## SPCTL
 
 Необходимо скачать и настроить нашу CLI тулзу SPCTL. Воспользуйтесь руководством [здесь](/developers/cli_guides/configuring).
