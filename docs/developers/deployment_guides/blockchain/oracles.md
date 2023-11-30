@@ -262,15 +262,15 @@ First, you'll need to retrieve trusted root certificates to validate the connect
 
 ### Linux
 ```shell
-cat /etc/ssl/certs/*.pem >> ./root_certificates.crt
+cat /etc/ssl/certs/*.pem >> ./ca_certificates.crt
 ```
 
 ### Mac OS
 ```shell
-security export -t certs -f pemseq -k /System/Library/Keychains/SystemRootCertificates.keychain -o ./root_certificates.crt
+security export -t certs -f pemseq -k /System/Library/Keychains/SystemRootCertificates.keychain -o ./ca_certificates.crt
 ```
 
-This command will create file `root_certificates.crt` inside `inputs/` directory, that will contain system root certificates.
+This command will create file `ca_certificates.crt` inside `inputs/` directory, that will contain system root certificates.
 
 Second, create `input.json` out of example:
 
@@ -288,7 +288,6 @@ And fill the data:
 * publisher - адрес и приватный ключ кошелька, который из анклава будет постить данные в блокчейн
 * apiConfig - содержит в себе:
     - endpoint - API url, уже подставлен нужный coinapi
-    - rootCertificateFiles - имя Root сертификата API `cert3.crt` в нашем случае.
     - auth - содержит в себе ключ для аутентификации, как требует [coinapi](https://docs.coinapi.io/authentication#x-coinapi-key-header). Если вы используете другой API, который не требует аутентификации, оставьте значения пустыии
 * debugMode - false
 
