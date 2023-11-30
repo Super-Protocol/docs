@@ -70,7 +70,7 @@ At this phase of Testnet only Storj storage is supported.
 
 ### Solutions
 
-Hosting Launcher is a [tunnel provisioner](/developers/architecture/tunnels/provisioner/) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
+Hosting Launcher is a [tunnel provisioner](/developers/architecture/tunnels/provisioner/) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/nodejs_tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
 
 | **Id** | **Name**                                                                                | **Description**                                                                                    |
 |:-------|:----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
