@@ -153,5 +153,5 @@ git push
 ## Setup DNS
 
 Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.2 #Prepare and run tunnel-server solution](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution). 
-Получив ip, нужно будет создать в DNS 2 записи, как указано [п.2 #Setup DNS](http://localhost:3000/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)
+Получив ip, нужно будет создать в DNS 2 записи, как указано [п.2 #Setup DNS](/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)
 
