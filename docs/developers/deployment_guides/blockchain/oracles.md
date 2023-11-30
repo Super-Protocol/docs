@@ -7,7 +7,7 @@ sidebar_position: 10
 
 ## Confidential Oracles
 
-This example will guide you step by step through the process of deploying your own Oracle service on the Super Protocol. The Oracle's function will be to store reliable historical data on the BTC/USD price. We assume that you are familiar with the purpose of [oracles](https://en.wikipedia.org/wiki/Blockchain_oracle) in web3. To successfully complete this guide, you will need experience with Node.js and EVM blockchains, as well as proficiency in Solidity programming, command line usage, and our spctl command-line interface.
+This example will guide you step by step through the process of deploying your own Oracle service on the Super Protocol. The Oracle's function will be to store reliable historical data on the BTC/USD price. We assume that you are familiar with the purpose of [oracles](https://en.wikipedia.org/wiki/Blockchain_oracle) in web3.
 
 This guide uses free [CoinAPI](https://coinapi.io/) service to access the price data. If you stick with this API, you'll need to register and obtain an api key.
 
@@ -23,47 +23,74 @@ The goal of this example is to show process of deploying and operating an oracle
 
 * Our DApp (smart contract) should be able to read this data and ensure that it is: **a)** Up-to-date (by verifying the timestamp) and **b)** Available to be read on-chain.
 
-## **Instruments Used**
+## Prerequisites
 
-[**polygonscan**](https://mumbai.polygonscan.com/) - обозреватель блоков, через который будем наглядно демонстрировать работу смарт-контрактов в сети Polygon (тестовая сеть Mumbai).
+To successfully complete this guide, you will need experience with Node.js, EVM blockchains and Solidity programming. В этой статье вы будете использовать разные инструменты, котороые мы рекомендуем настроить заранее:
 
-[**spctl**](https://github.com/Super-Protocol/ctl) -  консольный интерфейс Супер Протокола для создания заказа оракула.
+- [Polygonscan](https://polygonscan.com/login) - You will need to register and create API Key for contract verification on block explorer. Несмотря на то, что в этом гайде мы будем пользоваться тестовой сетью [Mumbai](https://mumbai.polygonscan.com/), API key нужно взять с обозревателя блоков майннета.
 
-[**storj**](http://storj.io) - децентрализованное хранилище данных. Через него будет передаваться зашифрованный конфигурация для скрипта-оракула (кошелек “паблишера” и т.д.)
+- [Docker](https://www.docker.com/get-started/) - Для сборки решений, которые будут выполняться на Super Protocol.
 
-[**sp-oracle-sample**](https://github.com/Super-Protocol/sp-oracle-sample) - содержит в себе 3 компонента: “смарт-контракт оракла”, “скрипт оракла” и “пример приложения”(которое использует данные из оракула).
+- [StorJ](/developers/cli_guides/storages) - децентрализованное хранилище данных. Через него будет передаваться зашифрованный конфигурация для скрипта-оракула (кошелек “паблишера” и т.д.)
 
-[**sp-x509-poc**](https://github.com/Super-Protocol/sp-x509-poc) - смарт-контракт, который хранить в себе корневой сертификат API и содержит реализацию проверок квоты и самих сертификатов. (полностью on-chain)
+Для вашего удобства, мы предлагаем скачивать и хранить используемые далее инструменты в одной директории. Перейдите в желаемый раздел файловой системы и создайте папку:
 
-<Highlight color="red">битые ссылки</Highlight>
+```shell
+mkdir super-protocol && cd super-protocol 
+```
 
----
+В нее нужно скачать:
+
+- [solutions](https://github.com/Super-Protocol/solutions) - репозиторий с готовыми примерами солюшенов, в том числе Blockchain Oracle
+
+- [spctl](/developers/cli_guides/downloading) - консольный интерфейс Супер Протокола для создания заказа оракула. После скачивания обязательно заполните весь конфиг [по инструкции](https://docs.dev.superprotocol.com/developers/cli_guides/configuring) 
 
 :::note
 SMART-CONTRACTS IN THESE EXAMPLES USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.
 :::
 
+:::caution
+Мы будем работать с тестовой сетью Mumbai. В дальнейших шагах потребуется установить переменную окружения MUMBAI_URL, указав путь к Mumbai Polygon ноде. Если у вас нет подходящей, мы предоставляем нашу https://mumbai.polygon.superprotocol.com/hesoyam
+:::
+
+---
+
 ## **Step 1. Deploy the "x509 verifier" smart contract**
 
-This smart contract is responsible for cryptographic verification of the Oracle service, ensuring that it is genuinely running in a secure Trusted Execution Environment (TEE) with validation of TEE quote, MRENCLAVE and MRSIGNER.
+This smart contract is responsible for on-chain cryptographic verification of the Oracle service, ensuring that it is genuinely running in a secure SGX Trusted Execution Environment (TEE) with validation of TEE quote, MRENCLAVE and MRSIGNER.
 
 It is worth noting that this smart contract, the `x509 verifier` acts as a validator of data and contains functionality not tied to the implementation of the Oracle itself. In other words, it allows for the creation of multiple instances of Confidential Oracles, all pointing to the same 'x509 verifier.'
 
 ### Preparing
 
-Clone the [sp-x509-poc](https://github.com/Super-Protocol/sp-x509-poc) repository to you computer and follow `Setup` and `Instalation` steps from Readme to set up the project.
 
-We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/sp-x509-poc/blob/main/intel-root-cert.pem) at the root of the repository for deployment. Essentially, the integrity of the entire certificate chain depends on this root certificate. When an error arises during the process of verifying traceability and trustworthiness, it means that the data is currently untrusted, and the opposite is true when no errors are found.
+Перейдите в директорию в склонированном репозитории `solutions`, содержащую контракт: 
+
+```shell
+cd ./solutions/Blockchain/sp-x509/
+cp .env.example .env
+```
+
+To set up the project, you will need to set 3 env variables in `.env` file:
+
+- `PRIVATE_KEY` - Your wallet private key with MAITC 
+- `MUMBAI_URL` - https://mumbai.polygon.superprotocol.com/hesoyam
+- `POLYGON_API_KEY` - Your API Key from [Polygonscan](https://polygonscan.com/login)
+
+Then install dependencies and compile the contract:
+
+```shell
+npm i
+npx hardhat compile
+```
+
+We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. Essentially, the integrity of the entire certificate chain depends on this root certificate. When an error arises during the process of verifying traceability and trustworthiness, it means that the data is currently untrusted, and the opposite is true when no errors are found.
 
 <Highlight color="red">нужно больше контекста. Почему здесь нужен х501? если это не очевидно для разработчиков</Highlight>
 
-:::caution
-Для нормальной работы, необходимо установить переменную окружения MUMBAI_URL, указав путь к Mumbai Polygon ноде, например, это может быть https://mumbai.polygon.superprotocol.com/hesoyam
-:::
-
 ### Deploy the smart-contract
 
-This command will deploy the verifier contract to the polygon testnet network.
+In the same directory, execute this command to deploy the verifier contract to the polygon testnet network.
 <Highlight color="red">это контракт который мы скачали? это путь на него?</Highlight>
 
 ```shell
@@ -83,7 +110,7 @@ To be able to interact with the contract via GUI (e.g. Polygonscan) you will nee
 npx hardhat verify-x509 --cert ./intel-root-cert.pem --network mumbai --address <verifier-contract-address>
 ```
 
-На этом настройка контракта `x509 verifier` завершена, его можно посмотреть через Polygonscan. Пример уже задеплоенного и верифицированного контракта - [0xB7fc844b3c8Aa1016BC5D93289dF748B9CEc6f94](https://mumbai.polygonscan.com/address/0xb7fc844b3c8aa1016bc5d93289df748b9cec6f94#readContract)
+Вы должны увидеть сообщение `Successfuly verified`. На этом настройка контракта `x509 verifier` завершена, его можно посмотреть через Polygonscan. Пример уже задеплоенного и верифицированного контракта - [0xb57718CC0A2149A376715503d15182f5a773e1F7](https://mumbai.polygonscan.com/address/0xb57718CC0A2149A376715503d15182f5a773e1F7#readContract)
 
 
 ## **Step 2. Prepare Oracle service for deployment on Super Protocol**
@@ -93,16 +120,16 @@ npx hardhat verify-x509 --cert ./intel-root-cert.pem --network mumbai --address 
 
 - офчейн сервиса, который будет выполняться в защищенной среде ТЕЕ и по расписанию вызывать функции смартконтракта оракла
 
-- смартконтракта оракла который будет хранить в себе данные о цене BTC/USD. Так же, с помощью контракта `sp-x509-poc`, который мы задеплоили на предыдущем шаге, он будет верифицировать, что вызов идет от доверенного офчейн сервиса в рамках сессии.
+- смартконтракта оракла который будет хранить в себе данные о цене BTC/USD. Так же, с помощью контракта `sp-x509`, который мы задеплоили на предыдущем шаге, он будет верифицировать, что вызов идет от доверенного офчейн сервиса в рамках сессии.
 
 В этом разделе речь пойдет про первый компонент, и за ним покроем второй.
 
 ### Prerequisites
 
-Clone the repository [sp-oracle-sample](https://github.com/Super-Protocol/sp-oracle-sample) and setup the service sub-project:
+Change current directory to `sp-oracle` and set up the service sub-project:
 
 ```shell
-cd ./script
+cd ../sp-oracle/script/
 npm i
 npm run build
 ```
@@ -111,15 +138,25 @@ After that, a folder `run` will be created with artifacts for the future solutio
 
 ### Скачать базовый образ Node.js
 
-All of the solutions that will be processed on Super Protocol, should be built upon supported platform, which are called Base Images. In our case, we will be utilizing [Node.js](https://nodejs.org/). You can find all the supported images on the Marketplace under `Solutions` section. To prepare our script for deployment, let's download Node.js base image from [Offer #6](https://marketplace.superprotocol.com/?offerId=6)
+All the solutions that will be processed on Super Protocol, should be built upon supported platform, which are called Base Images. In our case, we will be utilizing [Node.js](https://nodejs.org/). You can find all the supported images on the Marketplace under `Solutions` section with `Base Image` note.
+
+If you haven't done it before (going through other guides), download Node.js base image from [Offer #6](https://marketplace.superprotocol.com/?offerId=6). Open a new terminal window and from `super-protocol` directory, where you downloaded spctl, execute
 
 ```shell
 ./spctl offers download-content 6
 ```
 
+it will download file `node16-base-solution-image*` to the current directory, which you then need to load to Docker. Paste this command to terminal and press `Tab` to autocomplete the name of the image:
+
+```shell
+docker load --input node16-base-solution-image
+```
+
+You will see the output `Loaded image: gsc-node16-base-solution:latest`
+
 ### Формируем манифест и шифруем наш оракл-сервис
 
-Now, we will build a Docker image of the service. When the Docker image should run within an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Let's create signing key:
+Next, we will build a Docker image of the service. When the Docker image should run within an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Let's create signing key:
 
 ```shell
 ./spctl solutions generate-key signing-key
@@ -128,12 +165,12 @@ Now, we will build a Docker image of the service. When the Docker image should r
 Then, execute the following command in the root of your project to prepare and pack the solution:
 
 ```shell
-./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path node16-base-solution-image-v0.3.1.tar.gz /path/to/run signing-key
+./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path node16-base-solution-image-v0.3.1.tar.gz $(pwd)/solutions/Blockchain/sp-oracle/script/run/ signing-key
 ```
 
-where `/path/to/run` - is an **absolute** path to a dist folder (e.g. `/<root>/sp-oracle-sample/script/run`)
+note, `$(pwd)` - will add the root path to a run folder, to make it absolute.
 
-After running the command, `oracle-solution.tar.gz` and `metadata.json` files will be generated. And in terminal, you will see logs, make sure to save MRENCLAVE and MRSIGNER, they should look like the following:
+After running the command, `oracle-solution.tar.gz` and `metadata.json` files will be generated. And in terminal, you will see logs, make sure to save MRENCLAVE and MRSIGNER, they should look like the following (hex values may differ):
 
 ```
 MRENCLAVE: d6906986298db89f91941921579e058429bd9ec63c0f97246274b25a4bbfbf0c
@@ -151,23 +188,64 @@ Finally, we will encrypt and upload the prepared solution to a decentralized clo
 
 ## **Step 3. Prepare and deploy Oracle smart contract**
 
-### Preparing
+### Prepare
 
-For this step you will need an Ethereum account with MATIC tokens on it. This account will be used to send transactions from Oracle service to the smart contract. We highly recommend to use a new account, which will be used by the oracle only, to avoid errors with nonce calculation.
+For this step you will need an Ethereum account with MATIC testnet coins on it. This account will be used to send transactions from Oracle service to the smart contract. We highly recommend to use a new account, which will be used by the oracle only, to avoid errors with sending transactions, e.g. nonce calculation.
 
-Staying in the same repository, switch directory to `./smart-contract/` and follow `Set up` and `Installation` steps from Readme.
+In terminal, open a directory containing smart-contract `solutions/Blockchain/sp-oracle/smart-contract/`.
+
+```shell
+cd ./solutions/Blockchain/sp-oracle/smart-contract/
+cp .env.example .env
+```
+
+To set up the project, you will need to set 3 env variables in `.env` file:
+
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` - Your wallet private key with testnet MAITC
+- `MUMBAI_URL` - https://mumbai.polygon.superprotocol.com/hesoyam
+
+Then install dependencies and compile the contract:
+
+```shell
+npm i
+npx hardhat compile
+```
+
+### Deploy oracle
 
 Now we are ready to deploy an Oracle smart contract:
 
 ```shell
 npx hardhat deploy-oracle --publishers <publisher-address> --enclave <mrenclave> --signer <mrsigner> --verifier <x509-verifier-address> --network mumbai
 ```
+where 
+- `<publisher-address>` - Ethereum wallet address that will be used by Oracle service to send new prices to the contract;
+- `<mrenclave>`, `<mrsigner>` - values that you received at the end of Step 2;
+- `<x509-verifier-address>` - x509 verifier contract address, result of Step 1.
 
-Deployed contract address will be printed to console. Use it to verify contract onchain, as we did for x509-verifier:
+Deployed contract address will be printed to console. Use it to verify contract on-chain, as we did for x509-verifier:
 
 ```shell
 npx hardhat verify-oracle --address <oracle-address> --publishers <publisher-address> --enclave <mrenclave> --signer <mrsigner> --verifier <x509-verifier-address> --network mumbai
 ```
+
+Вы должны увидеть сообщение `Successfully verified`. Пример уже задеплоенного контракта оракла - [0x9e090892a8b65F59c8A52c5c811a3a859BE684A8](https://mumbai.polygonscan.com/address/0x9e090892a8b65F59c8A52c5c811a3a859BE684A8#readContract).
+
+### Deploy dApp
+
+Так как оракл выступает хранилищем данных, и его цель - это предоставление актуальных данных для on-chain мира, то для наглядности мы задеплоим простой контракт в роли такого decentralized application, которое будет использовать данные нашего оракла.
+
+```
+npx hardhat deploy-app --oracle <oracle-address> --network mumbai
+```
+
+verify dApp contract on-chain:
+
+```
+npx hardhat verify-app --address <d-app-address> --oracle <oracle-address> --network mumbai
+```
+
+Вы должны увидеть сообщение `Successfully verified`. Можете найти этот контракт в Polygonscan по адресу контракта (вот пример уже задеплоенного контракта [0x9fF6c385F06Ecc6Fb09a321AEDeFf50Dc83Cb20C](https://mumbai.polygonscan.com/address/0x9fF6c385F06Ecc6Fb09a321AEDeFf50Dc83Cb20C#readContract)). В конце этого гайда, мы зайдем на страницу этого контракта в Polygonscan и будем следить за изменениями данных.
 
 ## **Step 4. Deploy oracle service**
 
@@ -178,19 +256,29 @@ By now, we have:
 
 In this section we'll deploy an oracle service, that will be running on Super Protocol inside SGX enclave. To recap, its function is to update BTC/USD price by interval in Oracle contract, which we've deployed on the previous step.
 
-In the same repository `sp-oracle-sample`, go to `./script/inputs/` folder. We'll need to set up a config for solution in this directory.
+Open a new Terminal window and go to `solutions/Blockchain/sp-oracle/script/inputs/` folder. We'll need to set up a config for Oracle service in this directory.
 
-First, you'll need to retrieve the root certificate of the API service, that your oracle will be requesting to. For our example, we will be parsing `rest.coinapi.io` certificate chain.
+First, you'll need to retrieve trusted root certificates to validate the connection to the API service, that your oracle will be requesting to. You can extract root certificate of the particular api that you'll be using, but because certificates, may change unpredictably, we recommend listing full root certificates list from your computer. Staying in directory `inputs`, execute:
 
+### Linux
 ```shell
-export API_URL=rest.coinapi.io:443
-
-openssl s_client -connect $API_URL -showcerts 2>&1 < /dev/null | awk 'BEGIN {cert=""} /-----BEGIN CERTIFICATE-----/ {p=1} p {cert = cert $0 ORS} /-----END CERTIFICATE-----/ {if (p) {print cert > ("cert" ++n ".crt")} p=0; cert=""}'
+cat /etc/ssl/certs/*.pem >> ./ca_certificates.crt
 ```
 
-This command will request the server's certificate chain to be displayed and will save 3 files with names `certN.crt`. The certificates are presented in order from the end-entity certificate (server certificate) to the root certificate. Hence, you will need `cert3.crt`, put it into `inputs` directory.
+### Mac OS
+```shell
+security export -t certs -f pemseq -k /System/Library/Keychains/SystemRootCertificates.keychain -o ./ca_certificates.crt
+```
 
-Rename `input.example.json` to `input.json`, and fill the data:
+This command will create file `ca_certificates.crt` inside `inputs/` directory, that will contain system root certificates.
+
+Second, create `input.json` out of example:
+
+```shell
+cp input.example.json input.json
+```
+
+And fill the data:
 
 <Highlight color="red">где мы это делаем? не хватает пары слов вводных</Highlight>
 
@@ -200,12 +288,11 @@ Rename `input.example.json` to `input.json`, and fill the data:
 * publisher - адрес и приватный ключ кошелька, который из анклава будет постить данные в блокчейн
 * apiConfig - содержит в себе:
     - endpoint - API url, уже подставлен нужный coinapi
-    - rootCertificateFiles - имя Root сертификата API `cert3.crt` в нашем случае.
     - auth - содержит в себе ключ для аутентификации, как требует [coinapi](https://docs.coinapi.io/authentication#x-coinapi-key-header). Если вы используете другой API, который не требует аутентификации, оставьте значения пустыии
 * debugMode - false
 
 You will end up having two files in `inputs` folder:
-- `input.json` file (file must have that name)
+- `input.json` file (file must have that name)
 - `cert3.crt` (file must be named the same as the filename in `rootCertificateFiles` and have extension `.crt`)
 
 Create an archive with those files:
@@ -214,14 +301,15 @@ Create an archive with those files:
 tar -czvf oracle-input.tar.gz input.json cert3.crt
 ```
 
-And upload archive to StorJ. You are already familiar with it.
+Open a new terminal and go to `super-protocol` folder with spctl. And upload the archive to StorJ:
 
 ```shell
-./spctl files upload <path-to-oracle-input.tar.gz> --output oracle-input.json --filename oracle-input.tar.gz
+./spctl files upload ./solutions/Blockchain/sp-oracle/script/inputs/oracle-input.tar.gz --output oracle-input.json --filename oracle-input.tar.gz
 ```
 
 File `oracle-input.json` will be generated, which we will use as argument to create Oracle order:
 
+<Highlight color="blue">Тут надо будет обновить номера слотов после деплоя новых контрактов</Highlight>
 ```shell
 ./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 20,17 --solution 5,2 --solution oracle-solution.json --data oracle-input.json
 ```
@@ -232,12 +320,21 @@ You can check the status of the order using the order ID in the following [comma
 ./spctl orders get <order ID>
 ```
 
-You can also visit our Marketplace by url `https://marketplace.superprotocol.com/order/<your-order-ID>` for more convenient observation. Wait till the both orders turn to status `Processing`, wait for ~10-15 minutes till the script starts and then see oracle works live on the Polygonscan.
+You can also visit our Marketplace by url `https://marketplace.superprotocol.com/order/<your-order-ID>` for more convenient observation. Wait till the order turn to status `Processing`, wait for ~10-15 minutes till the script starts and then see oracle works live on the Polygonscan.
 
-You can compare the result with this [example](https://mumbai.polygonscan.com/address/0x2E455bA264bD31F76d095996a1F3Dee555af2E3f#readContract).
+## **Step 4. Observing oracle**
 
-<Highlight color="red">а что смотреть в обозревателе блоков? Может быть задеплоить перманентный пример оракула для референса и показать как он работает?</Highlight>
+Теперь мы можем наблюдать за работой оракла в реальном времени. Откройте страницу контракта dApp на Polygonscan `https://mumbai.polygonscan.com/address/<d-app-address>`, по адресу контракта, который мы получили на шаге [Deploy dApp](#deploy-dapp). На вкладке `Contract` -> `Read Contract` нажмите на методы:
+- processA - Запрашивает цену BTC/USD, которая не старее 1 часа (И прибавляет 1)
+- processB - Запрашивает любую последнюю цену BTC/USD, не зависимо от возраста данных (И прибавляет 2).
 
+![img_3.png](img_3.png)
+
+Если вам интересно посмотреть за работой контракта оракула напрямую, то на странице контракта Оракула на Polygonscan вы можете вызывать его методы по аналогии с dApp. Однако в качестве ключа он принимает не в чистом виде 'BTC/USD' а keccak256 hash от него. Вы можете найти открытые онлайн сервисы для конвертации, и если вы используете эту же связку, то ключ будет `0xee62665949c883f9e0f6f002eac32e00bd59dfe6c34e92a91c37d6a8322d6489`. Используя его вы можете вызывать методы оракула  
+
+![img_4.png](img_4.png)
+
+На картинке выше getDataCounts показывает, сколько раз была обновлена цена в блокчейне 
 
 ## **Кастомизация**
 
