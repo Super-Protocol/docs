@@ -49,13 +49,17 @@ This smart contract is responsible for cryptographic verification of the Oracle 
 
 It is worth noting that this smart contract, the `x509 verifier` acts as a validator of data and contains functionality not tied to the implementation of the Oracle itself. In other words, it allows for the creation of multiple instances of Confidential Oracles, all pointing to the same 'x509 verifier.'
 
-### Prepare
+### Preparing
 
 Clone the [sp-x509-poc](https://github.com/Super-Protocol/sp-x509-poc) repository to you computer and follow `Setup` and `Instalation` steps from Readme to set up the project.
 
 We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/sp-x509-poc/blob/main/intel-root-cert.pem) at the root of the repository for deployment. Essentially, the integrity of the entire certificate chain depends on this root certificate. When an error arises during the process of verifying traceability and trustworthiness, it means that the data is currently untrusted, and the opposite is true when no errors are found.
 
 <Highlight color="red">нужно больше контекста. Почему здесь нужен х501? если это не очевидно для разработчиков</Highlight>
+
+:::caution
+Для нормальной работы, необходимо установить переменную окружения MUMBAI_URL, указав путь к Mumbai Polygon ноде, например, это может быть https://mumbai.polygon.superprotocol.com/hesoyam
+:::
 
 ### Deploy the smart-contract
 
@@ -147,7 +151,7 @@ Finally, we will encrypt and upload the prepared solution to a decentralized clo
 
 ## **Step 3. Prepare and deploy Oracle smart contract**
 
-### Prepare
+### Preparing
 
 For this step you will need an Ethereum account with MATIC tokens on it. This account will be used to send transactions from Oracle service to the smart contract. We highly recommend to use a new account, which will be used by the oracle only, to avoid errors with nonce calculation.
 

@@ -1,7 +1,7 @@
 ---
 id: "develop"
 title: "2. Development and testing"
-slug: "/deployment_guides/tunnels/develop"
+slug: "/deployment_guides/nodejs_tunnels/develop"
 sidebar_position: 2
 ---
 
@@ -16,7 +16,7 @@ sidebar_position: 2
     * _TLS_KEY_ - TLS ключ, который так же должен использовать сервер 
     * _TLS_CERT_ -  TLS сертификат, который так же должен использовать сервер
     
-    Обращаем Ваше внимание, что env-переменные _TLS_KEY_ и _TLS_CERT_ будут содержать не тот ключ и сертификат, который был сгененрирован в [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing).
+    Обращаем Ваше внимание, что env-переменные _TLS_KEY_ и _TLS_CERT_ будут содержать не тот ключ и сертификат, который был сгененрирован в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing).
 * events with termination signals SIGINT and SIGTERM будут проброшены на parentPort модуля `worker_threads`
 
 Пример простого commonJs express-сервера:

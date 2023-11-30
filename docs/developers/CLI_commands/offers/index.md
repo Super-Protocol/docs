@@ -8,9 +8,11 @@ sidebar_position: 6
 
 View Super Protocol offers using CLI commands. But it is easier to view them through the [Marketplace GUI](/developers/marketplace). 
 
-## Remarks 
-- `value` offer types mean solution and data, while `tee` offer types mean compute (TEE).
-- Commands related to offer management (`create`, `delete`, `update`, `enable`, `disable`) are currently hidden and available only to the Super Protocol team.
+## Usage
+
+```
+./spctl offers <command>
+```
 
 ## Child commands
 

@@ -15,12 +15,6 @@ Syntax:
 ./spctl offers get-info <type> <id>
 ```
 
-Example: displays information on [this](https://marketplace.superprotocol.com/compute?offerId=1) compute offer.
-
-```
-./spctl offers get-info tee 1
-```
-
 ## Arguments
 
 | **Name** | **Description**                 |
