@@ -260,15 +260,19 @@ In this section we'll deploy an oracle service, that will be running on Super Pr
 
 Open a new Terminal window and go to `solutions/Blockchain/sp-oracle/script/inputs/` folder. We'll need to set up a config for Oracle service in this directory.
 
-First, you'll need to retrieve the root certificate of the API service, that your oracle will be requesting to. For our example, we will be parsing `rest.coinapi.io` certificate chain. Staying in directory `inputs`, execute:
+First, you'll need to retrieve trusted root certificates to validate the connection to the API service, that your oracle will be requesting to. You can extract root certificate of the particular api that you'll be using, but because certificates, may change unpredictably, we recommend listing full root certificates list from your computer. Staying in directory `inputs`, execute:
 
+### Linux
 ```shell
-export API_URL=rest.coinapi.io:443
-
-openssl s_client -connect $API_URL -showcerts 2>&1 < /dev/null | awk 'BEGIN {cert=""} /-----BEGIN CERTIFICATE-----/ {p=1} p {cert = cert $0 ORS} /-----END CERTIFICATE-----/ {if (p) {print cert > ("cert" ++n ".crt")} p=0; cert=""}'
+cat /etc/ssl/certs/*.pem >> ./root_certificates.crt
 ```
 
-This command will request the server's certificate chain to be displayed and will save 3 files with names `certN.crt`. The certificates are presented in order from the end-entity certificate (server certificate) to the root certificate. Hence, you will need `cert3.crt`, put it into `inputs` directory.
+### Mac OS
+```shell
+security export -t certs -f pemseq -k /System/Library/Keychains/SystemRootCertificates.keychain -o ./root_certificates.crt
+```
+
+This command will create file `root_certificates.crt` inside `inputs/` directory, that will contain system root certificates.
 
 Second, create `input.json` out of example:
 
