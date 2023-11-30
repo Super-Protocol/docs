@@ -130,7 +130,6 @@ tar -czf tunnel-client-data.tar.gz  -C ./tunnel-client-data .
 Создаем заказ на туннель-клиент с данными нашего приложения:
 ```bash
 ./spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data tunnel-client-data.json  --storage 20,16 --orders-limit 10 --min-rent-minutes 60
-./spctl-0.6.15-beta.0 workflows create --tee 1 --solution 3,2 --solution 21,29 --data tunnel-client-data.json --storage 18,17 --orders-limit 10 --min-rent-minutes 60
 ```
 
 Последняя строчка output команды будет выглядеть так
