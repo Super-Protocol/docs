@@ -5,6 +5,8 @@ slug: "/deployment_guides/nodejs_tunnels/develop"
 sidebar_position: 2
 ---
 
+## Pre
+
 ## Development
 
 Для запуска Вашего приложения на Superprotocol-е оно должно удовлетворять нескольким требованиям:
@@ -19,7 +21,14 @@ sidebar_position: 2
     Обращаем Ваше внимание, что env-переменные _TLS_KEY_ и _TLS_CERT_ будут содержать не тот ключ и сертификат, который был сгененрирован в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing).
 * events with termination signals SIGINT and SIGTERM будут проброшены на parentPort модуля `worker_threads`
 
-Пример простого commonJs express-сервера:
+Создайте папку `superprotocol-test-app` на одном уровне с CLI файлом `spctl`. Добавьте `express`, как dependency, и создайте файл `server.js`.
+```bash
+mkdir superprotocol-test-app
+cd superprotocol-test-app && npm add express && cd ..
+touch server.js
+```
+
+Добавьте следующий код в файл `server.js` при помощи любого удобного вам текстового редактора
 ```javascript title="server.js"
 const http = require('http');
 const https = require('https');
@@ -77,7 +86,7 @@ server.listen(port, () => {
 Протестируйте работоспособность вашего приложения с помощью нашего базового образа. Для этого его необходимо скачать при помощи команды:
 
 ```bash
-./spctl offers download content 6 
+./spctl offers download-content 6 
 ```
 
 В той директории, где вы запускали эту команду вас появится файл `node16-base-solution-image-v0.3.1.tar.gz`, который необходимо будет загрузить в Docker
@@ -89,7 +98,9 @@ docker load --input node16-base-solution-image-v0.3.1.tar.gz
 Дальше, находясь в папке с файлом `server.js`, выполните данную команду, для запуска Вашего приложения с нашим базовым образом:
 
 ```bash
-docker run --platform linux/amd64 -p 3001:3001 --rm -it -w /sp/run  -v .:/sp/run --entrypoint /usr/local/bin/node gsc-node16-base-solution:latest /sp/run/server.js
+docker run --platform linux/amd64 -p 3001:3001 --rm -it -w /sp/run  -v $PWD/superprotocol-test-app:/sp/run --entrypoint /usr/local/bin/node gsc-node16-base-solution:latest /sp/run/server.js
 ```
 
-При необходимости замените порт 3001 на тот, которое использует Ваше приложение.
+Перейдите по ссылке http://localhost:3001. В браузере должна появиться надпись `Got it!`.
+
+Если Вы увидели ошибку `Bind for 0.0.0.0:3001 failed: port is already allocated` - замените 3001 порт на любой другой, свободный в Вашей системе.

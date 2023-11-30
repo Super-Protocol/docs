@@ -9,28 +9,29 @@ sidebar_position: 3
 
 Запуск Вашего приложения на Superprotocol-е состоит из создания 2х заказов: заказа на Туннель-Сервер и заказа на Туннель-Клиент. В заказе на туннель-сервер будет включен авторизационный токен, который так же будет находится в конфиге туннель-клиента, и по которому будет происходить аутентификация туннель-сервером Вашего туннель-клиента.
 
-Создем и сохраняем токен в файл `auth-token` (название файла важно, не меняйте его)
+Создем папку `tunnel-server-data` и сохраняем токен в файл `auth-token` (название файла важно, не меняйте его) в этой папке
 ```bash
-uuidgen > auth-token
+mkdir tunnel-server-data
+uuidgen > tunnel-server-data/auth-token
 ```
 
 Архивируем токен для последующей загрузки на StorJ:
 ```bash
-tar -zcvf auth-token.tar.gz auth-token
+tar -czf tunnel-server-data.tar.gz -C ./tunnel-server-data .
 ```
 
 Шифруем и загружаем архив на StorJ при помощи SPCTL:
 ```bash
-./spctl files upload auth-token.tar.gz --output auth-token.json --filename auth-token.tar.gz
+./spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
 ```
 
-На выходе у вас должен создасться файл `auth-token.json`.
+На выходе у вас должен создасться файл `tunnel-server-data.json`.
 
 Для создания заказа убедитесь в достаточном количетсве ТЕЕ токенов на Вашем кошельке. При необходимости, перейдите на сайт нашего [Маркетплейса](https://marketplace.superprotocol.com) и нажмите на кнопку `Get TEE`.
 
 Создаем заказ на туннель-сервер с только что загруженным токеном:
 ```bash
-./spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data auth-token.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
 Обратите внимание на последнюю строчку output-а, оставленного командой. Она будет иметь следующий вид
@@ -44,11 +45,27 @@ Workflow was created, TEE order id: ["XXXX"]
 ```
 
 Результатом будет файл `result.txt` с ip адрессом. Он нам пригодится в следующих шагах
+```bash 
+cat result.txt && echo "\n"
+```
 
 
 ## Prepare and run tunnel-client solution
 
-Сначала необходимо сформировать файл config.json где будет информация, необходимая туннель-клиенту для запуска. Используйте такой формат:
+Создадим папку `tunnel-client-data`, куда перенесем `server.js` с зависимостями из [п 2. данного гайда](/developers/deployment_guides/nodejs_tunnels/develop)
+
+```bash
+mkdir -p tunnel-client-data/content
+cp -R superprotocol-test-app/* tunnel-client-data/content
+```
+
+Далее необходимо сформировать файл `config.json` в папке `superprotocol-test-app` где будет информация, необходимая туннель-клиенту для запуска.
+
+```bash
+touch tunnel-client-data/config.json
+```
+
+При помощи любого текстового редакутора скопируейте туда следующий JSON объект:
 
 ```json title="config.json"
 {
@@ -58,35 +75,39 @@ Workflow was created, TEE order id: ["XXXX"]
       "sgxMrSigner": "22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513"
     }
   ],
-  "authToken": "10CEDE9D-79B5-4BA6-B308-B7FF51A1D298",
+  "authToken": "",
   "site": {
     "cert": "./fullchain.crt",
     "key": "./private.pem"
   }
 }
-
 ```
+Описание параметров `config.json`:
+
 * `sgxMrEnclave` и `sgxMrSigner` - оставьте как в этом примере без изменения
 * `authToken` - токен с файла `auth-token`, который вы создали в предыдущем пункте
-* `site.cert` и `site.key` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing)
+* `private.pem` и `fullchain.crt` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing). Пожалуйста добавьте эти файты рядом с `config.json`
 
+Для добавления в `config.json` авторизационного токена с файла `auth-token` можете воспользоваться следующей командой:
+```bash
+sed -i.bak -e "/\"authToken\":/s/\"authToken\": \".*\"/\"authToken\": \"$(cat tunnel-server-data/auth-token)\"/" tunnel-client-data/config.json
+```
 
-Туннель-клиент требует определенную структуру каталогов и файлов для успешного запуска. Пожалуйста, подготовьnе папку `my-tunnel-client-app`, где будут размещены файлы и каталоги в такой структуре:
+Теперь проверьте структуру каталога `tunnel-client-data`. Она должна иметь следующий вид:
 
 ```
-my-tunnel-client-app
+tunnel-client-data
 ├──content               # здесь должны быть файлы вашего приложения
-│    ├──.env             # переменные среды, если они необходимы
 │    ├──node_modules
 │    ├──package.json
 │    └──server.js        # entrypoint of youe application
 │
-├──config.json           # файл конфигурации, объясненный выше
+├──config.json           # файл конфигурации, описанный выше
 ├──fullchain.crt         # файл с SSL сертификатами (your SSL, intermediate, root)
 └──private.pem           # файл с приватным ключом от сертификата
 ```
-
-Обратите внимание, что приложение должно быть production-сбилджено (если это необходимо), а так же все зависимости для linux/amd64 должны быть установлены. Так же приложение не должно ожидать никаких внешних env-переменных, все должно быть зашито в конфигурацию, либо `.env`-файл и считано при помощи `dotenv` npm пакета. За сохранность Ваших паролей и секретных ключей не переживайте - (to A.Manilov  - тут нужно добавить почему им не переживать.. что-то типа "доступа к этим файлам не будет даже у нас" или "все зашифровано и ключи будут только у Вас").
+:::note
+При деплое собственного приложения (не текущего примера из [п 2. данного гайда](/developers/deployment_guides/nodejs_tunnels/develop)), обратите внимание, что приложение должно быть production-сбилджено (если это необходимо), а так же все зависимости для linux/amd64 должны быть установлены. Так же приложение не должно ожидать никаких внешних env-переменных, все должно быть зашито в конфигурацию, либо `.env`-файл и считано при помощи `dotenv` npm пакета. За сохранность Ваших паролей и секретных ключей не переживайте - (to A.Manilov  - тут нужно добавить почему им не переживать.. что-то типа "доступа к этим файлам не будет даже у нас" или "все зашифровано и ключи будут только у Вас").
 
 Если ваша CPU архитектура или OS отличается от linux/amd64, то воспользуейтесь docker-командой для установки зависимости и/или билда вашего приложения:
 
@@ -94,20 +115,22 @@ my-tunnel-client-app
 docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster npm install && npm run build
 ```
 При необходимости поменяйте команды установки зависимостей и билда на те, которые требует ваше приложение.
+:::
 
 Архиваруем папку при помощи команды:
 ```bash
-tar -zcvf my-tunnel-client-app.tar.gz my-tunnel-client-app
+tar -czf tunnel-client-data.tar.gz  -C ./tunnel-client-data .
 ```
 
 Шифруем и загружаем архив на StorJ при помощи SPCTL:
 ```bash
-./spctl files upload my-tunnel-client-app.tar.gz --output my-tunnel-client-app.json --filename my-tunnel-client-app.tar.gz
+./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 ```
 
 Создаем заказ на туннель-клиент с данными нашего приложения:
 ```bash
-./spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data tunnel-client-data.json  --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl-0.6.15-beta.0 workflows create --tee 1 --solution 3,2 --solution 21,29 --data tunnel-client-data.json --storage 18,17 --orders-limit 10 --min-rent-minutes 60
 ```
 
 Последняя строчка output команды будет выглядеть так
