@@ -7,7 +7,7 @@ sidebar_position: 7
 
 This overview describes the process of launching a `Superprotocol Secret Chat` (or `Super Chat`) on the Super Protocol platform and locally as well.
 
-Вы можете найти больше информации по данному приложенияю [здесь](/developers/marketplace_offers/chat)
+Вы можете найти больше информации по данному приложенияю [здесь](/developers/offers/superchat)
 
 ## Prerequisites
 
@@ -76,13 +76,13 @@ docker compose up chat
 docker compose up build
 ```
 
-Дальше вам необходмио папки и файлы `.next`, `dist`, `node_modules`, `public` ,`next.config.js`, `package.json`, `.env` скопировать а отдельную папку `content` и полностью следовать инструкции из [п.3 Manual Run](/developers/deployment_guides/nodejs_tunnels/manual_run) данного гайда
+Дальше вам необходмио папки и файлы `.next`, `dist`, `node_modules`, `public` ,`next.config.js`, `package.json`, `.env` скопировать а отдельную папку `content` и полностью следовать инструкции из [п.3 Manual Run](/developers/deployment_guides/tunnels/manual_run) данного гайда
 
 ### Deploy with Github Actions
 
 Для деплоя Super Chat-а через Github Actions, вы должны использовать или существоующий Github репозиторий или создать новый. Мы рекомендуем Вам сделать [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions), чтобы структура папок сохранилась неизменной.
 
-Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables).
+Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables).
 
 Если все secrets and variables были настроены правильно, то уже готовые GitHub actions `superchat-...` в репозитории задеплоят Super Chat на вашем домене с Вашем SSL сертификатом.
 

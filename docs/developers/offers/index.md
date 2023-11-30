@@ -70,12 +70,12 @@ At this phase of Testnet only Storj storage is supported.
 
 ### Solutions
 
-Hosting Launcher is a [tunnel provisioner](/developers/architecture/tunnels/tunnel_provisioner/) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
+Hosting Launcher is a [tunnel provisioner](/developers/architecture/tunnels/provisioner/) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
 
-| **Id** | **Name**                                                                                | **Description**                                                                                             |
-|:-------|:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
-| 12     | [Hosting Launcher](https://marketplace.superprotocol.com/solutions?offerId=12)          | Preconfigured tunnel provisioner used to simplify deployment of tunnels for Marketplace GUI users.          |
-| 21     | [Tunnel Client: Super Chat](https://marketplace.superprotocol.com/solutions?offerId=21) | Tunnel client containing the preconfigured [Super Chat](/developers/marketplace_offers/superchat) solution. |
+| **Id** | **Name**                                                                                | **Description**                                                                                    |
+|:-------|:----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
+| 12     | [Hosting Launcher](https://marketplace.superprotocol.com/solutions?offerId=12)          | Preconfigured tunnel provisioner used to simplify deployment of tunnels for Marketplace GUI users. |
+| 21     | [Tunnel Client: Super Chat](https://marketplace.superprotocol.com/solutions?offerId=21) | Tunnel client containing the preconfigured [Super Chat](/developers/offers/superchat) solution.    |
 
 Additionally, we have developed some simple Python models to test with your own data or data from the Marketplace.
 

@@ -68,7 +68,7 @@ Workflow was created, TEE order id: ["XXXX"]
 ```
 * `sgxMrEnclave` и `sgxMrSigner` - оставьте как в этом примере без изменения
 * `authToken` - токен с файла `auth-token`, который вы создали в предыдущем пункте
-* `site.cert` и `site.key` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing)
+* `site.cert` и `site.key` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing)
 
 
 Туннель-клиент требует определенную структуру каталогов и файлов для успешного запуска. Пожалуйста, подготовьnе папку `my-tunnel-client-app`, где будут размещены файлы и каталоги в такой структуре:

@@ -9,20 +9,20 @@ sidebar_position: 4
 
 Для Вашего удобвства мы подготволили репозиторий со скриптами Github Action, которые Вы можете использовать для автоматического деплоя Вашего приложения на сервера Superprotocol-а.
 
-Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/developers/deployment_guides/nodejs_tunnels/manual_run).
+Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/developers/deployment_guides/tunnels/manual_run).
 
 В новом или уже существующем репозитории с вашим приложением необходимо стоздать следующие secrets:
 
 * `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов
-* `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run)
-* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing); для генерации его из файла `fullchain.crt` воспользуйтесь командой
+* `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 2 данного гайда](/developers/deployment_guides/tunnels/manual_run)
+* `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing); для генерации его из файла `fullchain.crt` воспользуйтесь командой
 
    ```
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' fullchain.crt | base64
    ```
    При необходимости замените название файла на ваше
 
-* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
+* `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing) в формате bas64; для генерации его из файла `private.pem` воспользуйтесь командой
 
    ```
    awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' private.pem" | base64
@@ -73,6 +73,6 @@ As result, your GitHub Secrets and GitHub Variables should look something like t
 
 ## Setup DNS
 
-Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.2 #Prepare and run tunnel-server solution](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution). 
+Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.2 #Prepare and run tunnel-server solution](/developers/deployment_guides/tunnels/manual_run#prepare-and-run-tunnel-server-solution). 
 Получив ip, нужно будет создать в DNS 2 записи, как указано [п.2 #Setup DNS](http://localhost:3000/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)
 
