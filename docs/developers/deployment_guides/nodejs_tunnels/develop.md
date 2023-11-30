@@ -5,8 +5,6 @@ slug: "/deployment_guides/nodejs_tunnels/develop"
 sidebar_position: 2
 ---
 
-## Pre
-
 ## Development
 
 Для запуска Вашего приложения на Superprotocol-е оно должно удовлетворять нескольким требованиям:
