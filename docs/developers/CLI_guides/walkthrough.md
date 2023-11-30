@@ -33,7 +33,7 @@ we are interested in Hosting Launcher. It'd id 12. lets see its slots.
 
 
 
-./spctl workflows create --tee 1 --solution 12,13 --solution 6,2 --data 16,21 --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1,1 --solution 12,13 --solution 6,2 --data 16,21 --storage 20,16
 
 
 ## 4. Getting Results

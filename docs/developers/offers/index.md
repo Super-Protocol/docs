@@ -15,9 +15,9 @@ Super Protocol requires basic four components to create a deployment order:
 
 - *Compute* – confidential computing resources where the solutions and data are executed inside the Trusted Execution Environment (TEE).
 
-- *Storage* – decentralized storages, such as Storj, where the offers' content, computation results and service files are stored.
+- *Storage* – decentralized storages, such as Storj, where the content, computation results and service files are stored.
 
-An *offer* is a solution, data, compute or storage that is made available on the Marketplace for all users. Offers cost money (TEE tokens) to use, prices set by their respective *providers*. 
+An *offer* is a solution, data, compute or storage that is made available on the Marketplace for all users. Offers cost money (TEE tokens) to use, prices set by their respective *providers*. Additionally, solutions and/or data are called *value offers* (because they add value), while TEE compute resources are called *tee* offers - you will encounter this when using CLI.
 
 Specifically solutions and data may be deployed without them being an offer: you can deploy your own application or a dataset privately without making them available on the Marketplace. 
 
