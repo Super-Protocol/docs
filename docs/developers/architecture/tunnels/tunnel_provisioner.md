@@ -1,7 +1,7 @@
 ---
 id: "tunnel_provisioner"
 title: "Tunnel Provisioner"
-slug: "/architecture/tunnels/tunnel_provisioner"
+slug: "/architecture/tunnels/provisioner"
 sidebar_position: 3
 ---
 

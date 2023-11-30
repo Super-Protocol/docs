@@ -1,31 +1,21 @@
 ---
-id: "index-marketplace-walkthrough"
+id: "walkthrough"
 title: "Walkthrough"
-slug: "/marketplace/marketplace-walkthrough/"
+slug: "/marketplace/walkthrough/"
+sidebar_position: 2
 ---
 
-## 1. Understanding Offers
+## 1. Introduction
 
-To create an order we will need to select the necessary components. The basic component is an Offer. There are four types of offers in the Marketplace. You will need all four to create an order.
+To better understand how Super Protocol works, let’s take a step-by-step walkthrough.
 
--  **Solutions** – the applications offered by the community and the Super Protocol team, any required base images such as Python and Node.js, as well as the tunnel clients and server.
+As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with Tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/architecture/tunnels/provisioner) (Hosting Launcher), which cuts a few corners in order to streamline the experience. For the full Tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/nodejs_tunnels).
 
-- **Data** – data can be anything that is used by a solution: webpages, configs, photo, audio, webpages, text, databases, etc. You can use datasets from the Marketplace or upload your own.
+Let's begin by going to the Marketplace GUI at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/developers/marketplace/first-steps/).
 
-- **Compute** – confidential computing resources, machines where the solutions and data are executed inside the Trusted Execution Environment (TEE).
-
-- **Storage** – decentralized storages where the offers and computation results are stored.
-
-
+We will also be providing CLI steps in parallel where applicable. For this you will need to have [configured SPCTL](/developers/cli_guides/).
 
 ## 2. Building the Order
-
-To better understand how Marketplace works, let’s take a step-by-step walkthrough.
-
-As an example we’ll deploy the [Super Chat app](/developers/marketplace_offers/chat), a technological demo developed by the Super Protocol team to show how complex dynamic web apps can be run in decentralized confidential environments (TEE).
-
-Let's begin by going to the Marketplace at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/developers/marketplace/first-steps/).
-
 
 :::info Step 1. Add a solution.
 
@@ -194,3 +184,8 @@ You are all set! Go to your new domain and please don’t forget to tell the wor
 :::
 
 <img src={require('./../images/marketplace_17.png').default}/>
+
+
+<Highlight color="red">check confidentiality</Highlight>
+
+<Highlight color="red">replenishing order</Highlight>

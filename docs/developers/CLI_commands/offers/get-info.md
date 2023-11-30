@@ -1,13 +1,15 @@
 ---
-id: "cli-commands-offers-get-info"
-title: "Get offer info"
+id: "offers-get-info"
+title: "get-info"
 slug: "/cli_commands/offers/get-info"
-sidebar_label: "get-info"
+sidebar_position: 3
 ---
 
-Display information on offer with `id` as it is stored in blockchain
+Displays detailed information on a value or compute offer with `id` as stored on blockchain.
 
 ## Usage
+
+Syntax:
 
 ```
 ./spctl offers get-info <type> <id>
@@ -15,7 +17,7 @@ Display information on offer with `id` as it is stored in blockchain
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`type`|Offer `type` (choices: "tee", "value")|
-|`id`|Offer `id`|
+| **Name** | **Description**                 |
+|:---------|:--------------------------------|
+| `type`   | Type of offer: `tee` or `value` |
+| `id`     | Offer ID                        |

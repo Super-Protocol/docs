@@ -1,8 +1,8 @@
 ---
-id: "cli-commands-offers-enable"
-title: "Enable offer"
+id: "offers-enable"
+title: "enable"
 slug: "/cli_commands/offers/enable"
-sidebar_label: "enable"
+sidebar_position: 7
 ---
 
 Enable offer

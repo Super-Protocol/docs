@@ -1,8 +1,8 @@
 ---
 id: "cli-workflows"
-title: "Workflows"
+title: "workflows"
 slug: "/cli_commands/workflows"
-sidebar_position: 3
+sidebar_position: 4
 
 ---
 

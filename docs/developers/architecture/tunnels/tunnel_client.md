@@ -1,7 +1,7 @@
 ---
 id: "tunnel_client"
 title: "Tunnel Client"
-slug: "/architecture/tunnels/tunnel_client"
+slug: "/architecture/tunnels/client"
 sidebar_position: 1
 ---
 

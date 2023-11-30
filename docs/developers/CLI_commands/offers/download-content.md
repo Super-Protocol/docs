@@ -1,7 +1,9 @@
 ---
-id: "cli-commands-offers-download-content"
-title: "Download content from an offer"
+id: "offers-download-content"
+title: "download-content"
 slug: "/cli_commands/offers/download-content"
+sidebar_position: 4
+
 ---
 
 Download the content of an offer with `id` (only for offers that allow this operation)

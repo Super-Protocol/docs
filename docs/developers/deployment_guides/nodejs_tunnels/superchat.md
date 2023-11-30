@@ -7,7 +7,7 @@ sidebar_position: 7
 
 This overview describes the process of launching a `Superprotocol Secret Chat` (or `Super Chat`) on the Super Protocol platform and locally as well.
 
-Вы можете найти больше информации по данному приложенияю [здесь](/developers/marketplace_offers/chat)
+Вы можете найти больше информации по данному приложенияю [здесь](/developers/offers/superchat)
 
 ## Prerequisites
 
