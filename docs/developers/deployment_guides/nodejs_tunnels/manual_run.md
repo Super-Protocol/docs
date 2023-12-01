@@ -95,19 +95,6 @@ touch tunnel-client-data/config.json
 sed -i.bak -e "/\"authToken\":/s/\"authToken\": \".*\"/\"authToken\": \"$(cat tunnel-server-data/auth-token)\"/" tunnel-client-data/config.json
 ```
 
-Теперь проверьте структуру каталога `tunnel-client-data`. Она должна иметь следующий вид:
-
-```
-tunnel-client-data
-├──content               # здесь должны быть файлы вашего приложения
-│    ├──node_modules
-│    ├──package.json
-│    └──server.js        # entrypoint of youe application
-│
-├──config.json           # файл конфигурации, описанный выше
-├──fullchain.crt         # файл с SSL сертификатами (your SSL, intermediate, root)
-└──private.pem           # файл с приватным ключом от сертификата
-```
 :::note
 При деплое собственного приложения (не текущего примера из [п 2. данного гайда](/developers/deployment_guides/nodejs_tunnels/develop)), обратите внимание, что приложение должно быть production-сбилджено (если это необходимо), а так же все зависимости для linux/amd64 должны быть установлены. Так же приложение не должно ожидать никаких внешних env-переменных, все должно быть зашито в конфигурацию, либо `.env`-файл и считано при помощи `dotenv` npm пакета. За сохранность Ваших паролей и секретных ключей не переживайте - (to A.Manilov  - тут нужно добавить почему им не переживать.. что-то типа "доступа к этим файлам не будет даже у нас" или "все зашифровано и ключи будут только у Вас").
 

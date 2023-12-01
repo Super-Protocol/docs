@@ -78,7 +78,7 @@ As result, your GitHub Secrets and GitHub Variables should look something like t
 cd superprotocol-test-app
 mkdir -p .github/workflows
 ```
-Скопируйте файл [superprotocol-test-app-tunnel-server.yaml](https://github.com/Super-Protocol/solutions/blob/main/.github/examples/superprotocol-test-app-tunnel-server.yml) в эту новую папку, переименуя его в `tunnel-server-deploy.yml`
+Скопируйте файл [superprotocol-test-app-tunnel-server.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml) в эту новую папку, переименуя его в `tunnel-server-deploy.yml`
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/examples/superprotocol-test-app-tunnel-server.yml -o .github/workflows/tunnel-server-deploy.yml
@@ -97,7 +97,7 @@ git push
 
 ## Run tunnel-client Github Action
 
-Скопируйте файл [superprotocol-test-app-tunnel-client.yaml](https://github.com/Super-Protocol/solutions/blob/main/.github/examples/superprotocol-test-app-tunnel-client.yml) в эту новую папку, переименуя его в `tunnel-client-deploy.yml`
+Скопируйте файл [superprotocol-test-app-tunnel-client.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml) в эту новую папку, переименуя его в `tunnel-client-deploy.yml`
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/examples/superprotocol-test-app-tunnel-client.yml -o .github/workflows/tunnel-client-deploy.yml
