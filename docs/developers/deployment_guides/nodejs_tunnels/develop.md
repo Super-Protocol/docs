@@ -93,7 +93,7 @@ server.listen(port, () => {
 docker load --input node16-base-solution-image-v0.3.1.tar.gz
 ```
 
-Дальше, находясь в папке с файлом `server.js`, выполните данную команду, для запуска Вашего приложения с нашим базовым образом:
+Дальше выполните команду для запуска сервера с базовым образом
 
 ```bash
 docker run --platform linux/amd64 -p 3001:3001 --rm -it -w /sp/run  -v $PWD/superprotocol-test-app:/sp/run --entrypoint /usr/local/bin/node gsc-node16-base-solution:latest /sp/run/server.js
