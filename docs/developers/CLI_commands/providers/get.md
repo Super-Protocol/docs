@@ -5,19 +5,19 @@ slug: "/cli_commands/providers/get"
 sidebar_label: "get"
 ---
 
-Display detailed information on provider with `address`
+Display detailed information on provider with `address`.
 
 ## Usage
 
 ```
-./spctl providers get <id> [OPTIONS]
+./spctl providers get <address> [OPTIONS]
 ```
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`address`|Provider address|
+|**Name**| **Description**   |
+| :- |:------------------|
+|`address`| Provider address. |
 
 ## Options
 

@@ -5,7 +5,7 @@ slug: "/cli_commands/orders/withdraw-deposit"
 sidebar_label: "withdraw-deposit"
 ---
 
-Withdraw unspent deposit from a completed order with `id`
+Withdraw unspent deposit from a completed order with `id`. 
 
 ## Usage
 

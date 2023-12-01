@@ -1,11 +1,11 @@
 ---
-id: "cli-orders-cancel"
-title: "Cancel order"
+id: "orders-cancel"
+title: "cancel"
 slug: "/cli_commands/orders/cancel"
 sidebar_label: "cancel"
 ---
 
-Cancel order with `id`
+Cancel order with `id`.
 
 ## Usage
 

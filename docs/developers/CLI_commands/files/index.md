@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ---
 
-Manage files in third-party storages
+Manage your files in third-party storages such as Storj. You will need to have set up access to a storage when [configuring SPCTL](/developers/cli_guides/configuring).
 
 ## Usage
 

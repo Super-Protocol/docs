@@ -5,25 +5,9 @@ slug: "/offers"
 sidebar_position: 4
 ---
 
-## Understanding Offers
-
-Super Protocol requires basic four components to create a deployment order: 
-
-- *Solutions* – base images, tunnel clients, tunnel server, oracles, Python models - basically, any application.
-
-- *Data* – data is anything that is used by a solution: webpages, configs, datasets, databases, etc.
-
-- *Compute* – confidential computing resources where the solutions and data are executed inside the Trusted Execution Environment (TEE).
-
-- *Storage* – decentralized storages, such as Storj, where the content, computation results and service files are stored.
-
-An *offer* is a solution, data, compute or storage that is made available on the Marketplace for all users. Offers cost money (TEE tokens) to use, prices set by their respective *providers*. Additionally, solutions and/or data are called *value offers* (because they add value), while TEE compute resources are called *tee* offers - you will encounter this when using CLI.
-
-Specifically solutions and data may be deployed without them being an offer: you can deploy your own application or a dataset privately without making them available on the Marketplace. 
-
 This section describes the offers provided by the Super Protocol team. But in the near future Marketplace will be made accessible to all testnet users to create and monetize their own offers.
 
-Offers are subject to requirements, slots and options (read about them [here](/developers/architecture/slots)) and are best viewed through the [Marketplace GUI](/developers/marketplace/), although you can also use [CLI commands](/developers/cli_commands/offers).
+Offers are subject to requirements, slots and options (read about them [here](/developers/fundamentals/slots)) and are best viewed through the [Marketplace GUI](/developers/marketplace/), although you can also use [CLI commands](/developers/cli_commands/offers).
 
 ## For Developers
 
@@ -31,7 +15,7 @@ These are the offers that will be most useful for developers when deploying your
 
 ### Solutions
 
-These solution offers are instrumental in setting up [tunnels](/developers/architecture/tunnels) or other solutions based on Node.js or Python.
+These solution offers are instrumental in setting up [tunnels](/developers/fundamentals/tunnels) or other solutions based on Node.js or Python.
 
 | **Id** | **Name**                                                                                        | **Description**                                                         |
 |:-------|:------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
@@ -47,7 +31,7 @@ There are not preset data offers for developers, you will be uploading your own 
 
 ### Compute
 
-Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/developers/architecture/slots/). Explore each compute offer to see which best fits the requirements of your solution. 
+Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/developers/fundamentals/slots/). Explore each compute offer to see which best fits the requirements of your solution. 
 
 | **Id** | **Name**                                                                | **Description**                                    |
 |:-------|:------------------------------------------------------------------------|:---------------------------------------------------|
@@ -70,7 +54,7 @@ At this phase of Testnet only Storj storage is supported.
 
 ### Solutions
 
-Hosting Launcher is a [tunnel provisioner](/developers/architecture/tunnels/provisioner/) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
+Hosting Launcher is a [tunnel provisioner](/developers/fundamentals/tunnels/provisioner/) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
 
 | **Id** | **Name**                                                                                | **Description**                                                                                    |
 |:-------|:----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|

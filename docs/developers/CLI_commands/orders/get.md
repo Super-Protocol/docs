@@ -1,11 +1,11 @@
 ---
-id: "cli-orders-get"
-title: "Get order"
+id: "orders-get"
+title: "get"
 slug: "/cli_commands/orders/get"
 sidebar_label: "get"
 ---
 
-Display detailed information on order with `id`
+Display detailed information of an order with `id`. It doesn't necessarily have to be your own order - this information is openly available for all orders on blockchain.
 
 ## Usage
 

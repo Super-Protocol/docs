@@ -28,7 +28,7 @@ This should give you a pretty good idea of Super Protocol. Please keep in mind t
 Now you can dive right into it: 
 
 4. Follow [this guide](/developers/cli_guides/) to set up your storage account and configure SPCTL.
-5. Familiarize yourself with the concepts of [tunnels](/developers/architecture/tunnels) and [slots](/developers/architecture/slots), as well as key [CLI commands](/developers/cli_commands) and [Testnet limitations](/testnet/limitations).
+5. Familiarize yourself with the concepts of [tunnels](/developers/fundamentals/tunnels) and [slots](/developers/fundamentals/slots), as well as key [CLI commands](/developers/cli_commands) and [Testnet limitations](/testnet/limitations).
 6. Take your pick of [deployment guides](/developers/deployment_guides/) with examples to help you through.
 
 This is, of course, just the tip of the iceberg. Super Protocol is a powerful tool and it's up to you to make it your own.

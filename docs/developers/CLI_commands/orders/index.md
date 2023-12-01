@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ---
 
-Manage Super Protocol orders
+View and manage your orders. In most cases it is more convenient to do via the [Marketplace GUI](/developers/marketplace) where all the below functions are available.
 
 ## Usage
 
