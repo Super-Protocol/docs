@@ -83,7 +83,7 @@ mkdir -p .github/workflows
 Скопируйте файл [superprotocol-test-app-tunnel-server.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml) в эту новую папку, переименуя его в `tunnel-server-deploy.yml`
 
 ```bash
-curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/examples/superprotocol-test-app-tunnel-server.yml -o .github/workflows/tunnel-server-deploy.yml
+curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml -o .github/workflows/tunnel-server-deploy.yml
 ```
 
 Закомитим наши изменения и запушим их в гит
@@ -101,7 +101,7 @@ git push
 Скопируйте файл [superprotocol-test-app-tunnel-client.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml) в эту новую папку, переименуя его в `tunnel-client-deploy.yml`
 
 ```bash
-curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/examples/superprotocol-test-app-tunnel-client.yml -o .github/workflows/tunnel-client-deploy.yml
+curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml -o .github/workflows/tunnel-client-deploy.yml
 ```
 
 Данный Github Action предполагает, что для вашего приложения должны быть установлены зависимости, а так же оно должно быть собрано.
@@ -153,5 +153,5 @@ git push
 
 ## Setup DNS
 
-Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.2 #Prepare and run tunnel-server solution](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution).
-Получив ip, нужно будет создать в DNS 2 записи, как указано [п.2 #Setup DNS](/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)
+Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.3 #Prepare and run tunnel-server solution](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution).
+Получив ip, нужно будет создать в DNS 2 записи, как указано [п.3 #Setup DNS](/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)

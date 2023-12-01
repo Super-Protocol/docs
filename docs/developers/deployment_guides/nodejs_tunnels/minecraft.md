@@ -67,12 +67,38 @@ docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:1
 Необходимые сикреты:
 
 - `GH_TOKEN` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+
 - `MINECRAFT_SOLUTION_SERVER_TOKEN` - любой случайный uuid. Сгененриуйте его при помощи команды
+
   ```bash
   uuidgen
   ```
 
-Если все secrets and variables были настроены правильно, то уже готовые GitHub actions `minecraft-...` в репозитории задеплоят Minecraft на вашем домене с Вашем SSL сертификатом.
+  и добавьте в качестве секрета. Нельзя использовать UUID, который вы уже использовали для деплоя туненль сервера какого-нибудь другого приложения. Он должен быть другим.
+
+- `MINECRAFT_SOLUTION_SSL_CERTIFICATE_BASE64` - сгенерируйте отдельный ssl сертифифкат для майнкрафта. Сконвертируйте его в base64 при помощи команды
+
+  ```bash
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' minecraft-ssl.crt | base64
+  ```
+
+  Замените `minecraft-ssl.crt` на название файла с вашим сертификатом
+
+- `MINECRAFT_SOLUTION_SSL_KEY_BASE64` - приватный ключ от сгенерированного ssl сертификата. Сконвертируйте его в base64 при помощи команды
+
+  ```bash
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' minecraft-private.pem | base64
+  ```
+
+  Замените `minecraft-private.pem` на название файла с вашим сертификатом
+
+- `SPCTL_CONFIG_BASE64` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+
+Так же добавьте variables `TUNNEL_SERVER_MRENCLAVE` и `TUNNEL_SERVER_MRSIGNER`, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+
+Дальше переходите во вкладку Actions вашего репозитория и запускайте экшены деплоя Minecraft! Они могу выполняться параллельно.
+
+После успешной отработки Guthub Actuin-ов, Вам нужно будет вручную внести DNS для вашего домена с майнкрафтом. Используйте инструкцию из [п.4 Setup DNS](/developers/deployment_guides/nodejs_tunnels/repo#setup-dns)
 
 :::caution
 С одним SSL сертификатом может быть задеплоено только одно приложение!
