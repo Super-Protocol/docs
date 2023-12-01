@@ -1,7 +1,7 @@
 ---
-id: "superchat"
-title: "Example: SuperChat"
-slug: "/deployment_guides/nodejs_tunnels/superchat"
+id: 'superchat'
+title: 'Example: SuperChat'
+slug: '/deployment_guides/nodejs_tunnels/superchat'
 sidebar_position: 7
 ---
 
@@ -11,7 +11,7 @@ This overview describes the process of launching a `Superprotocol Secret Chat` (
 
 ## Prerequisites
 
-* [Docker](https://docs.docker.com/engine/install/)
+- [Docker](https://docs.docker.com/engine/install/)
 
 ## Download Super Chat source code
 
@@ -34,11 +34,12 @@ cp .env.example .env
 
 Для создания бакета воспользуйтесь информацие [здесь](developers/cli_guides/storages#creating-a-bucket)
 
-Для создания S3 Cretendials с этому бакету воспользуйтесь инструкцией [здесь](https://docs.storj.io/dcs/access#create-s3-credentials).
+Для создания S3 Cretendials к этому бакету воспользуйтесь инструкцией [здесь](https://docs.storj.io/dcs/access#create-s3-credentials).
 
-После создания бакета и S3 Credentials, разместите `Access Key`, `Secret Key`, `S3 Endpoint` и название вашего бакета в `.env` файле. 
+После создания бакета и S3 Credentials, разместите `Access Key`, `Secret Key`, `S3 Endpoint` и название вашего бакета в `.env` файле.
 
 Например:
+
 ```
 S3_ACCESS_KEY_ID=jv467.....
 S3_ACCESS_SECRET_KEY=jy8wqh6......
@@ -48,7 +49,7 @@ STORJ_BUCKET=superchat
 
 ## Local run
 
-Данное приложение работает только под платформой linux/amd64 с необходимыми внешними зависимостями, такими как `python 3.10` и `go 1.18`.  Поэтому для установки зависимостей и билда проекта, находясь в корневой папке чата, воспользуйтесь docker-compose командой:
+Данное приложение работает только под платформой linux/amd64 с необходимыми внешними зависимостями, такими как `python 3.10` и `go 1.18`. Поэтому для установки зависимостей и билда проекта, находясь в корневой папке чата, воспользуйтесь docker-compose командой:
 
 ```bash
 docker compose up build
@@ -64,8 +65,6 @@ docker compose up chat
 
 Подключайтесь по ссылке http://localhost:3000
 
-
-
 ## Deploy on Superprotocol
 
 ### Manual deploy
@@ -80,14 +79,47 @@ docker compose up build
 
 ### Deploy with Github Actions
 
-Для деплоя Super Chat-а через Github Actions, вы должны использовать или существоующий Github репозиторий или создать новый. Мы рекомендуем Вам сделать [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions), чтобы структура папок сохранилась неизменной.
+Сделайте [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions).
 
-Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables).
+Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables), но некоторые переменные будут именть другие названия.
 
-Если все secrets and variables были настроены правильно, то уже готовые GitHub actions `superchat-...` в репозитории задеплоят Super Chat на вашем домене с Вашем SSL сертификатом.
+Необходимые сикреты:
+
+- `GH_TOKEN` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+
+- `SUPERCHAT_SOLUTION_SERVER_TOKEN` - любой случайный uuid. Сгененриуйте его при помощи команды
+
+  ```bash
+  uuidgen
+  ```
+
+  и добавьте в качестве секрета. Нельзя использовать UUID, который вы уже использовали для деплоя туненль сервера какого-нибудь другого приложения. Он должен быть другим.
+
+- `SUPERCHAT_SOLUTION_SSL_CERTIFICATE_BASE64` - сгенерируйте отдельный ssl сертифифкат для Superchat. Сконвертируйте его в base64 при помощи команды
+
+  ```bash
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' superchat-ssl.crt | base64
+  ```
+
+  Замените `superchat-ssl.crt` на название файла с вашим сертификатом
+
+- `SUPERCHAT_SOLUTION_SSL_KEY_BASE64` - приватный ключ от сгенерированного ssl сертификата. Сконвертируйте его в base64 при помощи команды
+
+  ```bash
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' superchat-private.pem | base64
+  ```
+
+  Замените `superchat-private.pem` на название файла с вашим сертификатом
+
+- `SPCTL_CONFIG_BASE64` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+
+Так же добавьте variables `TUNNEL_SERVER_MRENCLAVE` и `TUNNEL_SERVER_MRSIGNER`, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+
+Дальше переходите во вкладку Actions вашего репозитория и запускайте экшены деплоя Superchat! Они могут выполняться параллельно.
+
+После успешной отработки Guthub Actuin-ов, Вам нужно будет вручную внести DNS для вашего домена с Superchat. Используйте инструкцию из [п.4 Setup DNS](/developers/deployment_guides/nodejs_tunnels/repo#setup-dns)
 
 :::caution
 С одним SSL сертификатом может быть задеплоено только одно приложение!
- Если Вы уже задеплоили какое-то приложение на Superprotocol-е с Вашим сертификатом, то для деплоя нового, нужно сгенерировать новый сертификат и ключ (можно использовать сабдомены).
-  Для автоматического деплоя через Github Action-ы Вам так же нужно будет создать новые `secret`-ы с новым ключом и новым сертифкатом, и заменить ими `SOLUTION_SSL_...` сикреты в `.yml`-файлах Github Action
+Если Вы уже задеплоили какое-то приложение на Superprotocol-е с Вашим сертификатом, то для деплоя нового, нужно сгенерировать новый сертификат и ключ (можно использовать сабдомены).
 :::
