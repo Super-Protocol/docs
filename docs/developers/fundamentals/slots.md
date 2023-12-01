@@ -1,6 +1,6 @@
 ---
 id: "slots"
 title: "Slots"
-slug: "/architecture/slots"
+slug: "/fundamentals/slots"
 sidebar_position: 1
 ---

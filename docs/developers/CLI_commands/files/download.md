@@ -5,7 +5,7 @@ slug: "/cli_commands/files/download"
 sidebar_label: "download"
 ---
 
-Download and decrypt a file from the remote storage to `<localPath>` using resource file `<resourcePath>`
+Download and decrypt a file from the remote storage.
 
 ## Usage
 
@@ -15,10 +15,10 @@ Download and decrypt a file from the remote storage to `<localPath>` using resou
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`resourcePath`|Path to a resource file|
-|`localPath`|Path to save downloaded file|
+|**Name**| **Description**                      |
+| :- |:-------------------------------------|
+|`resourcePath`| Path to the file inside the storage. |
+|`localPath`| Path to save downloaded file.        |
 
 ## Options
 

@@ -1,12 +1,12 @@
 ---
-id: "cli-solutions"
+id: "solutions"
 title: "solutions"
 slug: "/cli_commands/solutions"
 sidebar_position: 2
 
 ---
 
-Prepare solutions to be deployed on Super Protocol
+Prepare the solutions to be deployed on Super Protocol.
 
 ## Usage
 

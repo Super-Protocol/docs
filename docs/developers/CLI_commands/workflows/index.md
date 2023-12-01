@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ---
 
-Create new orders
+Create new orders. 
 
 ## Usage
 

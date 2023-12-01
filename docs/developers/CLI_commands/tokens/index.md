@@ -6,4 +6,16 @@ sidebar_position: 1
 
 ---
 
-get tokens
+Request to receive TEE and MATIC tokens for testing purposes.
+
+## Usage
+
+```
+./spctl tokens <command>
+```
+
+## Child commands
+
+| **Command**                                        | **Description** |
+|:---------------------------------------------------|:----------------|
+| [request](/developers/cli_commands/tokens/request) | Request tokens  |

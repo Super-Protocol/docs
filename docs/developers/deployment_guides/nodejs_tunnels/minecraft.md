@@ -7,7 +7,7 @@ sidebar_position: 6
 
 This overview describes the process of launching a Minecraft server and client on the Super Protocol platform and locally as well.
 
-This example demonstrates the capability to run dynamic applications in a Trusted Execution Environment (TEE) using tools such as the [Tunnel Server](/developers/architecture/tunnels/server) and [Tunnel Client](/developers/architecture/tunnels/client).
+This example demonstrates the capability to run dynamic applications in a Trusted Execution Environment (TEE) using tools such as the [Tunnel Server](/developers/fundamentals/tunnels/server) and [Tunnel Client](/developers/fundamentals/tunnels/client).
 
 ## Prerequisites
 
