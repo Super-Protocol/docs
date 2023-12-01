@@ -5,7 +5,7 @@ slug: "/cli_commands/files/delete"
 sidebar_label: "delete"
 ---
 
-Delete a file in the remote storage using resource file `<resourcePath>`
+Delete a file in the remote storage.
 
 ## Usage
 
@@ -15,9 +15,9 @@ Delete a file in the remote storage using resource file `<resourcePath>`
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`resourcePath`|Path to a resource file|
+|**Name**| **Description**                      |
+| :- |:-------------------------------------|
+|`resourcePath`| Path to the file inside the storage. |
 
 ## Options
 

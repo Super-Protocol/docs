@@ -1,7 +1,7 @@
 ---
 id: "tunnel_provisioner"
 title: "Tunnel Provisioner"
-slug: "/architecture/tunnels/provisioner"
+slug: "/fundamentals/tunnels/provisioner"
 sidebar_position: 3
 ---
 
@@ -9,7 +9,7 @@ Tunnel Provisioner Solution - это решение, которое было с�
 
 Ниже приведена его схема работы:
 
-![img_1.png](img_1.png)
+![img_name](../../images/tunnels-2.png)
 
 Работа этой системы включает в себя несколько этапов:
 

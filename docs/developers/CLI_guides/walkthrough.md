@@ -9,7 +9,7 @@ sidebar_position: 4
 
 To better understand how Super Protocol works, let’s take a step-by-step walkthrough.
 
-As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with Tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/architecture/tunnels/provisioner) (Hosting Launcher), which cuts a few corners in order to streamline the experience. For the full Tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/nodejs_tunnels).
+As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with Tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/fundamentals/tunnels/provisioner) (Hosting Launcher), which cuts a few corners in order to streamline the experience. For the full Tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/nodejs_tunnels).
 
 
 We will also be providing CLI steps in parallel where applicable. For this you will need to have [configured SPCTL](/developers/cli_guides/).

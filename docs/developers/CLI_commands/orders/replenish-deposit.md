@@ -5,7 +5,7 @@ slug: "/cli_commands/orders/replenish-deposit"
 sidebar_label: "replenish-deposit"
 ---
 
-Replenish order deposit with `id` by `amount`
+Replenish order deposit with `id` by `amount` in TEE tokens. You will need this to keep an order going before it runs out of money. 
 
 ## Usage
 
@@ -15,10 +15,10 @@ Replenish order deposit with `id` by `amount`
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`id`|Order `id`|
-|`amount`|Amount of tokens|
+|**Name**| **Description**                  |
+| :- |:---------------------------------|
+|`id`| Order `id`                       |
+|`amount`| Amount of TEE tokens to deposit. |
 
 ## Options
 

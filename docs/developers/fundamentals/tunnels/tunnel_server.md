@@ -1,8 +1,8 @@
 ---
 id: "tunnel_server"
 title: "Tunnel Server"
-slug: "/architecture/tunnels/server"
-sidebar_position: 2
+slug: "/fundamentals/tunnels/server"
+sidebar_position: 1
 ---
 
 ## Механизм туннелирования
@@ -15,7 +15,7 @@ sidebar_position: 2
 
 ## Создание заказа на туннель сервер
 
-![img.png](img.png)
+![img_name](../../images/tunnels-1.png)
 
 Для выделения IP адреса от туннель сервера, необходимо создать заказ. В данных заказа в корне передается файл ./auth-token, содержащий внутри текстовый токен. Этот токен впоследствии будет использоваться туннельным клиентом для аутентификации.
 

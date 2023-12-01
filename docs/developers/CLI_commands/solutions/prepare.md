@@ -1,5 +1,5 @@
 ---
-id: "cli-solutions-prepare"
+id: "solutions-prepare"
 title: "Prepare a solution"
 slug: "/cli_commands/solutions/prepare"
 sidebar_label: "prepare"
