@@ -33,6 +33,8 @@ To successfully complete this guide, you will need experience with Node.js, EVM 
 
 - [StorJ](/developers/cli_guides/storages) - децентрализованное хранилище данных. Через него будет передаваться зашифрованный конфигурация для скрипта-оракула (кошелек “паблишера” и т.д.)
 
+- [CoinAPI](https://coinapi.io/) - Зарегистрироваться и получить Api ключ - после регистрации он приходит на почту, в личном кабинете ключи не отображаются.
+
 Для вашего удобства, мы предлагаем скачивать и хранить используемые далее инструменты в одной директории. Перейдите в желаемый раздел файловой системы и создайте папку:
 
 ```shell
@@ -71,7 +73,7 @@ cd ./solutions/Blockchain/sp-x509/
 cp .env.example .env
 ```
 
-To set up the project, you will need to set 3 env variables in `.env` file:
+To set up the project, you will need to set env variables in `.env` file:
 
 - `PRIVATE_KEY` - Your wallet private key with MAITC 
 - `MUMBAI_URL` - https://mumbai.polygon.superprotocol.com/hesoyam
@@ -86,12 +88,9 @@ npx hardhat compile
 
 We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. Essentially, the integrity of the entire certificate chain depends on this root certificate. When an error arises during the process of verifying traceability and trustworthiness, it means that the data is currently untrusted, and the opposite is true when no errors are found.
 
-<Highlight color="red">нужно больше контекста. Почему здесь нужен х501? если это не очевидно для разработчиков</Highlight>
-
 ### Deploy the smart-contract
 
 In the same directory, execute this command to deploy the verifier contract to the polygon testnet network.
-<Highlight color="red">это контракт который мы скачали? это путь на него?</Highlight>
 
 ```shell
 npx hardhat deploy --cert ./intel-root-cert.pem --network mumbai
@@ -100,9 +99,6 @@ npx hardhat deploy --cert ./intel-root-cert.pem --network mumbai
 <Highlight color="red">как адрес этого контракта связан с предыдущей строчкой?</Highlight>
 
 Upon execution, a contract address will be printed to console. It will be used in later steps, so make sure you save it.
-
-
-<Highlight color="red">причем тут Полискан? в чем удобство демонстрации?</Highlight>
 
 To be able to interact with the contract via GUI (e.g. Polygonscan) you will need to verify the contract on-chain by uploading the contract abi.
 
@@ -170,7 +166,7 @@ Then, execute the following command in the root of your project to prepare and p
 
 note, `$(pwd)` - will add the root path to a run folder, to make it absolute.
 
-After running the command, `oracle-solution.tar.gz` and `metadata.json` files will be generated. And in terminal, you will see logs, make sure to save MRENCLAVE and MRSIGNER, they should look like the following (hex values may differ):
+After running the command, `oracle-solution.tar.gz` and `metadata.json` files will be generated. And in terminal, you will see logs, make sure to save MRENCLAVE and MRSIGNER. These values **differ** on every `prepare` run, so double check yourself on later steps that you use up-to-date values! should look like the following:
 
 ```
 MRENCLAVE: d6906986298db89f91941921579e058429bd9ec63c0f97246274b25a4bbfbf0c
@@ -199,7 +195,7 @@ cd ./solutions/Blockchain/sp-oracle/smart-contract/
 cp .env.example .env
 ```
 
-To set up the project, you will need to set 3 env variables in `.env` file:
+To set up the project, you will need to set env variables in `.env` file:
 
 - `MUMBAI_DEPLOYER_PRIVATE_KEY` - Your wallet private key with testnet MAITC
 - `MUMBAI_URL` - https://mumbai.polygon.superprotocol.com/hesoyam
@@ -220,8 +216,8 @@ npx hardhat deploy-oracle --publishers <publisher-address> --enclave <mrenclave>
 ```
 where 
 - `<publisher-address>` - Ethereum wallet address that will be used by Oracle service to send new prices to the contract;
-- `<mrenclave>`, `<mrsigner>` - values that you received at the end of Step 2;
-- `<x509-verifier-address>` - x509 verifier contract address, result of Step 1.
+- `<mrenclave>`, `<mrsigner>` - values that you received at the end of [Step 2](#step-2-prepare-oracle-service-for-deployment-on-super-protocol). **Note**, if at some point, you will have to redo Step 2 and prepare solution again, you will have different MRENCLAVE and MRSIGNER and will have to change them in smart contract. Refer to [changing mrenclave and mrsigner](#changing-mrenclave-and-mrsigner) to modify these, without redeploying a new contract;
+- `<x509-verifier-address>` - x509 verifier contract address, result of [Step 1](#step-1-deploy-the-x509-verifier-smart-contract).
 
 Deployed contract address will be printed to console. Use it to verify contract on-chain, as we did for x509-verifier:
 
@@ -280,8 +276,6 @@ cp input.example.json input.json
 
 And fill the data:
 
-<Highlight color="red">где мы это делаем? не хватает пары слов вводных</Highlight>
-
 * interval - частота запросов к API в секундах. (равно частоте публикации данных)
 * dataKey - ключ по которому в смарт-контракте будут храниться исторические данные запросов, например “BTC/USD”.
 * smartContractAddress - адрес контракта оракула
@@ -293,12 +287,12 @@ And fill the data:
 
 You will end up having two files in `inputs` folder:
 - `input.json` file (file must have that name)
-- `cert3.crt` (file must be named the same as the filename in `rootCertificateFiles` and have extension `.crt`)
+- `ca_certificaes.crt`
 
 Create an archive with those files:
 
 ```shell
-tar -czvf oracle-input.tar.gz input.json cert3.crt
+tar -czvf oracle-input.tar.gz input.json ca_certificaes.crt
 ```
 
 Open a new terminal and go to `super-protocol` folder with spctl. And upload the archive to StorJ:
@@ -322,7 +316,7 @@ You can check the status of the order using the order ID in the following [comma
 
 You can also visit our Marketplace by url `https://marketplace.superprotocol.com/order/<your-order-ID>` for more convenient observation. Wait till the order turn to status `Processing`, wait for ~10-15 minutes till the script starts and then see oracle works live on the Polygonscan.
 
-## **Step 4. Observing oracle**
+## **Step 5. Observing oracle**
 
 Теперь мы можем наблюдать за работой оракла в реальном времени. Откройте страницу контракта dApp на Polygonscan `https://mumbai.polygonscan.com/address/<d-app-address>`, по адресу контракта, который мы получили на шаге [Deploy dApp](#deploy-dapp). На вкладке `Contract` -> `Read Contract` нажмите на методы:
 - processA - Запрашивает цену BTC/USD, которая не старее 1 часа (И прибавляет 1)
@@ -335,6 +329,18 @@ You can also visit our Marketplace by url `https://marketplace.superprotocol.com
 ![img_4.png](img_4.png)
 
 На картинке выше getDataCounts показывает, сколько раз была обновлена цена в блокчейне 
+
+## **Troubleshooting**
+
+В случаях, если вы допустили какие-то ошибки по прохождении гайда, или по каким-то причинам не получилось успешно пройти с первого раза, тут можете найти некоторые полезные советы:
+
+### Changing MRENCLAVE and MRSIGNER
+Если вы уже задеплоили смартконтракт оракла, и затем поняли, что вам нужно вернуться обратно и пересобрать солюшен Оракл сервиса, то в таком случае вы получите новые MRENCLAVE and MRSIGNER. Чтобы не пришлось заново передеплоить контракт Оракла, мы подготовили Hardhat tasks 'change-mr-enclave' and 'change-mr-signer', которые помогут вам поменять данные в задеплоенном контракте. When using these tasks, `MUMBAI_DEPLOYER_PRIVATE_KEY` env variable must be a **private key** of a `<publisher-address>`, that you used on [Deploy oracle](#deploy-oracle) step
+
+```shell
+npx hardhat change-mr-signer --address <oracle-address> --signer <new-mrsigner>
+npx hardhat change-mr-enclave --address <oracle-address> --enclave <new-mrenclave>
+```
 
 ## **Кастомизация**
 
