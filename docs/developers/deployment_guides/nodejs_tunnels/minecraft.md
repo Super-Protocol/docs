@@ -1,7 +1,7 @@
 ---
-id: "minecraft"
-title: "Example: Minecraft"
-slug: "/deployment_guides/nodejs_tunnels/minecraft"
+id: 'minecraft'
+title: 'Example: Minecraft'
+slug: '/deployment_guides/nodejs_tunnels/minecraft'
 sidebar_position: 6
 ---
 
@@ -12,10 +12,10 @@ This example demonstrates the capability to run dynamic applications in a Truste
 ## Prerequisites
 
 Make sure you have installed:
-* [Node.js](https://nodejs.org/en/download/package-manager) v16
-* [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
-* [Docker](https://docs.docker.com/engine/install/)
 
+- [Node.js](https://nodejs.org/en/download/package-manager) v16
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+- [Docker](https://docs.docker.com/engine/install/)
 
 ## Download Minecraft source code
 
@@ -32,6 +32,7 @@ cd solutions/Tunnel\ Client/minecraft/
 ## Local run
 
 Установите все необходимые зависимости и сбилдите проект
+
 ```bash
 yarn dependencies
 yarn build:all
@@ -45,7 +46,6 @@ docker compose up
 
 Подключайтесь по ссылке http://localhost:8888
 
-
 ## Deploy on Superprotocol
 
 ### Manual deploy
@@ -58,17 +58,24 @@ docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:1
 
 Дальше вам необходмио папки и файлы `dist`, `node_modules`, `package.json`, `server`, `client` скопировать а отдельную папку `content` и полностью следовать инструкции из [п.3 Manual Run](/developers/deployment_guides/nodejs_tunnels/manual_run) данного гайда
 
-
 ### Deploy with Github Actions
 
-Для деплоя майнкрафта через Github Actions, вы должны использовать или существоующий Github репозиторий или создать новый. Мы рекомендуем Вам сделать [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions), чтобы структура папок сохранилась неизменной.
+Сделайте [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions).
 
-Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables).
+Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables), но некоторые переменные будут именть другие названия.
+
+Необходимые сикреты:
+
+- `GH_TOKEN` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+- `MINECRAFT_SOLUTION_SERVER_TOKEN` - любой случайный uuid. Сгененриуйте его при помощи команды
+  ```bash
+  uuidgen
+  ```
 
 Если все secrets and variables были настроены правильно, то уже готовые GitHub actions `minecraft-...` в репозитории задеплоят Minecraft на вашем домене с Вашем SSL сертификатом.
 
 :::caution
 С одним SSL сертификатом может быть задеплоено только одно приложение!
- Если Вы уже задеплоили какое-то приложение на Superprotocol-е с Вашим сертификатом, то для деплоя нового, нужно сгенерировать новый сертификат и ключ (можно использовать сабдомены).
-  Для автоматического деплоя через Github Action-ы Вам так же нужно будет создать новые `secret`-ы с новым ключом и новым сертифкатом, и заменить ими `SOLUTION_SSL_...` сикреты в `.yml`-файлах Github Action
+Если Вы уже задеплоили какое-то приложение на Superprotocol-е с Вашим сертификатом, то для деплоя нового, нужно сгенерировать новый сертификат и ключ (можно использовать сабдомены).
+Для автоматического деплоя через Github Action-ы Вам так же нужно будет создать новые `secret`-ы с новым ключом и новым сертифкатом, и заменить ими `SOLUTION_SSL_...` сикреты в `.yml`-файлах Github Action
 :::
