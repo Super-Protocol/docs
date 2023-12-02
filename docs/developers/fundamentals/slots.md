@@ -7,11 +7,9 @@ sidebar_position: 3
 
 ## Understanding slots
 
-The name of this section should actually be Requirements and Configurations, but we refer to them collectively as *slots* because they all have to do with .....
+The name of this section should be Requirements and Configurations, but we refer to them collectively as *slots*.
 
-slots system designed to leave the most flexibility to providers and customers in their choices.
-
-<Highlight color="red">дописать</Highlight>
+This system is designed to provide most flexibility in determining the parameters required by value offers to run and the selection of confidential computing resources and internet access for their deployments.
 
 ### Requirements
 

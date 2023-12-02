@@ -75,9 +75,9 @@ Storage offers are created and managed by the storage providers.
 
 * *Date Updated* - date when changes were made to the offer.
 
-* *MRENCLAVE* - <Highlight color="red">описать</Highlight>
+* *MRENCLAVE* - value that represents the hash of the code and data inside the TEE.
 
-* *MRSIGNER* - <Highlight color="red">описать</Highlight>
+* *MRSIGNER* - value is used to uniquely identify the signing entity of the TEE.
 
 
 ### Rules
