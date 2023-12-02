@@ -1,6 +1,6 @@
 ---
 id: "limitations"
-title: "Issues and Limitations"
+title: "Limitations"
 slug: "/limitations"
 sidebar_position: 0
 ---

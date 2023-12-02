@@ -2,7 +2,7 @@
 id: "tunnels"
 title: "Tunnels"
 slug: "/fundamentals/tunnels"
-sidebar_position: 1
+sidebar_position: 5
 ---
 
 ## Tunnels Overview
@@ -22,6 +22,10 @@ Server acts as a forwarding mechanism between the client and the external connec
 A single tunnel server has the capacity to serve multiple domains and their corresponding tunnel clients concurrently. In situations where numerous tunnel clients connect to the same domain, the server utilizes a round-robin mechanism to evenly distribute requests among these clients.
 
 ### Tunnel Client
+
+компонент который позволяет запустить локально веб сервер и связать его с туннель сервером.
+
+папочки - это конфигруацинные составляющие клиента. Конткент веб сервера находится в /sp/content. В отдельных случаях это может быть перепределено.
 
 (has no public IP)
 
