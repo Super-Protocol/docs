@@ -44,6 +44,9 @@ mkdir super-protocol && cd super-protocol
 В нее нужно скачать:
 
 - [solutions](https://github.com/Super-Protocol/solutions) - репозиторий с готовыми примерами солюшенов, в том числе Blockchain Oracle
+```shell
+git clone https://github.com/Super-Protocol/solutions
+```
 
 - [spctl](/developers/cli_guides/downloading) - консольный интерфейс Супер Протокола для создания заказа оракула. После скачивания обязательно заполните весь конфиг [по инструкции](https://docs.dev.superprotocol.com/developers/cli_guides/configuring) 
 
@@ -199,6 +202,7 @@ To set up the project, you will need to set env variables in `.env` file:
 
 - `MUMBAI_DEPLOYER_PRIVATE_KEY` - Your wallet private key with testnet MAITC
 - `MUMBAI_URL` - https://mumbai.polygon.superprotocol.com/hesoyam
+- `POLYGON_API_KEY` - Your API Key from [Polygonscan](https://polygonscan.com/login)
 
 Then install dependencies and compile the contract:
 
@@ -287,12 +291,12 @@ And fill the data:
 
 You will end up having two files in `inputs` folder:
 - `input.json` file (file must have that name)
-- `ca_certificaes.crt`
+- `ca_certificates.crt`
 
 Create an archive with those files:
 
 ```shell
-tar -czvf oracle-input.tar.gz input.json ca_certificaes.crt
+tar -czvf oracle-input.tar.gz input.json ca_certificates.crt
 ```
 
 Open a new terminal and go to `super-protocol` folder with spctl. And upload the archive to StorJ:
