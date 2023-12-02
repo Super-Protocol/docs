@@ -2,12 +2,12 @@
 id: "orders"
 title: "Orders"
 slug: "/fundamentals/orders"
-sidebar_position: 1
+sidebar_position: 4
 ---
 
 ## What are orders
 
-An order on Super Protocol is a digital contract between the customer and the providers of products and computing services called [offers](/developers/fundamentals/offers). Because Super Protocol is decentralized and there is no central intermediary, a separate order is created with each provider. If the customer supplies their own solution and data, then there is no order for those.
+An *order* on Super Protocol is a digital contract between the customer and the providers of products and computing services called [offers](/developers/fundamentals/offers). Because Super Protocol is decentralized and there is no central intermediary, a separate order is created with each provider. If the customer supplies their own solution and data, then there is no order for those.
 
 ## How orders work
 
@@ -15,7 +15,7 @@ An order on Super Protocol is a digital contract between the customer and the pr
 
 ### Orders and sub-orders
 
-When we say *order* we always refer to a compute order because this is where the solutions and data from different providers (or your own) come together to be executed. Because an order is always the compute order, you will see configuration of the order: [slots and options](/developers/fundamentals/slots).
+When we say *order* we always refer to a compute order because this is where the solutions and data from different providers (or your own) come together to be executed.
 
 The *sub-orders* are related to the main orders, and they are always between the customer and the providers of solutions, data and storage. 
 
@@ -25,7 +25,10 @@ There could be various combinations of sub-orders depending on the scenario. For
 
 ### Creating orders
 
-<Highlight color="red">расписать создание заказов в общих чертах</Highlight>
+There are two ways to create orders:
+
+1. Using CLI [workflows command](/developers/cli_commands/workflows) if you want to deploy your own solutions.
+2. Using [Marketplace GUI](/developers/marketplace) if you just want to deploy offers already on the Marketplace (with some limtations). 
 
 ### Viewing orders
 
@@ -39,7 +42,7 @@ The cost of an order is the sum of the compute order as well as all sub-orders. 
 
 ### Replenishing orders
 
-An order keeps working as long as the providers are getting paid. As long as you keep depositing funds into the order it will either keep on going, as in case of tunnels, or will finish when it has completed its job. Some offers will have restrictions on how long they may be leased in a single order. When the order's deposit is close to being empty, customer is warned with an *Awaiting Payment* flag.
+An order keeps working as long as the providers are getting paid. As long as you keep depositing funds into the order it will either keep on going, as in case of tunnels, or will finish when it has completed its job. Some offers will have restrictions on how long they may be leased in a single order. When the order's deposit is close to being empty, customer is warned with an *Awaiting Payment* flag. Anyone can deposit funds into any order.
 
 ### Getting results
 
@@ -49,15 +52,15 @@ Contents of the orders are encrypted by a private key that known only to the cus
 
 The order can be in one of those statuses:
 
-* **New** - An order has just been created and it's in queue waiting for an available compute slot to begin processing. 
+* *New* - An order has just been created and it's in queue waiting for an available compute slot to begin processing. 
 
-* **Blocked** - The solutions and data are being downloaded into the TEE for processing.
+* *Blocked* - The solutions and data are being downloaded into the TEE for processing.
 
-* **In Progress** - The order is being actively processed by the TEE. In case of limited time jobs it will process and finish. But in case of tunnels it can stay in this status for any amount of time, as long as you keep the order replenished with TEE tokens.
+* *In Progress* - The order is being actively processed by the TEE. In case of limited time jobs it will process and finish. But in case of tunnels it can stay in this status for any amount of time, as long as you keep the order replenished with TEE tokens.
 
-* **Cancelling** - The order is being cancelled. 
+* *Cancelling* - The order is being cancelled. 
 
-* **Canceled** - The order is canceled. If the offer is *cancelable*, you might get some of your money back from the providers. 
+* *Canceled* - The order is canceled. If the offer is *cancelable*, you might get some of your money back from the providers. 
 
-* **Done** - Completed! In case of single jobs it means that the computation has finished. In case of tunnels and other leased solutions it means that whatever application was working inside the TEE is no longer active.
+* *Done* - Completed! In case of single jobs it means that the computation has finished. In case of tunnels and other leased solutions it means that whatever application was working inside the TEE is no longer active.
 

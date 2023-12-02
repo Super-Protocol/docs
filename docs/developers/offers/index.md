@@ -7,7 +7,7 @@ sidebar_position: 4
 
 This section describes the offers provided by the Super Protocol team. But in the near future Marketplace will be made accessible to all testnet users to create and monetize their own offers.
 
-Offers are subject to requirements, slots and options (read about them [here](/developers/fundamentals/slots)) and are best viewed through the [Marketplace GUI](/developers/marketplace/), although you can also use [CLI commands](/developers/cli_commands/offers).
+Learn more about offers [here](/developers/fundamentals/offers).
 
 ## For Developers
 
