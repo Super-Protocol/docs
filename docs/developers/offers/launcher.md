@@ -2,7 +2,7 @@
 id: "launcher"
 title: "Tunnels Launcher"
 slug: "/offers/launcher"
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 An application that enables the hosting of apps in decentralized confidential environments.

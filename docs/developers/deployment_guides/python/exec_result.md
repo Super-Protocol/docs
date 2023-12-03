@@ -9,9 +9,9 @@ sidebar_position: 4
 
 Now you will need to execute together:
 
-* Your Python solution (`solution.json` uploaded to StorJ);
-* Python base image from the [Marketplace](https://marketplace.superprotocol.com/solutions?offerId=5) (offer 5);
-* Your two datasets (`input-1.json` and `input-2.json` uploaded to StorJ).
+* Your Python solution (`solution.json` uploaded to the storage);
+* Python base image solution offer from the [Marketplace](https://marketplace.superprotocol.com/solutions?offerId=5);
+* Your two datasets (`input-1.json` and `input-2.json` uploaded to storage).
 
 Use the following [command](/developers/cli_commands/workflows/create):
 
@@ -20,23 +20,21 @@ Use the following [command](/developers/cli_commands/workflows/create):
 --solution solution.json --data input-1.json --data input-2.json
 ```
 
-<Highlight color="red">//Какой дата оффер из маркетплейса можно добавить в эту строчку? Датасет 16 это speech recognition</Highlight>
-
 An order ID is generated upon execution.
 
 ## Check Order Status
 
-You can check the order status using that ID in the following [command](/developers/cli_commands/orders/get):
+You can check the order status using the [Marketplace GUI](/developers/marketplace) or the SPCTL [command](/developers/cli_commands/orders/get):
 
 ```
 ./spctl orders get <order_ID>
 ```
 
-When the status turns to `Done` proceed to the next step.
+When the status turns to `Done`, proceed to the next step.
 
 ## Receive Result
 
-Retrieve the result with the following [command](/developers/cli_commands/orders/download-result):
+Retrieve the result using the [Marketplace GUI](/developers/marketplace) or the following [command](/developers/cli_commands/orders/download-result):
 
 ```
 ./spctl orders download-result <order_ID>

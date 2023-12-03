@@ -2,6 +2,7 @@
 id: "chat-index"
 title: "Super Chat Guide"
 slug: "/offers/superchat/"
+sidebar_position: 7
 ---
 
 # Super Chat

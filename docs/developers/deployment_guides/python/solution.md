@@ -7,24 +7,23 @@ sidebar_position: 2
 
 ## Prerequisites
 
-- Docker
-- OpenSSL
+You need to have the following installed and configured:
+
+- Docker. Download it [here](https://docs.docker.com/engine/install/).
+- OpenSSL. <Highlight color="red">Что это? Этого требования нет в других гайдах</Highlight>
+- SPCTL. Follow the guides [here](/developers/cli_guides) to download and configure.
 
 ## Install Python base image
 
-Your solution will be using base Python image that is already available on Super Protocol. Therefore, in order to test it locally, as well as prepare the solution for deployment, you need to download the base image and load it to Docker.
+For deployment your solution will be using the Python base image that is available as an offer on the Marketplace. But first you will need to test your solution locally and prepare it for deployment. To do that you need to download the Python base image and load it to Docker. 
 
-### Download Python Image
-
-Use this command to download the Python image from this Super Protocol offer.&#x20;
+Use this command to download the Python image from its solution offer:
 
 ```
 ./spctl offers download-content 5
 ```
 
-### Load Python image to Docker
-
-Then use this command to load the Python image to Docker.
+Then use this command to load the Python image to Docker:
 
 ```
 docker load -i <Python base image archive name>
@@ -121,21 +120,25 @@ Run the following command in the `run` directory to download the required librar
 pip3 install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
 
+<Highlight color="red">как эти библиотеки связаны с базовым образом который мы добавляли в Докер до этого? Он вообще нужен этот базовый образ прям на первом шаге?</Highlight>
+
 **Double-check!** At this step the content of `run` directory should look as follows:
 
-- `pypi`: Python libraries
+- `pypi` folder: Python libraries
 - `arial.ttf`: font file
 - `entrypoint.py`: Python script
 
 ## Test the solution
 
-In order to test the solution, you need some data as an input. Create subdirectory `input-0001` in `inputs` directory. In this new subdirectory create `text-file-1.txt` file with the following text:
+In order to test the solution you will need some data as an input. 
+
+Create subdirectory `input-0001` in `inputs` directory. In this new subdirectory create `text-file-1.txt` file with the following text:
 
 ```
 Super Protocol is awesome!
 ```
 
-Now in the same way place `text-file-2.txt` file in this new subdirectory with any text you like.
+Then using the same logic create `text-file-2.txt` file in the `input-0001` subdirectory with any text you like.
 
 Run the following command in the solution root directory to launch the solution inside a Docker container:
 
@@ -145,21 +148,25 @@ docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output
 gsc-python3.10-base-solution:latest entrypoint.py
 ```
 
-If done correctly, `output` directory should have two subdirectories `input-0001` and `input-0002` with `png` files with the same text as in the input files.
+<Highlight color="red">На моем маке М2 выдает ошибку WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested</Highlight>
+
+If done correctly, the `output` directory should now have two subdirectories, `input-0001` and `input-0002`, with .png image files containing the same text as the input files.
 
 ## Generate signing key
 
-Run the following command in the directory where you placed the CLI file to generate the signing key, which we will use to sign the solution:
+Now that we are happy with the way solution runs locally, the next steps are related to preparation for deployment to Super Protocol.
+
+Run the following [command](/developers/CLI_commands/solutions/generate-key) in the directory where you placed the SPCTL executable to generate the signing key for the solution :
 
 ```
 ./spctl solutions generate-key signing-key
 ```
 
-You don't need to generate a new key for every solution, you can just reuse the existing one. You will need this key to receive the result.
+<Highlight color="red">Для чего нужно подписывать решение ключом?</Highlight>
 
 ## Pack the solution
 
-When the Docker image should run within an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following command to prepare and pack the solution:
+When the Docker image should run inside an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following [command](/developers/CLI_commands/solutions/prepare) to prepare and pack the solution:
 
 ```
 ./spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
@@ -167,11 +174,13 @@ When the Docker image should run within an Intel SGX enclave, the image has to b
 ./run signing-key
 ```
 
+<Highlight color="red">Для чего мы пакуем базовый образ Питона если он всё равно будет запущен отдельным оффером? Также возможно стоит не давать конкретное название файла, оно быстро устаревает, это уже старая версия</Highlight>
+
 After running the command, `solution.tar.gz` and `metadata.json` files are generated.
 
 ## Upload the solution
 
-Solution needs to be uploaded to a decentralized storage before it may be executed in Super Protocol. The storage credentials have been configured during the [CLI setup](/developers/cli_guides/configuring#storage).
+Solution needs to be uploaded to a decentralized storage before it may be executed in TEE. The storage credentials have been configured during the [SPCTL setup](/developers/cli_guides/configuring#storage).
 
 Run the following command.
 
@@ -180,4 +189,5 @@ Run the following command.
 --filename solution.tar.gz --metadata ./metadata.json
 ```
 
-`solution.json` file is created.
+`solution.json` file is created.<Highlight color="red">Где? Локально или в сторедже?</Highlight>
+

@@ -2,7 +2,7 @@
 id: "python-face"
 title: "Face Recognition"
 slug: "/offers/python-face"
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 ## Face Recognition

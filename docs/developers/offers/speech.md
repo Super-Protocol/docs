@@ -2,7 +2,7 @@
 id: "python-speech"
 title: "Speech Recognition"
 slug: "/offers/python-speech"
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 ## Speech Recognition

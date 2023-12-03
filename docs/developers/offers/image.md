@@ -2,7 +2,7 @@
 id: "python-image"
 title: "Image Classification"
 slug: "/offers/python-image"
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 ## Image Classification

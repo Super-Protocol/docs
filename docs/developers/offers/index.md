@@ -9,8 +9,6 @@ This section describes the offers provided by the Super Protocol team. But in th
 
 Learn more about offers [here](/developers/fundamentals/offers).
 
-You can also see the source code for some of the solutions and data offers in the public [Super Protocol GitHub](https://github.com/Super-Protocol).
-
 ## For Developers
 
 These are the offers that will be most useful for developers when deploying your own solutions with CLI.
@@ -65,11 +63,11 @@ Tunnels Launcher is a [tunnel provisioner](/developers/fundamentals/tunnels/prov
 
 Additionally, we have developed some simple Python models to test with your own data or data from the Marketplace.
 
-| **Id** | **Name**                                                      | **Description** |
-|:-------|:--------------------------------------------------------------|:----------------|
-| 7      | Image Classification Solution                                 | A machine trained Python model that recognizes and classifies objects in an image.               |
-| 8      | Speech Recognition Solution                                   | A machine trained Python model that transcribes speech audio files into text.               |
-| 9      | Face Recognition Solution   | A machine trained Python model that determines the probability that two images contain the same person.               |
+| **Id** | **Name**                                                         | **Description** |
+|:-------|:-----------------------------------------------------------------|:----------------|
+| 7      | [Image Classification Solution](/developers/offers/python-image) | A machine trained Python model that recognizes and classifies objects in an image.               |
+| 8      | [Speech Recognition Solution](/developers/offers/python-speech)  | A machine trained Python model that transcribes speech audio files into text.               |
+| 9      | [Face Recognition Solution](/developers/offers/python-face)      | A machine trained Python model that determines the probability that two images contain the same person.               |
 
 ### Data
 
@@ -89,8 +87,7 @@ Datasets for use with the Python models.
 | 15     | [Speech Recognition Dataset #1](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking slowly and distinctly.                          |
 | 16     | [Speech Recognition Dataset #2](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking in an everyday manner with some background noise.   |
 | 17     | [Face Recognition Dataset #1](/developers/offers/python-face)                        | Dataset contains images of various movie stars and a table that pairs them with each other.                                                                               |
-| 18     | [Face Recognition Dataset #2](/developers/offers/python-face) | Dataset contains images of Lord of the Rings movie characters, the actors who played them, and a table that pairs actors to characters.                     
-                                                          |
+| 18     | [Face Recognition Dataset #2](/developers/offers/python-face) | Dataset contains images of Lord of the Rings movie characters, the actors who played them, and a table that pairs actors to characters.        |
 
 ### Compatibility
 

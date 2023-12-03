@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## Understanding Offers
 
-There are four basic components that may be involved in creation of an order:
+There are four basic building blocks that may be involved in creation of an order:
 
 - *Solutions* – base images, tunnel clients, tunnel server, oracles, Python models - basically, any application.
 
