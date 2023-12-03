@@ -1,7 +1,7 @@
 ---
 id: 'repo'
 title: '4. Github repository'
-slug: '/deployment_guides/nodejs_tunnels/repo'
+slug: '/deployment_guides/tunnels/repo'
 sidebar_position: 4
 ---
 
@@ -9,7 +9,7 @@ sidebar_position: 4
 
 Для Вашего удобвства мы подготволили репозиторий со скриптами Github Action, которые Вы можете использовать для автоматического деплоя Вашего приложения на сервера Superprotocol-а.
 
-Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/developers/deployment_guides/nodejs_tunnels/manual_run).
+Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/developers/deployment_guides/tunnels/manual_run).
 
 ## Prepare Git Repository
 
@@ -18,7 +18,7 @@ sidebar_position: 4
 - Click the [new repository](https://github.com/new) button in the top-right. Type `superprotocol-test-app` as repository name. You’ll have an option there to initialize the repository with a README file. Add `Node` as `.gitignore` tepmlate
 - Click the “Create repository” button.
 
-Дальше давайте загрузим папку `superprotocol-test-app` из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing) в новосозданный рапозиторий
+Дальше давайте загрузим папку `superprotocol-test-app` из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing) в новосозданный рапозиторий
 
 ```bash
 cd superprotocol-test-app
@@ -36,17 +36,17 @@ cd ..
 Вам необходимо добавить следующие секреты:
 
 - `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов. Используйте инструкцию [здесь](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-- `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 3 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run). Получить его можно командой
+- `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 3 данного гайда](/developers/deployment_guides/tunnels/manual_run). Получить его можно командой
   ```bash
   cat tunnel-server-data/auth-token
   ```
-- `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing); для генерации его из файла `fullchain.crt`, находящегося в папке `content` с [п. 3 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run) воспользуйтесь командой
+- `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing); для генерации его из файла `fullchain.crt`, находящегося в папке `content` с [п. 3 данного гайда](/developers/deployment_guides/tunnels/manual_run) воспользуйтесь командой
 
   ```
   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' tunnel-client-data/fullchain.crt | base64
   ```
 
-- `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing) в формате bas64; для генерации его из файла `private.pem`, находящегося в папке `content` с [п. 3 данного гайда](/developers/deployment_guides/nodejs_tunnels/manual_run) воспользуйтесь командой
+- `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing) в формате bas64; для генерации его из файла `private.pem`, находящегося в папке `content` с [п. 3 данного гайда](/developers/deployment_guides/tunnels/manual_run) воспользуйтесь командой
 
   ```
   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' tunnel-client-data/private.pem | base64
@@ -153,5 +153,5 @@ git push
 
 ## Setup DNS
 
-Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.3 #Prepare and run tunnel-server solution](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution).
-Получив ip, нужно будет создать в DNS 2 записи, как указано [п.3 #Setup DNS](/developers/deployment_guides/nodejs_tunnels/manual_run#setup-dns)
+Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.3 #Prepare and run tunnel-server solution](/developers/deployment_guides/tunnels/manual_run#prepare-and-run-tunnel-server-solution).
+Получив ip, нужно будет создать в DNS 2 записи, как указано [п.3 #Setup DNS](/developers/deployment_guides/tunnels/manual_run#setup-dns)

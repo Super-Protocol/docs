@@ -1,6 +1,6 @@
 ---
 id: "chat-index"
-title: "Super Chat"
+title: "Super Chat Guide"
 slug: "/offers/superchat/"
 ---
 

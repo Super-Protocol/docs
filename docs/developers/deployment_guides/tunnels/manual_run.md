@@ -1,7 +1,7 @@
 ---
 id: 'manual_run'
 title: '3. Run your app at Superprotocol tunnels'
-slug: '/deployment_guides/nodejs_tunnels/manual_run'
+slug: '/deployment_guides/tunnels/manual_run'
 sidebar_position: 3
 ---
 
@@ -70,7 +70,7 @@ cat result.txt && echo "\n"
 
 ## Prepare and run tunnel-client solution
 
-Создадим папку `tunnel-client-data`, куда перенесем `server.js` с зависимостями из [п 2. данного гайда](/developers/deployment_guides/nodejs_tunnels/develop)
+Создадим папку `tunnel-client-data`, куда перенесем `server.js` с зависимостями из [п 2. данного гайда](/developers/deployment_guides/tunnels/develop)
 
 ```bash
 mkdir -p tunnel-client-data/content
@@ -105,7 +105,7 @@ touch tunnel-client-data/config.json
 
 - `sgxMrEnclave` и `sgxMrSigner` - оставьте как в этом примере без изменения
 - `authToken` - токен с файла `auth-token`, который вы создали в предыдущем пункте
-- `private.pem` и `fullchain.crt` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/nodejs_tunnels/preparing). Пожалуйста добавьте эти файлы рядом с `config.json`
+- `private.pem` и `fullchain.crt` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing). Пожалуйста добавьте эти файлы рядом с `config.json`
 
 Для добавления в `config.json` авторизационного токена с файла `auth-token` можете воспользоваться следующей командой:
 
@@ -114,7 +114,7 @@ sed -i.bak -e "/\"authToken\":/s/\"authToken\": \".*\"/\"authToken\": \"$(cat tu
 ```
 
 :::note
-При деплое собственного приложения (не текущего примера из [п 2. данного гайда](/developers/deployment_guides/nodejs_tunnels/develop)), обратите внимание, что приложение должно быть production-сбилджено (если это необходимо), а так же все зависимости для linux/amd64 должны быть установлены. Так же приложение не должно ожидать никаких внешних env-переменных, все должно быть зашито в конфигурацию, либо `.env`-файл и считано при помощи `dotenv` npm пакета. За сохранность Ваших паролей и секретных ключей не переживайте - (to A.Manilov - тут нужно добавить почему им не переживать.. что-то типа "доступа к этим файлам не будет даже у нас" или "все зашифровано и ключи будут только у Вас").
+При деплое собственного приложения (не текущего примера из [п 2. данного гайда](/developers/deployment_guides/tunnels/develop)), обратите внимание, что приложение должно быть production-сбилджено (если это необходимо), а так же все зависимости для linux/amd64 должны быть установлены. Так же приложение не должно ожидать никаких внешних env-переменных, все должно быть зашито в конфигурацию, либо `.env`-файл и считано при помощи `dotenv` npm пакета. За сохранность Ваших паролей и секретных ключей не переживайте - (to A.Manilov - тут нужно добавить почему им не переживать.. что-то типа "доступа к этим файлам не будет даже у нас" или "все зашифровано и ключи будут только у Вас").
 
 Если ваша CPU архитектура или OS отличается от linux/amd64, то воспользуейтесь docker-командой для установки зависимости и/или билда вашего приложения:
 

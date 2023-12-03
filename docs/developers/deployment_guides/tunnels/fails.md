@@ -1,7 +1,7 @@
 ---
 id: "nodejs_tunnels_fail"
 title: "Fail Scenarios"
-slug: "/deployment_guides/nodejs_tunnels/fails"
+slug: "/deployment_guides/tunnels/fails"
 sidebar_position: 9
 ---
 

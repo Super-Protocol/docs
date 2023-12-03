@@ -19,13 +19,13 @@ These are the offers that will be most useful for developers when deploying your
 
 These solution offers are instrumental in setting up [tunnels](/developers/fundamentals/tunnels) or other solutions based on Node.js or Python.
 
-| **Id** | **Name**                                                                                        | **Description**                                                         |
-|:-------|:------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
-| ?      | [Tunnel Client NodeJS](https://marketplace.stg.superprotocol.com/solutions?offer=offerId%3D21)  | Tunnel client used to deploy Node.js-based apps.                        |
-| 11     | [Tunnel Client: Static Web Content](https://marketplace.superprotocol.com/solutions?offerId=11) | Tunnel client used to deploy simple static websites (HTML, JavaScript). |
-| 10     | [Tunnel Server](https://marketplace.superprotocol.com/solutions?offerId=10)                     | Tunnel server used for any tunnels deployment.                          |
-| 6      | [NodeJS](https://marketplace.superprotocol.com/solutions?offerId=6)                             | Node.js base image, required for Node.js apps.                          |
-| 5      | [Python](https://marketplace.superprotocol.com/solutions?offerId=5)                             | Python base image, required for Python scripts.                         |
+| **Id** | **Name**                                                                                            | **Description**                                                         |
+|:-------|:----------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
+| ?      | Tunnel Client: Dynamic Content                                                                      | Tunnel client used to deploy Node.js-based apps.                        |
+| 11     | Tunnel Client: Static Web Content                                                                   | Tunnel client used to deploy simple static websites (HTML, JavaScript). |
+| 10     | Tunnel Server                          | Tunnel server used for any tunnels deployment.                          |
+| 6      | NodeJS                                                                                             | Node.js base image, required for Node.js apps.                          |
+| 5      | Python                                                                                              | Python base image, required for Python apps.                            |
 
 ### Data
 
@@ -35,41 +35,41 @@ There are not preset data offers for developers, you will be uploading your own 
 
 Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/developers/fundamentals/slots/). Explore each compute offer to see which best fits the requirements of your solution. 
 
-| **Id** | **Name**                                                                | **Description**                                    |
-|:-------|:------------------------------------------------------------------------|:---------------------------------------------------|
-| 1      | [TEE Offer #1](https://marketplace.superprotocol.com/compute?offerId=1) | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth |
-| 2      | [TEE Offer #2](https://marketplace.superprotocol.com/compute?offerId=2) | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth      |
-| 3      | [TEE Offer #3](https://marketplace.superprotocol.com/compute?offerId=3) | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth      |
-| 4      | [TEE Offer #4](https://marketplace.superprotocol.com/compute?offerId=4) | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth      |
+| **Id** | **Name**                                                               | **Description**                                    |
+|:-------|:-----------------------------------------------------------------------|:---------------------------------------------------|
+| 1      | TEE Offer #1                                                          | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth |
+| 2      | TEE Offer #2                                                          | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth      |
+| 3      | TEE Offer #3                                                          | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth      |
+| 4      | TEE Offer #4                                                           | 24 cores, 123 Gb RAM, 830 Gb SSD, 1 GBit bandwidth      |
 
 
 ### Storage
 
 At this phase of Testnet only Storj storage is supported.
 
-| **Id** | **Name**                                                                    | **Description**                                                    |
-|:-------|:----------------------------------------------------------------------------|:-------------------------------------------------------------------|
-| 20     | [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offerId=20) | This is the basic Storj storage offer, to be used with all orders. |
+| **Id** | **Name**                                                                   | **Description**                                                    |
+|:-------|:---------------------------------------------------------------------------|:-------------------------------------------------------------------|
+| 20     | Storj DCS Offer                                                            | This is the basic Storj storage offer, to be used with all orders. |
 
 
 ## Other Offers
 
 ### Solutions
 
-Hosting Launcher is a [tunnel provisioner](/developers/fundamentals/tunnels/provisioner) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/nodejs_tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
+Tunnels Launcher is a [tunnel provisioner](/developers/fundamentals/tunnels/provisioner) that was created by the Super team to streamline the experience of deploying tunnels for beginner Marketplace GUI users. It essentially mimics the steps in [this guide](/developers/deployment_guides/tunnels). The downside of simplicity is that it's using Super Protocol infrastructure credentials: storage, DNS, SSL certificates, auth tokens. It is best to create tunnels through CLI using your own setup.
 
-| **Id** | **Name**                                                                                | **Description**                                                                                    |
-|:-------|:----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| 12     | [Hosting Launcher](https://marketplace.superprotocol.com/solutions?offerId=12)          | Preconfigured tunnel provisioner used to simplify deployment of tunnels for Marketplace GUI users. |
-| 21     | [Tunnel Client: Super Chat](https://marketplace.superprotocol.com/solutions?offerId=21) | Tunnel client containing the preconfigured [Super Chat](/developers/offers/superchat) solution.    |
+| **Id** | **Name**                                        | **Description**                                                                                    |
+|:-------|:------------------------------------------------|:---------------------------------------------------------------------------------------------------|
+| 12     | [Tunnels Launcher](/developers/offers/launcher) | Preconfigured tunnel provisioner used to simplify deployment of tunnels for Marketplace GUI users. |
+| 21     | Tunnel Client: Super Chat                       | Tunnel client containing the preconfigured [Super Chat](/developers/offers/superchat) solution.    |
 
 Additionally, we have developed some simple Python models to test with your own data or data from the Marketplace.
 
-| **Id** | **Name**                                                                                   | **Description** |
-|:-------|:-------------------------------------------------------------------------------------------|:----------------|
-| 7      | [Image Classification Solution](https://marketplace.superprotocol.com/solutions?offerId=7) | A machine trained Python model that recognizes and classifies objects in an image.               |
-| 8      | [Speech Recognition Solution](https://marketplace.superprotocol.com/solutions?offerId=8)   | A machine trained Python model that transcribes speech audio files into text.               |
-| 9      | [Face Recognition Solution](https://marketplace.superprotocol.com/solutions?offerId=9)     | A machine trained Python model that determines the probability that two images contain the same person.               |
+| **Id** | **Name**                                                      | **Description** |
+|:-------|:--------------------------------------------------------------|:----------------|
+| 7      | Image Classification Solution                                 | A machine trained Python model that recognizes and classifies objects in an image.               |
+| 8      | Speech Recognition Solution                                   | A machine trained Python model that transcribes speech audio files into text.               |
+| 9      | Face Recognition Solution   | A machine trained Python model that determines the probability that two images contain the same person.               |
 
 ### Data
 
@@ -77,19 +77,19 @@ Data offers for use with the Hosting Launcher.
 
 | **Id** | **Name**                                                                     | **Description**                                                                  |
 |:-------|:-----------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| 22     | [Super Chat Config](https://marketplace.superprotocol.com/data?offerId=22)   | Contains configuration files needed to launch Super Chat using Hosting Launcher. |
-| 19     | [Demo Static Website](https://marketplace.superprotocol.com/data?offerId=19) | A simple demo webpage that we created for the Testnet 2 launch.                  |
+| 22     | Super Chat Config                                                            | Contains configuration files needed to launch Super Chat using Hosting Launcher. |
+| 19     | Demo Static Website | A simple demo webpage that we created for the Testnet 2 launch.                  |
 
 Datasets for use with the Python models.
 
-| **Id** | **Name**                                                                                 | **Description**                                                                  |
-|:-------|:-----------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| 13     | [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offerId=13) | Dataset contains images of different breeds of dogs.                        |
-| 14     | [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offerId=14) | Dataset contains images of different types of objects.                       |
-| 15     | [Speech Recognition Dataset #1](https://marketplace.superprotocol.com/data?offerId=15)   | Dataset contains audio files of male and female voices speaking slowly and distinctly.                          |
-| 16     | [Speech Recognition Dataset #2](https://marketplace.superprotocol.com/data?offerId=16)   | Dataset contains audio files of male and female voices speaking in an everyday manner with some background noise.   |
-| 17     | [Face Recognition Dataset #1](https://marketplace.superprotocol.com/data?offerId=17)     | Dataset contains images of various movie stars and a table that pairs them with each other.                                                                               |
-| 18     | [Face Recognition Dataset #2](https://marketplace.superprotocol.com/data?offerId=18)     | Dataset contains images of Lord of the Rings movie characters, the actors who played them, and a table that pairs actors to characters.                     
+| **Id** | **Name**                                                                             | **Description**                                                                  |
+|:-------|:-------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| 13     | [Image Classification Dataset #1](/developers/offers/python-image)                   | Dataset contains images of different breeds of dogs.                        |
+| 14     | [Image Classification Dataset #2](/developers/offers/python-image)                   | Dataset contains images of different types of objects.                       |
+| 15     | [Speech Recognition Dataset #1](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking slowly and distinctly.                          |
+| 16     | [Speech Recognition Dataset #2](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking in an everyday manner with some background noise.   |
+| 17     | [Face Recognition Dataset #1](/developers/offers/python-face)                        | Dataset contains images of various movie stars and a table that pairs them with each other.                                                                               |
+| 18     | [Face Recognition Dataset #2](/developers/offers/python-face) | Dataset contains images of Lord of the Rings movie characters, the actors who played them, and a table that pairs actors to characters.                     
                                                           |
 
 ### Compatibility

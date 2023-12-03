@@ -1,7 +1,7 @@
 ---
 id: 'minecraft'
 title: 'Example: Minecraft'
-slug: '/deployment_guides/nodejs_tunnels/minecraft'
+slug: '/deployment_guides/tunnels/minecraft'
 sidebar_position: 6
 ---
 
@@ -56,17 +56,17 @@ docker compose up
 docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster yarn dependencies && yarn build:all
 ```
 
-Дальше вам необходмио папки и файлы `dist`, `node_modules`, `package.json`, `server`, `client` скопировать а отдельную папку `content` и полностью следовать инструкции из [п.3 Manual Run](/developers/deployment_guides/nodejs_tunnels/manual_run) данного гайда
+Дальше вам необходмио папки и файлы `dist`, `node_modules`, `package.json`, `server`, `client` скопировать а отдельную папку `content` и полностью следовать инструкции из [п.3 Manual Run](/developers/deployment_guides/tunnels/manual_run) данного гайда
 
 ### Deploy with Github Actions
 
 Сделайте [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions).
 
-Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables), но некоторые переменные будут именть другие названия.
+Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables), но некоторые переменные будут именть другие названия.
 
 Необходимые сикреты:
 
-- `GH_TOKEN` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+- `GH_TOKEN` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
 
 - `MINECRAFT_SOLUTION_SERVER_TOKEN` - любой случайный uuid. Сгененриуйте его при помощи команды
 
@@ -92,13 +92,13 @@ docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:1
 
   Замените `minecraft-private.pem` на название файла с вашим сертификатом
 
-- `SPCTL_CONFIG_BASE64` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+- `SPCTL_CONFIG_BASE64` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
 
-Так же добавьте variables `TUNNEL_SERVER_MRENCLAVE` и `TUNNEL_SERVER_MRSIGNER`, как указано [п.4 нашего гайда](/developers/deployment_guides/nodejs_tunnels/repo#preparing-secrets-and-variables)
+Так же добавьте variables `TUNNEL_SERVER_MRENCLAVE` и `TUNNEL_SERVER_MRSIGNER`, как указано [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
 
 Дальше переходите во вкладку Actions вашего репозитория и запускайте экшены деплоя Minecraft! Они могу выполняться параллельно.
 
-После успешной отработки Guthub Actuin-ов, Вам нужно будет вручную внести DNS для вашего домена с майнкрафтом. Используйте инструкцию из [п.4 Setup DNS](/developers/deployment_guides/nodejs_tunnels/repo#setup-dns)
+После успешной отработки Guthub Actuin-ов, Вам нужно будет вручную внести DNS для вашего домена с майнкрафтом. Используйте инструкцию из [п.4 Setup DNS](/developers/deployment_guides/tunnels/repo#setup-dns)
 
 :::caution
 С одним SSL сертификатом может быть задеплоено только одно приложение!

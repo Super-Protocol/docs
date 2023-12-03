@@ -1,7 +1,7 @@
 ---
-id: 'nodejs_tunnels'
+id: 'tunnels'
 title: 'Node.js with Tunnels'
-slug: '/deployment_guides/nodejs_tunnels'
+slug: '/deployment_guides/tunnels'
 sidebar_position: 3
 ---
 
@@ -21,11 +21,11 @@ Super Protocol можно использовать для обеспечения
 
 Для запуска своего решения нужно:
 
-1.  Собрать свое решение, например на базовом образе NodeJs. Можно взять за основу пример с [Майнкрафтом.](/developers/deployment_guides/nodejs_tunnels/minecraft)
+1.  Собрать свое решение, например на базовом образе NodeJs. Можно взять за основу пример с [Майнкрафтом.](/developers/deployment_guides/tunnels/minecraft)
 2.  Сгенерировать сертификаты для разворачивания туннелей
-3.  Создать заказ на аренду мощностей в Super Protocol и в качестве решения выбрать [туннель сервер](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-server-solution).
+3.  Создать заказ на аренду мощностей в Super Protocol и в качестве решения выбрать [туннель сервер](/developers/deployment_guides/tunnels/manual_run#prepare-and-run-tunnel-server-solution).
 
-4.  Создать заказ на аренду мощностей в Super Protocol и в качестве решения выбрать [туннель клиент](/developers/deployment_guides/nodejs_tunnels/manual_run#prepare-and-run-tunnel-client-solution), а в качестве данных использовать свое решение.
+4.  Создать заказ на аренду мощностей в Super Protocol и в качестве решения выбрать [туннель клиент](/developers/deployment_guides/tunnels/manual_run#prepare-and-run-tunnel-client-solution), а в качестве данных использовать свое решение.
 5.  Дождаться запуска заказов и создать необходимые DNS записи для возможности работы туннелей. Если во время выполнения решения произошли какие либо ошибки, они также будут представлены в результатах или логах. Это очень удобно для аудита и отладки кода.
 
 Для упрощения шагов по созданию заказа, нами были созданы Github Actions, которые вы можете найти в репозиториях с примерами.
