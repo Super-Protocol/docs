@@ -10,26 +10,33 @@ slug: "/offers/superchat/"
 
 Welcome to the Super Chat, developed by the Super Protocol, the confidential cloud and marketplace for Web3. We had fun making it and we hope that you'll have fun using it!
 
-This chat is:
-* **A technological demo app** to demonstrate that a complex web app can be decentralized, confidential and accessible securely from any browser. This app is running on multiple compute machines, inside confidential environments which are protected by the machines' special hardware.
-* **A barebone product**. It's user-friendly, but the features are pretty basic. We might add more bells and whistles later on.
-* **Confidential**. Not even the Super Protocol team has access to the user data in this chat.
+This chat is a technological demo app initially developed for Testnet 3 with a goal of demonstrating that a complex web app can be decentralized, confidential and accessible securely from any browser. 
+
+## Access Super Chat
+
+### Use our deployment
+
+Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like you can use our permanently running order for illustration purposes: [https://vein-ppi-tut.superprotocol.io](https://vein-ppi-tut.superprotocol.io/). 
+
+This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
+
+[9355](https://marketplace.stg.superprotocol.com/order/9355) (Tunnel Server)<br/>
+111 (Tunnel Server)<br/>
+[9358](https://marketplace.stg.superprotocol.com/order/9358) (Tunnel Client)<br/>
+113 (Tunner Client)<br/>
+
+<Highlight color="red">Саша: не забыть обновить эти ссылки после запуска чата на тестнете и сделать схему 2х2</Highlight>
+
+### Deploy your own Super Chat
+
+Any Testnet 4 user can deploy their own Super Chat and share with friends. There are two ways to do that:
+
+* For beginners: Deploy using Marketplace GUI. Follow [this guide](/developers/marketplace/walkthrough).
+* For developers: Deploy by following the steps and examples in our CLI [deployment guides](/developers/deployment_guides/tunnels).
+
+Be mindful that any Super Chat orders, just like any other orders, are subject to the [Testnet limitations](/testnet/limitations).
 
 ## Guide
-
-### How to access Super Chat?
-Super Chat is a solution offer that you can deploy on Super Protocol. But since this chat is decentralized, we as Super Protocol do not provide an official single point of public access to it. Any Testnet 3 user can deploy their own Super Chat and share with friends.
-
-There are two ways of gaining access:
-
-1. **Deploy your own**. Testers can easily deploy Super Chat using the Marketplace UI or CLI. Follow [this guide](/developers/marketplace). You need to be approved for Testnet 3 - apply [here](/testnet/) if you don't have your access token. 
-2. **Join a friend**. Find someone from Testnet 3 who has already deployed their Super Chat app. Once there, you can create your own chat room or join someone else's. Our [Discord](https://discord.com/invite/superprotocol) server could be a good place to start looking.
-
-:::note What are instances and domains?
-
-An instance is a machine running a copy of the app. Because Super Protocol is decentralized, you'd host the same app on multiple machines. But from the end user perspective, your entry point would be a randomly generated domain name such as https://duck-tish-bek.superprotocol.io 
-
-:::
 
 ### How to join a chat room?
 Once you have access to a chat domain, it gets much easier. All you need now is a friend who provides you with the `Password to Join` to their chat room.
@@ -53,15 +60,13 @@ Two important considerations to keep in mind:
 Passphrase to Delete looks something like this:
 > crash gloom bundle agree twelve ramp burden verify apology wrist defy use bulb position client eight exhibit above enrich castle foster lesson ecology skull
 
-## Chat Limitations
+## Keep in mind
 
-* The generated Chat URL's are temporary and will expire in 72 hours. But you can always make new ones.
-* Chats are saved to a decentralized database and will live on regardless of the domain or instances. 
-* You can access any chat room from any domain.
-* Beware: chat has no authentication, people can use the same user names and this cannot be verified.
+* Chat has no authentication, people can use the same user names and this cannot be verified.
 * If you open chat in different tabs in the same browser, then it will count you as one user. But if you open chat in another browser, it will be a new user.
 * There is no chat administration, you cannot kick or ban users. As long as they have the password they'll be able to join.
-
+* Chat domains at *.superprotocol.io have shared chat rooms because these domains are using Super Protocol DNS and storage account.
+* Chats deployed at any other domain will probably have chat rooms unique to that domain because the orders will be using different storage accounts. Learn more about [storages](/developers/cli_guides/storages).  
 
 ## How is it secure?
 
@@ -73,7 +78,7 @@ Just the highlights:
 * Chat server encrypts chat metadata before synchronizing them in a decentralized database.
 * The tunneling network protocol hides the encrypted inbound traffic from the host owner.
 * The developer (Super Protocol team) doesn't have access to your conversations. 
-* This chat app is open-source. We will release it soon after launch, as well as a tool to verify that this specific code is being executed inside the TEE.
+* This chat app is open-source. You can find it at our [GitHub](https://github.com/Super-Protocol/solutions/tree/main/Tunnel%20Client/chat).
 
 ## How is it different?
 

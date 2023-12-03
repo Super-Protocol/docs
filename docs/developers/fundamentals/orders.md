@@ -42,7 +42,11 @@ The cost of an order is the sum of the compute order as well as all sub-orders. 
 
 ### Replenishing orders
 
-An order keeps working as long as the providers are getting paid. As long as you keep depositing funds into the order it will either keep on going, as in case of tunnels, or will finish when it has completed its job. Some offers will have restrictions on how long they may be leased in a single order. When the order's deposit is close to being empty, customer is warned with an *Awaiting Payment* flag. Anyone can deposit funds into any order.
+An order keeps working as long as the providers are getting paid. As long as you keep depositing funds into the order it will either keep on going, as in case of tunnels, or will finish when it has completed its job. Anyone can deposit funds into any order. Some offers will have restrictions on how long they may be leased in a single order. When the order's deposit is close to being empty, customer is warned with an *Awaiting Payment* flag. 
+
+### Awaiting Payment
+
+*Awaiting Payment* is a warning flag to the user that their order is running out of funds and will soon be terminated. Sometimes this is intended scenario, but in most cases the user is simply not aware. Marketplace GUI will highlight such orders in bright orange colors to attract attention. 
 
 ### Getting results
 
@@ -56,7 +60,7 @@ The order can be in one of those statuses:
 
 * *Blocked* - The solutions and data are being downloaded into the TEE for processing.
 
-* *In Progress* - The order is being actively processed by the TEE. In case of limited time jobs it will process and finish. But in case of tunnels it can stay in this status for any amount of time, as long as you keep the order replenished with TEE tokens.
+* *Processing* - The order is being actively processed by the TEE. In case of limited time jobs it will process and finish. But in case of tunnels it can stay in this status for any amount of time, as long as you keep the order replenished with TEE tokens.
 
 * *Cancelling* - The order is being cancelled. 
 

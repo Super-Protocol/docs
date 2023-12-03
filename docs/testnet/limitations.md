@@ -5,7 +5,9 @@ slug: "/limitations"
 sidebar_position: 0
 ---
 
-For testnet we have a limited amount of computing resources, so we have imposed limits on compute configurations and amounts of available tokens: we want to make sure that everyone gets to participate in the Testnet. However, if you feel that the additional uptime of your solution would be beneficial to Testnet and other users, then we can discuss replenishing your order with more tokens. Please contact us at Discord. 
+For testnet we have a limited amount of computing resources, so we have imposed limits on compute configurations and amounts of available tokens: we want to make sure that everyone gets to participate in the Testnet. 
+
+If you feel that the additional uptime of your solution would be beneficial to Testnet and other users, then we can discuss replenishing your order with more tokens. Please contact us at [Discord](https://discord.com/invite/superprotocol).
 
 ### Order limits
 

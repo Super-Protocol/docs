@@ -9,11 +9,11 @@ sidebar_position: 0
 
 Welcome to Super Protocol, the confidential Web3 cloud computing and marketplace.
 
-<Highlight color="red">здесь нужно будет добавить каких-то общих вступительных слов</Highlight>
+This documentation is for developers who are interested in building applications for decentralized confidential environments. The documentation mostly covers topics related to fundamentals and hands-on tinkering with Super Protocol. Parts related to the Super Protocol technical architecture are covered in the [White Paper](/whitepaper).
 
-white paper
+This documentation is a work in progress and will be updated on regular basis. Your feedback is highly appreciated.
 
-our github
+You can use the steps below to get you started.
 
 ## Play around with GUI (beginner)
 

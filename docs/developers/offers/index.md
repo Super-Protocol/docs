@@ -9,6 +9,8 @@ This section describes the offers provided by the Super Protocol team. But in th
 
 Learn more about offers [here](/developers/fundamentals/offers).
 
+You can also see the source code for some of the solutions and data offers in the public [Super Protocol GitHub](https://github.com/Super-Protocol).
+
 ## For Developers
 
 These are the offers that will be most useful for developers when deploying your own solutions with CLI.
