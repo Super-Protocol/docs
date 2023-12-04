@@ -104,7 +104,7 @@ if __name__ == '__main__':
 
 File `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place.
 
-The script above requires `arial.ttf` font file in `run` directory. You can download it [here](https://www.freefontspro.com/14454/arial.ttf).
+The script above requires `arial.ttf` font file in `run` directory. You can download it [here](https://www.freefontspro.com/d/14454/arial.zip).
 
 ## Install Python libraries
 
