@@ -5,7 +5,7 @@ slug: "/cli_commands/providers/list"
 sidebar_label: "list"
 ---
 
-List providers
+List all the providers on blockchain. 
 
 ## Usage
 

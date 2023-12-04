@@ -1,11 +1,11 @@
 ---
-id: "cli-solutions-generate-key"
+id: "solutions-generate-key"
 title: "Generate a key"
 slug: "/cli_commands/solutions/generate-key"
 sidebar_label: "generate-key"
 ---
 
-Generate solution signing key
+For Docker image to run inside the TEE, the image has to be built and signed with Gramine (a.k.a graminized). To [pack](/developers/cli_commands/solutions/prepare) the solution into a Docker image you will need to generate a signing key. 
 
 ## Usage
 
@@ -15,9 +15,9 @@ Generate solution signing key
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`outputPath`|Path to save a key file|
+|**Name**| **Description**                      |
+| :- |:-------------------------------------|
+|`outputPath`| Path to save the generated key file. |
 
 ## Options
 

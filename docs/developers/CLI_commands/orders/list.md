@@ -5,7 +5,7 @@ slug: "/cli_commands/orders/list"
 sidebar_label: "list"
 ---
 
-List orders
+List orders on blockchain. By default you will get a list of all orders and sub-orders, unless you specify `--my-account` option.
 
 ## Usage
 

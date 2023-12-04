@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## Create data archives
 
-Pack both test input directories into separate tar.gz archives:
+Now we need to pack both test input directories - `input-0001` and `input-0002` - into separate tar.gz archives:
 
 ```
 tar -czvf input-1.tar.gz -C <your solution root directory>/inputs/input-0001 .
@@ -19,7 +19,7 @@ tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
 
 ## Upload data archives
 
-Upload archives to the storage:
+[Upload](developers/cli_commands/files/upload) archives to the storage:
 
 ```
 ./spctl files upload input-1.tar.gz --output input-1.json --filename input-1.tar.gz
@@ -28,3 +28,5 @@ Upload archives to the storage:
 ```
 ./spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
 ```
+Files `input-1.json` and `input-2.json` have been uploaded to storage.
+<Highlight color="red">а что здесь происходит? какая-то конвертация, почему грузим архивы, а получаем json?</Highlight>

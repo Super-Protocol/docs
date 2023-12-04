@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ---
 
-View Super Protocol offers using CLI commands. But it is easier to view them through the [Marketplace GUI](/developers/marketplace). 
+View Super Protocol offers using CLI commands. In most cases it is more convenient to do via the [Marketplace GUI](/developers/marketplace) where all the below functions are available. 
 
 ## Usage
 

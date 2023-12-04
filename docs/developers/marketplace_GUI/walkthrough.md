@@ -9,7 +9,7 @@ sidebar_position: 2
 
 To better understand how Super Protocol works, let’s take a step-by-step walkthrough.
 
-As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with Tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/architecture/tunnels/provisioner) (Hosting Launcher), which cuts a few corners in order to streamline the experience. For the full Tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/nodejs_tunnels).
+As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with Tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/fundamentals/tunnels/provisioner) (Hosting Launcher), which cuts a few corners in order to streamline the experience. For the full Tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
 
 Let's begin by going to the Marketplace GUI at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/developers/marketplace/first-steps/).
 

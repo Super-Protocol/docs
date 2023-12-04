@@ -5,7 +5,7 @@ slug: "/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 
-Upload a file specified by the `<localPath>` argument to the remote storage
+Upload a file to the remote storage. Usually it's the file resulted from the [solutions prepare](/developers/cli_commands/solutions/prepare) command.
 
 ## Usage
 
@@ -15,9 +15,9 @@ Upload a file specified by the `<localPath>` argument to the remote storage
 
 ## Arguments
 
-|**Name**|**Description**|
-| :- | :- |
-|`localPath`|Path to a file for uploading|
+|**Name**| **Description**                 |
+| :- |:--------------------------------|
+|`localPath`| Path to the file for uploading. |
 
 ## Options
 

@@ -7,19 +7,17 @@ sidebar_position: 7
 
 ## Most often used CLI commands
 
-Below are the most popular CLI commands for developers. Most other functions, such as viewing offers, orders and providers, are more convenient using the [Marketplace GUI](/developers/marketplace). 
+Below are the most popular CLI commands for developers. Most other functions, such as viewing offers and managing orders, are more convenient using the [Marketplace GUI](/developers/marketplace). 
 
 Please also be mindful of the [Testnet Limitations](/testnet/limitations) when using CLI and GUI.
 
-| **Group**                                       | **Command**                                                     | **Description**                                               |
-|:------------------------------------------------|:----------------------------------------------------------------|:--------------------------------------------------------------|
-| [solutions](/developers/cli_commands/solutions) | [generate-key](/developers/cli_commands/solutions/generate-key) | Generate solution signing key.                                |
-| [solutions](/developers/cli_commands/solutions) | [prepare](/developers/cli_commands/solutions/prepare)           | Prepare your solution for deployment.                         |
-| [files](/developers/cli_commands/files)         | [upload](/developers/cli_commands/files/upload)                 | Upload your solution and data to storage.                     |
-| [workflows](/developers/cli_commands/workflows) | [generate-key](/developers/cli_commands/workflows/generate-key) | Generate key to encrypt order results and manage your orders. |
-| [workflows](/developers/cli_commands/workflows)   | [create](/developers/cli_commands/workflows/create)             | Create new orders. |
-
-
+| **Group**                                      | **Command**                                                     | **Description**                                               |
+|:-----------------------------------------------|:----------------------------------------------------------------|:--------------------------------------------------------------|
+| solutions                                      | [generate-key](/developers/cli_commands/solutions/generate-key) | Generate solution signing key.                                |
+| solutions                                      | [prepare](/developers/cli_commands/solutions/prepare)           | Prepare your solution for deployment.                         |
+| files                                          | [upload](/developers/cli_commands/files/upload)                 | Upload your solution and data to storage.                     |
+| workflows                                      | [generate-key](/developers/cli_commands/workflows/generate-key) | Generate key to encrypt order results and manage your orders. |
+| workflows                                      | [create](/developers/cli_commands/workflows/create)             | Create new orders. |
 
 ## CLI Command Groups
 
