@@ -7,26 +7,32 @@ sidebar_position: 2
 
 ## Development
 
-Для запуска Вашего приложения на Superprotocol-е оно должно удовлетворять нескольким требованиям:
-* использует NodeJs 16 версии с CommonJs модулями
-* точкой входа должен быть файл `server.js`, расположенный или в корне Вашего app или в папке `dist` или в папке `build`; необходимо учитывать, что данный файл будет запущен при помощи `worker_threads`
-* должен использоваться только `https` сервер (`http` можно использовать для тестов, см. пример)
-* в environment-е будут доступны следующие переменные, которые необходимо использовать для запуска сервера
-    * _HTTPS_PORT_ - порт, который должен использловать сервер для старта
-    * _TLS_KEY_ - TLS ключ, который так же должен использовать сервер 
-    * _TLS_CERT_ -  TLS сертификат, который так же должен использовать сервер
-    
-    Обращаем Ваше внимание, что env-переменные _TLS_KEY_ и _TLS_CERT_ будут содержать не тот ключ и сертификат, который был сгененрирован в [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing).
-* events with termination signals SIGINT and SIGTERM будут проброшены на parentPort модуля `worker_threads`
+To launch your application on Super Protocol it must meet several requirements:
 
-Создайте папку `superprotocol-test-app` на одном уровне с CLI файлом `spctl`. Добавьте `express`, как dependency, и создайте файл `server.js`.
+- It should use Node.js version 16 with CommonJS modules.
+
+- The entry point should be the file `server.js`, located either in the root of your app, in the `dist` folder, or in the `build` folder. Note that this file will be executed using `worker_threads`.
+
+- Only an HTTPS server should be used (HTTP may be used for testing, see the example).
+
+- The following environment variables will be available and should be used to start the server: `HTTPS_PORT`, `TLS_KEY`, `TLS_CERT`.<br/><br/>
+    **Note:** the env variables `TLS_KEY` и `TLS_CERT` will be different from the ones generated in [Step 1](/developers/deployment_guides/tunnels/preparing).
+- Events with termination signals `SIGINT` and `SIGTERM` will be forwarded to the `parentPort` of the `worker_threads` module.
+
+Let's begin.
+
+Create a tunnels project folder (let's call it */superprotocol-test-app/*) and place the SPCTL executable and config there. 
+
+In that folder add `express` as dependency and create file `server.js`.
+
 ```bash
 mkdir superprotocol-test-app
 docker run --platform linux/amd64 -v $PWD/superprotocol-test-app:/home/node -w /home/node node:16-buster-slim npm add express 
 touch superprotocol-test-app/server.js
 ```
 
-Добавьте следующий код в файл `server.js` при помощи любого удобного вам текстового редактора
+Add the following code to `server.js`:
+
 ```javascript title="server.js"
 const http = require('http');
 const https = require('https');
@@ -81,24 +87,24 @@ server.listen(port, () => {
 
 ## Testing
 
-Протестируйте работоспособность вашего приложения с помощью нашего базового образа. Для этого его необходимо скачать при помощи команды:
+Test your solution using our Node.js base image. You need to test specifically with the same base image that is contained in the Node.js base image offer. You can download it using this [command](/developers/cli_commands/offers/download-content):
 
 ```bash
 ./spctl offers download-content 6 
 ```
 
-В той директории, где вы запускали эту команду вас появится файл `node16-base-solution-image-v0.3.1.tar.gz`, который необходимо будет загрузить в Docker
+File *node16-base-solution-image-v0.3.1.tar.gz* is downloaded (naming might be slightly different if version changes). Load this file into Docker:
 
 ```bash
 docker load --input node16-base-solution-image-v0.3.1.tar.gz
 ```
 
-Дальше выполните команду для запуска сервера с базовым образом
+Now run the server locally:
 
 ```bash
 docker run --platform linux/amd64 -p 3001:3001 --rm -it -w /sp/run  -v $PWD/superprotocol-test-app:/sp/run --entrypoint /usr/local/bin/node gsc-node16-base-solution:latest /sp/run/server.js
 ```
 
-Перейдите по ссылке http://localhost:3001. В браузере должна появиться надпись `Got it!`.
+Go to http://localhost:3001. Browser should show you this text: "Got it!"
 
-Если Вы увидели ошибку `Bind for 0.0.0.0:3001 failed: port is already allocated` - замените 3001 порт на любой другой, свободный в Вашей системе.
+If you see error *"Bind for 0.0.0.0:3001 failed: port is already allocated"* - replacе 3001 with any other port available.

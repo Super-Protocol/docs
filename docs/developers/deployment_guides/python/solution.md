@@ -13,22 +13,6 @@ You need to have the following installed and configured:
 - OpenSSL. <Highlight color="red">Что это? Этого требования нет в других гайдах</Highlight>
 - SPCTL. Follow the guides [here](/developers/cli_guides) to download and configure.
 
-## Install Python base image
-
-For deployment your solution will be using the Python base image that is available as an offer on the Marketplace. But first you will need to test your solution locally and prepare it for deployment. To do that you need to download the Python base image and load it to Docker. 
-
-Use this command to download the Python image from its solution offer:
-
-```
-./spctl offers download-content 5
-```
-
-Then use this command to load the Python image to Docker:
-
-```
-docker load -i <Python base image archive name>
-```
-
 ## Create folder structure
 
 Create the following subdirectories in your solution root directory:
@@ -120,13 +104,27 @@ Run the following command in the `run` directory to download the required librar
 pip3 install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
 
-<Highlight color="red">как эти библиотеки связаны с базовым образом который мы добавляли в Докер до этого? Он вообще нужен этот базовый образ прям на первом шаге?</Highlight>
-
 **Double-check!** At this step the content of `run` directory should look as follows:
 
 - `pypi` folder: Python libraries
 - `arial.ttf`: font file
 - `entrypoint.py`: Python script
+
+## Install Python base image
+
+For deployment your solution will be using the Python base image that is available as an offer on the Marketplace. But first you will need to test your solution locally and prepare it for deployment. To do that you need to download the Python base image and load it to Docker.
+
+Use this command to download the Python image from its solution offer:
+
+```
+./spctl offers download-content 5
+```
+
+Then use this command to load the Python image to Docker:
+
+```
+docker load -i <Python base image archive name>
+```
 
 ## Test the solution
 
@@ -148,7 +146,9 @@ docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output
 gsc-python3.10-base-solution:latest entrypoint.py
 ```
 
-<Highlight color="red">На моем маке М2 выдает ошибку WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested</Highlight>
+Note: if you are running Docker on Mac, add this command `docker run --platform linux/arm64 --rm -ti`.
+
+<Highlight color="red">проверить что работает команда с платформой</Highlight>
 
 If done correctly, the `output` directory should now have two subdirectories, `input-0001` and `input-0002`, with .png image files containing the same text as the input files.
 
@@ -182,12 +182,12 @@ After running the command, `solution.tar.gz` and `metadata.json` files are gener
 
 Solution needs to be uploaded to a decentralized storage before it may be executed in TEE. The storage credentials have been configured during the [SPCTL setup](/developers/cli_guides/configuring#storage).
 
-Run the following command.
+Run the following command:
 
 ```
 ./spctl files upload solution.tar.gz --output solution.json \
 --filename solution.tar.gz --metadata ./metadata.json
 ```
 
-`solution.json` file is created.<Highlight color="red">Где? Локально или в сторедже?</Highlight>
+`solution.json` file is created.
 

@@ -37,11 +37,13 @@ To successfully complete this advanced guide you will need experience with Node.
 
 - [CoinAPI](https://coinapi.io/) - Зарегистрироваться и получить Api ключ - после регистрации он приходит на почту, в личном кабинете ключи не отображаются.
 
+- [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
+
 - [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
 - [SP solutions](https://github.com/Super-Protocol/solutions) - Super Protocol repository with solution examples, including the Oracle service.
 
-Please create an oracle project folder and download the solutions repository into it:
+Please create an oracle project folder, place the SPCTL executable and config there, and download the solutions repository into it:
 
 ```shell
 git clone https://github.com/Super-Protocol/solutions
@@ -50,6 +52,8 @@ git clone https://github.com/Super-Protocol/solutions
 ## **Step 1. Deploy the "x509 verifier" smart contract**
 
 This smart contract is responsible for on-chain cryptographic verification of the Oracle service, ensuring that it's running inside a secure SGX Trusted Execution Environment (TEE) with validation of TEE quote, MRENCLAVE and MRSIGNER.
+
+Задача проверить квоту ончейн которая была сгенерована в SGX. Квота нужна для того чтобы подтвердить что данные были получены с помощью анклава. Что эти данные были сделаны и подписаны именно в ТЕЕ. Вся суть в том что он делает это именно он-чейн.  
 
 <Highlight color="red">тут хотелось бы больше информации про роль x509 смарт-контракта, для чего он нужен конкретно в Оракулах - сходу не очень понятно. Чат GPT к примеру не знает что такое x509 smart contract</Highlight>
 
@@ -66,12 +70,11 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `PRIVATE_KEY` - Your wallet private key with MATIC  <Highlight color="red">речь идет о нашем тестовом кошельке?</Highlight>
+- `PRIVATE_KEY` - Your Polygon testnet wallet private key with MATICs. **Note:** this is not the testnet wallet that you received from the Super team, you will need to create your own wallet for the oracle and add MATICs to it.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
 Then install dependencies and compile the contract:
-<Highlight color="red">что значит install dependencies? как это делать?</Highlight>
 
 ```shell
 npm i
@@ -80,8 +83,7 @@ npx hardhat compile
 
 ### Deploy the smart-contract
 
-We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate.
-<Highlight color="red">этот сертификат нужно скачаь и куда-то положить?</Highlight>
+We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate. 
 
 In the same directory, execute this command to deploy the x509 verifier contract to the Polygon testnet network.
 
@@ -209,7 +211,6 @@ To set up the project you will need to configure env variables in the `.env` fil
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
 Then install dependencies and compile the contract:
-<Highlight color="red">что значит install dependencies? как это делать?</Highlight>
 
 ```shell
 npm i
@@ -325,7 +326,7 @@ Open a new terminal, go to your SPCTL folder, and upload the archive to the stor
 ./spctl files upload ./solutions/Blockchain/sp-oracle/script/inputs/oracle-input.tar.gz --output oracle-input.json --filename oracle-input.tar.gz
 ```
 
-`oracle-input.json` will be generated. We will use it and `oracle-solution.json` from Step 2 to create an order:
+`oracle-input.json` will be created. We will use it and `oracle-solution.json` from Step 2 to create an order:
 
 ```shell
 ./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 20,17 --solution 5,2 --solution oracle-solution.json --data oracle-input.json

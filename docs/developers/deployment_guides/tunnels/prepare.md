@@ -1,50 +1,38 @@
 ---
 id: "preparing"
-title: "1. Prepare SPCTL, DNS and SSL certificate"
+title: "1. Prepare DNS and SSL certificate"
 slug: "/deployment_guides/tunnels/preparing"
 sidebar_position: 1
 ---
 
-## Docker
+## Goal
 
-Необходимо, чтобы в вашей системе был Docker. Скачать и установить его можно с [официального сайта](https://docs.docker.com/engine/install/)
+<Highlight color="red">в чем состоит смысл этого упражнения, какой должен быть результат на выходе</Highlight>
 
-## Git
+## Prerequisites
 
-Необходимо установить Git CLI. Используйте инструкцию [отсюда](https://github.com/git-guides/install-git)
+- [Docker](https://docs.docker.com/engine/install/) - Для сборки решений, которые будут выполняться на Super Protocol.
 
-## SPCTL
+- [GIT CLI](https://github.com/git-guides/install-git) - <Highlight color="red">для чего это</Highlight>
 
-Необходимо скачать и настроить нашу CLI тулзу SPCTL. Воспользуйтесь руководством [здесь](/developers/cli_guides/configuring).
+- [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
+- [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
-## Prepare DNS
-
-Вам необходим собственный домен или сабдомен, к настройкам DNS которого у Вас есть доступ. 
-В рамках гайда будет необходимо устанавливать CNAME, A и TXT records в DNS для выбранного вами домена.
-
-Можете использовать [Cloudflare](https://www.cloudflare.com/products/registrar/) или любой другой удобный Вам доменный регистратор с возможностью установки DNS записей.
-
+- Prepare DNS - you will need admin access to your own domain or subdomain. In this guide you will need to configure CNAME, A and TXT records in your DNS. You can use [Cloudflare](https://www.cloudflare.com/products/registrar/) or any other domain registrar with DNS management.
 
 ## Generating SSL certificate
 
-SSL сертификат необходим для установки безопасного TLS соединения между сервером Superprotocol-а и Вашим браузером.
+An SSL certificate is necessary for establishing a secure TLS connection between the tunnel server and your browser.
 
-Если у ВАс есть уже готовый сертифифкат that isn't expired, то этот пункт гайда, вы можете пропустить и использовать этот сертифифкат в рамках этого гайда.
+If you already have a valid certificate that isn't expired, you can skip this step and use that certificate later in this guide.
 
-Для генерации SSL сертификата используйте любой удобный Вам портал - `sslforfree.com`, `zerossl.com`, `letsencrypt.org`.
+You can generate a free SSL certificate at any of those sites: [sslforfree.com](https://www.sslforfree.com/), [zerossl.com](https://zerossl.com/), [letsencrypt.org](https://letsencrypt.org/).
 
-Исользуйте инструкции соотвествующего портала для успешной генерации.
+To generate a certificate without registration we recommend using [Certbot](https://certbot.eff.org/instructions). Select *Web Hosting Product* as Software and your OS - then follow instructions to generate SSL. To confirm ownership of your domain you will need to specify CNAME record in DNS if you choose the verification method through CNAME DNS.
 
-Для генерации сертификата без регистрации рекомендуем использовать портал LetsEncrypt и его CLI - `Certobt`. 
-Выберете в качестве _Sofware_ - _Web hosting product_, и в качестве системы - Вашу OS [на странице инструкций Certbot](https://certbot.eff.org/instructions) и следуйте дальнейшим инструкциям для генерации SSL сертификата.
+Make sure that after you generate the certificate you download the file with the private key (e.g. `private.key`) and the certificate itself (e.g. `certificate.crt`). There may also be another file with the root and intermediary certificates (e.g. `ca_bundle.crt`). Copy the contents of that file into your certificate file.
 
-В процессе подтверждения принадлежности Вам домена нужно будет указать требуемую CNAME запись в DNS, если Вы выберете метод подтвержения через CNAME DNS.
-
-Make sure that после успешной генерации сертификата вы скачали файл с приватным ключом (e.g. private.key) и сертификатом (e.g. certificate.crt). 
-Так же может быть отдельный файл с рутовым и промежуточным сертификатами (e.g. ca_bundle.crt). Внутреннее содержимое этого файла просто скопируйте в файл с Вашим сертификатом.
-
-:::caution
- Самостоятельно сгенерированный самоподписанный сертификат работать на Superprotocol-е не будет.
- Нужен только сертификат выданный сертификационным центром
+:::note
+A self-generated and self-signed certificate will not work in Super Protocol. You need a certificate provided by the Certificate Authority.
 :::

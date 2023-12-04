@@ -38,7 +38,7 @@ For instance you can view this offer: https://marketplace.superprotocol.com/orde
 
 ### Cost of the order
 
-The cost of an order is the sum of the compute order as well as all sub-orders. The cost is distributed between the providers so that everyone gets their share. *Estimated Cost* is a projection because the protocol doesn't really know how long it will take to process an order, it depends on the task. *Actual Cost* is determined after the order had moved into status Done.
+The cost of an order is the sum of the compute order as well as all sub-orders. The cost is distributed between the providers so that everyone gets their share. *Actual Cost* is the total cost of the order and it adds up as the order is being processed. Final cost is determined after the order had moved into status Done.
 
 ### Replenishing orders
 

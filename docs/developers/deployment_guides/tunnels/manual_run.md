@@ -1,89 +1,89 @@
 ---
 id: 'manual_run'
-title: '3. Run your app at Superprotocol tunnels'
+title: '3. Deploy Tunnels'
 slug: '/deployment_guides/tunnels/manual_run'
 sidebar_position: 3
 ---
 
-## Prepare and run tunnel-server solution
+## Prepare and deploy Tunnel Server
 
-Запуск Вашего приложения на Superprotocol-е состоит из создания 2х заказов: заказа на Туннель-Сервер и заказа на Туннель-Клиент. В заказе на туннель-сервер будет включен авторизационный токен, который так же будет находится в конфиге туннель-клиента, и по которому будет происходить аутентификация туннель-сервером Вашего туннель-клиента.
+Deploying your application on Super Protocol involves creating two orders: an order for a Tunnel Server and an order for a Tunnel Client. The order for the tunnel server will include an authentication token, which will also be located in the configuration of the tunnel client and will be used for authentication between the tunnels.
 
-Создем папку `tunnel-server-data` и сохраняем токен в файл `auth-token` (название файла важно, не меняйте его) в этой папке
+First, let's prepare and deploy the server side of the tunnels.
+
+Create folder */tunnel-server-data/* and generate a token to `auth-token` file (the name is important, don't change it):
 
 ```bash
 mkdir tunnel-server-data
 uuidgen > tunnel-server-data/auth-token
 ```
 
-:::note
-Если у вас отобразилась ошибка
+**Tip:** if you receive error: "uuidgen: command not found", then pick the command for your distribution in [this article](https://www.thegeekdiary.com/uuidgen-command-not-found).
 
-```bash
-uuidgen: command not found
-```
-
-воспользуйтесь командой из таблицы в [этой статье](https://www.thegeekdiary.com/uuidgen-command-not-found) для установки. После этого повторите команду
-:::
-
-Архивируем токен для последующей загрузки на StorJ:
+Create an archive of the token:
 
 ```bash
 tar -czf tunnel-server-data.tar.gz -C ./tunnel-server-data .
 ```
 
-Шифруем и загружаем архив на StorJ при помощи SPCTL:
+Encrypt and upload the archive to the storage using this [command](/developers/cli_commands/files/upload):
 
 ```bash
 ./spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
 ```
 
-На выходе у вас должен создасться файл `tunnel-server-data.json`.
+`tunnel-server-data.json` file should be created locally and `tunnel-server-data.tar.gz` uploaded to storage (it will be downloaded by the TEE for execution). 
 
-:::tip
-Для создания заказа убедитесь в достаточном количетсве ТЕЕ токенов на Вашем кошельке. При необходимости, перейдите на сайт нашего [Маркетплейса](https://marketplace.superprotocol.com) и нажмите на кнопку `Get TEE`.
-:::
-
-Создаем заказ на туннель-сервер с только что загруженным токеном:
+Create an order for Tunnel Server using the `tunnel-server-data.json` file containing our auth token.
 
 ```bash
 ./spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
-Обратите внимание на последнюю строчку output-а, оставленного командой. Она будет иметь следующий вид
+**Tip:** to create order make sure that you have sufficient TEE and MATIC tokens in your testnet wallet. You can get more tokens using the [tokens request](/developers/cli_commands/tokens/request) command. Be mindful of testnet [limitations](/testnet/limitations).
+
+The last line of the output will look like this:
 
 ```
 Workflow was created, TEE order id: ["XXXX"]
 ```
 
-где XXXX - это номер созданного заказа. Через какое-то время (от 10 до 15 минут) нужно будет загрузить результат работы ордера при помощи команды
+Where XXXX is the order ID.
+
+You can check the status of the order using [Marketplace GUI](/developers/marketplace) or this [command](/developers/cli_commands/orders/get):
+
+```shell
+./spctl orders get <order ID>
+```
+
+In about 15 minutes after the status turns to `Processing` you can retrieve the order results:
 
 ```bash
 ./spctl orders download-result XXXX
 ```
 
-Результатом будет файл `result.txt` с ip адрессом. Он нам пригодится в следующих шагах
+In the case of Tunnel Server the result will be `result.txt` containing IP address and port of the server. We will need it later.
 
 ```bash
 cat result.txt && echo "\n"
 ```
 
-## Prepare and run tunnel-client solution
+## Prepare and deploy Tunnel Client
 
-Создадим папку `tunnel-client-data`, куда перенесем `server.js` с зависимостями из [п 2. данного гайда](/developers/deployment_guides/tunnels/develop)
+Create folder */tunnel-client-data/* and move there the `server.js` with dependencies from [Step 2](/developers/deployment_guides/tunnels/develop).
 
 ```bash
 mkdir -p tunnel-client-data/content
 cp -R superprotocol-test-app/* tunnel-client-data/content
 ```
 
-Далее необходимо сформировать файл `config.json` в папке `superprotocol-test-app` где будет информация, необходимая туннель-клиенту для запуска.
+Next, in the project folder */superprotocol-test-app/* create `config.json`. It will contain the data required by the Tunnel Client.
 
 ```bash
 touch tunnel-client-data/config.json
 ```
 
-При помощи любого текстового редакутора скопируейте туда следующий JSON объект:
+Copy the following configuration to the `config.json` file:
 
 ```json title="config.json"
 {
@@ -101,91 +101,101 @@ touch tunnel-client-data/config.json
 }
 ```
 
-Описание параметров `config.json`:
+`config.json` parameters:
 
-- `sgxMrEnclave` и `sgxMrSigner` - оставьте как в этом примере без изменения
-- `authToken` - токен с файла `auth-token`, который вы создали в предыдущем пункте
-- `private.pem` и `fullchain.crt` - это releative путь от файла конфигурации с приватным ключом и SSL сертификатом, которые вы сгенерировали в [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing). Пожалуйста добавьте эти файлы рядом с `config.json`
+- `sgxMrEnclave` и `sgxMrSigner` - leave these values as above, don't change them.
+- `authToken` - token from the `auth-token` file that you have created in the [previous section](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-server).
+- `cert` и `key` - relative path from the `config.json` to the files with SSL certificate and private key that you have generated in [Step 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate). Place these files next to `config.json`. 
 
-Для добавления в `config.json` авторизационного токена с файла `auth-token` можете воспользоваться следующей командой:
+To add the authorization token from `auth-token` to `config.json` you can use the following command:
 
 ```bash
 sed -i.bak -e "/\"authToken\":/s/\"authToken\": \".*\"/\"authToken\": \"$(cat tunnel-server-data/auth-token)\"/" tunnel-client-data/config.json
 ```
 
-:::note
-При деплое собственного приложения (не текущего примера из [п 2. данного гайда](/developers/deployment_guides/tunnels/develop)), обратите внимание, что приложение должно быть production-сбилджено (если это необходимо), а так же все зависимости для linux/amd64 должны быть установлены. Так же приложение не должно ожидать никаких внешних env-переменных, все должно быть зашито в конфигурацию, либо `.env`-файл и считано при помощи `dotenv` npm пакета. За сохранность Ваших паролей и секретных ключей не переживайте - (to A.Manilov - тут нужно добавить почему им не переживать.. что-то типа "доступа к этим файлам не будет даже у нас" или "все зашифровано и ключи будут только у Вас").
+Now let's prepare Tunnel Client for deployment. The steps are similar to the ones for Tunnel Server.
 
-Если ваша CPU архитектура или OS отличается от linux/amd64, то воспользуейтесь docker-командой для установки зависимости и/или билда вашего приложения:
-
-```bash
-docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster npm install && npm run build
-```
-
-При необходимости поменяйте команды установки зависимостей и билда на те, которые требует ваше приложение.
-:::
-
-Архиваруем папку при помощи команды:
+Add the folder to archive:
 
 ```bash
 tar -czf tunnel-client-data.tar.gz  -C ./tunnel-client-data .
 ```
 
-Шифруем и загружаем архив на StorJ при помощи SPCTL:
+Encrypt and upload the archive to the storage using this [command](/developers/cli_commands/files/upload):
 
 ```bash
 ./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 ```
 
-Создаем заказ на туннель-клиент с данными нашего приложения:
+`tunnel-client-data.json` file should be created locally and `tunnel-client-data.tar.gz` uploaded to storage (it will be downloaded by the TEE for execution).
+
+Create an order for Tunnel Client using the `tunnel-client-data.json`:
 
 ```bash
 ./spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data tunnel-client-data.json  --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
-Последняя строчка output команды будет выглядеть так
+The last line of the output will look like this:
 
 ```
 Workflow was created, TEE order id: ["XXXX"]
 ```
 
-где XXXX - номер созданного заказа туннель-клиента
+Where XXXX is the order ID.
+
 
 ## Setup DNS
 
-Теперь необходимо, чтобы заказ с туннель-клиентом нашел туннель-сервер со своим токеном. Это он сможет сделать при помощи DNS. Возвращаемся к файлу `result.txt` и IP внутри него. Это адрес вашего будущего сервера. Необходимо добавить в DNS вашего домена 2 записи:
+Now, it's necessary for the Tunnel Client to connect with the Tunnel Server with its token. We will do this through DNS. Let's go back to the `result.txt` file you received from Tunnel Server order. The IP inside it is the address of your future server. You need to add two records to your domain's DNS:
 
-- `A` - record на ip `xxx.yyy.www.zzz` TTL=3600
-- `TXT` - запись с текстом `r=superprotocol;ip=xxx.yyy.www.zzz` TTL=3600
+- `A` record pointing to the IP `xxx.yyy.www.zzz` with TTL=3600
+- `TXT` record with the text `r=superprotocol;ip=xxx.yyy.www.zzz` and TTL=3600
 
-Замените `xxx.yyy.www.zzz` на адрес с файла `result.txt`.
+Replace `xxx.yyy.www.zzz` with the address from the `result.txt` file.
 
-Через несколько минут открывайте браузер и заходите на ваш домен!
+After a few minutes, open your browser and go to your domain!
 
-## Notes
+## Create more tunnels
 
-При создании заказа в примере указан параметр `--min-rent-minutes 60`. Это значит, что туннель-сервер и туннель-клиент будут работать 60 минут. При необходимости замените цифру минут необходимым Вам количеством, но учите, что Вам может понадобиться больше ТЕЕ токенов.
+To ensure decentralization and fault tolerance you can create additional tunnel servers and clients with other compute providers - so that if one goes down, your site will still be available through other tunnels.
 
-## Creating more tunnels
+Change the `--tee` parameter for another compute offer ID in the `workflows create` command. You can choose any ID from the [Compute](https://marketplace.superprotocol.com/compute) screen on Marketplace. 
 
-To maintain website reliability you can create more tunnel servers and clients using other Compute Providers' offers. This way you can be sure, that if one host goes down, your site will be available through another tunnel. In other words, your website runs in a decentralized way! For example, to create the same tunnel server on another host, change `--tee` parameter for another ID (you can pick any ID from [Compute](https://marketplace.superprotocol.com/compute) section on Marketplace) in `workflows create` command:
+For example, repeat some of the previous steps to deploy another couple of tunnels. Let's use compute offer 2 instead of 1:
 
-```
-./spctl workflows create --tee 2 ...other params...
-```
-
-After you saw your website online for the first time, repeat some of the previous steps to deploy another couple of tunnels:
-
-1. Create the tunnel server order - **Substitute `--tee 1` with another offer**
+1. Create the tunnel server order:
 
 ```bash
 ./spctl workflows create --tee 2 --solution 6,2 --solution 10,6 --data auth-token.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
-2. Create the tunnel client order - **Substitute `--tee 1` with another offer**
+2. Create the tunnel client order:
 
 ```bash
 ./spctl workflows create --tee 2 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
-2. [Set up DNS](#setup-dns) with new result file retrieved from Tunnel Server order.
+3. [Set up DNS](#setup-dns) with the new result file retrieved from Tunnel Server order.
+
+## Notes
+
+### Limits
+
+При создании заказа в примере указан параметр `--min-rent-minutes 60`. Это значит, что туннель-сервер и туннель-клиент будут работать 60 минут. При необходимости замените цифру минут необходимым Вам количеством, но учите, что Вам может понадобиться больше ТЕЕ токенов.
+
+### Deploying your own solutions
+
+When deploying your own application please note the following:
+
+- Ensure that the application is built for production (if necessary).
+- All dependencies for `linux/amd64` should be installed.
+- The application should not rely on external environment variables; everything should be hardcoded into the configuration or stored in a `.env` file and read using the `dotenv` npm package.
+- Don't worry about the security of your passwords and secret keys - Super Protocol ensures confidentiality of all data.
+
+If your CPU architecture or operating system differs from `linux/amd64`, use the following Docker command to install dependencies and/or build your application:
+
+```bash
+docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster npm install && npm run build
+
+```
+Modify the dependency installation and build commands as needed for your application.

@@ -29,4 +29,3 @@ tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
 ./spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
 ```
 Files `input-1.json` and `input-2.json` have been uploaded to storage.
-<Highlight color="red">а что здесь происходит? какая-то конвертация, почему грузим архивы, а получаем json?</Highlight>
