@@ -24,7 +24,7 @@ Therefore, when specifying offers for solutions, data, and storage, users must i
 | :- | :- |
 |`--tee <id,slotId>`|TEE offer `id` with the `slotId` (required)|
 |`--tee-slot-count <count>`|Number of using TEE slots (required)|
-|`--tee-options <id...>`|TEE options <id> (TEE options array. Accepts multiple values) (default: [])|
+|`--tee-options <id...>`|TEE options `id` (TEE options array. Accepts multiple values) (default: [])|
 |`--tee-options-count <value...>`|TEE options count array <values>. Accepts multiple values (default: [])|
 |`--storage <id,slotId>`|Storage offer `id` (required)|
 |`--solution {<id,slotId> OR <path>}`|Solution offer `id` with `slotId` or resource/tii file `path` (required and accepts multiple values)|
