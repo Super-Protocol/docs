@@ -144,7 +144,7 @@ Workflow was created, TEE order id: ["XXXX"]
 Where XXXX is the order ID.
 
 
-## Setup DNS
+## Set up DNS
 
 Now, it's necessary for the Tunnel Client to connect with the Tunnel Server with its token. We will do this through DNS. Let's go back to the `result.txt` file you received from Tunnel Server order. The IP inside it is the address of your future server. You need to add two records to your domain's DNS:
 
@@ -154,6 +154,8 @@ Now, it's necessary for the Tunnel Client to connect with the Tunnel Server with
 Replace `xxx.yyy.www.zzz` with the address from the `result.txt` file.
 
 After a few minutes, open your browser and go to your domain!
+
+Don't forget to replenish the tunnel orders with TEE tokens if you want your site to stay up.
 
 ## Create more tunnels
 

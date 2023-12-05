@@ -13,8 +13,6 @@ This guide will take you step by step through the process of deploying a confide
 SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.
 :::
 
-<Highlight color="red">честно говоря неплохо бы какую нибудь простую картинку по взаимодействию элементов</Highlight>
-
 ## Goal
 
 The goal of this example is to show process of deploying and operating an oracle with the following criteria:
@@ -31,13 +29,13 @@ To successfully complete this advanced guide you will need experience with Node.
 
 В этой статье вы будете использовать разные инструменты, котороые мы рекомендуем настроить заранее:
 
-- [Polygonscan](https://polygonscan.com/login) - You will need to register and create API Key for contract verification on block explorer. Несмотря на то, что в этом гайде мы будем пользоваться тестовой сетью [Mumbai](https://mumbai.polygonscan.com/), API key нужно взять с обозревателя блоков майннета.
+- [Polygonscan](https://polygonscan.com/login) - You will need to register and create API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai](https://mumbai.polygonscan.com/) Polygon testnet, you will need the mainnet API key.
 
 - [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
 
-- [Docker](https://www.docker.com/get-started/) - Для сборки решений, которые будут выполняться на Super Protocol.
+- [Docker](https://www.docker.com/get-started/) - for building solutions
 
-- [CoinAPI](https://coinapi.io/) - Зарегистрироваться и получить Api ключ - после регистрации он приходит на почту, в личном кабинете ключи не отображаются.
+- [CoinAPI](https://coinapi.io/) - register and receive the API key.
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
@@ -54,10 +52,6 @@ git clone https://github.com/Super-Protocol/solutions
 ## **Step 1. Deploy the "x509 verifier" smart contract**
 
 This smart contract is responsible for on-chain cryptographic verification of the Oracle service, ensuring that it's running inside a secure SGX Trusted Execution Environment (TEE) with validation of TEE quote, MRENCLAVE and MRSIGNER.
-
-Задача проверить квоту ончейн которая была сгенерована в SGX. Квота нужна для того чтобы подтвердить что данные были получены с помощью анклава. Что эти данные были сделаны и подписаны именно в ТЕЕ. Вся суть в том что он делает это именно он-чейн.  
-
-<Highlight color="red">тут хотелось бы больше информации про роль x509 смарт-контракта, для чего он нужен конкретно в Оракулах - сходу не очень понятно. Чат GPT к примеру не знает что такое x509 smart contract</Highlight>
 
 It's worth noting that this x509 verifier smart contract acts as a validator of data and is not tied to this implementation of the Oracle. In other words, it can service multiple instances of Confidential Oracles, all pointing to the same 'x509 verifier.'
 
@@ -132,8 +126,6 @@ A `run` folder will be created with artifacts for the future solution.
 
 All the solutions deployed on Super Protocol have to use a base image solution offer. In this case it will be a Node.js base image.
 
-<Highlight color="red">но зачем мы скачиваем базовый образ, если в при создании заказа всё равно используем оффер? зачем мы его пакуем в солюшен?</Highlight>
-
 Go to your project directory and execute this [command](/developers/CLI_commands/offers/download-content):
 
 ```shell
@@ -154,8 +146,6 @@ You will see the output `Loaded image: gsc-node16-base-solution:latest`.
 
 Next, we will build a Docker image of the service. For the Docker image to run inside the TEE, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Let's create the signing key:
 
-<Highlight color="red">для чего нужен этот ключ?</Highlight>
-
 ```shell
 ./spctl solutions generate-key signing-key
 ```
@@ -165,8 +155,6 @@ Then, execute the following command in the root of your project to prepare and p
 ```shell
 ./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path <base image archive file name> $(pwd)/solutions/Blockchain/sp-oracle/script/run/ signing-key
 ```
-<Highlight color="red">для чего мы пакуем решение? что такое манифест? зачем здесь базовый образ?</Highlight>
-
 
 (Note: `$(pwd)` will add the root path to a run folder to make it absolute).
 
@@ -193,9 +181,7 @@ An `oracle-solution.json` file will be generated. It contains storage access cre
 
 ### Prepare
 
-For this step you will need an Ethereum account with MATIC testnet coins on it. This account will be used to send transactions from Oracle service to the smart contract. To avoid errors with sending transactions we highly recommend to use a new account that will be used by the oracle only, e.g. nonce calculation.
-
-<Highlight color="red">это еще один аккаунт, который отличается от того который мы использовали в первом шаге? и это не наш тестнет аккаунт?</Highlight>
+For this step you will need an Ethereum account with MATIC testnet coins on it. This account will be used to send transactions from Oracle service to the smart contract. To avoid errors with sending transactions we highly recommend to use a new account that will be used by the oracle only, e.g. nonce calculation. This is not the Super Protocol testnet account.
 
 The next actions are nearly identical to the Prepare section from Step 1.
 
@@ -208,7 +194,7 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `PRIVATE_KEY` - Your wallet private key with MATIC  <Highlight color="red">речь идет о нашем тестовом кошельке?</Highlight>
+- `PRIVATE_KEY` - The private key to your test wallet with MATIC tokens.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 

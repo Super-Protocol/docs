@@ -5,13 +5,13 @@ slug: "/deployment_guides/tunnels/preparing"
 sidebar_position: 1
 ---
 
-## Goal
-
-<Highlight color="red">в чем состоит смысл этого упражнения, какой должен быть результат на выходе</Highlight>
-
 ## Prerequisites
 
-- [Docker](https://docs.docker.com/engine/install/) - Для сборки решений, которые будут выполняться на Super Protocol.
+- [Docker](https://docs.docker.com/engine/install/) - for building solutions.
+
+- [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
+
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) - <Highlight color="red">для чего это</Highlight>
 
 - [GIT CLI](https://github.com/git-guides/install-git) - <Highlight color="red">для чего это</Highlight>
 

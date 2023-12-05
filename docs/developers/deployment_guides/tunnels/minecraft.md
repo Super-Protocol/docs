@@ -7,15 +7,7 @@ sidebar_position: 6
 
 ## Prerequisites
 
-Make sure you have installed:
-
-- [Node.js](https://nodejs.org/en/download/package-manager) v16
-- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
-- [Docker](https://docs.docker.com/engine/install/)
-- SPCTL
-
-<Highlight color="red">это точно все что нужно?</Highlight>
-
+Same as in [Part 1](/developers/deployment_guides/tunnels/preparing) of this guide.
 
 ## Download Minecraft source code
 
@@ -56,7 +48,9 @@ To deploy Minecraft using tunnels manually you first need to install dependencie
 docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster yarn dependencies && yarn build:all
 ```
 
-Copy folders `dist`, `node_modules`, `package.json`, `server`, `client` to the `content` folder and then follow the steps in [Part 3](/developers/deployment_guides/tunnels/manual_run) of this guide.
+Copy folders and files `dist`, `node_modules`, `package.json`, `server`, `client` to the `content` folder and then follow the steps in [Part 3](/developers/deployment_guides/tunnels/manual_run) of this guide.
+
+
 
 ### Deploy with GitHub Actions
 

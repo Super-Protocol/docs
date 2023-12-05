@@ -9,9 +9,9 @@ sidebar_position: 2
 
 You need to have the following installed and configured:
 
-- Docker. Download it [here](https://docs.docker.com/engine/install/).
-- OpenSSL. <Highlight color="red">Что это? Этого требования нет в других гайдах</Highlight>
-- SPCTL. Follow the guides [here](/developers/cli_guides) to download and configure.
+- Docker - Download it [here](https://docs.docker.com/engine/install/).
+- OpenSSL - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
+- SPCTL - Follow the guides [here](/developers/cli_guides) to download and configure.
 
 ## Create folder structure
 
