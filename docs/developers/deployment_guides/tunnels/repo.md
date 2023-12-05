@@ -1,24 +1,25 @@
 ---
 id: 'repo'
-title: '4. Github repository'
+title: '4. Automating GitHub Actions'
 slug: '/deployment_guides/tunnels/repo'
 sidebar_position: 4
 ---
 
 ## Description
 
-Для Вашего удобвства мы подготволили репозиторий со скриптами Github Action, которые Вы можете использовать для автоматического деплоя Вашего приложения на сервера Superprotocol-а.
+For your convenience, we have prepared a GitHub Actions repository with scripts that you can use for the automatic deployment of your application to Super Protocol.
 
-Эти Github Action-ы автоматизируют команды с [предыдущего пункта гайда](/developers/deployment_guides/tunnels/manual_run).
+These Github Actions are automating the commands outlined in the  [previous step](/developers/deployment_guides/tunnels/manual_run)of this guide.
 
 ## Prepare Git Repository
 
-- Go to [github](https://github.com)
-- Log in to your account
-- Click the [new repository](https://github.com/new) button in the top-right. Type `superprotocol-test-app` as repository name. You’ll have an option there to initialize the repository with a README file. Add `Node` as `.gitignore` tepmlate
-- Click the “Create repository” button.
+1. Go to [GitHub](https://github.com) and log in to your account.
 
-Дальше давайте загрузим папку `superprotocol-test-app` из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing) в новосозданный рапозиторий
+2. Click the [New Repository](https://github.com/new) button in the top-right. Enter `superprotocol-test-app` as repository name. You’ll have an option there to initialize the repository with a README file. Add `Node` as `.gitignore` template.
+
+3. Click the “Create repository” button.
+
+Now we will load `superprotocol-test-app` from [Part 1](/developers/deployment_guides/tunnels/preparing) into this new repository.
 
 ```bash
 cd superprotocol-test-app
@@ -33,28 +34,31 @@ cd ..
 
 ## Preparing secrets and variables
 
-Вам необходимо добавить следующие секреты:
+You need to add the following secrets:
 
-- `GH_TOKEN` - Github token у которого есть доступ ко всему репозиторию для чтения/записи артефактов. Используйте инструкцию [здесь](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-- `SOLUTION_SERVER_TOKEN` - токен из файла `auth-token` туннель-сервера, который вы сгенерировали в [п. 3 данного гайда](/developers/deployment_guides/tunnels/manual_run). Получить его можно командой
+- `GH_TOKEN`: GitHub token with read/write access to artifacts in the entire repository. Follow the instructions [here](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to obtain this token.
+
+- `SOLUTION_SERVER_TOKEN`: Token from the `auth-token` file of the tunnel server, generated in [Part 3](/developers/deployment_guides/tunnels/manual_run) of this guide. You can obtain it using the command:
+
   ```bash
   cat tunnel-server-data/auth-token
   ```
-- `SOLUTION_SSL_CERTIFICATE_BASE64` - сюда необходимо сохранить base64 сертификат из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing); для генерации его из файла `fullchain.crt`, находящегося в папке `content` с [п. 3 данного гайда](/developers/deployment_guides/tunnels/manual_run) воспользуйтесь командой
+- `SOLUTION_SSL_CERTIFICATE_BASE64` - save the base64 certificate from [Part 1](/developers/deployment_guides/tunnels/preparing) of this guide; to generate it from `fullchain.crt` from [Part 3](/developers/deployment_guides/tunnels/manual_run) use the following command:
 
   ```
   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' tunnel-client-data/fullchain.crt | base64
   ```
 
-- `SOLUTION_SSL_KEY_BASE64` - приватный ключ из [п 1. данного гайда](/developers/deployment_guides/tunnels/preparing) в формате bas64; для генерации его из файла `private.pem`, находящегося в папке `content` с [п. 3 данного гайда](/developers/deployment_guides/tunnels/manual_run) воспользуйтесь командой
+- `SOLUTION_SSL_KEY_BASE64` - private key from [Part 1](/developers/deployment_guides/tunnels/preparing) in the bas64 format; to generate it from `private.pem` file from [Part 3](/developers/deployment_guides/tunnels/manual_run) use the following command:
 
   ```
   awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' tunnel-client-data/private.pem | base64
   ```
 
-  При необходимости замените название файла на ваше
+  If you private key and certificate files are named differently, then adjust the commands accordingly.
 
-- `SPCTL_CONFIG_BASE64` - сюда сохраните ваш конфиг для SPCTL в формате base64, созданный по [данному руководству](/developers/cli_guides/configuring); для этого воспользуйтесь командой
+- `SPCTL_CONFIG_BASE64` - save here your [SPCTL config](/developers/cli_guides/configuring) in base64 format. Use this command:
+
   ```
   echo "$(cat config.json)" | base64
   ```

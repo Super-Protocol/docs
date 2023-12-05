@@ -1,6 +1,6 @@
 ---
 id: 'manual_run'
-title: '3. Deploy Tunnels'
+title: '3. Deploy tunnels'
 slug: '/deployment_guides/tunnels/manual_run'
 sidebar_position: 3
 ---
@@ -181,7 +181,7 @@ For example, repeat some of the previous steps to deploy another couple of tunne
 
 ### Limits
 
-При создании заказа в примере указан параметр `--min-rent-minutes 60`. Это значит, что туннель-сервер и туннель-клиент будут работать 60 минут. При необходимости замените цифру минут необходимым Вам количеством, но учите, что Вам может понадобиться больше ТЕЕ токенов.
+When creating an order in the example, the parameter `--min-rent-minutes` is set to 60. This means that the tunnel server and tunnel client will operate for 60 minutes. If needed, replace the minute value with the desired duration, but keep in mind that you may need more TEE tokens. Please refer to the testnet [limitations](/testnet/limitations).
 
 ### Deploying your own solutions
 

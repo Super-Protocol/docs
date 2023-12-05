@@ -60,7 +60,7 @@ This section governs your credentials with the storage providers. You will need 
 | :- |:---------------------------------------------------------------------------------------------------------------------------------------------------------|
 |type| `STORJ`                                                                                                                                                  |
 |bucket| STORJ bucket name. Your encrypted solutions and data are uploaded to this bucket.                                                                        |
-|writeAccessToken| STORJ access grant with *write* permission for the specified bucket. This token is used to upload your encrypted solutions and data.                     |
+|writeAccessToken| STORJ access grant with *write* and *delete* permission for the specified bucket. This token is used to upload your encrypted solutions and data.        |
 |readAccessToken| STORJ access grant with *read* permission for the specified bucket. This token is used by Compute providers to access your encrypted solutions and data. |
 
 ### Workflow
