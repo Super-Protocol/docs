@@ -39,6 +39,6 @@ Third, you will need to create access grants. An Access Grant is a bearer token 
 Grants must be related to the same bucket that was created earlier. When creating access grants, use the **same passphrase** you used for the bucket.
 
 Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to create two access grants:
-- With *write* permission. It will be used to upload your encrypted data and solutions to the bucket. 
+- With *write and delete* permission. It will be used to upload your encrypted data and solutions to the bucket. 
 - With *read* permission. It will be used by Compute providers to download your encrypted data and solutions.
 
