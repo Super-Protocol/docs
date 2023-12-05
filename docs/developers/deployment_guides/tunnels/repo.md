@@ -34,6 +34,8 @@ cd ..
 
 ## Preparing secrets and variables
 
+### Repository Secrets
+
 You need to add the following secrets:
 
 - `GH_TOKEN`: GitHub token with read/write access to artifacts in the entire repository. Follow the instructions [here](https://docs.github.com/en/enterprise-server@3.6/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to obtain this token.
@@ -63,34 +65,38 @@ You need to add the following secrets:
   echo "$(cat config.json)" | base64
   ```
 
-Так же необходимо указать 2 переменные в настройках репозитория:
+### Repository Variables
 
+You need to change two variables:
+ 
 - `TUNNEL_SERVER_MRENCLAVE` - 82e55c6ec7268b07e030226cc42417b89cb17ecc8b6b73bafb84fc44b0ed059c
 - `TUNNEL_SERVER_MRSIGNER` - 22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513
 
-Укажите hex-коды такими без изменения.
+<Highlight color="red">почему MRENCLAVE и MRSIGNER фиксированные, разве они не генируются новые каждые раз?</Highlight>
+
+Your hex codes should be just like this, without changes.
 
 As result, your GitHub Secrets and GitHub Variables should look something like this:
 
 <Imager src={require('./images/secrets.png').default} />
 <Imager src={require('./images/values.png').default} />
 
-## Run tunnel-server Github Action
+## Run tunnel server Github Action
 
-Создадим папку, в которой будут храниться Githuib Actionы
+Let's create a folder for GitHub Actions:
 
 ```bash
 cd superprotocol-test-app
 mkdir -p .github/workflows
 ```
 
-Скопируйте файл [superprotocol-test-app-tunnel-server.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml) в эту новую папку, переименуя его в `tunnel-server-deploy.yml`
+Copy this file [superprotocol-test-app-tunnel-server.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml) into the new folder and rename it as `tunnel-server-deploy.yml`:
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml -o .github/workflows/tunnel-server-deploy.yml
 ```
 
-Закомитим наши изменения и запушим их в гит
+Commit the changes and push them to Git:
 
 ```bash
 git add .
@@ -98,30 +104,30 @@ git commit -m "Added tunnel server deploy Action"
 git push
 ```
 
-Теперь из вашего репозитория перейдите на вкладку `Actions` и запустите `Run Test App tunnel-server on SuperProtocol`. Заказ должен успешно создаться и должен быть доступен для скачивания `last-orders.txt` артефакт с номером вашего заказа.
+Now go to the tab `Actions` from your repository and run `Run Test App tunnel-server on SuperProtocol`. The order should be created and artifact `last-orders.txt` containg your order ID should be available for download.
 
-## Run tunnel-client Github Action
+## Run tunnel client GitHub Action
 
-Скопируйте файл [superprotocol-test-app-tunnel-client.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml) в эту новую папку, переименуя его в `tunnel-client-deploy.yml`
+Copy file [superprotocol-test-app-tunnel-client.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml) to that new */superprotocol-test-app/* folder and rename the file to `tunnel-client-deploy.yml`:
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml -o .github/workflows/tunnel-client-deploy.yml
 ```
 
-Данный Github Action предполагает, что для вашего приложения должны быть установлены зависимости, а так же оно должно быть собрано.
+This GitHub Action assumes that your solution has been built and has dependencies configured.
 
-Создайте файл `scripts/prepare-solution.sh`
+Create file `scripts/prepare-solution.sh`:
 
 ```bash
 touch scripts/prepare-solution.sh
 ```
 
-В этом файле необходимо будет прописать логику сборки вашего приложения. Это скрипт будет вызывать непосредственно сам Actoin, передавая 2 паратмера:
+In this file, you will need to write the logic for building your application. This script will directly call the Action, providing two parameters:
 
-- _$1_ - папка, куда нужно производить сборку (к моменту вызова скрипта папка уже будет создана, `mkdir` делать не нужно)
-- _$2_ - название солюшена
+- _$1_ - the directory where the build should take place (the folder will already be created at the time the script is called; no need to use `mkdir`).
+- _$2_ - the name of the solution.
 
-Сохраните следующий код в файле `scripts/prepare-solution.sh` при помощи любого текстового редактора
+Save the following code to file `scripts/prepare-solution.sh`:
 
 ```bash title="prepare-solution.sh"
 #!/bin/bash
@@ -145,7 +151,7 @@ cp -R server.js node_modules package.json "$solution_path"
 echo "$solution_name build succesfull"
 ```
 
-Закомитим наши изменения и запушим их в гит
+Commit the changes and push them to Git:
 
 ```bash
 git add .
@@ -153,9 +159,10 @@ git commit -m "Added tunnel client deploy Action"
 git push
 ```
 
-Если все сдкелано правильно - запускайте Action и точно так же в `last-orders` артефакте должен появиться номер созданного заказа.
+Now go to the tab `Actions` from your repository and run `Run Test App tunnel-tunnel on SuperProtocol`. The order should be created and artifact `last-orders.txt` containg your order ID should be available for download.
 
 ## Setup DNS
 
-Записи в DNS нужно будет внести вручную. Скачайте `last-orders` артефакт с Action-а туннель сервера для того чтобы узнать номер созданного ордера. Он необходим для ручного скачивания результата `result.txt`, как указано в [п.3 #Prepare and run tunnel-server solution](/developers/deployment_guides/tunnels/manual_run#prepare-and-run-tunnel-server-solution).
-Получив ip, нужно будет создать в DNS 2 записи, как указано [п.3 #Setup DNS](/developers/deployment_guides/tunnels/manual_run#setup-dns)
+You will have to change DNS manually. Get the order ID in the `last-orders` artifact for tunnel server and then use the order ID to download the order result for tunnel server, which will provide you the IP.
+
+Once you have the IP, you'll need to add two records to the DNS as in [Step 3: Setup DNS](/developers/deployment_guides/tunnels/manual_run#setup-dns).
