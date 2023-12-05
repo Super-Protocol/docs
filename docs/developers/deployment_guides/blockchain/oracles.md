@@ -33,6 +33,8 @@ To successfully complete this advanced guide you will need experience with Node.
 
 - [Polygonscan](https://polygonscan.com/login) - You will need to register and create API Key for contract verification on block explorer. Несмотря на то, что в этом гайде мы будем пользоваться тестовой сетью [Mumbai](https://mumbai.polygonscan.com/), API key нужно взять с обозревателя блоков майннета.
 
+- [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
+
 - [Docker](https://www.docker.com/get-started/) - Для сборки решений, которые будут выполняться на Super Protocol.
 
 - [CoinAPI](https://coinapi.io/) - Зарегистрироваться и получить Api ключ - после регистрации он приходит на почту, в личном кабинете ключи не отображаются.

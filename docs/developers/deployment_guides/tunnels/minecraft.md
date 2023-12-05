@@ -5,10 +5,6 @@ slug: '/deployment_guides/tunnels/minecraft'
 sidebar_position: 6
 ---
 
-This overview describes the process of launching a Minecraft server and client on the Super Protocol platform and locally as well.
-
-This example demonstrates the capability to run dynamic applications in a Trusted Execution Environment (TEE) using tools such as the [Tunnel Server](/developers/fundamentals/tunnels/server) and [Tunnel Client](/developers/fundamentals/tunnels/client).
-
 ## Prerequisites
 
 Make sure you have installed:
@@ -16,13 +12,17 @@ Make sure you have installed:
 - [Node.js](https://nodejs.org/en/download/package-manager) v16
 - [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
 - [Docker](https://docs.docker.com/engine/install/)
+- SPCTL
+
+<Highlight color="red">это точно все что нужно?</Highlight>
+
 
 ## Download Minecraft source code
 
 To launch the game you will need the Minecraft server and a web client.
 In this example we'll be using [flying-squid](https://github.com/PrismarineJS/flying-squid) and web client [prismarine-web-client](https://github.com/PrismarineJS/prismarine-web-client).
 
-First step is to load the [source code](https://github.com/Super-Protocol/solutions):
+The first step is to download Minecraft from our [GitHub repository](https://github.com/Super-Protocol/solutions/tree/main/Tunnel%20Client/minecraft):
 
 ```bash
 git clone https://github.com/Super-Protocol/solutions
@@ -31,76 +31,70 @@ cd solutions/Tunnel\ Client/minecraft/
 
 ## Local run
 
-Установите все необходимые зависимости и сбилдите проект
+Install all necessary dependencies and build the project:
 
 ```bash
 yarn dependencies
 yarn build:all
 ```
 
-Запустите minecraft при помощи `docker compose`
+Run Minecraft using `docker compose`:
 
 ```bash
 docker compose up
 ```
 
-Подключайтесь по ссылке http://localhost:8888
+Connect using this link http://localhost:8888.
 
-## Deploy on Superprotocol
+## Deploy on Super Protocol
 
 ### Manual deploy
 
-Для запуска Minecraft через собственноручно созданные офферы, вам сначала необходимо установить зависимости и сбилдить проект для linux/amd64 платформы. Для этого из каталога с Maincraft-ом запустите слудующую команду
+To deploy Minecraft using tunnels manually you first need to install dependencies and build the project for the linux/amd64 platform. To do this, run the following command from the Minecraft directory:
 
 ```bash
 docker run --platform linux/amd64 --rm -it -w /home/node -v ./:/home/node node:16-buster yarn dependencies && yarn build:all
 ```
 
-Дальше вам необходмио папки и файлы `dist`, `node_modules`, `package.json`, `server`, `client` скопировать а отдельную папку `content` и полностью следовать инструкции из [п.3 Manual Run](/developers/deployment_guides/tunnels/manual_run) данного гайда
+Copy folders `dist`, `node_modules`, `package.json`, `server`, `client` to the `content` folder and then follow the steps in [Part 3](/developers/deployment_guides/tunnels/manual_run) of this guide.
 
-### Deploy with Github Actions
+### Deploy with GitHub Actions
 
-Сделайте [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) нашего репозитория [solutions](https://github.com/Super-Protocol/solutions).
+Create a [fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo) of our [solutions](https://github.com/Super-Protocol/solutions) repository.
 
-Дальше необходимо настроить в репозитории secrets and variables, как указано [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables), но некоторые переменные будут именть другие названия.
+Next, follow the steps in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables) to automate GitHub actions. Some variables will be different.
 
-Необходимые сикреты:
+**Required GitHub Secrets:**
 
-- `GH_TOKEN` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
+- `GH_TOKEN` - same as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables).
 
-- `MINECRAFT_SOLUTION_SERVER_TOKEN` - любой случайный uuid. Сгененриуйте его при помощи команды
+- `MINECRAFT_SOLUTION_SERVER_TOKEN` - any random UUID. Generate it using this command:
 
   ```bash
   uuidgen
   ```
 
-  и добавьте в качестве секрета. Нельзя использовать UUID, который вы уже использовали для деплоя туненль сервера какого-нибудь другого приложения. Он должен быть другим.
+  And add it as a secret. This UUID cannot be the same as the one you used to deploy the tunnel server of some other solution. It must be unique.
 
-- `MINECRAFT_SOLUTION_SSL_CERTIFICATE_BASE64` - сгенерируйте отдельный ssl сертифифкат для майнкрафта. Сконвертируйте его в base64 при помощи команды
-
-  ```bash
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' minecraft-ssl.crt | base64
-  ```
-
-  Замените `minecraft-ssl.crt` на название файла с вашим сертификатом
-
-- `MINECRAFT_SOLUTION_SSL_KEY_BASE64` - приватный ключ от сгенерированного ssl сертификата. Сконвертируйте его в base64 при помощи команды
+- `MINECRAFT_SOLUTION_SSL_CERTIFICATE_BASE64` - generate a separate SSL certificate for Minecraft ([Part 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate)). Convert it to base64 using this command:
 
   ```bash
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' minecraft-private.pem | base64
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <your SSL cerficate.crt> | base64
   ```
 
-  Замените `minecraft-private.pem` на название файла с вашим сертификатом
+- `MINECRAFT_SOLUTION_SSL_KEY_BASE64` - private key from your generated SSL certificate ([Part 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate)). Convert it to base64 using this command:
 
-- `SPCTL_CONFIG_BASE64` - такой же как и в [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
+  ```bash
+  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <your SSL private key.pem> | base64
+  ```
 
-Так же добавьте variables `TUNNEL_SERVER_MRENCLAVE` и `TUNNEL_SERVER_MRSIGNER`, как указано [п.4 нашего гайда](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
+- `SPCTL_CONFIG_BASE64` - same as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables).
 
-Дальше переходите во вкладку Actions вашего репозитория и запускайте экшены деплоя Minecraft! Они могу выполняться параллельно.
+**Required GitHub Variables:**
 
-После успешной отработки Guthub Actuin-ов, Вам нужно будет вручную внести DNS для вашего домена с майнкрафтом. Используйте инструкцию из [п.4 Setup DNS](/developers/deployment_guides/tunnels/repo#setup-dns)
+`TUNNEL_SERVER_MRENCLAVE` and `TUNNEL_SERVER_MRSIGNER`, as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
 
-:::caution
-С одним SSL сертификатом может быть задеплоено только одно приложение!
-Если Вы уже задеплоили какое-то приложение на Superprotocol-е с Вашим сертификатом, то для деплоя нового, нужно сгенерировать новый сертификат и ключ (можно использовать сабдомены).
-:::
+Next, go to the "Actions" tab of your repository and start the Minecraft deployment actions! They can run in parallel.
+
+After the successful execution of GitHub Actions you will need to manually configure DNS for your Minecraft domain. Use the instructions from [Part 4: Setup DNS](/developers/deployment_guides/tunnels/repo#setup-dns).
+

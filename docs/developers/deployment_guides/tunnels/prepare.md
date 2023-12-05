@@ -36,3 +36,7 @@ Make sure that after you generate the certificate you download the file with the
 :::note
 A self-generated and self-signed certificate will not work in Super Protocol. You need a certificate provided by the Certificate Authority.
 :::
+
+:::note
+You must use a different SSL certificate and private key for each deployed solution. So if you go through this guide and then want to deploy Minecraft or Superchat or anything else, you'll need to generate new SSL for each of those. 
+:::
