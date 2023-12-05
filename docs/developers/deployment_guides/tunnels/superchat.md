@@ -5,7 +5,7 @@ slug: '/deployment_guides/tunnels/superchat'
 sidebar_position: 7
 ---
 
-This is the guide to deploy the [Super Chat](/developers/offers/superchat) app. These steps are complimentary to the main [tunnels deployment guide](/developers/deployment_guides/tunnels/prepare).
+This is the guide to deploy the [Super Chat](/developers/offers/superchat) app. These steps are complimentary to the main [tunnels deployment guide](/developers/deployment_guides/tunnels/preparing).
 
 ## Prerequisites
 
