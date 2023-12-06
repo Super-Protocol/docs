@@ -37,7 +37,7 @@ Encrypt and upload the archive to the storage using this [command](/developers/c
 Create an order for Tunnel Server using the `tunnel-server-data.json` file containing our auth token.
 
 ```bash
-./spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 6,2 --solution 10,9 --data tunnel-server-data.json --storage 23,27 --orders-limit 10 --min-rent-minutes 60
 ```
 
 **Tip:** to create order make sure that you have sufficient TEE and MATIC tokens in your testnet wallet. You can get more tokens using the [tokens request](/developers/cli_commands/tokens/request) command. Be mindful of testnet [limitations](/testnet/limitations).
@@ -132,7 +132,7 @@ Encrypt and upload the archive to the storage using this [command](/developers/c
 Create an order for Tunnel Client using the `tunnel-client-data.json`:
 
 ```bash
-./spctl workflows create --tee 1 --solution 6,2 --solution xx,yy (пока нет оффера) --data tunnel-client-data.json  --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 6,2 --solution 13,15 --data tunnel-client-data.json  --storage 23,27 --orders-limit 10 --min-rent-minutes 60
 ```
 
 The last line of the output will look like this:
@@ -168,13 +168,13 @@ For example, repeat some of the previous steps to deploy another couple of tunne
 1. Create the tunnel server order:
 
 ```bash
-./spctl workflows create --tee 2 --solution 6,2 --solution 10,6 --data auth-token.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 2 --solution 6,2 --solution 10,9 --data auth-token.json --storage 23,27 --orders-limit 10 --min-rent-minutes 60
 ```
 
 2. Create the tunnel client order:
 
 ```bash
-./spctl workflows create --tee 2 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 2 --solution 6,2 --solution 13,15 --data my-tunnel-client-app.json --storage 23,27 --orders-limit 10 --min-rent-minutes 60
 ```
 
 3. [Set up DNS](#set-up-dns) with the new result file retrieved from Tunnel Server order.

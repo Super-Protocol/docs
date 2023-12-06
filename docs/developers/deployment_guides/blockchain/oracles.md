@@ -317,7 +317,7 @@ Open a new terminal, go to your SPCTL folder, and upload the archive to the stor
 `oracle-input.json` will be created. We will use it and `oracle-solution.json` from Step 2 to create an order:
 
 ```shell
-./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 20,17 --solution 5,2 --solution oracle-solution.json --data oracle-input.json
+./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 23,27 --solution 6,2 --solution oracle-solution.json --data oracle-input.json
 ```
 
 The result will be an order ID.
