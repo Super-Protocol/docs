@@ -11,7 +11,7 @@ An *order* on Super Protocol is a digital contract between the customer and the 
 
 ## How orders work
 
-![img_3.png](img_3.png)
+<img src={require('./../images/fundamentals_orders_1.png').default} width="auto" height="auto"/>
 
 ### Orders and sub-orders
 
@@ -20,8 +20,6 @@ When we say *order* we always refer to a compute order because this is where the
 The *sub-orders* are related to the main orders, and they are always between the customer and the providers of solutions, data and storage. 
 
 There could be various combinations of sub-orders depending on the scenario. For instance in case of tunnels orders there is no storage sub-order because there is no result file to be downloaded. The result for tunnels is that they are up and accessible. There is no data sub-order either. 
-
-![img_1.png](img_1.png)
 
 ### Creating orders
 
@@ -34,7 +32,7 @@ There are two ways to create orders:
 
 Orders are accessible openly on blockchain. While the contents inside the TEE are confidential, the general information about the order is available to anyone, just like any crypto wallet.
 
-For instance you can view this offer: https://marketplace.superprotocol.com/order/57848 - but you won't know who the owner is or what is happening inside the TEE.
+For instance, you can view this order: [https://marketplace.superprotocol.com/order/101](https://marketplace.superprotocol.com/order/101) - but you won't know who the owner is, what site is deployed inside the TEE, or what domain its using.
 
 ### Cost of the order
 

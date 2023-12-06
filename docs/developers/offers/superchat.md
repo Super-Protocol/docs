@@ -17,16 +17,14 @@ This chat is a technological demo app initially developed for Testnet 3 with a g
 
 ### Use our deployment
 
-Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like you can use our permanently running order for illustration purposes: [https://vein-ppi-tut.superprotocol.io](https://vein-ppi-tut.superprotocol.io/). 
+Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes: [https://nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/). 
 
 This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
 
-[9355](https://marketplace.stg.superprotocol.com/order/9355) (Tunnel Server)<br/>
-111 (Tunnel Server)<br/>
-[9358](https://marketplace.stg.superprotocol.com/order/9358) (Tunnel Client)<br/>
-113 (Tunner Client)<br/>
-
-<Highlight color="red">Саша: не забыть обновить эти ссылки после запуска чата на тестнете и сделать схему 2х2</Highlight>
+Tunnel server order: [196](https://marketplace.superprotocol.com/order/196) <br/>
+Tunnel server order: [206](https://marketplace.superprotocol.com/order/206) <br/>
+Tunnel client order: [209](https://marketplace.superprotocol.com/order/209) <br/>
+Tunnel client order: [202](https://marketplace.superprotocol.com/order/202) <br/>
 
 ### Deploy your own Super Chat
 

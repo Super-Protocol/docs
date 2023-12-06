@@ -19,7 +19,7 @@ Requirements is also where the providers set the price for using their products.
 
 A single offer can have multiple sets of requirements. For instance, a Python script will compute faster on 4 CPU cores than on 2 cores. But because it would be computed faster, the price may reflect that. Or - providers may make their offer available as either fixed price or per hour, and leave it up for the customer to see which one makes most economic sense for their usage scenario. 
 
-  ![img_4.png](img_4.png)
+<img src={require('./../images/fundamentals_slots_1.png').default} width="auto" height="auto"/>
 
 ### Configurations 
 
@@ -35,9 +35,9 @@ Same logic as the above goes for options, with two exceptions:
 
 Important: your compute configuration must be equal to or more than the sum of all requirements (solutions+data+storage). 
 
-![img_5.png](img_5.png)
+<img src={require('./../images/fundamentals_slots_2.png').default} width="auto" height="auto"/>
 
-![img_6.png](img_6.png)
+<img src={require('./../images/fundamentals_slots_3.png').default} width="auto" height="auto"/>
 
 ### Lease and Limits
 
@@ -49,9 +49,9 @@ Requirements and configurations have parameters *Min.Time* and *Max.Time*, which
 
 There are many possible combinations of requirements and configurations, fixed prices and per hour prices, minimum and maxium time limits, but it's actually very easy to find the optimum configuration using automated *Auto-Select*.
 
-In Marketplace GUI you simply select your offers and then select a desired configuration (all of them will meet your requirements). Additionally you can manually modify your Lease parameter. More on this in the [Walkthrough](/developers/marketplace/walkthrough).
+In Marketplace GUI you simply select your offers and then select a desired configuration (all of them will meet your requirements). Learn more in the [Walkthrough](/developers/marketplace/walkthrough).
 
-![img_7.png](img_7.png)
+<img src={require('./../images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
 
 For CLI you can just leave the slots and options fields blank and the auto-select will assign compatible configuration automatically. More on this in the [CLI workflows create](/developers/cli_commands/workflows/create) command.
 

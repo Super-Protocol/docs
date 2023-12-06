@@ -21,34 +21,41 @@ Create a tunnels order using the [Marketplace GUI](/developers/marketplace/walkt
 
 Go to the Instruments panel and select *Check Confidentiality*.
 
-![img_4.png](img_4.png)
+<img src={require('./../images/gui_confidentiality_1.png').default} width="400" height="auto"/>
 
 Enter your domain.
 
-![img_3.png](img_3.png)
+<img src={require('./../images/gui_confidentiality_2.png').default} width="400" height="auto"/>
+
 
 If the quote is verified, then you will see the results that look like this:
 
-![img_1.png](img_1.png)
+<img src={require('./../images/gui_confidentiality_3.png').default} width="400" height="auto"/>
 
-### Solution Offer
+### Solution Offers
 
 **Offer name and ID**
 
 If the deployed solution is a Marketplace offer, then you will see its name, a link to the offer and the offer id.
 
-If the deployed solution is not from the Marketplace, you will see "Deployed solution is not an offer" text. This is not an error, just a warning that contents of the solution cannot be verified. This is typically the response that you'll get when deploying your own solution. But the base image (Node.js or Python) solution should be verified, since you will always be using the base image offer from the Marketplace.
+The solution will be *Tunnels Launcher* if deployed through Marketplace GUI, and *Tunnel Client: Dynamic Content* or *Tunnel Client: Static Web Content* if deployed directly through CLI.
 
-![img_8.png](img_8.png)
+But if the deployed solution is not from the Marketplace, you will see "Deployed solution is not an offer" text. This is not an error, just a warning that contents of the solution cannot be verified. This is typically the response that you'll get when deploying your own solution. For instance, a developer could locally put together their own version of Tunnel Client (just like we did with Tunnel Client: Super Chat), and then it won't be recognized as an offer because it's not listed on the Marketplace. But the base image (Node.js or Python) solution should be verified, since you will always be using the base image offer from the Marketplace.
+
+<img src={require('./../images/gui_confidentiality_4.png').default} width="400" height="auto"/>
+
+<br/>
+<br/>
 
 **MRENCLAVE**
 
-"MRENCLAVE" is a value that represents the hash of the code and data inside the TEE (enclave). This measurement is used to uniquely identify the TEE and to ensure its integrity. It's a way to verify that the TEE being executed is the expected one and has not been tampered with.
+*MRENCLAVE* is a value that represents the hash of the code and data inside the TEE (enclave). This measurement is used to uniquely identify the TEE and to ensure its integrity. It's a way to verify that the TEE being executed is the expected one and has not been tampered with.
 
 **MRSIGNER**
 
-The MRSIGNER value is used to uniquely identify the signing entity of the TEE. This is important for security purposes, as it helps in verifying the authenticity and integrity of the TEE. It ensures that the TEE was signed by the expected entity and has not been tampered with.
+The *MRSIGNER* value is used to uniquely identify the signing entity of the TEE. This is important for security purposes, as it helps in verifying the authenticity and integrity of the TEE. It ensures that the TEE was signed by the expected entity and has not been tampered with.
 
+Both MRENCLAVE and MRSIGNER have to always be present to verify that the solution is running inside an authentic TEE. If there is an error "At least one of the received quotes is not valid", then something is wrong.
 
 ### Public Key Fingerprint
 
@@ -56,11 +63,11 @@ Super Protocol uses SSL/TLS certificates to encrypt the data exchanged between t
 
 For the Chrome browser follow these steps:
 
-![img_6.png](img_6.png)
+<img src={require('./../images/gui_confidentiality_5.png').default} width="400" height="auto"/>
 
-![img_7.png](img_7.png)
+<img src={require('./../images/gui_confidentiality_6.png').default} width="400" height="auto"/>
 
-![img_5.png](img_5.png)
+<img src={require('./../images/gui_confidentiality_7.png').default} width="400" height="auto"/>
 
 If the public key in the browser matches the public key fingerprint, then the connection is secure.
 

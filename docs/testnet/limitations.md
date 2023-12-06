@@ -23,7 +23,7 @@ If you feel that the additional uptime of your solution would be beneficial to T
 
 * You can request tokens unlimited number of times.
 
-* The amount of token dispensed per request is 2.5 TEE and 0.2 MATIC.
+* The amount of token dispensed per request is 9 TEE and 0.2 MATIC.
 
 * The most tokens you can request per 24 hours is 15 TEE and 0.5 MATIC.
 

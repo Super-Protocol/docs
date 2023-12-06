@@ -8,6 +8,11 @@ sidebar_position: 2
 
 ## Understanding Offers
 
+<img src={require('./../images/fundamentals_offers_1.png').default} width="auto" height="auto"/>
+
+<br/>
+<br/>
+
 There are four basic building blocks that may be involved in creation of an order:
 
 - *Solutions* – base images, tunnel clients, tunnel server, oracles, Python models - basically, any application.
@@ -32,7 +37,7 @@ At the moment offers and providers can be created only by the Super team. Functi
 
 ## Types of Offers
 
-### Solution and Data
+### Solutions and Data
 
 Solutions and data are called *value offers* because they are the reason why computing takes place: they bring value.
 

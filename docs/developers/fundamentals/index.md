@@ -36,4 +36,4 @@ Learn more about the orders [here](/developers/fundamentals/orders).
 
 The *tunnels* protocol allows the running of a web service inside a TEE. The purpose of tunnels is load balancing, scalability, and protection from DDOS attacks. Tunnels consist of servers and clients, where the server has an external public IP. There may be multiple servers and clients supporting a single domain, and preferably each tunnel is hosted by different CSPs to ensure stability, fault tolerance and decentralization.  
 
-Learn more about the tunnels [here](/developers/fundamentals/offers).
+Learn more about the tunnels [here](/developers/fundamentals/tunnels).
