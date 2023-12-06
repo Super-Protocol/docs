@@ -37,12 +37,7 @@ If the quote is verified, then you will see the results that look like this:
 
 If the deployed solution is a Marketplace offer, then you will see its name, a link to the offer and the offer id.
 
-You can download the Docker image file of the offer and compare its SHA-256 hashes with the source code of the offer available publicly. This way you will be able to verify the specific code that is running inside the TEE. This is useful of developers who want to achieve transparency of their deployed solutions and obtain trust of its users.
-
-<Highlight color="red">Я не уверен в этом параграфе, как именно работает сравнение хешей? Хотелось бы пошаговый пример как сделать это на примере Супер чата</Highlight>
-<br/>
-<br/>
-If the deployed solution is not from a Marketplace, you will see "Deployed solution is not an offer" text. This is not an error, just a warning that contents of the solution cannot be verified.
+If the deployed solution is not from the Marketplace, you will see "Deployed solution is not an offer" text. This is not an error, just a warning that contents of the solution cannot be verified. This is typically the response that you'll get when deploying your own solution. But the base image (Node.js or Python) solution should be verified, since you will always be using the base image offer from the Marketplace.
 
 ![img_8.png](img_8.png)
 

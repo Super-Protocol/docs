@@ -7,13 +7,15 @@ sidebar_position: 2
 
 ## 1. Introduction
 
-To better understand how Super Protocol works, let’s take a step-by-step walkthrough.
+To better understand how Super Protocol works, let’s take a step-by-step walkthrough through the Marketplace GUI.
 
-As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with Tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/fundamentals/tunnels/provisioner) (Tunnels Launcher), which cuts a few corners in order to streamline the experience. For the full Tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
+As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with the tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/fundamentals/tunnels/provisioner) (Tunnels Launcher), which cuts a few corners in order to streamline the experience. For the full tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
+
+You might want to read up on the fundamental Super Protocol concepts - such as [offers](/developers/fundamentals/offers), [orders](/developers/fundamentals/orders), [requirements and configurations](/developers/fundamentals/slots), and [tunnels](/developers/fundamentals/tunnels) - in advance, or - just dive into it and figure it out as you go. Your choice.
+
+The main steps you need to take are inside the blue ribbons. There are many additional explanations for educational purposes, but the essential Marketplace GUI is as easy as a few clicks.
 
 Let's begin by going to the Marketplace GUI at [marketplace.superprotocol.com](https://marketplace.superprotocol.com/). At this point we assume that you have completed all the preliminary steps [here](/developers/marketplace/first-steps/).
-
-The main steps you need to take are inside the blue ribbons. There are many additional explanations for educational purposes, but the basic use of Marketplace is as easy as a few clicks.
 
 ## 2. Building the Order
 
@@ -92,7 +94,7 @@ You can also customize your configuration. Modify these fields as you see fit, b
 
 <img src={require('./../images/marketplace_8.png').default}/>
 
-## 3. Creating Order
+## 3. Creating the Order
 
 Now that all the offers have been added, it's time to create the order. You can learn more about orders [here](/developers/fundamentals/orders).
 
@@ -158,7 +160,7 @@ After you have set up the Spending Cap for this smart contract, further approval
 
 ## 4. Getting Results
 
-At this point your order is either waiting in queue (status `New`) or is being executed (status `Processing`).
+At this point your Tunnels Launcher order is either waiting in queue (status `New`) or is being executed (status `Processing`).
 
 :::info Step 8. Go to the order.
 
@@ -176,7 +178,7 @@ If not forwarded to the order automatically, press the `All Orders` button and t
 
 :::info Step 9. Just wait, really.
 
-Creating of the tunnels takes about 20-30 minutes, depending on how many workloads the machine is processing. You might need to refresh the page to see the status change.
+Creating the tunnels takes about 20-30 minutes. You might need to refresh the page to see the status change.
 
 :::
 
@@ -210,7 +212,7 @@ But that's not all. The Tunnels Launcher has created [tunnels](/developers/funda
 
 :::
 
-As mentioned in the beginning, the Tunnels Launcher is a pre-configured provisioner app that automatically creates a set of tunnels. When you go to the individual tunnel orders you will see that they are processing - which means that they are up and running, and will be running as long as you keep the deposit up. 
+As mentioned in the beginning, the Tunnels Launcher is a pre-configured provisioner app that automatically creates a set of tunnels. The Launcher has fulfilled its mission and terminated (status Done). But when you go to the individual tunnel orders you will see that they are processing - which means that they are up and running, and will be running as long as you keep the deposit up. 
 
 Note that the tunnel client is running the Tunnel Client: Super Chat solution offer, it's basically a pre-packed offer with the Super Chat app inside, created specifically for Tunnels Launcher. You can deploy one just like that using CLI and [this guide](/developers/deployment_guides/tunnels).
 
