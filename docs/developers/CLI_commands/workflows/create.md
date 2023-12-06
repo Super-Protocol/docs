@@ -38,20 +38,20 @@ Here are examples for several workflows.
 
 Create Image Classification workflow with sample images from offers
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 3 --solution 7,3 --solution 5,1 --data 13,9 --data 14,10 --storage 20,16
+./spctl workflows create --tee 1 --solution 7,3 --solution 5,1 --data 16,20 --data 17,21 --storage 23,27
 ```
 
 Create Speech Recognition workflow with sample images from offers with auto-matching on specified TEE offer
 ```
-./spctl workflows create --tee 2 --solution 8,4 --solution 2,1 --data 15,11 --data 16,12 --storage 20,16
+./spctl workflows create --tee 2 --solution 8,5 --solution 5,1 --data 18,22 --data 19,23 --storage 23,27
 ```
 
 Create Face Recognition workflow with own images with auto-matching on any TEE offer
 ```
-./spctl workflows create --solution 9,5 --solution 2,1 --data ./data.json --storage 20,16
+./spctl workflows create --solution 9,7 --solution 5,1 --data ./data.json --storage 23,27
 ```
 
 Create workflow with own solution based on Python base image and own data
 ```
-./spctl workflows create --tee 3,5 --tee-slot-count 3 --solution 2,1 --solution solution.json --data ./data.json --storage 20,16
+./spctl workflows create --tee 3,5 --tee-slot-count 1 --solution 5,1 --solution solution.json --data ./data.json --storage 23,27
 ```

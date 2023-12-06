@@ -47,7 +47,7 @@ This command will produce `tunnel-server-data.json`.
 You are now ready to start the Tunnel Server order. Note the parameter `--min-rent-minutes` which will deposit enough TEE tokens to ensure the tunnel is running for at least the specified period of time (in minutes). For this example we've set it to 1440 minutes which is equivalent to 24 hours. <Highlight color="red">у них разве хватит токенов для этого? на целые сутки</Highlight>
 
 ```
-./spctl workflows create --tee 1 --solution 6,2 --solution 10,6 --data tunnel-server-data.json --storage 20,16 --min-rent-minutes 1440
+./spctl workflows create --tee 1 --solution 6,2 --solution 10,9 --data tunnel-server-data.json --storage 23,27 --min-rent-minutes 1440
 ```
 
 Remember the resulting order ID.
@@ -125,7 +125,7 @@ This will produce `tunnel-client-data.json`.
 Finally, create Tunnel Client order for the same duration as you created Tunnel Server:
 
 ```
-./spctl workflows create --tee 1 --solution 6,2 --solution 11,7 --data tunnel-client-data.json --storage 20,16 --min-rent-minutes 1440
+./spctl workflows create --tee 1 --solution 6,2 --solution 12,13 --data tunnel-client-data.json --storage 23,27 --min-rent-minutes 1440
 ```
 
 Remember the resulting order ID.

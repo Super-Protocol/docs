@@ -16,7 +16,7 @@ Now you will need to execute together:
 Use the following [command](/developers/cli_commands/workflows/create):
 
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 3 --storage 20,16 --solution 5,1 \
+./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 23,27 --solution 5,1 \
 --solution solution.json --data input-1.json --data input-2.json
 ```
 
