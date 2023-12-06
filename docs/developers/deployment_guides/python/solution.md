@@ -9,9 +9,11 @@ sidebar_position: 2
 
 You need to have the following installed and configured:
 
-- Docker - Download it [here](https://docs.docker.com/engine/install/).
-- OpenSSL - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
-- SPCTL - Follow the guides [here](/developers/cli_guides) to download and configure.
+- [Docker](https://www.docker.com/get-started/) - for building solutions.
+
+- [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
+
+- [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage.
 
 ## Create folder structure
 

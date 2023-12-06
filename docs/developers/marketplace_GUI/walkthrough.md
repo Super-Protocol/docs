@@ -9,7 +9,7 @@ sidebar_position: 2
 
 To better understand how Super Protocol works, let’s take a step-by-step walkthrough through the Marketplace GUI.
 
-As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with the tunnels. Please note that for this walkthrough we'll be using [Tunnels Provisioner](/developers/fundamentals/tunnels/provisioner) (Tunnels Launcher), which cuts a few corners in order to streamline the experience. For the full tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
+As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with the tunnels. Please note that for this walkthrough we'll be using [Tunnels Launcher](/developers/offers/launcher), which cuts a few corners in order to streamline the experience. For the full tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
 
 You might want to read up on the fundamental Super Protocol concepts - such as [offers](/developers/fundamentals/offers), [orders](/developers/fundamentals/orders), [requirements and configurations](/developers/fundamentals/slots), and [tunnels](/developers/fundamentals/tunnels) - in advance, or - just dive into it and figure it out as you go. Your choice.
 

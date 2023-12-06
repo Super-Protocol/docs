@@ -177,7 +177,7 @@ For example, repeat some of the previous steps to deploy another couple of tunne
 ./spctl workflows create --tee 2 --solution 6,2 --solution xx,yy (пока нет оффера) --data my-tunnel-client-app.json --storage 20,16 --orders-limit 10 --min-rent-minutes 60
 ```
 
-3. [Set up DNS](#setup-dns) with the new result file retrieved from Tunnel Server order.
+3. [Set up DNS](#set-up-dns) with the new result file retrieved from Tunnel Server order.
 
 ## Notes
 

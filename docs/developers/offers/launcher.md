@@ -5,28 +5,59 @@ slug: "/offers/launcher"
 sidebar_position: 2
 ---
 
-An application that enables the hosting of apps in decentralized confidential environments.
+## About
 
-**INPUT**
+Tunnels Launcher is a pre-configured [provisioner](/developers/fundamentals/tunnels/provisioner) application that automates the deployment of server and client tunnels, essentially the same as GitHub Actions (see [guide](/developers/deployment_guides/tunnels/repo)). It's primary purpose to simplify the deployment of tunnels through the [Marketplace GUI](/developers/marketplace) which doesn't yet support custom tunnels deployment.
 
-Hosting Launcher supports deployment of static web content and dynamic web apps on Node.js. Its purpose is to streamline the process for Testnet users.
+At the moment Tunnels Launcher works in two scenarios: deploying Super Chat and deploying static web pages.
 
-Dynamic web apps:
+## Deployment Scenarios
 
-At the moment the only compatible data offer available is Super Chat Config. This offer will deploy the Super Chat app. Deployment of your own Node.js apps is currently not supported through the Marketplace.
+### Super Chat
 
-Static web content:
+Compatible offers for [Super Chat](/developers/offers/superchat):
 
-You can deploy the Demo Static Website data offer or upload your own static website (HTML, CSS, JavaScript).
+| **Solution**       | **Base Image** | **Data**          | Storage | Compute        |
+|:-------------------|:---------------|:------------------|:--------|:---------------|
+| Tunnels Launcher   | Node.js        | Super Chat Config | Storj   | Any compatible |
 
-You can use only one website dataset in one order. One website per order.
+*Super Chat Config* contains configuration settings such as DNS and SSL certificates. **Note:** you cannot upload any other data when using Super Chat Config as data offer.
 
-Before uploading your own data all files and folders must be packaged into a TAR or TAR.GZ (TGZ) archive. There must be an index.html file at the root of the archive.
+As output *Tunnels Launcher* produces a domain in this format: abcd-klmn-wxyz.superprotocol.io 
 
-**OUTPUT**
+It also creates four individual orders: two client tunnels and two server tunnels.
 
-The output is the domain URL in the following format: https://abcd-klmn-wxyz.superprotocol.dev. The letters are randomized for each order. Each URL is unique.
+| **Tunnel Client**         | **Tunnel Server** | 
+|:--------------------------|:------------------|
+| Tunnel Client: Super Chat | Tunnel Server     | 
 
-To optimize performance in Testnet, the domain will only be available for 72 hours. You are welcome to create new orders at any time.
+*Tunnel Client: Super Chat* is a prebuilt solution that mimics the steps in [this guide](/developers/deployment_guides/tunnels/superchat). It is used only for Super Chat - other dynamic Node.js applications use the *Tunnel Client: Dynamic Content* offer.
 
-The Hosting Launcher order will also create four new orders for Tunnels. The tunneling protocol ensures balancing of workloads between instances and resistance to DDOS attacks.
+### Static Web Pages
+
+Compatible offers for static web pages:
+
+| **Solution**       | **Base Image** | **Data**            | Storage | Compute        |
+|:-------------------|:---------------|:--------------------|:--------|:---------------|
+| Tunnels Launcher   | Node.js        | Demo Static Website | Storj   | Any compatible |
+| Tunnels Launcher   | Node.js        | User static content | Storj   | Any compatible |
+
+*Demo Static Site* is a data offer that contains the content for a showcase website produced by the Super team.
+
+You can also use your own static website (HTML, CSS, JavaScript). Before uploading your own data all files and folders must be packaged into a TAR or TAR.GZ (TGZ) archive. There must be an index.html file at the root of the archive. Only one website archive may be used.
+
+As output *Tunnels Launcher* produces a domain in this format: abcd-klmn-wxyz.superprotocol.io.
+
+It also creates four individual orders: two client tunnels and two server tunnels.
+
+| **Tunnel Client**                 | **Tunnel Server** | 
+|:----------------------------------|:------------------|
+| Tunnel Client: Static Web Content | Tunnel Server     | 
+
+*Tunnel Client: Static Web Content* is an offer that is used for any type of static content, even when deploying manually through CLI ([read guide](/developers/deployment_guides/tunnels/static_content)).
+
+
+
+
+
+
