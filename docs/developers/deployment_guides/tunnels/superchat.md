@@ -63,7 +63,7 @@ And connect to it at http://localhost:3000.
 
 ### Manual deploy
 
-To deploy Super Chat using tunnels manually you first need to install dependencies and build the project for the linux/amd64 platform. Execute the following command (if you haven't done it within the ## Local run section <Highlight color="red">что имеется ввиду?</Highlight>
+To deploy Super Chat using tunnels manually you first need to install dependencies and build the project for the linux/amd64 platform. Execute the following command (if you haven't done it previously):
 ):
 
 ```bash
@@ -71,9 +71,6 @@ docker compose up build
 ```
 
 Copy folders and files `.next`, `dist`, `node_modules`, `public` ,`next.config.js`, `package.json`, `.env` to the `content` folder and then follow the steps in [Part 3](/developers/deployment_guides/tunnels/manual_run) of this guide.
-
-<Highlight color="red">что-то не все файлы здесь вижу... где dist, где node_modules, и тд</Highlight>
-
 
 ### Deploy with Github Actions
 

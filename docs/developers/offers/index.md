@@ -17,13 +17,13 @@ These are the offers that will be most useful for developers when deploying your
 
 These solution offers are instrumental in setting up [tunnels](/developers/fundamentals/tunnels) or other solutions based on Node.js or Python.
 
-| **Id** | **Name**                                                                                            | **Description**                                                         |
-|:-------|:----------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
-| ?      | Tunnel Client: Dynamic Content                                                                      | Tunnel client used to deploy Node.js-based apps.                        |
-| 11     | Tunnel Client: Static Web Content                                                                   | Tunnel client used to deploy simple static websites (HTML, JavaScript). |
-| 10     | Tunnel Server                          | Tunnel server used for any tunnels deployment.                          |
-| 6      | NodeJS                                                                                             | Node.js base image, required for Node.js apps.                          |
-| 5      | Python                                                                                              | Python base image, required for Python apps.                            |
+| **Id** | **Name**                          | **Description**                                                         |
+|:-------|:----------------------------------|:------------------------------------------------------------------------|
+| 13     | Tunnel Client: Dynamic Content    | Tunnel client used to deploy Node.js-based apps.                        |
+| 12     | Tunnel Client: Static Web Content | Tunnel client used to deploy simple static websites (HTML, JavaScript). |
+| 10     | Tunnel Server                     | Tunnel server used for any tunnels deployment.                          |
+| 6      | Node.js Base Image                | Node.js base image, required for Node.js apps.                          |
+| 5      | Python Base Image                 | Python base image, required for Python apps.                            |
 
 ### Data
 
@@ -47,7 +47,7 @@ At this phase of Testnet only Storj storage is supported.
 
 | **Id** | **Name**                                                                   | **Description**                                                    |
 |:-------|:---------------------------------------------------------------------------|:-------------------------------------------------------------------|
-| 20     | Storj DCS Offer                                                            | This is the basic Storj storage offer, to be used with all orders. |
+| 23     | Storj DCS Offer                                                            | This is the basic Storj storage offer, to be used with all orders. |
 
 
 ## Other Offers
@@ -58,8 +58,8 @@ Tunnels Launcher is a [tunnel provisioner](/developers/fundamentals/tunnels/prov
 
 | **Id** | **Name**                                        | **Description**                                                                                    |
 |:-------|:------------------------------------------------|:---------------------------------------------------------------------------------------------------|
-| 12     | [Tunnels Launcher](/developers/offers/launcher) | Preconfigured tunnel provisioner used to simplify deployment of tunnels for Marketplace GUI users. |
-| 21     | Tunnel Client: Super Chat                       | Tunnel client containing the preconfigured [Super Chat](/developers/offers/superchat) solution.    |
+| 11     | [Tunnels Launcher](/developers/offers/launcher) | Preconfigured tunnel provisioner used to simplify deployment of tunnels for Marketplace GUI users. |
+| 14     | Tunnel Client: Super Chat                       | Tunnel client containing the preconfigured [Super Chat](/developers/offers/superchat) solution.    |
 
 Additionally, we have developed some simple Python models to test with your own data or data from the Marketplace.
 
@@ -75,19 +75,19 @@ Data offers for use with the Hosting Launcher.
 
 | **Id** | **Name**                                                                     | **Description**                                                                  |
 |:-------|:-----------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| 22     | Super Chat Config                                                            | Contains configuration files needed to launch Super Chat using Hosting Launcher. |
-| 19     | Demo Static Website | A simple demo webpage that we created for the Testnet 2 launch.                  |
+| 15     | Super Chat Config                                                            | Contains configuration files needed to launch Super Chat using Hosting Launcher. |
+| 22     | Demo Static Website | A simple demo webpage that we created for the Testnet 2 launch.                  |
 
 Datasets for use with the Python models.
 
 | **Id** | **Name**                                                                             | **Description**                                                                  |
 |:-------|:-------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
-| 13     | [Image Classification Dataset #1](/developers/offers/python-image)                   | Dataset contains images of different breeds of dogs.                        |
-| 14     | [Image Classification Dataset #2](/developers/offers/python-image)                   | Dataset contains images of different types of objects.                       |
-| 15     | [Speech Recognition Dataset #1](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking slowly and distinctly.                          |
-| 16     | [Speech Recognition Dataset #2](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking in an everyday manner with some background noise.   |
-| 17     | [Face Recognition Dataset #1](/developers/offers/python-face)                        | Dataset contains images of various movie stars and a table that pairs them with each other.                                                                               |
-| 18     | [Face Recognition Dataset #2](/developers/offers/python-face) | Dataset contains images of Lord of the Rings movie characters, the actors who played them, and a table that pairs actors to characters.        |
+| 16     | [Image Classification Dataset #1](/developers/offers/python-image)                   | Dataset contains images of different breeds of dogs.                        |
+| 17     | [Image Classification Dataset #2](/developers/offers/python-image)                   | Dataset contains images of different types of objects.                       |
+| 18     | [Speech Recognition Dataset #1](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking slowly and distinctly.                          |
+| 19     | [Speech Recognition Dataset #2](/developers/offers/python-speech)                    | Dataset contains audio files of male and female voices speaking in an everyday manner with some background noise.   |
+| 20     | [Face Recognition Dataset #1](/developers/offers/python-face)                        | Dataset contains images of various movie stars and a table that pairs them with each other.                                                                               |
+| 21     | [Face Recognition Dataset #2](/developers/offers/python-face) | Dataset contains images of Lord of the Rings movie characters, the actors who played them, and a table that pairs actors to characters.        |
 
 ### Compatibility
 

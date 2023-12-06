@@ -19,13 +19,13 @@ If you feel that the additional uptime of your solution would be beneficial to T
 
 ### Token limits
 
-* The most tokens you can have in your testnet wallet at a time is 2.5 TEE and 0.2 MATIC.
+* The most tokens you can have in your testnet wallet at a time is 9 TEE and 0.2 MATIC.
 
 * You can request tokens unlimited number of times.
 
 * The amount of token dispensed per request is 2.5 TEE and 0.2 MATIC.
 
-* The most tokens you can request per 24 hours is 5 TEE and 0.5 MATIC.
+* The most tokens you can request per 24 hours is 15 TEE and 0.5 MATIC.
 
 * Do not transfer your test MATIC tokens to other accounts. Violators will be banned from Testnet.
 

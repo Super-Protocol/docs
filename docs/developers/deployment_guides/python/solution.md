@@ -143,14 +143,10 @@ Then using the same logic create `text-file-2.txt` file in the `input-0001` subd
 Run the following command in the solution root directory to launch the solution inside a Docker container:
 
 ```
-docker run --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output:/sp/output \
+docker run --platform linux/amd64 --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/sp/inputs -v $PWD/output:/sp/output \
 --entrypoint /usr/bin/python3 -w /sp/run -e PYTHONPATH="${PYTHONPATH}:/sp/run/pypi/lib/python3.10/site-packages" \
 gsc-python3.10-base-solution:latest entrypoint.py
 ```
-
-Note: if you are running Docker on Mac, add this command `docker run --platform linux/arm64 --rm -ti`.
-
-<Highlight color="red">проверить что работает команда с платформой</Highlight>
 
 If done correctly, the `output` directory should now have two subdirectories, `input-0001` and `input-0002`, with .png image files containing the same text as the input files.
 
@@ -158,13 +154,11 @@ If done correctly, the `output` directory should now have two subdirectories, `i
 
 Now that we are happy with the way solution runs locally, the next steps are related to preparation for deployment to Super Protocol.
 
-Run the following [command](/developers/CLI_commands/solutions/generate-key) in the directory where you placed the SPCTL executable to generate the signing key for the solution :
+Run the following [command](/developers/CLI_commands/solutions/generate-key) in the directory where you placed the SPCTL executable to generate the signing key for the solution:
 
 ```
 ./spctl solutions generate-key signing-key
 ```
-
-<Highlight color="red">Для чего нужно подписывать решение ключом?</Highlight>
 
 ## Pack the solution
 
@@ -175,8 +169,6 @@ When the Docker image should run inside an Intel SGX enclave, the image has to b
 --base-image-path python3.10-base-solution-image-0.0.2.image.tar.gz \
 ./run signing-key
 ```
-
-<Highlight color="red">Для чего мы пакуем базовый образ Питона если он всё равно будет запущен отдельным оффером? Также возможно стоит не давать конкретное название файла, оно быстро устаревает, это уже старая версия</Highlight>
 
 After running the command, `solution.tar.gz` and `metadata.json` files are generated.
 

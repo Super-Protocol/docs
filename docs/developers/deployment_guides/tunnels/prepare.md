@@ -11,9 +11,9 @@ sidebar_position: 1
 
 - [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
 
-- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) - <Highlight color="red">для чего это</Highlight>
+- [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) - package manager needed for the Minecraft deployment example.
 
-- [GIT CLI](https://github.com/git-guides/install-git) - <Highlight color="red">для чего это</Highlight>
+- [GIT CLI](https://github.com/git-guides/install-git) - needed for cloning of repositories and automating GitHub Actions.
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 

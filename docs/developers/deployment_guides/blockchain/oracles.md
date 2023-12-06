@@ -27,15 +27,15 @@ The goal of this example is to show process of deploying and operating an oracle
 
 To successfully complete this advanced guide you will need experience with Node.js, EVM blockchains and Solidity programming. 
 
-В этой статье вы будете использовать разные инструменты, котороые мы рекомендуем настроить заранее:
+You will also  need the following:
 
-- [Polygonscan](https://polygonscan.com/login) - You will need to register and create API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai](https://mumbai.polygonscan.com/) Polygon testnet, you will need the mainnet API key.
+- [Polygonscan](https://polygonscan.com/login) - You will need to register and **create API Key** for contract verification on block explorer. Even though in this example we will be using the [Mumbai](https://mumbai.polygonscan.com/) Polygon testnet, you will need the mainnet API key.
 
 - [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
 
 - [Docker](https://www.docker.com/get-started/) - for building solutions
 
-- [CoinAPI](https://coinapi.io/) - register and receive the API key.
+- [CoinAPI](https://coinapi.io/) - register and **receive the API key**.
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
@@ -233,10 +233,7 @@ You should get a "Successfully verified" response.
 
 ### Deploy dApp
 
-Так как оракл выступает хранилищем данных, и его цель - это предоставление актуальных данных для on-chain мира, то для наглядности мы задеплоим простой контракт в роли такого decentralized application, которое будет использовать данные нашего оракла.
-
-<Highlight color="red">что за приложение, что за контракт? откуда это брать?</Highlight>
-
+Since Oracle serves as a data repository, and its goal is to provide up-to-date data for the on-chain world, for clarity, we will deploy a [simple contract](https://github.com/Super-Protocol/solutions/tree/main/Blockchain/sp-oracle/smart-contract/contracts) as a decentralized application that will use the data from our Oracle.
 
 ```
 npx hardhat deploy-app --oracle <oracle-address> --network mumbai

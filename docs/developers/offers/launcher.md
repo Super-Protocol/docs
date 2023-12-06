@@ -7,7 +7,7 @@ sidebar_position: 2
 
 ## About
 
-Tunnels Launcher is a pre-configured [provisioner](/developers/fundamentals/tunnels/provisioner) application that automates the deployment of server and client tunnels, essentially the same as GitHub Actions (see [guide](/developers/deployment_guides/tunnels/repo)). It's primary purpose to simplify the deployment of tunnels through the [Marketplace GUI](/developers/marketplace) which doesn't yet support custom tunnels deployment.
+Tunnels Launcher is a pre-configured [provisioner](/developers/fundamentals/tunnels/provisioner) application that automates the deployment of server and client tunnels, essentially the same as GitHub Actions (see [guide](/developers/deployment_guides/tunnels/repo)). It's primary purpose to simplify the deployment of tunnels through the [Marketplace GUI](/developers/marketplace) which doesn't yet support custom tunnels deployment. Tunnels Launcher uses Super Protocol DNS and SSL certificates.
 
 At the moment Tunnels Launcher works in two scenarios: deploying Super Chat and deploying static web pages.
 
@@ -21,7 +21,7 @@ Compatible offers for [Super Chat](/developers/offers/superchat):
 |:-------------------|:---------------|:------------------|:--------|:---------------|
 | Tunnels Launcher   | Node.js        | Super Chat Config | Storj   | Any compatible |
 
-*Super Chat Config* contains configuration settings such as DNS and SSL certificates. **Note:** you cannot upload any other data when using Super Chat Config as data offer.
+*Super Chat Config* directs Tunnel Launcher to which tunnel offers it needs to use and applies configurations. **Note:** you cannot upload any other data when using Super Chat Config as data offer.
 
 As output *Tunnels Launcher* produces a domain in this format: abcd-klmn-wxyz.superprotocol.io 
 
