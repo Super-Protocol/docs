@@ -6,7 +6,7 @@ sidebar_position: 8
 
 ---
 
-Prepare custom resource to be processed without sharing the source
+Prepare custom resource to be processed without sharing the source.
 
 ## Usage
 

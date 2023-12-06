@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ---
 
-Prepare the solutions to be deployed on Super Protocol.
+Prepare yours solutions to be deployed on Super Protocol.
 
 ## Usage
 

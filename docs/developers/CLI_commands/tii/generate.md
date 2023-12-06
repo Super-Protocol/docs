@@ -5,7 +5,7 @@ slug: "/cli_commands/tii/generate"
 sidebar_label: "generate"
 ---
 
-Generate TII from an uploaded resource
+Generate TII from an uploaded resource.
 
 ## Usage
 
