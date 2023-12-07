@@ -11,7 +11,7 @@ If you feel that the additional uptime of your solution would be beneficial to T
 
 ### Order limits
 
-* Orders will expire in 72 hours regardless of deposit.
+* Tunnel orders created by Tunnels Launcher will expire in 72 hours regardless of deposit.
 
 * A maximum of 2 open orders per user at the same time. Total number of orders unlimited. An order in status Done, Error or Canceled is considered closed.
 
@@ -38,6 +38,8 @@ To simplify Marketplace GUI for new users, we have streamlined some steps relate
 * All orders created through the GUI are using the default Super Protocol storage. So your order results are saved to our Storj account. But results are encrypted and only you have the key. We don't have the access.
 
 * Tunnels created using [Tunnels Launcher](/developers/offers/launcher) are using the Super Protocol DNS. So your domains will look something like this: [https://nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/).
+
+* Orders created by Tunnels Launcher are automatically deposited with TEE tokens for 72 hours of uptime.
 
 ### CLI commands
 
