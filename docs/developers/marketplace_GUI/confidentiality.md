@@ -40,7 +40,7 @@ If the deployed solution is a Marketplace offer, then you will see its name, a l
 
 The solution will be *Tunnels Launcher* if deployed through Marketplace GUI, and *Tunnel Client: Dynamic Content* or *Tunnel Client: Static Web Content* if deployed directly through CLI.
 
-But if the deployed solution is not from the Marketplace, you will see "Deployed solution is not an offer" text. This is not an error, just a warning that contents of the solution cannot be verified. This is typically the response that you'll get when deploying your own solution. For instance, a developer could locally put together their own version of Tunnel Client (just like we did with Tunnel Client: Super Chat), and then it won't be recognized as an offer because it's not listed on the Marketplace. But the base image (Node.js or Python) solution should be verified, since you will always be using the base image offer from the Marketplace.
+But if the deployed solution is not from the Marketplace, you will see "Deployed solution is not an offer" text. This is not an error, just a warning that contents of the solution cannot be verified. This is typically the response that you'll get when deploying your own solution. For instance, a developer could locally put together their own version of Tunnel Client (just like we did with Tunnel Client: Super Chat), and then it won't be recognized as an offer because it's not listed on the Marketplace. 
 
 <img src={require('./../images/gui_confidentiality_4.png').default} width="400" height="auto"/>
 

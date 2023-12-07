@@ -11,6 +11,8 @@ If you feel that the additional uptime of your solution would be beneficial to T
 
 ### Order limits
 
+* Orders will expire in 72 hours regardless of deposit.
+
 * A maximum of 2 open orders per user at the same time. Total number of orders unlimited. An order in status Done, Error or Canceled is considered closed.
 
 * For marketplace offers: Compute configurations can be at most 2x (double) the selected offer requirements. So if the total solutions+data requirements need 2 CPU cores, then the maximum compute you can select may have 4 CPU cores. Same for other parameters.
