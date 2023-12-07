@@ -17,7 +17,7 @@ The latest public release is Testnet Phase 4, launched on December 7, 2023. It i
 
 - **Resource Manager**. The resource manager allows for proper load balancing and compute resource allocation.
 
-- **New documentation for developers**. Our main audience at this point in testnet is Web3 developers. We want you to use Super Protocol to deploy your solutions and the new documentation includes many specific deployment guides and examples to help you. Read the guides [here](/developers/deployment_guides/).
+- **Updated documentation for developers**. Our main audience at this point in testnet are Web3 developers. We want you to use Super Protocol to deploy your solutions and the new documentation includes many specific deployment guides and examples to help you. Get started [here](/developers/).
 
 There are, of course, many more changes and updates under the hood. You may not see them, but they are there.
 

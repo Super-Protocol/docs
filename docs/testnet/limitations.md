@@ -35,7 +35,7 @@ To simplify Marketplace GUI for new users, we have streamlined some steps relate
 
 * All orders created through the GUI are using the default Super Protocol storage. So your order results are saved to our Storj account. But results are encrypted and only you have the key. We don't have the access.
 
-* Tunnels created using Hosting Launcher are using the Super Protocol DNS. So your domains will look like this: https://bd-veri-toms.superprotocol.io/
+* Tunnels created using [Tunnels Launcher](/developers/offers/launcher) are using the Super Protocol DNS. So your domains will look something like this: [https://nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/).
 
 ### CLI commands
 
