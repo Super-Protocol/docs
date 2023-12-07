@@ -6,8 +6,6 @@ sidebar_position: 2
 
 ---
 
-<Highlight color="red">проверить что новая версия после запуска</Highlight>
-
 Open Terminal in the directory where you want to place SPCTL and run the following commands:
 
 ### Linux
