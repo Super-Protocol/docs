@@ -153,7 +153,7 @@ At this point we assume that you have done all the steps in the previous section
 
 :::info Step 7. Connect Wallet.
 
-To connect wallet, click on the `Connect Wallet` button in the top right corner. Click on `Metamask`.
+To connect wallet, click on the `Connect Wallet` button in the top right corner. Click on `Metamask`. 
 
 :::
 
@@ -167,14 +167,6 @@ To connect wallet, click on the `Connect Wallet` button in the top right corner.
 <img src={require('./../images/metamask_12.png').default} width="300" height="auto" border="1"/>
 
 <br/>
-<br/>
-
-:::info Step 8. Select Metamask account.
-
-The Metamask app will open. Select the account that you have configured in the previous section.
-
-:::
-
 <br/>
 
 If everything is done correctly, you will see your account number as well as your token balance.
