@@ -335,13 +335,13 @@ Open the dApp contract page on Polygonscan: `https://mumbai.polygonscan.com/addr
 - processA - requests the BTC/USD price which is not older than 1 hour (and adds 1);
 - processB - requests any last BTC/USD price regardless of the data age (and adds 2).
 
-![img_3.png](img_3.png)
+<img src={require('./../../images/guides_blockchain_2.png').default} width="auto" height="auto"/>
 
 If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Polygonscan similarly to the dApp. However, as a key it won't take 'BTC/USD' directly, but rather the keccak256 hash of it.
 
 You can find open online services for convertation, but if you are using the same pair (BTC/USD), then the key will be `0xee62665949c883f9e0f6f002eac32e00bd59dfe6c34e92a91c37d6a8322d6489`. You can use it to call on the oracle methods.  
 
-![img_4.png](img_4.png)
+<img src={require('./../../images/guides_blockchain_3.png').default} width="auto" height="auto"/>
 
 On the screenshot above getDataCounts shows how many times the price was refreshed in blockchain.
 

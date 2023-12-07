@@ -32,4 +32,3 @@ And you're done!
 | [Setting up Storage](/developers/cli_guides/storages)   | Super Protocol uses external decentralized storage networks to store solutions, data and user service files. This guide describes how to set up your personal account with a storage. |
 | [Downloading SPCTL](/developers/CLI_guides/downloading) | Guide on downloading SPCTL. |
 | [Configuring SPCTL](/developers/cli_guides/configuring) | Guide on setting up your SPCTL with your storage, encryption and Super Protocol infrastructure.                                                                                       |
-| Confidential Execution                                  |                                                                                                                                                                                       |

@@ -17,7 +17,7 @@ You can use the steps below to get you started.
 
 ## Play around with GUI (beginner)
 
-If you are just starting out, we advise you to feel your way around Super Protocol using the Marketplace GUI, which is an interactive educational tool we use for onboarding new users. 
+If you are just starting out, we advise you to feel your way around Super Protocol using the Marketplace GUI. 
 
 Please follow these steps:
 
@@ -25,7 +25,7 @@ Please follow these steps:
 
 2. Follow [this guide](/developers/marketplace/first-steps) to set up your Testnet wallet with Metamask and connect to the Marketplace GUI.
 
-3. Complete the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to create a sample order using the UI.
+3. Complete the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnels order.
 
 This should give you some idea of the Super Protocol logic. 
 

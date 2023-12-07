@@ -5,32 +5,22 @@ slug: "/deployment_guides/blockchain"
 sidebar_position: 2
 ---
 
-![img_2.png](img_2.png)
-Для того чтобы обеспечить конфиденциальное взаимодействие ончейн и оффчейн компонентов, а также их интеграцию с защищенными web2-сервисами, применяется решение на основе Super Protocol. В этом процессе необходимо запустить конфиденциальный сервис, который будет связываться как с блокейном, так и с web2-сервисами из конфиденциальной среды.
 
-При этом получение внешних данных и сохранение результатов происходит через распределенное хранилище в зашифрованном виде, используя асимметричное шифрование. Сам же процессинг происходит в изолированных и безопасных анклавах на основе аппаратных средств.
+## Example
 
-Использование смарт контрактов в ончейн части системы позволяет не только автоматизировать процессы, но и обеспечивать их надежность и безопасность, а также связать результаты выполнения с ончейн процессингом.
+| **Guide**                                                                | **Description**                                                                            | 
+|:-------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
+| [Confidential Oracles](/developers/deployment_guides/blockchain/oracles) | This is a detailed guide on how to deploy a confidential Oracle service in Super Protocol. | 
 
-Конфиденциальный и защищенный каналы, предназначены для безопасного обмена данными между блокчейн-сетью и внешними приложениями. Это обеспечивается использованием протоколов шифрования, таких как HTTPS, для защиты данных в процессе их передачи и защиты от атаки посредине.
 
-Блокчейн маркетплейс Super Protocol выступает в качестве связующего звена между поставщиками вычислительных мощностей и потребителями услуг, упрощая процесс поиска и аренды необходимых ресурсов.
+## Deploying a Blockchain Service
 
-Таким образом, решение Super Protocol обеспечивает комплексную безопасность и надежность для выполнения конфиденциальных вычислений, и предоставления результатов в блокчейн-среду, учитывая все аспекты от управления ресурсами до интеграции с внешними сервисами.
+<img src={require('./../../images/guides_blockchain_1.png').default} width="auto" height="auto"/>
 
-Для запуска своего решения нужно: 
-1. Собрать свое решение, например на базовом образе NodeJs. Можно взять за основу пример с [Оракулом.](/developers/deployment_guides/blockchain/oracles)
+### Overview
 
-2. Развернуть смарт контракты, отвечающие за взаимодействие с решением и предоставляющие данные или выполняющие дальнейшие действия.
+Deploying solution to Super Protocol ensures confidential interaction between on-chain and off-chain components, as well as their integration with secure Web2 services. To do this it is necessary to launch a confidential service that will communicate with both the blockchain and Web2 services from inside a confidential environment (TEE).
 
-4. Создать заказ на аренду мощностей в Super Protocol и передать туда зашифрованное решение и данные (если это необходимо). Заказ можно создать как с помощью [CLI](/developers/cli_guides), так и с помощью [Маркетплейса](/developers/marketplace/).
+The use of smart contracts in the on-chain part of this architecture allows to automate processes, ensure their reliability and security, and link the results of execution with on-chain processing.
 
-5. Дождаться запуска заказа и получать промежуточные результаты из распределенного хранилища, в котором будут логи выполнения и файлы результата. Если во время выполнения решения произошли какие либо ошибки, они также будут представлены в результатах или логах. Это очень удобно для аудита и отладки кода.
-
-## Examples
-
-a few words about examples
-
-### Oracle
-
-a few words about Oracle example + link to the doc
+Confidential and secure channels are designed for safe data exchange between the blockchain network and external applications. This is achieved by employing encryption protocols, such as HTTPS, to protect data during transmission and guard against man-in-the-middle attacks.

@@ -5,15 +5,9 @@ slug: "/marketplace/"
 sidebar_position: 3
 ---
 
-## Marketplace
+## About
 
-Marketplace enables providers to list and monetize their [offers](/developers/offers) through Super Protocol. All offers are recorded on blockchain. Additionally, Solution and Data offers have content stored on decentralized storage networks such as Storj. These storage networks are represented by Storage offers. Compute offers are connected to confidential computing (TEE) machines that process the orders. 
-
-Marketplace can be managed entirely via [CLI](/developers/cli_commands/).
-
-## Marketplace GUI
-
-The purpose of Marketplace GUI is to present a user-friendly web interface to the Marketplace as well as an interactive learning experience for onboarding new users. We see it as a companion tool to CLI, but not yet a full alternative, as the GUI capabilities are currently limited. 
+The purpose of Marketplace GUI is to present a user-friendly web interface to the [Marketplace](/developers/fundamentals) as well as an interactive learning experience for onboarding new users. We see it as a companion tool to CLI, but not yet a full alternative, as the GUI capabilities are currently limited. 
 
 Go to Marketplace GUI: [marketplace.superprotocol.com](https://marketplace.superprotocol.com/)
 

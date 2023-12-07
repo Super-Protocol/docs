@@ -5,61 +5,38 @@ slug: "/fundamentals/tunnels"
 sidebar_position: 5
 ---
 
-## Tunnels Overview 1
+## Understanding tunnels
 
-Super Protocol можно использовать для обеспечения конфиденциальных вычислений в качестве Web3 сервиса. При этом сервисы предоставляют точки доступа через механизм туннелирования, а внешние сервисы подключения с белыми IP-адресами также работают в защищенных контейнерах. Таким образов создается безопасный мост между Web3 сервисом и пользовательскими приложениями.
+A *tunneling protocol* is a communication method that allows data to be wrapped within a different data format for secure and efficient transmission across a network. It enables the creation of virtual communication channels, or "tunnels," within a network, allowing data to pass through securely while appearing as if it is traveling over a direct connection.
 
-При этом получение внешних данных и сохранение результатов происходит через распределенное хранилище в зашифрованном виде, используя асимметричное шифрование. Сам же процессинг происходит в изолированных и безопасных анклавах на основе аппаратных средств.
+Super Protocol has implemented tunnels to provide decentralized confidential computing as a web service. In Super Protocol, tunnels consist of *Tunnel Server* and *Tunnel Client* solutions, with a confidential conneсtion between them. Tunnel server has an external public IP and is accessible via HTTPS from the internet (through a browser, for instance, or another service through API). Tunnel client, which runs the web server, "hides" behind the tunnel server from any malicious attacks. Both tunnel server and client run inside the TEE on their respective compute machines, ensuring confidentiality of contents and execution.
 
-Конфиденциальный и защищенный каналы, предназначены для безопасного обмена данными между Web3 сервисами и внешними приложениями. Это обеспечивается использованием протоколов шифрования, таких как HTTPS, для защиты данных в процессе их передачи и защиты от атаки посредине, а также аттестацией каналов связи между компонентами туннелей.
+A good practice when deploying tunnels through Super Protocol is to deploy multiple instances of clients and servers and distribute them over different CSPs, thus increasing decentralization and fault tolerance. 
 
-Блокчейн маркетплейс Super Protocol выступает в качестве связующего звена между поставщиками вычислительных мощностей и потребителями услуг, упрощая процесс поиска и аренды необходимых ресурсов.
+Learn more about deploying Node.js applications with tunnels in [this guide](/developers/deployment_guides/tunnels).
 
-![img_12.png](img_12.png)
+<br/>
 
-
-## Tunnels Overview 2
-
-
-
-IP-туннели — это технология, позволяющая обеспечить передачу сетевых пакетов между двумя (иногда более удаленными сетями) через другую сеть, такую как Интернет, используя IP-протокол. IP-туннели обеспечивают прозрачность маршрутизации и создают виртуальное сетевое соединение.
-
-Если у веб-сервера нет белого (публичного) IP-адреса, а другой сервер имеет публичный IP-адрес, можно использовать технологию туннелирования для того, чтобы сделать контент доступным через сервер с публичным IP-адресом.
-
-In Super Protocol two key components are used: the Tunnel Client and the Tunnel Server.
-
-### Tunnel Server
-
-(has public IP).
-
-Server acts as a forwarding mechanism between the client and the external connections (such as web users).
-
-A single tunnel server has the capacity to serve multiple domains and their corresponding tunnel clients concurrently. In situations where numerous tunnel clients connect to the same domain, the server utilizes a round-robin mechanism to evenly distribute requests among these clients.
-
-### Tunnel Client
-
-компонент который позволяет запустить локально веб сервер и связать его с туннель сервером.
-
-папочки - это конфигруацинные составляющие клиента. Конткент веб сервера находится в /sp/content. В отдельных случаях это может быть перепределено.
-
-(has no public IP)
-
-The Client contains solutions and data while the
-
-Для удобства и модульности, код веб-серверов разделен на две основные части: обычный веб-сервер и туннельный клиент. Это позволяет легче управлять и настраивать каждую часть независимо друг от друга и обеспечивает гибкость при необходимости изменений в будущем.
-
+<img src={require('./../images/fundamentals_tunnels_1.png').default} width="auto" height="auto"/>
 
 ## Advantages
 
-Схема с использованием туннелей имеет ряд преимуществ и может предоставить дополнительные уровни защиты. Ниже приведены некоторые из преимуществ и защитных мер, которые предлагает такая схема:
+1. **Hiding the Internal Network Structure:** Tunneling conceals the structure of the internal network from the external world. This makes it difficult to launch attacks on internal resources since attackers won't know which services are within the network.
 
-1. Скрытие внутренней сетевой структуры: Туннелирование скрывает структуру внутренней сети от внешнего мира. Это затрудняет проведение атак на внутренние ресурсы, так как атакующий не будет знать, какие сервисы находятся внутри сети.
+2. **Enhanced Security:** Tunneling is be combined with encryption to ensure the confidentiality and integrity of transmitted data. This is achieved by employing encryption protocols such as HTTPS to protect data during transmission and guard against man-in-the-middle attacks.
 
-2. Улучшенная безопасность: Туннелирование может использоваться в сочетании с шифрованием для обеспечения конфиденциальности и целостности передаваемых данных.
+3. **Reducing Attacks on Web Servers:** Since a web server without a public IP address is accessible only through a tunnel, attackers cannot directly target it. Network-level attacks, such as DDoS, will be directed at the server with a public IP address, helping to reduce the risk of impacting the web server.
 
-3. Уменьшение атак на веб-сервер: Так как веб-сервер без публичного IP-адреса доступен только через туннель, атакующий не сможет напрямую атаковать его. Атаки на уровне сети, такие как DDoS, будут направлены на сервер с публичным IP-адресом, что может помочь снизить риск воздействия на веб-сервер.
+4. **Flexibility and Scalability:** Tunneling allows flexible configuration of the network infrastructure and facilitates the scalability of the system. Both tunnel clients and tunnel servers can be added or removed through DNS without affecting the system as a whole. Tunnel servers also act as load balancers by using a round-robin mechanism to evenly distribute requests among multiple client tunnels.
 
-4. Гибкость и масштабируемость: Туннелирование позволяет гибко настраивать сетевую инфраструктуру и облегчает масштабирование системы. Сервера с публичными IP-адресами могут быть добавлены или удалены из системы без значительных изменений на веб-серверах без публичных IP-адресов.
+
+
+
+
+
+
+
+
 
 
 

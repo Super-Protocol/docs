@@ -76,8 +76,8 @@ Your hex codes should be just like this, without changes.
 
 As result, your GitHub Secrets and GitHub Variables should look something like this:
 
-<Imager src={require('./images/secrets.png').default} />
-<Imager src={require('./images/values.png').default} />
+<img src={require('./../../images/guides_tunnels_3.png').default} width="auto" height="auto"/>
+<img src={require('./../../images/guides_tunnels_4.png').default} width="auto" height="auto"/>
 
 ## Run tunnel server Github Action
 

@@ -5,11 +5,9 @@ slug: '/deployment_guides/tunnels'
 sidebar_position: 3
 ---
 
-# Deployment of Node.js apps with Tunnels
-
 You can find a general overview of tunnels [here](/developers/fundamentals/tunnels).
 
-## Contents
+## Guides
 
 ### Main Deployment Steps
 
@@ -24,7 +22,7 @@ These are the detailed steps that may be used to deploy tunnels with any solutio
 
 ### Examples
 
-Complimentary to the main steps, these are specific examples on how to deploy selected solutions.
+Complementary to the main steps, these are specific examples on how to deploy selected solutions.
 
 | **Guide**                                                              | **Description**                                                         | 
 |:-----------------------------------------------------------------------|:-------|
@@ -43,7 +41,7 @@ Step to deploy your solution using tunnels:
 1. Generate the SSL certificate.
 2. Build your solution using the Node.js base image. For example, [Minecraft](/developers/deployment_guides/tunnels/minecraft).
 3. Prepare and place an order for running a [tunnel server](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-server) inside a compute TEE.
-4.  Prepare your solution and use it as data to place an order for running a [tunnel client](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) inside a compute TEE.
+4.  Prepare your solution and add it as data to place an order for running a [tunnel client](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) inside a compute TEE.
 5. Wait ~10 minutes until the orders have started and create the required DNS records with your domain provider. Any errors that may happen during the deployment will be downloadable as logs.
 
 ### Tunnel Server
@@ -59,6 +57,7 @@ The result of the tunnel server order is a JSON string, such as `{"ip":"123.123.
 For deployment, tunnel client needs for input the following data:
 
 * A `config.json`:
+
 ```
 {
 "tunnels": [
@@ -74,21 +73,20 @@ For deployment, tunnel client needs for input the following data:
 }
 }
 ```
+
 * An SSL certificate file (such as `certificate.crt`);
 * A private key to the SSL certificate file (such as `private.pem`);
 * A */content/* folder that contains the solution or static website.
 
 Tunnel client does the following:
 
-1. Deploy a local HTTPS web server with the solution. The solution needs to have a `server.js` in one of its input folders: `/content`, `/content/dist`, `/content/build`.
+1. Deploy a local HTTPS web server with the solution. The solution needs to have a `server.js` in one of its input folders: `/content`, `/content/dist`, `/content/build` and accept the following env variables:
 
-and accept the following env variables:
+   - `HTTPS_PORT` - Port on which the local HTTPS web server is to be deployed and which will accept incoming connections.
 
-* `HTTPS_PORT` - Port on which the local HTTPS web server is to be deployed and which will accept incoming connections.
+   - `TLS_CERT` - SSL certificate of the HTTPS server.
 
-* `TLS_CERT` - SSL certificate of the HTTPS server.
-
-* `TLS_KEY` - Private key to the SSL of the HTTPS server.
+   - `TLS_KEY` - Private key to the SSL of the HTTPS server.
 
 2. Reads the domain certificate and connection token from the configuration file config.json.
 
