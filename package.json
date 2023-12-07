@@ -1,6 +1,6 @@
 {
   "name": "sp-doc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -15,22 +15,25 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "2.1.0",
-    "@docusaurus/plugin-client-redirects": "^2.1.0",
-    "@docusaurus/preset-classic": "2.1.0",
-    "@mdx-js/react": "^1.6.22",
-    "clsx": "^1.1.1",
-    "docusaurus-plugin-typedoc": "^0.17.2",
-    "hast-util-is-element": "1.1.0",
-    "prism-react-renderer": "^1.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "@docusaurus/core": "^3.0.0",
+    "@docusaurus/plugin-client-redirects": "^3.0.0",
+    "@docusaurus/preset-classic": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^1.2.1",
+    "docusaurus-plugin-typedoc": "^0.21.0",
+    "hast-util-is-element": "3.0.0",
+    "prism-react-renderer": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-fontawesome": "^1.7.1",
     "rehype-katex": "5",
-    "remark-math": "3",
-    "solidity-docgen": "^0.6.0-beta.8",
-    "typedoc": "^0.22.14",
-    "typedoc-plugin-markdown": "^3.11.14",
-    "typescript": "^4.6.3"
+    "rehype-translate": "^0.0.1",
+    "remark-admonitions": "^1.2.1",
+    "remark-math": "6.0.0",
+    "solidity-docgen": "^0.6.0-beta.36",
+    "typedoc": "^0.25.3",
+    "typedoc-plugin-markdown": "^3.17.0",
+    "typescript": "~5.2.2"
   },
   "browserslist": {
     "production": [
@@ -39,13 +42,17 @@
       "not op_mini all"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
     ]
   },
   "devDependencies": {
-    "docusaurus": "^1.14.7",
+    "@docusaurus/module-type-aliases": "3.0.0",
+    "@docusaurus/types": "3.0.0",
     "solc-0.8.4": "npm:solc@^0.8.13"
+  },
+  "engines": {
+    "node": ">=18.0"
   }
 }

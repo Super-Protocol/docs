@@ -2,3 +2,6 @@ build
 node_modules
 .docusaurus
 **/.DS_Store
+.idea
+ yarn-error.log
+ssh.pub

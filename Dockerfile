@@ -1,4 +1,4 @@
-FROM node:16-buster AS builder
+FROM node:18-buster AS builder
 
 ARG NPM_TOKEN
 WORKDIR /app
