@@ -35,7 +35,7 @@ Now you can dive right into it:
 
 4. Follow [this guide](/developers/cli_guides/) to set up your storage account and configure SPCTL.
 
-5. Familiarize yourself with the concepts of [tunnels](/developers/fundamentals/tunnels) and [slots](/developers/fundamentals/slots), as well as key [CLI commands](/developers/cli_commands) and [Testnet limitations](/testnet/limitations).
+5. Familiarize yourself with the [fundamentals](/developers/fundamentals) as well as key [CLI commands](/developers/cli_commands) and [Testnet limitations](/testnet/limitations).
 
 6. Take your pick of [deployment guides](/developers/deployment_guides/) with examples to help you through.
 

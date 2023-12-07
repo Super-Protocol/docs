@@ -15,11 +15,9 @@ Any type of dynamic or static content may be deployed using tunnels in Super Pro
 
 ## Off-Chain Computing
 
-Off-chain computing - as in taking certain calculations off-chain and then recording the results back on-chain - is used in Super Protocol to execute sensitive data in real time inside the TEE, ensuring confidentiality and protection from unauthorized third parties. The problem with true off-chain computing in Web3 has always boiled down to the matter of where exactly will these calculations take place? If a Dapp uses a centralized cloud provider, then it's a compromise on decentralization. If it uses decentralized computing, then it's a compromise on security, because data-in-use is unprotected during execution and thus the owner of the host machine may potentially tamper with the data. 
+Off-chain computing - as in taking certain calculations to off-chain and then recording the results back on-chain - is used in Super Protocol to run blockchain-integrated Web3 services in real time inside the TEE, ensuring confidentiality and protection from unauthorized third parties. 
 
-Super Protocol solves this dilemma by combining decentralization with confidential computing, which protects the data-in-use even from the owner of the host (compute provider). Any types of applications may be run inside the TEE and integrated with any blockchain Web3 services.
-
-As an illustration we have developed our own Oracle application to show how TEE may protect from possible vulnerabilities in the process of providing external information or real-world data to a smart contract. 
+As a showcase we have developed our own Oracle application to show how TEE may protect from possible vulnerabilities in the process of providing external information or real-world data to a smart contract. 
 
 Read [**this guide**](/developers/deployment_guides/blockchain) to learn how to deploy a confidential oracle service on Super Protocol.
 

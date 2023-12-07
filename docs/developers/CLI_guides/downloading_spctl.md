@@ -14,7 +14,7 @@ curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-lin
 chmod +x ./spctl
 ```
 
-### MacOS:
+### MacOS
 ```
 curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-macos-x64 -o spctl
 chmod +x ./spctl
