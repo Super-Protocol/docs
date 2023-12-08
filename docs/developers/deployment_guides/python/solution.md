@@ -145,7 +145,7 @@ Create subdirectory `input-0001` in `inputs` directory. In this new subdirectory
 Super Protocol is awesome!
 ```
 
-Then using the same logic create `text-file-2.txt` file in the `input-0001` subdirectory with any text you like.
+Then using the same logic create `text-file-2.txt` file in the `input-0002` subdirectory with any text you like.
 
 Run the following command in the solution root directory to launch the solution inside a Docker container:
 
