@@ -25,6 +25,18 @@ Create the following subdirectories in your solution root directory:
 
 And place your Python executables and libraries into the `run` folder.
 
+At the end of this guide your `run` folder should have next structure:
+
+```
+run
+├── arial.ttf
+├── entrypoint.py
+└── pypi
+    └── lib
+        └── python3.10
+            └── site-packages
+```
+
 ## Set-up entrypoint.py
 
 For illustration purposes, we will use a simple Python code as example. This program processes text files in a specified input directory, generates image from each text input, and saves the images in an output directory.
@@ -92,26 +104,6 @@ File `entrypoint.py` is the one that gets executed when you run your Python scri
 
 The script above requires `arial.ttf` font file in `run` directory. You can download it [here](https://www.freefontspro.com/d/14454/arial.zip).
 
-## Install Python libraries
-
-Create `requirements.txt` file in your solution root directory. For the script above, the content looks like this:
-
-```
-Pillow~=9.2.0
-```
-
-Run the following command in the `run` directory to download the required libraries:
-
-```
-pip3 install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
-```
-
-**Double-check!** At this step the content of `run` directory should look as follows:
-
-- `pypi` folder: Python libraries
-- `arial.ttf`: font file
-- `entrypoint.py`: Python script
-
 ## Install Python base image
 
 For deployment your solution will be using the Python base image that is available as an offer on the Marketplace. But first you will need to test your solution locally and prepare it for deployment. To do that you need to download the Python base image and load it to Docker.
@@ -126,6 +118,21 @@ Then use this command to load the Python image to Docker:
 
 ```
 docker load -i <Python base image archive name>
+```
+
+## Install Python libraries
+
+Create `requirements.txt` file in your solution root directory. For the script above, the content looks like this:
+
+```
+Pillow~=9.2.0
+```
+
+Run the following command in the `run` directory to download the required libraries using Docker and our base image:
+
+```
+docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -w /python gsc-python3.10-base-solution:latest ins
+tall -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
 
 ## Test the solution
