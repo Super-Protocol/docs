@@ -60,17 +60,17 @@ For deployment, tunnel client needs for input the following data:
 
 ```
 {
-"tunnels": [
-{
-"sgxMrSigner": "TUNNEL_SERVER_MRSIGNER",
-"sgxMrEnclave": "TUNNEL_SERVER_MRENCLAVE"
-}
-],
-"authToken": "AUTH_TOKEN",
-"site": {
-"cert": "./website-fullchain.crt",
-"key": "./website-private-key.pem"
-}
+  "tunnels": [
+    {
+      "sgxMrSigner": "TUNNEL_SERVER_MRSIGNER",
+      "sgxMrEnclave": "TUNNEL_SERVER_MRENCLAVE"
+    }
+  ],
+  "authToken": "AUTH_TOKEN",
+  "site": {
+    "cert": "./website-fullchain.crt",
+    "key": "./website-private-key.pem"
+  }
 }
 ```
 

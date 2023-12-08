@@ -25,28 +25,6 @@ Create the following subdirectories in your solution root directory:
 
 And place your Python executables and libraries into the `run` folder.
 
-At the end of this guide your folder should have next structure:
-
-```
-├── inputs
-│   ├── input-0001
-│   │   └── text-file-1.txt
-│   └── input-0002
-│       └── text-file-2.txt
-├── output
-│   ├── input-0001
-│   │   └── text-file-1.png
-│   └── input-0002
-│       └── text-file-2.png
-├── requirements.txt
-└── run
-    ├── arial.ttf
-    ├── entrypoint.py
-    └── pypi
-        └── lib
-            └── .....
-```
-
 ## Set-up entrypoint.py
 
 For illustration purposes, we will use a simple Python code as example. This program processes text files in a specified input directory, generates image from each text input, and saves the images in an output directory.
