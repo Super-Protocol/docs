@@ -48,13 +48,13 @@ You need to add the following secrets:
 - `SOLUTION_SSL_CERTIFICATE_BASE64` - save the base64 certificate from [Part 1](/developers/deployment_guides/tunnels/preparing) of this guide; to generate it from `fullchain.crt` from [Part 3](/developers/deployment_guides/tunnels/manual_run) use the following command:
 
   ```
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' tunnel-client-data/fullchain.crt | base64
+  cat tunnel-client-data/fullchain.crt | base64
   ```
 
 - `SOLUTION_SSL_KEY_BASE64` - private key from [Part 1](/developers/deployment_guides/tunnels/preparing) in the bas64 format; to generate it from `private.pem` file from [Part 3](/developers/deployment_guides/tunnels/manual_run) use the following command:
 
   ```
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' tunnel-client-data/private.pem | base64
+  cat tunnel-client-data/private.pem | base64
   ```
 
   If you private key and certificate files are named differently, then adjust the commands accordingly.
@@ -88,7 +88,7 @@ cd superprotocol-test-app
 mkdir -p .github/workflows
 ```
 
-Copy this file [superprotocol-test-app-tunnel-server.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml) into the new folder and rename it as `tunnel-server-deploy.yml`:
+Copy this file [superprotocol-test-app-tunnel-server.yml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml) into the new folder and rename it as `tunnel-server-deploy.yml`:
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-server.yml -o .github/workflows/tunnel-server-deploy.yml
@@ -106,7 +106,7 @@ Now go to the tab `Actions` from your repository and run `Run Test App tunnel-se
 
 ## Run tunnel client GitHub Action
 
-Copy file [superprotocol-test-app-tunnel-client.yaml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml) to that new */superprotocol-test-app/* folder and rename the file to `tunnel-client-deploy.yml`:
+Copy file [superprotocol-test-app-tunnel-client.yml](https://github.com/Super-Protocol/solutions/blob/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml) to that new */superprotocol-test-app/* folder and rename the file to `tunnel-client-deploy.yml`:
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/Github%20Actions/superprotocol-test-app-tunnel-client.yml -o .github/workflows/tunnel-client-deploy.yml
