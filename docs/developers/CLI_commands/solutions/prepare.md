@@ -44,7 +44,7 @@ Options:
 Prepare the solution using the signing key and the base image.
 * The solution is located in `./my-solution/run` folder;
 * The signing key is here: `./my-solution/signing-key`;
-* The base image can be downloaded using the `spctl download-content 2 --save-to ~/` command.
+* The base image can be downloaded using the `spctl download-content 5 --save-to ~/` command.
 Please see the example below (adjusting for folder paths and file names):
 ```
 ./spctl solutions prepare --pack-solution my-solution.tar.gz --write-default-manifest --base-image-path ~/node16-base-solution-image-v0.1.0.tar.gz --sgx-max-threads 256 --sgx-enclave-size 16G ./my-solution/run ./my-solution/signing-key
@@ -53,7 +53,7 @@ Please see the example below (adjusting for folder paths and file names):
 Prepare the solution based on NodeJs
 * The solution is located in `./sp-run` folder;
 * The signing key is here: `./enclave-key.pem`;
-* The base image can be downloaded using the `spctl download-content 3 --save-to ./base-image/node16` command.
+* The base image can be downloaded using the `spctl download-content 6 --save-to ./base-image/node16` command.
 ```
 ./spctl solutions prepare --pack-solution ./solution-based-on-node16.tar.gz --write-default-manifest --base-image-path ./base-image/node16 ./sp-run ./enclave-key.pem --sgx-enclave-size 32G --sgx-max-threads 256 --env NODE_OPTIONS=--max-old-space-size=16384
 ```
