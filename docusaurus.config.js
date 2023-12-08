@@ -16,6 +16,10 @@ const config = {
   favicon: "favicon.ico",
   organizationName: "Super Protocol", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
@@ -55,21 +59,10 @@ const config = {
       {
         redirects: [
           {
-            from: "/introduction",
-            to: "/",
+            from: "/",
+            to: "/developers",
           },
         ],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "developers",
-        path: "./docs/developers",
-        routeBasePath: "/developers",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
       },
     ],
   ],
@@ -79,11 +72,10 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "./docs/introduction",
-          routeBasePath: "/",
+          path: "./docs/developers",
+          routeBasePath: "/developers",
           remarkPlugins: [math],
           rehypePlugins: [katex],
-          //sidebarPath: "./sidebars.js",
         },
         blog: {
           showReadingTime: true,
@@ -102,13 +94,14 @@ const config = {
         logo: {
           alt: "Super Protocol Logo",
           src: "navbar/images/logo.svg",
+          href: '/developers'
         },
         items: [
           {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Introduction",
+            label: "Developers",
           },
           {
             type: "doc",
@@ -131,13 +124,6 @@ const config = {
             label: "Testnet",
             docsPluginId: "testnet",
           },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "Developers",
-            docsPluginId: "developers",
-          },
         ],
       },
       prism: {
@@ -157,4 +143,4 @@ const config = {
   ],
 };
 
-module.exports = config;
+export default config;

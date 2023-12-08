@@ -11,7 +11,7 @@ Now you will need to execute together:
 
 * Your Python solution (`solution.json` uploaded to the storage);
 * Python base image solution offer from the [Marketplace](https://marketplace.superprotocol.com/solutions?offerId=5);
-* Your two datasets (`input-1.json` and `input-2.json` uploaded to storage).
+* Your two datasets represented by `input-1.json` and `input-2.json` (which will direct TEE to download the archives from storage).
 
 Use the following [command](/developers/cli_commands/workflows/create):
 
