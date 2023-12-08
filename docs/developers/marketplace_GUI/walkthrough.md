@@ -212,11 +212,11 @@ But that's not all. The Tunnels Launcher has created [tunnels](/developers/funda
 
 :::
 
-As mentioned in the beginning, the Tunnels Launcher is a pre-configured provisioner app that automatically creates a set of tunnels. The Launcher has fulfilled its mission and terminated (status Done). But when you go to the individual tunnel orders you will see that they are processing - which means that they are up and running, and will be running as long as you keep the deposit up (note: this is true for orders created via CLI, but for orders created via Tunnels Launcher the lifespan is 72 hours). 
+As mentioned in the beginning, the Tunnels Launcher is a pre-configured provisioner app that automatically creates a set of tunnels. The Launcher has fulfilled its mission and terminated (status Done). But when you go to the individual tunnel orders you will see that they are processing - which means that they are up and running, and will be running as long as you keep the deposit up - at least for tunnel orders created via CLI. For tunnels created by Tunnel Launcher the built-in limit is 72 hours.
 
 Note that the tunnel client is running the Tunnel Client: Super Chat solution offer, it's basically a pre-packed offer with the Super Chat app inside, created specifically for Tunnels Launcher. You can deploy one just like that using CLI and [this guide](/developers/deployment_guides/tunnels).
 
-Another note: tunnel server has a blue *Get Result* button. To open it you will need the *Private key for created orders* which you got from the Tunnels Launcher in Step 10. The result of the tunnel server is its IP and port. You would need this information to set up the DNS for your own domain. 
+Another note: tunnel server has a blue *Get Result* button. To open it you will need the *Private key for created orders* which you got from the Tunnels Launcher in Step 10. The result of the tunnel server is its IP and port. When deploying via CLI you would need this information to set up the DNS for your own domain. 
 
 
 <img src={require('./../images/marketplace_19.png').default}/>
