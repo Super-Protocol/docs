@@ -42,7 +42,7 @@ const express = require('express');
 
 const app = express();
 app.use((_req, res) => {
-   res.status(200).send('Got it!')
+   res.status(200).send('Superprotocol Tunnels are awesome!')
 });
 
 let server;
@@ -105,6 +105,6 @@ Now run the server locally:
 docker run --platform linux/amd64 -p 3001:3001 --rm -it -w /sp/run  -v $PWD/superprotocol-test-app:/sp/run --entrypoint /usr/local/bin/node gsc-node16-base-solution:latest /sp/run/server.js
 ```
 
-Go to http://localhost:3001. Browser should show you this text: "Got it!"
+Go to http://localhost:3001. Browser should show you this text: "Superprotocol Tunnels are awesome!"
 
 If you see error *"Bind for 0.0.0.0:3001 failed: port is already allocated"* - replacе 3001 with any other port available.
