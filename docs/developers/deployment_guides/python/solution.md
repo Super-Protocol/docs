@@ -25,16 +25,26 @@ Create the following subdirectories in your solution root directory:
 
 And place your Python executables and libraries into the `run` folder.
 
-At the end of this guide your `run` folder should have next structure:
+At the end of this guide your folder should have next structure:
 
 ```
-run
-├── arial.ttf
-├── entrypoint.py
-└── pypi
-    └── lib
-        └── python3.10
-            └── site-packages
+├── inputs
+│   ├── input-0001
+│   │   └── text-file-1.txt
+│   └── input-0002
+│       └── text-file-2.txt
+├── output
+│   ├── input-0001
+│   │   └── text-file-1.png
+│   └── input-0002
+│       └── text-file-2.png
+├── requirements.txt
+└── run
+    ├── arial.ttf
+    ├── entrypoint.py
+    └── pypi
+        └── lib
+            └── .....
 ```
 
 ## Set-up entrypoint.py
