@@ -11,7 +11,7 @@ At first we need to prepare and upload data.
 
 ## Create data archives
 
-After successfully completed [previous step](/deployment_guides/python/solution_prep) you should have two folders `input-0001` and `input-0002` in `input` folder. We need to pack both these input directories (`input-0001` and `input-0002`) into separate tar.gz archives:
+After successfully completed [previous step](/developers/deployment_guides/python/solution_prep) you should have two folders `input-0001` and `input-0002` in `input` folder. We need to pack both these input directories (`input-0001` and `input-0002`) into separate tar.gz archives:
 
 ```
 tar -czvf input-1.tar.gz -C <your solution root directory>/inputs/input-0001 .
