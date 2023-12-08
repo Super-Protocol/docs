@@ -28,4 +28,4 @@ tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
 ```
 ./spctl files upload input-2.tar.gz --output input-2.json --filename input-2.tar.gz
 ```
-Files `input-1.json` and `input-2.json` have been uploaded to storage.
+Files `input-1.tar.gz` and `input-2.tar.gz` have been uploaded to storage.
