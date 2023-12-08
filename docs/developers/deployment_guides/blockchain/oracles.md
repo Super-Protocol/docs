@@ -66,7 +66,7 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `PRIVATE_KEY` - Your Polygon testnet wallet private key with MATICs. **Note:** this is not the testnet wallet that you received from the Super team, you will need to create your own wallet for the oracle and add MATICs to it.
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` - Your Polygon testnet wallet private key with MATICs. **Note:** this is not the testnet wallet that you received from the Super team, you will need to create your own wallet for the oracle and add MATICs to it.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
@@ -104,7 +104,7 @@ You should get a "Successfully verified" response. Now you can observe your depl
 
 Now we move to the preparing and deploying the components of the oracle itself. This process consists of two components:
 
-- An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (every 10 minutes).
+- An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (every 5 minutes).
 
 - The oracle smart contract that will store the BTC/USD price data. It will also verify, by using the x509 smart contract from previous step, that the request comes from a trusted off-chain service.
 
@@ -132,15 +132,7 @@ Go to your project directory and execute this [command](/developers/CLI_commands
 ./spctl offers download-content 6
 ```
 
-It will download file `node16-base-solution-image*` to the current directory.
-
-Now you need to load it into Docker. Paste this command to terminal and press `Tab` to autocomplete the name of the image:
-
-```shell
-docker load --input node16-base-solution-image
-```
-
-You will see the output `Loaded image: gsc-node16-base-solution:latest`.
+It will download file `node16-base-solution-image-v0.3.1.tar.gz` to the current directory.
 
 ### Writing manifest and encrypting the oracle service
 
@@ -153,10 +145,8 @@ Next, we will build a Docker image of the service. For the Docker image to run i
 Then, execute the following command in the root of your project to prepare and pack the solution:
 
 ```shell
-./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path <base image archive file name> $(pwd)/solutions/Blockchain/sp-oracle/script/run/ signing-key
+./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path node16-base-solution-image-v0.3.1.tar.gz ./solutions/Blockchain/sp-oracle/script/run/ signing-key
 ```
-
-(Note: `$(pwd)` will add the root path to a run folder to make it absolute).
 
 The result will be `oracle-solution.tar.gz` and `metadata.json` files. 
 
@@ -185,7 +175,7 @@ For this step you will need an Ethereum account with MATIC testnet coins on it. 
 
 The next actions are nearly identical to the Prepare section from Step 1.
 
-Go to the directory containing smart-contract: `solutions/Blockchain/sp-oracle/smart-contract/` and make a copy of the `.env`.
+Go to the directory containing smart-contract and make a copy of the `.env`.
 
 ```shell
 cd ./solutions/Blockchain/sp-oracle/smart-contract/
@@ -194,7 +184,7 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `PRIVATE_KEY` - The private key to your test wallet with MATIC tokens.
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` - The private key to your test wallet with MATIC tokens.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
@@ -217,9 +207,9 @@ Where:
 
 - `<publisher-address>` - Ethereum wallet address that will be used by Oracle service to send new prices to the contract;
 
-- `<MRENCLAVE>` and `<MRSIGNER>` - values that you received at the end of [Step 2](#step-2-prepare-oracle-service-for-deployment-on-super-protocol). <br/>**Note:** if at some point you will need to redo Step 2 and prepare the solution again, you will have different MRENCLAVE and MRSIGNER and will have to change them in the smart contract. Refer to [changing MRENCLAVE and MRSIGNER](#changing-mrenclave-and-mrsigner) to modify these without redeploying the contract;
+- `<MRENCLAVE>` and `<MRSIGNER>` - values that you received at the end of [Step 2](#writing-manifest-and-encrypting-the-oracle-service). <br/>**Note:** if at some point you will need to redo Step 2 and prepare the solution again, you will have different MRENCLAVE and MRSIGNER and will have to change them in the smart contract. Refer to [updating MRENCLAVE and MRSIGNER](#updating-mrenclave-and-mrsigner) to modify these without redeploying the contract;
 
-- `<x509-verifier-address>` - x509 verifier contract address, the result of [Step 1](#step-1-deploy-the-x509-verifier-smart-contract).
+- `<x509-verifier-address>` - x509 verifier contract address, the result of [Step 1](#deploy-the-smart-contract).
 
 The result will be the oracle smart contact address. Use it to verify the contract on-chain, as we did for x509-verifier:
 
@@ -233,7 +223,7 @@ You should get a "Successfully verified" response.
 
 ### Deploy dApp
 
-Since Oracle serves as a data repository, and its goal is to provide up-to-date data for the on-chain world, for clarity, we will deploy a [simple contract](https://github.com/Super-Protocol/solutions/tree/main/Blockchain/sp-oracle/smart-contract/contracts) as a decentralized application that will use the data from our Oracle.
+Since Oracle serves as a data repository, and its goal is to provide up-to-date data for the on-chain world, for clarity, we will deploy a [simple contract](https://github.com/Super-Protocol/solutions/tree/main/Blockchain/sp-oracle/smart-contract/contracts/App.sol) as a decentralized application that will use the data from our Oracle.
 
 ```
 npx hardhat deploy-app --oracle <oracle-address> --network mumbai
@@ -289,7 +279,7 @@ And configure it:
 * `interval` - the frequence of requests to the API (how often the data will be published);
 * `dataKey` - key by which historical data of requests will be stored in the smart contract, for instance “BTC/USD”;
 * `smartContractAddress` - address of the oracle smart contract;
-* `publisher` - address and the private key of the wallet which will be publishing data from the TEE onto blockchain;
+* `publisher` - address and the private key of the wallet that was used as `<publisher-address>` on the previous step for [Oracle deployment](#deploy-oracle). Again, it will be publishing data from the TEE onto blockchain;
 * `apiConfig` - containing:
     - `endpoint` - API URL (default using CoinAPI);
     - `auth` - the authentication key required by [CoinAPI](https://docs.coinapi.io/authentication#x-coinapi-key-header). If you are using another API that doesn't require authentication, then leave this field blank;
@@ -305,16 +295,17 @@ Create an archive with those files:
 tar -czvf oracle-input.tar.gz input.json ca_certificates.crt
 ```
 
-Open a new terminal, go to your SPCTL folder, and upload the archive to the storage:
+Go to the base directory with your SPCTL and upload the archive to the storage:
 
 ```shell
+cd ../../../../../
 ./spctl files upload ./solutions/Blockchain/sp-oracle/script/inputs/oracle-input.tar.gz --output oracle-input.json --filename oracle-input.tar.gz
 ```
 
 `oracle-input.json` will be created. We will use it and `oracle-solution.json` from Step 2 to create an order:
 
 ```shell
-./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 23,27 --solution 6,2 --solution oracle-solution.json --data oracle-input.json
+./spctl workflows create --tee 1,1 --tee-slot-count 1 --tee-options 1 --tee-options-count 1 --storage 23,27 --solution 6,2 --solution oracle-solution.json --data oracle-input.json --min-rent-minutes 60
 ```
 
 The result will be an order ID.
