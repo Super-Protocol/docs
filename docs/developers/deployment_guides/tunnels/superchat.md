@@ -80,6 +80,11 @@ Next, follow the steps in [Part 4](/developers/deployment_guides/tunnels/repo#pr
 
 **Required GitHub Secrets:**
 
+- `CHAT_ENV` - *.env* file, which you prepared previously. Convert it to base64 using this command:
+  ```bash
+  cat .env | base64
+  ```
+
 - `GH_TOKEN` - same as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables).
 
 - `SUPERCHAT_SOLUTION_SERVER_TOKEN` - any random UUID. Generate it using this command:
