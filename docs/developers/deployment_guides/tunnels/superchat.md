@@ -80,6 +80,11 @@ Next, follow the steps in [Part 4](/developers/deployment_guides/tunnels/repo#pr
 
 **Required GitHub Secrets:**
 
+- `CHAT_ENV` - *.env* file, which you prepared previously. Convert it to base64 using this command:
+  ```bash
+  cat .env | base64
+  ```
+
 - `GH_TOKEN` - same as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables).
 
 - `SUPERCHAT_SOLUTION_SERVER_TOKEN` - any random UUID. Generate it using this command:
@@ -93,13 +98,13 @@ Next, follow the steps in [Part 4](/developers/deployment_guides/tunnels/repo#pr
 - `SUPERCHAT_SOLUTION_SSL_CERTIFICATE_BASE64` - generate a separate SSL certificate for Minecraft ([Part 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate)). Convert it to base64 using this command:
 
   ```bash
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <your SSL cerficate.crt> | base64
+  cat <your SSL cerficate.crt> | base64
   ```
 
-- `MINECRAFT_SOLUTION_SSL_KEY_BASE64` - private key from your generated SSL certificate ([Part 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate)). Convert it to base64 using this command:
+- `SUPERCHAT_SOLUTION_SSL_KEY_BASE64` - private key from your generated SSL certificate ([Part 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate)). Convert it to base64 using this command:
 
   ```bash
-  awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' <your SSL private key.pem> | base64
+  cat <your SSL private key.pem> | base64
   ```
 
 - `SPCTL_CONFIG_BASE64` - same as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables).

@@ -48,7 +48,7 @@ This section contains parameters needed to establish a connection to the Polygon
 |**Parameter**| **Description**                                                                                                                                                 |
 | :- |:----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |rpcUrl| `https://mumbai.polygon.superprotocol.com/hesoyam`<br/><br/>**Note.** You can use a different node, but the Super Protocol team will not be able to support it. |
-|smartContractAddress| `0xf96266Ec42f8D7ccf5831eBCaD3f4851967e9D45`                                                                                                                    |
+|smartContractAddress| `0xA7Ff565f26b93926e4e6465Eb81d48EfF456848b`                                                                                                                    |
 |accountPrivateKey| Your personal Private Key from the Testnet invitation email. If you don't have this token, you can apply for Testnet access [here](/testnet/).                  |
 |authorityAccountPrivateKey| Required to create offers. Leave this blank for now.                                                                                                            |
 
