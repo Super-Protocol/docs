@@ -17,17 +17,6 @@ This chat is a technological demo app initially developed for Testnet 3 with a g
 
 ## Access Super Chat
 
-### Use our deployment
-
-Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes: [https://nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/). 
-
-This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
-
-Tunnel server order: [196](https://marketplace.superprotocol.com/order/196) <br/>
-Tunnel server order: [206](https://marketplace.superprotocol.com/order/206) <br/>
-Tunnel client order: [209](https://marketplace.superprotocol.com/order/209) <br/>
-Tunnel client order: [202](https://marketplace.superprotocol.com/order/202) <br/>
-
 ### Deploy your own Super Chat
 
 Any Testnet 4 user can deploy their own Super Chat and share with friends. There are two ways to do that:
