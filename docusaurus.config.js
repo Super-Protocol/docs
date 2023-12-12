@@ -141,6 +141,16 @@ const config = {
       type: "text/css",
     },
   ],
+  themes: [[
+    "@easyops-cn/docusaurus-search-local",
+    ({
+      hashed: true,
+      docsRouteBasePath: ["developers", "faq", "introduction", "testnet", "whitepaper"],
+      language: ["en"],
+      highlightSearchTermsOnTargetPage: true,
+      explicitSearchResultPath: true,
+    }),
+  ]]
 };
 
 export default config;
