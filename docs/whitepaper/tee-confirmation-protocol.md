@@ -220,7 +220,7 @@ Fig. 2
 
 <p align="center"><img src={require('./images/tee-confirmation-protocol-12.png').default} /></p>
 
-Table 1 and Figures 1, 2 show that with $AbuseDevices<=4970$ and having the initial parameter values a complete elimination of malicious users in the system is ensured, but it takes from 64.8 to 88.8 days, which requires significant costs during system operation, and also it does not satisfy the $О_3$ constraint. Between 4332 and 4814 (i.e., 85% to 95.7%) of good devices are blocked simultaneously in the system. A minimum value of $GoodBlocked=4332$ with $AbuseDevices=4900$ is highly inefficient. Further research is aimed at finding system parameters that optimize the criteria $K_1$ and $K_2$ under $О_1$ - $О_3$ constraints.
+Table 1 and Figures 1, 2 show that with $AbuseDevices<=4970$ and having the initial parameter values a complete elimination of malicious users in the system is ensured, but it takes from 64.8 to 88.8 days, which requires significant costs during system operation, and also it does not satisfy the $O_3$ constraint. Between 4332 and 4814 (i.e., 85% to 95.7%) of good devices are blocked simultaneously in the system. A minimum value of $GoodBlocked=4332$ with $AbuseDevices=4900$ is highly inefficient. Further research is aimed at finding system parameters that optimize the criteria $K_1$ and $K_2$ under $O_1$ - $O_3$ constraints.
 
 ### System optimization
 
@@ -246,7 +246,7 @@ As a result of the simulation, a global minimum at a certain point was found:
 
 - $L_1=1$, $L_2=109$, $K=100$, $PenaltyCount=15$
 - $GoodBlocked=162,67$ with $Days=72$
-- This point does not meet the constraints $О_1$ - $О_3$
+- This point does not meet the constraints $O_1$ - $O_3$
 
 **Stage 2**. At this stage, we studied the behavior of the system ($GoodBlocked$) when changing $MaxPenaltyCount$ for fixed values of $AbuseDevices=4970$, $L_1=60$, $L_2=60$, and $K=110$.
 
@@ -305,11 +305,11 @@ Analysis of the above table shows that:
 
 - The optimal $GoodBlocked$ values (with a fixed $MaxPenaltyCount$ value) are achieved with a sufficiently large $K>=60$;
 - For a given $K$, the optimal $GoodBlocked$ values are almost always reached when $L_1$ and $L_2$ are such that $L_1+L_2>K$. Thus, point 5 from Table 4 is also a candidate for the optimal point;
-- None of the points in Table 4 satisfies the constraints $О_1$ - $О_3$.
+- None of the points in Table 4 satisfies the constraints $O_1$ - $O_3$.
 
 Analysis of Table 4 shows that point 18 is the closest to the acceptable area.
 
-**Stage 4**. At this stage, a point was found that was located within the acceptable $О_1$ - $О_3$ area and at the same time provided the best value for $GoodBlocked$.
+**Stage 4**. At this stage, a point was found that was located within the acceptable $O_1$ - $O_3$ area and at the same time provided the best value for $GoodBlocked$.
 
 This problem was solved by building regression models of $GoodBlocked$ and $Days$ depending on $L_1$, $L_2$, $K$, and $MaxPenaltyCount$ within the area of point 18, which was found previously in step 3. For this purpose, a rotatable central composition plan (RCCP) of the experiment was constructed for the following intervals of changes of system parameters:
 
@@ -431,7 +431,7 @@ Table 7. Results for the $Days$ calculation experiment
 |21|4970|2|36|13|45|41|40|41|44|42|41,6|
 |22|4970|2|36|15|45|47|46|47|49|46|47,0|
 
-Variable $Y_k$ here represents the results of a simulation experiment for functions $Y_1/Y_2$ at $k=1,2...v$, $v=5$, $Y_{iср}$ – average value of the output variable at the $i$-th point of the plan, $i=1,2...N$, $N=22$.
+Variable $Y_k$ here represents the results of a simulation experiment for functions $Y_1/Y_2$ at $k=1,2...v$, $v=5$, $Y_{icp}$ – average value of the output variable at the $i$-th point of the plan, $i=1,2...N$, $N=22$.
 
 The algorithm for building a regression model contains the following steps:
 
@@ -449,7 +449,7 @@ The algorithm for building a regression model contains the following steps:
 
    For model (1) $G_p=0,183$, for model (2) $G_p=0,141$.
 
-   The critical value of Cochrane criterion for the number of freedom degrees of numerator $q_1=v-1=4$ and denominator $q_2=N=22$ and confidence probability $р=0,95$ equals $G_{crit}=0,2$. Therefore, $G_p<G_{crit}$ the hypothesis of dispersion homogeneity of experiments is accepted and the theory of regression analysis can be applied to the results of experiments.
+   The critical value of Cochrane criterion for the number of freedom degrees of numerator $q_1=v-1=4$ and denominator $q_2=N=22$ and confidence probability $p=0,95$ equals $G_{crit}=0,2$. Therefore, $G_p<G_{crit}$ the hypothesis of dispersion homogeneity of experiments is accepted and the theory of regression analysis can be applied to the results of experiments.
 
 2. Calculate the dispersion matrix $C$ by the formula:
 
@@ -560,7 +560,7 @@ The algorithm for building a regression model contains the following steps:
    S_a^2=v\sum_{i=1}^N(Y_{icp}-Y_{iou})^2/q_a
    $$
 
-   where $Y_{iоu}$ – value of the response function at the $i$-th point of the plan, calculated by the formulas (1) and (2) at the points of the plan (Table 5) with the values of model coefficients (3) and (4),  $q_a=N-p$ – number of degrees of freedom, $p$ – number of model coefficients, $p=19$, $qа=3$.
+   where $Y_{iOu}$ – value of the response function at the $i$-th point of the plan, calculated by the formulas (1) and (2) at the points of the plan (Table 5) with the values of model coefficients (3) and (4),  $q_a=N-p$ – number of degrees of freedom, $p$ – number of model coefficients, $p=19$, $qa=3$.
 
    For model (1) $S_a^2=5320,45$, for model (2) $S_a^2=5,10$.
 
@@ -572,13 +572,13 @@ The algorithm for building a regression model contains the following steps:
    F_p=S_a^2/S_n^2
    $$
 
-   If $F_р<F_{cr}$, where $F_{cr}$ is the critical value of the Fisher distribution at significance level $β$ and degrees of freedom $q_a$ and $q_n$ for the numerator and denominator respectively, then the model is considered adequate.
+   If $F_p<F_{cr}$, where $F_{cr}$ is the critical value of the Fisher distribution at significance level $β$ and degrees of freedom $q_a$ and $q_n$ for the numerator and denominator respectively, then the model is considered adequate.
 
    For $q_a=3$, $q_n=88$. $Β=0,95$ we have $F_{cr}=2,71$.
 
-   For model (1) $F_р=1,704$ and $F_р<F_{cr}$ model (1) is adequate.
+   For model (1) $F_p=1,704$ and $F_p<F_{cr}$ model (1) is adequate.
 
-   For model (2) $F_р=3,96$ and $F_р>F_{cr}$ the hypothesis about the adequacy of model (2) must be rejected. However, the analysis of modeling results shows that Fisher's test fails because modeling results for model (2) are too accurate compared to the accuracy of approximation of the results by the model. Therefore, the coefficient of determination of the model is calculated to evaluate the adequacy of the model.
+   For model (2) $F_p=3,96$ and $F_p>F_{cr}$ the hypothesis about the adequacy of model (2) must be rejected. However, the analysis of modeling results shows that Fisher's test fails because modeling results for model (2) are too accurate compared to the accuracy of approximation of the results by the model. Therefore, the coefficient of determination of the model is calculated to evaluate the adequacy of the model.
 
 8. Let us find the coefficient of determination of the $R^2$ model, reflecting the correspondence of the built models of type (1), (2) to the experimental data. The coefficient of determination is calculated according to the following formulas:
 
@@ -612,11 +612,11 @@ The algorithm for building a regression model contains the following steps:
 
    The overall conclusion of this stage is that the models built are adequate to the experimental data.
 
-**Stage 5**. At this stage, we searched for the optimal point of the system described by the model (1), (3) in the area of planning (**), satisfying the constraints $О_1$-$О_3$. The search for the optimal point was performed by direct enumeration of all values of the function (1), (3) in integer points of the planning area.
+**Stage 5**. At this stage, we searched for the optimal point of the system described by the model (1), (3) in the area of planning (**), satisfying the constraints $O_1$-$O_3$. The search for the optimal point was performed by direct enumeration of all values of the function (1), (3) in integer points of the planning area.
 
-In order to check the constraint $О_3$ ($Days<=42$), a direct enumeration of the values of function (2), (4) in the integer points of the planning area was performed. Thus, both the $GoodBlocked$ value and the $Days$ value were calculated at each point in the planning area.
+In order to check the constraint $O_3$ ($Days<=42$), a direct enumeration of the values of function (2), (4) in the integer points of the planning area was performed. Thus, both the $GoodBlocked$ value and the $Days$ value were calculated at each point in the planning area.
 
-According to the model (1), (3) with $О_1$-$О_3$ constraints, the minimum value of $GoodBlocked$ at $BadBlocked=4970$ in the planning area (**) is achieved at two close points:
+According to the model (1), (3) with $O_1$-$O_3$ constraints, the minimum value of $GoodBlocked$ at $BadBlocked=4970$ in the planning area (**) is achieved at two close points:
 
 - $GoodBlocked=362,06$ at $L_1=2$, $L_2=40$, $K=51$, $MaxPenaltyCount=13$ (5)
 - $GoodBlocked=362,92$ at $L_1=2$, $L_2=40$, $K=52$, $MaxPenaltyCount=13$ (6)
@@ -644,7 +644,7 @@ The results of the simulation given in Table 5 show that the optimal point is th
 - $GoodBlocked=411,8$
 - $Days=41,8$
 
-**Stage 6**. At this stage, the system was improved according to criteria $К_1$, i.e. an increase in the number of malicious users blocked.
+**Stage 6**. At this stage, the system was improved according to criteria $K_1$, i.e. an increase in the number of malicious users blocked.
 
 To solve the problem, a simulation of the system was performed with the found values of parameters (7) in the range of $4900<=AbuseDevices<=5100$ (Table 9).
 
@@ -795,7 +795,7 @@ Table 12
 |4990|4851,60|807,4|
 |5000|4941,40|2567,2|
 
-2. Simulation experiments conducted during the study at various points in the parameter space showed that a further reduction in the $GoodBlocked$ value can only be achieved by neglecting the constraints $О_1$-$О_3$. For example, reducing the value of $GoodBlocked$ can be achieved by increasing the value of $MaxPenaltyCount$. The graph in Fig. 4 illustrates the comparison of $GoodBlocked$ for $MaxPenaltyCount=13$ and $MaxPenaltyCount=20$ when changing the number of $AbuseDevices$ from 4900 to 4990. The graph indicates that for all values of $AbuseDevices$, the value of $GoodBlocked$ at $MaxPenaltyCount=20$ is on average 40% less than $GoodBlocked$ at $MaxPenaltyCount=13$.
+2. Simulation experiments conducted during the study at various points in the parameter space showed that a further reduction in the $GoodBlocked$ value can only be achieved by neglecting the constraints $O_1$-$O_3$. For example, reducing the value of $GoodBlocked$ can be achieved by increasing the value of $MaxPenaltyCount$. The graph in Fig. 4 illustrates the comparison of $GoodBlocked$ for $MaxPenaltyCount=13$ and $MaxPenaltyCount=20$ when changing the number of $AbuseDevices$ from 4900 to 4990. The graph indicates that for all values of $AbuseDevices$, the value of $GoodBlocked$ at $MaxPenaltyCount=20$ is on average 40% less than $GoodBlocked$ at $MaxPenaltyCount=13$.
 
    Fig. 4
 
