@@ -12,21 +12,21 @@ import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="linux" label="Linux" default>
-    Open Terminal in the directory where you want to place SPCTL and run the following command:
+    Open Terminal in the directory where you want to place SPCTL for Linux and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
     chmod +x ./spctl
     ```
   </TabItem>
   <TabItem value="macos" label="MacOS">
-    Open Terminal in the directory where you want to place SPCTL and run the following command:
+    Open Terminal in the directory where you want to place SPCTL for MacOS and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-macos-x64 -o spctl
     chmod +x ./spctl
     ```
   </TabItem>
   <TabItem value="windows" label="Windows">
-    Open WSL Terminal in the directory where you want to place SPCTL and run the following command:
+    Open WSL Terminal in the directory where you want to place SPCTL for Windows and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
     chmod +x ./spctl
@@ -34,11 +34,13 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
+You can also download and install SPCTL manually from our [GitHub repository](https://github.com/Super-Protocol/ctl).
+
 ## Set up config.json
 
-You will need a `config.json` file in the same directory where you have placed SPCTL executable.
+You will need a file called `config.json` in the same directory where you have placed the SPCTL executable.
 
-Here is an example (you can copy and paste it or [download](./assets/config.json)). Some parameters are pre-configured.
+Copy and paste into a new file or [download](./assets/config.json). Parameters shared by all users are pre-configured.
 
 ```json title="config.json"
 {
@@ -60,22 +62,22 @@ Here is an example (you can copy and paste it or [download](./assets/config.json
     "workflow": {
         "resultEncryption": {
             "algo": "ECIES",
-            "key": "61Kf7hP/0M/miymRVnA0vy9/TN6+kx9SaYawnfrGQMw=",
+            "key": "",
             "encoding": "base64"
         }
     }
 }
 ```
 
-Insert the remaining parameters:
+Then fill in the remaining parameters that are specific to your account:
 
 |**Parameter**|**Description**|
 |:-----------------|:-------------------|
 |accessToken| Your personal *Access Token* from the Testnet invitation email.||
 |accountPrivateKey| Your personal *Private Key* from the Testnet invitation email.|
 |bucket| STORJ bucket name. Your encrypted solutions and data are uploaded to this bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) to create it.|
-|writeAccessToken| STORJ access grant with *write* and *delete* permissions for the specified bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate it.|
-|readAccessToken| STORJ access grant with *read* permission for the specified bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate it.|
+|writeAccessToken| STORJ **write** access grant with *write* and *delete* permissions for the specified bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate it.|
+|readAccessToken| STORJ **read** access grant with *read* permission for the specified bucket. Use the same guide as above to generate it.|
 |key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key.|
 
 You are done! Now you can use SPCTL.
