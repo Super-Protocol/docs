@@ -1,6 +1,6 @@
 ---
 id: "cli_commands"
-title: "CLI Commands"
+title: "SP CLI (spctl) Commands"
 slug: "/cli_commands"
 sidebar_position: 7
 ---

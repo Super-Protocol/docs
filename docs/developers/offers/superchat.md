@@ -56,7 +56,7 @@ Passphrase to Delete looks something like this:
 * If you open chat in different tabs in the same browser, then it will count you as one user. But if you open chat in another browser, it will be a new user.
 * There is no chat administration, you cannot kick or ban users. As long as they have the password they'll be able to join.
 * Chat domains at *.superprotocol.io have shared chat rooms because these domains are using Super Protocol DNS and storage account.
-* Chats deployed at any other domain will probably have chat rooms unique to that domain because the orders will be using different storage accounts. Learn more about [storages](/developers/cli_guides/storages).  
+* Chats deployed at any other domain will probably have chat rooms unique to that domain because the orders will be using different storage accounts.  
 
 ## How is it secure?
 
