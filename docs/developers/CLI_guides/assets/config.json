@@ -17,7 +17,7 @@
     "workflow": {
         "resultEncryption": {
             "algo": "ECIES",
-            "key": "61Kf7hP/0M/miymRVnA0vy9/TN6+kx9SaYawnfrGQMw=",
+            "key": "",
             "encoding": "base64"
         }
     }
