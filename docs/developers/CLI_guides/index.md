@@ -1,6 +1,6 @@
 ---
 id: "cli_guides"
-title: "CLI guides"
+title: "SP CLI (spctl) guides"
 slug: "/cli_guides"
 sidebar_position: 6
 ---
