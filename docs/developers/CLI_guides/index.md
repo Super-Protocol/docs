@@ -1,6 +1,6 @@
 ---
 id: "cli_guides"
-title: "SP CLI (spctl) guides"
+title: "CLI Guides"
 slug: "/cli_guides"
 sidebar_position: 6
 ---
@@ -14,6 +14,6 @@ Super Protocol has a powerful CLI tool called **SPCTL** (Super Protocol Control)
 
 | **Guide**                                               | **Description**                     |
 |:--------------------------------------------------------|:--------------------------------------------------------|
-| [Configuring SPCTL](/developers/cli_guides/configuring)   | Guide on setting up your SPCTL with your storage, encryption and Super Protocol infrastructure |
+| [Configuring SPCTL](/developers/cli_guides/configuring)   | Guide on setting up your SPCTL with your storage, encryption and Super Protocol infrastructure. |
 
 
