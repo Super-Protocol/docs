@@ -73,8 +73,7 @@ To set up the project you will need to configure env variables in the `.env` fil
 Then install dependencies and compile the contract:
 
 ```shell
-npm i
-npx hardhat compile
+docker compose up build
 ```
 
 ### Deploy the smart-contract
@@ -116,8 +115,7 @@ Change current directory to `sp-oracle` and set up the service sub-project:
 
 ```shell
 cd ../sp-oracle/script/
-npm i
-npm run build
+docker compose up build
 ```
 
 A `run` folder will be created with artifacts for the future solution.
