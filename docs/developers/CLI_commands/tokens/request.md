@@ -1,11 +1,11 @@
 ---
-id: "li-commands-offers-list-tee"
+id: "tokens-request"
 title: "Request"
 slug: "/cli_commands/tokens/request"
 sidebar_label: "request"
 ---
 
-Request to receive TEE and MATIC tokens for testing purposes, subject to [testnet limitations](/testnet/limitations/).
+Request to receive TEE and MATIC tokens for testing purposes. This command is only available during Testnet, subject to [Testnet limitations](/testnet/limitations/).
 
 ## Usage
 
@@ -27,5 +27,4 @@ Example: receive TEE tokens.
 |:--------------------|:----------------|:-------------------------------------|
 | `--tee`             |                 | Request Super Protocol TEE tokens    |
 | `--matic`           |                 | Request Polygon Mumbai MATIC tokens  |
-| `--debug`           |                 | Display debug information            |
 | `--config`          | `./config.json` | Path to the configuration file       |
