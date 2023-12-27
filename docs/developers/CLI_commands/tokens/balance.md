@@ -9,8 +9,6 @@ Get the balance of TEE and MATIC tokens in your wallet.
 
 ## Usage
 
-Syntax.
-
 ```
 ./spctl tokens balance [OPTIONS]
 ```
