@@ -104,11 +104,11 @@ You can learn more about deploying your own solutions in the deployment guides. 
 | :- | :- |
 |`--tee <id,slotId>`|Compute offer `id` with the `slotId`. Compute auto-select activates if not specified.|
 |`--tee-slot-count <value>`|Number of compute slots increments.|
-|`--tee-options <id...>`|Compute options `slotId`.|
-|`--tee-options-count <value...>`|Number of compute options increments.|
-|`--deposit <value>`|Deposit in TEE tokens. If not specified, then the minimum required deposit is used).|
-|`--min-rent-minutes <value>`|Compute lease time in minutes. Will increase the required deposit. |
-|`--solution {<id,slotId>`|Solution offer `id` with `slotId`.|
+|`--tee-options <optionId>`|Compute options `optionId`.|
+|`--tee-options-count <value>`|Number of compute options increments.|
+|`--deposit <value>`|Deposit in TEE tokens. If not specified, then the minimum required deposit is used.|
+|`--min-rent-minutes <value>`|Compute lease time in minutes. Will increase the required deposit if used. |
+|`--solution <id,slotId>`|Solution offer `id` with `slotId`.|
 |`--data <id,slotId>`|Data offer `id` with `slotId`.|
 |`--storage <id,slotId>`|Storage offer `id` with `slotId`.|
 |`--config <path>`|`Path` to the configuration file. Default value `./config.json`|
