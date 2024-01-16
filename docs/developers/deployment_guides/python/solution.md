@@ -119,8 +119,7 @@ Pillow~=9.2.0
 Run the following command in the `root` directory to download the required libraries using Docker and our base image:
 
 ```
-docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -w /python gsc-python3.10-base-solution:latest ins
-tall -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
+docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -w /python gsc-python3.10-base-solution:latest install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
 
 ## Test the solution
