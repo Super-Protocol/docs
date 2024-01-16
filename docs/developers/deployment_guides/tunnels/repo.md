@@ -157,7 +157,7 @@ git commit -m "Added tunnel client deploy Action"
 git push
 ```
 
-Now go to the tab `Actions` from your repository and run `Run Test App tunnel-tunnel on SuperProtocol`. The order should be created and artifact `last-orders.txt` containg your order ID should be available for download.
+Now go to the tab `Actions` from your repository and run `Run Test App tunnel-client on SuperProtocol`. The order should be created and artifact `last-orders.txt` containg your order ID should be available for download.
 
 ## Setup DNS
 
