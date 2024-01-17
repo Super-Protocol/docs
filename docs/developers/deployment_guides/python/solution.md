@@ -105,22 +105,21 @@ Use this command to download the Python image from its solution offer:
 Then use this command to load the Python image to Docker:
 
 ```
-docker load -i <Python base image archive name>
+docker load -i <path to the Python base image archive>
 ```
 
 ## Install Python libraries
 
-Create `requirements.txt` file in your solution root directory. For the script above, the content looks like this:
+Create `requirements.txt` file in your solution `root` directory. For the script above, the content looks like this:
 
 ```
 Pillow~=9.2.0
 ```
 
-Run the following command in the `run` directory to download the required libraries using Docker and our base image:
+Run the following command in the `root` directory to download the required libraries using Docker and our base image:
 
 ```
-docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -w /python gsc-python3.10-base-solution:latest ins
-tall -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
+docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -w /python gsc-python3.10-base-solution:latest install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
 
 ## Test the solution
@@ -161,7 +160,7 @@ When the Docker image should run inside an Intel SGX enclave, the image has to b
 
 ```
 ./spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
---base-image-path python3.10-base-solution-image-0.0.2.image.tar.gz \
+--base-image-path <Python base image archive name> \
 ./run signing-key
 ```
 
@@ -174,8 +173,7 @@ Solution needs to be uploaded to a decentralized storage before it may be execut
 Run the following command:
 
 ```
-./spctl files upload solution.tar.gz --output solution.json \
---filename solution.tar.gz --metadata ./metadata.json
+./spctl files upload solution.tar.gz --output solution.json \ --filename solution.tar.gz --metadata ./metadata.json
 ```
 
 `solution.json` file is created.

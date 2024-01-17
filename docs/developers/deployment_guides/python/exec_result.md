@@ -7,6 +7,8 @@ sidebar_position: 4
 
 ## Execute Solution
 
+It is time to run this script on Superprotocol!
+
 Now you will need to execute together:
 
 * Your Python solution (`solution.json` uploaded to the storage);
@@ -16,8 +18,7 @@ Now you will need to execute together:
 Use the following [command](/developers/cli_commands/workflows/create):
 
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 23,27 --solution 5,1 \
---solution solution.json --data input-1.json --data input-2.json
+./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 23,27 --solution 5,1 \ --solution solution.json --data input-1.json --data input-2.json
 ```
 
 An order ID is generated upon execution.
@@ -40,8 +41,3 @@ Retrieve the result using the [Marketplace GUI](/developers/marketplace) or the 
 ./spctl orders download-result <order_ID>
 ```
 
-This command downloads the `result.tar.gz` file, containing:
-1. `logs\log.txt` - a log file of the script. If any errors occur during the execution of the script, they will be recorded to this log file.
-2. `output` - directory where the script's output is stored.
-
-If the order status is `Error`, you can still download the results, but instead of an archive there will be a result.txt file with an error message.

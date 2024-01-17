@@ -5,9 +5,7 @@ slug: "/deployment_guides/python/data_prep"
 sidebar_position: 3
 ---
 
-It is time to run this script on Superprotocol! 
-
-At first we need to prepare and upload data.
+Now we need to prepare and upload data.
 
 ## Create data archives
 

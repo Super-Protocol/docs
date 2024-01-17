@@ -80,7 +80,14 @@ docker compose up build
 
 We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate. 
 
-In the same directory, execute this command to deploy the x509 verifier contract to the Polygon testnet network.
+In the same directory, install dependencies and compile the contract:
+
+```shell
+npm i
+npx hardhat compile
+```
+
+Then execute this command to deploy the x509 verifier contract to the Polygon testnet network.
 
 ```shell
 npx hardhat deploy --cert ./intel-root-cert.pem --network mumbai

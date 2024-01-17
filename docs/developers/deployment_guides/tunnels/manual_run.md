@@ -77,7 +77,7 @@ mkdir -p tunnel-client-data/content
 cp -R superprotocol-test-app/* tunnel-client-data/content
 ```
 
-Next, in the project folder */superprotocol-test-app/* create `config.json`. It will contain the data required by the Tunnel Client.
+Next, create `config.json` in the folder */tunnel-client-data/*. It will contain the data required by the Tunnel Client.
 
 ```bash
 touch tunnel-client-data/config.json
