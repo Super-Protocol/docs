@@ -17,7 +17,7 @@ SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRO
 
 The goal of this example is to show process of deploying and operating an oracle with the following criteria:
 
-* The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [CoinAPI](https://rest.coinapi.io/v1/exchangerate/BTC/USD).
+* The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [Alpha Vantage data prices API](https://www.alphavantage.co/documentation/).
 
 * The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
@@ -35,7 +35,7 @@ You will also  need the following:
 
 - [Docker](https://www.docker.com/get-started/) - for building solutions
 
-- [CoinAPI](https://coinapi.io/) - register and **receive the API key**.
+- [Alpha Vantage data prices API](https://www.alphavantage.co/support/#api-key) - **receive the API key**.
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
@@ -286,8 +286,7 @@ And configure it:
 * `smartContractAddress` - address of the oracle smart contract;
 * `publisher` - address and the private key of the wallet that was used as `<publisher-address>` on the previous step for [Oracle deployment](#deploy-oracle). Again, it will be publishing data from the TEE onto blockchain;
 * `apiConfig` - containing:
-    - `endpoint` - API URL (default using CoinAPI);
-    - `auth` - the authentication key required by [CoinAPI](https://docs.coinapi.io/authentication#x-coinapi-key-header). If you are using another API that doesn't require authentication, then leave this field blank;
+    - `endpoint` - API URL (default using Alpha Vantage API query url with api-key);
 * `debugMode` - false.
 
 To sum up: you should end up having two files in `inputs` folder:
