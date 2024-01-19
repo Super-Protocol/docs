@@ -19,6 +19,9 @@ tar -czvf input-1.tar.gz -C <your solution root directory>/inputs/input-0001 .
 tar -czvf input-2.tar.gz -C <your solution root directory>/inputs/input-0002 .
 ```
 
+:::note
+Please make sure that system or hidden files are not included into the archive.
+:::
 ## Upload data archives
 
 And [upload](developers/cli_commands/files/upload) archives to the storage:

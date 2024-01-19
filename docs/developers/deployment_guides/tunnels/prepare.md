@@ -21,6 +21,14 @@ sidebar_position: 1
 
 - Access to DNS - you will need admin access to your own domain or subdomain. Later in this guide you will need to configure CNAME, A and TXT records in your DNS. You can use [Cloudflare](https://www.cloudflare.com/products/registrar/) or any other domain registrar with DNS management.
 
+## Registering domain name
+
+First of all, you need to register a domain name. Once you have a registered domain, please move on to the next step.
+
+:::note
+Domain name registration might take some time. Please contact your domain registrar for more details. 
+:::
+
 ## Generating SSL certificate
 
 An SSL certificate is necessary for establishing a secure TLS connection between the tunnel server and your browser.

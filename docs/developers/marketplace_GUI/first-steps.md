@@ -122,7 +122,7 @@ It is also probably a good idea to rename this account: *Super Protocol Testnet*
 
 :::caution Do not use this account outside of Testnet!
 
-We have generated these ERC-20 accounts for use during Tesnet only. Please do put your own personal funds into it or use in any other way. Our team has the private keys to Testnet accounts.
+We have generated these ERC-20 accounts for use during Tesnet only. Please do not put your own personal funds into it or use in any other way. Our team has the private keys to Testnet accounts.
 
 :::
 

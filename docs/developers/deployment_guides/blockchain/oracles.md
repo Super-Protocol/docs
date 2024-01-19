@@ -29,7 +29,7 @@ To successfully complete this advanced guide you will need experience with Node.
 
 You will also  need the following:
 
-- [Polygonscan](https://polygonscan.com/login) - You will need to register and **create API Key** for contract verification on block explorer. Even though in this example we will be using the [Mumbai](https://mumbai.polygonscan.com/) Polygon testnet, you will need the mainnet API key.
+- [Polygonscan](https://polygonscan.com/login) - You will need to register and **create API Key** for contract verification on block explorer. Even though in this example we will be using the [Mumbai](https://mumbai.polygonscan.com/) Polygon Testnet, you will need the mainnet API key.
 
 - [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
 
@@ -42,6 +42,12 @@ You will also  need the following:
 - [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
 - [SP solutions](https://github.com/Super-Protocol/solutions) - Super Protocol repository with solution examples, including the Oracle service.
+
+- Polygon Testnet wallets - you will need to create new wallets, **receive their addresses and private keys**, you can simply create new ones in MetaMask. 
+  - We highly recommend you to use two different wallets: 
+    - the first one will be used for deploying "x509 verifier" smart contract, 
+    - the second one will be used for deploying Oracle smart contract. 
+  - But if you are going to use one single wallet, please make sure that you do not use it for any other operations.
 
 Please create an oracle project folder, place the SPCTL executable and config there, and download the solutions repository into it:
 
@@ -66,7 +72,7 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `MUMBAI_DEPLOYER_PRIVATE_KEY` - Your Polygon testnet wallet private key with MATICs. **Note:** this is not the testnet wallet that you received from the Super team, you will need to create your own wallet for the oracle and add MATICs to it.
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` - the first Polygon Testnet wallet private key with MATICs. **Note:** this is not the Testnet wallet that you received from the Super team, you will need to create your own wallet for the oracle and add MATICs to it.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
@@ -87,7 +93,7 @@ npm i
 npx hardhat compile
 ```
 
-Then execute this command to deploy the x509 verifier contract to the Polygon testnet network.
+Then execute this command to deploy the x509 verifier contract to the Polygon Testnet network.
 
 ```shell
 npx hardhat deploy --cert ./intel-root-cert.pem --network mumbai
@@ -125,7 +131,8 @@ cd ../sp-oracle/script/
 docker compose up build
 ```
 
-A `run` folder will be created with artifacts for the future solution.
+A `run` folder will be created with artifacts for the future solution. It should consist of non-empty folders: `dist`, `node_modules`.
+
 
 ### Download Node.js base image
 
@@ -176,7 +183,7 @@ An `oracle-solution.json` file will be generated. It contains storage access cre
 
 ### Prepare
 
-For this step you will need an Ethereum account with MATIC testnet coins on it. This account will be used to send transactions from Oracle service to the smart contract. To avoid errors with sending transactions we highly recommend to use a new account that will be used by the oracle only, e.g. nonce calculation. This is not the Super Protocol testnet account.
+For this step you will need the second Polygon account with MATIC Testnet coins on it. This account will be used to send transactions from Oracle service to the smart contract. As it was mentioned above, it is highly recommended to use a new account that will be used by the oracle only, e.g. nonce calculation. Doing that will allow to avoid errors with sending transactions. This should not be the Super Protocol Testnet account.
 
 The next actions are nearly identical to the Prepare section from Step 1.
 
@@ -189,7 +196,7 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `MUMBAI_DEPLOYER_PRIVATE_KEY` - The private key to your test wallet with MATIC tokens.
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` - the private key to the second Polygon Testnet wallet with MATIC tokens.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
@@ -210,7 +217,7 @@ npx hardhat deploy-oracle --publishers <publisher-address> --enclave <MRENCLAVE>
 
 Where:
 
-- `<publisher-address>` - Ethereum wallet address that will be used by Oracle service to send new prices to the contract;
+- `<publisher-address>` - the second wallet address that will be used by Oracle service to send new prices to the contract;
 
 - `<MRENCLAVE>` and `<MRSIGNER>` - values that you received at the end of [Step 2](#writing-manifest-and-encrypting-the-oracle-service). <br/>**Note:** if at some point you will need to redo Step 2 and prepare the solution again, you will have different MRENCLAVE and MRSIGNER and will have to change them in the smart contract. Refer to [updating MRENCLAVE and MRSIGNER](#updating-mrenclave-and-mrsigner) to modify these without redeploying the contract;
 
@@ -344,7 +351,7 @@ On the screenshot above getDataCounts shows how many times the price was refresh
 
 ### Updating MRENCLAVE and MRSIGNER
 
-If you have already deployed the Oracle smart contract and then realized that you need to go back and rebuild the Oracle service solution, then you will get new MRENCLAVE and MRSIGNER values. To avoid redeploying the Oracle contract, we have prepared Hardhat tasks `change-mr-enclave` and `change-mr-signer` to update the values in the deployed contract. When using these tasks, the `MUMBAI_DEPLOYER_PRIVATE_KEY` environment variable must be a **private key** of a `publisher-address` that you used on the [Deploy oracle](#deploy-oracle) step.
+If you have already deployed the Oracle smart contract and then realized that you need to go back and rebuild the Oracle service solution, then you will get new MRENCLAVE and MRSIGNER values. To avoid redeploying the Oracle contract, we have prepared Hardhat tasks `change-mr-enclave` and `change-mr-signer` to update the values in the deployed contract which should be executed in `smart-contract` directory. When using these tasks, the `MUMBAI_DEPLOYER_PRIVATE_KEY` environment variable must be a **private key** of a `publisher-address` that you used on the [Deploy oracle](#deploy-oracle) step.
 
 ```shell
 npx hardhat change-mr-signer --address <oracle-address> --signer <new-mrsigner>
