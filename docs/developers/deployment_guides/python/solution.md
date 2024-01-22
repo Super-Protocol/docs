@@ -5,6 +5,10 @@ slug: "/deployment_guides/python/solution_prep"
 sidebar_position: 2
 ---
 
+## About
+
+This guide will take you through the steps of deploying a simple Python solution on Super Protocol, using our in-house [Image Classification](/developers/offers/python-image) solution with two sample datasets as an example. You can then use these steps to deploy your own Python solutions.
+
 ## Prerequisites
 
 You need to have the following installed and configured:

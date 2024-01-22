@@ -89,8 +89,6 @@ Storage offers are created and managed by the storage providers.
 
 Rules are set by the providers and govern what offers can and cannot do.
 
-* *Cancelable* - whether an order may be canceled without penalties.
-
 * *Restrictions* - whether an offer has dependencies. For instance, a Node.js-based solution offer will likely have a *Must Use* restriction for a Node.js base image solution: an order must have both of these two solutions to run. Or a solution offer might be restricted to running only with certain data offers or even compute offers. There can be many scenarios. 
 
 ### Requirements

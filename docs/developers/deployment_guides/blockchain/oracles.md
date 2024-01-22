@@ -5,7 +5,7 @@ slug: "/deployment_guides/blockchain/oracles"
 sidebar_position: 10
 ---
 
-## Confidential Oracles
+## About
 
 This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the BTC/USD price. 
 
