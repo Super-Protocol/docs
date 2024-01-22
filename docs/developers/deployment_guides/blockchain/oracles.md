@@ -43,11 +43,12 @@ You will also  need the following:
 
 - [SP solutions](https://github.com/Super-Protocol/solutions) - Super Protocol repository with solution examples, including the Oracle service.
 
-- Polygon Testnet wallets - you will need to create new wallets, **receive their addresses and private keys**, you can simply create new ones in MetaMask. 
-  - We highly recommend you to use two different wallets: 
-    - the first one will be used for deploying "x509 verifier" smart contract, 
-    - the second one will be used for deploying Oracle smart contract. 
-  - But if you are going to use one single wallet, please make sure that you do not use it for any other operations.
+- Polygon Testnet wallets - we highly recommend that you create two new different wallets on Polygon Testnet specifically for this guide:
+  - **First Wallet** For deploying "x509 verifier" smart contract, 
+  - **Second Wallet** For deploying Oracle smart contract.
+
+But if you are going to use a single wallet, please make sure that you do not use it for any other operations, as they might disrupt the Oracle. **Save their addresses and private keys**, you will need them later in the guide. You can receive free test MATICs [here](https://faucet.polygon.technology/). **Note**: these wallets are not the Testnet wallets have you have received from the Super Protocol team.
+
 
 Please create an oracle project folder, place the SPCTL executable and config there, and download the solutions repository into it:
 
@@ -72,7 +73,7 @@ cp .env.example .env
 
 To set up the project you will need to configure env variables in the `.env` file:
 
-- `MUMBAI_DEPLOYER_PRIVATE_KEY` - the first Polygon Testnet wallet private key with MATICs. **Note:** this is not the Testnet wallet that you received from the Super team, you will need to create your own wallet for the oracle and add MATICs to it.
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` - the first Polygon Testnet wallet private key with MATICs.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
@@ -131,8 +132,7 @@ cd ../sp-oracle/script/
 docker compose up build
 ```
 
-A `run` folder will be created with artifacts for the future solution. It should consist of non-empty folders: `dist`, `node_modules`.
-
+A `run` folder will be created, containing folders `dist` and `node_modules` with the artifacts for the future solution.
 
 ### Download Node.js base image
 
@@ -183,7 +183,7 @@ An `oracle-solution.json` file will be generated. It contains storage access cre
 
 ### Prepare
 
-For this step you will need the second Polygon account with MATIC Testnet coins on it. This account will be used to send transactions from Oracle service to the smart contract. As it was mentioned above, it is highly recommended to use a new account that will be used by the oracle only, e.g. nonce calculation. Doing that will allow to avoid errors with sending transactions. This should not be the Super Protocol Testnet account.
+For this step you will need the second Polygon wallet with MATIC Testnet tokens on it. This account will be used to send transactions from Oracle service to the smart contract.
 
 The next actions are nearly identical to the Prepare section from Step 1.
 

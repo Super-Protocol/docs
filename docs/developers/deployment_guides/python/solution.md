@@ -33,7 +33,7 @@ Download the solutions repository.
 git clone https://github.com/Super-Protocol/solutions
 ```
 
-Then download and decrypt solution using `resource.json` file in the "Image Classification" directory of the solutiobs repository to get source code:
+Then download and decrypt solution using `resource.json` file in the `Image Classification` directory of the solutions repository to get source code:
 ```shell
 ./spctl files download resource.json ./
 ```
@@ -41,7 +41,7 @@ Then download and decrypt solution using `resource.json` file in the "Image Clas
 The path to `resource.json` should a relative path from where SPCTL is located.
 :::
 
-Copy all the files from "Image Classification" directory, except `pypi` folder, into your `run` directory. We will create `pypi` folder later ourselves.
+Copy all the files from `Image Classification` directory, except `pypi` folder, into your `run` directory. We will create `pypi` folder later ourselves.
 
 The file `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place.
 
@@ -100,7 +100,7 @@ docker run --platform linux/amd64 --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/s
 gsc-python3.10-base-solution:latest entrypoint.py
 ```
 
-If done correctly, the `output` directory should contain `csv` file with results.
+If done correctly, the `output` directory should contain `.csv` file with results.
 
 ## Generate signing key
 
