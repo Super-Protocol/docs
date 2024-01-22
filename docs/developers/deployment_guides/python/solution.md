@@ -27,70 +27,23 @@ And place your Python executables and libraries into the `run` folder.
 
 ## Set-up entrypoint.py
 
-For illustration purposes, we will use a simple Python code as example. This program processes text files in a specified input directory, generates image from each text input, and saves the images in an output directory.
+Download the solutions repository.
 
-Create `entrypoint.py` file in `run` directory and add the following code:
-
-```
-import os
-import traceback
-from PIL import Image, ImageDraw, ImageFont
-
-RUN_DIR = os.getenv('RUN_FOLDER', os.path.dirname(os.path.abspath(__file__)))
-INPUT_DIR = os.getenv('INPUT_DATA_FOLDER', os.path.join(RUN_DIR, "..", "inputs"))
-OUTPUT_DIR = os.getenv('OUTPUT_DATA_FOLDER', os.path.join(RUN_DIR, "..", "output"))
-
-FONT_FILE = os.path.join(RUN_DIR, 'arial.ttf')
-
-
-def draw_from_text_file(text_file, result_image):
-    with open(text_file) as f:
-        input_text = f.read()
-
-    width = 512
-    height = 512
-
-    font = ImageFont.truetype(FONT_FILE, size=24)
-
-    image = Image.new('RGB', (512, 512), color=(9, 10, 72))
-
-    img_draw = ImageDraw.Draw(image)
-
-    box = img_draw.textbbox((0, 0), input_text, font=font)
-    x_text = (width - (box[2] - box[0])) / 2
-    y_text = (height - (box[3] - box[1])) / 2
-
-    img_draw.text((x_text, y_text), input_text, font=font, fill=(1, 240, 255))
-
-    image.save(result_image)
-
-
-def main():
-    # Scan input directories and execute draw_from_text_file function for each txt file
-    # Each dataset is placed in a separate subdirectory under the `inputs` directory: input-0001, input-0002, etc.
-    for root, dirs, files in os.walk(INPUT_DIR):
-        rel_root = root[len(INPUT_DIR) + 1:]
-        os.makedirs(os.path.join(OUTPUT_DIR, rel_root), exist_ok=True)
-        for filename in files:
-            try:
-                if not filename.endswith(".txt"):
-                    raise TypeError("Only .txt files are supported as inputs")
-                draw_from_text_file(
-                    os.path.join(INPUT_DIR, rel_root, filename),
-                    os.path.join(OUTPUT_DIR, rel_root, filename[:-len(".txt")] + ".png"))
-            except Exception:
-                # If unsuccessful, create a file with an error
-                with open(os.path.join(OUTPUT_DIR, rel_root, filename[:-len(".txt")] + ".err"), 'w') as output:
-                    output.write(str(traceback.format_exc()))
-
-
-if __name__ == '__main__':
-    main()
+```shell
+git clone https://github.com/Super-Protocol/solutions
 ```
 
-File `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place.
+Then download and decrypt solution using `resource.json` file in the `Image Classification` directory of the solutions repository to get source code:
+```shell
+./spctl files download resource.json ./
+```
+:::note
+The path to `resource.json` should a relative path from where SPCTL is located.
+:::
 
-The script above requires `arial.ttf` font file in `run` directory. You can download it [here](https://www.freefontspro.com/d/14454/arial.zip).
+Copy all the files from `Image Classification` directory, except `pypi` folder, into your `run` directory. We will create `pypi` folder later ourselves.
+
+The file `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place.
 
 ## Install Python base image
 
@@ -114,25 +67,30 @@ Create `requirements.txt` file in your solution `root` directory. For the script
 
 ```
 Pillow~=9.2.0
+torchvision~=0.16
 ```
 
 Run the following command in the `root` directory to download the required libraries using Docker and our base image:
 
 ```
-docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -w /python gsc-python3.10-base-solution:latest install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
+docker run --platform linux/amd64 --rm -ti -v $PWD:/python --entrypoint /usr/bin/pip3 -v $PWD/.pip-cache:/root/.cache/pip -w /python gsc-python3.10-base-solution:latest install -r requirements.txt -t ./run/pypi/lib/python3.10/site-packages
 ```
+
+:::note
+Please check Docker limits in case if more resources are needed to finish the installation process successfully.
+:::
+
+As a result, `pypi` folder should be created in the `run` directory and it should include the installed libraries.
 
 ## Test the solution
 
 In order to test the solution you will need some data as an input. 
 
-Create subdirectory `input-0001` in `inputs` directory. In this new subdirectory create `text-file-1.txt` file with the following text:
+You will need to download the datasets: [Image Classification Dataset #1](https://github.com/Super-Protocol/datasets/blob/main/Image%20Classification%20Datasets/image-classification-ds1.tar.gz?raw=true), [Image Classification Dataset #2](https://github.com/Super-Protocol/datasets/blob/main/Image%20Classification%20Datasets/image-classification-ds2.tar.gz?raw=true).
 
-```
-Super Protocol is awesome!
-```
-
-Then using the same logic create `text-file-2.txt` file in the `input-0002` subdirectory with any text you like.
+Create two subdirectories in `inputs` directory:
+- `input-0001` with the images from Image Classification Dataset #1;
+- `input-0002` with the images from Image Classification Dataset #2.
 
 Run the following command in the solution root directory to launch the solution inside a Docker container:
 
@@ -142,7 +100,7 @@ docker run --platform linux/amd64 --rm -ti -v $PWD/run:/sp/run -v $PWD/inputs:/s
 gsc-python3.10-base-solution:latest entrypoint.py
 ```
 
-If done correctly, the `output` directory should now have two subdirectories, `input-0001` and `input-0002`, with .png image files containing the same text as the input files.
+If done correctly, the `output` directory should contain `.csv` file with results.
 
 ## Generate signing key
 
@@ -163,6 +121,10 @@ When the Docker image should run inside an Intel SGX enclave, the image has to b
 --base-image-path <Python base image archive name> \
 ./run signing-key
 ```
+
+:::note
+The path to run folder should a relative path from where SPCTL is located.
+:::
 
 After running the command, `solution.tar.gz` and `metadata.json` files are generated.
 
