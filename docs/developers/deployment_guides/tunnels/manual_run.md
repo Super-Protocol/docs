@@ -153,6 +153,10 @@ Now, it's necessary for the Tunnel Client to connect with the Tunnel Server with
 
 Replace `xxx.yyy.www.zzz` with the address from the `result.txt` file.
 
+:::note
+Record changes might take some time. Please contact your domain registrar for more details. 
+:::
+
 After a few minutes, open your browser and go to your domain!
 
 Don't forget to replenish the tunnel orders with TEE tokens if you want your site to stay up.
