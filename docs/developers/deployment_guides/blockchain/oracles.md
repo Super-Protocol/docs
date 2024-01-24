@@ -17,7 +17,7 @@ SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRO
 
 The goal of this example is to show process of deploying and operating an oracle with the following criteria:
 
-* The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [Alpha Vantage data prices API](https://www.alphavantage.co/documentation/).
+* The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [Alpha Vantage stocks API](https://www.alphavantage.co/documentation/).
 
 * The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
@@ -25,36 +25,32 @@ The goal of this example is to show process of deploying and operating an oracle
 
 ## Prerequisites
 
-To successfully complete this advanced guide you will need experience with Node.js, EVM blockchains and Solidity programming. 
+To successfully complete this advanced guide it will be useful to have experience with Node.js, EVM blockchains and Solidity programming. 
 
-You will also  need the following:
-
-- [Polygonscan](https://polygonscan.com/login) - You will need to register and **create API Key** for contract verification on block explorer. Even though in this example we will be using the [Mumbai](https://mumbai.polygonscan.com/) Polygon Testnet, you will need the mainnet API key.
+You will need to install the following:
 
 - [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
 
-- [Docker](https://www.docker.com/get-started/) - for building solutions
-
-- [Alpha Vantage data prices API](https://www.alphavantage.co/support/#api-key) - **receive the API key**.
+- [Docker](https://www.docker.com/get-started/) - for building solutions.
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
 - [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
-- [SP solutions](https://github.com/Super-Protocol/solutions) - Super Protocol repository with solution examples, including the Oracle service.
+You will need to create / generate the following:
 
-- Polygon Testnet wallets - we highly recommend that you create two new different wallets on Polygon Testnet specifically for this guide:
-  - **First Wallet** For deploying "x509 verifier" smart contract, 
-  - **Second Wallet** For deploying Oracle smart contract.
+- [Polygonscan](https://polygonscan.com/login) - register and generate an API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai Polygon Testnet](https://mumbai.polygonscan.com/), you will need the **mainnet** API key.
 
-But if you are going to use a single wallet, please make sure that you do not use it for any other operations, as they might disrupt the Oracle. **Save their addresses and private keys**, you will need them later in the guide. You can receive free test MATICs [here](https://faucet.polygon.technology/). **Note**: these wallets are not the Testnet wallets have you have received from the Super Protocol team.
+- [Alpha Vantage stock API](https://www.alphavantage.co/support/#api-key) - generate an API key to receive real time prices.
 
+- Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract.
+- Polygon Testnet Wallet #2 - for deploying Oracle smart contract.
 
-Please create an oracle project folder, place the SPCTL executable and config there, and download the solutions repository into it:
+You can create the wallets using Metamask and follow [this guide](https://docs.polygon.technology/tools/wallets/metamask/add-polygon-network/) to add the Polygon Mumbai Testnet network. Save their addresses and private keys, you will need them later in the guide. You can receive free test MATICs [here](https://faucet.polygon.technology/).
 
-```shell
-git clone https://github.com/Super-Protocol/solutions
-```
+We highly recommend that you create two different wallets on Polygon Testnet specifically for this guide. But if you are going to use a single wallet, please make sure that you do not use it for any other operations, as they might disrupt the Oracle.
+
+**Note:** These wallets are **not** the Testnet wallets have you have received from the Super Protocol team.
 
 ## **Step 1. Deploy the "x509 verifier" smart contract**
 
@@ -64,7 +60,13 @@ It's worth noting that this x509 verifier smart contract acts as a validator of 
 
 ### Preparing
 
-Go to the `solutions` directory that you have cloned earlier and make a copy of the example `.env`: 
+Create a new folder for the Oracle project, place the SPCTL executable and `config.json` there, and download the Super Protocol solutions repository into it:
+
+```shell
+git clone https://github.com/Super-Protocol/solutions
+```
+
+Go to the `solutions` directory and make a copy of the example `.env`: 
 
 ```shell
 cd ./solutions/Blockchain/sp-x509/
