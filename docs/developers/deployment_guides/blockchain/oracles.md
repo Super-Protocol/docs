@@ -52,13 +52,9 @@ We highly recommend that you create two different wallets on Polygon Testnet spe
 
 **Note:** These wallets are **not** the Testnet wallets have you have received from the Super Protocol team.
 
-## **Step 1. Deploy the "x509 verifier" smart contract**
+## **Step 1. Prepare environment variables and install dependencies**
 
-This smart contract is responsible for on-chain cryptographic verification of the Oracle service, ensuring that it's running inside a secure SGX Trusted Execution Environment (TEE) with validation of TEE quote, MRENCLAVE and MRSIGNER.
-
-It's worth noting that this x509 verifier smart contract acts as a validator of data and is not tied to this implementation of the Oracle. In other words, it can service multiple instances of Confidential Oracles, all pointing to the same 'x509 verifier.'
-
-### Preparing
+To be able to run Oracle locally and in SuperProtocol, please prepare `.env` file with all the required parameters in the directories: `Blockchain/sp-x509`, `Blockchain/smart-contract`.
 
 Create a new folder for the Oracle project, place the SPCTL executable and `config.json` there, and download the Super Protocol solutions repository into it:
 
@@ -73,7 +69,7 @@ cd ./solutions/Blockchain/sp-x509/
 cp .env.example .env
 ```
 
-To set up the project you will need to configure env variables in the `.env` file:
+Add the following parameters to `.env` file:
 
 - `MUMBAI_DEPLOYER_PRIVATE_KEY` - the first Polygon Testnet wallet private key with MATICs.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
@@ -85,20 +81,63 @@ Then install dependencies and compile the contract:
 docker compose up build
 ```
 
-### Deploy the smart-contract
+You will need to do the same in the directory `smart-contract`. Please execute the following commands:
 
-We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate. 
+```shell
+cd ../sp-oracle/smart-contract/
+cp .env.example .env
+```
+Copy and insert all the parameters that have been already specified in the previous `.env` file.
 
-In the same directory, install dependencies and compile the contract:
+Next, in the same directory, install dependencies and compile the contract:
 
 ```shell
 npm i
 npx hardhat compile
 ```
 
-Then execute this command to deploy the x509 verifier contract to the Polygon Testnet network.
+Then you need install dependencies in the `scripts` folder. Please follow:
 
 ```shell
+ cd ../script/
+ docker compose up build
+```
+
+A `run` folder will be created, containing folders `dist` and `node_modules` with the artifacts for the future solution.
+
+## **Step 2. Local run**
+
+Execute the following command in the directory `scripts`:
+
+```shell
+docker compose up blockchain oracle
+```
+
+When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check results. To do that, move to the directory `smart-contact` in a new terminal window. **Note**: running containers should not be stopped. There will be `test-app-commands.txt` file with the commands that need to be executed in  `smart-contract` directory.
+
+For example:
+
+```
+bash $ npx hardhat process-a --address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 --network localhost
+Tx result: BigNumber { value: "38616" }
+```
+
+The result `Tx result: BigNumber { value: "38616" }` means that API data (exchange rate: 38616$ for 1 BTC) has been successfully written to a local blockchain and you have read it from another smart contract.
+
+## **Step 3. Deploy the "x509 verifier" smart contract**
+
+This smart contract is responsible for on-chain cryptographic verification of the Oracle service, ensuring that it's running inside a secure SGX Trusted Execution Environment (TEE) with validation of TEE quote, MRENCLAVE and MRSIGNER.
+
+It's worth noting that this x509 verifier smart contract acts as a validator of data and is not tied to this implementation of the Oracle. In other words, it can service multiple instances of Confidential Oracles, all pointing to the same 'x509 verifier.'
+
+### Deploy the smart-contract
+
+We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate. 
+
+Go to `sp-x509` directory and execute this command to deploy the x509 verifier contract to the Polygon testnet network.
+
+```shell
+cd ./solutions/Blockchain/sp-x509/
 npx hardhat deploy --cert ./intel-root-cert.pem --network mumbai
 ```
 
@@ -115,7 +154,7 @@ You should get a "Successfully verified" response. Now you can observe your depl
 **Example:** a previously [deployed and verified x509 smart contract](https://mumbai.polygonscan.com/address/0xb57718CC0A2149A376715503d15182f5a773e1F7#readContract).
 
 
-## **Step 2. Prepare Oracle service for deployment on Super Protocol**
+## **Step 4. Prepare Oracle service for deployment on Super Protocol**
 
 Now we move to the preparing and deploying the components of the oracle itself. This process consists of two components:
 
@@ -125,22 +164,11 @@ Now we move to the preparing and deploying the components of the oracle itself. 
 
 In this step we will cover the first component.
 
-### Prerequisites
-
-Change current directory to `sp-oracle` and set up the service sub-project:
-
-```shell
-cd ../sp-oracle/script/
-docker compose up build
-```
-
-A `run` folder will be created, containing folders `dist` and `node_modules` with the artifacts for the future solution.
-
 ### Download Node.js base image
 
 All the solutions deployed on Super Protocol have to use a base image solution offer. In this case it will be a Node.js base image.
 
-Go to your project directory and execute this [command](/developers/CLI_commands/offers/download-content):
+Go to your project root directory and execute this [command](/developers/CLI_commands/offers/download-content):
 
 ```shell
 ./spctl offers download-content 6
@@ -181,39 +209,18 @@ Finally, we will encrypt and upload the prepared solution to a decentralized sto
 
 An `oracle-solution.json` file will be generated. It contains storage access credentials and encryption keys for the uploaded file. Do not share it with untrusted parties. We will use it later to create workflow on Super Protocol.
 
-## **Step 3. Prepare and deploy Oracle smart contract**
-
-### Prepare
+## **Step 5. Prepare and deploy Oracle smart contract**
 
 For this step you will need the second Polygon wallet with MATIC Testnet tokens on it. This account will be used to send transactions from Oracle service to the smart contract.
 
-The next actions are nearly identical to the Prepare section from Step 1.
-
-Go to the directory containing smart-contract and make a copy of the `.env`.
-
-```shell
-cd ./solutions/Blockchain/sp-oracle/smart-contract/
-cp .env.example .env
-```
-
-To set up the project you will need to configure env variables in the `.env` file:
-
-- `MUMBAI_DEPLOYER_PRIVATE_KEY` - the private key to the second Polygon Testnet wallet with MATIC tokens.
-- `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
-- `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
-
-Then install dependencies and compile the contract:
-
-```shell
-npm i
-npx hardhat compile
-```
-
 ### Deploy oracle
 
-Now we are ready to deploy an Oracle smart contract:
+Now we are ready to deploy an Oracle smart contract.
+
+Go to the `smart-contracts` directory, replace *\<placeholders\>* to your corresponding data and invoke command:
 
 ```shell
+cd ../sp-oracle/smart-contract
 npx hardhat deploy-oracle --publishers <publisher-address> --enclave <MRENCLAVE> --signer <MRSIGNER> --verifier <x509-verifier-address> --network mumbai
 ```
 
@@ -255,7 +262,7 @@ You should get a "Successfully verified" response.
 
 At the end of this guide we will observe this contract through Polygonscan to see how data changes.
 
-## **Step 4. Deploy oracle service**
+## **Step 6. Deploy oracle service**
 
 At this point we should have:
 - Deployed the x590 verifier smart contract (Step 1)
@@ -267,6 +274,8 @@ In this step we will deploy the oracle service that will be running on Super Pro
 Open a new terminal window and go to `solutions/Blockchain/sp-oracle/script/inputs/` folder. We will need to set up a config for Oracle service.
 
 First, you will need to retrieve the trusted root certificates to validate the connection to the API service that your oracle will be requesting to. You can extract root certificate of the particular API that you will be using, but because certificates may change unpredictably we recommend listing the full root certificates list from your computer. 
+
+If you have run Oracle locally, the file `ca_certificates.crt` has been already generated and it is located in the directory `solutions/Blockchain/sp-oracle/script/inputs`. In addition, you can update it with your own list of trusted certificates. Otherwise please move on to the creation of `input.json`.
 
 While in the `inputs` directory, execute:
 
@@ -280,7 +289,7 @@ cat /etc/ssl/certs/*.pem >> ./ca_certificates.crt
 security export -t certs -f pemseq -k /System/Library/Keychains/SystemRootCertificates.keychain -o ./ca_certificates.crt
 ```
 
-This command will create file `ca_certificates.crt` inside `inputs/` directory. It contains the system root certificates.
+This command will create or update file `ca_certificates.crt` inside `inputs/` directory. It contains the system root certificates.
 
 Second, create `input.json` by copying the `input.example.json`:
 
@@ -331,7 +340,7 @@ You can check the status of the order using [Marketplace GUI](/developers/market
 
 Wait until the order turns to status `Processing`. The script will start about 15 minutes after that. 
 
-## **Step 5. Observing oracle**
+## **Step 7. Observing oracle**
 
 Now we can observe the oracle live through Polygonscan.
 
