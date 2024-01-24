@@ -54,7 +54,7 @@ We highly recommend that you create two different wallets on Polygon Testnet spe
 
 ## **Step 1. Prepare environment variables and install dependencies**
 
-Для запуска оракула как локально, так и на суперпротоколе пожалуйста подготовьте env файл с нужными параметрами в папках `Blockchain/sp-x509` и `Blockchain/smart-contract`.
+To be able to run Oracle locally and in SuperProtocol, please prepare `.env` file with all the required parameters in the directories: `Blockchain/sp-x509`, `Blockchain/smart-contract`.
 
 Create a new folder for the Oracle project, place the SPCTL executable and `config.json` there, and download the Super Protocol solutions repository into it:
 
@@ -69,7 +69,7 @@ cd ./solutions/Blockchain/sp-x509/
 cp .env.example .env
 ```
 
-Добавьте следующие переменные в `.env` файл:
+Add the following parameters to `.env` file:
 
 - `MUMBAI_DEPLOYER_PRIVATE_KEY` - the first Polygon Testnet wallet private key with MATICs.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
@@ -81,13 +81,13 @@ Then install dependencies and compile the contract:
 docker compose up build
 ```
 
-Далее необходимо проделать то же самое в папке `smart-contract`. Для этого выполните следующие команды:
+You will need to do the same in the directory `smart-contract`. Please execute the following commands:
 
 ```shell
 cd ../sp-oracle/smart-contract/
 cp .env.example .env
 ```
-Скопируйте туда те же значения env-переменных.
+Copy and insert all the parameters that have been already specified in the previous `.env` file.
 
 Next, in the same directory, install dependencies and compile the contract:
 
@@ -107,23 +107,22 @@ A `run` folder will be created, containing folders `dist` and `node_modules` wit
 
 ## **Step 2. Local run**
 
-В папке `scripts` просто выполните следующую команду
+Execute the following command in the directory `scripts`:
 
 ```shell
 docker compose up blockchain oracle
 ```
 
-Когда появится лог `The iteration of oracle loop has been ended` - значит оракул локально отработал успешно и вы можете проверить результат. Для этого в *другом окне терминала* (!!) (работающие контейнеры завершать не нужно) перейдите в папку `smart-contact`, там должен появиться файл `test-app-commands.txt` с командами которые нужно выполнить в этой же папке `smart-contract`.
+When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check results. To do that, move to the directory `smart-contact` in a new terminal window. **Note**: running containers should not be stopped. There will be `test-app-commands.txt` file with the commands that need to be executed in  `smart-contract` directory.
 
-Например:
+For example:
 
 ```
 bash $ npx hardhat process-a --address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 --network localhost
 Tx result: BigNumber { value: "38616" }
 ```
 
-Полученный результат `Tx result: BigNumber { value: "38616" }` означает, что даныне с API (курс 38616$ за 1 BTC ) успешно были записаны в Ваш локальный блокчейн и Вы их прочитали из другого смарт-контракта.
-
+The result `Tx result: BigNumber { value: "38616" }` means that API data (exchange rate: 38616$ for 1 BTC) has been successfully written to a local blockchain and you have read it from another smart contract.
 
 ## **Step 3. Deploy the "x509 verifier" smart contract**
 
@@ -276,7 +275,7 @@ Open a new terminal window and go to `solutions/Blockchain/sp-oracle/script/inpu
 
 First, you will need to retrieve the trusted root certificates to validate the connection to the API service that your oracle will be requesting to. You can extract root certificate of the particular API that you will be using, but because certificates may change unpredictably we recommend listing the full root certificates list from your computer. 
 
-Если Вы запускали локально оракул, то файл `ca_certificates.crt` уже был сформирован и находится у вас в папке `solutions/Blockchain/sp-oracle/script/inputs`. Но Вы так же можете его обновить с Вашим набором доверенных сертификатов. Если считаете, что в этом нет необходимости - переходите к пункту создания `input.json` файла.
+If you have run Oracle locally, the file `ca_certificates.crt` has been already generated and it is located in the directory `solutions/Blockchain/sp-oracle/script/inputs`. In addition, you can update it with your own list of trusted certificates. Otherwise please move on to the creation of `input.json`.
 
 While in the `inputs` directory, execute:
 
