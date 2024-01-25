@@ -139,7 +139,7 @@ Solution needs to be uploaded to a decentralized storage before it may be execut
 Run the following command:
 
 ```
-./spctl files upload solution.tar.gz --output solution.json \ --filename solution.tar.gz --metadata ./metadata.json
+./spctl files upload solution.tar.gz --output solution.json --filename solution.tar.gz --metadata ./metadata.json
 ```
 
 `solution.json` file is created.
