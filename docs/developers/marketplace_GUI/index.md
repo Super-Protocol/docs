@@ -27,7 +27,6 @@ The things you can do right now with the Marketplace GUI and their CLI counterpa
 | See list of all your orders                    | [orders list](/developers/cli_commands/orders/list)                           |
 | See details and statuses of specific orders    | [orders get](/developers/cli_commands/orders/get)                             |
 | Replenish order deposits                       | [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) |
-| Withdraw order deposits                        | [orders withdraw-deposit](/developers/cli_commands/orders/withdraw-deposit)   |
 | Cancel orders                                  | [orders cancel](/developers/cli_commands/orders/cancel)                       |
 | Receive order results                          | [orders download-result](/developers/cli_commands/orders/download-result)     |
 | Check confidentiality                          | GUI only for now                                                              |
