@@ -9,7 +9,7 @@ sidebar_position: 10
 
 This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the BTC/USD price. 
 
-* The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [Alpha Vantage stocks API](https://www.alphavantage.co/documentation/).
+* The Oracle service should publish the BTC/USD exchange rate every 5 minutes by accessing the open [Alpha Vantage stocks API](https://www.alphavantage.co/documentation/).
 
 * The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
@@ -164,7 +164,7 @@ You should get a "Successfully verified" response. Now you can observe your depl
 
 Now we move to the preparing and deploying the components of the oracle itself. This process consists of two components:
 
-- An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (every 10 minutes).
+- An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (default frequency is 5 minutes).
 
 - The oracle smart contract that will store the BTC/USD price data. It will also verify, by using the x509 smart contract from previous step, that the request comes from a trusted off-chain service.
 
