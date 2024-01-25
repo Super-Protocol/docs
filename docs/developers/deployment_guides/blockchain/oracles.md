@@ -164,7 +164,7 @@ You should get a "Successfully verified" response. Now you can observe your depl
 
 Now we move to the preparing and deploying the components of the oracle itself. This process consists of two components:
 
-- An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (every 5 minutes).
+- An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (every 10 minutes).
 
 - The oracle smart contract that will store the BTC/USD price data. It will also verify, by using the x509 smart contract from previous step, that the request comes from a trusted off-chain service.
 
