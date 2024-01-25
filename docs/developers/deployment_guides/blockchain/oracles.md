@@ -5,17 +5,9 @@ slug: "/deployment_guides/blockchain/oracles"
 sidebar_position: 10
 ---
 
-## About
+## **About**
 
 This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the BTC/USD price. 
-
-:::note
-SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.
-:::
-
-## Goal
-
-The goal of this example is to show process of deploying and operating an oracle with the following criteria:
 
 * The Oracle service should publish the BTC/USD exchange rate every 10 minutes by accessing the open [Alpha Vantage stocks API](https://www.alphavantage.co/documentation/).
 
@@ -23,11 +15,17 @@ The goal of this example is to show process of deploying and operating an oracle
 
 * Our DApp (smart contract) should be able to read this data and ensure that it is: **a)** Up-to-date (by verifying the timestamp) and **b)** Available to be read on-chain.
 
-## Prerequisites
+:::note
+SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.
+:::
+
+## **Prerequisites**
 
 To successfully complete this advanced guide it will be useful to have experience with Node.js, EVM blockchains and Solidity programming. 
 
-You will need to install the following:
+You will need:
+
+### Install
 
 - [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
 
@@ -35,16 +33,16 @@ You will need to install the following:
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
-- [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
+- [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully [configured](/developers/CLI_guides/configuring), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
-You will need to create / generate the following:
+### Create / generate
 
 - [Polygonscan](https://polygonscan.com/login) - register and generate an API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai Polygon Testnet](https://mumbai.polygonscan.com/), you will need the **mainnet** API key.
 
 - [Alpha Vantage stock API](https://www.alphavantage.co/support/#api-key) - generate an API key to receive real time prices.
 
-- Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract.
-- Polygon Testnet Wallet #2 - for deploying Oracle smart contract.
+- Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract. Wallet needs to contain test MATICs.
+- Polygon Testnet Wallet #2 - for deploying Oracle smart contract. Wallet needs to contain test MATICs.
 
 You can create the wallets using Metamask and follow [this guide](https://docs.polygon.technology/tools/wallets/metamask/add-polygon-network/) to add the Polygon Mumbai Testnet network. Save their addresses and private keys, you will need them later in the guide. You can receive free test MATICs [here](https://faucet.polygon.technology/).
 
@@ -54,15 +52,19 @@ We highly recommend that you create two different wallets on Polygon Testnet spe
 
 ## **Step 1. Prepare environment variables and install dependencies**
 
-To be able to run Oracle locally and in SuperProtocol, please prepare `.env` file with all the required parameters in the directories: `Blockchain/sp-x509`, `Blockchain/smart-contract`.
+Create a new folder for the Oracle project, name it anything you want. Place the SPCTL executable and its configured `config.json` there. 
 
-Create a new folder for the Oracle project, place the SPCTL executable and `config.json` there, and download the Super Protocol solutions repository into it:
+Download the Super Protocol solutions repository into it:
 
 ```shell
 git clone https://github.com/Super-Protocol/solutions
 ```
 
-Go to the `solutions` directory and make a copy of the example `.env`: 
+Now you will need to prepare two `.env` files with all the required parameters and place them in the directories:
+- `Blockchain/sp-x509`
+- `Blockchain/sp-oracle/smart-contract`.
+
+Go to the `Super-Protocol/solutions` directory and make a copy of the example `.env`: 
 
 ```shell
 cd ./solutions/Blockchain/sp-x509/
@@ -71,25 +73,25 @@ cp .env.example .env
 
 Add the following parameters to `.env` file:
 
-- `MUMBAI_DEPLOYER_PRIVATE_KEY` - the first Polygon Testnet wallet private key with MATICs.
+- `MUMBAI_DEPLOYER_PRIVATE_KEY` -  private key for Polygon Testnet Wallet #1.
 - `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
-- `POLYGON_API_KEY` - the API Key you have generated in [Polygonscan](https://polygonscan.com/login).
+- `POLYGON_API_KEY` - the mainnet API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
-Then install dependencies and compile the contract:
+Install dependencies and compile the contract:
 
 ```shell
 docker compose up build
 ```
 
-You will need to do the same in the directory `smart-contract`. Please execute the following commands:
+Now you will need to do the same thing in the directory `Blockchain/sp-oracle/smart-contract`: 
 
 ```shell
 cd ../sp-oracle/smart-contract/
 cp .env.example .env
 ```
-Copy and insert all the parameters that have been already specified in the previous `.env` file.
+Copy and insert all the parameters as above.
 
-Next, in the same directory, install dependencies and compile the contract:
+In the same directory, install dependencies and compile the contract:
 
 ```shell
 npm i
@@ -107,13 +109,17 @@ A `run` folder will be created, containing folders `dist` and `node_modules` wit
 
 ## **Step 2. Local run**
 
-Execute the following command in the directory `scripts`:
+Let's test the Oracle locally before deploying it to Super Protocol.
+
+Execute the following command in the directory `Blockchain/sp-oracle/script`:
 
 ```shell
 docker compose up blockchain oracle
 ```
 
-When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check results. To do that, move to the directory `smart-contact` in a new terminal window. **Note**: running containers should not be stopped. There will be `test-app-commands.txt` file with the commands that need to be executed in  `smart-contract` directory.
+When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check the results. 
+
+Running containers should not be stopped. Open a new terminal window and go to the directory `smart-contact`. There will be a `test-app-commands.txt` file containing the commands that need to be executed in the `smart-contract` directory. 
 
 For example:
 
@@ -122,7 +128,7 @@ bash $ npx hardhat process-a --address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e
 Tx result: BigNumber { value: "38616" }
 ```
 
-The result `Tx result: BigNumber { value: "38616" }` means that API data (exchange rate: 38616$ for 1 BTC) has been successfully written to a local blockchain and you have read it from another smart contract.
+The result `Tx result: BigNumber { value: "38616" }` means that API data (exchange rate: $38616 for 1 BTC) has been successfully written to a local blockchain and you have retrieved it by another smart contract.
 
 ## **Step 3. Deploy the "x509 verifier" smart contract**
 
@@ -134,7 +140,7 @@ It's worth noting that this x509 verifier smart contract acts as a validator of 
 
 We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate. 
 
-Go to `sp-x509` directory and execute this command to deploy the x509 verifier contract to the Polygon testnet network.
+Go to `/solutions/Blockchain/sp-x509/` directory and execute this command to deploy the x509 verifier contract to the Polygon testnet network.
 
 ```shell
 cd ./solutions/Blockchain/sp-x509/
@@ -174,7 +180,7 @@ Go to your project root directory and execute this [command](/developers/CLI_com
 ./spctl offers download-content 6
 ```
 
-It will download file `node16-base-solution-image-v0.3.1.tar.gz` to the current directory.
+It will download the Node.js base image file to the current directory. It might be called `node16-base-solution-image-v0.3.1.tar.gz` or a later version (base image offers are updated often).
 
 ### Writing manifest and encrypting the oracle service
 
@@ -184,7 +190,7 @@ Next, we will build a Docker image of the service. For the Docker image to run i
 ./spctl solutions generate-key signing-key
 ```
 
-Then, execute the following command in the root of your project to prepare and pack the solution:
+Execute the following [command](/developers/cli_commands/solutions/prepare) in the root of your project to prepare and pack the solution:
 
 ```shell
 ./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path node16-base-solution-image-v0.3.1.tar.gz ./solutions/Blockchain/sp-oracle/script/run/ signing-key
@@ -201,23 +207,23 @@ MRSIGNER: 36f3bb39d10617852d1eef2f5066d8f9add2c65fb1a026d86398fec405fe725c
 
 **Save these values!** Important: different MRENCLAVE and MRSIGNER values are generated for each run of the `prepare` command. 
 
-Finally, we will encrypt and upload the prepared solution to a decentralized storage:
+Finally, we will [encrypt and upload](/developers/cli_commands/files/upload) the prepared solution to a decentralized storage (Storj):
 
 ```shell
 ./spctl files upload oracle-solution.tar.gz --output oracle-solution.json --filename oracle-solution.tar.gz --metadata ./metadata.json
 ```
 
-An `oracle-solution.json` file will be generated. It contains storage access credentials and encryption keys for the uploaded file. Do not share it with untrusted parties. We will use it later to create workflow on Super Protocol.
+An `oracle-solution.json` file will be generated. It contains storage access credentials and encryption keys for the uploaded file. Do not share it with untrusted parties. We will use it later to create a workflow on Super Protocol.
 
 ## **Step 5. Prepare and deploy Oracle smart contract**
 
-For this step you will need the second Polygon wallet with MATIC Testnet tokens on it. This account will be used to send transactions from Oracle service to the smart contract.
+For this step you will need Polygon Testnet Wallet #2. This account will be used to send transactions from Oracle service to the smart contract.
 
 ### Deploy oracle
 
 Now we are ready to deploy an Oracle smart contract.
 
-Go to the `smart-contracts` directory, replace *\<placeholders\>* to your corresponding data and invoke command:
+Go to the `/Blockchain/sp-oracle/smart-contract` directory and run this command:
 
 ```shell
 cd ../sp-oracle/smart-contract
@@ -226,7 +232,7 @@ npx hardhat deploy-oracle --publishers <publisher-address> --enclave <MRENCLAVE>
 
 Where:
 
-- `<publisher-address>` - the second wallet address that will be used by Oracle service to send new prices to the contract;
+- `<publisher-address>` - the Polygon Testnet Wallet #2 address that will be used by Oracle service to send new prices to the contract;
 
 - `<MRENCLAVE>` and `<MRSIGNER>` - values that you received at the end of [Step 2](#writing-manifest-and-encrypting-the-oracle-service). <br/>**Note:** if at some point you will need to redo Step 2 and prepare the solution again, you will have different MRENCLAVE and MRSIGNER and will have to change them in the smart contract. Refer to [updating MRENCLAVE and MRSIGNER](#updating-mrenclave-and-mrsigner) to modify these without redeploying the contract;
 
@@ -265,31 +271,35 @@ At the end of this guide we will observe this contract through Polygonscan to se
 ## **Step 6. Deploy oracle service**
 
 At this point we should have:
-- Deployed the x590 verifier smart contract (Step 1)
-- Prepared the oracle service solution (Step 2)
-- Deployed the oracle smart contract (Step 3)
+- Deployed the x590 verifier smart contract ([Step 3](/developers/deployment_guides/blockchain/oracles#step-3-deploy-the-x509-verifier-smart-contract))
+- Prepared the oracle service solution ([Step 4](/developers/deployment_guides/blockchain/oracles#step-4-prepare-oracle-service-for-deployment-on-super-protocol))
+- Deployed the oracle smart contract ([Step 5](/developers/deployment_guides/blockchain/oracles#step-5-prepare-and-deploy-oracle-smart-contract))
 
 In this step we will deploy the oracle service that will be running on Super Protocol inside TEE. To recap, its function is to regularly update the BTC/USD price from the Oracle contract which we have deployed on the previous step.
 
-Open a new terminal window and go to `solutions/Blockchain/sp-oracle/script/inputs/` folder. We will need to set up a config for Oracle service.
+Open a new terminal window and go to `/Blockchain/sp-oracle/script/inputs/` folder where we will need to configure the API inputs for Oracle service.
+
+### Set up root certificates
 
 First, you will need to retrieve the trusted root certificates to validate the connection to the API service that your oracle will be requesting to. You can extract root certificate of the particular API that you will be using, but because certificates may change unpredictably we recommend listing the full root certificates list from your computer. 
 
-If you have run Oracle locally, the file `ca_certificates.crt` has been already generated and it is located in the directory `solutions/Blockchain/sp-oracle/script/inputs`. In addition, you can update it with your own list of trusted certificates. Otherwise please move on to the creation of `input.json`.
+If you have run the Oracle locally, the file `ca_certificates.crt` has been already generated. It is located in the directory `/Blockchain/sp-oracle/script/inputs`. In addition, you can update it with your own list of trusted certificates. Otherwise, you can go on to the creation of `input.json`.
 
 While in the `inputs` directory, execute:
 
-### Linux
+Linux
 ```shell
 cat /etc/ssl/certs/*.pem >> ./ca_certificates.crt
 ```
 
-### Mac OS
+Mac OS
 ```shell
 security export -t certs -f pemseq -k /System/Library/Keychains/SystemRootCertificates.keychain -o ./ca_certificates.crt
 ```
 
-This command will create or update file `ca_certificates.crt` inside `inputs/` directory. It contains the system root certificates.
+This command will create or update file `ca_certificates.crt` inside the `/inputs` directory. It contains the system root certificates.
+
+### Configure input.json
 
 Second, create `input.json` by copying the `input.example.json`:
 
@@ -299,17 +309,19 @@ cp input.example.json input.json
 
 And configure it:
 
-* `interval` - the frequence of requests to the API (how often the data will be published);
+* `interval` - the frequency of requests to the API (how often the data will be published);
 * `dataKey` - key by which historical data of requests will be stored in the smart contract, for instance “BTC/USD”;
 * `smartContractAddress` - address of the oracle smart contract;
-* `publisher` - address and the private key of the wallet that was used as `<publisher-address>` on the previous step for [Oracle deployment](#deploy-oracle). Again, it will be publishing data from the TEE onto blockchain;
+* `publisher` - address and the private key of Polygon Testnet Wallet #2. It will be publishing data from the TEE onto the blockchain;
 * `apiConfig` - containing:
-    - `endpoint` - API URL (default using Alpha Vantage API query url with api-key);
+    - `endpoint` - API URL (default using Alpha Vantage API query URL with the API key);
 * `debugMode` - false.
 
 To sum up: you should end up having two files in `inputs` folder:
 - `input.json` (the file must have this name)
 - `ca_certificates.crt`
+
+### Upload and create order on Super Protocol
 
 Create an archive with those files:
 
@@ -324,7 +336,7 @@ cd ../../../../../
 ./spctl files upload ./solutions/Blockchain/sp-oracle/script/inputs/oracle-input.tar.gz --output oracle-input.json --filename oracle-input.tar.gz
 ```
 
-`oracle-input.json` will be created. We will use it and `oracle-solution.json` from Step 2 to create an order:
+An `oracle-input.json` will be created. We will use this file and `oracle-solution.json` from [Step 4](/developers/deployment_guides/blockchain/oracles#writing-manifest-and-encrypting-the-oracle-service) to create an order:
 
 ```shell
 ./spctl workflows create --tee 1,1 --tee-slot-count 1 --tee-options 1 --tee-options-count 1 --storage 23,27 --solution 6,2 --solution oracle-solution.json --data oracle-input.json --min-rent-minutes 60
