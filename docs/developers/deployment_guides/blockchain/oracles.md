@@ -119,7 +119,7 @@ docker compose up blockchain oracle
 
 When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check the results. 
 
-Scroll up the docker's output to find the logs `To test app please use these commands inside "smart-contract" folder` and copy first command. Running containers should not be stopped. Open a new terminal window and go to the directory `smart-contact` and use this copied command on it.
+Scroll up the docker's output to find the logs `To test app please use these commands inside "smart-contract" folder` and copy the first command. Running containers must NOT be stopped. Open a new terminal window, go to the directory `smart-contact`, insert the copied command and execute it.
 
 For example:
 
