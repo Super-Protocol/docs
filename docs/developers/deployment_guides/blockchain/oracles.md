@@ -123,7 +123,7 @@ For example:
 
 ```
 bash $ npx hardhat process-a --address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 --network localhost
-Tx result: BigNumber { value: "-16" }
+Tx result: BigNumber { value: "4" }
 ```
 
 The result `Tx result: BigNumber { value: "4" }` means that API data (New York temperature  4°C) has been successfully written to a local blockchain and you have retrieved it by another smart contract.
