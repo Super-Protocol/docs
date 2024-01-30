@@ -39,8 +39,6 @@ You will need:
 
 - [Polygonscan](https://polygonscan.com/login) - register and generate an API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai Polygon Testnet](https://mumbai.polygonscan.com/), you will need the **mainnet** API key.
 
-- [Alpha Vantage stock API](https://www.alphavantage.co/support/#api-key) - generate an API key to receive real time prices.
-
 - Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract. Wallet needs to contain test MATICs.
 - Polygon Testnet Wallet #2 - for deploying Oracle smart contract. Wallet needs to contain test MATICs.
 
@@ -314,7 +312,7 @@ And configure it:
 * `smartContractAddress` - address of the oracle smart contract;
 * `publisher` - address and the private key of Polygon Testnet Wallet #2. It will be publishing data from the TEE onto the blockchain;
 * `apiConfig` - containing:
-    - `endpoint` - API URL (default using Alpha Vantage API query URL with the API key);
+    - `endpoint` - API URL (default using Open Meteo API query URL);
 * `debugMode` - false.
 
 To sum up: you should end up having two files in `inputs` folder:
