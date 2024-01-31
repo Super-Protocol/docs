@@ -7,9 +7,9 @@ sidebar_position: 10
 
 ## **About**
 
-This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the BTC/USD price. 
+This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the New York temperature. 
 
-* The Oracle service should publish the BTC/USD exchange rate every 5 minutes by accessing the open [Alpha Vantage stocks API](https://www.alphavantage.co/documentation/).
+* The Oracle service should publish the New York temperature exchange rate every 5 minutes by accessing the open [Open Meteo API](https://open-meteo.com/en/docs/).
 
 * The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
@@ -38,8 +38,6 @@ You will need:
 ### Create / generate
 
 - [Polygonscan](https://polygonscan.com/login) - register and generate an API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai Polygon Testnet](https://mumbai.polygonscan.com/), you will need the **mainnet** API key.
-
-- [Alpha Vantage stock API](https://www.alphavantage.co/support/#api-key) - generate an API key to receive real time prices.
 
 - Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract. Wallet needs to contain test MATICs.
 - Polygon Testnet Wallet #2 - for deploying Oracle smart contract. Wallet needs to contain test MATICs.
@@ -125,10 +123,10 @@ For example:
 
 ```
 bash $ npx hardhat process-a --address 0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0 --network localhost
-Tx result: BigNumber { value: "38616" }
+Tx result: BigNumber { value: "4" }
 ```
 
-The result `Tx result: BigNumber { value: "38616" }` means that API data (exchange rate: $38616 for 1 BTC) has been successfully written to a local blockchain and you have retrieved it by another smart contract.
+The result `Tx result: BigNumber { value: "4" }` means that API data (New York temperature  4°C) has been successfully written to a local blockchain and you have retrieved it by another smart contract.
 
 ## **Step 3. Deploy the "x509 verifier" smart contract**
 
@@ -166,7 +164,7 @@ Now we move to the preparing and deploying the components of the oracle itself. 
 
 - An off-chain service that will run inside the TEE and call on the oracle smart-contract at specified intervals (default frequency is 5 minutes).
 
-- The oracle smart contract that will store the BTC/USD price data. It will also verify, by using the x509 smart contract from previous step, that the request comes from a trusted off-chain service.
+- The oracle smart contract that will store the New York temperature. It will also verify, by using the x509 smart contract from previous step, that the request comes from a trusted off-chain service.
 
 In this step we will cover the first component.
 
@@ -275,7 +273,7 @@ At this point we should have:
 - Prepared the oracle service solution ([Step 4](/developers/deployment_guides/blockchain/oracles#step-4-prepare-oracle-service-for-deployment-on-super-protocol))
 - Deployed the oracle smart contract ([Step 5](/developers/deployment_guides/blockchain/oracles#step-5-prepare-and-deploy-oracle-smart-contract))
 
-In this step we will deploy the oracle service that will be running on Super Protocol inside TEE. To recap, its function is to regularly update the BTC/USD price from the Oracle contract which we have deployed on the previous step.
+In this step we will deploy the oracle service that will be running on Super Protocol inside TEE. To recap, its function is to regularly update the New York temperature from the Oracle contract which we have deployed on the previous step.
 
 Open a new terminal window and go to `/Blockchain/sp-oracle/script/inputs/` folder where we will need to configure the API inputs for Oracle service.
 
@@ -310,11 +308,11 @@ cp input.example.json input.json
 And configure it:
 
 * `interval` - the frequency of requests to the API (how often the data will be published);
-* `dataKey` - key by which historical data of requests will be stored in the smart contract, for instance “BTC/USD”;
+* `dataKey` - key by which historical data of requests will be stored in the smart contract, for instance “NewYork_temperature”;
 * `smartContractAddress` - address of the oracle smart contract;
 * `publisher` - address and the private key of Polygon Testnet Wallet #2. It will be publishing data from the TEE onto the blockchain;
 * `apiConfig` - containing:
-    - `endpoint` - API URL (default using Alpha Vantage API query URL with the API key);
+    - `endpoint` - API URL (default using Open Meteo API query URL);
 * `debugMode` - false.
 
 To sum up: you should end up having two files in `inputs` folder:
@@ -357,14 +355,14 @@ Wait until the order turns to status `Processing`. The script will start about 1
 Now we can observe the oracle live through Polygonscan.
 
 Open the dApp contract page on Polygonscan: `https://mumbai.polygonscan.com/address/<d-app-address>`, using the contract address we have received on the [Deploy dApp](#deploy-dapp) step. On the `Contract` -> `Read Contract` tab select methods:
-- processA - requests the BTC/USD price which is not older than 1 hour (and adds 1);
-- processB - requests any last BTC/USD price regardless of the data age (and adds 2).
+- processA - requests the New York temperature in Celsius which is not older than 1 hour;
+- processB - requests the New York temperature in Fahrenheit which is not older than 1 hour;
 
 <img src={require('./../../images/guides_blockchain_2.png').default} width="auto" height="auto"/>
 
-If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Polygonscan similarly to the dApp. However, as a key it won't take 'BTC/USD' directly, but rather the keccak256 hash of it.
+If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Polygonscan similarly to the dApp. However, as a key it won't take 'NewYork_temperature' directly, but rather the keccak256 hash of it.
 
-You can find open online services for convertation, but if you are using the same pair (BTC/USD), then the key will be `0xee62665949c883f9e0f6f002eac32e00bd59dfe6c34e92a91c37d6a8322d6489`. You can use it to call on the oracle methods.  
+You can find open online services for convertation, but if you are using the same pair (NewYork_temperature), then the key will be `0xb186074e0e3ae110d728b99f004e457e6f557aab3f713681c9f5b906e3cc5cd0`. You can use it to call on the oracle methods.  
 
 <img src={require('./../../images/guides_blockchain_3.png').default} width="auto" height="auto"/>
 
