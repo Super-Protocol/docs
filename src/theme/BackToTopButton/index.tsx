@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import {translate} from '@docusaurus/Translate';
 import {ThemeClassNames} from '@docusaurus/theme-common';
@@ -14,7 +14,17 @@ import {useBackToTopButton} from '@docusaurus/theme-common/internal';
 import styles from './styles.module.css';
 
 export default function BackToTopButton(): JSX.Element {
-  const {shown, scrollToTop} = useBackToTopButton({threshold: 0});
+  const {_, scrollToTop} = useBackToTopButton({threshold: 0});
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShown(window.scrollY > 30);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener("keyup", handleScroll);
+  }, []);
+
   return (
     <button
       aria-label={translate({
