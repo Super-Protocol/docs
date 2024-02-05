@@ -25,7 +25,7 @@ p {
 
 /* navbar */
 .navbar__logo {
-    height: 1.4em;
+    height: 1.12em;
 }
 
 .navbar__title {
@@ -36,6 +36,7 @@ p {
 
 .navbar__items {
     font-size: 14px;
+    flex: none;
 }
 
 /* sidebar */
@@ -45,6 +46,10 @@ p {
 
 .menu__list-item:not(:first-child) {
     margin-top: 0;
+}
+
+.menu {
+    padding-bottom: 30px !important;
 }
 
 .theme-doc-sidebar-item-category-level-2,
@@ -92,6 +97,10 @@ div[class*="docItemContainer_"] {
     background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem
 }
 
+table :is(td, tr, th) {
+    border: none !important;
+}
+
 [data-theme='dark'] {
     --ifm-color-primary: #489cc7;
     --ifm-color-primary-dark: #398fbb;
@@ -107,4 +116,8 @@ div[class*="docItemContainer_"] {
 [data-theme='light'] {
     --ifm-color-border-select: var(--ifm-color-secondary-dark);
     --ifm-color-toc-border-select: var(--ifm-color-primary-lighter);
+}
+
+strong {
+    font-weight: 600;
 }
