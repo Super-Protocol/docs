@@ -111,7 +111,7 @@ table :is(td, tr, th) {
     --ifm-color-primary-lighter: #67add1;
     --ifm-color-primary-lightest: #86beda;
     --ifm-color-border-select: var(--ifm-color-gray-800);
-    --ifm-color-toc-border-select:  var(--ifm-color-primary-darkest);
+    --ifm-color-toc-border-select: var(--ifm-color-primary-darkest);
 }
 
 [data-theme='light'] {
