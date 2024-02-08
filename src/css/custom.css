@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lunasima:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 :root {
-    --ifm-font-family-base: "Lunasima";
+    --ifm-font-family-base: "Poppins";
+    --ifm-navbar-search-input-icon-new: url('../images/search.svg')
 }
 
 h1 {
@@ -25,7 +26,7 @@ p {
 
 /* navbar */
 .navbar__logo {
-    height: 1.4em;
+    height: 1.12em;
 }
 
 .navbar__title {
@@ -36,6 +37,7 @@ p {
 
 .navbar__items {
     font-size: 14px;
+    flex: none;
 }
 
 /* sidebar */
@@ -45,6 +47,10 @@ p {
 
 .menu__list-item:not(:first-child) {
     margin-top: 0;
+}
+
+.menu {
+    padding-bottom: 30px !important;
 }
 
 .theme-doc-sidebar-item-category-level-2,
@@ -92,6 +98,10 @@ div[class*="docItemContainer_"] {
     background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem
 }
 
+table :is(td, tr, th) {
+    border: none !important;
+}
+
 [data-theme='dark'] {
     --ifm-color-primary: #489cc7;
     --ifm-color-primary-dark: #398fbb;
@@ -107,4 +117,31 @@ div[class*="docItemContainer_"] {
 [data-theme='light'] {
     --ifm-color-border-select: var(--ifm-color-secondary-dark);
     --ifm-color-toc-border-select: var(--ifm-color-primary-lighter);
+}
+
+strong {
+    font-weight: 400;
+}
+
+.pagination-nav__label {
+    font-weight: 500 !important;
+}
+
+.pagination-nav__label::before {
+    content: '' !important;
+}
+
+.pagination-nav__label::after {
+    content: '' !important;
+}
+
+.navbar__search-input {
+    padding-right: 0 !important;
+    border-radius: 5px !important;
+    background: var(--ifm-navbar-search-input-background-color)
+        var(--ifm-navbar-search-input-icon-new) no-repeat 0.75rem center / 1rem 1rem !important
+}
+
+input:focus-visible {
+    outline: #BFC3C8 auto 1px !important;
 }

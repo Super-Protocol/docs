@@ -24,28 +24,6 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "whitepaper",
-        path: "./docs/whitepaper",
-        routeBasePath: "/whitepaper",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "faq",
-        path: "./docs/faq",
-        routeBasePath: "/faq",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
         id: "testnet",
         path: "./docs/testnet",
         routeBasePath: "/testnet",
@@ -63,6 +41,17 @@ const config = {
             to: "/developers",
           },
         ],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "whitepaper",
+        path: "./docs/whitepaper",
+        routeBasePath: "/whitepaper",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
       },
     ],
   ],
@@ -101,6 +90,13 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
+            label: "Testnet",
+            docsPluginId: "testnet",
+          },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
             label: "Developers",
           },
           {
@@ -109,20 +105,6 @@ const config = {
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "FAQ",
-            docsPluginId: "faq",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "Testnet",
-            docsPluginId: "testnet",
           },
         ],
       },
