@@ -4,6 +4,10 @@
     --ifm-navbar-search-input-icon-new: url('../images/search.svg')
 }
 
+* {
+    font-weight: 300;
+}
+
 h1 {
     font-size: 40px;
     font-weight: 300;
@@ -27,6 +31,10 @@ p {
 /* navbar */
 .navbar__logo {
     height: 1.12em;
+}
+
+.navbar__link {
+    font-weight: 300;
 }
 
 .navbar__title {
@@ -89,6 +97,10 @@ div[class*="docItemContainer_"] {
     padding-left: 8px;
 }
 
+.table-of-contents {
+    font-size: 14px;
+}
+
 .table-of-contents__link--active {
     border-left: var(--ifm-color-toc-border-select) solid 2px;
     margin-left: -2px;
@@ -98,8 +110,41 @@ div[class*="docItemContainer_"] {
     background: var(--ifm-menu-link-sublist-icon) 50% / 1.2rem 1.2rem
 }
 
-table :is(td, tr, th) {
-    border: none !important;
+table th, table td {
+    border: none;
+}
+
+[data-theme='light'] table td:not(:last-child), [data-theme='light'] table th:not(:last-child) {
+    border-right: var(--ifm-table-border-width) solid var(--ifm-table-border-color);
+}
+
+[data-theme='dark'] table td:not(:last-child), [data-theme='dark'] table th:not(:last-child) {
+    border-right: var(--ifm-table-border-width) solid rgba(96, 103, 112, 0.8);
+}
+
+
+table tr:first-child {
+    border-top: unset;
+}
+
+table tr:nth-child(2n) {
+    background-color: unset;
+}
+
+[data-theme='light'] table thead {
+    background-color: #f6f6f6;
+}
+
+table th:first-child {
+    border-top-left-radius: 0.4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: 0.4rem;
+}
+
+[data-theme='dark'] table thead {
+    background-color: #252527;
 }
 
 [data-theme='dark'] {
@@ -120,7 +165,7 @@ table :is(td, tr, th) {
 }
 
 strong {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .pagination-nav__label {
@@ -144,4 +189,25 @@ strong {
 
 input:focus-visible {
     outline: #BFC3C8 auto 1px !important;
+}
+
+[data-theme='light'] .menu__link--sublist,
+[data-theme='light'] .menu__link {
+    color: #1c1e21;
+}
+
+[data-theme='light'] .menu__link--active {
+    color: var(--ifm-menu-color-active);
+}
+
+[data-theme='light'] .table-of-contents__link {
+    color: #1c1e21;
+}
+
+[data-theme='light'] .table-of-contents__link--active {
+    color: var(--ifm-color-primary) !important;
+}
+
+.alert {
+    box-shadow: none;
 }
