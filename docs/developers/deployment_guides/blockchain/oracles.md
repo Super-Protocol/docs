@@ -27,7 +27,7 @@ You will need:
 
 ### Install
 
-- [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16.
+- [Node.js](https://nodejs.org/en/download/package-manager) - This example is based on Node.js v16. **Note:** we recommend to install Node.js using `nvm`. For more details, please follow the [link](https://github.com/nvm-sh/nvm?tab=readme-ov-file#usage).
 
 - [Docker](https://www.docker.com/get-started/) - for building solutions.
 
