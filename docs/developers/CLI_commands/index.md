@@ -32,4 +32,3 @@ Please be mindful of the [Testnet Limitations](/testnet/limitations) when using 
 | [Orders](/developers/cli_commands/orders)       | Manage your orders.                                                |
 | [Offers](/developers/cli_commands/offers)       | View Marketplace offers.                                           |
 | [Providers](/developers/cli_commands/providers) | View Marketplace providers.                                        |
-| [TII](/developers/cli_commands/tii)             | Prepare custom resource to be processed without sharing the source |
