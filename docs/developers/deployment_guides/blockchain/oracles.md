@@ -13,7 +13,9 @@ This guide will take you step by step through the process of deploying a confide
 
 * The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
-* Our DApp (smart contract) should be able to read this data and ensure that it is: **a)** Up-to-date (by verifying the timestamp) and **b)** Available to be read on-chain.
+* Our DApp (smart contract) should be able to read this data and ensure that it is: 
+  * Up-to-date (by verifying the timestamp) 
+  * Available to be read on-chain.
 
 :::note
 SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.
@@ -307,7 +309,7 @@ cp input.example.json input.json
 
 And configure it:
 
-* `interval` - the frequency of requests to the API (how often the data will be published);
+* `interval` - the frequency of requests to the API (how often the data will be published, in seconds);
 * `dataKey` - key by which historical data of requests will be stored in the smart contract, for instance “NewYork_temperature”;
 * `smartContractAddress` - address of the oracle smart contract;
 * `publisher` - address and the private key of Polygon Testnet Wallet #2. It will be publishing data from the TEE onto the blockchain;

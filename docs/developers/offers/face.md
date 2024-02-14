@@ -10,7 +10,7 @@ sidebar_position: 3
 
 A machine trained Python model that determines the probability that two images contain the same person.
 
-INPUT
+**INPUT**
 
 You can use compatible datasets from the Marketplace and/or upload your own data.
 
@@ -24,13 +24,13 @@ The solution requires the following data as an input:
 
 Before uploading your own data all files must be packaged into a TAR or TAR.GZ (TGZ) archive. 
 
-OUTPUT
+**OUTPUT**
 
 The model provides output in a TAR.GZ archive. Inside the archive there is a folder for every dataset that was used as an input. For example, if two datasets were used, then there would be two folders: input-0001 and input-0002.
 
 Every folder contains output.csv file and processing.error file in case there were errors during the calculation. Output file includes the same pairs that were provided in the pairs.csv plus the probability that the pair of images contains the same person.
 
-LINKS
+**LINKS**
 
 See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=9).
 

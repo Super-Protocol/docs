@@ -56,8 +56,8 @@ Set the following parameters and press `Save`.
 <br/>
 <br/>
 
-| Parameter | Value |
-| --- | ----------- |
+| **Parameter** | **Value** |
+| :- | :- |
 | Network Name | Matic Testnet Mumbai <br /><br />*Note. You can change the network name if you'd like.*|
 | New RPC URL | [https://mumbai.polygon.superprotocol.com/hesoyam](https://mumbai.polygon.superprotocol.com/hesoyam)|
 | Chain ID | 80001 |
@@ -199,7 +199,7 @@ There are two types of tokens that are used in Super Protocol and you will need 
 1. MATIC token is used to pay for transactions on Polygon blockchain.
 2. TEE token is used to pay for offers and receive payments in Super Protocol.
 
-:::info Step 9. Get test tokens.
+:::info Step 8. Get test tokens.
 
 To get tokens, use the corresponding buttons in the top menu. Get both `TEE` and `MATIC` tokens.
 
