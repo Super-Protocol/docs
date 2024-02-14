@@ -1,0 +1,32 @@
+---
+id: "custom_solutions"
+title: "Custom solutions usage"
+slug: "/cli_guides/custom_solutions"
+sidebar_position: 7
+---
+
+This guide will take you step by step through the process of running your custom solutions in SuperProtocol.
+
+
+## Step 1. Pack solution
+
+In order to be run correctly inside an Intel SGX enclave, a solution should be packed and signed with Gramine (a.k.a graminized).
+To do that, you need to execute `solutions prepare` command and specify the corresponding paths to your solution data.
+Please follow the link [link](/developers/cli_commands/solution/prepare) to learn more about the command.
+
+As a result, two files will be generated:
+* `tar.gz` archive;
+* `metadata.json` file.
+
+## Step 2. Upload solution to storage
+
+Then the archive should be uploaded to a storage. You need to execute `files upload` command and specify the corresponding paths to the files generated at the previous step.
+Please follow the link [link](/developers/cli_commands/files/upload) to learn more about the command.
+
+As a result, a resource file will be generated in the format of `json`, it will contain the information about how to access your uploaded solution.
+
+## Step 3. Execute order using your own solution
+
+Finally, in order to run your own solution, you need to execute `workflows create` command and specify the corresponding path to the resource file obtained at the previous step as your solution offer.
+Please follow the link [link](https://docs.superprotocol.com/developers/cli_commands/workflows/create#example-using-own-solution-and-data) to observe the example.
+
