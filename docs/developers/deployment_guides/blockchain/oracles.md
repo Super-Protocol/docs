@@ -307,7 +307,7 @@ cp input.example.json input.json
 
 And configure it:
 
-* `interval` - the frequency of requests to the API (how often the data will be published);
+* `interval` - the frequency of requests to the API (how often the data will be published, in seconds);
 * `dataKey` - key by which historical data of requests will be stored in the smart contract, for instance “NewYork_temperature”;
 * `smartContractAddress` - address of the oracle smart contract;
 * `publisher` - address and the private key of Polygon Testnet Wallet #2. It will be publishing data from the TEE onto the blockchain;
