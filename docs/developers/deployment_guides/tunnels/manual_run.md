@@ -95,6 +95,7 @@ Copy the following configuration to the `config.json` file:
   ],
   "authToken": "",
   "site": {
+    "domain": "your-domain.example.com",
     "cert": "./fullchain.crt",
     "key": "./private.pem"
   }
@@ -106,6 +107,7 @@ Copy the following configuration to the `config.json` file:
 - `sgxMrEnclave` и `sgxMrSigner` - leave these values as above, don't change them.
 - `authToken` - token from the `auth-token` file that you have created in the [previous section](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-server).
 - `cert` и `key` - relative path from the `config.json` to the files with SSL certificate and private key that you have generated in [Step 1](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate). Place these files next to `config.json`. 
+- `domain` (optional) - put here you domain name if you are using wildcard SSL certificate, otherwise you cat left it empty
 
 To add the authorization token from `auth-token` to `config.json` you can use the following command:
 

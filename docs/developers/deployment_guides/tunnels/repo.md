@@ -71,6 +71,7 @@ You need to change two variables:
  
 - `TUNNEL_SERVER_MRENCLAVE` - f539fcf25af2c8221bd150aa87f624379e2b216caa3f0689da03b2a74af6c833
 - `TUNNEL_SERVER_MRSIGNER` - 22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513
+- `DOMAIN` (optional) - specify here your domain if you are using wildcard SSL certificate
 
 Your hex codes should be just like this, without changes.
 
