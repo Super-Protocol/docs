@@ -89,7 +89,7 @@ Copy the following configuration to the `config.json` file:
 {
   "tunnels": [
     {
-      "sgxMrEnclave": "82e55c6ec7268b07e030226cc42417b89cb17ecc8b6b73bafb84fc44b0ed059c",
+      "sgxMrEnclave": "f539fcf25af2c8221bd150aa87f624379e2b216caa3f0689da03b2a74af6c833",
       "sgxMrSigner": "22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513"
     }
   ],
