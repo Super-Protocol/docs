@@ -111,7 +111,9 @@ Next, follow the steps in [Part 4](/developers/deployment_guides/tunnels/repo#pr
 
 **Required GitHub Variables:**
 
-`TUNNEL_SERVER_MRENCLAVE` and `TUNNEL_SERVER_MRSIGNER`, as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
+- `TUNNEL_SERVER_MRENCLAVE` and `TUNNEL_SERVER_MRSIGNER`, as in [Part 4](/developers/deployment_guides/tunnels/repo#preparing-secrets-and-variables)
+
+- `SUPERCHAT_DOMAIN` (optional) - specify here your Superchat domain if you are using wildcard SSL certificate
 
 Next, go to the "Actions" tab of your repository and start the Super Chat deployment actions! They can run in parallel.
 
