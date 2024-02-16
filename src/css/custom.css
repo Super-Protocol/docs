@@ -28,6 +28,10 @@ p {
     font-weight: 300;
 }
 
+ol > li {
+    font-weight: 500;
+}
+
 /* navbar */
 .navbar__logo {
     height: 1.12em;
@@ -122,6 +126,9 @@ table th, table td {
     border-right: var(--ifm-table-border-width) solid rgba(96, 103, 112, 0.8);
 }
 
+table thead tr {
+    border-bottom-width: 1px;
+}
 
 table tr:first-child {
     border-top: unset;
@@ -141,6 +148,10 @@ table th:first-child {
 
 table th:last-child {
     border-top-right-radius: 0.4rem;
+}
+
+table th {
+    font-weight: 500;
 }
 
 [data-theme='dark'] table thead {
