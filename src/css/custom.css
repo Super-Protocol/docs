@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 :root {
     --ifm-font-family-base: "Poppins";
+    --ifm-font-family-base-roboto: "Roboto Mono";
     --ifm-navbar-search-input-icon-new: url('../images/search.svg')
 }
 
@@ -28,7 +30,7 @@ p {
     font-weight: 300;
 }
 
-ol > li {
+ol > li::marker {
     font-weight: 500;
 }
 
@@ -199,7 +201,7 @@ strong {
 }
 
 input:focus-visible {
-    outline: #BFC3C8 auto 1px !important;
+    outline: #BFC3C8 solid 1px !important;
 }
 
 [data-theme='light'] .menu__link--sublist,
@@ -221,4 +223,12 @@ input:focus-visible {
 
 .alert {
     box-shadow: none;
+}
+
+span[class^="dropdownMenu_node_modules"] {
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.17) !important; 
+}
+
+pre, code {
+    font-family: var(--ifm-font-family-base-roboto);
 }
