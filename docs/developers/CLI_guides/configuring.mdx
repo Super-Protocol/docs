@@ -28,8 +28,7 @@ import TabItem from '@theme/TabItem';
   <TabItem value="windows" label="Windows">
     Open Powershell in the directory where you want to place SPCTL for Windows and run the following command:
     ```
-    $ProgressPreference = 'SilentlyContinue'
-    Invoke-WebRequest https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-win-x64 -OutFile spctl.exe
+    curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-win-x64 -o spctl.exe
     ```
   </TabItem>
 </Tabs>
