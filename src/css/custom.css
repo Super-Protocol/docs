@@ -30,7 +30,7 @@ p {
     font-weight: 300;
 }
 
-ol > li {
+ol > li::marker {
     font-weight: 500;
 }
 
