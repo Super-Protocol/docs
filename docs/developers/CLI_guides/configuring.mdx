@@ -26,15 +26,15 @@ import TabItem from '@theme/TabItem';
     ```
   </TabItem>
   <TabItem value="windows" label="Windows">
-    Open WSL Terminal in the directory where you want to place SPCTL for Windows and run the following command:
+    Open Powershell in the directory where you want to place SPCTL for Windows and run the following command:
     ```
-    curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
-    chmod +x ./spctl
+    $ProgressPreference = 'SilentlyContinue'
+    Invoke-WebRequest https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-win-x64 -OutFile spctl.exe
     ```
   </TabItem>
 </Tabs>
 
-You can also download and install SPCTL manually from our [GitHub repository](https://github.com/Super-Protocol/ctl).
+You can also download and install SPCTL manually from our [GitHub repository](https://github.com/Super-Protocol/ctl/releases/latest).
 
 ## Set up config.json manually
 
@@ -105,4 +105,4 @@ And then create your first simple order: an [Image Classification](/developers/o
 ./spctl workflows create --tee 1 --solution 7,3 --solution 5,1 --data 16,20 --data 17,21 --storage 23,27
 ```
 
-You will get an Order ID. You can then check the order status using the [orders](/developers/cli_commands/orders) command or using the [Marketplace GUI](/developers/marketplace). 
+You will get an Order ID. You can then check the order status using the [orders](/developers/cli_commands/orders) command or using the [Marketplace GUI](/developers/marketplace).
