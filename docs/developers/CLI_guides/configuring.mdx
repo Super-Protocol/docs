@@ -75,9 +75,6 @@ Then fill in the remaining parameters that are specific to your account:
 |:-----------------|:-------------------|
 |accessToken| Your personal *Access Token* from the Testnet invitation email.||
 |accountPrivateKey| Your personal *Private Key* from the Testnet invitation email.|
-|bucket| STORJ bucket name. Your encrypted solutions and data are uploaded to this bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) to create it.|
-|writeAccessToken| STORJ **write** access grant with *write* and *delete* permissions for the specified bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate it.|
-|readAccessToken| STORJ **read** access grant with *read* permission for the specified bucket. Use the same guide as above to generate it.|
 |key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key.|
 
 You are done! Now you can use SPCTL.
@@ -106,3 +103,15 @@ And then create your first simple order: an [Image Classification](/developers/o
 ```
 
 You will get an Order ID. You can then check the order status using the [orders](/developers/cli_commands/orders) command or using the [Marketplace GUI](/developers/marketplace). 
+
+## Set up Storj
+
+For quick deployments you can pick an existing storage offer from the Marketplace when using the [files upload](/developers/cli_commands/files/upload) command. This is recommended for new users.
+
+But for additional control you also have an option to configure your own storage in SPCTL. Populate the appropriate fields in `config.json` as below (you will need to sign up with Storj):
+
+|**Parameter**|**Description**|
+|:-----------------|:-------------------|
+|bucket| STORJ bucket name. Your encrypted solutions and data are uploaded to this bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) to create it.|
+|writeAccessToken| STORJ **write** access grant with *write* and *delete* permissions for the specified bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate it.|
+|readAccessToken| STORJ **read** access grant with *read* permission for the specified bucket. Use the same guide as above to generate it.|
