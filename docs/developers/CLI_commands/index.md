@@ -7,9 +7,9 @@ sidebar_position: 7
 
 ## Most often used CLI commands
 
-Below are the most popular CLI commands for developers. Most other functions, such as viewing offers and managing orders, may be more convenient using the [Marketplace GUI](/developers/marketplace). 
+Below are the most popular CLI commands for developers. Most other functions, such as viewing offers and managing orders, may be more convenient using the [Marketplace GUI](/developers/marketplace).
 
-You need to have previously [configured SPCTL](/developers/cli_guides/configuring) to use these commands. SPCTL stands for Super Protocol Control, our CLI tool.
+You need to have previously [configured SPCTL](/developers/cli_guides/configuring) to use these commands. [Quick guide](/developers/cli_guides/quick_guide) might be userful to make sense of the logic and sequence of the main commands.
 
 Please be mindful of the [Testnet Limitations](/testnet/limitations) when using CLI (and GUI).
 
@@ -21,7 +21,7 @@ Please be mindful of the [Testnet Limitations](/testnet/limitations) when using 
 | workflows                                      | [generate-key](/developers/cli_commands/workflows/generate-key) | Generate key to encrypt order results and manage your orders. |
 | workflows                                      | [create](/developers/cli_commands/workflows/create)             | Create new orders. |
 
-## CLI Command Groups
+## CLI command groups
 
 | **Commands**                                    | **Description**                                                    |
 |:------------------------------------------------|:-------------------------------------------------------------------|
