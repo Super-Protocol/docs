@@ -97,9 +97,10 @@ Get your first TEE and MATIC tokens:
 ./spctl tokens request --matic
 ```
 
-And then create your first simple order: an [Image Classification](/developers/offers/python-image) solution.
+And then [create](/developers/cli_commands/workflows/create) your first simple order: a [Super Chat](/developers/offers/superchat) solution using tunnels.
+
 ```
-./spctl workflows create --tee 1 --solution 7,3 --solution 5,1 --data 16,20 --data 17,21 --storage 23,27
+./spctl workflows create --solution 11,11 --solution 6,2 --data 15,19 --storage 23,27
 ```
 
 You will get an Order ID. You can then check the order status using the [orders](/developers/cli_commands/orders) command or using the [Marketplace GUI](/developers/marketplace). 
@@ -108,7 +109,7 @@ You will get an Order ID. You can then check the order status using the [orders]
 
 For quick deployments you can pick an existing storage offer from the Marketplace when using the [files upload](/developers/cli_commands/files/upload) command. This is recommended for new users.
 
-But for additional control you also have an option to configure your own storage in SPCTL. Populate the appropriate fields in `config.json` as below (you will need to sign up with Storj):
+But for additional control you also have an option to configure your own storage manually in SPCTL. Populate the appropriate fields in `config.json` as below (you will need to sign up with Storj):
 
 |**Parameter**|**Description**|
 |:-----------------|:-------------------|
