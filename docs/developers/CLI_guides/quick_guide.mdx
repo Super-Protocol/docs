@@ -16,8 +16,8 @@ In order to be run correctly inside an Intel SGX confidential enclave (TEE), a s
 Run the [**solutions prepare**](/developers/cli_commands/solutions/prepare) command.
 
 As a result, two files will be generated:
-* `tar.gz` archive - the actual solution content files to be executed inside the TEE;
-* `metadata.json` file - the metadata required to properly load into the storage.
+* `tar.gz` archive - the solution content files properly packed for execution inside the TEE;
+* `metadata.json` file - hashes that might be needed to ensure the integrity of the archive.
 
 ### Step 2. Upload solution to storage
 
@@ -58,7 +58,7 @@ As a result, a resource file will be generated in the `json` format, containing 
 
 In this shared step an order is created, the solution and data from the storage are downloaded into the TEE and executed.
 
-Run the [**workflows create**](/developers/cli_commands/workflows/create) command.
+Run the [**workflows create**](/developers/cli_commands/workflows/create) command. Here you will need the `json` resource files generated during the upload to storage.
 
 As result, you will get an `order ID`.
 
