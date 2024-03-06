@@ -29,10 +29,11 @@ Example: lists the first 30 solution and data offers.
 
 ## Options
 
-|**Name, shorthand**| **Default**                              | **Description**                                                                                                                                                                            |
-| :- |:-----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|`--fields`| `id`<br/> `name`<br/> `orders_in_queue`  | **For `tee` offer type**<br/>Available fields : <br/>`id`,`name`,`description`,`provider_address`,`provider_name`,`total_cores`,`free_cores`,`orders_in_queue``cancelable`,`modified_date` |
-|`--fields`| `id`<br/>  `name`<br/> `type`                       | **For `value` offer type**<br/> Available fields:<br/> `id`,`name`,`description`,`type`,`provider_address`,`provider_name`,`cancelable``modified_date`                                     |
-|`--limit`| 10                                       | Number of records to display                                                                                                                                                               |
-|`--cursor`|                                          | Cursor for pagination                                                                                                                                                                      |
-|`--config`| `./config.json`                          | Path to the configuration file                                                                                                                                                             |
+|**Name, shorthand**|**Default**|**Description**|
+|:-|:-|:-|
+|`--ids`| |Filter by offer `<ids>` (accepts multiple values)|
+|`--fields`| `id`<br/> `name`<br/> `orders_in_queue`  | **For `tee` offer type**<br/>Available fields : <br/>`id`,`name`,`description`,`provider_address`,`provider_name`,`total_cores`,`free_cores`,`orders_in_queue`,`cancelable`,`modified_date` |
+|`--fields`| `id`<br/>  `name`<br/> `type` | **For `value` offer type**<br/> Available fields:<br/> `id`,`name`,`description`,`type`,`provider_address`,`provider_name`,`cancelable`,`modified_date`|
+|`--limit`| 10 | Number of records to display|
+|`--cursor`| | Cursor for pagination|
+|`--config`| `./config.json` | Path to the configuration file|
