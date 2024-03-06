@@ -36,7 +36,7 @@ Each archive is uploaded separately. So, if you are deploying a solution with tw
 
 * A `json` resource file, containing the information for TEE on how to access your uploaded solution. You will need this file for the  [workflows create](/developers/cli_commands/workflows/create#example-using-own-solution-and-data) command.
 
-## Example:
+## Example
 
 In this example we will use the scenario of uploading to a storage offer.
 
@@ -65,7 +65,7 @@ Where:
 
 |**Name**| **Description**                |
 | :- |:-------------------------------|
-|`localPath`| Path to the file for uploading |
+|`localPath`| Path to the `tar.gz` archive for uploading |
 
 ## Options
 
