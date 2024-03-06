@@ -33,7 +33,7 @@ This should give you some idea of the Super Protocol logic.
 
 Now you can dive right into it: 
 
-4. Follow [this guide](/developers/cli_guides/) to set up your storage account and configure SPCTL.
+4. Follow [this guide](/developers/cli_guides/) to configure SPCTL (our CLI tool).
 
 5. Familiarize yourself with the [fundamentals](/developers/fundamentals) as well as key [CLI commands](/developers/cli_commands) and [Testnet limitations](/testnet/limitations).
 

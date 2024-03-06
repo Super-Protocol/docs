@@ -1,0 +1,85 @@
+---
+id: "quick_guide"
+title: "Quick Deployment Guide"
+slug: "/cli_guides/quick_guide"
+sidebar_position: 7
+---
+
+This quick guide will take you step by step through the process of deploying your solutions and data on Super Protocol. This is not a detailed guide, it's purpose is only to introduce you to the logic and sequence of the CLI commands. Use the examples inside each command for guidance.
+
+## Prepare solution
+
+### Step 1. Pack solution
+
+In order to be run correctly inside an Intel SGX confidential enclave (TEE), a solution has to be packed and signed with [Gramine](https://gramineproject.io/) (a.k.a graminized).
+
+Run the [**solutions prepare**](/developers/cli_commands/solutions/prepare) command.
+
+As a result, two files will be generated:
+* `tar.gz` archive - the solution content files properly packed for execution inside the TEE;
+* `metadata.json` file - hashes that might be needed to ensure the integrity of the archive.
+
+### Step 2. Upload solution to storage
+
+Before the solution can be executed in TEE, it needs to be uploaded to a storage, from where the TEE will download it for execution.
+
+Run the [**files upload**](/developers/cli_commands/files/upload) command using the two files above.
+
+As a result, a resource file will be generated in the `json` format, containing the information for TEE on how to access your uploaded solution.
+
+## Prepare data
+
+### Step 1. Pack data
+
+In order to be with the solution, data has to be packed into a `tar.gz` archive.
+
+You can use the following command to create such an archive:
+
+```
+tar -czvf archive_name.tar.gz -C ./archive_data
+```
+Where:
+* `archive_name.tar.gz` - the archive name;
+* `./archive_data` - the directory where the data is located.
+
+As a result, a `tar.gz` archive will be generated. Please make sure that no system or hidden files are included into the archive.
+
+### Step 2. Upload data to storage
+
+Before it can be executed with the solution inside the TEE, the data also needs to be uploaded to a storage.
+
+Run the [**files upload**](/developers/cli_commands/files/upload) command using the archive file above.
+
+As a result, a resource file will be generated in the `json` format, containing the information for TEE on how to access your uploaded data.
+
+## Manage orders
+
+### Step 3. Create order
+
+In this shared step an order is created, the solution and data from the storage are downloaded into the TEE and executed.
+
+Run the [**workflows create**](/developers/cli_commands/workflows/create) command. Here you will need the `json` resource files generated during the upload to storage.
+
+As result, you will get an `order ID`.
+
+### Step 4. Receive results
+
+Your order may take some time to process. You can track its progress using the [**orders get**](/developers/cli_commands/orders/get) command.
+
+Once the order moves to the status `Done`, then a result may be retrieved using the [**orders download-result**](/developers/cli_commands/orders/download-result) command. Some solutions, such as tunnel server, may have results available earlier because for them status `Processing` may also mean that they are live and operational.
+
+For steps 3 and 4 it may also be more convenient to use the [**Marketplace GUI**](/developers/marketplace/).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
