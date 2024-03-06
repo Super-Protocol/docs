@@ -27,3 +27,9 @@ Example: displays information on [this](https://marketplace.superprotocol.com/co
 |:---------|:--------------------------------|
 | `type`   | Type of offer: `tee` or `value` |
 | `id`     | Offer ID                        |
+
+## Options
+
+|**Name, shorthand**|**Default**|**Description**|
+| :- | :- | :- |
+|`--save-to`| |Save output to the file (e.g. `./offer-1.json`)|
