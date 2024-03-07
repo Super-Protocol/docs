@@ -15,15 +15,13 @@ In order to be run correctly inside an Intel SGX confidential enclave (TEE), a s
 
 Run the [**solutions prepare**](/developers/cli_commands/solutions/prepare) command.
 
-As a result, two files will be generated:
-* `tar.gz` archive - the solution content files properly packed for execution inside the TEE;
-* `metadata.json` file - hashes that might be needed to ensure the integrity of the archive.
+As a result, a `tar.gz` archive will be generated. This is the solution content files properly packed for execution inside the TEE.
 
 ### Step 2. Upload solution to storage
 
 Before the solution can be executed in TEE, it needs to be uploaded to a storage, from where the TEE will download it for execution.
 
-Run the [**files upload**](/developers/cli_commands/files/upload) command using the two files above.
+Run the [**files upload**](/developers/cli_commands/files/upload) command using the `tar.gz` archive above.
 
 As a result, a resource file will be generated in the `json` format, containing the information for TEE on how to access your uploaded solution.
 
