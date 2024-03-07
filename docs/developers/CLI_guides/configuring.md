@@ -51,7 +51,8 @@ Copy and paste into a new file or [download a template](./assets/config.json). P
     "blockchain": {
         "rpcUrl": "https://mumbai.polygon.superprotocol.com/hesoyam",
         "smartContractAddress": "0xA7Ff565f26b93926e4e6465Eb81d48EfF456848b",
-        "accountPrivateKey": ""
+        "accountPrivateKey": "",
+        "authorityAccountPrivateKey": ""
     },
     "storage": {
         "type": "STORJ",
@@ -71,11 +72,12 @@ Copy and paste into a new file or [download a template](./assets/config.json). P
 
 Then fill in the remaining parameters that are specific to your account:
 
-|**Parameter**|**Description**|
-|:-----------------|:-------------------|
-|accessToken| Your personal *Access Token* from the Testnet invitation email.||
-|accountPrivateKey| Your personal *Private Key* from the Testnet invitation email.|
-|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key.|
+|**Parameter**| **Description**                                                                                                                                       |
+|:-----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
+|accessToken| Your personal *Access Token* from the Testnet invitation email.                                                                                       ||
+|accountPrivateKey| Only for providers: *Private Key* of your provider's action account.                                                                                  |
+|authorityAccountPrivateKey| Your personal *Private Key* from the Testnet invitation email.                                                                                        |
+|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. |
 
 You are done! Now you can use SPCTL.
 

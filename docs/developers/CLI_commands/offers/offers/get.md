@@ -5,7 +5,7 @@ slug: "/cli_commands/offers/get"
 sidebar_position: 2
 ---
 
-Displays detailed information on a value or compute offer with `id`.
+Display detailed information on a value or compute offer with `id`.
 
 ## Usage
 
