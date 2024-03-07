@@ -18,7 +18,7 @@ View Super Protocol offers using CLI commands. In most cases it is more convenie
 
 | **Command**                                                                 | **Description**                                                    |
 |:----------------------------------------------------------------------------|:-------------------------------------------------------------------|
-| [list](/developers/cli_commands/offers/oofers/list)                         | Lists available offers.                                            |
+| [list](/developers/cli_commands/offers/offers/list)                         | Lists available offers.                                            |
 | [get](/developers/cli_commands/offers/offers/get)                           | Displays detailed information on an offer.                         |
 | [get-info](/developers/cli_commands/offers/offers/get-info)                 | Displays detailed information on an offer as stored on blockchain. |
 | [download-content](/developers/cli_commands/offers/offers/download-content) | Downloads the content of a specific offer.                         |
