@@ -40,6 +40,47 @@ You can also download and install SPCTL manually from our [GitHub repository](ht
 
 You will need a file called `config.json` in the same directory where you have placed the SPCTL executable.
 
+### For Users
+Copy and paste into a new file or [download a template](./assets/config.json). Parameters shared by all users are pre-configured.
+
+```json title="config.json"
+{
+    "backend": {
+        "url": "https://bff.testnet.superprotocol.com/graphql",
+        "accessToken": ""
+    },
+    "blockchain": {
+        "rpcUrl": "https://mumbai.polygon.superprotocol.com/hesoyam",
+        "smartContractAddress": "0xA7Ff565f26b93926e4e6465Eb81d48EfF456848b",
+        "accountPrivateKey": ""
+    },
+    "storage": {
+        "type": "STORJ",
+        "bucket": "",
+        "writeAccessToken": "",
+        "readAccessToken": ""
+    },
+    "workflow": {
+        "resultEncryption": {
+            "algo": "ECIES",
+            "key": "",
+            "encoding": "base64"
+        }
+    }
+}
+```
+
+Then fill in the remaining parameters that are specific to your account:
+
+|**Parameter**|**Description**|
+|:-----------------|:-------------------|
+|accessToken| Your personal *Access Token* from the Testnet invitation email.||
+|accountPrivateKey| Your personal *Private Key* from the Testnet invitation email.|
+|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key.|
+
+You are done! Now you can use SPCTL.
+
+### For Providers
 Copy and paste into a new file or [download a template](./assets/config.json). Parameters shared by all users are pre-configured.
 
 ```json title="config.json"
@@ -75,8 +116,8 @@ Then fill in the remaining parameters that are specific to your account:
 |**Parameter**| **Description**                                                                                                                                       |
 |:-----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 |accessToken| Your personal *Access Token* from the Testnet invitation email.                                                                                       ||
-|accountPrivateKey| Only for providers: *Private Key* of your provider's action account.                                                                                  |
-|authorityAccountPrivateKey| Your personal *Private Key* from the Testnet invitation email.                                                                                        |
+|accountPrivateKey| Your *Private Key* of your provider's action account.                                                                                                 |
+|authorityAccountPrivateKey| Your *Private Key* of your provider's authority account.                                                                                              |
 |key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. |
 
 You are done! Now you can use SPCTL.
