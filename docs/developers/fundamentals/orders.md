@@ -82,7 +82,6 @@ Additionally, any order may be canceled. If the main Compute order is canceled, 
 Statuses:
 
 * **Cancelling** - The order is in the process of being canceled.
-
 * **Canceled** - The order is canceled. 
 
 ## Events
@@ -96,15 +95,10 @@ It's located in the **Events** tab of the main order page.
 The main blockchain events are:
 
 * **OrderCreated** - the order or sub-order is created on blockchain.
-
-* **OrderStarted** - the Compute order has started. 
-
+* **OrderStarted** - the Compute order has started.
 * **OrderStatusUpdated** - order or sub-order status has been changed without any new events.
-
 * **OrderEncryptedResultUpdated** - resource path to the order results has been written to the blockchain.
-
-* **OrderChangeWithdrawn** - the token balance remaining after order completion has been returned to the customer. 
-
+* **OrderChangeWithdrawn** - the token balance remaining after order completion has been returned to the customer.
 * **OrderProfitWithdrawn** - the provider has withdrawn the offer payment from the order balance.
 
 
