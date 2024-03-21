@@ -7,62 +7,103 @@ sidebar_position: 4
 
 ## What are orders
 
-An *order* on Super Protocol is a digital contract between the customer and the providers of products and computing services called [offers](/developers/fundamentals/offers). Because Super Protocol is decentralized and there is no central intermediary, a separate order is created with each provider. If the customer supplies their own solution and data, then there is no order for those.
+An *order* on Super Protocol is a digital contract between the customer and the providers of products and computing services called [offers](/developers/fundamentals/offers). Because Super Protocol is decentralized and there is no central intermediary, a separate order or sub-order is created with each provider. If the customer supplies their own solution and data, then there is no order for those.
 
-## How orders work
+When we say **order** we always refer to a TEE Compute order because this is where the solutions and data from different providers (or your own) come together to be executed.
+
+The **sub-orders** are related to the main orders, and they are always between the customer and the providers of solutions, data and storage.
 
 <img src={require('./../images/fundamentals_orders_1.png').default} width="auto" height="auto"/>
 
-### Orders and sub-orders
-
-When we say *order* we always refer to a compute order because this is where the solutions and data from different providers (or your own) come together to be executed.
-
-The *sub-orders* are related to the main orders, and they are always between the customer and the providers of solutions, data and storage. 
-
-There could be various combinations of sub-orders depending on the scenario. For instance in case of tunnels orders there is no storage sub-order because there is no result file to be downloaded. The result for tunnels is that they are up and accessible. There is no data sub-order either. 
-
-### Creating orders
+## Creating orders
 
 There are two ways to create orders:
 
-1. Using CLI [workflows command](/developers/cli_commands/workflows) if you want to deploy your own solutions.
-2. Using [Marketplace GUI](/developers/marketplace) if you just want to deploy offers already on the Marketplace (with some limtations). 
-
-### Viewing orders
+1. Using CLI if you want to deploy your own solutions (follow [this guide](/developers/cli_guides/quick_guide)).
+2. Using [Marketplace GUI](/developers/marketplace) if you want to deploy data and solution offers from the Marketplace. 
 
 Orders are accessible openly on blockchain. While the contents inside the TEE are confidential, the general information about the order is available to anyone, just like any crypto wallet.
 
-For instance, you can view this order: [https://marketplace.superprotocol.com/order/101](https://marketplace.superprotocol.com/order/101) - but you won't know who the owner is, what site is deployed inside the TEE, or what domain its using.
+Contents of the orders are encrypted by a private key that known only to the customer. The results are kept by the Storage sub-order for as long as you keep paying for it.
 
-### Cost of the order
+## Usage scenarios
 
-The cost of an order is the sum of the compute order as well as all sub-orders. The cost is distributed between the providers so that everyone gets their share. *Actual Cost* is the total cost of the order and it adds up as the order is being processed. Final cost is determined after the order had moved into status Done.
+Depending on the deployed solution, there are two typical usage scenarios:
 
-### Replenishing orders
+A **Job** is an order that is tasked with a very specific computation to perform that produces a specific result. For instance, such a job could be using an ML/AI Python model to run an inference on a batch of data (such as our sample Python models). A result is produced and then the job is done. 
 
-An order keeps working as long as the providers are getting paid. As long as you keep depositing funds into the order it will either keep on going, as in case of tunnels, or will finish when it has completed its job. Anyone can deposit funds into any order. Some offers will have restrictions on how long they may be leased in a single order. When the order's deposit is close to being empty, customer is warned with an *Awaiting Payment* flag. 
+**Long term** is an ongoing order that is running an app, such as our [Super Chat](/developers/offers/superchat/), an [oracle](/developers/deployment_guides/blockchain), or an LLM with a web-interface that is deployed using the tunnels. As long as the order has money on the balance, it will keep running and be accessible to users and apps. There is no definitive end.  
 
-### Awaiting Payment
+## Lease, Deposit and Balance
 
-*Awaiting Payment* is a warning flag to the user that their order is running out of funds and will soon be terminated. Sometimes this is intended scenario, but in most cases the user is simply not aware. Marketplace GUI will highlight such orders in bright orange colors to attract attention. 
+A **Lease** is the time for which the customer would like to rent the services of a Compute or a Storage offer. For Solution and Data offers the leases are tied to the Compute as sub-orders. Lease time is also used during the creation of the order to calculate the **Deposit**, which is the initial payment for the order. The deposit puts funds on the order **Balance**, which is used to pay the providers. 
 
-### Getting results
+Often, the initial lease is not enough, and customer will want to extend the order by **Replenishing**, or putting more funds, on the balance. An order keeps working as long as there are funds on the balance and the providers are getting paid. Any balances that remain after the order is completed will be automatically returned to the customer.
 
-Contents of the orders are encrypted by a private key that known only to the customer. The results can be received by anyone with the key. 
+When the order's balance is close to zero, customer is warned with an **Awaiting Payment** flag, which is a warning to the user that their order is will soon be terminated. Marketplace GUI will highlight such orders in bright orange colors.
 
-### Order Statuses
+## Cost and pricing
 
-The order can be in one of those statuses:
+Super Protocol uses a *Pay-As-You-Go* model. Each provider has a **Cost** to the customer and depending on the pricing conditions of their offers, providers might charge once (Fixed Price model) or every hour (Per Hour model).
 
-* *New* - An order has just been created and it's in queue waiting for an available compute slot to begin processing. 
+| **Offer Type**   | **Pricing Conditions**  |**Description**   |
+|:-|:-|:-|
+| Solution  | Fixed or Per Hour| One time payment or hourly charge.   |
+| Data  | Fixed or Per Hour| One time payment or hourly charge.  |
+| Compute  | Per Hour | Main order, will work until job completed or until balance runs out of funds.  |
+| Storage  | Per Hour | Will launch when main order is done and will store results until balance runs out of funds.  |
 
-* *Blocked* - The solutions and data are being downloaded into the TEE for processing.
+## Statuses
 
-* *Processing* - The order is being actively processed by the TEE. In case of limited time jobs it will process and finish. But in case of tunnels it can stay in this status for any amount of time, as long as you keep the order replenished with TEE tokens.
+### Compute
 
-* *Cancelling* - The order is being cancelled. 
+A Compute order, the main TEE order, begins as **Suspended**, which means that it's waiting for Solution and Data sub-orders to be created. After the sub-orders are created, the Compute order goes into status **Blocked** while the solutions and data offers are being dowloaded by the TEE from the storage. Once this is completed, the Compute order goes into status **New**, where it waits in queue for the Compute offer to become available. 
 
-* *Canceled* - The order is canceled. If the offer is *cancelable*, you might get some of your money back from the providers. 
+Once the machine is available, the Compute goes into status **Processing**, which is the main status for execution inside the TEE. Once completed, the status is **Done**.
 
-* *Done* - Completed! In case of single jobs it means that the computation has finished. In case of tunnels and other leased solutions it means that whatever application was working inside the TEE is no longer active.
+Note that these two statuses might take different meanings depending on the content and usage. For one time jobs, such as Python models, *Processing* means that the script is being computed, and it's completed when the status is *Done*. But for long term orders, such as tunnels and storages, for instance, *Processing* means that the order is running normally, it's up and providing services, accessible to users, etc. And when it's *Done*, it means that the order has ended and no longer working.
+
+### Solution and Data
+
+Solution and Data sub-orders start out as **New**, which means that the sub-order has been created on blockchain. Next is **Processing**, where the solution, base image and data are being downloaded into the TEE. And once that is done, then the sub-order is **Done** and the providers withdraw their earnings from the order. Typically, all of the above takes less than a minute.
+
+The above applies to the Marketplace offers that have providers. If you are deploying your own solution and data, then there would only be a base image solution offer. Your own solution and data are downloaded into the TEE before the order starts.
+
+### Storage
+
+The storage sub-order is used to store the results after the main order is completed (because the TEE doesn't store anything and is destroyed after order ends). The storage sub-order also starts out as **New**. But status **Processing** means that the Storage sub-order is active and its lease has not expired, that it has received the order results and is keeping them for the customer, accessible at any time. And when the status is **Done** it means that the storage and results are no longer available. 
+
+Typically the storage sub-order is created when the main order is almost completed, because that's when the results become available. There are cases when storage sub-order is not created if there are no results to store. 
+
+### Cancelations
+
+Additionally, any order may be canceled. If the main Compute order is canceled, then all the sub-orders are canceled as well. If one of the Solution or Data sub-orders is canceled, then the main order is canceled as well, because it cannot proceed without the value offers. Storage sub-order may be canceled without affecting the main order because it is initiated after the main order is completed. Any funds left on the balance will be returned to the customer. 
+
+Statuses:
+
+* **Cancelling** - The order is in the process of being canceled.
+* **Canceled** - The order is canceled. 
+
+## Events
+
+<img src={require('./../images/fundamentals_orders_2.png').default} width="auto" height="auto"/>
+
+To have a more detailed view of what is happening with your order and to illustrate the decentralized principles of Super Protocol, we developed an Events panel. It shows the main blockchain events and how they correlate with order and sub-order statuses. Also shown are absolute transaction values and details on Polygonscan.
+
+It's located in the **Events** tab of the main order page.
+
+The main blockchain events are:
+
+* **OrderCreated** - the order or sub-order is created on blockchain.
+* **OrderStarted** - the Compute order has started.
+* **OrderStatusUpdated** - order or sub-order status has been changed without any new events.
+* **OrderEncryptedResultUpdated** - resource path to the order results has been written to the blockchain.
+* **OrderChangeWithdrawn** - the token balance remaining after order completion has been returned to the customer.
+* **OrderProfitWithdrawn** - the provider has withdrawn the offer payment from the order balance.
+
+
+
+
+
+
 

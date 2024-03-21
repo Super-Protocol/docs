@@ -231,4 +231,13 @@ span[class^="dropdownMenu_node_modules"] {
 
 pre, code {
     font-family: var(--ifm-font-family-base-roboto);
+    font-weight: 400 !important;
+}
+
+code > span, code > span > span {
+    font-weight: 400;
+}
+
+li > p {
+    margin-bottom: 35px;
 }
