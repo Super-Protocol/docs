@@ -2,7 +2,7 @@
 id: "configuring_spctl"
 title: "Configuring SPCTL"
 slug: "/cli_guides/configuring"
-sidebar_position: 6
+sidebar_position: 1
 ---
 
 import Tabs from '@theme/Tabs';
