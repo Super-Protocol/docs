@@ -22,7 +22,6 @@ View Super Protocol offers using CLI commands. In most cases it is more convenie
 | [get](/developers/cli_commands/offers/offers/get)                           | Displays detailed information on an offer.                         |
 | [get-info](/developers/cli_commands/offers/offers/get-info)                 | Displays detailed information on an offer as stored on blockchain. |
 | [download-content](/developers/cli_commands/offers/offers/download-content) | Downloads the content of a specific offer.                         |
-| [create](/developers/cli_commands/offers/offers/create)                     | Creates a new offer.                                               |
 | [update](/developers/cli_commands/offers/offers/update)                     | Updates a specific offer.                                          |
 | [disable](/developers/cli_commands/offers/offers/disable)                   | Disables a specific enabled offer.                                 |
 | [enable](/developers/cli_commands/offers/offers/enable)                     | Enables a specific disabled offer.                                 |

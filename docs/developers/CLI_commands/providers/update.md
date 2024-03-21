@@ -28,4 +28,27 @@ Example: update the current provider using `myProviderInfo.json` file which cont
 | `--path`            | `./providerInfo.json` | Path to the provider info json file |
 | `--config`          | `./config.json`       | Path to the configuration file      |
 
-**Note**: provider info file requirements are the same as in the process of creating a provider. Please follow the [link](/developers/cli_commands/providers/create) to get more details.
+### Provider info file requirements
+
+The provider info file should contain the following fields.
+
+| **Field**       | **Description**                                  | 
+|:----------------|:-------------------------------------------------|
+| `name`          | Provider name                                    | 
+| `description`   | Description of services provided by the provider | 
+| `tokenReceiver` | Action account address                           |
+| `actionAccount` | Token receiver account address                   | 
+| `metadata`      | Additional information about the provider        | 
+
+All of the parameters are mandatory. `description` and `metadata` can be left empty.
+
+JSON example:
+```json title="value-offer.json"
+{
+  "name": "Data Provider",
+  "description": "It provides various datasets for modeling",
+  "tokenReceiver": "0x...",
+  "actionAccount": "0x...",
+  "metadata": ""
+}
+```
