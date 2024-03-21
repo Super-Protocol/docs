@@ -105,7 +105,7 @@ The main blockchain events are:
 
 * **OrderChangeWithdrawn** - the token balance remaining after order completion has been returned to the customer. 
 
-* **OrderProfitWithdrawn** - the provider has withdrawn the offer payment from the order balance. 
+* **OrderProfitWithdrawn** - the provider has withdrawn the offer payment from the order balance.
 
 
 
