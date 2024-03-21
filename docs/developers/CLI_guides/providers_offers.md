@@ -26,7 +26,7 @@ Testnet account is considered as your user account in SuperProcotol under which 
 
 In Superprotocol, there are three types of provider accounts and each of them performs its own functions:
 1. Authority account is considered as your main provider account in SuperProcotol under which a provider is created and modified.
-2. Action account executes actions on behalf of an authority account in Execution Controller with the purpose to add and modify offers. Execution Controller allows processing and further distribution of requests from the blockchain. Please follow the [link](/whitepaper/architecture/) for more details.
+2. Action account executes actions on behalf of an authority account in Execution Controller with the purpose to add and modify offers. Execution Controller allows processing and further distribution of requests from the blockchain. 
 3. Token receiver account gets rewards as a result of service delivery.
    **Note:** its private key should be stored safely.
 
@@ -40,11 +40,11 @@ So, before starting, it is necessary to check the balance of authority account a
 To create a new data / solution offer, you will need to provide 2 json files:
 1. Containing data / solution offer general information
 
-To get more details about the format, please follow the [link](/developers/cli_commands/offers/offers/update).
+To get more details about the format, please follow the link.
 
 2. Containing data / solution offer slot information;
 
-To get more details about the format, please follow the [link](/developers/cli_commands/offers/slots/add-slot).
+To get more details about the format, please follow the link.
 
 
 ## Step 2 - Create deployment config
@@ -116,7 +116,7 @@ Every 5 minutes the script will check if there are any orders in the status New 
 
 ## Troubleshooting
 ### How to update a provider
-In case you need to update any information in the provider’s description, please use SPCTL [providers update](/developers/cli_commands/providers/update) command.
+In case you need to update any information in the provider’s description, please use SPCTL providers update command.
 
 ### How to run a new offer
 In case you need to create and run a new offer in addition to an existing one, you will need to go through the process of configuring an offer at Step 2 once again.
@@ -124,7 +124,7 @@ In case you need to create and run a new offer in addition to an existing one, y
 As a result, `<offerType>-execution-controller` directory will be updated in accordance with changes. To check that, please go to `<offerType>-execution-controller` and open `.env` file. A new offer will be added to the block `PROVIDER_OFFERS_JSON`.
 
 ### How to update an offer
-In case you need to update any information in the offer description, please use SPCTL [offers update](/developers/cli_commands/offers/offers/update) command.
+In case you need to update any information in the offer description, please use SPCTL  offers update command.
 
 ### How to update a slot
-In case you need to update any information in the slot description, please use SPCTL [offers update-slot]((/developers/cli_commands/offers/slots/update-slot)) command.
+In case you need to update any information in the slot description, please use SPCTL  offers update-slot command.
