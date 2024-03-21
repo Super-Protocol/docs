@@ -1,7 +1,7 @@
 ---
 id: "offers-get"
 title: "get"
-slug: "/cli_commands/offers/get"
+slug: "/cli_commands/offers/offers/get"
 sidebar_position: 2
 ---
 
