@@ -1,11 +1,11 @@
 ---
 id: "offers-list"
 title: "list"
-slug: "/cli_commands/offers/list"
+slug: "/cli_commands/offers/offers/list"
 sidebar_position: 1
 ---
 
-Retrieves a list of available offers depending on the type.
+Retrieve a list of available offers depending on the type.
 
 ## Usage
 

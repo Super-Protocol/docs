@@ -1,11 +1,11 @@
 ---
 id: "offers-get-info"
 title: "get-info"
-slug: "/cli_commands/offers/get-info"
+slug: "/cli_commands/offers/offers/get-info"
 sidebar_position: 3
 ---
 
-Displays detailed information on a value or compute offer with `id` as stored on blockchain.
+Display detailed information on a value or compute offer with `id` as stored on blockchain.
 
 ## Usage
 
