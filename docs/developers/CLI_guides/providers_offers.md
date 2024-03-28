@@ -8,46 +8,20 @@ sidebar_position: 4
 # How to Deploy Data/Solution offer
 
 ## About
-This guide will take you step by step through the process of creating your Data / Solution provider and deploying your own Data / Solution offer to Superprotocol.
+This guide will take you step by step through the process of creating your Data / Solution provider and deploying your own Data / Solution offer to Super Protocol.
 
 ## Prerequisites
+
+### Testnet credentials
+
 You should have:
-1. received the credentials by email from Super Team:
+received the credentials by email from Super Team:
 - Testnet account address
 - Private key
-- Access token
-2. uploaded your data / solution to the storage
+- Access token 
 
-Please follow the [guide](/developers/cli_guides/quick_guide/) to get more details about how to upload them to the storage. The resource file which is generated as a result of uploading will be needed later in this guide.
+### Set up Provider Tools
 
-## Important notes about Provider
-
-Testnet account is considered as your user account in SuperProcotol under which you will perform actions as a User. Please do not to use it for other purposes.
-
-In Superprotocol, there are three types of provider accounts and each of them performs its own functions:
-1. Authority account is considered as your main provider account in SuperProcotol under which a provider is created and modified.
-2. Action account executes actions on behalf of an authority account in Execution Controller with the purpose to add and modify offers. Execution Controller allows processing and further distribution of requests from the blockchain. 
-3. Token receiver account gets rewards as a result of service delivery.
-   **Note:** its private key should be stored safely.
-
-We highly recommend that you create and use three different Polygon Testnet accounts. Later on, you will be able to change action and token receiver accounts using SPCTL `providers update` command but please remember that **only one** provider can be created under an authority account.
-
-The operation of creating a provider requires a security deposit of 5 TEEs. If at some point the security deposit gets lower, for example, in case penalties have been applied and no replenishment has been made, all the provider’s offers become unavailable for orders.
-
-So, before starting, it is necessary to check the balance of authority account and verify that there are enough TEEs (for a deposit in SuperProtocol) and MATICs (for a write operation to blockchain). **Note:** you can receive tokens in the [Marketplace](/developers/marketplace/first-steps/#4-receiving-tokens).
-
-## Step 1 - Prepare offer information
-To create a new data / solution offer, you will need to provide 2 json files:
-1. Containing data / solution offer general information
-
-To get more details about the format, please follow the link.
-
-2. Containing data / solution offer slot information;
-
-To get more details about the format, please follow the link.
-
-
-## Step 2 - Create deployment config
 Super Protocol has a powerful tool called `provider-tools` through which you can create a provider, create an offer and obtain further instructions how to run the offer.
 
 The following commands are available in this tool:
@@ -60,7 +34,23 @@ curl -L TBD
 chmod +x ./provider-tools
 ```
 
-### Configuring Provider
+## Step 1 - Registering a Provider
+
+
+### Accounts
+
+Testnet account is considered as your user account in SuperProcotol under which you will perform actions as a User. Please do not to use it for other purposes.
+
+In Superprotocol, there are three types of provider accounts and each of them performs its own functions:
+1. **Authority account** is considered as your main provider account in SuperProcotol under which a provider is created and modified.
+2. **Action account** executes actions on behalf of an authority account in Execution Controller with the purpose to add and modify offers. Execution Controller allows processing and further distribution of requests from the blockchain.
+3. **Token receiver** account gets rewards as a result of service delivery.
+   **Note:** its private key should be stored safely.
+
+We highly recommend that you create and use three different Polygon Testnet accounts. Later on, you will be able to change action and token receiver accounts using SPCTL `providers update` command but please remember that **only one** provider can be created under an authority account.
+
+### Registering a provider
+
 Command syntax: `./provider-tools setup`
 
 While running the command, the tool will :
@@ -74,12 +64,34 @@ While running the command, the tool will :
 
 As a result, `config.json` file will be created in the root directory. This file will contain the information about spctl configs and generated / specified accounts.
 
-**Important note:**
+### Security deposit
 
 Before executing the next command, you should check the balance of action account.
+
 The operation of creating an offer costs 5 TEEs and it will be debited form action account. So, there should be enough TEEs (for a creation operation in SuperProtocol) and MATICs (for a write operation to blockchain). **Note:** you can receive tokens in the [Marketplace](/developers/marketplace/first-steps/#4-receiving-tokens).
 
-### Configuring Offer
+The operation of creating a provider requires a security deposit of 5 TEEs. If at some point the security deposit gets lower, for example, in case penalties have been applied and no replenishment has been made, all the provider’s offers become unavailable for orders.
+
+So, before starting, it is necessary to check the balance of authority account and verify that there are enough TEEs (for a deposit in SuperProtocol) and MATICs (for a write operation to blockchain). **Note:** you can receive tokens in the [Marketplace](/developers/marketplace/first-steps/#4-receiving-tokens).
+
+## Step 2 - Creating an Offer
+
+### Prepare offer content
+
+Please follow the [guide](/developers/cli_guides/quick_guide/) to get more details about how to upload them to the storage. The resource file which is generated as a result of uploading will be needed later in this guide.
+
+### Prepare offer information
+To create a new data / solution offer, you will need to provide 2 json files:
+1. Containing data / solution offer general information
+
+To get more details about the format, please follow the link.
+
+2. Containing data / solution offer slot information;
+
+To get more details about the format, please follow the link.
+
+
+
 Command syntax: `./provider-tools register <offerType> --result <path to the resource json of data offer>`
 
 Example for Data offers: `./provider-tools register data --result ./data_resource.json`
@@ -102,7 +114,7 @@ While running the command, the tool will :
 
 As a result, a new directory `<offerType>-execution-controller` will be created in the root directory. It will contain all the necessary artifacts to run your Execution Controller.
 
-## Step 3 - Run Execution Controller
+## Step 3 - Running Execution Controller
 In the terminal, you will observe an instruction how to run your Execution Controller. Please use the option of running via shell script.
 
 To be able to run your Execution Controller, you will need to:
