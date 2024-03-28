@@ -52,15 +52,15 @@ JSON example:
 ```json title="tee-offer-option.json"
 {
   "info": {
-    "bandwidth": 230000,
-    "traffic": 32100000, 
-    "externalPort": 1
+    "bandwidth": 125000,
+    "traffic": 100000000, 
+    "externalPort": 0
   },
   "usage": {
     "maxTimeMinutes": 0,
-    "minTimeMinutes": 10,
-    "price": "100000000000000000",
-    "priceType": "1"
+    "minTimeMinutes": 0,
+    "price": "14000000000000000",
+    "priceType": "0"
   }
 }
 ```

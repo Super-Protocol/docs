@@ -70,8 +70,8 @@ JSON example:
   "description": "My Image Classification solution",
   "restrictions": {
     "offers": [ 
-      "10", # should be executed together with solution offer 10
-      "9" # should be executed together with data offer 9
+      "5", # should be executed together with solution offer 5
+      "16" # should be executed together with data offer 16
     ],
     "types": [
       "2",
@@ -112,17 +112,17 @@ JSON example:
   "teeType": "0",
   "properties": "",
   "tlb": "",
-  "argsPublicKey": "{\"algo\":\"ECIES\",\"encoding\":\"base64\",\"key\":\"<PUBLIC KEY>\"}",
+  "argsPublicKey": "",
   "hardwareInfo": {
     "slotInfo": {
-      "cpuCores": 35.5,
+      "cpuCores": 48,
       "gpuCores": 0,
-      "diskUsage": 10737418240,
-      "ram": 107374182400
+      "diskUsage": 405825660000,
+      "ram": 715710130680
     },
     "optionInfo": {
-      "bandwidth": 2300000,
-      "traffic": 321000000,
+      "bandwidth": 12500000,
+      "traffic": 0,
       "externalPort": 1
     }
   }

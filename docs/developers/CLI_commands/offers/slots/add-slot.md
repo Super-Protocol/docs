@@ -63,20 +63,20 @@ JSON example for a value offer:
 ```json title="value-offer-slot.json"
 {
   "info": {
-    "cpuCores": 1.15,
+    "cpuCores": 3,
     "gpuCores": 0,
-    "diskUsage": 1073741824,
-    "ram": 1073741824
+    "diskUsage": 536870912,
+    "ram": 34359738368
   },
   "usage": {
     "maxTimeMinutes": 0,
-    "minTimeMinutes": 0,
-    "price": "1000000000000000000",
+    "minTimeMinutes": 60,
+    "price": "400000000000000000",
     "priceType": "1" 
   },
   "option": {
-    "bandwidth": 1000000,
-    "traffic": 1000000000,
+    "bandwidth": 0,
+    "traffic": 0,
     "externalPort": 0
   }
 }
@@ -85,15 +85,15 @@ JSON example for a TEE offer:
 ```json title="tee-offer-slot.json"
 {
   "info": {
-    "cpuCores": 7.1,
+    "cpuCores": 1,
     "gpuCores": 0,
-    "diskUsage": 2147483648,
-    "ram": 21474836480
+    "diskUsage": 14910627722,
+    "ram": 8454701250
   },
   "usage": {
     "maxTimeMinutes": 0,
-    "minTimeMinutes": 0,
-    "price": "1300000000000000000",
+    "minTimeMinutes": 10,
+    "price": "140000000000000000",
     "priceType": "0"
   }
 }
