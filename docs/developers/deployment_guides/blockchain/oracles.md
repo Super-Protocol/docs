@@ -35,7 +35,7 @@ You will need:
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
-- [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully [configured](/developers/CLI_guides/configuring), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
+- [SPCTL](/developers/cli_guides/) - our CLI tool, must be fully [configured](/developers/cli_guides/configuring), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
 ### Create / generate
 
@@ -174,7 +174,7 @@ In this step we will cover the first component.
 
 All the solutions deployed on Super Protocol have to use a base image solution offer. In this case it will be a Node.js base image.
 
-Go to your project root directory and execute this [command](/developers/CLI_commands/offers/download-content):
+Go to your project root directory and execute this [command](/developers/cli_commands/offers/download-content):
 
 ```shell
 ./spctl offers download-content 6
@@ -193,7 +193,7 @@ Next, we will build a Docker image of the service. For the Docker image to run i
 Execute the following [command](/developers/cli_commands/solutions/prepare) in the root of your project to prepare and pack the solution:
 
 ```shell
-./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path node16-base-solution-image-v0.3.1.tar.gz ./solutions/Blockchain/sp-oracle/script/run/ signing-key
+./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path <path to the Node.js base image archive> ./solutions/Blockchain/sp-oracle/script/run/ signing-key
 ```
 
 The result will be `oracle-solution.tar.gz` and `metadata.json` files. 
