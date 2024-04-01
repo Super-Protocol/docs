@@ -27,7 +27,7 @@ Create the following subdirectories in your solution root directory:
 - `inputs`: used for input files when testing the solution locally
 - `output`: used for output files when testing the solution locally
 
-Python executables and libraries will be placed into the `run` folder on the next steps.
+And place your Python executables and libraries into the `run` folder.
 
 ## Set-up entrypoint.py
 
