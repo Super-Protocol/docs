@@ -189,7 +189,7 @@ docker load -i <path to the Python base image archive>
 Download a test script that will imitate the application launch in Tunnel Client:
 
 ```bash
-curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/sp-4220-tunnel-client-check-script/Tunnel%20Client/examples/tunnel-client-test-start.js -o tunnel-client-test-start.js
+curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/tunnel-client-test-start.js -o tunnel-client-test-start.js
 ```
 
 Test Python server performance through Tunnel Client:
