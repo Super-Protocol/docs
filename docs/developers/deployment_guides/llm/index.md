@@ -140,15 +140,13 @@ async function run() {
   fs.writeFileSync(privateKeyFilePath, process.env.TLS_KEY);
   fs.writeFileSync(certificateFilePath, process.env.TLS_CERT);
 
-  const appFolder = `/sp/inputs/input-0001/content`;
-
   await new Promise((_resolve, _reject) => {
-    const pythonProcess = spawn(`python`, [`${appFolder}/server.py`], {
+    const pythonProcess = spawn(`python`, [`${__dirname}/server.py`], {
       stdout: 'inherit',
       stderr: 'inherit',
       env: {
         ...process.env,
-        PYTHONPATH: `${process.env.PYTHONPATH}:${appFolder}/pypi/lib/python3.10/site-packages`,
+        PYTHONPATH: `${process.env.PYTHONPATH}:${__dirname}/pypi/lib/python3.10/site-packages`,
         TLS_CERT_FILE: certificateFilePath,
         TLS_KEY_FILE: privateKeyFilePath,
       },
