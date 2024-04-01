@@ -7,62 +7,65 @@ sidebar_position: 4
 
 # Large Language Model
 
-Large Language Model (LLM) is advanced AI systems designed to understand, generate, and work with human language in a way that mimics human-like understanding and communication. 
+Large Language Model (LLM) is an advanced AI system designed to understand, generate, and work with human language in a way that mimics human-like understanding and communication. 
 
 ## Prerequisites
 
-Same as in [Part 1 of Node.js with Tunnels guide](/developers/deployment_guides/tunnels/preparing) of this guide.
+Same as in [Part 1 of Node.js with Tunnels guide](/developers/deployment_guides/tunnels/preparing).
 
 ## Launch on Super Protocol
 
-Вы можете развернуть свой Python-base or NodeJs-base сервер с LLM в конфиденциальном режиме в [туннелях](/developers/deployment_guides/tunnels) на Super Protocol. Необходимым условием является нативная поддрежака сервером запуска через https.
+You can deploy your own Python-based or Node.js-based LLM server in a confidential mode using SuperProtocol [tunnels](/developers/deployment_guides/tunnels). 
+It's mandatory that the server has native support of being run via HTTPS.
 
-Для запуска будут использованы:
+For the launch, we will need:
 - Unbuntu 20.04
 - NodeJs 20.12.0
 - Python 3.10.13
 
 ### 1. Prepare and launch Tunnel Server
 
-Подготовка и запуск туннель-сервера описана в [п.1 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server). Пожалуйста, воспользутейсь ей.
-
+The process of preparing and launching Tunnel Server is described in the first section if [Deploy tunnels in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server) guide. Please refer to it for more details.
 ### 2. Prepare Tunnel Client data
 
-Для успешного разворачивания необходимо подготовить конфигурационные файлы для теннуль-клиента, файлы Вашего сервера и правильный `server.js` файл.
+To deploy Tunner Client successfully, you will need to prepare configuration, server files and `server.js` file.
 
-Туннель-клиент запускает `server.js` by NodeJs worker_threads, передавая следующие env переменные
+Tunnel Client  launches `server.js` by NodeJs worker_threads, passing the following `env` variables:
     
-- `HTTPS_PORT` - Port on which the local HTTPS web server is to be deployed and which will accept incoming connections.
+- `HTTPS_PORT` - Port on which the local HTTPS web server is to be deployed and which will accept incoming connections;
 
-- `TLS_CERT` - SSL certificate of the HTTPS server.
+- `TLS_CERT` - SSL certificate of the HTTPS server;
 
 - `TLS_KEY` - Private key to the SSL of the HTTPS server.
 
-Если Вы используете NodeJs-base LLM сервер (например использующий [node-llama-cpp](https://github.com/withcatai/node-llama-cpp)), то этот файл может быть entrypoint для старта Вашего application-а на порту, переданном в `HTTPS_PORT` env-переменной.
+If you are using a Node.js-based LLM server, for example, the one that uses [node-llama-cpp](https://github.com/withcatai/node-llama-cpp), `entrypoint`might be used to start your application on the port specified in `HTTPS_PORT` variable.
 
-Если Вы используете Python-base LLM сервер (например [text-generation-webui](https://github.com/oobabooga/text-generation-webui)), то в `server.js` должен запускать python-приложение, через командную строку, использую `spawn` метод из `child_process` внутреннего NodeJS пакета (смотри [пример запуска Python-сервера](/developers/deployment_guides/llm#python-server-launch-example))
+If you are using a Python-based LLM server, for example, [text-generation-webui](https://github.com/oobabooga/text-generation-webui), `server.js` should be launched via a command line with the usage of `spawn` method of   `child_process` internal Node.js package. You can take a look at the example of launching [Python server](/developers/deployment_guides/llm#python-server-launch-example).
 
-Для запуска туннель-клиента Вам необходим SSL сертификат и файл ключа к этому сертификату, а так же правильно сконфигрурированный `config.json` файл. Информация о получении SSL ключа и сертификата описана в [п.1 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate). Информация о правильной структуре каталога и формировании туннель-клиент конфига описана в [п.3 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client)
+To launch Tunnel Client, you will need a SSL certificate, a key file to it, and`config.json`file. 
+All the information about SSL keys and certificates is described in the section [Generate SSL certificate in Node.js with Tunnels](/developers/deployment_guides/tunnels/preparing#generating-ssl-certificate) guide. 
+All the information about forming the right catalogue structure  and configs is described in the second section of [Deploy tunnels in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) guide.
 
-Переместите Ваш `server.js` файл в папку `content`, которая должна находится на одном уровне с `config.json`-файлом. Туннель-килент будет искать `server.js` файл именно в этой папке.
+Please place your`server.js` file in `content` directory that should be located on the same level as `config.json` file. Tunnel Clien searches for `server.js` file in this directory only.
 
-Далее в папку `content` необходимо поместить файлы Вашего LLM сервера и `node_modules`, сбилдженные под linux/amd64 платформу (если Вы используете NodeJs сервер или если Ваш `server.js` файл использует какие-либо внешние библиотеки).
+LLM server files and `node_modules` should be placed in `content` directory as well. They should be built for Linux / ARMD64 platforms if you are using Node.js server or your `server.js` file is dependent on any external libraries.
 
 :::note
-После успешного запуска контейнера на Super Protocol-е папка `content` будет находится по пути `/sp/run/inputs/input-0001/content`. Это может быть важно для некоторых зависимостей.
+When a container is successfully started on SuperProtocol, the directory `content` will be available on the path `/sp/run/inputs/input-0001/content`. It might be of great importance for certain dependencies.
 :::
 
-Python зависимости так же должны быть скачаны под платформу linux/amd64 и находиться вместе с LLM-сервером. Рекомендуем использовать папку `pypi` внутри папки `content`. Смотри [пример запуска Python-сервера](/developers/deployment_guides/llm#python-server-launch-example) для лучшего понимания как правильно это сделать. Так же протестируйте локально Ваше приложение по аналогии из инструкции.
+Python dependencies should be downloaded for Linux / AMD64 platforms and placed next to a LLM server as well. 
+We recommend that you use `pypi` folder in `content` directory. Please take a look at the example of [Python server](/developers/deployment_guides/llm#python-server-launch-example) to get a better understanding of how it can be organized. It's advisable to test your application locally in accordance with the instruction.
 
-После того, как все необходимые файлы были сформированы, необходимо их запаковать и загрузить на StorJ при помощи нашей CLI [spctl](/developers/cli_guides/configuring), а так же необходимо создать заказ. Эти шаги детально описаны в [п.3 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client). Воспользуйтесь данными инструкциями.
+When all the files are ready, you will need to pack and upload them to StorJ through SPCTL [files upload](/developers/cli_commands/files/upload) command, create an order. Please follow the instructions that are available in the second section of [Deploy tunnel in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) guide.
 
-Tunnel Server у Вас должен быть уже запущен в рамках выполненной инструкции из [п.1](/developers/deployment_guides/llm#1-prepare-and-launch-tunnel-server).
+Tunnel Server should be launched in accordance with [Step 1](in a/developers/deployment_guides/llm#1-prepare-and-launch-tunnel-server).
 
-После того как Тunnel Server и Tunnel Client будут успешно запущены, Вам необходимо будет настроить DNS для хоста, к которому Вы выпустиили SSL сертифифкат. Для этого воспользуйтесь [данной инструкцией](/developers/deployment_guides/tunnels/manual_run#set-up-dns)
+As soon Тunnel Server and Tunnel Client have been launched successfully, you will need to configure DNS of the host, for which you have issued SSL certificates. Please follow this [instruction](/developers/deployment_guides/tunnels/manual_run#set-up-dns).
 
 ## Python server launch example
 
-Создадим папку с которой будем работать:
+Create a folder that will be used for further operations:
 
 ```bash
 mkdir sp-python-in-tunnels-test
@@ -71,25 +74,25 @@ cd ./sp-python-in-tunnels-test
 
 ### 1. Launch Tunnel Server
 
-Скачайте и настройте [spctl](/developers/cli_guides/configuring) в этой папке.
+Download and configure [SPCTL](/developers/cli_guides/configuring) in the folder above.
 
-Пройтдите полностью [параграф Prepare and deploy Tunnel Server из п.3 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server).
+Follow the instruction that is available in the first section of [Deploy tunnels in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server) guide.
 
 ### 2. Prepare and check Python server
 
-Далее подготовим данные с Pytnon сервером для Туннель Клиента:
+Prepare Python server data for Tunnel Client:
 
 ```bash
 mkdir -p tunnel-client-data/content
 ```
 
-Создайте файл `server.py` в папке `content`:
+Create `server.py` file in `content` directory:
 
 ```bash
 touch tunnel-client-data/content/server.py
 ```
 
-И добавьте в него следующий код:
+Add the following code to it:
 
 ```python
 from flask import Flask
@@ -109,13 +112,13 @@ if __name__ == "__main__":
     app.run(ssl_context=(ssl_certificate, ssl_private_key), port=port, host='0.0.0.0')
 ```
 
-Далее создайте файл `server.js`, который будет запускаться Туннель Клиентом, а он в свою очередь будет запускать Python-сервер:
+Create `server.js` which will be launched by Tunnel Client that, in turn, will launch Python server:
 
 ```bash
 touch tunnel-client-data/content/server.js
 ```
 
-И добавьте в него следующий код:
+Add the following code to it:
 
 ```javascript
 const fs = require('fs');
@@ -166,44 +169,44 @@ run().catch((error) => {
 ```
 
 :::note
-Обратите внимание, что `server.js` расширяет env переменную `PYTHONPATH`, добавляя туда дополнительный путь для Python зависимостей.
+Please pay attention to the fact that `server.js` expands `PYTHONPATH` env variable, adding there an additional path for Python dependencies.
 :::
 
-Добавим Python-пакет `Flask` как зависимость нашего сервера и установим его в необходимую нам папку
+Add Python `Flask` package as a dependency for the server and install it in the necessary folder:
 
 ```bash
 echo "Flask==3.0.2" > tunnel-client-data/content/requirements.txt
 docker run --platform linux/amd64 --rm -ti -v $PWD/tunnel-client-data/content/:/python --entrypoint /usr/local/bin/pip -w /python python:3.10-bullseye install -r requirements.txt -t ./pypi/lib/python3.10/site-packages
 ```
 
-Далее можно проверить локально правильность настройки всех файлов и зависимостей. 
+After that, you can check locally whether all the files and dependencies are set properly. 
 
-Скачайте и загрузите в Ваш докер наш `Node-Python` базовый образ:
+Download and upload SuperProtocol `Node-Python` base image to Docker:
 
 ```bash
 ./spctl offers download-content 76 (это dev, на тестнете будет другой)
 docker load -i <path to the Python base image archive>
 ```
 
-Далее необходимо скачать тестовый скрипт, эмулирующий запуск приложения в Туннель Клиенте:
+Download a test script that will imitate the application launch in Tunnel Client:
 
 ```bash
 curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/sp-4220-tunnel-client-check-script/Tunnel%20Client/examples/tunnel-client-test-start.js -o tunnel-client-test-start.js
 ```
 
-И протестируем работу Python сервера через Туннель Клиент:
+Test Python server performance through Tunnel Client:
 
 ```bash
 docker run -p 9090:9090 --platform linux/amd64 --rm -ti -v $PWD:/sp/run -v $PWD/tunnel-client-data/content:/sp/inputs/input-0001/content --entrypoint /usr/local/bin/node -w /sp/run gsc-node20-python3.10-base-solution:latest tunnel-client-test-start.js /sp/inputs/input-0001/content/server.js
 ```
 
-Проверьте по локальному адресу https://localhost:9090 успешность работы сервера. Ваш браузер будет ругаться на самоподписаный сертификат - дааное предупреждение можно игнорировать, т.к. данный сертификат был только что сгененирован у Вас в докере.
+You can check it on a local address https://localhost:9090. Your browser will warn you about the presence of a self-signed certificate. The warning might be ignored since the certificate has been just generated in your Docker.
 
 ### 3. Prepare Tunnel Client
 
-Сервер работает успешно, теперь необходимо настроить конфигурационный файл для Туннель Клиента.
+The server works properly, now it's time to set Tunnel Client's config file.
 
-Next, create `config.json` in the folder */tunnel-client-data/*.
+Create `config.json` in the folder */tunnel-client-data/*.
 
 ```bash
 touch tunnel-client-data/config.json
@@ -228,11 +231,11 @@ Copy the following configuration to the `config.json` file:
 }
 ```
 
-Ознакомтесь с детальной информацией о кадом параметре и о том как правильно его заполнить в [п.3 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client).
+Please carefully study the detailed information about the parameter code and how it should be specified in the second section of [Deploy tunnels in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) guide.
 
 ### 4. Launch Tunnel Client
 
-После успешной натсройки конфига, пакуем все необходимые файлы в архив, загружаем в StorJ и создаем заказ на Туннель Клиент:
+When the configs are ready, you will need to pack all the necessary files into an archive, upload it to StorJ and create Tunnel Client order:
 
 ```bash
 tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
@@ -242,4 +245,4 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 
 ### 5. DNS setup
  
-Скачайте результат с запущеного в [п.1](/developers/deployment_guides/llm#1-launch-tunnel-server) Туннель-Сервера. Там будет ip, который необходимо добавить DNS вашего домена. Ознакомтесть с детальной информацией в [параграфе Set up DNS п.3 раздела Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#set-up-dns)
+Download the result of Tunnel Server launched at [Step 1](/developers/deployment_guides/llm#1-launch-tunnel-server). It should contain IP which you will need to add to DNS of your server. Please follow the instructions that are available in the third section of [Deploy tunnel in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run#set-up-dns) guide.
