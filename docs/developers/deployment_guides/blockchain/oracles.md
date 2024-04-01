@@ -174,7 +174,7 @@ In this step we will cover the first component.
 
 All the solutions deployed on Super Protocol have to use a base image solution offer. In this case it will be a Node.js base image.
 
-Go to your project root directory and execute this [command](/developers/CLI_commands/offers/offers/download-content):
+Go to your project root directory and execute this [command](/developers/CLI_commands/offers/download-content):
 
 ```shell
 ./spctl offers download-content 6
