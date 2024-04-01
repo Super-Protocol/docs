@@ -11,7 +11,7 @@ Large Language Model (LLM) is an advanced AI system designed to understand, gene
 
 ## Prerequisites
 
-Same as in [Part 1 of Node.js with Tunnels guide](/developers/deployment_guides/tunnels/preparing).
+Same as in [Generate SSL certificate in Node.js with Tunnels](/developers/deployment_guides/tunnels/preparing) guide.
 
 ## Launch on Super Protocol
 
@@ -25,7 +25,7 @@ For the launch, we will need:
 
 ### 1. Prepare and launch Tunnel Server
 
-The process of preparing and launching Tunnel Server is described in the first section if [Deploy tunnels in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server) guide. Please refer to it for more details.
+The process of preparing and launching Tunnel Server is described in the first section of [Deploy tunnels in Node.js with Tunnels](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server) guide. Please refer to it for more details.
 ### 2. Prepare Tunnel Client data
 
 To deploy Tunner Client successfully, you will need to prepare configuration, server files and `server.js` file.
