@@ -64,14 +64,14 @@ JSON example:
 ```json title="value-offer.json"
 {
   "name": "Image Classification",
-  "group": "0", # belongs to input group
-  "offerType": "2", # belongs to solution type
+  "group": "0", // belongs to input group
+  "offerType": "2", // belongs to solution type
   "cancelable": false,
   "description": "My Image Classification solution",
   "restrictions": {
     "offers": [ 
-      "5", # should be executed together with solution offer 5
-      "16" # should be executed together with data offer 16
+      "5", // should be executed together with solution offer 5
+      "16" // should be executed together with data offer 16
     ],
     "types": [
       "2",
