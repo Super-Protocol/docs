@@ -184,9 +184,9 @@ After that, you can check locally whether all the files and dependencies are set
 Download and upload SuperProtocol `Node-Python` base image to Docker:
 
 ```bash
-./spctl offers download-content 76 (это dev, на тестнете будет другой)
+./spctl offers download-content 76 (DEV, id should be changed for Testnet)
 
-docker load -i <path to the Python base image archive>
+docker load -i <path to the Node-Python base image archive>
 ```
 
 Download a test script that will imitate the application launch in Tunnel Client:
@@ -207,11 +207,13 @@ You can check it on a local address https://localhost:9090. Your browser will wa
 
 The server works properly, now it's time to set Tunnel Client's config file.
 
-Create `config.json` in the folder `/tunnel-client-data/`.
+Create `config.json` in the folder `tunnel-client-data`.
 
 ```bash
 touch tunnel-client-data/config.json
 ```
+
+Before moving on, place your SSL certificate and private key next to `config.json`.
 
 Copy the following configuration to the `config.json` file:
 
@@ -219,7 +221,7 @@ Copy the following configuration to the `config.json` file:
 {
   "tunnels": [
     {
-      "sgxMrEnclave": "f539fcf25af2c8221bd150aa87f624379e2b216caa3f0689da03b2a74af6c833",
+      "sgxMrEnclave": "40154d45ffb11e7298c90b6092404cd974616c021a5e7e8ccf184ec8f585ab14",
       "sgxMrSigner": "22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513"
     }
   ],
@@ -232,7 +234,7 @@ Copy the following configuration to the `config.json` file:
 }
 ```
 
-Please carefully study the detailed information about the parameter code and how it should be specified in the section [Prepare and deploy Tunnel Client](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) of Node.js with Tunnels guide.
+Please carefully study the detailed information about parameters and how it should be specified in the section [Prepare and deploy Tunnel Client](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) of Node.js with Tunnels guide.
 
 ### 4. Launch Tunnel Client
 
@@ -243,6 +245,7 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 
 ./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 
+(DEV, ids should be changed for Testnet)
 ./spctl workflows create --tee 1 --solution 76 --solution 80 --data tunnel-client-data.json --storage 23 --orders-limit 10 --min-rent-minutes 60
 ```
 
