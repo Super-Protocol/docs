@@ -236,6 +236,7 @@ Copy the following configuration to the `config.json` file:
 - `sgxMrEnclave` и `sgxMrSigner` - leave these values as above, don't change them.
 - `authToken` - token from the `auth-token` file that you have created for Tunnel Server at [Step 1](/developers/deployment_guides/llm#1-launch-tunnel-server).
 - `cert` и `key` - relative path from the `config.json` to the files with a SSL certificate and a private key that were generated at [Prerequisites](/developers/deployment_guides/llm#prerequisites) step. Place these files next to `config.json`. 
+- `domain` (optional) - specify here you domain name if you are using a wildcard SSL certificate, otherwise you can leave it empty
 
 ### 4. Launch Tunnel Client
 
