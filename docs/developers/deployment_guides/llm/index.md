@@ -213,8 +213,6 @@ Create `config.json` in the folder `tunnel-client-data`.
 touch tunnel-client-data/config.json
 ```
 
-Before moving on, place your SSL certificate and private key next to `config.json`.
-
 Copy the following configuration to the `config.json` file:
 
 ```json title="config.json"
@@ -233,8 +231,11 @@ Copy the following configuration to the `config.json` file:
   }
 }
 ```
+`config.json` parameters:
 
-Please carefully study the detailed information about parameters and how it should be specified in the section [Prepare and deploy Tunnel Client](/developers/deployment_guides/tunnels/manual_run#prepare-and-deploy-tunnel-client) of Node.js with Tunnels guide.
+- `sgxMrEnclave` и `sgxMrSigner` - leave these values as above, don't change them.
+- `authToken` - token from the `auth-token` file that you have created for Tunnel Server at [Step 1](/developers/deployment_guides/llm#1-launch-tunnel-server).
+- `cert` и `key` - relative path from the `config.json` to the files with a SSL certificate and a private key that were generated at [Prerequisites](/developers/deployment_guides/llm#prerequisites) step. Place these files next to `config.json`. 
 
 ### 4. Launch Tunnel Client
 
