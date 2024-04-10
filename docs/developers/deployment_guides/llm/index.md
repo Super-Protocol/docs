@@ -181,10 +181,10 @@ docker run --platform linux/amd64 --rm -ti -v $PWD/tunnel-client-data/content/:/
 
 After that, you can check locally whether all the files and dependencies are set properly. 
 
-Download and upload SuperProtocol `Node-Python` base image to Docker:
+Download and upload SuperProtocol `Python & Node.js` base image to Docker:
 
 ```bash
-./spctl offers download-content 76 (DEV, id should be changed for Testnet)
+./spctl offers download-content 24
 
 docker load -i <path to the Node-Python base image archive>
 ```
@@ -219,8 +219,8 @@ Copy the following configuration to the `config.json` file:
 {
   "tunnels": [
     {
-      "sgxMrEnclave": "40154d45ffb11e7298c90b6092404cd974616c021a5e7e8ccf184ec8f585ab14",
-      "sgxMrSigner": "292dbf9d7256b124de0259dca586c53135175f431f2336d4a27c49c3cd60b518"
+      "sgxMrEnclave": "f539fcf25af2c8221bd150aa87f624379e2b216caa3f0689da03b2a74af6c833",
+      "sgxMrSigner": "22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513"
     }
   ],
   "authToken": "",
@@ -247,8 +247,7 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 
 ./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 
-(DEV, ids should be changed for Testnet)
-./spctl workflows create --tee 1 --solution 76 --solution 80 --data tunnel-client-data.json --storage 23 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 24 --solution 25 --data tunnel-client-data.json --storage 23 --orders-limit 10 --min-rent-minutes 60
 ```
 
 ### 5. DNS setup
