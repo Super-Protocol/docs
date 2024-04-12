@@ -58,11 +58,11 @@ Set the following parameters and press `Save`.
 
 | **Parameter** | **Value** |
 | :- | :- |
-| Network Name | Matic Testnet Mumbai <br /><br />*Note. You can change the network name if you'd like.*|
-| New RPC URL | [https://mumbai.polygon.superprotocol.com/hesoyam](https://mumbai.polygon.superprotocol.com/hesoyam)|
-| Chain ID | 80001 |
+| Network Name | SuperProtocol Polygon Amoy Testnet <br /><br />*Note. You can change the network name if you'd like.*|
+| New RPC URL | [https://amoy.polygon.superprotocol.com/hesoyam](https://amoy.polygon.superprotocol.com/hesoyam)|
+| Chain ID | 80002 |
 | Currency Symbol | MATIC |
-| Block Explorer URL | [https://mumbai.polygonscan.com](https://mumbai.polygonscan.com) |
+| Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
 <br/>
 
