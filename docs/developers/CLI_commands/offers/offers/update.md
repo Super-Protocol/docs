@@ -83,7 +83,7 @@ JSON example:
   "output": "",
   "allowedArgs": "",
   "allowedAccounts": [],
-  "argsPublicKey": "",
+  "argsPublicKey": "{}",
   "resultResource": "",
   "linkage": "",
   "hash": ""
@@ -112,7 +112,7 @@ JSON example:
   "teeType": "0",
   "properties": "",
   "tlb": "",
-  "argsPublicKey": "",
+  "argsPublicKey": "{}",
   "hardwareInfo": {
     "slotInfo": {
       "cpuCores": 48,
