@@ -50,8 +50,8 @@ Copy and paste into a new file or [download a template](./assets/config.json). P
         "accessToken": ""
     },
     "blockchain": {
-        "rpcUrl": "https://mumbai.polygon.superprotocol.com/hesoyam",
-        "smartContractAddress": "0xA7Ff565f26b93926e4e6465Eb81d48EfF456848b",
+        "rpcUrl": "https://amoy.polygon.superprotocol.com/hesoyam",
+        "smartContractAddress": "0x589c5F093524e9a6cD4bAEe786859bC6C3e38bec",
         "accountPrivateKey": ""
     },
     "storage": {
