@@ -202,7 +202,7 @@ As an example, this is what they look like in the Marketplace:
 
 ![img_2.png](img_2.png)
 
-And in SPCTL (on blockchain), using the [offers get-slot](/developers/cli_commands/offers/offers/get-slot) command:
+And in SPCTL (on blockchain), using the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command:
 
 ```
 ./spctl offers get-slot value --offer 11 --slot 11
