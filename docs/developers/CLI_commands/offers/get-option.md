@@ -1,8 +1,8 @@
 ---
 id: "get-option"
 title: "get-option"
-slug: "/cli_commands/offers/options/get-option"
-sidebar_position: 4
+slug: "/cli_commands/offers/get-option"
+sidebar_position: 10
 ---
 
 Display information for specific option of a specific offer.

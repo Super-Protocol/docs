@@ -1,8 +1,8 @@
 ---
 id: "offers-get-slot"
 title: "get-slot"
-slug: "/cli_commands/offers/slots/get-slot"
-sidebar_position: 4
+slug: "/cli_commands/offers/get-slot"
+sidebar_position: 9
 ---
 
 Display information for specific slot of a specific offer.
