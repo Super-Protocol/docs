@@ -7,14 +7,14 @@ sidebar_position: 10
 
 ## **About**
 
-This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the New York temperature. 
+This guide will take you step by step through the process of deploying a confidential [oracle](https://en.wikipedia.org/wiki/Blockchain_oracle) service on Super Protocol. This specific Oracle service was created by the Super team as an example for deploying off-chain computing services and its function is to process reliable historical data on the New York temperature.
 
 * The Oracle service should publish the New York temperature exchange rate every 5 minutes by accessing the open [Open Meteo API](https://open-meteo.com/en/docs/).
 
 * The Oracle smart contract must receive and store data from the Oracle script and verify that this script was executed and performed within a Trusted Execution Environment (TEE).
 
-* Our DApp (smart contract) should be able to read this data and ensure that it is: 
-  * Up-to-date (by verifying the timestamp) 
+* Our DApp (smart contract) should be able to read this data and ensure that it is:
+  * Up-to-date (by verifying the timestamp)
   * Available to be read on-chain.
 
 :::note
@@ -23,7 +23,7 @@ SMART-CONTRACTS IN THIS EXAMPLE USE UN-AUDITED CODE. DO NOT USE THIS CODE IN PRO
 
 ## **Prerequisites**
 
-To successfully complete this advanced guide it will be useful to have experience with Node.js, EVM blockchains and Solidity programming. 
+To successfully complete this advanced guide it will be useful to have experience with Node.js, EVM blockchains and Solidity programming.
 
 You will need:
 
@@ -39,12 +39,12 @@ You will need:
 
 ### Create / generate
 
-- [Polygonscan](https://polygonscan.com/login) - register and generate an API Key for contract verification on block explorer. Even though in this example we will be using the [Mumbai Polygon Testnet](https://mumbai.polygonscan.com/), you will need the **mainnet** API key.
+- [Polygonscan](https://www.oklink.com/polygon) - register and generate an API Key for contract verification on block explorer. Even though in this example we will be using the [Amoy Polygon Testnet](https://www.oklink.com/amoy), you will need the **mainnet** API key.
 
 - Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract. Wallet needs to contain test MATICs.
 - Polygon Testnet Wallet #2 - for deploying Oracle smart contract. Wallet needs to contain test MATICs.
 
-You can create the wallets using Metamask and follow [this guide](https://docs.polygon.technology/tools/wallets/metamask/add-polygon-network/) to add the Polygon Mumbai Testnet network. Save their addresses and private keys, you will need them later in the guide. You can receive free test MATICs [here](https://faucet.polygon.technology/).
+You can create the wallets using Metamask and follow [this guide](https://docs.polygon.technology/tools/wallets/metamask/add-polygon-network/) to add the Polygon Amoy Testnet network. Save their addresses and private keys, you will need them later in the guide. You can receive free test MATICs [here](https://faucet.polygon.technology/).
 
 We highly recommend that you create two different wallets on Polygon Testnet specifically for this guide. But if you are going to use a single wallet, please make sure that you do not use it for any other operations, as they might disrupt the Oracle.
 
@@ -52,7 +52,7 @@ We highly recommend that you create two different wallets on Polygon Testnet spe
 
 ## **Step 1. Prepare environment variables and install dependencies**
 
-Create a new folder for the Oracle project, name it anything you want. Place the SPCTL executable and its configured `config.json` there. 
+Create a new folder for the Oracle project, name it anything you want. Place the SPCTL executable and its configured `config.json` there.
 
 Download the Super Protocol solutions repository into it:
 
@@ -64,7 +64,7 @@ Now you will need to prepare two `.env` files with all the required parameters a
 - `Blockchain/sp-x509`
 - `Blockchain/sp-oracle/smart-contract`.
 
-Go to the `Super-Protocol/solutions` directory and make a copy of the example `.env`: 
+Go to the `Super-Protocol/solutions` directory and make a copy of the example `.env`:
 
 ```shell
 cd ./solutions/Blockchain/sp-x509/
@@ -74,7 +74,7 @@ cp .env.example .env
 Add the following parameters to `.env` file:
 
 - `MUMBAI_DEPLOYER_PRIVATE_KEY` -  private key for Polygon Testnet Wallet #1.
-- `MUMBAI_URL` - you can use `https://mumbai.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
+- `MUMBAI_URL` - you can use `https://amoy.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
 - `POLYGON_API_KEY` - the mainnet API Key you have generated in [Polygonscan](https://polygonscan.com/login).
 
 Install dependencies and compile the contract:
@@ -83,7 +83,7 @@ Install dependencies and compile the contract:
 docker compose up build
 ```
 
-Now you will need to do the same thing in the directory `Blockchain/sp-oracle/smart-contract`: 
+Now you will need to do the same thing in the directory `Blockchain/sp-oracle/smart-contract`:
 
 ```shell
 cd ../sp-oracle/smart-contract/
@@ -117,7 +117,7 @@ Execute the following command in the directory `Blockchain/sp-oracle/script`:
 docker compose up blockchain oracle
 ```
 
-When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check the results. 
+When you see the log `The iteration of oracle loop has been ended`, it means that Oracle performance has been successful and you can check the results.
 
 Scroll up the docker's output to find the logs `To test app please use these commands inside "smart-contract" folder` and copy the first command. Running containers must NOT be stopped. Open a new terminal window, go to the directory `smart-contact`, insert the copied command and execute it.
 
@@ -138,7 +138,7 @@ It's worth noting that this x509 verifier smart contract acts as a validator of 
 
 ### Deploy the smart-contract
 
-We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate. 
+We will use Intel's SGX Root CA Certificate [intel-root-cert.pem](https://github.com/Super-Protocol/solutions/blob/main/Blockchain/sp-x509/intel-root-cert.pem) for deployment. The integrity of the entire certificate chain depends on this root certificate.
 
 Go to `/solutions/Blockchain/sp-x509/` directory and execute this command to deploy the x509 verifier contract to the Polygon testnet network.
 
@@ -196,7 +196,7 @@ Execute the following [command](/developers/cli_commands/solutions/prepare) in t
 ./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path <path to the Node.js base image archive> ./solutions/Blockchain/sp-oracle/script/run/ signing-key
 ```
 
-The result will be `oracle-solution.tar.gz` and `metadata.json` files. 
+The result will be `oracle-solution.tar.gz` and `metadata.json` files.
 
 Additionally, in the terminal logs you will see MRENCLAVE and MRSIGNER values. They look something like this:
 
@@ -205,7 +205,7 @@ MRENCLAVE: d6906986298db89f91941921579e058429bd9ec63c0f97246274b25a4bbfbf0c
 MRSIGNER: 36f3bb39d10617852d1eef2f5066d8f9add2c65fb1a026d86398fec405fe725c
 ```
 
-**Save these values!** Important: different MRENCLAVE and MRSIGNER values are generated for each run of the `prepare` command. 
+**Save these values!** Important: different MRENCLAVE and MRSIGNER values are generated for each run of the `prepare` command.
 
 Finally, we will [encrypt and upload](/developers/cli_commands/files/upload) the prepared solution to a decentralized storage (Storj):
 
@@ -244,7 +244,7 @@ The result will be the oracle smart contact address. Use it to verify the contra
 npx hardhat verify-oracle --address <oracle-address> --publishers <publisher-address> --enclave <MRENCLAVE> --signer <MRSIGNER> --verifier <x509-verifier-address> --network mumbai
 ```
 
-You should get a "Successfully verified" response. 
+You should get a "Successfully verified" response.
 
 **Example:** a previously [deployed and verified oracle smart contract](https://mumbai.polygonscan.com/address/0x9e090892a8b65F59c8A52c5c811a3a859BE684A8#readContract).
 
@@ -262,7 +262,7 @@ Verify the dApp contract on-chain:
 npx hardhat verify-app --address <d-app-address> --oracle <oracle-address> --network mumbai
 ```
 
-You should get a "Successfully verified" response. 
+You should get a "Successfully verified" response.
 
 **Example:** a previously [deployed and verified dApp smart contract](https://mumbai.polygonscan.com/address/0x9fF6c385F06Ecc6Fb09a321AEDeFf50Dc83Cb20C#readContract).
 
@@ -281,7 +281,7 @@ Open a new terminal window and go to `/Blockchain/sp-oracle/script/inputs/` fold
 
 ### Set up root certificates
 
-First, you will need to retrieve the trusted root certificates to validate the connection to the API service that your oracle will be requesting to. You can extract root certificate of the particular API that you will be using, but because certificates may change unpredictably we recommend listing the full root certificates list from your computer. 
+First, you will need to retrieve the trusted root certificates to validate the connection to the API service that your oracle will be requesting to. You can extract root certificate of the particular API that you will be using, but because certificates may change unpredictably we recommend listing the full root certificates list from your computer.
 
 If you have run the Oracle locally, the file `ca_certificates.crt` has been already generated. It is located in the directory `/Blockchain/sp-oracle/script/inputs`. In addition, you can update it with your own list of trusted certificates. Otherwise, you can go on to the creation of `input.json`.
 
@@ -350,7 +350,7 @@ You can check the status of the order using [Marketplace GUI](/developers/market
 ./spctl orders get <order ID>
 ```
 
-Wait until the order turns to status `Processing`. The script will start about 15 minutes after that. 
+Wait until the order turns to status `Processing`. The script will start about 15 minutes after that.
 
 ## **Step 7. Observing oracle**
 
@@ -364,7 +364,7 @@ Open the dApp contract page on Polygonscan: `https://mumbai.polygonscan.com/addr
 
 If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Polygonscan similarly to the dApp. However, as a key it won't take 'NewYork_temperature' directly, but rather the keccak256 hash of it.
 
-You can find open online services for convertation, but if you are using the same pair (NewYork_temperature), then the key will be `0xb186074e0e3ae110d728b99f004e457e6f557aab3f713681c9f5b906e3cc5cd0`. You can use it to call on the oracle methods.  
+You can find open online services for convertation, but if you are using the same pair (NewYork_temperature), then the key will be `0xb186074e0e3ae110d728b99f004e457e6f557aab3f713681c9f5b906e3cc5cd0`. You can use it to call on the oracle methods.
 
 <img src={require('./../../images/guides_blockchain_3.png').default} width="auto" height="auto"/>
 
@@ -398,4 +398,3 @@ A quick customization guide of the oracle script:
 * Create a new service with business logic and connect it in `index.js`.
 * Extend `blockchan.provider.ts` to publish different types of computations.
 * Always sign all published data with a session key.
-
