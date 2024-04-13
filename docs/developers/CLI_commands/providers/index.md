@@ -16,8 +16,7 @@ View providers on blockchain. At this phase of testnet all providers are from th
 
 ## Child commands
 
-| **Command**                                         | **Description**                                         |
-|:----------------------------------------------------|:--------------------------------------------------------|
-| [get](/developers/cli_commands/providers/get)       | Display detailed information on provider with `address` |
-| [update](/developers/cli_commands/providers/update) | Update the current provider's information               |
-| [list](/developers/cli_commands/providers/list)     | List providers                                          |
+|**Command**|**Description**|
+| :- | :- |
+|[get](/developers/cli_commands/providers/get)|Display detailed information on provider with `address`|
+|[list](/developers/cli_commands/providers/list)|List providers|

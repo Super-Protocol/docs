@@ -57,7 +57,7 @@ Super Protocol uses a *Pay-As-You-Go* model. Each provider has a **Cost** to the
 
 ### Compute
 
-A Compute order, the main TEE order, begins as **Suspended**, which means that it's waiting for Solution and Data sub-orders to be created. After the sub-orders are created, the Compute order goes into status **Blocked** while the solutions and data providers are authorizing the TEE for access and generating access keys. Once this is completed, the Compute order goes into status **New**, where it waits in queue for the Compute offer to become available. 
+A Compute order, the main TEE order, begins as **Suspended**, which means that it's waiting for Solution and Data sub-orders to be created. After the sub-orders are created, the Compute order goes into status **Blocked** while the solutions and data offers are being dowloaded by the TEE from the storage. Once this is completed, the Compute order goes into status **New**, where it waits in queue for the Compute offer to become available. 
 
 Once the machine is available, the Compute goes into status **Processing**, which is the main status for execution inside the TEE. Once completed, the status is **Done**.
 
@@ -65,7 +65,7 @@ Note that these two statuses might take different meanings depending on the cont
 
 ### Solution and Data
 
-Solution and Data sub-orders start out as **New**, which means that the sub-order has been created on blockchain. Next is **Processing**, where the providers are authorizing the TEE for access and generating access keys. And once that is done, then the sub-order is **Done** and the providers withdraw their earnings from the order. Typically, all of the above takes less than a minute.
+Solution and Data sub-orders start out as **New**, which means that the sub-order has been created on blockchain. Next is **Processing**, where the solution, base image and data are being downloaded into the TEE. And once that is done, then the sub-order is **Done** and the providers withdraw their earnings from the order. Typically, all of the above takes less than a minute.
 
 The above applies to the Marketplace offers that have providers. If you are deploying your own solution and data, then there would only be a base image solution offer. Your own solution and data are downloaded into the TEE before the order starts.
 

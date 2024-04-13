@@ -39,19 +39,15 @@ git clone https://github.com/Super-Protocol/solutions
 
 Then download and decrypt solution using `resource.json` file in the `Image Classification` directory of the solutions repository to get the archive with the source code:
 ```shell
-./spctl files download ./solutions/Image\ Classification/resource.json  ./
+./spctl files download resource.json ./
 ```
+:::note
+The path to `resource.json` should a relative path from where SPCTL is located.
+:::
 
 Unpack the archive, copy all the files from it, except `pypi` folder, into your `run` directory. We will create `pypi` folder later ourselves.
 
-The file `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place. Please note that `entrypoint.py` should contain the information about how to access input and output data. An example is given below:
-
-```
-RUN_DIR = os.getenv('RUN_FOLDER', os.path.dirname(os.path.abspath(__file__)))
-INPUT_DIR = os.getenv('INPUT_DATA_FOLDER', os.path.join(RUN_DIR, "..", "inputs"))
-OUTPUT_DIR = os.getenv('OUTPUT_DATA_FOLDER', os.path.join(RUN_DIR, "..", "output"))
-```
-
+The file `entrypoint.py` is the one that gets executed when you run your Python script on Super Protocol. You can use any additional modules in your project as long as you have this file in place.
 
 ## Install Python base image
 
