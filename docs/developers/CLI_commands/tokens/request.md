@@ -26,5 +26,5 @@ Example: receive TEE tokens.
 | **Name, shorthand** | **Default**     | **Description**                      |
 |:--------------------|:----------------|:-------------------------------------|
 | `--tee`             |                 | Request Super Protocol TEE tokens    |
-| `--matic`           |                 | Request Polygon Mumbai MATIC tokens  |
+| `--matic`           |                 | Request Polygon Amoy MATIC tokens  |
 | `--config`          | `./config.json` | Path to the configuration file       |
