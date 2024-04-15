@@ -184,7 +184,7 @@ After that, you can check locally whether all the files and dependencies are set
 Download and upload SuperProtocol `Python & Node.js` base image to Docker:
 
 ```bash
-./spctl offers download-content 24
+./spctl offers download-content 7
 
 docker load -i <path to the Node-Python base image archive>
 ```
@@ -247,7 +247,7 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 
 ./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
 
-./spctl workflows create --tee 1 --solution 24 --solution 25 --data tunnel-client-data.json --storage 23 --orders-limit 10 --min-rent-minutes 60
+./spctl workflows create --tee 1 --solution 7 --solution 16 --data tunnel-client-data.json --storage 23 --orders-limit 10 --min-rent-minutes 60
 ```
 
 ### 5. DNS setup
