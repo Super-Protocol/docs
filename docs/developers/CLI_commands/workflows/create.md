@@ -35,21 +35,21 @@ Let's say you want to deploy [Super Chat](/developers/offers/superchat) using on
 The command you'd use would look something like this:
 
 ```
-./spctl workflows create --solution 11,11 --solution 6,2 --data 15,19 --storage 23,27
+./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
 Where:
-* `--solution 11,11` - the [Tunnels Launcher](/developers/offers/launcher), offer ID 11. Requirements: slot ID also #11.
+* `--solution 12,12` - the [Tunnels Launcher](/developers/offers/launcher), offer ID 12. Requirements: slot ID also #12.
 * `--solution 6,2` - the Node.js base image, offer ID #6. Requirements: slot ID #2.
-* `--data 15,19` - Super Chat Config data, offer ID #15. Requirements: slot ID #19.
-* `--storage 23,27` - storage for storing results, offer ID #23. Requirements: slot ID #27.
+* `--data 17,22` - Super Chat Config data, offer ID #17. Requirements: slot ID #22.
+* `--storage 25,30` - storage for storing results, offer ID #25. Requirements: slot ID #30.
 
 **Note:** the absence of the `--tee` option means that SPCTL will use auto-select to choose the most appropriate compute offer and configuration for your workload.
 
 In some scenarios you might want to specify the exact compute offer that you want, but leave the rest to the auto-select. Then the command might look like this:
 
 ```
-./spctl workflows create --tee 4 --solution 11,11 --solution 6,2 --data 15,19 --storage 23,27
+./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
 Where `--tee 4` means that you want to use specifically compute offer #4, but the combinations of slots and options are to be determined automatically.
@@ -59,7 +59,7 @@ Where `--tee 4` means that you want to use specifically compute offer #4, but th
 You can also completely bypass auto-select and specify exactly which compute offer and configuration you want. Then your command might look something like this:
 
 ```
-./spctl workflows create --tee 4,7 --tee-slot-count 4 --tee-options 10 --tee-options-count 7 --solution 11,11 --solution 6,2 --data 15,19 --storage 23,27
+./spctl workflows create --tee 4,7 --tee-slot-count 4 --tee-options 10 --tee-options-count 7 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 Where:
 * `--tee 4,7 --tee-slot-count 4` - compute offer ID #4 with slot ID #7 that is used in 4 increments (so, four times).
@@ -68,7 +68,7 @@ Where:
 Now let's specify deposits and lease:
 
 ```
-./spctl workflows create --tee 4,7 --tee-slot-count 4 --tee-options 10 --tee-options-count 7 --solution 11,11 --solution 6,2 --data 15,19 --storage 23,27 --deposit 2 --min-rent-minutes 120
+./spctl workflows create --tee 4,7 --tee-slot-count 4 --tee-options 10 --tee-options-count 7 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30 --deposit 2 --min-rent-minutes 120
 ```
 
 Where:
@@ -85,7 +85,7 @@ The examples above use only offers from the Marketplace, but you most likely wil
 Let's take a scenario where you want to deploy your own Python solution with two datasets: 
 
 ```
-./spctl workflows create --solution 5,1  --solution ./your-python.json --data ./your-input-1.json --data ./your-input-2.json --storage 23,27
+./spctl workflows create --solution 5,1  --solution ./your-python.json --data ./your-input-1.json --data ./your-input-2.json --storage 25,30
 ```
 
 Where:
