@@ -18,7 +18,7 @@ Now you will need to execute together:
 Use the following [command](/developers/cli_commands/workflows/create):
 
 ```
-./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 23,27 --solution 5,1 --solution solution.json --data input-1.json --data input-2.json
+./spctl workflows create --tee 1,1 --tee-slot-count 1 --storage 25,30 --solution 5,1 --solution solution.json --data input-1.json --data input-2.json
 ```
 
 An order ID is generated upon execution.
