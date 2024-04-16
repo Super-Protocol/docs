@@ -100,7 +100,7 @@ Get your first TEE and MATIC tokens:
 And then [create](/developers/cli_commands/workflows/create) your first simple order: a [Super Chat](/developers/offers/superchat) solution using tunnels.
 
 ```
-./spctl workflows create --solution 11,11 --solution 6,2 --data 15,19 --storage 23,27
+./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
 You will get an Order ID. You can then check the order status using the [orders](/developers/cli_commands/orders) command or using the [Marketplace GUI](/developers/marketplace).

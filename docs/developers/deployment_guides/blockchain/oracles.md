@@ -339,7 +339,7 @@ cd ../../../../../
 An `oracle-input.json` will be created. We will use this file and `oracle-solution.json` from [Step 4](/developers/deployment_guides/blockchain/oracles#writing-manifest-and-encrypting-the-oracle-service) to create an order:
 
 ```shell
-./spctl workflows create --tee 1,1 --tee-slot-count 1 --tee-options 1 --tee-options-count 1 --storage 23,27 --solution 6,2 --solution oracle-solution.json --data oracle-input.json --min-rent-minutes 60
+./spctl workflows create --tee 1,1 --tee-slot-count 1 --tee-options 1 --tee-options-count 1 --storage 25,30 --solution 6,2 --solution oracle-solution.json --data oracle-input.json --min-rent-minutes 60
 ```
 
 The result will be an order ID.
