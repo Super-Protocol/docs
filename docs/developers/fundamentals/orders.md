@@ -88,7 +88,7 @@ Statuses:
 
 <img src={require('./../images/fundamentals_orders_2.png').default} width="auto" height="auto"/>
 
-To have a more detailed view of what is happening with your order and to illustrate the decentralized principles of Super Protocol, we developed an Events panel. It shows the main blockchain events and how they correlate with order and sub-order statuses. Also shown are absolute transaction values and details on Polygonscan.
+To have a more detailed view of what is happening with your order and to illustrate the decentralized principles of Super Protocol, we developed an Events panel. It shows the main blockchain events and how they correlate with order and sub-order statuses. Also shown are absolute transaction values and details on Oklink.
 
 It's located in the **Events** tab of the main order page.
 
