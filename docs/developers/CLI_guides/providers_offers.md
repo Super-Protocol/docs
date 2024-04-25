@@ -10,7 +10,7 @@ sidebar_position: 4
 ## **About**
 This guide will take you step by step through the process of creating your Data / Solution provider and deploying your own Data / Solution offer to Super Protocol.
 
-moderation
+
 
 ## **Prerequisites**
 
@@ -22,36 +22,43 @@ received the credentials by email from Super Team:
 - Private key
 - Access token 
 
+<Highlight color="red">куда нужно вводить эти креды? в config?</Highlight>
+
+
 ### Set up Provider Tools
 
-Super Protocol has a tool called `provider-tools` through which you can create a provider, create an offer and obtain further instructions how to run the offer.
+To guide you through the process of setting up a provider and offers we made a special tool: Provider Tools. 
 
-To start working with the tool, open Terminal in the directory where you want to place the tool for Linux and run the following command:
+
+To install Provider Tools, open Terminal in the directory where you want to place the tool for Linux and run the following command:
 
 ```
 curl -L TBD
 chmod +x ./provider-tools
 ```
 
+<Highlight color="red">указать ссылку для загрузки</Highlight>
+
+<Highlight color="red">для разных OS</Highlight>
+
+
 ## **Step 1 - Setting up accounts**
 
 ### Types of accounts
 
-Testnet account is considered as your user account in SuperProcotol under which you will perform actions as a User. Please do not to use it for other purposes.
+The main wallet that is used to create and manage orders is called **User account**. For testnet purposes, this account is provided to you by the Super Protocol team.
 
-In Superprotocol, there are three types of provider accounts and each of them performs its own functions:
-1. **Authority account** is considered as your main provider account in SuperProcotol under which a provider is created and modified.
-2. **Action account** executes actions on behalf of an authority account in Execution Controller with the purpose to add and modify offers. Execution Controller allows processing and further distribution of requests from the blockchain.
-3. **Token receiver** account gets rewards as a result of service delivery.
-   **Note:** its private key should be stored safely.
+But to become a provider, you need to have three other accounts:
 
-We highly recommend that you create and use three different Polygon Testnet accounts. Later on, you will be able to change action and token receiver accounts using SPCTL `providers update` command but please remember that **only one** provider can be created under an authority account.
+1. **Authority account** your main provider account in Super Protocol, used to create and manage your provider; 
+2. **Action account** executes actions on behalf of an Authority account, used to create and manage offers; 
+3. **Token receiver account** used to receive the TEE rewards for providing offers on Super Protocol.
 
 ---
 
 ### Creating accounts
 
-Now we will use the Provider Tools to auto-generate three accounts.
+We will use the Provider Tools to auto-generate the three accounts.
 
 Go to the directory where you downloaded Provider Tools and run this command: 
 
@@ -81,19 +88,39 @@ Select `Yes`.
 
 ## **Step 2 - Preparing content**
 
+Steps 2 and 5 will require you to prepare and upload your solution or data, and then create an order. This process is also outlined in the [Quick Deployment Guide](/developers/cli_guides/quick_guide#prepare-data).
+
 ### Prepare offer content
 
-Please follow the [guide](/developers/cli_guides/quick_guide/) to get more details about how to upload them to the storage. The resource file which is generated as a result of uploading will be needed later in this guide.
+**For solution offers**
+
+In order to be run correctly inside an Intel SGX confidential enclave (TEE), a solution has to be packed and signed with [Gramine](https://gramineproject.io/) (a.k.a graminized).
+
+Run the [**solutions prepare**](/developers/cli_commands/solutions/prepare) command.
+
+As a result, a `tar.gz` archive will be generated.
+
+**For data offers**
+
+For data, you can simply place the data into an archive.There is no need to prepare it.
+
+As a result, a `tar.gz` archive will be generated.
 
 ---
 
-
 ### Upload offer content
 
-<Highlight color="red">Загрузка</Highlight>
+Before the solution can be executed in TEE, it needs to be uploaded to a storage, from where the TEE will download it for execution.
 
-<Highlight color="red">генерирует resource json</Highlight>
+Run the [**files upload**](/developers/cli_commands/files/upload) command using the `tar.gz` archive above.
 
+As a result, a resource file will be generated in the `json` format, containing the information for TEE on how to access your uploaded solution.
+
+---
+
+**Expected step result:**
+* Solution or data has been prepared, archived and uploaded to storage;
+* A resource `.json` has been generated.
 
 ## **Step 3 - Configuring offer**
 
@@ -140,7 +167,7 @@ Where you need to fill out the following fields:
 
 As an example, this is what these fields look like in the Marketplace:
 
-![img_1.png](img_1.png)
+<img src={require('./../images/cli_guides_providers_offers_1.png').default} width="auto" height="auto"/>
 
 And in SPCTL (on blockchain), using the [offers get](/developers/cli_commands/offers/offers/get) command:
 
@@ -156,7 +183,13 @@ And in SPCTL (on blockchain), using the [offers get](/developers/cli_commands/of
 
 You can learn more about the other fields in the [offers update](/developers/cli_commands/offers/offers/update) command.
 
-<Highlight color="red">как правильно писать описания</Highlight>
+It is important that the description clearly states: 
+* What does your solution do? 
+* What is the expected result? Provide an example;
+* What kind of data does it use? Provide examples of format and structure; 
+* Provide links to outside sources (such as GitHub).
+
+Remember that users will be running your solution or data *blindly* - thus you need to be as precise as possible in describing the input/output requirements. Confidentiality does not allow for downloading of offers unless you specifically permit it in the offer settings. 
 
 ---
 
@@ -200,7 +233,7 @@ You can learn more about these fields in the [offers add-slot](/developers/cli_c
 
 As an example, this is what they look like in the Marketplace: 
 
-![img_2.png](img_2.png)
+<img src={require('./../images/cli_guides_providers_offers_3.png').default} width="auto" height="auto"/>
 
 And in SPCTL (on blockchain), using the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command:
 
@@ -270,8 +303,10 @@ As a result, a new directory `<offerType>-execution-controller` will be created 
 
 <Highlight color="red">что такое EC, как он работает, зачем он нужен</Highlight>
 
+Execution Controller allows processing and further distribution of requests from the blockchain.
 
-In this step you need to launch a Marketplace offer with your own data. You can do this entirely using Marketplace GUI or using SPCTL (use the [Quick Deployment Guide](/developers/cli_guides/quick_guide#prepare-data) for reference).
+
+In this step you need to launch a Marketplace offer with your own data. You can do this entirely using Marketplace GUI or using SPCTL.
 
 Go to the `<offerType>-execution-controller` directory and put these two files into a single tar.gz archive (let's name it `offer-ec.tar.gz`):
 * `.env` file;
@@ -291,7 +326,7 @@ Once you have the archive with the two files, upload it to a storage using the [
 ./spctl files upload offer-ec.tar.gz --storage 25,30 --min-rent-minutes 120
 ```
 
-Then, run the [workflows create](/developers/cli_commands/workflows/create) command.
+Then, run the [workflows create](/developers/cli_commands/workflows/create) command with the `resource.json` resulted from the upload:
 
 ```
 ./spctl workflows create --solution 6,2 --solution XXX --data ./resource.json --storage 23,30
@@ -299,8 +334,7 @@ Then, run the [workflows create](/developers/cli_commands/workflows/create) comm
 
 <Highlight color="red">прописать номер оффера ExecController</Highlight>
 
-
-Here you will need to specify the json resource file, generated during the upload to storage, as a data offer and use Provider Launcher solution offer.
+<Highlight color="red">дописать когда оффер будет готов</Highlight>
 
 
 ## **Step 6 - Marketplace GUI Moderation**
@@ -345,7 +379,7 @@ Every 5 minutes the script will check if there are any orders in the status New 
 
 **Note:** by default, your offer is set to `Unmoderated` mode in the Marketplace. Please contact SuperTeam to set your offer to `Approved` mode in the Marketplace.
 
-## **Troubleshooting**
+## **FAQ**
 ### How to update a provider
 In case you need to update any information in the provider’s description, please use SPCTL providers update command.
 
@@ -359,3 +393,9 @@ In case you need to update any information in the offer description, please use 
 
 ### How to update a slot
 In case you need to update any information in the slot description, please use SPCTL  offers update-slot command.
+
+
+
+
+
+Strictly speaking, you can use the same account for all three functions, but we recommend separating them. You'll be able to change the Action account and Token receiver account, but only one provider can be created under an authority account, and it cannot be changed.
