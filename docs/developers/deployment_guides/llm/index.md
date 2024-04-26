@@ -74,7 +74,34 @@ Download and configure [SPCTL](/developers/cli_guides/configuring) in this folde
 
 Follow the instruction that is available in the section [Prepare and deploy Tunnel Server](/developers/deployment_guides/tunnels/manual_run/#prepare-and-deploy-tunnel-server) of Node.js with Tunnels guide.
 
-### 2. Prepare and upload model launcher solution
+### 2. Download model
+
+Создадим папку куда загрузим тестовую модель
+
+```bash
+mkdir llm-model
+```
+
+Установим питоновский пакет для скачивания моделей из `huggingface` и скачаем простую модель (2,83Gb):
+
+```bash
+python3 -m pip install -U "huggingface_hub[cli]"
+huggingface-cli download TheBloke/Llama-2-7B-Chat-GGUF llama-2-7b-chat.Q2_K.gguf --local-dir ./llm-model --local-dir-use-symlinks False
+```
+
+Упаковываем данные и загружаем на StorJ:
+
+```bash
+tar -czf llm-model.tar.gz -C ./llm-model .
+
+./spctl files upload llm-model.tar.gz --output llm-model.json --filename llm-model.tar.gz
+```
+
+### 3. Prepare and test model launcher
+
+:::warning
+Для данного шага необходимо использовать операционную систему Linux с x64 архитектурой процессора
+:::
 
 Скачайте и загрузите себе в докер наш базовый образ:
 
@@ -87,19 +114,18 @@ docker load -i node20-python3.10-base-image-gsc-v1.6-gramine-v1.6.4-sp.tar.gz
 
 ```bash
 mkdir model-launcher-solution
-cd model-launcher-solution
 ```
 
 Далее склонируем open-source репозиторий [text-generation-webui](https://github.com/oobabooga/text-generation-webui)
 
 ```bash
-git clone https://github.com/oobabooga/text-generation-webui.git 
+git clone https://github.com/oobabooga/text-generation-webui.git ./model-launcher-solution/text-generation-webui
 ```
 
 Для правильной установки зависимостей, необходимо чтобы `text-generation-webui` проект находился по тому же абсолютному пути, который и будет у него в момент запуска. Поэтому для установки зависимостей выполним следующую докер-команду:
 
 ```bash
-docker run -it --rm --platform linux/amd64 -v $PWD:/sp/run --entrypoint /bin/bash \
+docker run -it --rm --platform linux/amd64 -v $PWD/model-launcher-solution:/sp/run --entrypoint /bin/bash \
     -e GPU_CHOICE=N \
     -e USE_CUDA118=FALSE \
     -e LAUNCH_AFTER_INSTALL=FALSE \
@@ -112,10 +138,10 @@ docker run -it --rm --platform linux/amd64 -v $PWD:/sp/run --entrypoint /bin/bas
     '
 ```
 
-Добавим `server.js` файл, который будет запускать `text-generation-webui` сервер
+Добавим `server.js` файл в директорию `model-launcher-solution`, который будет запускать `text-generation-webui` сервер
 
 ```bash
-touch server.js
+touch ./model-launcher-solution/server.js
 ```
 
 Add the following code to it:
@@ -152,6 +178,8 @@ async function run() {
     privateKeyFilePath,
     '--ssl-certfile',
     certificatePath,
+    '--model-dir',
+    '/sp/inputs/input-0002'
   ];
 
   await new Promise((resolve, reject) => {
@@ -178,14 +206,18 @@ run().catch((error) => {
 Download a test script that will imitate the application launch in Tunnel Client:
 
 ```bash
-curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/tunnel-client-test-start.js -o tunnel-client-test-start.js
+curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/tunnel-client-test-start.js -o model-launcher-solution/tunnel-client-test-start.js
 ```
 
 И проверим, что все настроено правильно:
 
 ```bash
-docker run -p 9090:9090 --platform linux/amd64 --rm -ti -v $PWD:/sp/run --entrypoint /usr/local/bin/node gsc-node20-python3.10-base-solution:latest tunnel-client-test-start.js ./server.js
+docker run -p 9090:9090 --platform linux/amd64 --rm -ti -v $PWD/model-launcher-solution:/sp/run -v $PWD/llm-model:/sp/inputs/input-0002 --entrypoint /usr/local/bin/node gsc-node20-python3.10-base-solution:latest tunnel-client-test-start.js ./server.js
 ```
+
+:::note
+Обратите внимание, что скачанную модель в [п.1](/developers/deployment_guides/llm#2-download-model) мы будем подключать в папке `/sp/inputs/input-0002`. Данное название не случайно, так подключаются в Суперпротоколе данные к заказу. В папке `/sp/inputs/input-0001` будут нахоидтся конфиг туннель-клиента с SSL ключом и сертификатом (они будут сформированы в [п.4 данного гайда](/developers/deployment_guides/llm#4-prepare-and-upload-tunnel-client-data))
+:::
 
 You can check it on a local address https://localhost:9090. Your browser will warn you about the presence of a self-signed certificate. The warning might be ignored since the certificate has been just generated in your Docker.
 
@@ -195,6 +227,7 @@ You can check it on a local address https://localhost:9090. Your browser will wa
 
 ```bash
 cd ..
+
 ./spctl solutions generate-key signing-key
 ```
 
@@ -207,10 +240,10 @@ cd ..
 И загрузим полученный архив в StorJ:
 
 ```bash
-.spctl files upload model-launcher-solution.tar.gz --output model-launcher-solution.json --filename model-launcher-solution.tar.gz --metadata metadata.json
+./spctl files upload model-launcher-solution.tar.gz --output model-launcher-solution.json --filename model-launcher-solution.tar.gz --metadata metadata.json
 ```
 
-### 3. Prepare and upload Tunnel Client data
+### 4. Prepare and upload Tunnel Client data
 
 It's time to set Tunnel Client's config file.
 
@@ -264,7 +297,7 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 После загрузки и солюшена а днных на StorJ, необходимо создать заказ командой:
 
 ```bash
-./spctl workflows create --tee 1 --solution 7 --solution model-launcher-solution.json --data tunnel-client-data.json --storage 25 --orders-limit 10 --min-rent-minutes 120
+./spctl workflows create --tee 1 --solution 7 --solution model-launcher-solution.json --data tunnel-client-data.json --data llm-model.json --storage 25 --orders-limit 10 --min-rent-minutes 120
 ```
 
 :::note
