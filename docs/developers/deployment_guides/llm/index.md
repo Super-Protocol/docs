@@ -64,8 +64,9 @@ As soon Тunnel Server and Tunnel Client have been launched successfully, you wi
 Create a folder that will be used for further operations:
 
 ```bash
-cd ./llm-model-launcher-example
 mkdir llm-model-launcher-example
+
+cd ./llm-model-launcher-example
 ```
 Download and configure [SPCTL](/developers/cli_guides/configuring) in this folder.
 
@@ -85,7 +86,7 @@ mkdir llm-model
 
 ```bash
 python3 -m pip install -U "huggingface_hub[cli]"
-huggingface-cli download TheBloke/Llama-2-7B-Chat-GGUF llama-2-7b-chat.Q2_K.gguf --local-dir ./llm-model
+huggingface-cli download TheBloke/Llama-2-7B-Chat-GGUF llama-2-7b-chat.Q2_K.gguf --local-dir ./llm-model --local-dir-use-symlinks False
 ```
 
 Упаковываем данные и загружаем на StorJ:
@@ -137,10 +138,10 @@ docker run -it --rm --platform linux/amd64 -v $PWD/model-launcher-solution:/sp/r
     '
 ```
 
-Добавим `server.js` файл, который будет запускать `text-generation-webui` сервер
+Добавим `server.js` файл в директорию `model-launcher-solution`, который будет запускать `text-generation-webui` сервер
 
 ```bash
-touch server.js
+touch ./model-launcher-solution/server.js
 ```
 
 Add the following code to it:
@@ -205,7 +206,7 @@ run().catch((error) => {
 Download a test script that will imitate the application launch in Tunnel Client:
 
 ```bash
-curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/tunnel-client-test-start.js -o tunnel-client-test-start.js
+curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%20Client/examples/tunnel-client-test-start.js -o model-launcher-solution/tunnel-client-test-start.js
 ```
 
 И проверим, что все настроено правильно:
