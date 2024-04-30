@@ -135,6 +135,7 @@ docker run -it --rm --platform linux/amd64 -v $PWD/model-launcher-solution:/sp/r
         && apt install -y curl git \
         && git config --global --add safe.directory /sp/run/text-generation-webui \
         && ./text-generation-webui/start_linux.sh
+        && find ./text-generation-webui -xtype l -delete
     '
 ```
 
@@ -172,6 +173,7 @@ async function run() {
   fs.writeFileSync(certificatePath, process.env.TLS_CERT);
 
   const commandLineArgs = [
+    '--listen',
     '--listen-port',
     port,
     '--ssl-keyfile',
@@ -226,8 +228,6 @@ You can check it on a local address https://localhost:9090. Your browser will wa
 Сгенерируем ключ для подписи солюшена:
 
 ```bash
-cd ..
-
 ./spctl solutions generate-key signing-key
 ```
 
@@ -297,7 +297,7 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 После загрузки и солюшена а днных на StorJ, необходимо создать заказ командой:
 
 ```bash
-./spctl workflows create --tee 1 --solution 7 --solution model-launcher-solution.json --data tunnel-client-data.json --data llm-model.json --storage 25 --orders-limit 10 --min-rent-minutes 120
+./spctl workflows create --tee 1,1 --tee-slot-count 15 --solution 7 --solution model-launcher-solution.json --data tunnel-client-data.json --data llm-model.json --storage 25 --orders-limit 10 --min-rent-minutes 120
 ```
 
 :::note
