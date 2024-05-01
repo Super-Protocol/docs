@@ -289,9 +289,6 @@ As a result, a new directory `<offerType>-execution-controller` will be created 
 
 <Highlight color="red">как вручную проверить что провайдер и офферы были созданы</Highlight>
 
-<Highlight color="red">нужен ли security deposit для офферов?</Highlight>
-
-
 ---
 
 **Expected step result:**
@@ -305,6 +302,7 @@ As a result, a new directory `<offerType>-execution-controller` will be created 
 
 Execution Controller allows processing and further distribution of requests from the blockchain.
 
+Every 5 minutes the script will check if there are any orders in the status New or Processing that contain your offer. If there are any, it will complete them using the resource file to access your uploaded data / solution.
 
 In this step you need to launch a Marketplace offer with your own data. You can do this entirely using Marketplace GUI or using SPCTL.
 
@@ -334,18 +332,8 @@ Then, run the [workflows create](/developers/cli_commands/workflows/create) comm
 
 <Highlight color="red">прописать номер оффера ExecController</Highlight>
 
-<Highlight color="red">дописать когда оффер будет готов</Highlight>
-
 
 ## **Step 6 - Marketplace GUI Moderation**
-
-
-
-
-
-
-
-
 
 
 Note: by default, your offer is set to Unmoderated mode in the Marketplace. Please contact SuperTeam to set your offer to Approved mode in the Marketplace.
@@ -354,30 +342,13 @@ Note: by default, your offer is set to Unmoderated mode in the Marketplace. Plea
 
 
 
-
-
-
 2. If any issue occurs while creating an offer or its slot, you can always check the error details in `error.log` file located in `tool` directory and take corresponding action.
 
 
-### Security deposit
-
-Before executing the next command, you should check the balance of action account.
-
-The operation of creating an offer costs 5 TEEs and it will be debited form action account. So, there should be enough TEEs (for a creation operation in SuperProtocol) and MATICs (for a write operation to blockchain). **Note:** you can receive tokens in the [Marketplace](/developers/marketplace/first-steps/#4-receiving-tokens).
 
 
-## **Step 6 - Marketplace GUI Moderation**
-In the terminal, you will observe an instruction how to run your Execution Controller. Please use the option of running via shell script.
 
-To be able to run your Execution Controller, you will need to:
-1. install [jq](https://jqlang.github.io/jq/download/);
-2. open the terminal and go to your `<offerType>-execution-controller` directory;
-3. run the script using the following command: `bash runner.sh`
 
-Every 5 minutes the script will check if there are any orders in the status New or Processing that contain your offer. If there are any, it will complete them using the resource file to access your uploaded data / solution.
-
-**Note:** by default, your offer is set to `Unmoderated` mode in the Marketplace. Please contact SuperTeam to set your offer to `Approved` mode in the Marketplace.
 
 ## **FAQ**
 ### How to update a provider
@@ -396,6 +367,10 @@ In case you need to update any information in the slot description, please use S
 
 
 
+### Security deposit
 
+Before executing the next command, you should check the balance of action account.
+
+The operation of creating an offer costs 5 TEEs and it will be debited form action account. So, there should be enough TEEs (for a creation operation in SuperProtocol) and MATICs (for a write operation to blockchain). **Note:** you can receive tokens in the [Marketplace](/developers/marketplace/first-steps/#4-receiving-tokens).
 
 Strictly speaking, you can use the same account for all three functions, but we recommend separating them. You'll be able to change the Action account and Token receiver account, but only one provider can be created under an authority account, and it cannot be changed.
