@@ -181,7 +181,9 @@ async function run() {
     '--ssl-certfile',
     certificatePath,
     '--model-dir',
-    '/sp/inputs/input-0002'
+    '/sp/inputs/input-0002',
+    '--model',
+    'llama-2-7b-chat.Q2_K.gguf'
   ];
 
   await new Promise((resolve, reject) => {
@@ -236,6 +238,8 @@ You can check it on a local address https://localhost:9090. Your browser will wa
 ```bash
 ./spctl solutions prepare --pack-solution model-launcher-solution.tar.gz --write-default-manifest --sgx-enclave-size 16G --env NODE_ENV=production --base-image-path $PWD/node20-python3.10-base-image-gsc-v1.6-gramine-v1.6.4-sp.tar.gz ./model-launcher-solution ./signing-key
 ```
+
+Наберитесь терпения, данная операция займет время...
 
 И загрузим полученный архив в StorJ:
 
@@ -301,7 +305,7 @@ tar -czf tunnel-client-data.tar.gz -C ./tunnel-client-data .
 ```
 
 :::note
-Время запусука сервера - около одного часа.
+Время запусука сервера - около от часа до двух.
 :::
 
 ### 5. DNS setup
