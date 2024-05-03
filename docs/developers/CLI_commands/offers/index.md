@@ -39,9 +39,6 @@ View Super Protocol offers using CLI commands. In most cases it is more convenie
 
 | **Command**                                                            | **Description**                                                    |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------|
-| [add-option](/developers/cli_commands/offers/options/add-option)       | Adds a new option to an existing offer.                       
-| [update-option](/developers/cli_commands/offers/options/update-option) | Updates a specific options.                            
-| [delete-option](/developers/cli_commands/offers/options/delete-option) | Deletes a specific slot.  
 | [get-option](/developers/cli_commands/offers/options/get-option)       | Displays information for a specific option.                        
 
 

@@ -24,6 +24,7 @@ These solution offers are instrumental in setting up [tunnels](/developers/funda
 | 11     | Tunnel Server                     | Tunnel server used for any tunnels deployment.                          |
 | 6      | Node.js Base Image                | Node.js base image, required for Node.js apps.                          |
 | 5      | Python Base Image                 | Python base image, required for Python apps.                            |
+| 7      | Python & Node.js Base Image       | Base image required for LLM solutions.                                  |
 
 ### Data
 

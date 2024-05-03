@@ -47,7 +47,7 @@ The file should contain the following sections:
 - `maxTimeMinutes` - 0 for no limits,
 - `minTimeMinutes` - 0 for no limits,
 - `price` - a value in weis
-- `priceType` - 1 for fixed price, 0 for price per hour. **Note:** in case of TEE slot, only price per hour is supported.
+- `priceType` - 1 for fixed price, 0 for price per hour.
 3. internet access configuration (only for value offers)
 -  `bandwidth` - a value in bits
 - `traffic` - a value in bits
@@ -81,22 +81,3 @@ JSON example for a value offer:
   }
 }
 ```
-JSON example for a TEE offer:
-```json title="tee-offer-slot.json"
-{
-  "info": {
-    "cpuCores": 1,
-    "gpuCores": 0,
-    "diskUsage": 14910627722,
-    "ram": 8454701250
-  },
-  "usage": {
-    "maxTimeMinutes": 0,
-    "minTimeMinutes": 10,
-    "price": "140000000000000000",
-    "priceType": "0"
-  }
-}
-```
-
-**Note for TEE offers:** for the most optimal use of the equipment, it is recommended to set slots that divide the overall configuration evenly.
