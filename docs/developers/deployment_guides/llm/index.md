@@ -107,7 +107,7 @@ tar -czf llm-model.tar.gz -C ./llm-model .
 
 ```bash
 ./spctl offers download-content 7
-docker load -i node20-python3.10-base-image-gsc-v1.6-gramine-v1.6.4-sp.tar.gz
+docker load -i node16-python3.10-base-image-gsc-v1.6-gramine-v1.6.4-sp.tar.gz
 ```
 
 Создадим отдельную папку: 
@@ -130,12 +130,11 @@ docker run -it --rm --platform linux/amd64 -v $PWD/model-launcher-solution:/sp/r
     -e USE_CUDA118=FALSE \
     -e LAUNCH_AFTER_INSTALL=FALSE \
     -e INSTALL_EXTENSIONS=FALSE \
-    gsc-node20-python3.10-base-with-tunnel-client:latest -c '
+    gsc-node16-python3.10-base:latest -c '
         apt update \
         && apt install -y curl git \
         && git config --global --add safe.directory /sp/run/text-generation-webui \
-        && ./text-generation-webui/start_linux.sh
-        && find ./text-generation-webui -xtype l -delete
+        && ./text-generation-webui/start_linux.shte
     '
 ```
 
@@ -216,7 +215,7 @@ curl -L https://raw.githubusercontent.com/Super-Protocol/solutions/main/Tunnel%2
 И проверим, что все настроено правильно:
 
 ```bash
-docker run -p 9090:9090 --platform linux/amd64 --rm -ti -v $PWD/model-launcher-solution:/sp/run -v $PWD/llm-model:/sp/inputs/input-0002 --entrypoint /usr/local/bin/node gsc-node20-python3.10-base-solution:latest tunnel-client-test-start.js ./server.js
+docker run -p 9090:9090 --platform linux/amd64 --rm -ti -v $PWD/model-launcher-solution:/sp/run -v $PWD/llm-model:/sp/inputs/input-0002 --entrypoint /usr/local/bin/node gsc-node16-python3.10-base:latest tunnel-client-test-start.js ./server.js
 ```
 
 :::note
@@ -236,7 +235,7 @@ You can check it on a local address https://localhost:9090. Your browser will wa
 Далее создадим солюшн:
 
 ```bash
-./spctl solutions prepare --pack-solution model-launcher-solution.tar.gz --write-default-manifest --sgx-enclave-size 16G --env NODE_ENV=production --base-image-path $PWD/node20-python3.10-base-image-gsc-v1.6-gramine-v1.6.4-sp.tar.gz ./model-launcher-solution ./signing-key
+./spctl solutions prepare --pack-solution model-launcher-solution.tar.gz --write-default-manifest --sgx-enclave-size 16G --env NODE_ENV=production --base-image-path $PWD/node16-python3.10-base-image-gsc-v1.6-gramine-v1.6.4-sp.tar.gz ./model-launcher-solution ./signing-key
 ```
 
 Наберитесь терпения, данная операция займет время...
