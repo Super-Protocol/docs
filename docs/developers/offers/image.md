@@ -25,7 +25,7 @@ The model provides output in a TAR.GZ archive. Inside the archive there is an ou
 
 LINKS
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=7).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/solutions?offer=offerId%3D8&tab=about).
 
 ## Compatibility
 
@@ -37,7 +37,7 @@ Archive size is 2.6 MB. Inside are 11 JPG files.
 
 You can download it [here](https://github.com/Super-Protocol/datasets/blob/main/Image%20Classification%20Datasets/image-classification-ds1.tar.gz?raw=true).
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=13).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/data?offer=offerId%3D18&tab=about).
 
 
 ### Image Classification Dataset #2
@@ -48,4 +48,4 @@ Archive size is 3.9 MB. Inside are 7 JPG files.
 
 You can download it [here](https://github.com/Super-Protocol/datasets/blob/main/Image%20Classification%20Datasets/image-classification-ds2.tar.gz?raw=true).
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=14).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/data?offer=offerId%3D19&tab=about).

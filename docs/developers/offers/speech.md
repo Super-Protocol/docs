@@ -25,7 +25,7 @@ Each folder contains a TXT file for each WAV file that was provided for input. E
 
 LINKS
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=8).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=21&offer=offerId%3D9&tab=about).
 
 
 ## Compatibility
@@ -38,7 +38,7 @@ Archive size is 2.8 MB. Inside are 10 WAV files.
 
 You can download it [here](https://github.com/Super-Protocol/datasets/blob/main/Speech%20Recognition%20Datasets/speech-recognition-ds1.tar.gz?raw=true).
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=15).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/data?offer=offerId%3D20&tab=about).
 
 
 ### Data: Speech Recognition Dataset #2
@@ -49,4 +49,4 @@ Archive size is 1.5 MB. Inside are 6 WAV files.
 
 You can download it [here](https://github.com/Super-Protocol/datasets/blob/main/Speech%20Recognition%20Datasets/speech-recognition-ds2.tar.gz?raw=true).
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=16).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/data?offer=offerId%3D21&tab=about).
