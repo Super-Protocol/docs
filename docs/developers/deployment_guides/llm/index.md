@@ -134,7 +134,7 @@ docker run -it --rm --platform linux/amd64 -v $PWD/model-launcher-solution:/sp/r
         apt update \
         && apt install -y curl git \
         && git config --global --add safe.directory /sp/run/text-generation-webui \
-        && ./text-generation-webui/start_linux.shte
+        && ./text-generation-webui/start_linux.sh
     '
 ```
 
