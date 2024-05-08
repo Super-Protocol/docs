@@ -36,7 +36,7 @@ Each archive is uploaded separately. So, if you are deploying a solution with tw
 
 * A `json` resource file, containing the information for TEE on how to access your uploaded solution. You will need this file for the  [workflows create](/developers/cli_commands/workflows/create#example-using-own-solution-and-data) command.
 
-## Example
+## Example: Storage offer
 
 In this example we will use the scenario of uploading to a storage offer.
 
@@ -60,6 +60,17 @@ Where:
 * `--output ./fileResource.json` - the path and name of the resource file.
 * `--metadata ./fileMetadata.json` - the path and name of the metadata file that will be added to a resource file during the uploading process.
 
+## Example: Storj
+
+If you'd prefer to use your own Storj account, then you need to set up the `config.json` of your SPCTL as [here](/developers/cli_guides/configuring#set-up-storj).
+
+And then run this command:
+
+```
+./spctl files upload fileData.tar.gz
+```
+
+Additional options as described above are applicable as well.
 
 ## Arguments
 

@@ -22,8 +22,11 @@ For the Solution and Data offers Marketplace GUI has a special filter that divid
 
 <Highlight color="red">больше про Inactive, как это работает</Highlight>
 
+<br/>
+<br/>
+<br/>
 
-![img.png](img.png)
+<img src={require('./../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
 These categories are exclusive (an offer can belong only to one category). Offers in status **Disabled** do not appear in Marketplace GUI at all (providers can use [offers disable](/developers/cli_commands/offers/offers/disable) or [offers enable](/developers/cli_commands/offers/offers/enable) commands to manage this). 
 

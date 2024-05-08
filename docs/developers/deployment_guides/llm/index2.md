@@ -1,6 +1,6 @@
 ---
-id: "llm"
-title: "LLM"
+id: "llm-vlad"
+title: "LLM by Vlad"
 slug: "/deployment_guides/llm"
 sidebar_position: 4
 ---

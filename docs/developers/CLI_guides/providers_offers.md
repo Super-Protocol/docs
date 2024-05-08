@@ -1,6 +1,6 @@
 ---
 id: "providers_offers"
-title: "Creating Providers and Offers"
+title: "Providers and Offers"
 slug: "/cli_guides/providers_offers"
 sidebar_position: 4
 ---
@@ -8,12 +8,12 @@ sidebar_position: 4
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Creating Providers and Offers
+# Creating and managing Providers and Offers
 
 ## **About**
 This guide will take you step by step through the process of creating your Data / Solution provider and deploying your own Data / Solution offer to Super Protocol.
 
-
+monetization / making money with offers
 
 <Highlight color="red">short synopsys how it works</Highlight>
 
@@ -126,11 +126,11 @@ In order to be run correctly inside an Intel SGX confidential enclave (TEE), a s
 
 Use SPCTL to run the [**solutions prepare**](/developers/cli_commands/solutions/prepare) command.
 
-As a result, a `tar.gz` archive will be generated.
+As a result, a `tar.gz` archive will be generated. 
 
 **For data offers**
 
-For data, you can simply place the data into an archive.There is no need to prepare it.
+For data, you can simply place the data into an archive. There is no need to prepare it.
 
 As a result, a `tar.gz` archive will be generated.
 
@@ -138,21 +138,24 @@ As a result, a `tar.gz` archive will be generated.
 
 ### Upload offer content
 
-Before the solution can be executed in TEE, it needs to be uploaded to a storage, from where the TEE will download it for execution.
+Before the solution can be executed in TEE, it needs to be uploaded to a storage, from where the TEE will download it for execution when ordered.
 
-Use SPCTL to run the [**files upload**](/developers/cli_commands/files/upload) command using the `tar.gz` archive above.
+Use SPCTL to run the [**files upload**](/developers/cli_commands/files/upload) command using the `tar.gz` archive above. Let's call it `offer-content.tar.gz`.
 
-**Note**: unless you have a paid StorJ account, it's best to create an order for storage offer. 
+```
+./spctl files upload offer-content.tar.gz --storage 25,30 --min-rent-minutes 43200
+```
 
-<Highlight color="red">куда лучше грузить, в свой StorJ? или создавать оффер - но на какое время?</Highlight>
+Where:
+* `--min-rent-minutes 43200` - the lease time is specified as 30 days, because we need the offer content to be available on demand. You can make the lease longer and you can also [replenish the balance](/developers/cli_commands/orders/replenish-deposit) at a later date.
 
 As a result, a resource file will be generated in the `json` format, containing the information for TEE on how to access your uploaded solution.
 
 ---
 
 **Expected step result:**
-* Solution or data has been prepared, archived and uploaded to storage;
-* A resource `.json` has been generated.
+* Solution or data has been prepared, archived and uploaded to long term storage;
+* A `resource.json` has been generated.
 
 ## **Step 3 - Configuring offer**
 
@@ -164,9 +167,9 @@ You will need to create two .json files.
 
 **First**, a .json with the general description and properties of the offer.
 
-Let's say that in this example our offer is a Solution, a Python script similar to the [Image Classification](/developers/offers/python-image).
+Let's say that in this example our offer is a Solution, a Python script similar to the [Image Classification](/developers/offers/python-image) offer.
 
-Copy and save this format in a .json file. You can name it anything you want, but for this tutorial let's call it `offer.json`.
+Copy and save the format below in a .json file. You can name it anything you want, but for this tutorial let's call it `offer.json`.
 
 ```json title="offer.json"
 {
@@ -199,13 +202,13 @@ Where you need to fill out the following fields:
 * `name` - the name of your offer;
 * `offerType` - type has to be either 2 for a Solution offer or 3 for Data offer;
 * `description` - the description of your offer. Description may contain HTML;
-* `restrictions` - each Solution must use a base image offer from the Marketplace. The offer # is specified here. For Solutions only.
+* `restrictions` - each Solution must use a base image offer from the Marketplace. The offer # is specified here - Python base image #5 in this example. For Solution offers only.
 
 As an example, this is what these fields look like in the Marketplace:
 
 <img src={require('./../images/cli_guides_providers_offers_1.png').default} width="auto" height="auto"/>
 
-<img src={require('./../images/cli_guides_providers_offers_5.png').default} width="auto" height="auto"/>
+<img src={require('./../images/cli_guides_providers_offers_2.png').default} width="auto" height="auto"/>
 
 And in SPCTL (on blockchain), using the [offers get](/developers/cli_commands/offers/offers/get) command:
 
@@ -213,20 +216,16 @@ And in SPCTL (on blockchain), using the [offers get](/developers/cli_commands/of
 ./spctl offers get value 8
 ```
 
-<img src={require('./../images/cli_guides_providers_offers_2.png').default} width="auto" height="auto"/>
+<img src={require('./../images/cli_guides_providers_offers_3.png').default} width="auto" height="auto"/>
 
 <br/>
 <br/>
 
 You can learn more about the other fields in the [offers update](/developers/cli_commands/offers/offers/update) command.
 
-It is important that the description clearly states: 
-* What does your solution do? 
-* What is the expected result? Provide an example;
-* What kind of data does it use? Provide examples of format and structure; 
-* Provide links to outside sources (such as GitHub).
+It is important that your offer is well-documented, operational, and not containing anything illegal.
 
-Remember that users will be running your solution or data *blindly* - thus you need to be as precise as possible in describing the input/output requirements. Confidentiality does not allow for downloading of offers unless you specifically permit it in the offer settings. 
+Please refer to the [**Moderation Guidelines**](/developers/moderation/) for more details.
 
 ---
 
@@ -270,21 +269,21 @@ You can learn more about these fields in the [offers add-slot](/developers/cli_c
 
 As an example, this is what they look like in the Marketplace: 
 
-<img src={require('./../images/cli_guides_providers_offers_3.png').default} width="auto" height="auto"/>
+<img src={require('./../images/cli_guides_providers_offers_4.png').default} width="auto" height="auto"/>
 
 And in SPCTL (on blockchain), using the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command:
 
 ```
-./spctl offers get-slot value --offer 11 --slot 11
+./spctl offers get-slot value --offer 8 --slot 4
 ```
 
-<img src={require('./../images/cli_guides_providers_offers_4.png').default} width="auto" height="auto"/>
+<img src={require('./../images/cli_guides_providers_offers_5.png').default} width="300" height="auto"/>
 
 ---
 
 **Expected step result:**
-* `solution-offer.json` with offer description is prepared;
-* `solution-offer-slots.json` with offer requirements (slots and options) is prepared. There may be more than one.
+* `offer.json` with offer description is prepared;
+* `offer-slots.json` with offer requirements (slots and options) is prepared. There may be more than one.
 
 ## **Step 4 - Creating provider and offer**
 
@@ -292,9 +291,10 @@ Let's recap. At this point you need to have the following:
 
 * A folder with Provider Tools. In that folder:
   * `config.json` with the credentials for authority, action and tokenReceiver accounts;
-  * `offer-resource.json` which was generated after uploading solution to storage;
   * `offer.json` containing the description of the offer;
   * `offer-slots.json` containing the required slots for the offer;
+* A folder with SPCTL. In that folder:
+  * `resource.json` which was generated after uploading solution to storage;
 
 ### Create provider and offer
 
@@ -303,12 +303,12 @@ Now let's put all of this together.
 Run this command:
 
 ```
-./provider-tools register <offerType> --result ./offer-resource.json
+./provider-tools register <offerType> --result ./resource.json
 ```
 
 Where:
 * `<offerType>` is either `data` or `solution`;
-* `offer-resource.json` is the resource file that was generated by uploading to storage.
+* `resource.json` is the resource file that was generated by uploading to storage.
 
 The tool will take you through the following steps:
 
@@ -324,8 +324,6 @@ The tool will take you through the following steps:
 
 As a result, a new directory `<offerType>-execution-controller` will be created in your Provider Tools directory. It will contain all the necessary artifacts to run your Execution Controller (see Step 5).
 
-<Highlight color="red">как вручную проверить что провайдер и офферы были созданы</Highlight>
-
 ---
 
 **Expected step result:**
@@ -335,16 +333,18 @@ As a result, a new directory `<offerType>-execution-controller` will be created 
 
 ## **Step 5 - Running Execution Controller**
 
-<Highlight color="red">что такое EC, как он работает, зачем он нужен</Highlight>
+### About EC
 
-Execution Controller allows processing and further distribution of requests from the blockchain.
+A critical part of running and maintaining an active offer is the hosting of an Execution Controller. EC will check every 5 minutes for new orders containing your offer. If there are, the Execution Controller will use your offer private key to decrypt and allow it to process securely. Because Super Protocol is decentralized, the responsibility for hosting this component belongs to the provider.
 
-Every 5 minutes the script will check if there are any orders in the status New or Processing that contain your offer. If there are any, it will complete them using the resource file to access your uploaded data / solution.
-
-<Highlight color="red">добавить описание про active / inactive</Highlight>
+**Important:** if an order does not receive a response from your Execution Controller, then the entire order will not process and hang indefinitely, which is not a user-friendly experience for customers. We understand that some offers will be created and then abandoned. This is why Marketplace will place your offer into an **Inactive** category if it does not respond within 15 minutes. This is done to warn users that this offer is likely no longer supported by its provider. Providers can reactivate their offers by contacting our support in Discord (see [Moderation Guidelines](/developers/moderation/)).
 
 
-In this step you need to launch a Marketplace offer with your own data. You can do this entirely using Marketplace GUI or using SPCTL.
+### Creating an EC order
+
+For your convenience, we have made a special offer with an Execution Controller script that can run as a regular order in the TEE.
+
+In this step you will need to create an Execution Controller order with with your own data. You can do this entirely using Marketplace GUI (by adding your own data) or using SPCTL.
 
 Go to the `<offerType>-execution-controller` directory and put these two files into a single tar.gz archive (let's name it `offer-ec.tar.gz`):
 * `.env` file;
@@ -365,31 +365,65 @@ Once you have the archive with the two files, upload it to a storage using the [
 Then, run the [workflows create](/developers/cli_commands/workflows/create) command with the `resource.json` resulted from the upload:
 
 ```
-./spctl workflows create --solution 6,2 --solution XXX --data ./resource.json --storage 23,30
+./spctl workflows create --solution 5,1 --solution XXX --data ./resource.json --storage 23,30 --deposit 2 --min-rent-minutes 43200
 ```
+
+<Highlight color="red">какой тут указать размер депозита и время аренды</Highlight>
+
+Where:
+* `--deposit 2` - deposit is specified as 2 TEE.
+* `--min-rent-minutes 43200` - the lease time is specified as 30 days.
 
 <Highlight color="red">прописать номер оффера ExecController</Highlight>
 
+And then you are done! Check that your offer is on blockchain using the [offers get](/developers/cli_commands/offers/offers/get) command:
 
+```
+./spctl offers get value <offer id>
+```
+
+Where:
+* `offer id` can be found in the `config.json` located in the Provider Tools root directory.
+
+<img src={require('./../images/cli_guides_providers_offers_6.png').default} width="500" height="auto"/>
 
 ## **Step 6 - Marketplace GUI Moderation**
 
+By default, your offer is assigned to **Unmoderated** category in the Marketplace GUI. This category is for new offers that have not yet been reviewed by the Super team. Generally, we don't recommend our users to run offers from this category because we don't know if they even work. That said, Super Protocol is a permissionless cloud, so anyone can create and run what they like. 
 
-Note: by default, your offer is set to Unmoderated mode in the Marketplace. Please contact SuperTeam to set your offer to Approved mode in the Marketplace.
+If you would like to have your offer reviewed by the Super team and potentially moved to the **Approved** category in the Marketplace GUI, then please follow the process in [**Moderation Guidelines**](/developers/moderation/).
 
+## **Step 7 - Keeping your offer active**
 
+Please see below the things that you as a provider need to keep track of.
 
+### Lease on uploaded offer content
 
+:::warning Make sure your storage order doesn't end!
+If you choose to create an [order for storage](/developers/cli_commands/files/upload), then please keep track of the balance and replenish it in time.
+:::
 
-2. If any issue occurs while creating an offer or its slot, you can always check the error details in `error.log` file located in `tool` directory and take corresponding action.
+If the storage expires, then the TEE won't be able to access your [uploaded offer content](/developers/cli_guides/providers_offers#upload-offer-content) and the order will fail. Use the [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) command to add tokens to the balance of the storage order.
 
+If an order fails due to a provider fault, then the offer will be made Inactive in the Marketplace GUI.
 
+### Lease on Execution Controller
 
+:::warning Make sure your Execution Controller order doesn't end!
+Please keep track of the balance and replenish it in time.
+:::
 
+Your [Execution Controller order](/developers/cli_guides/providers_offers#creating-an-ec-order) has to remain active all the time and be ready to authorize your offer. Use the [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) command to add tokens to the balance of the Execution Controller order.
 
+### Disabling your offer
 
+Please be a responsible provider. If you no longer wish to provide products and services on Super Protocol, then please [disable your offer](/developers/cli_commands/offers/offers/disable).
 
 ## **FAQ**
+
+### Support
+
+
 
 ### Updating a provider
 
@@ -401,18 +435,26 @@ In case you need to create and run a new offer in addition to an existing one, y
 
 As a result, `<offerType>-execution-controller` directory will be updated in accordance with changes. To check that, please go to `<offerType>-execution-controller` and open `.env` file. A new offer will be added to the block `PROVIDER_OFFERS_JSON`.
 
-### How to update an offer
+### Updating an offer
 
-In case you need to update any information in the offer description, please use SPCTL  offers update command.
+In case you need to update any information in the offer description, please use SPCTL offers update command.
 
-### How to update a slot
+### Updating a slot
 
 In case you need to update any information in the slot description, please use SPCTL  offers update-slot command.
 
-### How to enable downloading of offer
+### Enabling content-download of offer
 
 <Highlight color="red">как активировать возможность скачивая оффера?</Highlight>
 
-### 
+### Enabling / Disabling offers
 
+
+
+### Orders marked Inactive
+
+
+### How to troubleshoot
+
+If any issue occurs while creating an offer or its slot, you can always check the error details in error.log file located in tool directory and take corresponding action.
 
