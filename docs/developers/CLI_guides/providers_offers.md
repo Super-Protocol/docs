@@ -227,6 +227,8 @@ It is important that your offer is well-documented, operational, and not contain
 
 Please refer to the [**Moderation Guidelines**](/developers/moderation/) for more details.
 
+<Highlight color="red">сколько символов может быть описание, какие ограничение? так как оно на блокчейне, это стоит дорого</Highlight>
+
 ---
 
 ### Offer requirements
@@ -316,11 +318,12 @@ The tool will take you through the following steps:
 
 **Second**, the Provider Tools will check whether a provider with the Authority account specified in the `config.json` is already registered on blockchain. 
 * If provider exists, the prompt will go to the next step; 
-* If provider doesn't exist, then you will be prompted to create one. You will need to specify its name and description. The system will also prompt you to save the provider info into a .json in case you need to update the provider description later.
+* If provider doesn't exist, then you will be prompted to create one. You will need to specify its name and description. The system will also prompt you to save the provider info into a .json (let's call it `provider.json`) in case you need to [update](/developers/cli_guides/providers_offers#updating-provider-info) the provider description later.
 
 **Third**, the Provider Tools will ask if this provider already has solution or data offers created on blockchain.
-* If you want to create a new offer, select `No`. The tool will ask for the two .json files from Step 3. 
-* If you already created an offer and want to update it, select `Yes`. The tool will prompt you to specify the offer ID and the offer private key. It can be found in the `config.json`, in `providerDataOffers` section, in `argPrivatekey` field.
+* You want to create a new offer, so select `No`. The tool will ask for the `offer.json` and `offer-slots.json` from Step 3. 
+
+<Highlight color="red">я убрал второй вариант ответа Yes, мне кажется что это очень редкий случай и для новичков лишь осложнит выбор</Highlight>
 
 As a result, a new directory `<offerType>-execution-controller` will be created in your Provider Tools directory. It will contain all the necessary artifacts to run your Execution Controller (see Step 5).
 
@@ -346,8 +349,9 @@ For your convenience, we have made a special offer with an Execution Controller 
 
 In this step you will need to create an Execution Controller order with with your own data. You can do this entirely using Marketplace GUI (by adding your own data) or using SPCTL.
 
-Go to the `<offerType>-execution-controller` directory and put these two files into a single tar.gz archive (let's name it `offer-ec.tar.gz`):
-* `.env` file;
+Go to the Provider Tools directory and put these two files into a single tar.gz archive (let's name it `offer-ec.tar.gz`):
+
+* `.env` file, located in the `<offerType>-execution-controller` directory;
 * `config.json` file, located in `tool` directory. 
 
 Use this command to create the archive:
@@ -355,6 +359,8 @@ Use this command to create the archive:
 ```
 tar -czf offer-ec.tar.gz .env -C tool/ config.json
 ```
+
+<Highlight color="red">кажется эта команда не совсем корректна, папка с .env и папка с config.json обе находятся в корневой папке provider tools - нужно указать путь к env тоже</Highlight>
 
 Once you have the archive with the two files, upload it to a storage using the [files upload](/developers/cli_commands/files/upload) command:
 
@@ -403,7 +409,7 @@ Please see below the things that you as a provider need to keep track of.
 If you choose to create an [order for storage](/developers/cli_commands/files/upload), then please keep track of the balance and replenish it in time.
 :::
 
-If the storage expires, then the TEE won't be able to access your [uploaded offer content](/developers/cli_guides/providers_offers#upload-offer-content) and the order will fail. Use the [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) command to add tokens to the balance of the storage order.
+If the storage expires, then the TEE won't be able to access your [uploaded offer content](/developers/cli_guides/providers_offers#upload-offer-content) and the customer order will fail. Use the [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) command to add tokens to the balance of the storage order.
 
 If an order fails due to a provider fault, then the offer will be made Inactive in the Marketplace GUI.
 
@@ -423,25 +429,34 @@ Please be a responsible provider. If you no longer wish to provide products and 
 
 ### Support
 
+Please feel free to ask us questions in [Discord](https://discord.com/invite/superprotocol).
+
+<Highlight color="red">тут нужны более четкие инструкции, в каком канале спрашивать</Highlight>
 
 
-### Updating a provider
+### Updating provider info
 
-In case you need to update any information in the provider’s description, please use SPCTL providers update command.
+To update provider information (name, description, associated Action and Token Receiver accounts), you have to use the [**providers update**](/developers/cli_commands/providers/update) SPCTL command. For this you will need to make changes to the `provider.json` that you saved while creating the provider in [Step 4](/developers/cli_guides/providers_offers#create-provider-and-offer).
+
 
 ### Creating another offer
 
-In case you need to create and run a new offer in addition to an existing one, you will need to go through the process of configuring an offer at Step 2 once again.
+In case you need to create and run a new offer in addition to an existing one, you will need to go through most of the process once again.
 
-As a result, `<offerType>-execution-controller` directory will be updated in accordance with changes. To check that, please go to `<offerType>-execution-controller` and open `.env` file. A new offer will be added to the block `PROVIDER_OFFERS_JSON`.
+1. Rename or otherwise save the `<offerType>-execution-controller` folder. The newly created offer will overwrite the `.env` file and you might still need it to manage the Execution Controllers for your previous offers.
+2. Go through Steps 2-6. And as always, keep an eye on Step 7.
+
+If for some reason you will need to re-create an EC order, use the appropriate `.env` for that offer. As a rule, each of your offers should have its own EC order. Technically, a single EC order can support multiple offers, but it's better to separate to avoid conflicts.
 
 ### Updating an offer
 
-In case you need to update any information in the offer description, please use SPCTL offers update command.
+**For offer description:**
 
-### Updating a slot
+Modify the `offer.json` that you prepared in [Step 3](/developers/cli_guides/providers_offers#offer-description) and then run the [**offers update**](/developers/cli_commands/offers/offers/update) SPCTL command.
 
-In case you need to update any information in the slot description, please use SPCTL  offers update-slot command.
+**For offer requirements (slots):**
+
+Modify the `offer-slots.json` that you prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [**offers update-slot**](/developers/cli_commands/offers/slots/update-slot) SPCTL command.
 
 ### Enabling content-download of offer
 
