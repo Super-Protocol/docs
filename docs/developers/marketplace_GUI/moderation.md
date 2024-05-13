@@ -75,5 +75,8 @@ It is quite simple.
    * Optional but welcome: Introduce yourself and your work. We are building a Super community and every voice matters;
 3. Answer any questions if requested by our moderators. They will look at your offer and make a test order;
 4. If all is fine, your offer will be moved to the **Approved** category.
+5. If your offer becomes **Inactive**, then you can contact our support in the same topic.
 
 This Discord topic may also be used by other users for provide feedback about your offer. 
+
+The Super Marketplace is a great way to share and monetize your work in a secure and confidential manner. Everyone is welcome! 

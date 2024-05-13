@@ -225,7 +225,7 @@ You can learn more about the other fields in the [offers update](/developers/cli
 
 It is important that your offer is well-documented, operational, and not containing anything illegal.
 
-Please refer to the [**Moderation Guidelines**](/developers/moderation/) for more details.
+Please refer to the [**Moderation Guidelines**](/developers/marketplace/moderation/) for more details.
 
 <Highlight color="red">сколько символов может быть описание, какие ограничение? так как оно на блокчейне, это стоит дорого</Highlight>
 
@@ -340,7 +340,7 @@ As a result, a new directory `<offerType>-execution-controller` will be created 
 
 A critical part of running and maintaining an active offer is the hosting of an Execution Controller. EC will check every 5 minutes for new orders containing your offer. If there are, the Execution Controller will use your offer private key to decrypt and allow it to process securely. Because Super Protocol is decentralized, the responsibility for hosting this component belongs to the provider.
 
-**Important:** if an order does not receive a response from your Execution Controller, then the entire order will not process and hang indefinitely, which is not a user-friendly experience for customers. We understand that some offers will be created and then abandoned. This is why Marketplace will place your offer into an **Inactive** category if it does not respond within 15 minutes. This is done to warn users that this offer is likely no longer supported by its provider. Providers can reactivate their offers by contacting our support in Discord (see [Moderation Guidelines](/developers/moderation/)).
+**Important:** if an order does not receive a response from your Execution Controller, then the entire order will not process and hang indefinitely, which is not a user-friendly experience for customers. We understand that some offers will be created and then abandoned. This is why Marketplace will place your offer into an **Inactive** category if it does not respond within 15 minutes. This is done to warn users that this offer is likely no longer supported by its provider. Providers can reactivate their offers by contacting our support in Discord (see [Moderation Guidelines](/developers/marketplace/moderation/)).
 
 
 ### Creating an EC order
@@ -397,7 +397,7 @@ Where:
 
 By default, your offer is assigned to **Unmoderated** category in the Marketplace GUI. This category is for new offers that have not yet been reviewed by the Super team. Generally, we don't recommend our users to run offers from this category because we don't know if they even work. That said, Super Protocol is a permissionless cloud, so anyone can create and run what they like. 
 
-If you would like to have your offer reviewed by the Super team and potentially moved to the **Approved** category in the Marketplace GUI, then please follow the process in [**Moderation Guidelines**](/developers/moderation/).
+If you would like to have your offer reviewed by the Super team and moved to the **Approved** category in the Marketplace GUI, then please follow the process outlined in the [**Moderation Guidelines**](/developers/marketplace/moderation/).
 
 ## **Step 7 - Keeping your offer active**
 
