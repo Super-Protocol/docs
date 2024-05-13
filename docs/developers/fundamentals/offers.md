@@ -15,25 +15,16 @@ sidebar_position: 2
 
 There are four basic building blocks that may be involved in creation of an order:
 
-- *Solutions* – base images, tunnel clients, tunnel server, oracles, Python models - basically, any application.
+- **Solutions** – base images, tunnel clients, tunnel server, oracles, Python models - basically, any application.
+- **Data** – data is anything that is used by a solution: webpages, configs, datasets, databases, etc.
+- **TEE Compute** – confidential computing resources where the solutions and data are executed inside the Trusted Execution Environment (TEE).
+- **Storage** – decentralized storages, such as Storj, where the content, computation results and service files are stored.
 
-- *Data* – data is anything that is used by a solution: webpages, configs, datasets, databases, etc.
+An **offer** is a solution, data, compute or storage that is made available on the Marketplace for all users. Offers cost money (TEE tokens) to use, prices set by their respective *providers*. 
 
-- *Compute* – confidential computing resources where the solutions and data are executed inside the Trusted Execution Environment (TEE).
-
-- *Storage* – decentralized storages, such as Storj, where the content, computation results and service files are stored.
-
-An *offer* is a solution, data, compute or storage that is made available on the Marketplace for all users. Offers cost money (TEE tokens) to use, prices set by their respective *providers*. 
-
-Specifically solutions and data may be deployed without them being an offer: you can deploy your own application or a dataset privately without making them available on the Marketplace.
+Specifically solutions and data may be deployed without them being an offer: you can [deploy your own solution](/developers/cli_guides/quick_guide) or a dataset privately without making them available on the Marketplace.
 
 You can see some of the offers [here](/developers/offers).
-
-:::info Testnet limitation
-
-At the moment offers and providers can be created only by the Super team. Functionality to register as providers and create offers will be enabled for all users in the upcoming releases.
-
-:::
 
 ## Types of Offers
 
@@ -48,7 +39,7 @@ A value offer exists in two parts:
 Value offers are created and managed by the solution and data providers.
 
 
-### Compute
+### TEE Compute
 
 A compute offer exists in two parts:
 1. As a record on blockchain. It contains the parameters that govern how an offer may be ordered.
@@ -69,21 +60,13 @@ Storage offers are created and managed by the storage providers.
 ### Metadata
 
 * *Type* - offer type: solution, data, compute, storage.
-
 * *Id* - unique identification number of the offer (numbering is regardless of type)
-
 * *Description* - text description of offer.
-
 * *Provider* - name of the provider who created the offer.
-
 * *Date Published* - date when offer was created.
-
 * *Date Updated* - date when changes were made to the offer.
-
 * *MRENCLAVE* - value that represents the hash of the code and data inside the TEE.
-
 * *MRSIGNER* - value is used to uniquely identify the signing entity of the TEE.
-
 
 ### Rules
 
@@ -95,13 +78,17 @@ Rules are set by the providers and govern what offers can and cannot do.
 
 Applicable only to solutions, data and storage offers.
 
-*Requirements* specify a compute configuration that an offer needs to run properly. Requirements are set by the provider. There may be multiple requrements to choose from and each can be priced differently depending on expected usage. Learn more about requirements [here](/developers/fundamentals/slots).
+*Requirements* specify a compute configuration that an offer needs to run properly. Requirements are set by the provider. There may be multiple requrements to choose from and each can be priced differently depending on expected usage. 
+
+Learn more about requirements [here](/developers/fundamentals/slots).
 
 ### Configurations
 
 Applicable only to compute offers.
 
-*Slots* and *Options* are sets of parameters of a compute configuration. They are set by the compute provider. A single compute offer may have multiple configurations which are priced differently. A customer must choose a configuration that is at least equal to the sum of all requirements - if a solution requires 2 CPU cores, then the configuration must have available at least that much. Learn more about slots and options [here](/developers/fundamentals/slots).
+*Slots* and *Options* are sets of parameters of a compute configuration. They are set by the compute provider. A single compute offer may have multiple configurations which are priced differently. A customer must choose a configuration that is at least equal to the sum of all requirements - if a solution requires 2 CPU cores, then the configuration must have available at least that much. 
+
+Learn more about slots and options [here](/developers/fundamentals/slots).
 
 
 

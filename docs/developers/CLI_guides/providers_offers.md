@@ -371,7 +371,7 @@ Once you have the archive with the two files, upload it to a storage using the [
 Then, run the [workflows create](/developers/cli_commands/workflows/create) command with the `resource.json` resulted from the upload:
 
 ```
-./spctl workflows create --solution 5,1 --solution XXX --data ./resource.json --storage 23,30 --deposit 2 --min-rent-minutes 43200
+./spctl workflows create --solution 5,1 --solution XXX --data ./resource.json --storage 25,30 --deposit 2 --min-rent-minutes 43200
 ```
 
 <Highlight color="red">какой тут указать размер депозита и время аренды</Highlight>
@@ -438,17 +438,7 @@ Please feel free to ask us questions in [Discord](https://discord.com/invite/sup
 
 To update provider information (name, description, associated Action and Token Receiver accounts), you have to use the [**providers update**](/developers/cli_commands/providers/update) SPCTL command. For this you will need to make changes to the `provider.json` that you saved while creating the provider in [Step 4](/developers/cli_guides/providers_offers#create-provider-and-offer).
 
-
-### Creating another offer
-
-In case you need to create and run a new offer in addition to an existing one, you will need to go through most of the process once again.
-
-1. Rename or otherwise save the `<offerType>-execution-controller` folder. The newly created offer will overwrite the `.env` file and you might still need it to manage the Execution Controllers for your previous offers.
-2. Go through Steps 2-6. And as always, keep an eye on Step 7.
-
-If for some reason you will need to re-create an EC order, use the appropriate `.env` for that offer. As a rule, each of your offers should have its own EC order. Technically, a single EC order can support multiple offers, but it's better to separate to avoid conflicts.
-
-### Updating an offer
+### Updating offer info
 
 **For offer description:**
 
@@ -458,15 +448,25 @@ Modify the `offer.json` that you prepared in [Step 3](/developers/cli_guides/pro
 
 Modify the `offer-slots.json` that you prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [**offers update-slot**](/developers/cli_commands/offers/slots/update-slot) SPCTL command.
 
+### Creating additional offers
+
+To create a new offer in addition to an existing one on the same provider, you will need to go through most of the process once again.
+
+1. Rename or otherwise save the `<offerType>-execution-controller` folder. The newly created offer will overwrite the `.env` file and you might still need it to manage the Execution Controllers for your previous offers.
+2. Go through Steps 2-6. And as always, keep an eye on Step 7.
+
+If for some reason you will need to re-create an EC order, use the appropriate `.env` for that offer. As a rule, each of your offers should have its own EC order. Technically, a single EC order can support multiple offers, but it's better to separate to avoid conflicts.
+
 ### Enabling content-download of offer
 
 <Highlight color="red">как активировать возможность скачивая оффера?</Highlight>
 
 ### Enabling / Disabling offers
 
-
+If you no longer want to provide products and services on Super Protocol, please disable your offer using the [offers disable](/developers/cli_commands/offers/offers/disable) SPCTL command. This will not delete your offer, just make it unavailable to order. Similarly, if you want to reinstate it back to active status, use the [offers enable](/developers/cli_commands/offers/offers/enable) command.
 
 ### Orders marked Inactive
+
 
 
 ### How to troubleshoot
