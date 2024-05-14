@@ -55,7 +55,7 @@ The file should contain the following sections:
 - `maxTimeMinutes` - 0 for no limits,
 - `minTimeMinutes` - 0 for no limits,
 - `price` - a value in weis
-- `priceType` - 1 for fixed price, 0 for price per hour.
+- `priceType` - 1 for fixed price, 0 for price per hour ([learn more](/developers/fundamentals/orders#cost-and-pricing) about price types).
 3. internet access configuration (only for value offers)
 -  `bandwidth` - a value in bits
 - `traffic` - a value in bits

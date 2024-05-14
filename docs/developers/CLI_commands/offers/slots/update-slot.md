@@ -29,6 +29,8 @@ Update an existing value offer using the information in the `offer-slot.json`. Y
 ./spctl offers update-slot value --offer 10 --slot 1 --path ./offer-slot.json
 ```
 
+To learn which slot id's are contained in an offer you can use the [offers get](/developers/cli_commands/offers/offers/get) command and then [offers get-slot](/developers/cli_commands/offers/slots/get-slot) to get additional details on the slot.
+
 ## Arguments
 
 | **Name** | **Description**                 |

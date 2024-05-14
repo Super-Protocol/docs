@@ -48,6 +48,8 @@ Update an existing value offer using the new information in an `offer.json`. You
 
 ### Value offers
 
+**Important:** if you use this example, don't forget to remove the // comments, otherwise it might result in an error.
+
 JSON example:
 ```json title="offer.json"
 {
@@ -58,9 +60,10 @@ JSON example:
   "description": "Description of your offer goes here, it may include HTML",
   "restrictions": {
     "offers": [
-      "5", // must be executed together with the Python base image offer #5
+      "5" // must be executed together with the Python base image offer #5
     ],
     "types": [
+      "2"
     ]
   },
   "metadata": "",

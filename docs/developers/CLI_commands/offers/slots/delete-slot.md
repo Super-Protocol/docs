@@ -23,6 +23,8 @@ Example: delete an existing slot in an existing offer.
 ./spctl offers delete-slot value --offer 10 --slot 1
 ```
 
+To learn which slot id's are contained in an offer you can use the [offers get](/developers/cli_commands/offers/offers/get) command and then [offers get-slot](/developers/cli_commands/offers/slots/get-slot) to get additional details on the slot.
+
 ## Arguments
 
 | **Name** | **Description**                 |

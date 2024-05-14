@@ -21,6 +21,8 @@ For example, this line will get you slot information for [this](https://marketpl
 ./spctl offers get-slot tee --offer 1 --slot 1
 ```
 
+To learn which slot numbers are contained in an offer you can use the [offers get](/developers/cli_commands/offers/offers/get) command.
+
 ## Arguments
 
 |**Name**| **Description**                 |

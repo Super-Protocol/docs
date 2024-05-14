@@ -121,7 +121,7 @@ Then fill in the remaining parameters that are specific to your account.
 |accessToken| Your personal *Access Token* from the Testnet invitation email.                                                                                       ||
 |accountPrivateKey| Your *Private Key* of your provider's Action account.                                                                                                 |
 |authorityAccountPrivateKey| Your *Private Key* of your provider's Authority account.                                                                                              |
-|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. |
+|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. You can use the same key as in the User part of the config or generate a new one.|
 
 You can find the private keys to your provider Authority and Action accounts in the `config.json` located in the Provider Tools directory. 
 
