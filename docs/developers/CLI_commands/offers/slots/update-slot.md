@@ -5,7 +5,13 @@ slug: "/cli_commands/offers/slots/update-slot"
 sidebar_position: 2
 ---
 
-Update an existing slot in an existing offer.
+This command uses information in a .json file to make updates to the [slot requirements](/developers/fundamentals/slots#requirements) in a previously created offer.
+
+The initial offer requirements are created on Step 3 of the [Providers and Offers Guide](/developers/cli_guides/providers_offers#offer-requirements).
+
+You can use the .json from the guide and modify the requirements as necessary or take the template from below. In this example we will call this file `offer-slot.json`. The file format and the field descriptions are outlined in the [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command.
+
+**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
 
 ## Usage
 
@@ -15,10 +21,12 @@ Syntax:
 ./spctl offers update-slot <type> [OPTIONS]
 ```
 
-Example: update an existing slot in an existing offer using the information in `offerSlot.json` which is located in the same directory together with SPCTL.
+Example:
+
+Update an existing value offer using the information in the `offer-slot.json`. You can point to the file location using the `--path` option. In the example below the file is assumed to be located in the SPCTL directory.
 
 ```
-./spctl offers update-slot value --offer 10 --slot 1 --path ./offerSlot.json
+./spctl offers update-slot value --offer 10 --slot 1 --path ./offer-slot.json
 ```
 
 ## Arguments
@@ -33,8 +41,5 @@ Example: update an existing slot in an existing offer using the information in `
 |:--------------------|:-----------------|:-------------------------------|
 | `--offer`           |                  | Offer `id`                     |
 | `--slot`            |                  | Slot `id`                      |
-| `--path`            | `./slotInfo.json`| Path to the slot content file  |
+| `--path`            | `./offer-slot.json`| Path to the slot content file  |
 | `--config`          | `./config.json`  | Path to the configuration file |
-
-
-**Note**: сontent file requirements are the same as in the process of adding a slot. You can find details in [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command.

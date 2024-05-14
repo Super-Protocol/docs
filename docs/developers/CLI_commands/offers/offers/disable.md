@@ -7,6 +7,8 @@ sidebar_position: 7
 
 Disable an existing enabled offer.
 
+**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
+
 ## Usage
 
 Syntax:

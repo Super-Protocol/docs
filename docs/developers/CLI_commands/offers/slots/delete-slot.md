@@ -7,6 +7,8 @@ sidebar_position: 3
 
 Delete an existing slot in an existing offer.
 
+**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
+
 ## Usage
 
 Syntax:

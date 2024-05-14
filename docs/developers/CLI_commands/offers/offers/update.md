@@ -5,7 +5,13 @@ slug: "/cli_commands/offers/offers/update"
 sidebar_position: 6
 ---
 
-Update an existing offer.
+This command is used to make updates to a previously created offer.
+
+The .json file used to update an offer is created on Step 3 of the [Providers and Offers Guide](/developers/cli_guides/providers_offers#offer-description).
+
+You can use the .json from the guide and modify the requirements as necessary or take the template from below. In this example we will call this file `offer.json`.
+
+**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
 
 ## Usage
 
@@ -15,10 +21,12 @@ Syntax:
 ./spctl offers update <type> <id> [OPTIONS]
 ```
 
-Example: update an existing value offer using the information in `offerInfo.json` which is located in the same directory together with SPCTL.
+Example: 
+
+Update an existing value offer using the new information in an `offer.json`. You can point to the file location using the `--path` option. In the example below the file is assumed to be located in the SPCTL directory. 
 
 ```
-./spctl offers update value 10 --path ./offerInfo.json
+./spctl offers update value 10 --path ./offer.json
 ```
 
 ## Arguments
@@ -40,6 +48,44 @@ Example: update an existing value offer using the information in `offerInfo.json
 
 ### Value offers
 
+JSON example:
+```json title="offer.json"
+{
+  "name": "Name of your offer goes here",
+  "group": "0", // belongs to input group (Solution or Data offers)
+  "offerType": "2", // offer type is Solution
+  "cancelable": false,
+  "description": "Description of your offer goes here, it may include HTML",
+  "restrictions": {
+    "offers": [
+      "5", // must be executed together with the Python base image offer #5
+    ],
+    "types": [
+    ]
+  },
+  "metadata": "",
+  "input": "",
+  "output": "",
+  "allowedArgs": "",
+  "allowedAccounts": [],
+  "argsPublicKey": "",
+  "resultResource": "",
+  "linkage": "",
+  "hash": ""
+}
+```
+
+**Note:** the file can contain only those fields that need to be updated. For example, if you need to update `name` and `description` fields only, the file can look like this:
+
+```
+{
+  "name": "New Image Classification",
+  "description": "My New Image Classification solution"
+}
+```
+
+The fields in the .json are described below.
+
 | **Field**         | **Description**                                                                                                                                                                            | **Comments**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |:------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name`            | Offer name                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -60,41 +106,3 @@ Example: update an existing value offer using the information in `offerInfo.json
 
 **Note:** once `linkage` and `hash` are set, they can not be changed later.
 
-JSON example:
-```json title="value-offer.json"
-{
-  "name": "Image Classification",
-  "group": "0", // belongs to input group
-  "offerType": "2", // belongs to solution type
-  "cancelable": false,
-  "description": "My Image Classification solution",
-  "restrictions": {
-    "offers": [ 
-      "5", // should be executed together with solution offer 5
-      "16" // should be executed together with data offer 16
-    ],
-    "types": [
-      "2",
-      "3"
-    ]
-  },
-  "metadata": "",
-  "input": "",
-  "output": "",
-  "allowedArgs": "",
-  "allowedAccounts": [],
-  "argsPublicKey": "{}",
-  "resultResource": "",
-  "linkage": "",
-  "hash": ""
-}
-```
-
-**Note:** the file can contain only those fields that need to be updated. For example, if you need to update `name` and `description` fields only, the file can look like this:
-
-```
-{
-  "name": "New Image Classification",
-  "description": "My New Image Classification solution"
-}
-```

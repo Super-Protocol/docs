@@ -18,6 +18,13 @@ monetization / making money with offers
 <Highlight color="red">short synopsys how it works</Highlight>
 
 
+<Highlight color="red">может быть сделать табличку с используемыми файлами</Highlight>
+
+:::info Testnet limitations
+
+As of Testnet 5, you can only create Solution and Data offers. Ability to create Storage and TEE Compute offers will be available in future releases.
+
+:::
 
 ## **Prerequisites**
 
@@ -70,6 +77,20 @@ chmod +x ./provider-tools
 
 You probably already have SPCTL set up and configured  by now, but if you don't - please, [do it now](/developers/cli_guides/configuring). You will need SPCTL to prepare and upload your offers and run an Execution Controller script.
 
+## **Overview of files used**
+
+
+
+| **File** | **Default location**           | **Description**                     |
+|:--------------------|:----------------------|:------------------------------------|
+| `config.json`            | `/SPCTL | The main configuration file |
+| `--config`          | `./config.json`       | Path to the configuration file      |
+
+
+
+
+
+
 ## **Step 1 - Setting up accounts**
 
 ### Types of accounts
@@ -81,6 +102,9 @@ But to become a provider, you need to have three other accounts:
 1. **Authority account** your main provider account in Super Protocol, used to create and manage your provider; 
 2. **Action account** executes actions on behalf of an Authority account, used to create and manage offers; 
 3. **Token receiver account** used to receive the TEE rewards for providing offers on Super Protocol.
+
+<Highlight color="red">какие ключи где используются, SPCTL or PT</Highlight>
+
 
 ---
 
@@ -239,7 +263,7 @@ You can learn more about the slots and options [here](/developers/fundamentals/s
 
 In a few words: each offer, either solution or data, has system requirements for execution. This is where you specify these requirements. Each requirements slot can have its own price, either Fixed or Per Hour. Depending on these requirements, the customer will select a TEE compute offer configuration, which cannot be lower than your requirements. 
 
-Copy and save this format in a .json file. You can name it anything you want, but for this tutorial let's call it `offer-slots.json`.
+Copy and save this format in a .json file. You can name it anything you want, but for this tutorial let's call it `offer-slot.json`.
 
 Do this for each requirements slot that you want to add to the offer (you can have multiple).
 
@@ -265,9 +289,11 @@ Do this for each requirements slot that you want to add to the offer (you can ha
 }
 ```
 
-Modify these fields as necessary. This is your offer, and only you know what compute configuration your solution or data will need to run.
+<Highlight color="red">как мы узнаем номер слота который был создан? он нужен для update-slot</Highlight>
 
-You can learn more about these fields in the [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command.
+You can learn more about these fields in the [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command. Note that this command is used to create additional slots, but the initial slot must be created using Provider Tools.
+
+Modify these fields as necessary. This is your offer, and only you know what compute configuration your solution or data will need to run.
 
 As an example, this is what they look like in the Marketplace: 
 
@@ -285,7 +311,7 @@ And in SPCTL (on blockchain), using the [offers get-slot](/developers/cli_comman
 
 **Expected step result:**
 * `offer.json` with offer description is prepared;
-* `offer-slots.json` with offer requirements (slots and options) is prepared. There may be more than one.
+* `offer-slot.json` with offer requirements (slots and options) is prepared. There may be more than one.
 
 ## **Step 4 - Creating provider and offer**
 
@@ -294,7 +320,7 @@ Let's recap. At this point you need to have the following:
 * A folder with Provider Tools. In that folder:
   * `config.json` with the credentials for authority, action and tokenReceiver accounts;
   * `offer.json` containing the description of the offer;
-  * `offer-slots.json` containing the required slots for the offer;
+  * `offer-slot.json` containing the required slots for the offer;
 * A folder with SPCTL. In that folder:
   * `resource.json` which was generated after uploading solution to storage;
 
@@ -323,16 +349,19 @@ The tool will take you through the following steps:
 **Third**, the Provider Tools will ask if this provider already has solution or data offers created on blockchain.
 * You want to create a new offer, so select `No`. The tool will ask for the `offer.json` and `offer-slots.json` from Step 3. 
 
-<Highlight color="red">я убрал второй вариант ответа Yes, мне кажется что это очень редкий случай и для новичков лишь осложнит выбор</Highlight>
-
 As a result, a new directory `<offerType>-execution-controller` will be created in your Provider Tools directory. It will contain all the necessary artifacts to run your Execution Controller (see Step 5).
+
+### Update SPCTL
+
+This step is optional (for now). But to manage your provider and offers later on (update information, update and create slots, disable offers, etc) you will need to [update your SPCTL config.json](/developers/cli_guides/configuring#for-providers) with the provider information.
 
 ---
 
 **Expected step result:**
 * A provider is created on blockchain. The private keys to its three accounts are found in `config.json`. The provider address is its Authority account public key, you can also get it by importing the Authority private key into Metamask;
 * An offer is created on blockchain. Its ID and private key is found in the `config.json`;
-* All necessary files to run the Execution Controller are created in the `<offerType>-execution-controller` folder.
+* All necessary files to run the Execution Controller are created in the `<offerType>-execution-controller` folder;
+* Optional: SPCTL configuration is updated with the provider information.
 
 ## **Step 5 - Running Execution Controller**
 
@@ -447,6 +476,9 @@ Modify the `offer.json` that you prepared in [Step 3](/developers/cli_guides/pro
 **For offer requirements (slots):**
 
 Modify the `offer-slots.json` that you prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [**offers update-slot**](/developers/cli_commands/offers/slots/update-slot) SPCTL command.
+
+<Highlight color="red">добавить про добавление нового слота</Highlight>
+
 
 ### Creating additional offers
 
