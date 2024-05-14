@@ -69,6 +69,8 @@ chmod +x ./provider-tools
 
 **Note:** in order to avoid confusion it is best to choose a directory separate from your SPCTL directory, since Provider Tools will also download its own service copy of SPCTL.
 
+Please keep in mind that Provider Tools is still a work in progress and we will keep on optimizing the provider and offer creation and management processes.
+
 ### Set up SPCTL
 
 You probably already have SPCTL set up and configured  by now, but if you don't - please, [do it now](/developers/cli_guides/configuring). You will need SPCTL to prepare and upload your offers and run an Execution Controller script.
