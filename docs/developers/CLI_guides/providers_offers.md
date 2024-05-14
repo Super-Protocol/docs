@@ -77,20 +77,6 @@ chmod +x ./provider-tools
 
 You probably already have SPCTL set up and configured  by now, but if you don't - please, [do it now](/developers/cli_guides/configuring). You will need SPCTL to prepare and upload your offers and run an Execution Controller script.
 
-## **Overview of files used**
-
-
-
-| **File** | **Default location**           | **Description**                     |
-|:--------------------|:----------------------|:------------------------------------|
-| `config.json`            | `/SPCTL | The main configuration file |
-| `--config`          | `./config.json`       | Path to the configuration file      |
-
-
-
-
-
-
 ## **Step 1 - Setting up accounts**
 
 ### Types of accounts
@@ -456,13 +442,6 @@ Please be a responsible provider. If you no longer wish to provide products and 
 
 ## **FAQ**
 
-### Support
-
-Please feel free to ask us questions in [Discord](https://discord.com/invite/superprotocol).
-
-<Highlight color="red">тут нужны более четкие инструкции, в каком канале спрашивать</Highlight>
-
-
 ### Updating provider info
 
 To update provider information (name, description, associated Action and Token Receiver accounts), you have to use the [**providers update**](/developers/cli_commands/providers/update) SPCTL command. For this you will need to make changes to the `provider.json` that you saved while creating the provider in [Step 4](/developers/cli_guides/providers_offers#create-provider-and-offer).
@@ -501,7 +480,22 @@ If you no longer want to provide products and services on Super Protocol, please
 
 
 
+## **Overview of files used**
+
+
+
+| **File** | **Default location**           | **Description**                     |
+|:--------------------|:----------------------|:------------------------------------|
+| `config.json`            | `/SPCTL | The main configuration file |
+| `--config`          | `./config.json`       | Path to the configuration file      |
+
+
+
+
 ### How to troubleshoot
 
 If any issue occurs while creating an offer or its slot, you can always check the error details in error.log file located in tool directory and take corresponding action.
 
+### Support
+
+Please feel free to ask us any questions and provide feedback in [Discord](https://discord.com/invite/superprotocol) in the **#developers** channel.

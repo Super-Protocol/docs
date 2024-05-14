@@ -5,7 +5,10 @@ slug: "/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 
-Upload files to the remote storage, such as Storj. The main purpose of the upload is to store your files until you create the main TEE compute order using the [workflows create](/developers/cli_commands/workflows/create) command, whereas your solutions and data will be transferred to the TEE for execution.
+Upload files to a remote storage, such as Storj. This command serves two main purposes:
+
+* **For users:** temporarily storing your deployment files until you create the main TEE compute order using the [workflows create](/developers/cli_commands/workflows/create) command, whereas your solutions and data will be downloaded by the TEE for execution;
+* **For providers:** storing the contents of your Solution or Data offers so that they are available for order. In this case you should use a long-term lease period.
 
 There are two ways to upload:
 
@@ -25,10 +28,7 @@ Advanced users may choose to upload to their own storage for better control and 
 
 **Input:**
 
-For solutions, it's the files resulted from the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For data, it's a simple `tar.gz` archive.
-
-* A `tar.gz` archive - the solution content files properly packed for execution inside the TEE, or data archives;
-* A `json` metadata file  - hashes that might be needed to ensure the integrity of the archive. Optional.
+* A `tar.gz` archive - for Solutions, it's the `tar.gz` archive resulted from the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For Data, it's a simple `tar.gz` archive containing the data files.
 
 Each archive is uploaded separately. So, if you are deploying a solution with two datasets, you will need to run the upload command three times using different inputs.
 
@@ -45,7 +45,7 @@ In this example we will use the scenario of uploading to a storage offer.
 ```
 
 Where:
-* `fileData.tar.gz` - path to the archive with your solution or data.
+* `fileData.tar.gz` - path to the archive with your solution or data. 
 * `--storage 25,30` - slot ID #30 of storage offer ID #25 will be used to create a storage order. This option is not needed if uploading to your own storage (in which case credentials are taken from the SPCTL config).
 * `--min-rent-minutes 120` - the lease period of a storage, equal to 2 hours. Not needed if uploading to your own storage.
 
