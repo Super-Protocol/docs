@@ -22,13 +22,42 @@ There are two ways to create orders:
 1. Using CLI if you want to deploy your own solutions (follow [this guide](/developers/cli_guides/quick_guide)).
 2. Using [Marketplace GUI](/developers/marketplace) if you want to deploy data and solution offers from the Marketplace. 
 
-Orders are accessible openly on blockchain. While the contents inside the TEE are confidential, the general information about the order is available to anyone, just like any crypto wallet.
+Orders are accessible openly on blockchain. While the contents inside the TEE are confidential, the general information about the order is available to anyone, just like everything on blockchain.
 
 Contents of the orders are encrypted by a private key that known only to the customer. The results are kept by the Storage sub-order for as long as you keep paying for it.
 
+## Combinations
+
+Most orders consist of four building blocks:
+
+* **Solutions** - the application or model that you want to run, as well as its *Base Image* (which is also a solution);
+* **Data** - data required to run the solution;
+* **Storage** - where solution and data are stored before execution inside TEE and also where results are received;
+* **TEE Compute** - the confidential enclave (TEE) where solutions and data are executed together.
+
+*Solutions* and *Data* may be either **user-deployed** or **offers**. *User-deployed* means that you run in Super Protocol content that you have locally, while an *offer* is a product that is available for monetization on the Marketplace. 
+
+Meanwhile, *Base Images*, *Storages* and *TEE Computes* may only be offers. For the moment these offers are provided only by Super Protocol.
+
+Below are the most likely combinations when creating an order.
+
+|  | **Solution**        | **Data** | **Base Image**  | **Storage** | **TEE Compute**
+|:--|:------------|:------------|:------------|:------------|:------------|
+| 1 | User-deployed         | User-deployed  | Offer | Offer | Offer | 
+| 2 | Offer        | User-deployed  | Offer | Offer | Offer | 
+| 3 | User-deployed        | Offer  | Offer | Offer | Offer | 
+| 4| Offer | Offer        | Offer  | Offer | Offer | 
+
+Where:
+1. You use your own solution and data;
+2. You use a solution offer from the Marketplace, but your own data;
+3. You use your own solution, but data from the Marketplace;
+4. Both your solution and its data come from the Marketplace.
+
+
 ## Usage scenarios
 
-Depending on the deployed solution, there are two typical usage scenarios:
+Depending on the solution, there are two typical usage scenarios:
 
 A **Job** is an order that is tasked with a very specific computation to perform that produces a specific result. For instance, such a job could be using an ML/AI Python model to run an inference on a batch of data (such as our sample Python models). A result is produced and then the job is done. 
 

@@ -5,7 +5,10 @@ slug: "/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 
-Upload files to the remote storage, such as Storj. The main purpose of the upload is to store your files until you create the main TEE compute order using the [workflows create](/developers/cli_commands/workflows/create) command, whereas your solutions and data will be transferred to the TEE for execution.
+Upload files to a remote storage, such as Storj. This command serves two main purposes:
+
+* **For users:** temporarily storing your deployment files until you create the main TEE compute order using the [workflows create](/developers/cli_commands/workflows/create) command, whereas your solutions and data will be downloaded by the TEE for execution;
+* **For providers:** storing the contents of your Solution or Data offers so that they are available for order. In this case you should use a long-term lease period.
 
 There are two ways to upload:
 
@@ -25,10 +28,7 @@ Advanced users may choose to upload to their own storage for better control and 
 
 **Input:**
 
-For solutions, it's the files resulted from the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For data, it's a simple `tar.gz` archive.
-
-* A `tar.gz` archive - the solution content files properly packed for execution inside the TEE, or data archives;
-* A `json` metadata file  - hashes that might be needed to ensure the integrity of the archive. Optional.
+* A `tar.gz` archive - for Solutions, it's the `tar.gz` archive resulted from the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For Data, it's a simple `tar.gz` archive containing the data files.
 
 Each archive is uploaded separately. So, if you are deploying a solution with two datasets, you will need to run the upload command three times using different inputs.
 
@@ -36,23 +36,23 @@ Each archive is uploaded separately. So, if you are deploying a solution with tw
 
 * A `json` resource file, containing the information for TEE on how to access your uploaded solution. You will need this file for the  [workflows create](/developers/cli_commands/workflows/create#example-using-own-solution-and-data) command.
 
-## Example
+## Example: Storage offer
 
 In this example we will use the scenario of uploading to a storage offer.
 
 ```
-./spctl files upload fileData.tar.gz --storage 25,30 --min-rent-minutes 120
+./spctl files upload fileData.tar.gz --storage 25,33 --min-rent-minutes 120
 ```
 
 Where:
-* `fileData.tar.gz` - path to the archive with your solution or data.
-* `--storage 25,30` - slot ID #30 of storage offer ID #25 will be used to create a storage order. This option is not needed if uploading to your own storage (in which case credentials are taken from the SPCTL config).
+* `fileData.tar.gz` - path to the archive with your solution or data. 
+* `--storage 25,33` - slot ID #33 of storage offer ID #25 will be used to create a storage order (maximum disk capacity for this slot is 0.977 GB). This option is not needed if uploading to your own storage (in which case credentials are taken from the SPCTL config).
 * `--min-rent-minutes 120` - the lease period of a storage, equal to 2 hours. Not needed if uploading to your own storage.
 
 In some cases you might need additional options, if you want to use metadata or change the file names.
 
 ```
-./spctl files upload fileData.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 23,27 --min-rent-minutes 120
+./spctl files upload fileData.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 25,33 --min-rent-minutes 120
 ```
 
 Where:
@@ -60,6 +60,17 @@ Where:
 * `--output ./fileResource.json` - the path and name of the resource file.
 * `--metadata ./fileMetadata.json` - the path and name of the metadata file that will be added to a resource file during the uploading process.
 
+## Example: Storj
+
+If you'd prefer to use your own Storj account, then you need to set up the `config.json` of your SPCTL as [here](/developers/cli_guides/configuring#set-up-storj).
+
+And then run this command:
+
+```
+./spctl files upload fileData.tar.gz
+```
+
+Additional options as described above are applicable as well.
 
 ## Arguments
 

@@ -5,7 +5,13 @@ slug: "/cli_commands/offers/slots/add-slot"
 sidebar_position: 1
 ---
 
-Add a new slot to an existing offer.
+This command uses information in a .json file to create additional [slot requirements](/developers/fundamentals/slots#requirements) in a previously created offer.
+
+The initial offer requirements are created on Step 3 of the [Providers and Offers Guide](/developers/cli_guides/providers_offers#offer-requirements).
+
+You can use the .json from the guide and modify the requirements as necessary or take the template from below. In this example we will call this file `offer-new-slot.json`. 
+
+**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
 
 ## Usage
 
@@ -15,10 +21,12 @@ Syntax:
 ./spctl offers add-slot <type> [OPTIONS]
 ```
 
-Example: add a new slot to an existing offer using the information in `offerSlot.json` which is located in the same directory together with SPCTL.
+Example: 
+
+Add a new slot using the information in the `offer-new-slot.json`. You can point to the file location using the `--path` option. In the example below the file is assumed to be located in the SPCTL directory.
 
 ```
-./spctl offers add-slot value --offer 10 --path ./offerSlot.json
+./spctl offers add-slot value --offer 10 --path ./offer-new-slot.json
 ```
 
 ## Arguments
@@ -32,7 +40,7 @@ Example: add a new slot to an existing offer using the information in `offerSlot
 | **Name, shorthand** | **Default**        | **Description**                |
 |:--------------------|:-------------------|:-------------------------------|
 | `--offer`           |                    | Offer `id`                     |
-| `--path`            | `./offerSlot.json` | Path to the slot content file  |
+| `--path`            | `./offer-new-slot.json` | Path to the slot content file  |
 | `--config`          | `./config.json`    | Path to the configuration file |
 
 ## Content file requirements
@@ -47,7 +55,7 @@ The file should contain the following sections:
 - `maxTimeMinutes` - 0 for no limits,
 - `minTimeMinutes` - 0 for no limits,
 - `price` - a value in weis
-- `priceType` - 1 for fixed price, 0 for price per hour.
+- `priceType` - 1 for fixed price, 0 for price per hour ([learn more](/developers/fundamentals/orders#cost-and-pricing) about price types).
 3. internet access configuration (only for value offers)
 -  `bandwidth` - a value in bits
 - `traffic` - a value in bits
@@ -60,7 +68,7 @@ Please note that there are few data modifications used in the Marketplace:
 4. `traffic` value will be converted to Gbit in accordance with the formula `initial value / (1000 ^ 3)`
 
 JSON example for a value offer:
-```json title="value-offer-slot.json"
+```json title="value-new-slot.json"
 {
   "info": {
     "cpuCores": 3,

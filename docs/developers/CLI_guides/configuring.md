@@ -81,6 +81,12 @@ Then fill in the remaining parameters that are specific to your account:
 You are done! Now you can use SPCTL.
 
 ### For Providers
+
+<Highlight color="red">переписать этот раздел, что файл создается PT</Highlight>
+
+
+This section is for providers only. As prerequisite you will need have to completed steps in the [Providers and Offers Guide](/developers/cli_guides/providers_offers). This information will be used to manage your provider and offers.
+
 Copy and paste into a new file or [download a template](./assets/config.json). Parameters shared by all users are pre-configured.
 
 ```json title="config.json"
@@ -111,16 +117,29 @@ Copy and paste into a new file or [download a template](./assets/config.json). P
 }
 ```
 
-Then fill in the remaining parameters that are specific to your account:
+Then fill in the remaining parameters that are specific to your account.
 
 |**Parameter**| **Description**                                                                                                                                       |
 |:-----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
 |accessToken| Your personal *Access Token* from the Testnet invitation email.                                                                                       ||
-|accountPrivateKey| Your *Private Key* of your provider's action account.                                                                                                 |
-|authorityAccountPrivateKey| Your *Private Key* of your provider's authority account.                                                                                              |
-|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. |
+|accountPrivateKey| Your *Private Key* of your provider's Action account.                                                                                                 |
+|authorityAccountPrivateKey| Your *Private Key* of your provider's Authority account.                                                                                              |
+|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. You can use the same key as in the User part of the config or generate a new one.|
 
-You are done! Now you can use SPCTL.
+You can find the private keys to your provider Authority and Action accounts in the `config.json` located in the Provider Tools directory. 
+
+It looks like this:
+
+```
+    },
+    "account": {
+        "authority": "0x50612a8bf52cb263825e58c72361ea48904efn7af7e2b549ea9c2ed02059c668d",
+        "action": "0x0512ad96f1900d3ecf0987m81c74df455ebb49kjce5bc1fd35c0b410c7dc6f05",
+        "tokenReceiver": "0x167d93786ghbf058965a5a582a1d52ca1e620d19b7f1e47330f2b64d9fcb6a38"
+    },
+```
+
+Now you can use SPCTL commands that are related to the management of your provider and offers.
 
 ## Create a test order
 

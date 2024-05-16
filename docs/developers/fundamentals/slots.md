@@ -15,7 +15,7 @@ This system is designed to provide most flexibility in determining the parameter
 
 *Requirements* specify how much computing power and internet access is needed by solution and data offers to run properly. Requirements refer to a set of parameters that are determined by solution and data providers.
 
-Requirements is also where the providers set the price for using their products. Price can be either for a one time payment, called *Fixed Price*, or - charged per hour of usage, called *Price Per Hour*. 
+Requirements is also where the providers set the price for using their products. Price can be either for a one time payment, called *Fixed Price*, or - charged per hour of usage, called *Price Per Hour* ([learn more](/developers/fundamentals/orders#cost-and-pricing) about price types). 
 
 A single offer can have multiple sets of requirements. For instance, a Python script will compute faster on 4 CPU cores than on 2 cores. But because it would be computed faster, the price may reflect that. Or - providers may make their offer available as either fixed price or per hour, and leave it up for the customer to see which one makes most economic sense for their usage scenario. 
 
@@ -60,23 +60,14 @@ For CLI you can just leave the slots and options fields blank and the auto-selec
 The base parameters are the same for requirements and configurations. All parameters can be entered as fractions.
 
 * *vCores* - CPU cores available for computations.
-
 * *RAM* - RAM available for computations.
-
-* *Disk* - SSD available for computations. 
-
+* *Disk* - SSD available for computations.
 * *Bandwidth* - Bandwidth available for download/upload of data to the TEE.
-
 * *Traffic* - Traffic available for download/upload (this value decreases with use).
-
 * *Ext.Port* - external port (for internet access). Yes / No.
-
 * *Min. Time* - minimum lease time allowed.
-
 * *Max.Time* - maximum lease time allowed.
-
 * *Price Per Hour* - cost to the user for one hour of lease.
-
 * *Price Fixed* - one time payment to lease for the duration of the order.
 
 

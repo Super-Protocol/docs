@@ -5,19 +5,29 @@ slug: "/marketplace/"
 sidebar_position: 3
 ---
 
-## About
+## Overview
 
-The purpose of Marketplace GUI is to present a user-friendly web interface to the [Marketplace](/developers/fundamentals) as well as an interactive learning experience for onboarding new users. We see it as a companion tool to CLI, but not yet a full alternative, as the GUI capabilities are currently limited. 
+The purpose of Marketplace GUI is to present a user-friendly web interface to the [Marketplace](/developers/fundamentals) as well as an interactive learning experience for onboarding new users. We see it as a companion tool to SPCTL, but not yet a full alternative, as the GUI capabilities are currently limited. 
 
-Go to Marketplace GUI: [marketplace.superprotocol.com](https://marketplace.superprotocol.com/)
+Go to Marketplace GUI: [**marketplace.superprotocol.com**](https://marketplace.superprotocol.com/)
 
 Read the [First Steps](/developers/marketplace/first-steps/) and [Marketplace Walkthrough](/developers/marketplace/walkthrough/) guides to get you started.
 
-## Available now
+## Contents
 
-The things you can do right now with the Marketplace GUI and their CLI counterparts:
+| **Guide**                                   | **Description**                                                               |
+|:-----------------------------------------------|:------------------------------------------------------------------------------|
+| [First Steps](/developers/marketplace/first-steps/)                        | Setting up Metamask and Marketplace GUI with Super testnet accounts                                     |
+| [Marketplace Walkthrough](developers/marketplace/walkthrough/)              | A sample step-by-step guide to create an order in the Marketplace GUI                    |
+| [Check Confidentiality](/developers/marketplace/confidentiality)                    | Quote verification to check that domain is secure and is deployed inside TEE              |
+| [Moderation](/developers/marketplace/moderation/)                             | For providers who want their offers to appear in the Approved category                 |
 
-| **Function**                                   | **CLI Command**                                                               |
+
+## Available in Marketplace GUI
+
+The things you can do right now with the Marketplace GUI and their SPCTL counterparts:
+
+| **Function**                                   | **SPCTL Command**                                                               |
 |:-----------------------------------------------|:------------------------------------------------------------------------------|
 | View details of offers available on blockchain | [offers](/developers/cli_commands/offers)                                     |
 | Receive test TEE and MATIC tokens              | [tokens request](/developers/cli_commands/tokens/request)                     |
@@ -29,16 +39,20 @@ The things you can do right now with the Marketplace GUI and their CLI counterpa
 | Replenish order deposits                       | [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) |
 | Cancel orders                                  | [orders cancel](/developers/cli_commands/orders/cancel)                       |
 | Receive order results                          | [orders download-result](/developers/cli_commands/orders/download-result)     |
-| Check confidentiality                          | GUI only for now                                                              |
+| Check confidentiality                          | [quotes validate](/developers/cli_commands/quotes/validate)                                                              |
 
-## Coming soon to GUI
+## Available in SPCTL only
 
-These functions are currently CLI only because they are not simple commands, but rather whole guides with multiple steps and configurations.
+A list of most important functions that are available only through [SPCTL](/developers/cli_commands).
 
-* Creating orders with your own solutions;
-* Connecting your own storage (current default is the Super Protocol account);
-* Deploying your own tunnels (current default is the pre-configured provisioner offer that can easily deploy Super Chat and static webpages, but uses Super Protocol credentials);
-
+| **Function**                                   | **SPCTL Command**                                                               |
+|:-----------------------------------------------|:------------------------------------------------------------------------------|
+| Prepare your solutions for execution in TEE | [solutions prepare](/developers/cli_commands/solutions/prepare)                                     |
+| Upload your files to storage              | [files upload](/developers/cli_commands/files/upload)                     |
+| Create orders with your own solutions              | [workflows create](/developers/cli_commands/workflows/create)                       |
+| Creating providers and offers                     | [Providers and Offers Guide](/developers/cli_guides/providers_offers)              |
+| Updating your offers             |  [offers update](/developers/cli_commands/offers/offers/update) and [offers update-slot](/developers/cli_commands/offers/slots/update-slot)                   |
+| Updating your provider                     | [providers update](/developers/cli_commands/providers/update)                 |
 
 
 
