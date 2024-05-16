@@ -69,7 +69,7 @@ chmod +x ./provider-tools
 
 **Note:** in order to avoid confusion it is best to choose a directory separate from your SPCTL directory, since Provider Tools will also download its own service copy of SPCTL.
 
-Please keep in mind that Provider Tools is still a work in progress and we will keep on optimizing the provider and offer creation and management processes.
+Please keep in mind that Provider Tools is still a work in progress and we will keep on optimizing the provider and offer creation and management processes. In next releases we will adapt it for Marketplace GUI.
 
 ### Set up SPCTL
 
@@ -148,10 +148,11 @@ Before the solution can be executed in TEE, it needs to be uploaded to a storage
 Use SPCTL to run the [**files upload**](/developers/cli_commands/files/upload) command using the `tar.gz` archive above. Let's call it `offer-content.tar.gz`.
 
 ```
-./spctl files upload offer-content.tar.gz --storage 25,30 --min-rent-minutes 43200
+./spctl files upload offer-content.tar.gz --storage 25,33 --min-rent-minutes 43200
 ```
 
 Where:
+* `--storage 25,33` - slot 33 of storage offer 25. Maximum disk capacity for this slot is 0.977 GB.
 * `--min-rent-minutes 43200` - the lease time is specified as 30 days, because we need the offer content to be available on demand. You can make the lease longer and you can also [replenish the balance](/developers/cli_commands/orders/replenish-deposit) at a later date.
 
 As a result, a resource file will be generated in the `json` format, containing the information for TEE on how to access your uploaded solution. Copy this file to the Provider Tools directory (you will need it in Step 4).
@@ -477,9 +478,7 @@ Offers may be flagged as **Inactive** in Marketplace GUI in two cases:
 
 ### How to troubleshoot
 
-If any issue occurs while creating an offer or its slot, you can always check the error details in the `error.log` file located in `tool` directory and take action or contact our support.
-
-<Highlight color="red">Зуля, какая из двух Tool папок?</Highlight>
+If any issue occurs while creating an offer or its slot, you can always check the error details in the `error.log` file located in `tool` directory in Provider Tools directory and take action or contact our support.
 
 ### Support
 

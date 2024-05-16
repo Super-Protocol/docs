@@ -41,18 +41,18 @@ Each archive is uploaded separately. So, if you are deploying a solution with tw
 In this example we will use the scenario of uploading to a storage offer.
 
 ```
-./spctl files upload fileData.tar.gz --storage 25,30 --min-rent-minutes 120
+./spctl files upload fileData.tar.gz --storage 25,33 --min-rent-minutes 120
 ```
 
 Where:
 * `fileData.tar.gz` - path to the archive with your solution or data. 
-* `--storage 25,30` - slot ID #30 of storage offer ID #25 will be used to create a storage order. This option is not needed if uploading to your own storage (in which case credentials are taken from the SPCTL config).
+* `--storage 25,33` - slot ID #33 of storage offer ID #25 will be used to create a storage order (maximum disk capacity for this slot is 0.977 GB). This option is not needed if uploading to your own storage (in which case credentials are taken from the SPCTL config).
 * `--min-rent-minutes 120` - the lease period of a storage, equal to 2 hours. Not needed if uploading to your own storage.
 
 In some cases you might need additional options, if you want to use metadata or change the file names.
 
 ```
-./spctl files upload fileData.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 23,27 --min-rent-minutes 120
+./spctl files upload fileData.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 25,33 --min-rent-minutes 120
 ```
 
 Where:
