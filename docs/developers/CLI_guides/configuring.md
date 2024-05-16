@@ -82,6 +82,9 @@ You are done! Now you can use SPCTL.
 
 ### For Providers
 
+<Highlight color="red">переписать этот раздел, что файл создается PT</Highlight>
+
+
 This section is for providers only. As prerequisite you will need have to completed steps in the [Providers and Offers Guide](/developers/cli_guides/providers_offers). This information will be used to manage your provider and offers.
 
 Copy and paste into a new file or [download a template](./assets/config.json). Parameters shared by all users are pre-configured.

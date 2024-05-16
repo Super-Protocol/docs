@@ -119,6 +119,9 @@ Select `Yes`.
 * Required security deposit of 5 TEE is added to the Action account automatically (for testnet purposes).
 * 5 MATICs are added to the Action account automatically (for testnet purposes).
 
+<Highlight color="red">токены приходят позже, ТЕЕ будет 200</Highlight>
+
+
 ## **Step 2 - Preparing content**
 
 Steps 2 and 5 will require you to prepare and upload your solution or data, and then create an order. This process is also outlined in the [Quick Deployment Guide](/developers/cli_guides/quick_guide#prepare-data).
@@ -142,6 +145,8 @@ As a result, a `tar.gz` archive will be generated.
 ---
 
 ### Upload offer content
+
+<Highlight color="red">это делается под юзер аккаунтом</Highlight>
 
 Before the solution can be executed in TEE, it needs to be uploaded to a storage, from where the TEE will download it for execution when ordered.
 
@@ -306,6 +311,9 @@ Let's recap. At this point you need to have the following in the Provider Tools 
 * `offer-slot.json` containing the required slots for the offer;
 * `resource.json` which was generated in the SPCTL directory after uploading solution to storage and copied to Provider Tools directory.
 
+<Highlight color="red">поправить названия конфигов</Highlight>
+
+
 ### Create provider and offer
 
 Now let's put all of this together. 
@@ -337,6 +345,9 @@ As a result, a new directory `<offerType>-execution-controller` will be created 
 
 This step is optional (for now). But to manage your provider and offers later on (update information, update and create slots, disable offers, etc) you will need to [update your SPCTL config.json](/developers/cli_guides/configuring#for-providers) with the provider information.
 
+<Highlight color="red">скопировать spctl-provider-config Или указать путь</Highlight>
+
+
 ---
 
 **Expected step result:**
@@ -344,6 +355,7 @@ This step is optional (for now). But to manage your provider and offers later on
 * An offer is created on blockchain. Its ID and private key is found in the `config.json`;
 * All necessary files to run the Execution Controller are created in the `<offerType>-execution-controller` folder;
 * Optional: SPCTL configuration is updated with the provider information.
+
 
 ## **Step 5 - Running Execution Controller**
 
@@ -357,6 +369,9 @@ A critical part of running and maintaining an active offer is the hosting of an 
 
 
 ### Creating an EC order
+
+<Highlight color="red">этот шаг переписать целиком</Highlight>
+
 
 For your convenience, we have made a special offer with an Execution Controller script that can run as a regular order in the TEE.
 
@@ -378,7 +393,7 @@ tar -czf offer-ec.tar.gz .env -C tool/ config.json
 Once you have the `offer-ec.tar.gz` archive with the two files, move it to the SPCTL directory and upload it to a storage using the [files upload](/developers/cli_commands/files/upload) command:
 
 ```
-./spctl files upload offer-ec.tar.gz --storage 25,30 --min-rent-minutes 10080
+./spctl files upload offer-ec.tar.gz --storage 25,33 --min-rent-minutes 10080
 ```
 
 Then, run the [workflows create](/developers/cli_commands/workflows/create) command with the `resource.json` resulted from the upload:
