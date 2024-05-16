@@ -17,14 +17,15 @@ These are the offers that will be most useful for developers when deploying your
 
 These solution offers are instrumental in setting up [tunnels](/developers/fundamentals/tunnels) or other solutions based on Node.js or Python.
 
-| **Id** | **Name**                          | **Description**                                                         |
-|:-------|:----------------------------------|:------------------------------------------------------------------------|
-| 14     | Tunnel Client: Dynamic Content    | Tunnel client used to deploy Node.js-based apps.                        |
-| 13     | Tunnel Client: Static Web Content | Tunnel client used to deploy simple static websites (HTML, JavaScript). |
-| 11     | Tunnel Server                     | Tunnel server used for any tunnels deployment.                          |
-| 6      | Node.js Base Image                | Node.js base image, required for Node.js apps.                          |
-| 5      | Python Base Image                 | Python base image, required for Python apps.                            |
-| 7      | Python & Node.js Base Image       | Base image required for LLM solutions.                                  |
+| **Id** | **Name**                          | **Description**                                                                |
+|:-------|:----------------------------------|:-------------------------------------------------------------------------------|
+| 26     | Provider Provisioner              | Application used to process orders linked to a certain Data or Solution offer. |
+| 14     | Tunnel Client: Dynamic Content    | Tunnel client used to deploy Node.js-based apps.                               |
+| 13     | Tunnel Client: Static Web Content | Tunnel client used to deploy simple static websites (HTML, JavaScript).        |
+| 11     | Tunnel Server                     | Tunnel server used for any tunnels deployment.                                 |
+| 6      | Node.js Base Image                | Node.js base image, required for Node.js apps.                                 |
+| 5      | Python Base Image                 | Python base image, required for Python apps.                                   |
+| 7      | Python & Node.js Base Image       | Base image required for LLM solutions.                                         |
 
 ### Data
 
