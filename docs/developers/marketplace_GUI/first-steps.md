@@ -5,7 +5,7 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-
+This guide is for setting up the accounts and Metamask for Marketplace GUI. For configuring SPCTL [go here](/developers/cli_guides/configuring/).
 
 ## 1. Setting up Metamask
 
