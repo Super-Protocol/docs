@@ -5,7 +5,7 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-
+This guide is for setting up the accounts and Metamask for Marketplace GUI. For configuring the Super Protocol CLI tool called SPCTL, [go here](/developers/cli_guides/configuring/).
 
 ## 1. Setting up Metamask
 
@@ -14,7 +14,7 @@ Metamask login is not required to browse the Marketplace offers, but if you want
 
 :::info Step 1. Install Metamask.
 
-Download and install the Metamask browser extension from its [official website](https://metamask.io/). Create a new wallet or import your existing one during the setup process. Skip this step if you have Metamask already installed. If you need to import, you may go to Step 4 first.
+Download and install the Metamask browser extension from its [official website](https://metamask.io/). Create a new wallet or import your existing one during the setup process. Skip this step if you have Metamask already installed.
 
 :::
 
@@ -68,7 +68,7 @@ Set the following parameters and press `Save`.
 
 :::info Step 4. Import account.
 
-Open on `My Accounts`, click on `Add account or hardware wallet`, and on `Import Account`. Select enter the Private Key that you received from the Super Protocol team. Then click on the `Import` button.
+Click on your account name at the top of the Metamask window to open the list of your accounts. Click `Add account or hardware wallet` and select `Import Account`. Enter the Private Key you received from Super Protocol and click `Import`.
 
 :::
 
@@ -145,15 +145,15 @@ The token looks something like this:
 
 > eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
 
-If your token doesn’t work, please contact us in [Discord](https://discord.com/invite/superprotocol).
+If your token doesn’t work, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. Also, check that you don’t accidentally copy your Access Token with spaces or line break characters. In any case, don’t hesitate to contact Super Protocol community managers on [Discord](https://discord.com/invite/superprotocol) if you face any issues.
 
-## 3. Connecting Wallet
+## 2. Connecting Wallet
 
 At this point we assume that you have done all the steps in the previous section and correctly configured Metamask.
 
 :::info Step 7. Connect Wallet.
 
-To connect wallet, click on the `Connect Wallet` button in the top right corner. Click on `Metamask`. 
+To connect wallet, click on the `Connect Wallet` button in the top right corner. Click on `Metamask`.
 
 :::
 
