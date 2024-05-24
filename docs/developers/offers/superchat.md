@@ -92,4 +92,4 @@ Just the highlights:
 
 ## Support
 
-If something doesn't work or look the way it should - we want to know about it! Please contact us through any of the social networks: [Discord](https://discord.com/invite/superprotocol), [Twitter](https://twitter.com/super__protocol) or [Telegram](https://t.me/superprotocol). 
+If you face issues or have questions, contact any Community Manager on the Super Protocol [Discord server](https://discord.com/invite/superprotocol).
