@@ -126,7 +126,71 @@ We have generated these ERC-20 accounts for use during Tesnet only. Please do no
 
 :::
 
-## 2. Accessing Marketplace
+
+## 2. Connecting Wallet
+
+:::info Step 6. Connect Wallet.
+
+To connect your wallet, click on the `Connect Wallet` button at the top right corner. In the pop-up window, click on `Metamask`. Then open your Metamask, select your Testnet account, click `Next`, and finally click `Connect`.
+
+:::
+
+<br/>
+
+<img src={require('./../images/metamask_11.png').default} width="300" height="auto" border="1"/>
+
+<br/>
+<br/>
+
+<img src={require('./../images/metamask_12.png').default} width="300" height="auto" border="1"/>
+
+<br/>
+<br/>
+
+<img src={require('./../images/metamask_12-1.png').default} width="300" height="auto" border="1"/>
+
+<br/>
+<br/>
+
+<img src={require('./../images/metamask_12-2.png').default} width="300" height="auto" border="1"/>
+
+<br/>
+<br/>
+
+If everything is done correctly, you will see your account number as well as your token balance.
+
+<img src={require('./../images/metamask_13.png').default} width="auto" height="auto" border="1"/>
+
+<br/>
+<br/>
+
+
+## 3. Receiving Tokens
+
+There are two types of tokens that are used in Super Protocol and you will need both of them:
+
+1. MATIC token is used to pay for transactions on Polygon blockchain.
+2. TEE token is used to pay for offers and receive payments in Super Protocol.
+
+:::info Step 7. Get test tokens.
+
+To get tokens, use the corresponding buttons in the top menu. Get both `TEE` and `MATIC` tokens.
+
+:::
+
+<br/>
+
+<img src={require('./../images/metamask_16.png').default} width="450" height="auto" border="1"/>
+
+<br/>
+<br/>
+
+Please note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you cannot request additional tokens until you spend some of them. Please refer to testnet [limitations](/testnet/limitations).
+
+**Important!** Do not send MATIC tokens to other accounts. Violators will be banned from using Super Protocol testnet.
+
+
+## 99. Accessing Marketplace
 
 :::info Step 6. Enter Access Token.
 
@@ -145,36 +209,9 @@ The token looks something like this:
 
 > eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
 
-If your token doesn’t work, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. Also, check that you don’t accidentally copy your Access Token with spaces or line break characters. In any case, don’t hesitate to contact Super Protocol community managers on [Discord](https://discord.com/invite/superprotocol) if you face any issues.
+If your token doesn’t work, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. Also, check that you don’t accidentally copy your Access Token with line break characters or spaces. Don’t hesitate to contact Super Protocol community managers on [Discord](https://discord.com/invite/superprotocol) if you face any issues.
 
-## 2. Connecting Wallet
-
-At this point we assume that you have done all the steps in the previous section and correctly configured Metamask.
-
-:::info Step 7. Connect Wallet.
-
-To connect wallet, click on the `Connect Wallet` button in the top right corner. Click on `Metamask`. 
-
-:::
-
-<br/>
-
-<img src={require('./../images/metamask_11.png').default} width="300" height="auto" border="1"/>
-
-<br/>
-<br/>
-
-<img src={require('./../images/metamask_12.png').default} width="300" height="auto" border="1"/>
-
-<br/>
-<br/>
-
-If everything is done correctly, you will see your account number as well as your token balance.
-
-<img src={require('./../images/metamask_13.png').default} width="auto" height="auto" border="1"/>
-
-<br/>
-<br/>
+<! -- more old stuff-->
 
 If you see the error below, it means that you are trying to connect with the wrong Metamask account.
 
@@ -190,28 +227,5 @@ In that case, open Metamask and change the account.
 <br/>
 <br/>
 
-Then again click on the `Connect Wallet` button in the Marketplace and select the account that you configured for Testnet.
 
-## 4. Receiving Tokens
-
-There are two types of tokens that are used in Super Protocol and you will need both of them:
-
-1. MATIC token is used to pay for transactions on Polygon blockchain.
-2. TEE token is used to pay for offers and receive payments in Super Protocol.
-
-:::info Step 8. Get test tokens.
-
-To get tokens, use the corresponding buttons in the top menu. Get both `TEE` and `MATIC` tokens.
-
-:::
-
-<br/>
-
-<img src={require('./../images/metamask_16.png').default} width="450" height="auto" border="1"/>
-
-<br/>
-<br/>
-
-Please note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you cannot request additional tokens until you spend some of them. Please refer to testnet [limitations](/testnet/limitations).
-
-**Important!** Do not send MATIC tokens to other accounts. Violators will be banned from using Super Protocol testnet.
+Then click again on the `Connect Wallet` button in the Marketplace and select the account that you configured for Testnet.
