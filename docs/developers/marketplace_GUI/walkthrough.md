@@ -200,8 +200,6 @@ A very important function is *Replenish Deposit*. Predictably, the order keeps w
 
 <img src={require('./../images/marketplace_15.png').default}/>
 
-<img src={require('./../images/marketplace_16.png').default}/>
-
 
 <br/>
 <br/>
