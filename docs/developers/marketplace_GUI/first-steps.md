@@ -17,17 +17,21 @@ Download and install the Metamask browser extension from its [official website](
 
 ### Step 2. Add a new network
 
-Open the menu by clicking the three vertical dots at the Metamask window's top-right corner. Go to **Settings** and then select **Networks**. There, press the **Add network** button and then click **Add a network manually** at the bottom of the page.
+Open the menu by clicking the three vertical dots at the Metamask window's top-right corner. Go to **Settings** and then select **Networks**.
 
 <img src={require('./../images/metamask_1.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
+There, press the **Add network** button.
+
 <img src={require('./../images/metamask_2.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
+
+And then click **Add a network manually** at the bottom of the page.
 
 <img src={require('./../images/metamask_3.png').default} width="700" height="auto" border="1"/>
 
