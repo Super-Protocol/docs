@@ -116,7 +116,7 @@ You can rename this account into _Super Protocol Testnet_ or anything you like t
 
 :::caution Do not use this account outside of Testnet!
 
-We have generated these ERC-20 accounts for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team has the private key to your Testnet Account, so it is not truly yours.
+We have generated these ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
 
 :::
 
