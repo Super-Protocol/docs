@@ -5,26 +5,23 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-This guide is for setting up the accounts and Metamask for Marketplace GUI. For configuring the Super Protocol CLI tool called SPCTL, [go here](/developers/cli_guides/configuring/).
+This guide is for setting up the accounts and Metamask for Marketplace GUI. To set up the Super Protocol CLI tool, check the [Configuring SPCTL](/developers/cli_guides/configuring/) guide.
 
 ## 1. Setting up Metamask
 
-Metamask login is not required to browse the Marketplace offers, but if you want to create orders, then you’ll need to configure Metamask specifically for Super Protocol testnet.  Please complete the steps below:
-
-
-:::info Step 1. Install Metamask.
-
-Download and install the Metamask browser extension from its [official website](https://metamask.io/). Create a new wallet or import your existing one during the setup process. Skip this step if you have Metamask already installed.
-
-:::
+Metamask login is not required to browse the Marketplace offers. However, if you want to create orders, you must configure Metamask specifically for the Super Protocol Testnet. This guide will explain all the necessary steps.
 
 <br/>
 
-:::info Step 2. Add a new network.
+### Step 1. Install Metamask
 
-Open Metamask. Click on `Menu` (the three vertical dots), then click on `Settings`, then go to the `Networks` section, click on the `Add a network` button and scroll down and click on `Add a network manually`.
+Download and install the Metamask browser extension from its [official website](https://metamask.io/). During the setup process, create a new wallet or import your existing one. Skip this step if you have Metamask already installed.
 
-:::
+<br/>
+
+### Step 2. Add a new network
+
+Open the Metamask menu by clicking on three vertical dots in the top-right corner of the window. Go to the **Settings** and then select **Networks**. There, click the **Add network** button and then click **Add a network manually** at the bottom of the page.
 
 <br/>
 
@@ -43,7 +40,7 @@ Open Metamask. Click on `Menu` (the three vertical dots), then click on `Setting
 <br/>
 <br/>
 
-:::info Step 3. Fill in the parameters.
+:::info Step 3. Fill in the parameters
 
 Set the following parameters and press `Save`.
 
@@ -185,20 +182,7 @@ To get tokens, use the corresponding buttons in the top menu. Get both `TEE` and
 <br/>
 <br/>
 
-Please note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you cannot request additional tokens until you spend some of them. Please refer to testnet [limitations](/testnet/limitations).
-
-**Important!** Do not send MATIC tokens to other accounts. Violators will be banned from using Super Protocol testnet.
-
-
-## 99. Accessing Marketplace
-
-:::info Step 6. Enter Access Token.
-
-When you open the [Marketplace](https://marketplace.superprotocol.com/) for the first time, you will be asked to provide the testnet Access Token. Please use the Access Token that you received in the Testnet invitation letter.
-
-:::
-
-<br/>
+When you request tokens for the first time, the system will ask you to enter your Access Token. You should have received it in the same Testnet invitation letter with your Testnet Account and Private key.
 
 <img src={require('./../images/metamask_10.png').default} width="300" height="auto" border="1"/>
 
@@ -209,9 +193,7 @@ The token looks something like this:
 
 > eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
 
-If your token doesn’t work, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. Also, check that you don’t accidentally copy your Access Token with line break characters or spaces. Don’t hesitate to contact Super Protocol community managers on [Discord](https://discord.com/invite/superprotocol) if you face any issues.
-
-<! -- more old stuff-->
+If your token doesn’t work, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. Also, check that you don’t accidentally copy your Access Token with line break characters or spaces. If the issue persists, contact Super Protocol Community Managers on [Discord](https://discord.com/invite/superprotocol).
 
 If you see the error below, it means that you are trying to connect with the wrong Metamask account.
 
@@ -227,5 +209,12 @@ In that case, open Metamask and change the account.
 <br/>
 <br/>
 
-
 Then click again on the `Connect Wallet` button in the Marketplace and select the account that you configured for Testnet.
+
+Note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you can only request additional tokens once you spend some of them. Refer to testnet [limitations](/testnet/limitations).
+
+**Important!** Do not send MATIC tokens to other accounts. Violators will be banned from using Super Protocol testnet.
+
+## Support
+
+Feel free to contact any Community Manager on Super Protocol [Discord server](https://discord.gg/superprotocol) if you have issues or questions.
