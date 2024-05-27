@@ -106,13 +106,13 @@ Ensure that the imported wallet address matches the Testnet Account address you 
 <br/>
 <br/>
 
-You can rename this account into _Super Protocol Testnet_ or anything you like to quickly find it next time, especially if you have several other wallets in your MetaMask.
+You can rename this account into _Super Protocol Testnet_ or anything you like to quickly find it next time, especially if you have several other wallets in your MetaMask. Open the list of your MetaMask accounts, go to **Account details**, and click on the pencil icon near the wallet name to change it.
 
 :::caution Important!
 
 Do not use this account outside of Testnet!
 
-We have generated these ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
+We generate ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
 
 :::
 
