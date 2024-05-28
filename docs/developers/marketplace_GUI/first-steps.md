@@ -7,7 +7,7 @@ sidebar_position: 1
 
 This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configuring SPCTL](/developers/cli_guides/configuring/) guide.
 
-You need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply now](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your _Testnet Account_ address, _Private Key_, and _Access Token_.
+You need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your _Testnet Account_ address, _Private Key_, and _Access Token_.
 
 The Super Protocol team sends out invites daily, but it may take a few days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request.
 
@@ -116,7 +116,7 @@ You can rename this account into _Super Protocol Testnet_ or anything you like t
 
 Do not use this account outside of Testnet!
 
-Super Protocol generates ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
+Super Protocol generates ERC-20 wallets for use during Tesnet only. Do not use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
 
 :::
 
