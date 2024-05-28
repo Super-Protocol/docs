@@ -116,8 +116,6 @@ We generate ERC-20 wallets for use during Tesnet only. Don't use your Testnet Ac
 
 :::
 
-<br/>
-
 ### Step 6. Connect the wallet
 
 To connect your wallet, open the [Marketplace GUI](https://marketplace.superprotocol.com/) and press the **Connect Wallet** button at the top-right corner.
@@ -189,8 +187,6 @@ Note that there is a limit to the maximum balance of each token in one account. 
 Do not send MATIC tokens to other accounts. Violators will be banned from using the Super Protocol Testnet.
 
 :::
-
-<br/>
 
 ## Troubleshooting
 
