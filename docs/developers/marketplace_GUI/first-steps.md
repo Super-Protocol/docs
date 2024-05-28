@@ -7,13 +7,17 @@ sidebar_position: 1
 
 This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configuring SPCTL](/developers/cli_guides/configuring/) guide.
 
-You need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you still don't have your Testnet access credentials, [apply now](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your Testnet Account address, Private Key, and Access Token.
+You need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply now](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your _Testnet Account_ address, _Private Key_, and _Access Token_.
 
 The Super Protocol team sends out invites daily, but it may take a few days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request.
 
 ## Set up MetaMask
 
-MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must configure MetaMask specifically for the Super Protocol Testnet.
+MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
+
+:::note
+The mobile version of the Marketplace GUI is view-only. Use a desktop for full functionality.
+:::
 
 ### Step 1. Install MetaMask
 
@@ -59,9 +63,9 @@ Set the following parameters and press **Save**.
 | Currency Symbol | MATIC |
 | Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
-## Testnet account
+## Testnet Account
 
-### Step 4. Import the account
+### Step 4. Import the Testnet Account
 
 Click on your account name at the top of the MetaMask window to open the list of your accounts.
 
@@ -112,7 +116,7 @@ You can rename this account into _Super Protocol Testnet_ or anything you like t
 
 Do not use this account outside of Testnet!
 
-We generate ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
+Super Protocol generates ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
 
 :::
 
@@ -155,7 +159,7 @@ If everything is done correctly, you will see your account address and token bal
 
 ## Testnet tokens
 
-Two types of tokens are used in Super Protocol, and you will need both of them:
+Super Protocol uses two types of tokens, and you will need both of them:
 
 1. MATIC tokens, to pay for transactions on the Polygon blockchain;
 2. TEE tokens, to pay for offers and receive payments in Super Protocol.
@@ -210,4 +214,4 @@ Then, click the **Connect Wallet** button in the Marketplace GUI again and sel
 
 ## Support
 
-If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). Community Managers will be happy to help you.
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). Community Managers will be happy to help.
