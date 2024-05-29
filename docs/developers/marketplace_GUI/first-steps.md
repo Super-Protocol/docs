@@ -5,15 +5,19 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions to help you set up MetaMask and access Super Protocol Marketplace via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configuring SPCTL](/developers/cli_guides/configuring/) guide.
+This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configuring SPCTL](/developers/cli_guides/configuring/) guide.
 
-You need a Testnet Account to access the full functionality of Super Protocol GUI. If you still don't have your Testnet access credentials, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your Testnet Account address, Private Key, and Access Token.
+You need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your _Testnet Account_ address, _Private Key_, and _Access Token_.
 
-The Super Protocol team sends out invites daily, but it may take a few days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. 
+The Super Protocol team sends out invites daily, but it may take a few days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request.
 
 ## Set up MetaMask
 
-MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must configure MetaMask specifically for the Super Protocol Testnet.
+MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
+
+:::note
+The mobile version of the Marketplace GUI is view-only. Use a desktop for full functionality.
+:::
 
 ### Step 1. Install MetaMask
 
@@ -59,11 +63,9 @@ Set the following parameters and press **Save**.
 | Currency Symbol | MATIC |
 | Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
-<br/>
+## Testnet Account
 
-## Testnet account
-
-### Step 4. Import the account
+### Step 4. Import the Testnet Account
 
 Click on your account name at the top of the MetaMask window to open the list of your accounts.
 
@@ -84,9 +86,7 @@ Click **Add account or hardware wallet** and select **Import Account**.
 <br/>
 <br/>
 
-Enter the Private Key you received from Super Protocol and press the **Import** button.
-
-Testnet Private Key looks something like this:
+Enter the Private Key you received from Super Protocol and press the **Import** button. Testnet Private Key looks something like this:
 
 >0xb8371e9b2mr9f6e2b9e5ec1ead09b731607b923125c2faae6076df72f37e4b2e
 
@@ -99,9 +99,7 @@ Testnet Private Key looks something like this:
 
 ### Step 5. Check the account
 
-Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter.
-
-Testnet Account address looks something like this:
+Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter. Testnet Account address looks something like this:
 
 >0xDe0f32cJ7a2c3j85a3E572972EC7764154e75380
 
@@ -112,15 +110,15 @@ Testnet Account address looks something like this:
 <br/>
 <br/>
 
-You can rename this account into _Super Protocol Testnet_ or anything you like to quickly find it next time, especially if you have several other wallets in your MetaMask.
+You can rename this account into _Super Protocol Testnet_ or anything you like to quickly find it next time, especially if you have several other wallets in your MetaMask. Open the list of your MetaMask accounts, go to **Account details**, and click on the pencil icon near the wallet name to change it.
 
-:::caution Do not use this account outside of Testnet!
+:::caution Important!
 
-We have generated these ERC-20 wallets for use during Tesnet only. Don't use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
+Do not use this account outside of Testnet!
+
+Super Protocol generates ERC-20 wallets for use during Tesnet only. Do not use your Testnet Account wallet elsewhere or put your funds in it. The Super Protocol team also has the Private Key to your Testnet Account, so it is not truly yours.
 
 :::
-
-<br/>
 
 ### Step 6. Connect the wallet
 
@@ -161,7 +159,7 @@ If everything is done correctly, you will see your account address and token bal
 
 ## Testnet tokens
 
-Two types of tokens are used in Super Protocol, and you will need both of them:
+Super Protocol uses two types of tokens, and you will need both of them:
 
 1. MATIC tokens, to pay for transactions on the Polygon blockchain;
 2. TEE tokens, to pay for offers and receive payments in Super Protocol.
@@ -175,28 +173,30 @@ To get tokens, use the buttons at the top of the page.
 <br/>
 <br/>
 
-When you request tokens for the first time, the system asks you to enter your Access Token. You can find it in the Testnet invitation letter along with your Testnet Account and Private Key.
+When you request tokens for the first time, the system asks you to enter your Access Token. You can find it in the Testnet invitation letter along with your Testnet Account and Private Key. The Access Token looks something like this:
+
+>eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
+
+<br/>
 
 <img src={require('./../images/metamask_10.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
-The Access Token looks something like this:
-
->eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
-
-<br/>
-
 Note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you can only request additional tokens once you spend some of them. Refer to testnet [limitations](/testnet/limitations).
 
-**Important!** Do not send MATIC tokens to other accounts. Violators will be banned from using the Super Protocol Testnet.
+:::caution Important!
+
+Do not send MATIC tokens to other accounts. Violators will be banned from using the Super Protocol Testnet.
+
+:::
 
 ## Troubleshooting
 
-If your Access Token doesn’t work, check that you didn’t accidentally copy it with line break characters or spaces.
+If your Access Token doesn't work, check that you didn't accidentally copy it with line break characters or spaces.
 
-Also, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. If you see the error below, you are trying to connect with the wrong MetaMask account.
+Also, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. If you see the following error, you are trying to connect with the wrong MetaMask account:
 
 <img src={require('./../images/metamask_14.png').default} width="300" height="auto" border="1"/>
 
@@ -214,4 +214,4 @@ Then, click the **Connect Wallet** button in the Marketplace GUI again and sel
 
 ## Support
 
-If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). The Community Managers will be happy to help you.
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). Community Managers will be happy to help.
