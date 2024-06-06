@@ -47,7 +47,7 @@ You can also download and install SPCTL manually from the Super Protocol [GitHub
 
 Execute the `./spctl setup` command to initiate the setup dialog. First, provide your Testnet Access Token and then your Testnet Private Key. You can find them in your Testnet invitation email.
 
-Further, SPCTL asks if you have a Storj bucket with configured access grants. This step is optional. Select `No` if you do not have them yet. You can configure Storj and provide this information later in this guide or skip this step entirely.
+Further, SPCTL asks if you have a Storj bucket with configured access grants. This step is optional. Select `No` if you do not have them yet. You can configure Storj and provide this information [later in this guide](/developers/cli_guides/configuring#set-up-storj) or skip this step entirely.
 
 After that, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in any text editor.
 
@@ -101,7 +101,7 @@ Do not change the preconfigured parameters and fill in the following ones:
 
 ## For offer providers
 
-This section is for offer providers only. If you are a regular user, skip it and go to the next section to create a test order.
+This section is for offer providers only. If you are a regular user, skip it, and go to the next section to [create a test order](/developers/cli_guides/configuring#create-a-test-order).
 
 Offer providers need another copy of SPCTL configured for their Action Account. If you completed all the necessary steps in the [Providers and Offers](/developers/cli_guides/providers_offers) guide, you should have a configuration file created automatically in your Provider Tools directory. Its name looks like this:
 
@@ -173,7 +173,7 @@ Before you create an order, ensure you have the latest version of SPCTL. Execute
 ./spctl --version
 ```
 
-Go to the SPCTL's [GitHub page](link](https://github.com/Super-Protocol/ctl/releases)) to see the latest version.
+Go to the SPCTL's [GitHub page](https://github.com/Super-Protocol/ctl/releases) to see the latest version.
 
 Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/cli_commands/tokens/request) command to get free test TEE and MATIC tokens:
 
