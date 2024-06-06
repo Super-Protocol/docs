@@ -221,3 +221,7 @@ Open SPCTL's `config.json` in a text editor and fill in the following parameters
 |bucket| Name of a Storj bucket|
 |writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket|
 |readAccessToken| Storj access grant with **read** permission for this bucket|
+
+## Support
+
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). The Community Managers will be happy to help you.
