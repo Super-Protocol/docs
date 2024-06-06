@@ -113,7 +113,37 @@ Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa` is your Action Account wallet
 
 As with your User Account's configuration file, you can manually create the configuration file for the Action Account. Back up the current `config.json` or create a separate directory for your Action Account with a copy of the SPCTL executable.
 
-Use the template from the previous section. Do not change the preconfigured parameters and fill in the following ones:
+Use the following `config.json` template:
+
+```json title="config.json"
+{
+    "backend": {
+        "url": "https://bff.testnet.superprotocol.com/graphql",
+        "accessToken": ""
+    },
+    "blockchain": {
+        "rpcUrl": "https://amoy.polygon.superprotocol.com/hesoyam",
+        "smartContractAddress": "0x589c5F093524e9a6cD4bAEe786859bC6C3e38bec",
+        "accountPrivateKey": "",
+        "authorityAccountPrivateKey": ""
+    },
+    "storage": {
+        "type": "STORJ",
+        "bucket": "",
+        "writeAccessToken": "",
+        "readAccessToken": ""
+    },
+    "workflow": {
+        "resultEncryption": {
+            "algo": "ECIES",
+            "key": "",
+            "encoding": "base64"
+        }
+    }
+}
+```
+
+Do not change the preconfigured parameters and fill in the following ones:
 
 |**Parameter**|**Description**|
 |:-|:-|
@@ -125,15 +155,13 @@ Use the template from the previous section. Do not change the preconfigured para
 |writeAccessToken| (optional) Storj access grant with **write** and **delete** permissions for this bucket|
 |readAccessToken| (optional) Storj access grant with **read** permission for this bucket|
 
-You can find your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory.
-
-It looks like this:
+You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory:
 
 ```json title="provider-tools-config.json"
     "account": {
-        "authority": "0x50612a8bf52cb263825e58c72361ea48904efn7af7e2b549ea9c2ed02059c668d",
-        "action": "0x0512ad96f1900d3ecf0987m81c74df455ebb49kjce5bc1fd35c0b410c7dc6f05",
-        "tokenReceiver": "0x167d93786ghbf058965a5a582a1d52ca1e620d19b7f1e47330f2b64d9fcb6a38"
+        "authority": "0x50612a8bf52cb263825e58c72361ea58c04efn7af7e5b549ea9c2ed02059c668d",
+        "action": "0x0512ad96f1900d3ecf0987m81c74af455ebb49kjce5bc1fd3zc0b410c7dc6f05",
+        "tokenReceiver": "0x167d93786ghbf058065a5a592a1d55ca1e620d19b7d1e47330f2b64d9fcb6a38"
     },
 ```
 
