@@ -8,25 +8,32 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+## Testnet access
+
+To set up SPCTL, you need Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive a Testnet invitation email with your Testnet credentials:
+  - _Testnet Account address_ – the public key of the Testnet Account wallet;
+  - _Private Key_ – the private key of the Testnet Account wallet;
+  - _Access Token_ – necessary to receive free test TEE and MATIC tokens.
+
 ## Download SPCTL
 
 <Tabs>
   <TabItem value="linux" label="Linux" default>
-    Open Terminal in the directory where you want to place SPCTL for Linux and run the following command:
+    Open a terminal in the directory where you want to place SPCTL for Linux and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
     chmod +x ./spctl
     ```
   </TabItem>
   <TabItem value="macos" label="MacOS">
-    Open Terminal in the directory where you want to place SPCTL for MacOS and run the following command:
+    Open Terminal in the directory where you want to place SPCTL for macOS and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-macos-x64 -o spctl
     chmod +x ./spctl
     ```
   </TabItem>
   <TabItem value="windows" label="Windows">
-    Open WSL Terminal in the directory where you want to place SPCTL for Windows and run the following command:
+    Open a WSL terminal in the directory where you want to place SPCTL and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
     chmod +x ./spctl
@@ -34,14 +41,25 @@ import TabItem from '@theme/TabItem';
   </TabItem>
 </Tabs>
 
-You can also download and install SPCTL manually from our [GitHub repository](https://github.com/Super-Protocol/ctl).
+You can also download and install SPCTL manually from the Super Protocol [GitHub repository](https://github.com/Super-Protocol/ctl).
 
-## Set up config.json manually
+## For users
 
-You will need a file called `config.json` in the same directory where you have placed the SPCTL executable.
+Execute the `./spctl setup` command to initiate the setup dialog. First, provide your Testnet Access Token and then your Testnet Private Key. You can find them in your Testnet invitation email.
 
-### For Users
-Copy and paste into a new file or [download a template](./assets/config.json). Parameters shared by all users are pre-configured.
+Further, SPCTL asks if you have a Storj bucket with configured access grants. This step is optional. Select `No` if you do not have them yet. You can configure Storj and provide this information [later in this guide](/developers/cli_guides/configuring#set-up-storj) or skip this step entirely.
+
+After that, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in any text editor.
+
+:::note
+
+For SPCTL to work correctly, `config.json` must be in the same directory as the SPCTL executable. Do not move or rename this file unless you want to create a separate SPCTL configuration for another Testnet account.
+
+:::
+
+### Manual configuration
+
+You can also skip the `./spctl setup` command completely and set up SPCTL manually. [Download the template](./assets/config.json) and rename it to `config.json`. Alternatively, create an empty `config.json` file in the SPCTL directory and then copy and paste the following template:
 
 ```json title="config.json"
 {
@@ -70,24 +88,32 @@ Copy and paste into a new file or [download a template](./assets/config.json). P
 }
 ```
 
-Then fill in the remaining parameters that are specific to your account:
+Do not change the preconfigured parameters and fill in the following ones:
 
 |**Parameter**|**Description**|
-|:-----------------|:-------------------|
-|accessToken| Your personal *Access Token* from the Testnet invitation email.||
-|accountPrivateKey| Your personal *Private Key* from the Testnet invitation email.|
-|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key.|
+|:-|:-|
+|accessToken| Your Testnet Access Token from the Testnet invitation email||
+|accountPrivateKey| Your Testnet Private Key from the Testnet invitation email|
+|key| Private key for order result encryption. Use the [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to create this key|
+|bucket| (optional) The name of your Storj bucket|
+|writeAccessToken| (optional) Storj access grant with **write** and **delete** permissions for this bucket|
+|readAccessToken| (optional) Storj access grant with **read** permission for this bucket|
 
-You are done! Now you can use SPCTL.
+## For offer providers
 
-### For Providers
+This section is for offer providers only. If you are a regular user, skip it, and go to the next section to [create a test order](/developers/cli_guides/configuring#create-a-test-order).
 
-<Highlight color="red">переписать этот раздел, что файл создается PT</Highlight>
+Offer providers need another copy of SPCTL configured for their Action Account. If you completed all the necessary steps in the [Providers and Offers](/developers/cli_guides/providers_offers) guide, you should have a configuration file created automatically in your Provider Tools directory. Its name looks like this:
 
+```spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json```
 
-This section is for providers only. As prerequisite you will need have to completed steps in the [Providers and Offers Guide](/developers/cli_guides/providers_offers). This information will be used to manage your provider and offers.
+Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa` is your Action Account wallet address.
 
-Copy and paste into a new file or [download a template](./assets/config.json). Parameters shared by all users are pre-configured.
+### Manual configuration
+
+As with your User Account's configuration file, you can manually create the configuration file for the Action Account. Back up the current `config.json` or create a separate directory for your Action Account with a copy of the SPCTL executable.
+
+Use the following `config.json` template:
 
 ```json title="config.json"
 {
@@ -117,40 +143,39 @@ Copy and paste into a new file or [download a template](./assets/config.json). P
 }
 ```
 
-Then fill in the remaining parameters that are specific to your account.
+Do not change the preconfigured parameters and fill in the following ones:
 
-|**Parameter**| **Description**                                                                                                                                       |
-|:-----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
-|accessToken| Your personal *Access Token* from the Testnet invitation email.                                                                                       ||
-|accountPrivateKey| Your *Private Key* of your provider's Action account.                                                                                                 |
-|authorityAccountPrivateKey| Your *Private Key* of your provider's Authority account.                                                                                              |
-|key| Private key for order results encryption. Use [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to generate this key. You can use the same key as in the User part of the config or generate a new one.|
+|**Parameter**|**Description**|
+|:-|:-|
+|accessToken| Your regular Testnet Access Token from the Testnet invitation email|
+|accountPrivateKey| Private Key of your provider's Action Account|
+|authorityAccountPrivateKey| Private Key of your provider's Authority Account|
+|key| Private key for order result encryption. Use the key from your User Account or generate a new one with the [workflows generate-key](/developers/cli_commands/workflows/generate-key) command|
+|bucket| (optional) Name of your Storj bucket|
+|writeAccessToken| (optional) Storj access grant with **write** and **delete** permissions for this bucket|
+|readAccessToken| (optional) Storj access grant with **read** permission for this bucket|
 
-You can find the private keys to your provider Authority and Action accounts in the `config.json` located in the Provider Tools directory. 
+You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory:
 
-It looks like this:
-
-```
-    },
+```json title="provider-tools-config.json"
     "account": {
-        "authority": "0x50612a8bf52cb263825e58c72361ea48904efn7af7e2b549ea9c2ed02059c668d",
-        "action": "0x0512ad96f1900d3ecf0987m81c74df455ebb49kjce5bc1fd35c0b410c7dc6f05",
-        "tokenReceiver": "0x167d93786ghbf058965a5a582a1d52ca1e620d19b7f1e47330f2b64d9fcb6a38"
+        "authority": "0x50612a8bf52cb263825e58c72361ea58c04efn7af7e5b549ea9c2ed02059c668d",
+        "action": "0x0512ad96f1900d3ecf0987m81c74af455ebb49kjce5bc1fd3zc0b410c7dc6f05",
+        "tokenReceiver": "0x167d93786ghbf058065a5a592a1d55ca1e620d19b7d1e47330f2b64d9fcb6a38"
     },
 ```
-
-Now you can use SPCTL commands that are related to the management of your provider and offers.
 
 ## Create a test order
 
-Let's make sure that it works.
+Before you create an order, ensure you have the latest version of SPCTL. Execute the following command to see the version you are currently using:
 
-Check version, it should be the latest version. To check the current latest version, please follow the [link](https://github.com/Super-Protocol/ctl/releases):
 ```
 ./spctl --version
 ```
 
-Get your first TEE and MATIC tokens:
+Go to the SPCTL's [GitHub page](https://github.com/Super-Protocol/ctl/releases) to see the latest version.
+
+Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/cli_commands/tokens/request) command to get free test TEE and MATIC tokens:
 
 ```
 ./spctl tokens request --tee
@@ -159,22 +184,44 @@ Get your first TEE and MATIC tokens:
 ./spctl tokens request --matic
 ```
 
-And then [create](/developers/cli_commands/workflows/create) your first simple order: a [Super Chat](/developers/offers/superchat) solution using tunnels.
+It may take a couple of minutes for the tokens to appear on your account. When you have them, execute the [`workflows create`](/developers/cli_commands/workflows/create) command to create a [Super Chat](/developers/offers/superchat) order:
 
 ```
 ./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
-You will get an Order ID. You can then check the order status using the [orders](/developers/cli_commands/orders) command or using the [Marketplace GUI](/developers/marketplace). 
+When your order is created, you will see the following in the last line of CLI output:
+
+```
+Workflow was created, TEE order id: ["XXXX"]
+```
+
+Where `XXXX` is the ID of your order.
+
+It usually takes 20-25 minutes for this order to be done. You can then check the order status using the [`orders`](/developers/cli_commands/orders) command or in [Marketplace GUI](/developers/marketplace).
 
 ## Set up Storj
 
-For quick deployments you can pick an existing storage offer from the Marketplace when using the [files upload](/developers/cli_commands/files/upload) command. This is recommended for new users.
+This step is optional. For quick deployment, you can use an existing storage offer on the Marketplace in the [files upload](/developers/cli_commands/files/upload) command. For additional control, you can configure your storage manually. Register a [Storj](https://www.storj.io/) account if you do not have one yet.
 
-But for additional control you also have an option to configure your own storage manually in SPCTL. Populate the appropriate fields in `config.json` as below (you will need to sign up with Storj):
+:::note
+
+If you have a free Storj account, your files will become unavailable after the end of the trial period.
+
+:::
+
+Create a bucket for your encrypted solutions and data. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/).
+
+Create two access grants for this bucket. One should provide **write** and **delete** permissions, and the other one – **read** permission. Alternatively, you can create a single access grant with **all** permission. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
+
+Open SPCTL's `config.json` in a text editor and fill in the following parameters:
 
 |**Parameter**|**Description**|
-|:-----------------|:-------------------|
-|bucket| STORJ bucket name. Your encrypted solutions and data are uploaded to this bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) to create it.|
-|writeAccessToken| STORJ **write** access grant with *write* and *delete* permissions for the specified bucket. Use [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate it.|
-|readAccessToken| STORJ **read** access grant with *read* permission for the specified bucket. Use the same guide as above to generate it.|
+|:-|:-|
+|bucket| Name of a Storj bucket|
+|writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket|
+|readAccessToken| Storj access grant with **read** permission for this bucket|
+
+## Support
+
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). The Community Managers will be happy to help you.
