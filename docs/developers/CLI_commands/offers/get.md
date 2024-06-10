@@ -1,11 +1,11 @@
 ---
 id: "offers-get"
 title: "get"
-slug: "/cli_commands/offers/offers/get"
+slug: "/cli_commands/offers/get"
 sidebar_position: 2
 ---
 
-Display detailed information on a value or compute offer with `id`.
+Displays detailed information on a value or compute offer with `id`.
 
 ## Usage
 

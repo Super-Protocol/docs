@@ -19,12 +19,14 @@ This chat is a technological demo app initially developed for Testnet 3 with a g
 
 ### Use our deployment
 
-Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes: [https://mend-kuei-wauf.superprotocol.io](https://mend-kuei-wauf.superprotocol.io/).
+Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes: [https://ayre-nyas-bomb.superprotocol.io/](https://ayre-nyas-bomb.superprotocol.io/).
 
 This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
 
-Tunnel server order: [31091](https://marketplace.superprotocol.com/order/31091) <br/>
-Tunnel client order: [31088](https://marketplace.superprotocol.com/order/31088) <br/>
+Tunnel server order: [2535](https://marketplace.superprotocol.com/order/2535) <br/>
+Tunnel server order: [2556](https://marketplace.superprotocol.com/order/2556) <br/>
+Tunnel client order: [2538](https://marketplace.superprotocol.com/order/2538) <br/>
+Tunnel client order: [2559](https://marketplace.superprotocol.com/order/2559) <br/>
 
 You can check this domain's confidentiality [here](/developers/marketplace/confidentiality).
 
