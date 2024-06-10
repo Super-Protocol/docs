@@ -43,8 +43,8 @@ The provider info file should contain the following fields.
 |:----------------|:-------------------------------------------------|
 | `name`          | Provider name                                    | 
 | `description`   | Description of services provided by the provider | 
-| `tokenReceiver` | Action account address                           |
-| `actionAccount` | Token receiver account address                   | 
+| `tokenReceiver` | Token receiver account address                   |
+| `actionAccount` | Action account address                           | 
 | `metadata`      | Additional information about the provider        | 
 
 All of the parameters are mandatory except for `description` and `metadata`, which may be left empty.
