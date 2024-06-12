@@ -101,17 +101,25 @@ Do not change the preconfigured parameters and fill in the following ones:
 
 ## For offer providers
 
-This section is for offer providers only. If you are a regular user, skip it, and go to the next section to [create a test order](/developers/cli_guides/configuring#create-a-test-order).
+This section is for offer providers only. If you are a regular user, skip it and go to the next section to [create a test order](/developers/cli_guides/configuring#create-a-test-order).
 
-Offer providers need another copy of SPCTL configured for their Action Account. If you completed all the necessary steps in the [Providers and Offers](/developers/cli_guides/providers_offers) guide, you should have a configuration file created automatically in your Provider Tools directory. Its name looks like this:
+Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers](/developers/cli_guides/providers_offers) guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks like this:
 
 ```spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json```
 
-Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa` is your Action Account wallet address.
+Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa` is your Authority Account wallet address.
+
+Rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or download the SPCTL executable to the Provider Tools root directory.
+
+Alternatively, copy this provider's SPCTL config to your User Account's SPCTL directory. Use the `--config` option with [SPCTL commands](/developers/cli_commands) to manage your provider and orders. For example:
+
+```
+./spctl orders list --my-account --type tee --config spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json
+```
 
 ### Manual configuration
 
-As with your User Account's configuration file, you can manually create the configuration file for the Action Account. Back up the current `config.json` or create a separate directory for your Action Account with a copy of the SPCTL executable.
+As with your User Account's configuration file, you can manually create the provider's configuration file. Back up the current `config.json` or create a separate directory for your provider's copy of the SPCTL executable.
 
 Use the following `config.json` template:
 
@@ -179,8 +187,6 @@ Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/cli_com
 
 ```
 ./spctl tokens request --tee
-```
-```
 ./spctl tokens request --matic
 ```
 
@@ -202,11 +208,13 @@ It usually takes 20-25 minutes for this order to be done. You can then check the
 
 ## Set up Storj
 
-This step is optional. For quick deployment, you can use an existing storage offer on the Marketplace in the [files upload](/developers/cli_commands/files/upload) command. For additional control, you can configure your storage manually. Register a [Storj](https://www.storj.io/) account if you do not have one yet.
+This step is optional. You can add a Marketplace storage offer to the [`files upload`](/developers/cli_commands/files/upload) command instead of configuring Storj. However, for additional control, you can set up and use your storage.
+
+Register a [Storj](https://www.storj.io/) account if you do not have one yet.
 
 :::note
 
-If you have a free Storj account, your files will become unavailable after the end of the trial period.
+If you use a free Storj account, your files will become unavailable after the end of the trial period.
 
 :::
 
