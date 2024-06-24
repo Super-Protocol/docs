@@ -13,16 +13,16 @@ As a permissionless cloud, Super Protocol does not moderate or restrict offers o
 
 ## Offers filter
 
-For the Solution and Data offers Marketplace GUI has a special filter that divides the offers in four categories:
+Marketplace GUI has a special filter that divides the offers in four categories:
 
-* **Super Protocol** - offers produced by Super Protocol;
-* **Approved** - community offers that were reviewed by Super team and considered acceptably operational;
-* **Unmoderated** - community offers that were not reviewed, all offers end up here by default;
-* **Inactive** - offers that [did not respond](/developers/cli_guides/providers_offers#about-ec) to a request to create a new order, considered non-functional and likely abandoned. See [FAQ](/developers/cli_guides/providers_offers#orders-marked-inactive).
+- **Super Protocol**: offers provided by Super Protocol.
+- **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational.
+- **Unmoderated**: community offers that were not reviewed. All new offers appear here.
+- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information.
 
 <img src={require('./../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
-These categories are exclusive (an offer can belong only to one category). Offers in status **Disabled** do not appear in Marketplace GUI at all (providers can use [offers disable](/developers/cli_commands/offers/offers/disable) or [offers enable](/developers/cli_commands/offers/offers/enable) commands to manage this). 
+These categories are exclusive (an offer can belong only to one category). Offers in status **Disabled** do not appear in Marketplace GUI. Providers can use [offers disable](/developers/cli_commands/offers/offers/disable) or [offers enable](/developers/cli_commands/offers/offers/enable) commands to manage this. 
 
 ## Requirements
 
@@ -65,15 +65,14 @@ Please be responsible!
 
 ## Moderation process
 
-It is quite simple.
-
 1. Create an offer as per the [Offers and Providers Guide](/developers/cli_guides/providers_offers). Complete all steps.
 2. Check that your new offer is fully functional and able to be ordered using SPCTL. Your offer will also automatically appear in Marketplace GUI in the **Unmoderated** category.
-2. Create a new post in [Discord](https://discord.com/invite/superprotocol) in the **#offers** channel:
-   * Make sure that it follows the naming convention: "Offer ###. The name of your offer." For example: "Offer 12. Tunnels Launcher";
-   * Add a link to the offer in Marketplace GUI. The link is what you see when you open an offer window. It looks something like this: [https://marketplace.superprotocol.com/?offer=offerId%3D12&tab=about](https://marketplace.superprotocol.com/?offer=offerId%3D12&tab=about).
-   * Optional but welcome: Introduce yourself and your work. We are building a Super community and every voice matters;
-3. Answer any questions if requested by our moderators. They will look at your offer and make a test order;
+2. Create a new post on [Discord](https://discord.com/invite/superprotocol) in the **#offers** channel:
+   * Make sure that it follows the naming convention: "Offer ###. The name of your offer." For example: "Offer 12. Tunnels Launcher".
+   * Add a link to the offer in Marketplace GUI. The link is what you see when you open an offer window. It looks something like [marketplace.superprotocol.com/?offer=offerId%3D12&tab=about](https://marketplace.superprotocol.com/?offer=offerId%3D12&tab=about).
+   * Optional but welcome: Introduce yourself and your work. We are building a Super community and every voice matters.
+   * You can use [Markdown](https://www.markdownguide.org/) to make your post more presentable.
+3. Answer any questions if requested by our moderators. They will look at your offer and make a test order.
 4. If all is fine, your offer will be moved to the **Approved** category.
 5. If your offer becomes **Inactive**, then you can contact our support in the same post.
 

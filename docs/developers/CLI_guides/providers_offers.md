@@ -31,8 +31,8 @@ To set up a provider and create offers, you need:
 - Computer with Linux or macOS operating system. On Windows, install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux).
 
 - Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive an email with your Testnet credentials:
-  + _Testnet Account address_ – the public key of Super testnet wallet;
-  + _Private Key_ – the private key of the Super Protocol testnet wallet;
+  + _Testnet Account address_ – the public key of the Testnet wallet;
+  + _Private Key_ – the private key of the Testnet wallet;
   + _Access Token_ – necessary to receive free test TEE and MATIC tokens.
 
 - [SPCTL](/developers/cli_guides/) – Super Protocol CLI tool. You need it to upload your offers and create an Offer Provisioner order. Refer to the [SPCTL guide](/developers/cli_guides/configuring) to install and configure it.
@@ -594,7 +594,7 @@ Replace `OFFER_ID` with the ID of the offer you want to disable.
 
 It will make the offer unavailable to use but will not delete it. If later you want to reinstate it back to active status, use the [`offers enable`](/developers/cli_commands/offers/offers/enable) command.
 
-### Inactive orders
+### Inactive offers
 
 Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
