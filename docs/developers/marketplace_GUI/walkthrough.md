@@ -130,9 +130,12 @@ Here you will also see some totals:
 You can also see the total requirements or configurations by offer. 
 
 <img src={require('./../images/marketplace_10.png').default}/>
-
-
 <br/>
+<br/>
+
+To create this order via CLI, click the **Copy CLI workflow** button. It will generate an SPCTL command using the current order setup and copy it to the clipboard.
+
+<img src={require('./../images/marketplace_10a.png').default}/>
 <br/>
 <br/>
 
