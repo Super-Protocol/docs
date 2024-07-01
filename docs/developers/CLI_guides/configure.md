@@ -8,12 +8,14 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+**SPCTL**—Super Protocol Control—is a versatile tool to access the Marketplace CLI. With this tool, you can create and manage orders, offers, providers, keys, workflows, files on distributed storages, and more.
+
 ## Testnet access
 
 To set up SPCTL, you need Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive a Testnet invitation email with your Testnet credentials:
-  - _Testnet Account address_ – the public key of the Testnet Account wallet;
-  - _Private Key_ – the private key of the Testnet Account wallet;
-  - _Access Token_ – necessary to receive free test TEE and MATIC tokens.
+  - _Testnet Account address_: the public key of the Testnet Account wallet
+  - _Private Key_: the private key of the Testnet Account wallet
+  - _Access Token_: necessary to receive free test TEE and MATIC tokens
 
 ## Download SPCTL
 
@@ -95,9 +97,9 @@ Do not change the preconfigured parameters and fill in the following ones:
 |accessToken| Your Testnet Access Token from the Testnet invitation email||
 |accountPrivateKey| Your Testnet Private Key from the Testnet invitation email|
 |key| Private key for order result encryption. Use the [workflows generate-key](/developers/cli_commands/workflows/generate-key) command to create this key|
-|bucket| (optional) The name of your Storj bucket|
-|writeAccessToken| (optional) Storj access grant with **write** and **delete** permissions for this bucket|
-|readAccessToken| (optional) Storj access grant with **read** permission for this bucket|
+|bucket| Name of your Storj bucket (optional)|
+|writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket (optional)|
+|readAccessToken| Storj access grant with **read** permission for this bucket (optional)|
 
 ## For offer providers
 
@@ -159,9 +161,9 @@ Do not change the preconfigured parameters and fill in the following ones:
 |accountPrivateKey| Private Key of your provider's Action Account|
 |authorityAccountPrivateKey| Private Key of your provider's Authority Account|
 |key| Private key for order result encryption. Use the key from your User Account or generate a new one with the [workflows generate-key](/developers/cli_commands/workflows/generate-key) command|
-|bucket| (optional) Name of your Storj bucket|
-|writeAccessToken| (optional) Storj access grant with **write** and **delete** permissions for this bucket|
-|readAccessToken| (optional) Storj access grant with **read** permission for this bucket|
+|bucket| Name of your Storj bucket (optional)|
+|writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket (optional)|
+|readAccessToken| Storj access grant with **read** permission for this bucket (optional)|
 
 You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory:
 

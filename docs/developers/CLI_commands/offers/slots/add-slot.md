@@ -21,14 +21,14 @@ Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` or `value` |
+| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer |
 | `offerId`  |Offer ID  |
 
 ## Options
 
 | **Name** |**Description**                |
 |:--------------------|:-------------------------------|
-| `--path`            |Path to the offer slot JSON file. Default is `./offer-new-slot.json`  |
+| `--path`            |Path to the offer slot JSON file. Default is `./offerSlot.json`  |
 | `--config`          |Path to the configuration file. Default is `./config.json` |
 
 ## Offer slot file
@@ -36,8 +36,8 @@ Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-
 The offer slot JSON file must contain the following objects and strings:
 
 - `info`: object with computing power configuration
-  + `cpuCores`: number of CPU cores required, float value
-  + `gpuCores`: number of GPU cores required, float value
+  + `cpuCores`: number of CPU cores required, a float value
+  + `gpuCores`: number of GPU cores required, a float value
   + `diskUsage`: bytes
   + `ram`: bytes
 - `usage`: object with terms and conditions of usage
@@ -47,7 +47,7 @@ The offer slot JSON file must contain the following objects and strings:
   + `priceType`: `1` for fixed price, `0` for price per hour; [learn more](/developers/fundamentals/orders#cost-and-pricing) about price types
 - `option`: object with internet access configuration (only for value offers)
   + `bandwidth`: bits per second
-  + `traffic`: bits
+  + `traffic`: bytes
   + `externalPort`: `1` for yes, `0` for no
 
 Offer slot JSON file template with example values:
@@ -76,13 +76,13 @@ Offer slot JSON file template with example values:
 
 Note that some of the data is represented differently in the Marketplace GUI:
 - `diskUsage` and `ram` values are converted to GiB by the formula `initial value / (1024 ^ 3)`
-- `price` value is converted to TEE by the formula `initial value / (10 ^ 18)`
+- `price` value is converted to TEE tokens by the formula `initial value / (10 ^ 18)`
 - `bandwidth` value is converted to Mbit per second by the formula `initial value / (10 ^ 6)`
-- `traffic` value is converted to Gb by the formula `initial value / (10 ^ 9)`
+- `traffic` value is converted to GB by the formula `initial value / (10 ^ 9)`
 
 ## Example
 
-The following command adds a new requirement slot to the offer (ID 39) using the `offer-new-slot.json` file in the SPCTL directory:
+The following command adds a new requirement slot to the offer (ID 39) using the `offer-new-slot.json` file located in the SPCTL directory:
 
 ```
 ./spctl offers add-slot value --offer 39 --path ./offer-new-slot.json

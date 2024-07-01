@@ -5,7 +5,7 @@ slug: "/cli_commands/tokens/request"
 sidebar_label: "request"
 ---
 
-Requests test TEE and MATIC tokens.
+Request test TEE and MATIC tokens.
 
 This command is only available during Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
 

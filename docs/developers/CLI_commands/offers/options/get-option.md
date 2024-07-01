@@ -5,19 +5,18 @@ slug: "/cli_commands/offers/options/get-option"
 sidebar_position: 4
 ---
 
-Display the information for an option of a TEE compute offer.
+Display the information for an option of a compute offer.
 
 ## Synopsis
 
 ```
-./spctl offers get-option <type> --offer <offerId> --option <optionId>
+./spctl offers get-option tee --offer <offerId> --option <optionId>
 ```
 
 ## Arguments
 
 |**Name**| **Description**                 |
 | :- |:--------------------------------|
-|`type`| Type of the offer: `tee` or `value` |
 | `offerId`  |Offer ID  |
 | `optionId`  |Option ID |
 

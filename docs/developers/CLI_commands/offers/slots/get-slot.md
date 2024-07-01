@@ -19,7 +19,7 @@ Use the [offers get](/developers/cli_commands/offers/offers/get) command to get 
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-|`type`   |Type of the offer: `tee` or `value` |
+|`type`   |Type of the offer: `tee` for a compute offer or `value` for a value offer |
 | `offerId`  |Offer ID  |
 | `slotId`  |Slot ID |
 

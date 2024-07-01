@@ -7,75 +7,70 @@ sidebar_position: 4
 
 ## About
 
-This section is for providers who want their Solution or Data offers to appear in Marketplace GUI in the **Approved** section. As a prerequisite you need to have completed the steps in [Creating Providers and Offers](/developers/cli_guides/providers_offers) guide.
+This section is for providers who want their solution or data offers to appear in the **Approved** category in Marketplace GUI. As a prerequisite you must complete the [Providers and Offers](/developers/cli_guides/providers_offers) guide.
 
-As a permissionless cloud, Super Protocol does not moderate or restrict offers or deployments: providers can create any offers on blockchain, which will be accessible by all users through SPCTL. However, Marketplace GUI is a separate Super Protocol product and as such we see it as our responsibility to present offers in a transparent and user-friendly manner.
+Super Protocol is a permissionless cloud and does not moderate or restrict offers or deployments. Providers can create any offers on blockchain, which will be accessible by users through SPCTL. However, the Marketplace GUI is a separate Super Protocol product where offers are presented in a transparent and user-friendly manner.
 
-## Offers filter
+## Offer filter
 
-Marketplace GUI has a special filter that divides the offers in four categories:
+Marketplace GUI has a special filter that divides the offers into four categories:
 
-- **Super Protocol**: offers provided by Super Protocol.
-- **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational.
-- **Unmoderated**: community offers that were not reviewed. All new offers appear here.
-- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information.
+- **Super Protocol**: offers provided by Super Protocol
+- **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational
+- **Unmoderated**: community offers that were not reviewed; all new offers appear here
+- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read about [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers)
 
 <img src={require('./../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
-These categories are exclusive (an offer can belong only to one category). Offers in status **Disabled** do not appear in Marketplace GUI. Providers can use [offers disable](/developers/cli_commands/offers/offers/disable) or [offers enable](/developers/cli_commands/offers/offers/enable) commands to manage this. 
+These categories are exclusive meaning an offer can belong only to one category. Offers with the **Disabled** status do not appear in the Marketplace GUI. Providers can use [`offers disable`](/developers/cli_commands/offers/offers/disable) and [`offers enable`](/developers/cli_commands/offers/offers/enable) commands to manage this. 
 
 ## Requirements
 
-Your offer should be well-documented, operational, and not contain anything illegal.
+Your offer should be well-documented and operational. It also should not contain anything illegal.
 
 ### Well-documented
 
-It is important that the [description](/developers/cli_guides/providers_offers#offer-description) of your offers clearly states:
-* What does your solution do?
-* What is the expected result? Provide an example;
-* What kind of data does it use? Provide examples of required format and structure;
-* If data offer, what kind of data it contains? Provide examples of format and structure;
+The [offer description](/developers/cli_guides/providers_offers#offer-description) must explain:
 
-In the description you can also provide HTML links to outside sources (such as GitHub) for additional description and - at your discretion - downloads of your offer contents. By default, neither the users nor the Super team will have access to the actual content of your offers (due to confidentiality).
+- What your solution does
+- The expected result; provide an example
+- For solution offers: what kind of data the offer uses; provide examples of the required format and structure
+- For data offers: what kind of data the offer contains; provide examples of the format and structure
+
+In the description, you can also use HTML links to outside resources like GitHub for additional description or downloads of your offer content. By default, neither the users nor the Super Protocol team have access to the actual content of your offers due to confidentiality reasons.
 
 ### Operational
 
-Your offer has to work. At very least you need to test it locally and it would be a good idea to also [deploy it](/developers/cli_guides/quick_guide) to Super Protocol before turning it into an offer. After you create the offer, please test it yourself before submitting for review. 
+Your offer has to work. Test it locally and [deploy it](/developers/cli_guides/quick_guide) to Super Protocol before turning it into an offer. After you create the offer, test it before submitting for review.
 
 ### Not illegal
 
-This should be self-explanatory. We do not condone the usage of Super Protocol for any types of illegal operations, just like any other cloud provider.
+Super Protocol does not condone any type of illegal operations.
 
-Your solution or data should not contain any of the following:
+Your offer, its description, and HTML links to external resources must not be related to any of the following:
 
-* **Copyright Infringement:** Uploading, sharing, or distributing copyrighted material without proper authorization.
-* **Illegal File Sharing:** Sharing or distributing illegal content such as pirated software, movies, or music.
-* **Hacking/Cyberattacks:** Attempting to gain unauthorized access to systems, networks, or data.
-* **Data Theft:** Stealing sensitive information or personal data belonging to others.
-* **Fraudulent Activities:** Engaging in scams, phishing, or other fraudulent schemes.
-* **Distribution of Malware:** Uploading or distributing malicious software or viruses.
-* **DDoS Attacks:** Launching Distributed Denial of Service attacks against websites or networks.
-* **Child Exploitation:** Sharing, distributing, or possessing child pornography or related material.
-* **Terrorist Activities:** Planning, promoting, or participating in terrorist activities.
-* **Money Laundering:** Using cloud services to facilitate illegal financial transactions.
-
-The list above refers not only to the offer content, but also the offer descriptions and any HTML links to external resources.
-
-Please be responsible!
+- **Copyright infringement:** Uploading, sharing, or distributing copyrighted material without proper authorization
+- **Illegal file sharing:** Sharing or distributing illegal content such as pirated software, movies, or music
+- **Hacking/cyberattacks:** Attempting to gain unauthorized access to systems, networks, or data
+- **Data theft:** Stealing sensitive information or personal data belonging to others
+- **Fraudulent activities:** Engaging in scams, phishing, or other fraudulent schemes.
+- **Distribution of malware:** Uploading or distributing malicious software or viruses.
+- **DDoS attacks:** Launching Distributed Denial of Service attacks against websites or networks.
+- **Child exploitation:** Sharing, distributing, or possessing child pornography or related material.
+- **Terrorist activities:** Planning, promoting, or participating in terrorist activities.
+- **Money laundering:** Using cloud services to facilitate illegal financial transactions.
 
 ## Moderation process
 
-1. Create an offer as per the [Offers and Providers Guide](/developers/cli_guides/providers_offers). Complete all steps.
-2. Check that your new offer is fully functional and able to be ordered using SPCTL. Your offer will also automatically appear in Marketplace GUI in the **Unmoderated** category.
-2. Create a new post on [Discord](https://discord.com/invite/superprotocol) in the **#offers** channel:
-   * Make sure that it follows the naming convention: "Offer ###. The name of your offer." For example: "Offer 12. Tunnels Launcher".
-   * Add a link to the offer in Marketplace GUI. The link is what you see when you open an offer window. It looks something like [marketplace.superprotocol.com/?offer=offerId%3D12&tab=about](https://marketplace.superprotocol.com/?offer=offerId%3D12&tab=about).
-   * Optional but welcome: Introduce yourself and your work. We are building a Super community and every voice matters.
-   * You can use [Markdown](https://www.markdownguide.org/) to make your post more presentable.
-3. Answer any questions if requested by our moderators. They will look at your offer and make a test order.
-4. If all is fine, your offer will be moved to the **Approved** category.
-5. If your offer becomes **Inactive**, then you can contact our support in the same post.
+1. Create an offer following the [Providers and Offers](/developers/cli_guides/providers_offers) guide. Your offer will appear in Marketplace GUI in the **Unmoderated** category.
+2. Check that your new offer is fully functional and can be ordered using SPCTL.
+3. Create a new post on Super Protocol Discord in the [#offers](https://discord.com/channels/951018794590023681/1239934457041916035) channel:
+   + Make sure that it follows the naming convention: "Offer ###. The name of your offer" For example: "Offer 12. Tunnels Launcher".
+   + Add a link to the offer in Marketplace GUI. The link is what you see when you open an offer window. It looks something like [marketplace.superprotocol.com/?offer=offerId%3D12&tab=about](https://marketplace.superprotocol.com/?offer=offerId%3D12&tab=about).
+   + Introduce yourself and your work to the community (optional).
+   + Use [Markdown](https://www.markdownguide.org/) to make your post more presentable.
+4. Answer questions by our moderators. They will look at your offer and make a test order.
+5. If all is fine, your offer will be moved to the **Approved** category.
+6. If your offer becomes **Inactive**, contact the Super Protocol team in the offer's post or [create a ticket](https://discord.com/channels/951018794590023681/1094128903037128735).
 
-This Discord topic may also be used by other users for provide feedback about your offer. 
-
-The Super Marketplace is a great way to share and monetize your work in a secure and confidential manner. Everyone is welcome! 
+Note that other users may provide feedback on your offer using the same offer's post.

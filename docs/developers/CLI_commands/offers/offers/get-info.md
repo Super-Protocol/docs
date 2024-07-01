@@ -17,7 +17,7 @@ Display information on an offer as stored on blockchain.
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` or `value` |
+| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer |
 | `offerId`     | Offer ID                        |
 
 ## Option

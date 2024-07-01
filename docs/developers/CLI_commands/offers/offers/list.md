@@ -17,17 +17,17 @@ Display a list of available offers depending on the type.
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` or `value` |
+| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer|
 
 ## Options
 
-For TEE offers:
+For the `tee` type:
 
 |**Name**|**Description**|
 |:-|:-|
 |`--fields`|Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, <br/>`total_cores`, `free_cores`, `cancelable`,`modified_date`. Fields must be separated with commas|
 
-For value offers:
+For the `value` type:
 
 |**Name**|**Description**|
 |:-|:-|

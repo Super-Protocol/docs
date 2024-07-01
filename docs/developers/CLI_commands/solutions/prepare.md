@@ -7,7 +7,7 @@ sidebar_label: "prepare"
 
 Pack a solution, sign it with [Gramine](https://gramineproject.io/), and write a [manifest](https://gramine.readthedocs.io/en/stable/manifest-syntax.html).
 
-This allows the execution of the "graminized" solution code inside an Intel SGX confidential enclave (Trusted Execution Environment). When the solution is prepared and packed, you can [upload](/developers/cli_commands/files/upload) the resulting archive to a distributed storage to use the solution in orders.
+This allows the execution of the "graminized" solution code inside a confidential enclave (Trusted Execution Environment). When the solution is prepared and packed, you can [upload](/developers/cli_commands/files/upload) the resulting archive to a distributed storage to use the solution in orders.
 
 ## Synopsis
 
