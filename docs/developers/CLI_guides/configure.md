@@ -1,7 +1,7 @@
 ---
-id: "configuring_spctl"
-title: "Configuring SPCTL"
-slug: "/cli_guides/configuring"
+id: "configure_spctl"
+title: "Configure SPCTL"
+slug: "/cli_guides/configure"
 sidebar_position: 1
 ---
 

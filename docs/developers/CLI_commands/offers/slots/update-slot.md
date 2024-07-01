@@ -11,7 +11,7 @@ Use the [offers get](/developers/cli_commands/offers/offers/get) command to get 
 
 Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) section to create the initial offer requirements. Refer to the description of the [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command for the JSON file format and object descriptions.
 
-**Important:** The `offers update-slot` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `offers update-slot` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configure#for-offer-providers)).
 
 ## Synopsis
 

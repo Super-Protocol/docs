@@ -7,7 +7,7 @@ sidebar_position: 7
 
 This section contains the full list of commands for the Super Protocol CLI tool SPCTL.
 
-[Configure SPCTL](/developers/cli_guides/configuring) before using these commands. Be mindful of the [testnet limitations](/testnet/limitations) when using the Marketplace CLI and GUI.
+[Configure SPCTL](/developers/cli_guides/configure) before using these commands. Be mindful of the [testnet limitations](/testnet/limitations) when using the Marketplace CLI and GUI.
 
 ## CLI command groups
 

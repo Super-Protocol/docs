@@ -9,7 +9,7 @@ Update information of an existing offer using an offer description JSON file.
 
 Refer to the [Offer description](/developers/cli_guides/providers_offers#offer-description) section to create the initial offer description.
 
-**Important:** The `offers update` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `offers update` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configure#for-offer-providers)).
 
 ## Synopsis
 

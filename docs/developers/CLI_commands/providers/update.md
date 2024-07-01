@@ -9,7 +9,7 @@ Update the current provider using a provider JSON file.
 
 Provider Tools creates the provider JSON file in [Step 4 of the Providers and Offers](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) guide.
 
-**Important:** The `providers update` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `providers update` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configure#for-offer-providers)).
 
 ## Synopsis
 

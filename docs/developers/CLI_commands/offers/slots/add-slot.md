@@ -9,7 +9,7 @@ Create an additional [requirement slot](/developers/fundamentals/slots#requireme
 
 Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) section to create the initial offer requirements.
 
-**Important:** The `offers add-slot` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `offers add-slot` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configure#for-offer-providers)).
 
 ## Synopsis
 
