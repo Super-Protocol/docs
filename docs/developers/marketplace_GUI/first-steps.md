@@ -5,7 +5,7 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configuring SPCTL](/developers/cli_guides/configuring/) guide.
+This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
 
 The Marketplace GUI is available for anyone to browse even without the MetaMask extension installed. However, you need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your Testnet Account address, Private Key, and Access Token.
 

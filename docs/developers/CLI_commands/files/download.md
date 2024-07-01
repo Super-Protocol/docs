@@ -7,7 +7,7 @@ sidebar_label: "download"
 
 Download a file from remote storage and decrypts it using the information in a resource JSON file.
 
-The resource JSON file is created as a result of the [`files upload`](/cli_commands/files/upload) command.
+The resource JSON file is created as a result of the [`files upload`](/developers/cli_commands/files/upload) command.
 
 ## Synopsis
 

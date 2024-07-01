@@ -9,7 +9,7 @@ Delete a requirement slot in an offer.
 
 Use the [offers get](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
 
-**Important:** The `offers delete-slot` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `offers delete-slot` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
 ## Synopsis
 

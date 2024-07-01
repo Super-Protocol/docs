@@ -59,7 +59,7 @@ You need to add the following secrets:
 
   If you private key and certificate files are named differently, then adjust the commands accordingly.
 
-- `SPCTL_CONFIG_BASE64` - save here your [SPCTL config](/developers/cli_guides/configuring) in base64 format. Use this command:
+- `SPCTL_CONFIG_BASE64` - save here your [SPCTL config](/developers/cli_guides/configure) in base64 format. Use this command:
 
   ```
   echo "$(cat config.json)" | base64

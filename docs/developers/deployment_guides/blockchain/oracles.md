@@ -35,7 +35,7 @@ You will need:
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
-- [SPCTL](/developers/cli_guides/) - our CLI tool, must be fully [configured](/developers/cli_guides/configuring), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
+- [SPCTL](/developers/cli_guides/) - our CLI tool, must be fully [configured](/developers/cli_guides/configure), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
 ### Create / generate
 

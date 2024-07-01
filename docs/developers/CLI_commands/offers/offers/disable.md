@@ -7,7 +7,7 @@ sidebar_position: 7
 
 Disable an existing enabled offer.
 
-**Important:** The `offers disable` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `offers disable` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
 ## Synopsis
 

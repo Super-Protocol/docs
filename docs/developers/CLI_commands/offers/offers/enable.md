@@ -7,7 +7,7 @@ sidebar_position: 8
 
 Enable an existing disabled offer.
 
-**Important:** The `offers enable` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
+**Important:** The `offers enable` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
 ## Synopsis
 

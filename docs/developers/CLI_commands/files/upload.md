@@ -11,7 +11,7 @@ Users can temporarily store their solution and data files to create an order usi
 
 Depending on the options, the command does one of the following:
 
-- Uploads to a storage directly. This requires a Storj account and SPCTL [configured](/developers/cli_guides/configuring#set-up-storj) to use it.
+- Uploads to a storage directly. This requires a Storj account and SPCTL [configured](/developers/cli_guides/configure#set-up-storj) to use it.
 
 - Creates a storage order using one of the storage offers. This does not require a Storj account but requires paying TEE tokens for the order according to the offer pricing and selected lease duration.
 
@@ -64,7 +64,7 @@ The following command uploads the `content.tar.gz` file in the SPCTL root direct
 ./spctl files upload content.tar.gz
 ```
 
-To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configuring#set-up-storj) section to create a bucket and access grants and set up SPCTL.
+To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configure#set-up-storj) section to create a bucket and access grants and set up SPCTL.
 
 **Example 2.** Upload using a storage offer
 

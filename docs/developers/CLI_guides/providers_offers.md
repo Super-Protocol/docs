@@ -35,7 +35,7 @@ To set up a provider and create offers, you need:
   + _Private Key_ – the private key of the Testnet wallet;
   + _Access Token_ – necessary to receive free test TEE and MATIC tokens.
 
-- [SPCTL](/developers/cli_guides/) – Super Protocol CLI tool. You need it to upload your offers and create an Offer Provisioner order. Refer to the [SPCTL guide](/developers/cli_guides/configuring) to install and configure it.
+- [SPCTL](/developers/cli_guides/) – Super Protocol CLI tool. You need it to upload your offers and create an Offer Provisioner order. Refer to the [SPCTL guide](/developers/cli_guides/configure) to install and configure it.
 
 - (optional) [Storj](https://www.storj.io/) account, either Free Trial or Pro.
 
@@ -151,7 +151,7 @@ You can also check all your orders, including storage orders, by using the [`ord
 
 **Upload to your Storj account**
 
-Alternatively, you can upload offer content to your Storj account for more control. It is also less hassle in the long term since you do not need to keep a storage order running. As a downside, you must have a Storj account and [configured SPCTL](/developers/cli_guides/configuring) to use it.
+Alternatively, you can upload offer content to your Storj account for more control. It is also less hassle in the long term since you do not need to keep a storage order running. As a downside, you must have a Storj account and [configured SPCTL](/developers/cli_guides/configure) to use it.
 
 :::note
 
@@ -434,7 +434,7 @@ Provider Tools also creates a new directory `solution-execution-controller` or `
 
 Provider Tools also creates a provider's SPCTL configuration file in its root directory. Its name is similar to `spctl-config-0xB9f0b7bBDbAe9fBe3E60BdC567e253f503605BAa.json`, where `0xB9f0b7bBDbAe9fBe3E60BdC567e253f503605BAa` is your Authority Account address. This SPCTL config allows you to manage your provider and offers.
 
-Rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or [download](/developers/cli_guides/configuring) SPCTL to the Provider Tools directory. It is your Provider SPCTL.
+Rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or [download](/developers/cli_guides/configure) SPCTL to the Provider Tools directory. It is your Provider SPCTL.
 
 Alternatively, copy this provider's SPCTL config to your SPCTL directory. Use the `--config` option with [SPCTL commands](/developers/cli_commands) to manage your provider and orders. For example:
 
