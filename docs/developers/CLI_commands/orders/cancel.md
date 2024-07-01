@@ -1,26 +1,26 @@
 ---
 id: "orders-cancel"
-title: "cancel"
+title: "orders cancel"
 slug: "/cli_commands/orders/cancel"
 sidebar_label: "cancel"
 ---
 
-Cancel order with `id`.
+Cancel an order.
 
-## Usage
+## Synopsis
 
 ```
-./spctl orders cancel <id> [OPTIONS]
+./spctl orders cancel <orderId> [option]
 ```
 
-## Arguments
+## Argument
 
 |**Name**|**Description**|
 | :- | :- |
-|`id`|Order `id`|
+|`orderId`|Order ID|
 
 ## Options
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--config`|Path to the configuration file. Default is `./config.json`|

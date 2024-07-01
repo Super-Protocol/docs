@@ -1,93 +1,85 @@
 ---
 id: "cli-files-upload"
-title: "Files upload"
+title: "files upload"
 slug: "/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 
-Upload files to a remote storage, such as Storj. This command serves two main purposes:
+Upload a file to a remote storage, such as Storj.
 
-* **For users:** temporarily storing your deployment files until you create the main TEE compute order using the [workflows create](/developers/cli_commands/workflows/create) command, whereas your solutions and data will be downloaded by the TEE for execution;
-* **For providers:** storing the contents of your Solution or Data offers so that they are available for order. In this case you should use a long-term lease period.
+Users can temporarily store their solution and data files to create an order using the [workflows create](/developers/cli_commands/workflows/create) command. Providers can store the content of their solution and data offers to make it available for user's orders long-term.
 
-There are two ways to upload:
+Depending on the options, the command does one of the following:
 
-**1. Upload to a storage offer** 
- 
-A storage order will be created using one of the storage offers from the Marketplace. This is a convenient way for new users because you don't need to set up your own storage account. This functionality is available in SPCTL version 0.8.6 and up. You will be charged for this order according to the offer pricing and your selected lease duration.
+- Uploads to a storage directly. This requires a Storj account and SPCTL [configured](/developers/cli_guides/configuring#set-up-storj) to use it.
 
-**2. Upload to your own storage**
+- Creates a storage order using one of the storage offers. This does not require a Storj account but requires paying TEE tokens for the order according to the offer pricing and selected lease duration.
 
-Advanced users may choose to upload to their own storage for better control and flexibility. In this case the file will be uploaded to the root directory of the bucket specified in the SPCTL [configuration file](/developers/cli_guides/configuring#set-up-storj).
+Choose one of these methods that suits you better.
 
-## Usage
+## Synopsis
 
 ```
-./spctl files upload <localPath> [OPTIONS]
+./spctl files upload <localPath> [option ...]
 ```
 
 **Input:**
 
-* A `tar.gz` archive - for Solutions, it's the `tar.gz` archive resulted from the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For Data, it's a simple `tar.gz` archive containing the data files.
+- TAR.GZ archive. For solutions, this file is created by the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For data, it is an archive containing the dataset files.
 
-Each archive is uploaded separately. So, if you are deploying a solution with two datasets, you will need to run the upload command three times using different inputs.
+:::note
+Upload each archive separately. For example, if you are deploying a solution with two datasets, run the upload command three times using different inputs.
+:::
 
 **Output:**
 
-* A `json` resource file, containing the information for TEE on how to access your uploaded solution. You will need this file for the  [workflows create](/developers/cli_commands/workflows/create#example-using-own-solution-and-data) command.
+- Resource JSON file containing the information for TEE on how to access the uploaded file.
 
-## Example: Storage offer
-
-In this example we will use the scenario of uploading to a storage offer.
-
-```
-./spctl files upload fileData.tar.gz --storage 25,33 --min-rent-minutes 120
-```
-
-Where:
-* `fileData.tar.gz` - path to the archive with your solution or data. 
-* `--storage 25,33` - slot ID #33 of storage offer ID #25 will be used to create a storage order (maximum disk capacity for this slot is 0.977 GB). This option is not needed if uploading to your own storage (in which case credentials are taken from the SPCTL config).
-* `--min-rent-minutes 120` - the lease period of a storage, equal to 2 hours. Not needed if uploading to your own storage.
-
-In some cases you might need additional options, if you want to use metadata or change the file names.
-
-```
-./spctl files upload fileData.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 25,33 --min-rent-minutes 120
-```
-
-Where:
-* `--filename ./fileData.tar.gz` - the name of the resulting file uploaded to storage.
-* `--output ./fileResource.json` - the path and name of the resource file.
-* `--metadata ./fileMetadata.json` - the path and name of the metadata file that will be added to a resource file during the uploading process.
-
-## Example: Storj
-
-If you'd prefer to use your own Storj account, then you need to set up the `config.json` of your SPCTL as [here](/developers/cli_guides/configuring#set-up-storj).
-
-And then run this command:
-
-```
-./spctl files upload fileData.tar.gz
-```
-
-Additional options as described above are applicable as well.
-
-## Arguments
+## Argument
 
 |**Name**| **Description**                |
 | :- |:-------------------------------|
-|`localPath`| Path to the `tar.gz` archive for uploading |
+|`localPath`| Path to the TAR.GZ archive for uploading |
 
 ## Options
 
-| **Name, shorthand**  | **Default**       | **Description**                                                                                                                                                                                                         |
-|:---------------------|:------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--filename`         | Random string     | The name of a resulting file in the storage                                                                                                                                                                             |
-| `--output`           | `./resource.json` | The path to save a resource file that is used to access the uploaded file                                                                                                                                               |
-| `--skip-encryption`  |                   | Skip file encrypting step before upload                                                                                                                                                                                 |
-| `--metadata`         |                   | The path to a metadata file for adding fields to a resource file, generated by the [solutions prepare](/developers/cli_commands/solutions/prepare) command |
-| `--max-concurrent`   |             | Maximum concurrent pieces to upload at once per transfer. It allows to limit the number of threads when uploading, it should be used only when dealing with a memory-constrained environment                            |
-| `--storage`          | []                | Storage offer in the format `<offer_id>,<slot_id>`                                                                                                                                                                      |
-| `--min-rent-minutes` | 60                | Storage lease period. Used with the `--storage` option.               |
-| `--config`           | `./config.json`   | The path to a configuration file                                                                                                                                                                                        |
+| **Name**  | **Description**   |
+|:---------------------|:------------------|
+| `--filename`         | Name of the resulting file in the storage. Default is a random string   |
+| `--output`           | Path to save the output resource JSON file. Default is `./resource.json`                |
+| `--skip-encryption`  | Flag to skip file encrypting step before upload   |
+| `--metadata`         | Path to a metadata file for adding fields to the resource JSON file. This file is generated by the [solutions prepare](/developers/cli_commands/solutions/prepare) command |
+| `--max-concurrent`   | Maximum concurrent pieces to upload at once per transfer to limit the number of threads. Use only when dealing with a memory-constrained environment  |
+| `--storage`          | Option to use a storage offer. Must follow the format `<offer_id>,<slot_id>`           |
+| `--min-rent-minutes` | Storage lease period. Use together with `--storage`. Default is `60`              |
+| `--config`           | Path to a configuration file. Default is `./config.json`            |
 
+## Examples
+
+**Example 1.** Upload to remote storage directly
+
+The following command uploads the `content.tar.gz` file in the SPCTL root directory.
+
+```
+./spctl files upload content.tar.gz
+```
+
+To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configuring#set-up-storj) section to create a bucket and access grants and set up SPCTL.
+
+**Example 2.** Upload using a storage offer
+
+The following command uploads the `content.tar.gz` in the SPCTL root directory. The command creates a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing)  (ID 25) and the requirement slot (ID 33). The lease period is 120 minutes.
+
+```
+./spctl files upload content.tar.gz --storage 25,33 --min-rent-minutes 120
+```
+
+Since the `--storage` option is set, this command does not require a Storj account. However, when the lease period is over, the content will become unavailable unless you [replenish the order deposit](/developers/cli_commands/orders/replenish-deposit).
+
+**Example 3.** Additional options
+
+The following command uploads the `content.tar.gz` file located in the `data` directory in the SPCTL root directory. The name of the uploaded file will be `fileData.tar.gz`. The name of the output resource JSON file will be `fileResource.json`. The `fileMetadata.json` metadata file will be added to the resource file during the upload. The command creates a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing)  (ID 25) and the requirement slot (ID 33). The lease period is 120 minutes.
+
+```
+./spctl files upload ./data/content.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 25,33 --min-rent-minutes 120
+```

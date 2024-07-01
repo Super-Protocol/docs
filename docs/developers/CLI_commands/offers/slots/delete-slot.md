@@ -1,40 +1,40 @@
 ---
 id: "delete-slot"
-title: "delete-slot"
+title: "offers delete-slot"
 slug: "/cli_commands/offers/slots/delete-slot"
 sidebar_position: 3
 ---
 
-Delete an existing slot in an existing offer.
+Delete a requirement slot in an offer.
 
-**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
+Use the [offers get](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
 
-## Usage
+**Important:** The `offers delete-slot` command requires SPCTL with the [provider configuration file]((/developers/cli_guides/configuring#for-providers)).
 
-Syntax:
-
-```
-./spctl offers delete-slot type [OPTIONS]
-```
-
-Example: delete an existing slot in an existing offer.
+## Synopsis
 
 ```
-./spctl offers delete-slot value --offer 10 --slot 1
+./spctl offers delete-slot type --offer <offerId> --slot <slotId> [option]
 ```
-
-To learn which slot id's are contained in an offer you can use the [offers get](/developers/cli_commands/offers/offers/get) command and then [offers get-slot](/developers/cli_commands/offers/slots/get-slot) to get additional details on the slot.
 
 ## Arguments
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of offer: `tee` or `value` |
+|`type`   |Type of the offer: `tee` or `value` |
+| `offerId`  |Offer ID  |
+| `slotId`  |Slot ID |
 
-## Options
+## Option
 
-| **Name, shorthand** | **Default**     | **Description**                |
-|:--------------------|:----------------|:-------------------------------|
-| `--offer`           |                 | Offer `id`                     |
-| `--slot`            |                 | Slot `id`                      |
-| `--config`          | `./config.json` | Path to the configuration file |
+| **Name** |**Description**                |
+|:--------------------|:-------------------------------|
+| `--config`          |Path to the configuration file. Default is `./config.json` |
+
+## Example
+
+The following command deletes the requirement slot (ID 47) in the offer (ID 39):
+
+```
+./spctl offers delete-slot value --offer 39 --slot 47
+```

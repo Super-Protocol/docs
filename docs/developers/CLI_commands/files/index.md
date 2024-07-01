@@ -6,9 +6,11 @@ sidebar_position: 3
 
 ---
 
-Manage your files in third-party storages such as Storj. You will need to have set up access to a storage when [configuring SPCTL](/developers/cli_guides/configuring).
+Manage files in third-party storage such as Storj.
 
-## Usage
+The majority of these commands require a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configuring#set-up-storj) section to create a bucket and access grants and set up SPCTL.
+
+## Synopsis
 
 ```
 ./spctl files <command>
@@ -18,6 +20,6 @@ Manage your files in third-party storages such as Storj. You will need to have s
 
 |**Command**|**Description**|
 | :- | :- |
-|[delete](/developers/cli_commands/files/delete)|Delete a file in the remote storage using resource file `<resourcePath>`|
-|[download](/developers/cli_commands/files/download)|Download and decrypt a file from the remote storage to `<localPath>` using resource file `<resourcePath>`|
-|[upload](/developers/cli_commands/files/upload)|Upload a file specified by the `<localPath>` argument to the remote storage|
+|[delete](/developers/cli_commands/files/delete)|Delete a file in remote storage |
+|[download](/developers/cli_commands/files/download)|Download and decrypt a file from remote storage|
+|[upload](/developers/cli_commands/files/upload)|Upload a file to remote storage or create a storage order|

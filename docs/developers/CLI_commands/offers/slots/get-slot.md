@@ -1,39 +1,38 @@
 ---
 id: "offers-get-slot"
-title: "get-slot"
+title: "offers get-slot"
 slug: "/cli_commands/offers/slots/get-slot"
 sidebar_position: 4
 ---
 
-Display information for specific slot of a specific offer.
+Display the information for a requirement slot in an offer.
 
-## Usage
+Use the [offers get](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer.
 
-Syntax.
-
-```
-./spctl offers get-slot <type> --offer <id> --slot <id>
-```
-
-For example, this line will get you slot information for [this](https://marketplace.superprotocol.com/compute?offerId=1) compute offer.
+## Synopsis
 
 ```
-./spctl offers get-slot tee --offer 1 --slot 1
+./spctl offers get-slot <type> --offer <offerId> --slot <slotId>
 ```
-
-To learn which slot numbers are contained in an offer you can use the [offers get](/developers/cli_commands/offers/offers/get) command.
 
 ## Arguments
 
-|**Name**| **Description**                 |
-| :- |:--------------------------------|
-|`type`| Type of offer: `tee` or `value` |
+| **Name** | **Description**                 |
+|:---------|:--------------------------------|
+|`type`   |Type of the offer: `tee` or `value` |
+| `offerId`  |Offer ID  |
+| `slotId`  |Slot ID |
 
-## Options
+## Option
 
-You will need to use both `offer` and `slot` with their id's.
+| **Name** |**Description**                |
+|:--------------------|:-------------------------------|
+| `--config`          |Path to the configuration file. Default is `./config.json` |
 
-| **Name, shorthand** | **Default** | **Description**            |
-|:--------------------|:------------|:---------------------------|
-| `--offer`           |             | Available fields: offer ID |
-| `--slot`            |             | Available fields: slot ID  |
+## Example
+
+The following command displays the information on the slot (ID 47) in the offer (ID 39):
+
+```
+./spctl offers get-slot tee --offer 39 --slot 47
+```

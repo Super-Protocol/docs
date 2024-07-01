@@ -57,7 +57,7 @@ Storage providers create and manage storage offers.
 Any Super Protocol user can [register as a provider](/developers/cli_guides/providers_offers/) and create solution and data offers. This way, users can share and monetize their applications and datasets.
 
 :::note
-Currently, only Super Protocol provides storage and compute resources, while other providers are limited to offering solutions and data. In future releases, the ability to create compute and storage offers will be available to anyone with proper hardware.
+Currently, only Super Protocol provides storage and compute offers. In future releases, the ability to create compute and storage offers will be available to anyone with proper hardware.
 :::
 
 The filter on the left side of the screen in the Marketplace GUI divides all offers into four categories:

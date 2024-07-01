@@ -1,28 +1,30 @@
 ---
 id: "offers-download-content"
-title: "download-content"
+title: "offers download-content"
 slug: "/cli_commands/offers/offers/download-content"
 sidebar_position: 4
 
 ---
 
-Download the content of an offer with `id` (only for offers that allow this operation)
+Download the content of an offer.
 
-## Usage
+The command only works for offers that allow this operation.
+
+## Synopsis
 
 ```
-./spctl offers download-content <id> [OPTIONS]
+./spctl offers download-content <offerId> [option ...]
 ```
 
-## Arguments
+## Argument
 
 |**Name**|**Description**|
 | :- | :- |
-|`id`|Offer `id`|
+|`offerId`|Offer ID|
 
 ## Options
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--save-to`|`./offer.tar.gz`|Path to save the content|
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--save-to`|Path to save the content. Default is the original filename|
+|`--config`|Path to the configuration file. Default is `./config.json`|

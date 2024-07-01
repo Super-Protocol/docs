@@ -1,27 +1,35 @@
 ---
 id: "cli-providers-get"
-title: "Get provider"
+title: "providers get"
 slug: "/cli_commands/providers/get"
 sidebar_label: "get"
 ---
 
-Display detailed information on provider with `address`.
+Display information on a provider using its authority account address.
 
-## Usage
+## Synopsis
 
 ```
-./spctl providers get <address> [OPTIONS]
+./spctl providers get <address> [option ...]
 ```
 
-## Arguments
+## Argument
 
 |**Name**| **Description**   |
 | :- |:------------------|
-|`address`| Provider address. |
+|`address`| Provider authority account address |
 
 ## Options
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--fields`|`name,description,`<br/>`authority_account,action_account`|Available fields: `address, name, description, authority_account, action_account, modified_date`|
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+|:-|:-|
+|`--fields`|Default fields: `name`, `description`, `authority_account`, `action_account`, `token_receiver`, `metadata`. Additional fields: `address`, `modified_date`. Fields must be separated with commas|
+|`--config`|Path to the configuration file. Default is `./config.json`|
+
+## Example
+
+The following command displays the name, address, and description of the provider with the authority account `0xB9fD0b77BbA3E60BdC567Ee9fBe453f506053BAa`:
+
+```
+./spctl providers get 0xB9fD0b77BbA3E60BdC567Ee9fBe453f506053BAa --fields name,address,description
+```

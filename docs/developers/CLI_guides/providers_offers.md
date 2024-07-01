@@ -167,7 +167,7 @@ Execute the following [`files upload`](/developers/cli_commands/files/upload) co
 
 Replace `OFFER_CONTENT.tar.gz` with the name of the archive with your prepared solution or data.
 
-As a result, SPCTL generates the `resource.json` file with information for TEE to access your uploaded offer content. Copy this file to the Provider Tools directory.
+As a result, SPCTL generates the `resource.json` file with information for TEE on how to access your uploaded offer content. Copy this file to the Provider Tools directory.
 
 ---
 
@@ -344,7 +344,7 @@ You must specify the values of the required slots and options for your offer. Ea
 
 Create second JSON file. In this guide, it will be called `offer-slot.json`, but you can choose any name you want.
 
-Copy and add the following example format to your `offer-slot.json` file:
+The following is an `offer-slot.json` template file with example values:
 
 ```json title="offer-slot.json"
 {
@@ -368,7 +368,7 @@ Copy and add the following example format to your `offer-slot.json` file:
 }
 ```
 
-Modify all these fields as necessary. Since this is your offer, only you know the [pricing terms](/developers/fundamentals/orders#cost-and-pricing) and compute configuration your solution or data needs to run.
+Copy it to your `offer-slot.json` file and modify all the values as necessary. Since this is your offer, only you know the [pricing terms](/developers/fundamentals/orders#cost-and-pricing) and compute configuration your solution or data needs to run.
 
 Refer to the [`offers add-slot`](/developers/cli_commands/offers/slots/add-slot) command's documentation to learn more about these fields.
 
