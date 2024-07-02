@@ -1,37 +1,34 @@
 ---
 id: "cli-quotes-validate"
-title: "Validate a quote"
+title: "quotes validate"
 slug: "/cli_commands/quotes/validate"
 sidebar_label: "validate"
 ---
 
-Check that the contents of a domain are running in a genuine confidential environment (TEE). 
+Check if the domain content runs in a confidential environment. The command also displays if the domain content is Super Protocol offers.
 
-In addition, the command allows to link the contents to Marketplace solution offers if the contents are offers.
+In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/confidentiality) feature.
 
-In the marketplace, it is known as [Check Confidentiality](/developers/marketplace/confidentiality).
-
-## Usage
+## Synopsis
 
 ```
-./spctl quotes validate <url> [OPTIONS]
+./spctl quotes validate <url> [option]
 ```
 
-## Arguments
+## Argument
 
 | **Name** | **Description**                |
 |:---------|:-------------------------------|
-| `url`    | The valid URL of a domain only |
+| `url`    |Domain URL |
 
+## Option
 
-## Options
+|**Name**|**Description**|
+|:-|:-|
+|`--config`|Path to the configuration file. Default is `./config.json`|
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--config`|`./config.json`|Path to the configuration file|
-
-Example with our permanently running SuperChat domain:
+## Example
 
 ```
-./spctl quotes validate https://vota-eli-gals.superprotocol.io/
+./spctl quotes validate https://bbs-tdr-bren.superprotocol.io
 ```

@@ -28,7 +28,7 @@ Create `.env` file using command:
 cp .env.example .env
 ```
 
-In addition to the storage access that you have previously [created](/developers/cli_guides/configuring) to configure SPCTL, you will need S3 credentials for those buckets (because the Super Chat app uses S3 to interact with StorJ). Get them through [this guide](https://docs.storj.io/dcs/access#create-s3-credentials).
+In addition to the storage access that you have previously [created](/developers/cli_guides/configure) to configure SPCTL, you will need S3 credentials for those buckets (because the Super Chat app uses S3 to interact with StorJ). Get them through [this guide](https://docs.storj.io/dcs/access#create-s3-credentials).
 
 Add `Access Key`, `Secret Key`, `S3 Endpoint` and the name of your bucket to the `.env` file.
 

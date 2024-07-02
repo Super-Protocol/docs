@@ -37,7 +37,7 @@ Now you can dive right into it:
 
 8. Follow the [Providers and Offers Guide](/developers/cli_guides/providers_offers) to create your first provider and an offer.
 9. Follow the [Moderation Guidelines](/developers/marketplace/moderation/) to approve your offer for Marketplace GUI.
-10. [Update SPCTL configuration](/developers/cli_guides/configuring#for-providers) as a provider to enable management of your provider and offers.
+10. [Update SPCTL configuration](/developers/cli_guides/configure#for-offer-providers) as a provider to enable management of your provider and offers.
 11. Use the [SPCTL commands](/developers/cli_guides/providers_offers#faq) to manage your provider and offers.
 
 This is, of course, just the tip of the iceberg. Super Protocol is a powerful tool and it's up to you to make it your own.

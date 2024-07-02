@@ -1,23 +1,31 @@
 ---
 id: "cli-providers-list"
-title: "List providers"
+title: "providers list"
 slug: "/cli_commands/providers/list"
 sidebar_label: "list"
 ---
 
-List all the providers on blockchain. 
+List all registered providers on the blockchain.
 
-## Usage
+## Synopsis
 
 ```
-./spctl providers list [OPTIONS]
+./spctl providers list [option ...]
 ```
 
 ## Options
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--fields`|`address,name`|Available fields: `address, name, description, authority_account, action_account, modified_date`|
-|`--limit`|`10`|Number of records to display|
-|`--cursor`||Cursor for pagination|
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**   |**Description**|
+|:---------|:-|
+|`--fields`|Default fields: `address`, `name`.Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. Fields must be separated with commas|
+|`--limit`|Number of records to display. Default is `10`|
+|`--cursor`|Cursor for pagination|
+|`--config`|Path to the configuration file. Default is `./config.json`|
+
+## Example
+
+The following command displays the names, descriptions, authority account addresses, and action account addresses of all registered providers:
+
+```
+./spctl providers list --fields name,description,authority_account,action_account
+```

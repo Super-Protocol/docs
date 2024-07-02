@@ -1,115 +1,102 @@
 ---
 id: "create"
-title: "Create workflow"
+title: "workflows create"
 slug: "/cli_commands/workflows/create"
 sidebar_label: "create"
 ---
 
-This is one of the most important commands in Super Protocol. It manages the creation of new orders.
+Create an order (TEE compute) and suborders (solution, data, storage).
 
-This command creates the main order (TEE compute) as well as the sub-orders (solution, data, storage) that are related to the main order. For solutions and data you can choose offers from the Marketplace or upload your own.
+For solutions and data, it is possible to use existing offers or [uploaded](/developers/cli_commands/files/upload) files. Be mindful of the [testnet limitations](/testnet/limitations).
 
-The resulting order might look something like this (when viewed in the [Marketplace GUI](/developers/marketplace)):
+Read the [Super Protocol fundamentals](/developers/fundamentals) and the [Marketplace GUI walkthrough](/developers/marketplace/walkthrough/) to understand the logic of the Super Protocol order creation process.
 
-<img src={require('./../../images/cli_workflows_1.png').default} width="auto" height="auto"/>
-
-<br/>
-<br/>
-
-This command uses all the fundamental Super Protocol concepts: [offers](/developers/fundamentals/offers), [orders](/developers/fundamentals/orders), and [slots](/developers/fundamentals/slots). The [Marketplace GUI Walkthrough](/developers/marketplace/walkthrough) is also helpful in understanding the logic of order creation.
-
-Please be mindful of the [testnet limitations](/testnet/limitations) when creating orders.
-
-## Usage
+## Synopsis
 
 ```
-./spctl workflows create [OPTIONS]
+./spctl workflows create --solution <solutionId,solutionSlotId|solutionResourceJson> ... --data <dataId,dataSlotId|dataResourceJson> ... --storage <storageId,storageSlotId> [option ...]
 ```
 
-The result of this command is an order ID that you can then use to track and manage the order.
+After creating the order, the command shows the order ID in the terminal output. Use this order ID to track and manage the order.
 
-## Example: Marketplace Offers
+## Options
 
-Let's say you want to deploy [Super Chat](/developers/offers/superchat) using only the offers from the Marketplace, just like in the [Marketplace GUI Walkthrough](/developers/marketplace/walkthrough) guide.
+|**Name**|**Description**|
+| :- | :- |
+|`--tee`|IDs of the compute offer and slot separated with a comma. Default is automatic selection|
+|`--tee-slot-count`|Compute slot increments—how many times use the selected slot. Use this option together with `--tee`. Default is automatic selection|
+|`--tee-options`|ID of the compute option. Use this option together with `--tee`. Default is automatic selection|
+|`--tee-options-count`|Number of compute option increments. Use this option together with `--tee`. Default is automatic selection|
+|`--deposit`|Deposit in TEE tokens. Default is the minimum required deposit|
+|`--min-rent-minutes`|Compute lease time in minutes. Using this option will increase the required deposit. Default is the minimum required time|
+|`--solution`|IDs of the solution offer and slot separated with a comma or the path to the solution resource JSON file. Use this option multiple times if necessary|
+|`--data`|IDs of the data offer and slot separated with a comma or the path to the data resource JSON file. Use this option multiple times if necessary|
+|`--storage`|IDs of the storage offer and slot separated with a comma|
+|`--config`|Path to the configuration file. Default is `./config.json`|
 
-The command you'd use would look something like this:
+## Examples
+
+**Example 1.** Super Chat with automatic compute selection
+
+The following command deploys [Super Chat](/developers/offers/superchat):
 
 ```
 ./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
-Where:
-* `--solution 12,12` - the [Tunnels Launcher](/developers/offers/launcher), offer ID 12. Requirements: slot ID also #12.
-* `--solution 6,2` - the Node.js base image, offer ID #6. Requirements: slot ID #2.
-* `--data 17,22` - Super Chat Config data, offer ID #17. Requirements: slot ID #22.
-* `--storage 25,30` - storage for storing results, offer ID #25. Requirements: slot ID #30.
+Options used:
 
-**Note:** the absence of the `--tee` option means that SPCTL will use auto-select to choose the most appropriate compute offer and configuration for your workload.
+- `--solution 12,12`: [Tunnels Launcher](https://marketplace.superprotocol.com/solutions?offer=offerId%3D12) solution (offer ID 12, requirement slot ID 12)
+- `--solution 6,2`: [Node.js Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D6) solution (offer ID 6, requirement slot ID 2). Tunnels Launcher requires this solution to work
+- `--data 17,22`: [Super Chat Config](https://marketplace.superprotocol.com/data?offer=offerId%3D17) dataset (offer ID 17, requirement slot ID 22)
+- `--storage 25,30`: [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25) (offer ID 25, requirement slot ID 30)
 
-In some scenarios you might want to specify the exact compute offer that you want, but leave the rest to the auto-select. Then the command might look like this:
+The absence of the `--tee` option means that SPCTL automatically selects the most suitable compute offer and configuration for your workload. However, in certain scenarios, you might want to specify the exact compute offer but let SPCTL select the requirement slot and option automatically:
 
 ```
 ./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
-Where `--tee 4` means that you want to use specifically compute offer #4, but the combinations of slots and options are to be determined automatically.
+The `--tee 4` option means you want to use [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) (offer ID 4) but automatically determine the slot and option to use.
 
-## Example: Manual Compute Selection
+**Example 2.** Super Chat with manual compute selection
 
-You can also completely bypass auto-select and specify exactly which compute offer and configuration you want. Then your command might look something like this:
-
-```
-./spctl workflows create --tee 4,7 --tee-slot-count 4 --tee-options 10 --tee-options-count 7 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
-```
-Where:
-* `--tee 4,7 --tee-slot-count 4` - compute offer ID #4 with slot ID #7 that is used in 4 increments (so, four times).
-* `--tee-options 10 --tee-options-count 7` - compute offer ID #4 (as above) with options ID #10 that is used in 7 increments.
-
-Now let's specify deposits and lease:
+The following command deploys [Super Chat](/developers/offers/superchat) without automatic selection:
 
 ```
 ./spctl workflows create --tee 4,7 --tee-slot-count 4 --tee-options 10 --tee-options-count 7 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30 --deposit 2 --min-rent-minutes 120
 ```
 
-Where:
-* `--deposit 2` - deposit is specified as 2 TEE. 
-* `--min-rent-minutes 120` - the lease time is specified as 120 minutes. 
+Options used:
 
-If these are not specified, then the default minimums will be used. For instance, for the above offers the minimum deposit is 1.120 TEE and minimum lease time is 60 minutes. Minimum lease is determined by the maximum value of all Min.Time values across all offers in the order: if your compute Min.Time is 40 minutes, your base image Min.Time is 0 minutes, and your Tunnels Launcher Min.Time is 60 minutes, the system will require 60 minutes. 
+- `--tee 4,7`: [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) (offer ID 4, slot ID 7)
+- `--tee-slot-count 4`: four increments—use the selected slot four times
+- `--tee-options 10`: option ID 10 that is used in 7 increments
+- `--tee-options-count 7`: seven increments—use the selected option seven times
+- `--deposit 2`: deposit is 2 TEE
+- `--min-rent-minutes 120`: a minimum lease time is 120 minutes
+- other options are explained in the previous example
 
+If the `--deposit` and `--min-rent-minutes` are not specified, SPCTL uses the default minimums. The minimum lease time is the biggest of the minimum time values of all the offers in the order.
 
-## Example: Using own solution and data
+For the offers in this example, the minimum deposit is 1.120 TEE tokens and the minimum lease time is 60 minutes:
 
-The examples above use only offers from the Marketplace, but you most likely will want to deploy your own solutions and data. 
+- The requirement slot ID 7 of [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) has a minimum lease time of 10 minutes; four increments result in 40 minutes.
+- The requirement slot of [Tunnels Launcher](https://marketplace.superprotocol.com/solutions?offer=offerId%3D12) offer has a minimum lease time of 60 minutes.
+- Other offers in the order do not restrict the minimum lease time.
 
-Let's take a scenario where you want to deploy your own Python solution with two datasets: 
+**Example 3.** Use uploaded solution and data
+
+The following command creates an order using an [uploaded](/developers/cli_commands/files/upload) solution and data:
 
 ```
-./spctl workflows create --solution 5,1  --solution ./your-python.json --data ./your-input-1.json --data ./your-input-2.json --storage 25,30
+./spctl workflows create --solution 5,1  --solution ./python-solution.json --data ./data-input-1.json --data ./data-input-2.json --storage 25,30
 ```
 
-Where:
+Options used:
 
-* `--solution 5,1` - Python base image with offer ID #5. Requirements: slot ID #1.
-* `--solution ./your-python.json` - your own solution, file generated by the [files upload](/developers/cli_commands/files/upload) command.
-* `--data ./your-input-1.json` and `--data ./your-input-2.json` - your two data sets.
+- `--solution 5,1`: offer ID 5 ([Python Base Image](https://marketplace.superprotocol.com/solutions?offer=offerId%3D5)), requirement slot ID 1
+- `--solution ./python-solution.json`: uploaded solution specified in the `python-solution.json` resource file in the SPCTL root directory
+- `--data ./data-input-1.json` and `--data ./data-input-2.json`: uploaded datasets specified in the `data-input-1.json` and `data-input-2.json` resource files in the SPCTL root directory
 
-**Note:** this command requires that your solutions and data have been previously uploaded to the storage using the [upload](/developers/cli_commands/files/upload) command. It won't work as copy/paste.
-
-You can learn more about deploying your own solutions in the deployment guides. It's probably best to start with a simple Python solution [here](/developers/deployment_guides/python).
-
-## Options
-
-|**Name, shorthand**|**Description**|
-| :- | :- |
-|`--tee <id,slotId>`|Compute offer `id` with the `slotId`. Compute auto-select activates if not specified.|
-|`--tee-slot-count <value>`|Number of compute slots increments.|
-|`--tee-options <optionId>`|Compute options `optionId`.|
-|`--tee-options-count <value>`|Number of compute options increments.|
-|`--deposit <value>`|Deposit in TEE tokens. If not specified, then the minimum required deposit is used.|
-|`--min-rent-minutes <value>`|Compute lease time in minutes. Will increase the required deposit if used. |
-|`--solution <id,slotId>`|Solution offer `id` with `slotId`.|
-|`--data <id,slotId>`|Data offer `id` with `slotId`.|
-|`--storage <id,slotId>`|Storage offer `id` with `slotId`.|
-|`--config <path>`|`Path` to the configuration file. Default value `./config.json`|
-
+Learn more about deploying custom solutions in the [Deployment guides](/developers/deployment_guides).

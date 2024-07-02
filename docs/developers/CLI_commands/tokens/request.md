@@ -1,30 +1,32 @@
 ---
 id: "tokens-request"
-title: "Request"
+title: "tokens request"
 slug: "/cli_commands/tokens/request"
 sidebar_label: "request"
 ---
 
-Request to receive TEE and MATIC tokens for testing purposes. This command is only available during Testnet, subject to [Testnet limitations](/testnet/limitations/).
+Requests test TEE and MATIC tokens.
 
-## Usage
+This command is only available during Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
 
-Syntax.
-
-```
-./spctl tokens request [OPTIONS]
-```
-
-Example: receive TEE tokens.
+## Synopsis
 
 ```
-./spctl tokens request --tee
+./spctl tokens request [option ...]
 ```
 
 ## Options
 
-| **Name, shorthand** | **Default**     | **Description**                      |
-|:--------------------|:----------------|:-------------------------------------|
-| `--tee`             |                 | Request Super Protocol TEE tokens    |
-| `--matic`           |                 | Request Polygon Amoy MATIC tokens  |
-| `--config`          | `./config.json` | Path to the configuration file       |
+| **Name** | **Description**                      |
+|:--------------------|:-------------------------------------|
+| `--tee`             | Request Super Protocol TEE tokens    |
+| `--matic`           | Request Polygon Amoy MATIC tokens  |
+| `--config`          | Path to the configuration file. Default is `./config.json`       |
+
+## Example
+
+The followin command requests TEE tokens:
+
+```
+./spctl tokens request --tee
+```

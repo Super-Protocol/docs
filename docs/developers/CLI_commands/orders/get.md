@@ -1,29 +1,31 @@
 ---
 id: "orders-get"
-title: "get"
+title: "orders get"
 slug: "/cli_commands/orders/get"
 sidebar_label: "get"
 ---
 
-Display detailed information of an order with `id`. It doesn't necessarily have to be your own order - this information is openly available for all orders on blockchain.
+Display detailed information on an order.
 
-## Usage
+You can check any order, not only yours—this information is openly available for all orders on blockchain.
+
+## Synopsis
 
 ```
-./spctl orders get <id> [OPTIONS]
+./spctl orders get <orderId> [option ...]
 ```
 
 ## Arguments
 
 |**Name**|**Description**|
 | :- | :- |
-|`id`|Order `id`|
+|`orderId`|Order ID|
 
 ## Options
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--fields`|`offer_name,offer_description,`<br/>`type,status,total_deposit,`<br/>`total_unspent_deposit,modified_date`|Available fields: `id, offer_name, offer_description, type, status, offer_id, consumer_address, parent_order_id, total_deposit, total_unspent_deposit, deposit, unspent_deposit, cancelable, modified_date`|
-|`--suborders`|`false`|Show sub-orders|
-|`--suborders_fields`|`id,offer_name,offer_description,`<br/>`type,status,modified_date`|Sub-order available fields: `id, offer_name, offer_description, type, status, cancelable, actual_cost, modified_date`|
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--fields`|Default fields: `offer_name`, `offer_description`, `type`, `status`, `total_deposit`, `total_unspent_deposit`, `modified_date`. Additional fields: `id`, `offer_id`, `consumer_address`, `parent_order_id`, `deposit`, `unspent_deposit`, `cancelable`|
+|`--suborders`|Flag for showing suborders. Default is `false`|
+|`--suborders_fields`|Default fields: `id`, `offer_name`, `offer_description`, `type`, `status`, `modified_date`. Additional fields: `cancelable`, `actual_cost`. Use together with `--suborders true`|
+|`--config`|Path to the configuration file. Default is `./config.json`|

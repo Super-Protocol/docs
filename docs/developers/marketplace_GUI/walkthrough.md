@@ -145,7 +145,7 @@ Either input your own passphrase or generate a new one. Then press the `Place Or
 
 :::
 
-Note: Metamask is used only for Marketplace GUI. When creating orders via CLI your passphrase will be a part of your [SPCTL configuration](/developers/cli_guides/configuring).
+Note: Metamask is used only for Marketplace GUI. When creating orders via CLI your passphrase will be a part of your [SPCTL configuration](/developers/cli_guides/configure).
 
 <img src={require('./../images/marketplace_11.png').default}/>
 

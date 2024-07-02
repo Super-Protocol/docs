@@ -6,9 +6,11 @@ sidebar_position: 7
 
 ---
 
-View providers on blockchain. At this phase of testnet all providers are from the Super Protocol team. In upcoming releases you will be able to register as a provider and create offers. 
+View and update providers.
 
-## Usage
+Any user can register as a provider and create solution and data offers. Currently, only Super Protocol provides storage and compute offers. In future releases, the ability to create compute and storage offers will be available to anyone with proper hardware.
+
+## Synopsis
 
 ```
 ./spctl providers <command>
@@ -18,6 +20,6 @@ View providers on blockchain. At this phase of testnet all providers are from th
 
 | **Command**                                         | **Description**                                         |
 |:----------------------------------------------------|:--------------------------------------------------------|
-| [get](/developers/cli_commands/providers/get)       | Display detailed information on provider with `address` |
-| [update](/developers/cli_commands/providers/update) | Update the current provider's information               |
-| [list](/developers/cli_commands/providers/list)     | List providers                                          |
+| [get](/developers/cli_commands/providers/get)       | Display information on a provider using its authority account address|
+| [update](/developers/cli_commands/providers/update) | Update the current provider information               |
+| [list](/developers/cli_commands/providers/list)     | List all providers                                          |

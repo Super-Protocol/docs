@@ -1,47 +1,44 @@
 ---
 id: "update-slot"
-title: "update-slot"
+title: "offers update-slot"
 slug: "/cli_commands/offers/slots/update-slot"
 sidebar_position: 2
 ---
 
-This command uses information in a .json file to make updates to the [slot requirements](/developers/fundamentals/slots#requirements) in a previously created offer.
+Update a [requirement slot](/developers/fundamentals/slots#requirements) in an existing offer using the information in a JSON file.
 
-The initial offer requirements are created on Step 3 of the [Providers and Offers Guide](/developers/cli_guides/providers_offers#offer-requirements).
+Use the [offers get](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
 
-You can use the .json from the guide and modify the requirements as necessary or take the template from below. In this example we will call this file `offer-slot.json`. The file format and the field descriptions are outlined in the [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command.
+Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) section to create the initial offer requirements. Refer to the description of the [offers add-slot](/developers/cli_commands/offers/slots/add-slot) command for the JSON file format and object descriptions.
 
-**Important:** You need to [configure your SPCTL](/developers/cli_guides/configuring#for-providers) with the provider information for this command to work.
+**Important:** The `offers update-slot` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-## Usage
-
-Syntax:
+## Synopsis
 
 ```
-./spctl offers update-slot <type> [OPTIONS]
+./spctl offers update-slot <type> --offer <offerId> --slot <slotId> [option ...]
 ```
-
-Example:
-
-Update an existing value offer using the information in the `offer-slot.json`. You can point to the file location using the `--path` option. In the example below the file is assumed to be located in the SPCTL directory.
-
-```
-./spctl offers update-slot value --offer 10 --slot 1 --path ./offer-slot.json
-```
-
-To learn which slot id's are contained in an offer you can use the [offers get](/developers/cli_commands/offers/offers/get) command and then [offers get-slot](/developers/cli_commands/offers/slots/get-slot) to get additional details on the slot.
 
 ## Arguments
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of offer: `tee` or `value` |
+|`type`   |Type of the offer: `tee` or `value` |
+| `offerId`  |Offer ID  |
+| `slotId`  |Slot ID |
+
 
 ## Options
 
-| **Name, shorthand** | **Default**      | **Description**                |
-|:--------------------|:-----------------|:-------------------------------|
-| `--offer`           |                  | Offer `id`                     |
-| `--slot`            |                  | Slot `id`                      |
-| `--path`            | `./offer-slot.json`| Path to the slot content file  |
-| `--config`          | `./config.json`  | Path to the configuration file |
+| **Name** |**Description**                |
+|:--------------------|:-------------------------------|
+| `--path`    |Path to the slot content file. Default is `./offer-slot.json`|
+| `--config`          |Path to the configuration file. Default is `./config.json` |
+
+## Example
+
+The following command updates the slot (ID 47) in the offer (ID 39) using the information in the file `offer-slot.json` in the SPCTL directory:
+
+```
+./spctl offers update-slot value --offer 39 --slot 47 --path ./offer-slot.json
+```

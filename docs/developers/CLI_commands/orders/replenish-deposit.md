@@ -1,27 +1,29 @@
 ---
 id: "cli-orders-replenish-deposit"
-title: "Replenish order deposit"
+title: "orders replenish-deposit"
 slug: "/cli_commands/orders/replenish-deposit"
 sidebar_label: "replenish-deposit"
 ---
 
-Replenish order deposit with `id` by `amount` in TEE tokens. You will need this to keep an order going before it runs out of money. 
+Replenish the order deposit.
 
-## Usage
+Certain orders (e.g. Offer Provisioner and storage orders) require a positive deposit balance to keep running. 
+
+## Synopsis
 
 ```
-./spctl orders replenish-deposit <id> <amount> [OPTIONS]
+./spctl orders replenish-deposit <orderId> <amount> [option]
 ```
 
 ## Arguments
 
 |**Name**| **Description**                  |
 | :- |:---------------------------------|
-|`id`| Order `id`                       |
-|`amount`| Amount of TEE tokens to deposit. |
+|`orderId`| Order ID                       |
+|`amount`| Amount of TEE tokens to deposit |
 
-## Options
+## Option
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--config`|Path to the configuration file. Default is `./config.json`|

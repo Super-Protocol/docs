@@ -6,9 +6,11 @@ sidebar_position: 1
 
 ---
 
-Manage your TEE and MATIC tokens. TEE tokens are used as method of payment in Super Protocol and MATIC tokens are needed to process transactions on the Polygon blockchain.
+Manage test TEE and MATIC tokens.
 
-## Usage
+TEE tokens are necessary to pay for orders in Super Protocol. MATIC tokens are for processing transacions on Polygon blockchains.
+
+## Synopsis
 
 ```
 ./spctl tokens <command>
@@ -18,5 +20,5 @@ Manage your TEE and MATIC tokens. TEE tokens are used as method of payment in Su
 
 | **Command**                                        | **Description** |
 |:---------------------------------------------------|:----------------|
-| [balance](/developers/cli_commands/tokens/balance) | Get wallet balance.  |
-| [request](/developers/cli_commands/tokens/request) | Request tokens for testing. |
+| [balance](/developers/cli_commands/tokens/balance) | Get the wallet balance  |
+| [request](/developers/cli_commands/tokens/request) | Request test tokens; **testnet only** |
