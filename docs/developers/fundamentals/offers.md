@@ -5,67 +5,62 @@ slug: "/fundamentals/offers"
 sidebar_position: 2
 ---
 
-
-## Understanding Offers
-
 <img src={require('./../images/fundamentals_offers_1.png').default} width="auto" height="auto"/>
 
 <br/>
 <br/>
 
-There are four basic building blocks that may be involved in creation of an [order](/developers/fundamentals/orders):
+_Offer_ is a solution, data, storage, or compute resource available on the Marketplace. Offers cost money—TEE tokens—to use with prices set by their providers.
 
-- **Solutions** – AI models, base images, tunnels, oracles - basically, any application.
-- **Data** – data is anything that is used by a solution: webpages, configs, datasets, databases, etc.
-- **TEE Compute** – confidential computing resources where the solutions and data are executed inside the Trusted Execution Environment (TEE).
-- **Storage** – decentralized storages, such as Storj, where the offer content, computation results and service files are stored.
+The [order](/developers/fundamentals/orders) creation involves using four basic building blocks:
 
-Thus, an **offer** is a solution, data, compute or storage that is made available on the Marketplace for all users. Offers cost money (TEE tokens) to use, prices set by their respective *providers*. 
+- **Solutions**: applications such as AI frameworks, base images, tunnels, oracles, etc.
+- **Data**: anything that solutions use: AI models, webpages, configs, datasets, databases, etc.
+- **Storage**: decentralized storages, such as Storj, to keep the offer content, computation results, and service files
+- **Compute**: confidential computing resources to execute solutions and data inside a trusted execution environment.
 
-You can see some of the offers [here](/developers/offers).
+Read about some of the available offers [here](/developers/offers).
 
-## Types of Offers
+## Types of offers
 
-### Solutions and Data
+_Value offer_ is a collective term for solution, data, and storage offers.
 
-Solutions and data are called *value offers* because they are the reason why computing takes place: they bring value. 
+### Solution and data
 
-A value offer exists in two parts:
-1. As a record on blockchain. It contains the parameters that govern how an offer may be ordered. 
-2. As content in storage. These are the actual files that will be downloaded by the Compute provider for execution. 
+Two parts of a solution or data offer are
+- The record on the blockchain: parameters that govern how to order the offer
+- The content in storage: actual files that the compute provider downloads and executes.
 
-Solution and data providers create and manage solution and data offers.
-
-### TEE Compute
-
-A TEE Compute offer exists in two parts:
-1. As a record on blockchain. It contains the parameters that govern how an offer may be ordered.
-2. As an actual machine with enabled TEE and connected to the Super Protocol consensus. 
-
-Compute providers create and manage compute offers.
+Users can register offer providers to create solution and data [community offers](/developers/fundamentals/offers#community-offers).
 
 ### Storage
 
-A Storage offer exists in two parts:
-1. As a record on blockchain. It contains the parameters that govern how an offer may be ordered.
-2. As an account on a decentralized storage network where files might be uploaded and downloaded.
+Two parts of a storage offer are
+- The record on the blockchain: parameters that govern how to order the offer
+- The account on decentralized storage to upload and download files.
 
-Storage providers create and manage storage offers.
+Currently, only Super Protocol provides storage offers. This functionality will be available for anyone with proper hardware in future releases.
+
+### Compute
+
+Two parts of a compute offer are
+- The record on the blockchain: parameters that govern how to order the offer
+- The physical trusted execution environment device: a computer connected to the Super Protocol consensus.
+
+Currently, only Super Protocol provides compute offers. This functionality will be available for anyone with proper hardware in future releases.
 
 ## Community offers
 
-Any Super Protocol user can [register as a provider](/developers/cli_guides/providers_offers/) and create solution and data offers. This way, users can share and monetize their applications and datasets.
+Any Super Protocol user can [register a provider](/developers/cli_guides/providers_offers/) and create solution and data offers. This way, users can share and monetize their applications and datasets.
 
-:::note
 Currently, only Super Protocol provides storage and compute offers. In future releases, the ability to create compute and storage offers will be available to anyone with proper hardware.
-:::
 
 The filter on the left side of the screen in the Marketplace GUI divides all offers into four categories:
 
-- **Super Protocol**: offers provided by Super Protocol.
-- **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational.
-- **Unmoderated**: community offers that were not reviewed. All new offers appear here.
-- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information.
+- **Super Protocol**: offers provided by Super Protocol
+- **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational
+- **Unmoderated**: community offers that were not reviewed. All new offers appear here
+- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information
 
 <img src={require('../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
@@ -81,44 +76,54 @@ If you are using a community offer in your order and the offer fails to respond,
 
 Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
-1. If the offer content is no longer accessible because its [storage order has expired](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
+- If the offer content is no longer accessible because its [storage order has expired](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
 
-2. If the lease on the [Offer Provisioner order has expired](/developers/cli_guides/providers_offers#lease-on-offer-provisioner). Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
+- If the lease on the [Offer Provisioner order has expired](/developers/cli_guides/providers_offers#lease-on-offer-provisioner). Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
 
-## Blockchain Parameters
+## Metadata
 
-### Metadata
+Every offer comes with the following descriptive parameters:
 
-* *Type* - offer type: solution, data, compute, storage.
-* *Id* - unique identification number of the offer (numbering is regardless of type)
-* *Description* - text description of offer.
-* *Provider* - name of the provider who created the offer.
-* *Date Published* - date when offer was created.
-* *Date Updated* - date when changes were made to the offer.
-* *MRENCLAVE* - value that represents the hash of the code and data inside the TEE.
-* *MRSIGNER* - value is used to uniquely identify the signing entity of the TEE.
+- **Type**: offer type—solution, data, compute, or storage
+- **Id**: unique identification number of the offer
+- **Description**: text description of the offer
+- **Provider**: name of the provider who created the offer
+- **Published date**: date when the offer was created
+- **Updated date**: date when changes were made to the offer
+- **MRENCLAVE**: value that represents the hash of the code and data inside a Trusted Execution Environment
+- **MRSIGNER**: value for identifying the signing entity of a Trusted Execution Environment
 
-### Rules
+## Rules
 
-Rules are set by the providers and govern what offers can and cannot do.
+Providers can set the rules to govern what offers can and cannot do.
 
-* *Restrictions* - whether an offer has dependencies. For instance, a Node.js-based solution offer will likely have a *Must Use* restriction for a Node.js base image solution: an order must have both of these two solutions to run. Or a solution offer might be restricted to running only with certain data offers or even compute offers. There can be many scenarios. 
+_Restrictions_ determine whether an offer has dependencies. For instance, a Node.js-based solution most likely depends on [Node.js Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D6). So, any order that uses this Node.js-based solution must also use the base image.
 
-### Requirements
+Similarly, a solution offer may only run with certain data or compute offers. There are many possible scenarios.
 
-Applicable only to solutions, data and storage offers.
+## Configurations
 
-*Requirements* specify a compute configuration that an offer needs to run properly. Requirements are set by the provider. There may be multiple requrements to choose from and each can be priced differently depending on expected usage. 
+_Configuration slots_ are sets of parameters of compute offers. They define
 
-Learn more about requirements [here](/developers/fundamentals/slots).
+- The number of CPU cores
+- RAM
+- Disk space
+- Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
 
-### Configurations
+_Configuration options_ contain network-related parameters:
 
-Applicable only to compute offers.
+- Bandwidth
+- Traffic
+- External port.
 
-*Slots* and *Options* are sets of parameters of a compute configuration. They are set by the compute provider. A single compute offer may have multiple configurations which are priced differently. A customer must choose a configuration that is at least equal to the sum of all requirements - if a solution requires 2 CPU cores, then the configuration must have available at least that much. 
+Compute providers can create multiple configuration slots and options for every offer and price them differently.
 
-Learn more about slots and options [here](/developers/fundamentals/slots).
+Read more in [Slots and Options](/developers/fundamentals/slots).
 
+## Requirements
 
+_Requirements_ specify the configuration that a solution, data, or storage offer needs to run. Offer providers can create multiple sets of requirements—_requirement slots_—for every offer and price them differently depending on expected usage.
 
+The customer must choose a compute configuration to meet the sum of all the solution, data, and storage requirements in the order.
+
+Read more in [Slots and Options](/developers/fundamentals/slots).

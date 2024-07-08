@@ -5,16 +5,16 @@ slug: "/cli_commands/workflows/create"
 sidebar_label: "create"
 ---
 
-Create an order (TEE compute) and suborders (solution, data, storage).
+Create a main compute order and necessary suborders: solution, data, storage.
 
 For solutions and data, it is possible to use existing offers or [uploaded](/developers/cli_commands/files/upload) files. Be mindful of the [testnet limitations](/testnet/limitations).
 
-Read the [Super Protocol fundamentals](/developers/fundamentals) and the [Marketplace GUI walkthrough](/developers/marketplace/walkthrough/) to understand the logic of the Super Protocol order creation process.
+Refer to the [Super Protocol fundamentals](/developers/fundamentals) and the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to understand the logic of the Super Protocol order creation process.
 
 ## Synopsis
 
 ```
-./spctl workflows create --solution <solutionId,solutionSlotId|solutionResourceJson> ... --data <dataId,dataSlotId|dataResourceJson> ... --storage <storageId,storageSlotId> [option ...]
+./spctl workflows create --solution <solutionId,solutionSlotId|solutionResourceJson> [--solution <solutionId,solutionSlotId|solutionResourceJson> ...] --data <dataId,dataSlotId|dataResourceJson> [--data <dataId,dataSlotId|dataResourceJson> ...] --storage <storageId,storageSlotId> [option ...]
 ```
 
 After creating the order, the command shows the order ID in the terminal output. Use this order ID to track and manage the order.
@@ -29,10 +29,12 @@ After creating the order, the command shows the order ID in the terminal output.
 |`--tee-options-count`|Number of compute option increments. Use this option together with `--tee`. Default is automatic selection|
 |`--deposit`|Deposit in TEE tokens. Default is the minimum required deposit|
 |`--min-rent-minutes`|Compute lease time in minutes. Using this option will increase the required deposit. Default is the minimum required time|
-|`--solution`|IDs of the solution offer and slot separated with a comma or the path to the solution resource JSON file. Use this option multiple times if necessary|
+|`--solution`|IDs of the solution offer and slot separated with a comma, or the path to the solution resource JSON file. Use this option multiple times if necessary|
 |`--data`|IDs of the data offer and slot separated with a comma or the path to the data resource JSON file. Use this option multiple times if necessary|
 |`--storage`|IDs of the storage offer and slot separated with a comma|
 |`--config`|Path to the configuration file. Default is `./config.json`|
+
+If you run an uploaded solution that does not require data, do not use the `--data` option.
 
 ## Examples
 
@@ -73,7 +75,7 @@ Options used:
 - `--tee-slot-count 4`: four increments—use the selected slot four times
 - `--tee-options 10`: option ID 10 that is used in 7 increments
 - `--tee-options-count 7`: seven increments—use the selected option seven times
-- `--deposit 2`: deposit is 2 TEE
+- `--deposit 2`: deposit is 2 TEE tokens
 - `--min-rent-minutes 120`: a minimum lease time is 120 minutes
 - other options are explained in the previous example
 

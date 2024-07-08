@@ -21,13 +21,13 @@ Super Protocol Marketplace is accessible via [CLI](/developers/cli_guides) and, 
 
 ## Providers
 
-Super Protocol users can register as providers on Super Protocol. Providers can share and monetize their applications and datasets by offering them to other users. Since Super Protocol is still in the testnet stage, monetization is only possible with test tokens as a demonstration.
+Super Protocol users can register providers on Super Protocol. Providers can share and monetize their applications and datasets by offering them to other users. Since Super Protocol is still in the testnet stage, monetization is only possible with test tokens as a demonstration.
 
 Provider registration and offer creation are available for anyone to try. Currently, this functionality is aimed at advanced users because it requires using CLI. In the future, with the updated Marketplace and the new possibilities it brings, there will be additional features and a more convenient GUI-based workflow. Refer to the [Providers and offers](/developers/cli_guides/providers_offers) guide to register a provider and create an offer.
 
 ## Offers
 
-Offers are the basic building blocks of the Marketplace. There are four types of offers: solution, data, storage, and compute. When placing orders on Super Protocol, you can use existing offers or upload your solution and data instead. Moreover, it is possible to register as a provider and monetize your solutions and datasets by offering them to others.
+Offers are the basic building blocks of the Marketplace. There are four types of offers: solution, data, storage, and compute. When placing orders on Super Protocol, you can use existing offers or upload your solution and data instead. Moreover, it is possible to register a provider and monetize your solutions and datasets by offering them to others.
 
 Note that Super Protocol users do not buy offers, only rent them for a limited period. TEE ensures that the content of offers remains confidential.
 

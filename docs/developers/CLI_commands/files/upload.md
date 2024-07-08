@@ -5,7 +5,7 @@ slug: "/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 
-Upload a file to a remote storage, such as Storj.
+Upload a file to remote storage such as Storj.
 
 Users can temporarily store their solution and data files to create an order using the [workflows create](/developers/cli_commands/workflows/create) command. Providers can store the content of their solution and data offers to make it available for user's orders long-term.
 
@@ -33,7 +33,7 @@ Upload each archive separately. For example, if you are deploying a solution wit
 
 **Output:**
 
-- Resource JSON file containing the information for TEE on how to access the uploaded file.
+- Resource JSON file containing the information for a compute provider on how to access the uploaded file.
 
 ## Argument
 
@@ -58,7 +58,7 @@ Upload each archive separately. For example, if you are deploying a solution wit
 
 **Example 1.** Upload to remote storage directly
 
-The following command uploads the `content.tar.gz` file in the SPCTL root directory.
+The following command uploads the `content.tar.gz` file located in the SPCTL root directory:
 
 ```
 ./spctl files upload content.tar.gz
@@ -68,18 +68,30 @@ To execute this command successfully, you need a Storj account and SPCTL configu
 
 **Example 2.** Upload using a storage offer
 
-The following command uploads the `content.tar.gz` in the SPCTL root directory. The command creates a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing)  (ID 25) and the requirement slot (ID 33). The lease period is 120 minutes.
+The following command uploads the `content.tar.gz` located in the SPCTL root directory:
 
 ```
 ./spctl files upload content.tar.gz --storage 25,33 --min-rent-minutes 120
 ```
 
-Since the `--storage` option is set, this command does not require a Storj account. However, when the lease period is over, the content will become unavailable unless you [replenish the order deposit](/developers/cli_commands/orders/replenish-deposit).
+Options used:
+
+- `--storage 25,33`: create a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing) (ID 25) and the requirement slot (ID 33)
+- `--min-rent-minutes 120`: set the lease period for 120 minutes
+
+Since the `--storage` option is set, the command does not require a Storj account. However, when the lease period is over, the content will become unavailable unless you [replenish the order deposit](/developers/cli_commands/orders/replenish-deposit).
 
 **Example 3.** Additional options
 
-The following command uploads the `content.tar.gz` file located in the `data` directory in the SPCTL root directory. The name of the uploaded file will be `fileData.tar.gz`. The name of the output resource JSON file will be `fileResource.json`. The `fileMetadata.json` metadata file will be added to the resource file during the upload. The command creates a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing)  (ID 25) and the requirement slot (ID 33). The lease period is 120 minutes.
+The following command uploads the `content.tar.gz` file located in the `data` directory in the SPCTL root directory:
 
 ```
 ./spctl files upload ./data/content.tar.gz --filename ./fileData.tar.gz --output ./fileResource.json --metadata ./fileMetadata.json --storage 25,33 --min-rent-minutes 120
 ```
+
+Options used:
+
+- `--filename ./fileData.tar.gz`: name the uploaded file `fileData.tar.gz`
+- `--output ./fileResource.json`: name the output resource JSON file `fileResource.json` and save in to the SPCTL root directory
+- `--metadata ./fileMetadata.json`: add the `fileMetadata.json` metadata file to the resource file during the upload
+- other options are explained in the previous example

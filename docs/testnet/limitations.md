@@ -1,55 +1,47 @@
 ---
 id: "limitations"
-title: "Limitations"
+title: "Testnet Limitations"
 slug: "/limitations"
 sidebar_position: 0
 ---
 
-For testnet we have a limited amount of computing resources, so we have imposed limits on compute configurations and amounts of available tokens: we want to make sure that everyone gets to participate in the Testnet. 
+Testnet has a limited amount of compute resources. Super Protocol imposed limits on compute configurations and amounts of available tokens so everyone can participate in the testnet.
 
-If you feel that the additional uptime of your solution would be beneficial to Testnet and other users, then we can discuss replenishing your order with more tokens. Please contact us at [Discord](https://discord.com/invite/superprotocol).
+If you feel that the additional uptime of your solution would be beneficial to Testnet and other users, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol).
 
 ### Order limits
 
-* Tunnel orders created by Tunnels Launcher will expire in 72 hours regardless of deposit.
+- Tunnel orders created by Tunnels Launcher expire after 72 hours regardless of the deposit.
 
-* A maximum of 2 open orders per user at the same time. Total number of orders unlimited. An order in status Done, Error or Canceled is considered closed.
+- You cannot have more than two open orders. If an order has the **Done**, **Error**, or **Canceled** status, it is not counted towards this limit. The total number of orders is unlimited.
 
-* For marketplace offers: Compute configurations can be at most 2x (double) the selected offer requirements. So if the total solutions+data requirements need 2 CPU cores, then the maximum compute you can select may have 4 CPU cores. Same for other parameters.
+- Compute configurations for Marketplace offers cannot exceed the selected offer requirements more than twice. For example, if the sum of solutions and data requirements equals two CPU cores, then the maximum compute you can select is four CPU cores. The same applies to other parameters.
 
-* For your own solutions: because we don't know the requirements of your solutions, we have imposed hard limits. CPU: 2 cores, Traffic: 100 megabytes, Bandwidth: 1 megabit. Selected configuration must be no more than this limit.
+- For uploaded solutions, the limit is 2 CPU cores, 100 MB of traffic, and 1 Mbit/sec bandwidth. The selected configuration cannot exceed this limit.
 
 ### Token limits
 
-* The most tokens you can have in your testnet wallet at a time is 9 TEE and 0.2 MATIC.
+- You cannot request tokens if you have more than 9 TEE and 0.9 MATIC tokens in your testnet wallet.
 
-* You can request tokens unlimited number of times.
+- You cannot request more than 15 TEE and 1.5 MATIC tokens per 24 hours.
 
-* The amount of token dispensed per request is 9 TEE and 0.2 MATIC.
+- You can request tokens an unlimited number of times.
 
-* The most tokens you can request per 24 hours is 15 TEE and 0.5 MATIC.
+- Each token request grants 9 TEE and 0.5 MATIC tokens.
 
-* Do not transfer your test MATIC tokens to other accounts. Violators will be banned from Testnet.
+- Do not transfer your test MATIC tokens to other accounts, or you will be banned.
 
 ### Marketplace GUI
 
-To simplify Marketplace GUI for new users, we have streamlined some steps related to pre-configuration. For custom configurations please use [CLI](/developers/cli_guides/).
+To simplify the Marketplace GUI for new users, the Super Protocol team has streamlined some configuration steps. For detailed configurations, use [CLI](/developers/cli_guides/).
 
-* All orders created through the GUI are using the default Super Protocol storage. So your order results are saved to our Storj account. But results are encrypted and only you have the key. We don't have the access.
+- All orders created through the GUI use the storage offer [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25) by Super Protocol. Although your order results are saved to the Super Protocol Storj account, only you have the key. No one besides you can access the results, including the Super Protocol team.
 
-* Tunnels created using [Tunnels Launcher](/developers/offers/launcher) are using the Super Protocol DNS. So your domains will look something like this: [https://nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/).
+- Tunnels created using [Tunnels Launcher](/developers/offers/launcher) use the Super Protocol DNS. Your domain name will look like this: [nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/).
 
-* Orders created by Tunnels Launcher are automatically deposited with TEE tokens for 72 hours of uptime.
-
-### CLI commands
-
-Some commands in CLI are currently for internal use by the Super team only. They will become available in upcoming releases.
-
-* Commands related to creation or management of offers. 
-
-* Commands related to registration or management of providers. 
+- Tunnels Launcher orders have enough deposit for 72 hours. Not that these orders expire after 72 hours, even if you replenish the deposit.
 
 ### Testnet credentials
 
-Your testnet accounts are issued by Super Protocol for testing purposes only. Please **do not** use them outside of Testnet and **do not** put your personal funds into them! We have the private keys to these accounts.
+Super Protocol provides you with a testnet account strictly for testing purposes. **Do not** use this account outside of Super Protocol Marketplace and **do not** put your funds into it. The Super Protocol team has the private key to this account, so it is not truly yours.
 

@@ -1,74 +1,81 @@
 ---
 id: "slots"
-title: "Slots"
+title: "Slots and Options"
 slug: "/fundamentals/slots"
 sidebar_position: 3
 ---
 
-## Understanding slots
+Super Protocol provides flexibility in determining the parameters required by offers to run and the selection of confidential computing resources and internet access for their deployments.
 
-The name of this section should be Requirements and Configurations, but we refer to them collectively as *slots*.
+## Requirements
 
-This system is designed to provide most flexibility in determining the parameters required by value offers to run and the selection of confidential computing resources and internet access for their deployments.
+_Requirements_ specify how much computing resources a value offer needs to run. A _requirement slot_ is a specific set of requirements that may include
 
-### Requirements
+- Number of CPU cores
+- RAM
+- Disk space
+- Bandwidth
+- External port
+- Traffic
+- Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
 
-*Requirements* specify how much computing power and internet access is needed by solution and data offers to run properly. Requirements refer to a set of parameters that are determined by solution and data providers.
+Offer providers can define multiple requirement slots for every offer. Each slot can have a different [price](/developers/fundamentals/orders#cost-and-pricing) depending on expected usage. For example, a Python script will compute faster on 4 CPU cores than on 2 cores, and the price may reflect that.
 
-Requirements is also where the providers set the price for using their products. Price can be either for a one time payment, called *Fixed Price*, or - charged per hour of usage, called *Price Per Hour* ([learn more](/developers/fundamentals/orders#cost-and-pricing) about price types). 
-
-A single offer can have multiple sets of requirements. For instance, a Python script will compute faster on 4 CPU cores than on 2 cores. But because it would be computed faster, the price may reflect that. Or - providers may make their offer available as either fixed price or per hour, and leave it up for the customer to see which one makes most economic sense for their usage scenario. 
+Additionally, providers can make their offers available for a fixed price or per hour using different slots. And the customer can decide which one makes more economic sense in their case.
 
 <img src={require('./../images/fundamentals_slots_1.png').default} width="auto" height="auto"/>
 
-### Configurations 
+## Configurations
 
-The term *compute offer* refers to the resources of an entire machine, but in most cases a customer looking to deploy an order doesn't require the use of the whole thing. The system of *Slots* and *Options* - collectively known as a *Configuration* - enables compute providers to divide the finite resources of their machine into smaller "chunks" for better utilization.
+_Configuration_ is a way to divide the resources of a compute offer into smaller parts. This division enables a better distribution of offer resources between orders. Customers often do not need the resources of a whole machine for their orders.
 
-Slots are the chunks of computing power (vCores, RAM, Disk) and Options are the chunks of internet access (Bandwidth, Traffic, Ext.Port). 
+Configuration is a combination of
 
-To ensure that the entire compute offer may be fully utilized, it is divided proportionally. So, if a compute offer is 24 vCore, 48 Gb RAM, and 960 Gb Disk, this divides neatly into 12 slots each measuring 2 vCores, 4 Gb RAM, and 80 Gb Disk each. These 12 slots can serve 12 simultaneous orders and utilize the machine fully. The compute offer can contain multiple such slots, so that the customer can choose the slot that is most appropriate for their usage scenario. Slots may be priced only per hour (no fixed price for computing) and only one slot may be selected.
+- _Configuration slots_ responsible for compute resources:
+    + Number of CPU cores
+    + RAM
+    + Disk space
+    + Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
 
-Same logic as the above goes for options, with two exceptions: 
-1. Options may be priced either as fixed price or per hour price;
-2. Multiple options may be selected and each may be selected multiple times. 
+- _Configuration options_ responsible for network-related resources:
+    + Bandwidth
+    + Traffic
+    + External port.
 
-Important: your compute configuration must be equal to or more than the sum of all requirements (solutions+data+storage). 
+When a customer creates an order, the selected configuration must be at least equal to the sum of all solution, data, and storage requirements in the order. This also applies to the lease time.
+
+Every slot and option has its price. Configuration slots are always priced per hour and never have a fixed price. The configuration option price may be fixed or per hour.
+
+A customer can only select one configuration slot for each order. But to meet the order requirements, they can add the selected slot multiple times or, in other words, apply increments.
+
+For example, the physical machine behind a compute offer has 24 CPU cores, 48 GB of RAM, and 960 GB of disk space. The compute provider divided these resources proportionally into 12 parts and created a configuration slot of 2 cores, 4 GB of RAM, and 80 GB of disk space. A customer can add this slot to their order up to 12 times to meet the requirements. The division also lets the machine process up to 12 small orders simultaneously.
+
+The same logic applies to configuration options, except customers can select multiple options multiple times.
 
 <img src={require('./../images/fundamentals_slots_2.png').default} width="auto" height="auto"/>
 
 <img src={require('./../images/fundamentals_slots_3.png').default} width="auto" height="auto"/>
 
-### Lease and Limits
+## Parameters
 
-Here we need to introduce another term: *Lease*, which is the amount of time for which you are renting solutions, data and compute offers. The lease value will determine how much deposit you will need to put up to create the order. Yes, you can always replenish the order later to extend its lease, but be mindful of the limits.
+The full list of parameters is the same for requirements and configurations. In the Marketplace GUI:
 
-Requirements and configurations have parameters *Min.Time* and *Max.Time*, which specify the lower and upper limit on the amount of time that offers may be leased for - check for this, because if, for instance, a compute offer has a minimum lease time of 1 day and you need it for 1 hour, then the order won't start. 
+- **Per Hour** or **Fixed**: slot or option pricing type
+- **vCores**: number of CPU cores, can be a fraction
+- **RAM**: RAM for computations, GiB
+- **Disk**: disk space, GiB
+- **Bandwidth**: rate of data transfer, Mbit per second
+- **Traffic**: traffic, decreases with use, GB
+- **Ext.Port**: external port for internet access, **Yes** or **No**
+- **Min Time**: minimum lease time
+- **Max Time**: maximum lease time.
 
-## Auto-Select
+## Automatic selection
 
-There are many possible combinations of requirements and configurations, fixed prices and per hour prices, minimum and maxium time limits, but it's actually very easy to find the optimum configuration using automated *Auto-Select*.
+Super Protocol supports the automatic selection of a configuration to simplify the order creation.
 
-In Marketplace GUI you simply select your offers and then select a desired configuration (all of them will meet your requirements). Learn more in the [Walkthrough](/developers/marketplace/walkthrough).
+The system calculates the sum of all requirements in the order. When a customer adds a compute offer to the order in the Marketplace GUI, the system automatically determines configuration slots, options, and their increments. Read more in the more in [Marketplace Walkthrough](/developers/marketplace/walkthrough).
 
 <img src={require('./../images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
 
-For CLI you can just leave the slots and options fields blank and the auto-select will assign compatible configuration automatically. More on this in the [CLI workflows create](/developers/cli_commands/workflows/create) command.
-
-## Parameters
-
-The base parameters are the same for requirements and configurations. All parameters can be entered as fractions.
-
-* *vCores* - CPU cores available for computations.
-* *RAM* - RAM available for computations.
-* *Disk* - SSD available for computations.
-* *Bandwidth* - Bandwidth available for download/upload of data to the TEE.
-* *Traffic* - Traffic available for download/upload (this value decreases with use).
-* *Ext.Port* - external port (for internet access). Yes / No.
-* *Min. Time* - minimum lease time allowed.
-* *Max.Time* - maximum lease time allowed.
-* *Price Per Hour* - cost to the user for one hour of lease.
-* *Price Fixed* - one time payment to lease for the duration of the order.
-
-
-
+In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specified no `--tee`-related options. Read more in the description of the [`workflows create`](/developers/cli_commands/workflows/create) command.

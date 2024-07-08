@@ -57,7 +57,7 @@ Set the following parameters and press **Save**.
 
 | **Parameter** | **Value** |
 | :- | :- |
-| Network Name | SuperProtocol Polygon Amoy Testnet <br /><br />*Note. You can change the network name if you'd like.*|
+| Network Name | SuperProtocol Polygon Amoy Testnet <br /><br />*You can change the network name if you'd like*|
 | New RPC URL | [https://amoy.polygon.superprotocol.com/hesoyam](https://amoy.polygon.superprotocol.com/hesoyam)|
 | Chain ID | 80002 |
 | Currency Symbol | MATIC |

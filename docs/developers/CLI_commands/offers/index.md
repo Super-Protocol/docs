@@ -35,7 +35,7 @@ View and manage offers. For the majority of these commands, it is more convenien
 | [delete-slot](/developers/cli_commands/offers/slots/delete-slot) | Delete a slot                  |
 | [get-slot](/developers/cli_commands/offers/slots/get-slot)       | Display information for a slot |
 
-## Options command (only for TEE offers)
+## Options command (only for compute offers)
 
 | **Command**                                                            | **Description**                                                    |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------|
