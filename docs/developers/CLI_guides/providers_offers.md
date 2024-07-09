@@ -534,7 +534,7 @@ If you created a [storage order](/developers/cli_commands/files/upload) for your
 
 :::
 
-If the storage expires, the TEE can no longer access your uploaded offer content, and the customer order will fail. Execute the [`orders list`](/developers/cli_commands/orders/list) SPCTL command from your user account to get the list of your storage orders:
+If the storage order expires, the TEE can no longer access your uploaded offer content, and the customer order will fail. Execute the [`orders list`](/developers/cli_commands/orders/list) SPCTL command from your user account to get the list of your storage orders:
 
 ```
 ./spctl orders list --my-account --type storage

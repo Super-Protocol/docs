@@ -207,7 +207,7 @@ MRSIGNER: 36f3bb39d10617852d1eef2f5066d8f9add2c65fb1a026d86398fec405fe725c
 
 **Save these values!** Important: different MRENCLAVE and MRSIGNER values are generated for each run of the `prepare` command. 
 
-Finally, we will [encrypt and upload](/developers/cli_commands/files/upload) the prepared solution to a decentralized storage (Storj):
+Finally, we will [encrypt and upload](/developers/cli_commands/files/upload) the prepared solution to decentralized storage (Storj):
 
 ```shell
 ./spctl files upload oracle-solution.tar.gz --output oracle-solution.json --filename oracle-solution.tar.gz --metadata ./metadata.json
@@ -329,7 +329,7 @@ Create an archive with those files:
 tar -czvf oracle-input.tar.gz input.json ca_certificates.crt
 ```
 
-Go to the base directory with your SPCTL and upload the archive to the storage:
+Go to the base directory with your SPCTL and upload the archive to storage:
 
 ```shell
 cd ../../../../../

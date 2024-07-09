@@ -26,7 +26,7 @@ Create an archive of the token:
 tar -czf tunnel-server-data.tar.gz -C ./tunnel-server-data .
 ```
 
-Encrypt and upload the archive to the storage using this [command](/developers/cli_commands/files/upload):
+Encrypt and upload the archive to storage using the [`files upload`](/developers/cli_commands/files/upload) command:
 
 ```bash
 ./spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
@@ -123,7 +123,7 @@ Add the folder to archive:
 tar -czf tunnel-client-data.tar.gz  -C ./tunnel-client-data .
 ```
 
-Encrypt and upload the archive to the storage using this [command](/developers/cli_commands/files/upload):
+Encrypt and upload the archive to storage using the [files upload](/developers/cli_commands/files/upload) command:
 
 ```bash
 ./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz

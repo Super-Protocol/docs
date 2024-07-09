@@ -82,7 +82,7 @@ When the machine is available, the compute order gets the status **Processing**,
 
 Note that the **Processing** and **Done** statuses may have different meanings depending on the usage scenario. For one-time orders such as Python models, **Processing** means that the machine is working with the solution and data. When this processing is over, the main order becomes **Done**.
 
-For long-term orders such as tunnels and storages, **Processing** means that the order is up and running normally, accessible to users, providing services, etc. And when the order is **Done**, the order has ended and no longer working.
+For long-term orders such as tunnel and storage orders, **Processing** means that the order is up and running normally, accessible to users, providing services, etc. And when the order is **Done**, the order has ended and no longer working.
 
 ### Solution and data
 

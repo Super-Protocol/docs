@@ -11,7 +11,7 @@ It is time to run this script on Superprotocol!
 
 Now you will need to execute together:
 
-* Your Python solution (`solution.json` uploaded to the storage);
+* Your Python solution (`solution.json` uploaded to storage);
 * Python base image solution offer from the [Marketplace](https://marketplace.superprotocol.com/solutions?offerId=5&offer=offerId%3D5);
 * Your two datasets represented by `input-1.json` and `input-2.json` (which will direct TEE to download the archives from storage).
 
