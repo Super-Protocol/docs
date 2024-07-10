@@ -16,7 +16,7 @@ The [order](/developers/fundamentals/orders) creation involves using four basic 
 
 - **Solutions**: applications such as AI frameworks, base images, tunnels, oracles, etc.
 - **Data**: anything that solutions use: AI models, webpages, configs, datasets, databases, etc.
-- **Storage**: decentralized storages, such as Storj, to keep the offer content, computation results, and service files
+- **Storage**: decentralized storage, such as Storj, to keep the offer content, computation results, and service files
 - **Compute**: confidential computing resources to execute solutions and data inside a trusted execution environment.
 
 Read about some of the available offers [here](/developers/offers).

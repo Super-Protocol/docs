@@ -62,7 +62,7 @@ Note: The `Super Chat Config` data offer contains the pre-configured settings su
 <br/>
 <br/>
 
-:::info Step 3. Add a Storage.
+:::info Step 3. Add storage.
 
 The storage offer is responsible for storing offer contents and order data. Go to the `Storage` tab and add the `StorJ` offer to the order.
 

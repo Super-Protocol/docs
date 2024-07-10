@@ -15,7 +15,7 @@ This section contains the full list of commands for the Super Protocol CLI tool 
 |:------------------------------------------------|:------------------------------------------------------------------------|
 | [tokens](/developers/cli_commands/tokens)       | Receive test TEE and MATIC tokens; **testnet only**                     |
 | [solutions](/developers/cli_commands/solutions) | Prepare a solution for deployment                                       |
-| [files](/developers/cli_commands/files)         | Manage files in a decentralized storage                                   |
+| [files](/developers/cli_commands/files)         | Manage files in decentralized storage                                   |
 | [workflows](/developers/cli_commands/workflows) | Create new orders                                                       |
 | [orders](/developers/cli_commands/orders)       | Manage your orders                                                      |
 | [offers](/developers/cli_commands/offers)       | View and manage Marketplace offers                                      |

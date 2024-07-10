@@ -11,19 +11,21 @@ The Marketplace GUI is available for anyone to browse even without the MetaMask 
 
 The Super Protocol team sends out invites daily, but it may take a few days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request.
 
-## Set up MetaMask
+## MetaMask
 
 MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
 
 :::note
-The mobile version of the Marketplace GUI is view-only. Use a desktop for full functionality.
+The mobile version of the Marketplace GUI is view-only. Use a desktop or laptop for full functionality.
+
+If you already use a computer but still see the warning about the mobile version, expand the browser window to full screen.
 :::
 
-### Step 1. Install MetaMask
+## Step 1. Install MetaMask
 
-Download and install the MetaMask browser extension from its [official website](https://metamask.io/). During the setup process, create a new wallet or import your existing one. Skip this step if you already have MetaMask installed.
+Download and install the MetaMask browser extension from its [official website](https://metamask.io/) or your browser's extension store. During the setup, create a new wallet or import an existing one. Skip this step if you already have MetaMask installed.
 
-### Step 2. Add a new network
+## Step 2. Add a new network
 
 Open the menu by clicking the three vertical dots at the MetaMask window's top-right corner. Go to **Settings** and then select **Networks**.
 
@@ -46,7 +48,7 @@ And then click **Add a network manually** at the bottom of the page.
 <br/>
 <br/>
 
-### Step 3. Fill in the parameters
+## Step 3. Fill in the parameters
 
 Set the following parameters and press **Save**.
 
@@ -63,9 +65,7 @@ Set the following parameters and press **Save**.
 | Currency Symbol | MATIC |
 | Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
-## Testnet Account
-
-### Step 4. Import the Testnet Account
+## Step 4. Import the Testnet Account
 
 Click on your account name at the top of the MetaMask window to open the list of your accounts.
 
@@ -97,7 +97,7 @@ Enter the Private Key you received from Super Protocol and press the **Import** 
 <br/>
 <br/>
 
-### Step 5. Check the account
+## Step 5. Check the account
 
 Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter. Testnet Account address looks something like this:
 
@@ -120,7 +120,7 @@ Super Protocol generates ERC-20 wallets for use during Tesnet only. Do not use y
 
 :::
 
-### Step 6. Connect the wallet
+## Step 6. Connect the wallet
 
 To connect your wallet, open the [Marketplace GUI](https://marketplace.superprotocol.com/) and press the **Connect Wallet** button at the top-right corner.
 
@@ -157,14 +157,12 @@ If everything is done correctly, you will see your account address and token bal
 <br/>
 <br/>
 
-## Testnet tokens
+### Step 7. Get testnet tokens
 
 Super Protocol uses two types of tokens, and you will need both of them:
 
-1. MATIC tokens, to pay for transactions on the Polygon blockchain;
-2. TEE tokens, to pay for offers and receive payments in Super Protocol.
-
-### Step 7. Get testnet tokens
+- MATIC tokens, to pay for transactions on the Polygon blockchain
+- TEE tokens, to pay for offers and receive payments in Super Protocol.
 
 To get tokens, use the buttons at the top of the page.
 

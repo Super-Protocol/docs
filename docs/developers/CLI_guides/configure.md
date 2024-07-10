@@ -8,7 +8,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-**SPCTL**—Super Protocol Control—is a versatile tool to access the Marketplace CLI. With this tool, you can create and manage orders, offers, providers, keys, workflows, files on distributed storages, and more.
+**SPCTL**—Super Protocol Control—is a versatile tool to access the Marketplace CLI. With this tool, you can create and manage orders, offers, providers, keys, workflows, files on distributed storage, and more.
 
 ## Testnet access
 
