@@ -33,7 +33,7 @@ There are not preset data offers for developers, you will be uploading your own 
 
 ### Compute
 
-Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/developers/fundamentals/slots/). Explore each compute offer to see which best fits the requirements of your solution. 
+Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/developers/fundamentals/slots/). Explore each compute offer to see which best fits the requirements of your solution.
 
 | **Id** | **Name**                                                               | **Description**                                    |
 |:-------|:-----------------------------------------------------------------------|:---------------------------------------------------|

@@ -44,6 +44,7 @@ The following command deploys [Super Chat](/developers/offers/superchat):
 
 ```
 ./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
+./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
 Options used:
@@ -56,6 +57,7 @@ Options used:
 The absence of the `--tee` option means that SPCTL automatically selects the most suitable compute offer and configuration for your workload. However, in certain scenarios, you might want to specify the exact compute offer but let SPCTL select the requirement slot and option automatically:
 
 ```
+./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
