@@ -33,6 +33,18 @@ You can also see in the `Restricted` tab that this Solution requires another off
 
 <img src={require('./../images/marketplace_2.png').default}/>
 
+For the Solution and Data offers Marketplace GUI has a special filter that divides the offers in four categories:
+
+* **Super Protocol** - offers produced by Super Protocol;
+* **Approved** - community offers that were reviewed by Super team and considered acceptably operational;
+* **Unmoderated** - community offers that were not reviewed, all offers end up here by default;
+* **Inactive** - offers that [did not respond](/developers/cli_guides/providers_offers#about-ec) to a request to create a new order, considered non-functional and likely abandoned.
+
+For best results use offers either from Super Protocol or Approved categories. 
+
+<img src={require('./../images/gui_moderation_1.png').default} width="300" height="auto"/>
+
+
 <br/>
 <br/>
 <br/>
@@ -50,7 +62,7 @@ Note: The `Super Chat Config` data offer contains the pre-configured settings su
 <br/>
 <br/>
 
-:::info Step 3. Add a Storage.
+:::info Step 3. Add storage.
 
 The storage offer is responsible for storing offer contents and order data. Go to the `Storage` tab and add the `StorJ` offer to the order.
 
@@ -118,9 +130,12 @@ Here you will also see some totals:
 You can also see the total requirements or configurations by offer. 
 
 <img src={require('./../images/marketplace_10.png').default}/>
-
-
 <br/>
+<br/>
+
+To create this order via CLI, click the **Copy CLI workflow** button. It will generate an SPCTL command using the current order setup and copy it to the clipboard.
+
+<img src={require('./../images/marketplace_10a.png').default}/>
 <br/>
 <br/>
 
@@ -130,7 +145,7 @@ Either input your own passphrase or generate a new one. Then press the `Place Or
 
 :::
 
-Note: Metamask is used only for Marketplace GUI. When creating orders via CLI your passphrase will be a part of your [SPCTL configuration](/developers/cli_guides/configuring).
+Note: Metamask is used only for Marketplace GUI. When creating orders via CLI your passphrase will be a part of your [SPCTL configuration](/developers/cli_guides/configure).
 
 <img src={require('./../images/marketplace_11.png').default}/>
 
@@ -187,8 +202,6 @@ But while you wait, let's talk about the order. It consists of the main compute 
 A very important function is *Replenish Deposit*. Predictably, the order keeps working only as long as there is money (TEE) on the deposit. The deposit is being decreased every hour by the total *Price Per Hour* amount that you saw when creating the order. This includes charges by the compute, but also possibly by some other offers if they charge by the hour. When the deposit ends - the order stops. But you will be warned in advance when your deposit nearly depleted - you will see a very orange *Awaiting Payment* warning, which means that it's time to refill your deposit (if you want).
 
 <img src={require('./../images/marketplace_15.png').default}/>
-
-<img src={require('./../images/marketplace_16.png').default}/>
 
 
 <br/>

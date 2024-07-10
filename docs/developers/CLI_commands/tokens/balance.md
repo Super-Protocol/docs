@@ -1,20 +1,20 @@
 ---
 id: "tokens-balance"
-title: "Balance"
+title: "tokens balance"
 slug: "/cli_commands/tokens/balance"
 sidebar_label: "balance"
 ---
 
-Get the balance of TEE and MATIC tokens in your wallet.
+Display the balance of TEE and MATIC tokens in your wallet.
 
-## Usage
+## Synopsis
 
 ```
-./spctl tokens balance [OPTIONS]
+./spctl tokens balance [option]
 ```
 
-## Options
+## Option
 
-| **Name, shorthand** | **Default**     | **Description**                      |
-|:--------------------|:----------------|:-------------------------------------|
-| `--config`          | `./config.json` | Path to the configuration file       |
+| **Name** |**Description**                      |
+|:--------------------|:-------------------------------------|
+| `--config`          | Path to the configuration file. Default is `./config.json`       |

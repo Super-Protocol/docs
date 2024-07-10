@@ -6,9 +6,9 @@ sidebar_position: 5
 
 ---
 
-View and manage your orders. In most cases it is more convenient to do via the [Marketplace GUI](/developers/marketplace) where all the below functions are available.
+View and manage your orders. For the majority of these commands, it is more convenient to use the [Marketplace GUI](/developers/marketplace).
 
-## Usage
+## Synopsis
 
 ```
 ./spctl orders <command>
@@ -18,8 +18,8 @@ View and manage your orders. In most cases it is more convenient to do via the [
 
 |**Command**|**Description**|
 | :- | :- |
-|[cancel](/developers/cli_commands/orders/cancel)|Cancel order with `id`|
-|[download-result](/developers/cli_commands/orders/download-result)|Download order result with `id`|
-|[get](/developers/cli_commands/orders/get)|Display detailed information on order with `id`|
+|[cancel](/developers/cli_commands/orders/cancel)|Cancel an order|
+|[download-result](/developers/cli_commands/orders/download-result)|Download the order result|
+|[get](/developers/cli_commands/orders/get)|Display detailed information on an order|
 |[list](/developers/cli_commands/orders/list)|List orders|
-|[replenish-deposit](/developers/cli_commands/orders/replenish-deposit)|Replenish order deposit with `id` by `amount`|
+|[replenish-deposit](/developers/cli_commands/orders/replenish-deposit)|Replenish the order deposit|

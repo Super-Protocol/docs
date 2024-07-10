@@ -1,26 +1,36 @@
 ---
 id: "cli-files-delete"
-title: "Delete file"
+title: "files delete"
 slug: "/cli_commands/files/delete"
 sidebar_label: "delete"
 ---
 
-Delete a file in the remote storage.
+Delete a file in remote storage using information in a resource JSON file.
 
-## Usage
+The resource JSON file is created as a result of the [`files upload`](/developers/cli_commands/files/upload) command.
+
+## Synopsis
 
 ```
-./spctl files delete <resourcePath> [OPTIONS]
+./spctl files delete <resourceFilePath> [option]
 ```
 
-## Arguments
+## Argument
 
 |**Name**| **Description**                      |
 | :- |:-------------------------------------|
-|`resourcePath`| Path to the file inside the storage. |
+|`resourceFilePath`| Path to the resource JSON file |
 
-## Options
+## Option
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--config`|Path to the configuration file. Default is `./config.json`|
+
+## Example
+
+The following command deletes a file in remote storage using the information in the `resource-old-data.json` file located in the SPCTL root directory.
+
+```
+./spctl files delete resource-old-data.json
+```

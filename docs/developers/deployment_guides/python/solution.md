@@ -138,7 +138,7 @@ After running the command, `solution.tar.gz` and `metadata.json` files are gener
 
 ## Upload the solution
 
-Solution needs to be uploaded to a decentralized storage before it may be executed in TEE. The storage credentials have been configured during the [SPCTL setup](/developers/cli_guides/configuring#storage).
+Solution needs to be uploaded to decentralized storage before it may be executed in TEE. The storage credentials have been configured during the [SPCTL setup](/developers/cli_guides/configure#set-up-storj).
 
 Run the following command:
 

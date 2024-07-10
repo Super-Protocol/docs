@@ -1,66 +1,58 @@
 ---
 id: "add-slot"
-title: "add-slot"
+title: "offers add-slot"
 slug: "/cli_commands/offers/slots/add-slot"
 sidebar_position: 1
 ---
 
-Add a new slot to an existing offer.
+Create an additional [requirement slot](/developers/fundamentals/slots#requirements) in an offer using the information in the offer slot JSON file.
 
-## Usage
+Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) section to create the initial offer requirements.
 
-Syntax:
+**Important:** The `offers add-slot` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-```
-./spctl offers add-slot <type> [OPTIONS]
-```
-
-Example: add a new slot to an existing offer using the information in `offerSlot.json` which is located in the same directory together with SPCTL.
+## Synopsis
 
 ```
-./spctl offers add-slot value --offer 10 --path ./offerSlot.json
+./spctl offers add-slot <type> --offer <offerId> [option ...]
 ```
 
 ## Arguments
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of offer: `tee` or `value` |
+| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer |
+| `offerId`  |Offer ID  |
 
 ## Options
 
-| **Name, shorthand** | **Default**        | **Description**                |
-|:--------------------|:-------------------|:-------------------------------|
-| `--offer`           |                    | Offer `id`                     |
-| `--path`            | `./offerSlot.json` | Path to the slot content file  |
-| `--config`          | `./config.json`    | Path to the configuration file |
+| **Name** |**Description**                |
+|:--------------------|:-------------------------------|
+| `--path`            |Path to the offer slot JSON file. Default is `./offerSlot.json`  |
+| `--config`          |Path to the configuration file. Default is `./config.json` |
 
-## Content file requirements
+## Offer slot file
 
-The file should contain the following sections:
-1. computing power configuration
-- `cpuCores` - a float value
-- `gpuCores` - a float value
-- `diskUsage` - a value in bytes
-- `ram` - a value in bytes
-2. terms and conditions of usage
-- `maxTimeMinutes` - 0 for no limits,
-- `minTimeMinutes` - 0 for no limits,
-- `price` - a value in weis
-- `priceType` - 1 for fixed price, 0 for price per hour. **Note:** in case of TEE slot, only price per hour is supported.
-3. internet access configuration (only for value offers)
--  `bandwidth` - a value in bits
-- `traffic` - a value in bits
-- `externalPort` - 1 for Yes, 0 for No
+The offer slot JSON file must contain the following objects and strings:
 
-Please note that there are few data modifications used in the Marketplace:
-1. `diskUsage` and `ram` values will be converted to GB in accordance with the formula `initial value / (1024 ^ 3)`
-2. `price` value will be converted to Ether in accordance with the formula `initial value / (10 ^ 18)`
-3. `bandwidth` value will be converted to Mbit in accordance with the formula `initial value / (1000 ^ 2)`
-4. `traffic` value will be converted to Gbit in accordance with the formula `initial value / (1000 ^ 3)`
+- `info`: object with computing power configuration
+  + `cpuCores`: number of CPU cores required, a float value
+  + `gpuCores`: number of GPU cores required, a float value
+  + `diskUsage`: bytes
+  + `ram`: bytes
+- `usage`: object with terms and conditions of usage
+  + `maxTimeMinutes`: minutes; `0` for no limit
+  + `minTimeMinutes`: minutes; `0` for no limit
+  + `price`: denominations of TEE token
+  + `priceType`: `1` for fixed price, `0` for price per hour; [learn more](/developers/fundamentals/orders#cost-and-pricing) about price types
+- `option`: object with internet access configuration (only for value offers)
+  + `bandwidth`: bits per second
+  + `traffic`: bytes
+  + `externalPort`: `1` for yes, `0` for no
 
-JSON example for a value offer:
-```json title="value-offer-slot.json"
+Offer slot JSON file template with example values:
+
+```json title="offer-new-slot.json"
 {
   "info": {
     "cpuCores": 3,
@@ -81,22 +73,17 @@ JSON example for a value offer:
   }
 }
 ```
-JSON example for a TEE offer:
-```json title="tee-offer-slot.json"
-{
-  "info": {
-    "cpuCores": 1,
-    "gpuCores": 0,
-    "diskUsage": 14910627722,
-    "ram": 8454701250
-  },
-  "usage": {
-    "maxTimeMinutes": 0,
-    "minTimeMinutes": 10,
-    "price": "140000000000000000",
-    "priceType": "0"
-  }
-}
-```
 
-**Note for TEE offers:** for the most optimal use of the equipment, it is recommended to set slots that divide the overall configuration evenly.
+Note that some of the data is represented differently in the Marketplace GUI:
+- `diskUsage` and `ram` values are converted to GiB by the formula `initial value / (1024 ^ 3)`
+- `price` value is converted to TEE tokens by the formula `initial value / (10 ^ 18)`
+- `bandwidth` value is converted to Mbit per second by the formula `initial value / (10 ^ 6)`
+- `traffic` value is converted to GB by the formula `initial value / (10 ^ 9)`
+
+## Example
+
+The following command adds a new requirement slot to the offer (ID 39) using the `offer-new-slot.json` file located in the SPCTL directory:
+
+```
+./spctl offers add-slot value --offer 39 --path ./offer-new-slot.json
+```

@@ -1,20 +1,22 @@
 ---
 id: "generate-key"
-title: "Generate private key"
+title: "workflows generate-key"
 slug: "/cli_commands/workflows/generate-key"
 sidebar_label: "generate-key"
 ---
 
-Generate private key to encrypt order results. It is used to access the results after the order is done. You'll need it to [configure SPCTL](/developers/cli_guides/configuring).
+Generate a private key necessary to access order results.
 
-## Usage
+SPCTL generates this key automatically during the [configuration](/developers/cli_guides/configure). Use this command only if you need another key or if you create the `config.json` file manually.
+
+## Synopsis
 
 ```
-./spctl workflows generate-key
+./spctl workflows generate-key [option]
 ```
 
-## Options
+## Option
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--config`|Path to the configuration file. Default is `./config.json`|

@@ -35,7 +35,7 @@ You will need:
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
-- [SPCTL](/developers/cli_guides/) - our CLI tool, must be fully [configured](/developers/cli_guides/configuring), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
+- [SPCTL](/developers/cli_guides/) - our CLI tool, must be fully [configured](/developers/cli_guides/configure), including access to decentralized storage: it will be used to store encrypted configurations for the oracle script.
 
 ### Create / generate
 
@@ -73,9 +73,9 @@ cp .env.example .env
 
 Add the following parameters to `.env` file:
 
-- `MUMBAI_DEPLOYER_PRIVATE_KEY` -  private key for Polygon Testnet Wallet #1.
-- `MUMBAI_URL` - you can use `https://amoy.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
-- `POLYGON_API_KEY` - the mainnet API Key you have generated in [Oklink](https://www.oklink.com/polygon).
+- `AMOY_DEPLOYER_PRIVATE_KEY` -  private key for Polygon Testnet Wallet #1.
+- `AMOY_URL` - you can use `https://amoy.polygon.superprotocol.com/hesoyam`, which is the Super Protocol Polygon node, or your own.
+- `OKLINK_AMOY_API` - the mainnet API Key you have generated in [Oklink](https://www.oklink.com/polygon).
 
 Install dependencies and compile the contract:
 
@@ -144,20 +144,20 @@ Go to `/solutions/Blockchain/sp-x509/` directory and execute this command to dep
 
 ```shell
 cd ./solutions/Blockchain/sp-x509/
-npx hardhat deploy --cert ./intel-root-cert.pem --network mumbai
+npx hardhat deploy --cert ./intel-root-cert.pem --network amoy
 ```
 
 The result will be a x509 verifier smart contact address. You'll need it in later steps, so make sure to save it.
 
-To be able to interact with the contract via GUI (such as Polygonscan) you will need to verify the contract on-chain by uploading the contract ABI:
+To be able to interact with the contract via GUI (such as Oklink) you will need to verify the contract on-chain by uploading the contract ABI:
 
 ```shell
-npx hardhat verify-x509 --cert ./intel-root-cert.pem --network mumbai --address <verifier-contract-address>
+npx hardhat verify-x509 --cert ./intel-root-cert.pem --network amoy --address <verifier-contract-address>
 ```
 
-You should get a "Successfully verified" response. Now you can observe your deployed x509 verifier smart contract through Polygonscan.
+You should get a "Successfully verified" response. Now you can observe your deployed x509 verifier smart contract through Oklink.
 
-**Example:** a previously [deployed and verified x509 smart contract](https://mumbai.polygonscan.com/address/0xb57718CC0A2149A376715503d15182f5a773e1F7#readContract).
+**Example:** a previously [deployed and verified x509 smart contract](https://www.oklink.com/polygon/address/0xb57718CC0A2149A376715503d15182f5a773e1F7#readContract).
 
 
 ## **Step 4. Prepare Oracle service for deployment on Super Protocol**
@@ -207,7 +207,7 @@ MRSIGNER: 36f3bb39d10617852d1eef2f5066d8f9add2c65fb1a026d86398fec405fe725c
 
 **Save these values!** Important: different MRENCLAVE and MRSIGNER values are generated for each run of the `prepare` command. 
 
-Finally, we will [encrypt and upload](/developers/cli_commands/files/upload) the prepared solution to a decentralized storage (Storj):
+Finally, we will [encrypt and upload](/developers/cli_commands/files/upload) the prepared solution to decentralized storage (Storj):
 
 ```shell
 ./spctl files upload oracle-solution.tar.gz --output oracle-solution.json --filename oracle-solution.tar.gz --metadata ./metadata.json
@@ -227,7 +227,7 @@ Go to the `/Blockchain/sp-oracle/smart-contract` directory and run this command:
 
 ```shell
 cd ../sp-oracle/smart-contract
-npx hardhat deploy-oracle --publishers <publisher-address> --enclave <MRENCLAVE> --signer <MRSIGNER> --verifier <x509-verifier-address> --network mumbai
+npx hardhat deploy-oracle --publishers <publisher-address> --enclave <MRENCLAVE> --signer <MRSIGNER> --verifier <x509-verifier-address> --network amoy
 ```
 
 Where:
@@ -241,32 +241,32 @@ Where:
 The result will be the oracle smart contact address. Use it to verify the contract on-chain, as we did for x509-verifier:
 
 ```shell
-npx hardhat verify-oracle --address <oracle-address> --publishers <publisher-address> --enclave <MRENCLAVE> --signer <MRSIGNER> --verifier <x509-verifier-address> --network mumbai
+npx hardhat verify-oracle --address <oracle-address> --publishers <publisher-address> --enclave <MRENCLAVE> --signer <MRSIGNER> --verifier <x509-verifier-address> --network amoy
 ```
 
 You should get a "Successfully verified" response. 
 
-**Example:** a previously [deployed and verified oracle smart contract](https://mumbai.polygonscan.com/address/0x9e090892a8b65F59c8A52c5c811a3a859BE684A8#readContract).
+**Example:** a previously [deployed and verified oracle smart contract](https://www.oklink.com/polygon/address/0x9e090892a8b65F59c8A52c5c811a3a859BE684A8#readContract).
 
 ### Deploy dApp
 
 Since Oracle serves as a data repository, and its goal is to provide up-to-date data for the on-chain world, for clarity, we will deploy a [simple contract](https://github.com/Super-Protocol/solutions/tree/main/Blockchain/sp-oracle/smart-contract/contracts/App.sol) as a decentralized application that will use the data from our Oracle.
 
 ```
-npx hardhat deploy-app --oracle <oracle-address> --network mumbai
+npx hardhat deploy-app --oracle <oracle-address> --network amoy
 ```
 
 Verify the dApp contract on-chain:
 
 ```
-npx hardhat verify-app --address <d-app-address> --oracle <oracle-address> --network mumbai
+npx hardhat verify-app --address <d-app-address> --oracle <oracle-address> --network amoy
 ```
 
 You should get a "Successfully verified" response. 
 
-**Example:** a previously [deployed and verified dApp smart contract](https://mumbai.polygonscan.com/address/0x9fF6c385F06Ecc6Fb09a321AEDeFf50Dc83Cb20C#readContract).
+**Example:** a previously [deployed and verified dApp smart contract](https://www.oklink.com/polygon/address/0x9fF6c385F06Ecc6Fb09a321AEDeFf50Dc83Cb20C#readContract).
 
-At the end of this guide we will observe this contract through Polygonscan to see how data changes.
+At the end of this guide we will observe this contract through Oklink to see how data changes.
 
 ## **Step 6. Deploy oracle service**
 
@@ -329,7 +329,7 @@ Create an archive with those files:
 tar -czvf oracle-input.tar.gz input.json ca_certificates.crt
 ```
 
-Go to the base directory with your SPCTL and upload the archive to the storage:
+Go to the base directory with your SPCTL and upload the archive to storage:
 
 ```shell
 cd ../../../../../
@@ -354,15 +354,15 @@ Wait until the order turns to status `Processing`. The script will start about 1
 
 ## **Step 7. Observing oracle**
 
-Now we can observe the oracle live through Polygonscan.
+Now we can observe the oracle live through Oklink.
 
-Open the dApp contract page on Polygonscan: `https://mumbai.polygonscan.com/address/<d-app-address>`, using the contract address we have received on the [Deploy dApp](#deploy-dapp) step. On the `Contract` -> `Read Contract` tab select methods:
+Open the dApp contract page on Oklink: `https://www.oklink.com/polygon/address/<d-app-address>`, using the contract address we have received on the [Deploy dApp](#deploy-dapp) step. On the `Contract` -> `Read Contract` tab select methods:
 - processA - requests the New York temperature in Celsius which is not older than 1 hour;
 - processB - requests the New York temperature in Fahrenheit which is not older than 1 hour;
 
 <img src={require('./../../images/guides_blockchain_2.png').default} width="auto" height="auto"/>
 
-If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Polygonscan similarly to the dApp. However, as a key it won't take 'NewYork_temperature' directly, but rather the keccak256 hash of it.
+If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Oklink similarly to the dApp. However, as a key it won't take 'NewYork_temperature' directly, but rather the keccak256 hash of it.
 
 You can find open online services for convertation, but if you are using the same pair (NewYork_temperature), then the key will be `0xb186074e0e3ae110d728b99f004e457e6f557aab3f713681c9f5b906e3cc5cd0`. You can use it to call on the oracle methods.  
 
@@ -374,7 +374,7 @@ On the screenshot above getDataCounts shows how many times the price was refresh
 
 ### Updating MRENCLAVE and MRSIGNER
 
-If you have already deployed the Oracle smart contract and then realized that you need to go back and rebuild the Oracle service solution, then you will get new MRENCLAVE and MRSIGNER values. To avoid redeploying the Oracle contract, we have prepared Hardhat tasks `change-mr-enclave` and `change-mr-signer` to update the values in the deployed contract which should be executed in `smart-contract` directory. When using these tasks, the `MUMBAI_DEPLOYER_PRIVATE_KEY` environment variable must be a **private key** of a `publisher-address` that you used on the [Deploy oracle](#deploy-oracle) step.
+If you have already deployed the Oracle smart contract and then realized that you need to go back and rebuild the Oracle service solution, then you will get new MRENCLAVE and MRSIGNER values. To avoid redeploying the Oracle contract, we have prepared Hardhat tasks `change-mr-enclave` and `change-mr-signer` to update the values in the deployed contract which should be executed in `smart-contract` directory. When using these tasks, the `AMOY_DEPLOYER_PRIVATE_KEY` environment variable must be a **private key** of a `publisher-address` that you used on the [Deploy oracle](#deploy-oracle) step.
 
 ```shell
 npx hardhat change-mr-signer --address <oracle-address> --signer <new-mrsigner>

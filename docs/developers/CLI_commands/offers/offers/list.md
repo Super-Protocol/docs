@@ -1,39 +1,61 @@
 ---
 id: "offers-list"
-title: "list"
+title: "offers list"
 slug: "/cli_commands/offers/offers/list"
 sidebar_position: 1
 ---
 
-Retrieve a list of available offers depending on the type.
+Display a list of available offers depending on the type.
 
-## Usage
-
-Syntax:
+## Synopsis
 
 ```
-./spctl offers list <type> [options]
-```
-
-Example: lists the first 30 solution and data offers.
-
-```
-./spctl offers list value --limit 30
+./spctl offers list <type> [option ...]
 ```
 
 ## Arguments
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of offer: `tee` or `value` |
+| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer|
 
 ## Options
 
-|**Name, shorthand**|**Default**|**Description**|
-|:-|:-|:-|
-|`--ids`| |Filter by offer `<ids>` (accepts multiple values)|
-|`--fields`| `id`<br/> `name`<br/> `orders_in_queue`  | **For `tee` offer type**<br/>Available fields : <br/>`id`,`name`,`description`,`provider_address`,`provider_name`,`total_cores`,`free_cores`,`orders_in_queue`,`cancelable`,`modified_date` |
-|`--fields`| `id`<br/>  `name`<br/> `type` | **For `value` offer type**<br/> Available fields:<br/> `id`,`name`,`description`,`type`,`provider_address`,`provider_name`,`cancelable`,`modified_date`|
-|`--limit`| 10 | Number of records to display|
-|`--cursor`| | Cursor for pagination|
-|`--config`| `./config.json` | Path to the configuration file|
+For the `tee` type:
+
+|**Name**|**Description**|
+|:-|:-|
+|`--fields`|Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, <br/>`total_cores`, `free_cores`, `cancelable`,`modified_date`. Fields must be separated with commas|
+
+For the `value` type:
+
+|**Name**|**Description**|
+|:-|:-|
+|`--fields`|Default fields: `id`, `name`, `type`. Additional fields: `description`, `provider_address`, `provider_name`, `cancelable`, `modified_date`. Fields must be separated with commas|
+
+For both offer types:
+
+|**Name**|**Description**|
+|:-|:-|
+|`--ids`|Filter by the offer ID. Accepts multiple values separated by spaces|
+|`--limit`|Number of rows to display. Default is `10`|
+|`--cursor`|Cursor for pagination|
+|`--config`|Path to the configuration file. Default is `./config.json`|
+
+## Examples
+
+**Example 1.**
+
+The following command lists the first 30 solution and data offers:
+
+```
+./spctl offers list value --limit 30
+```
+
+**Example 2.**
+
+The following command displays the IDs, names, and descriptions of value offers with IDs 37, 39, and 40:
+
+```
+./spctl offers list value --ids 37 39 40 --fields id,name,description
+```

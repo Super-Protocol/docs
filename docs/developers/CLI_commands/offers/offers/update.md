@@ -1,81 +1,78 @@
 ---
 id: "offers-update"
-title: "update"
+title: "offers update"
 slug: "/cli_commands/offers/offers/update"
 sidebar_position: 6
 ---
 
-Update an existing offer.
+Update information of an existing offer using an offer description JSON file.
 
-## Usage
+Refer to the [Offer description](/developers/cli_guides/providers_offers#offer-description) section to create the initial offer description.
 
-Syntax:
+**Important:** The `offers update` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-```
-./spctl offers update <type> <id> [OPTIONS]
-```
-
-Example: update an existing value offer using the information in `offerInfo.json` which is located in the same directory together with SPCTL.
+## Synopsis
 
 ```
-./spctl offers update value 10 --path ./offerInfo.json
+./spctl offers update <type> <offerId> [option ...]
 ```
 
 ## Arguments
 
 | **Name** | **Description**                 |
 |:---------|:--------------------------------|
-| `type`   | Type of offer: `tee` or `value` |
-| `id`     | Offer `id`  |
+| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer|
+| `offerId`     | Offer ID  |
 
 ## Options
 
-| **Name, shorthand** | **Default**        | **Description**                |
-|:--------------------|:-------------------|:-------------------------------|
-| `--path`            | `./offerInfo.json` | Path to the offer content file |
-| `--config`          | `./config.json`    | Path to the configuration file |
+| **Name** | **Description**                |
+|:--------------------|:-------------------------------|
+| `--path`            |Path to the offer content file. Default is `./offerInfo.json`|
+| `--config`          |Path to the configuration file. Default is `./config.json`|
 
 
-## Content file requirements
+## Offer description file
 
-### Value offers
+The offer slot JSON file may contain the following objects, arrays, and strings:
 
-| **Field**         | **Description**                                                                                                                                                                            | **Comments**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|:------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`            | Offer name                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `group`           | Offer group type                                                                                                                                                                           | 0 - input (data / solution offers) <br/>2 - output (storage offers)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| `offerType`       | Offer type                                                                                                                                                                                 | 1 - storage offers<br/>2 - solution offers<br/>3 - data offers                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `cancelable`      | Indicator if an offer can be cancelled                                                                                                                                                     | true / false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `description`     | Offer description                                                                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `restrictions`    | Offers that should be executed together with the current one<br/><br/>`offers` - an array of offer ids<br/>`types` - an array of offer types in accordance with offerType above            | For example, if the current solution should use a base image, then restrictions should look like this:<br/>`"restrictions":`<br/>`{`<br/>`"offers": [<base image offer id>],`<br/>`"types": [<base image offer type>]`<br/>`}`                                                                                                                                                                                                                                                                                                                                                                                          |
-| `metadata`        | Any additional information                                                                                                                                                                 | For example, there might be the information about whether or not the current offer is a grouping one, like in case of Tunnels<br/>`"{\"groupingOffers\":true}"`                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `input`           | Will be used in the future to specify the metadata about permitted inputs                                                                                                                  | For now, it should be empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `output`          | Will be used in the future to specify the metadata about permitted outputs                                                                                                                 | For now, it should be empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `allowedArgs`     | Will be deprecated                                                                                                                                                                         | For now, it should be empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `allowedAccounts` | List of accounts allowed to place an order based on this offer                                                                                                                             | If empty, all accounts are allowed                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `argsPublicKey`   | Additional encryption information in a string format<br/><br/>`algo` - algorithm for encrypting arguments<br/>`encoding` - encoding scheme<br/>`key` - public key                          | Example:<br/>`"argsPublicKey":`<br/>`"{\"algo\":\"ECIES\",`<br/>`\"encoding\":\"base64\",`<br/>`\"key\":\"<PUBLIC KEY>\"}"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `resultResource`  | Unencrypted content that is available for downloading, in a string format<br/><br/>`type`,`storageType`<br/>`credentials` to access content, including `token`, `storageId` and `filepath` | For now, only StorJ is supported. Please always use `STORAGE_PROVIDER` for `type` and `STORJ` for `storageType`. `token` should be **STORJ read access grant** with *read* permissions, `storageId` is a bucket name and `filepath` is the path to the content file located in the bucket.<br/><br/>It is mainly used for Base Image solutions. It should look like this:<br/>`"resultResource":`<br/>`"{\"type\":\"STORAGE_PROVIDER\",`<br/>`\"storageType\":\"STORJ\",`<br/>`\"credentials\":`<br/>`{\"token\":\"<READ_ACCESS_TOKEN>\",`<br/>`\"storageId\":\"<BUCKET_NAME>\"},`<br/>`\"filepath\":\"<FILE_NAME>\"}"` |
-| `linkage`         | Will be used in the future to verify solutions which are linked to the current offer                                                                                                       | For now, it should be empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `hash`            | Will be used in the future to verify solutions which are linked to the current offer                                                                                                       | For now, it should be empty                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|**String,<br/>unless specified**|**Description**|**Comments** |
+|:-|:-|:-|
+|`name`|Offer name ||
+|`group` |Offer group type| `0` for data and solution offers<br/>`2` for storage offers (not implemented yet)|
+|`offerType`       |Offer type  | `1` for storage offers (not implemented yet)<br/>`2` for solution offers<br/>`3` for data offers |
+|`cancelable`      |Indicator that the offer can be canceled | `true` or `false` |
+|`description`     |Offer description  ||
+|`restrictions`    |Object that specifies the offers that should be executed together with the current one|This object contais the two following arrays, `offers` and `types`|
+|`offers`|Array of IDs of required offers, including their own dependencies|Put each ID in quotation marks and separate with a comma|
+|`types`|Array of types of required offers in accordance with `offerType`|State the type for each offer in `offers`.<br/>Put each type in quotation marks and separate with a comma|
+| `metadata`        |Any additional information  | May be empty or contain the information about whether or not the current offer is a grouping one.<br/>For example, `"{\"groupingOffers\":true}"`  |
+| `input`           |Not implemented yet (metadata about permitted inputs)  |Leave empty|
+| `output`          |Not implemented yet (metadata about permitted outputs)|Leave empty |
+| `allowedArgs`     |Will be deprecated |Leave empty |
+| `allowedAccounts` |List of accounts allowed to use the current offer|Leave empty to allow all accounts|
+| `argsPublicKey`   |Encryption information in a string format:<br/><br/>`algo`—algorithm for encrypting arguments<br/>`encoding`—encoding scheme<br/>`key`—public key | Example:<br/>`"argsPublicKey":`<br/>`"{\"algo\":\"ECIES\",`<br/>`\"encoding\":\"base64\",`<br/>`\"key\":\"<PUBLIC_KEY>\"}"`  |
+| `resultResource`  | Unencrypted content that is available for downloading, in a string format<br/><br/>`type`, `storageType`, <br/>`credentials` to access content, including `token`, `storageId`, and `filepath` |Currently, only Storj is supported. Use `STORAGE_PROVIDER` for `type` and `STORJ` for `storageType`. `token` should be a STORJ access grant with **read** permission, `storageId` is the bucket name, and `filepath` is the path to the content file in the bucket.<br/><br/>It is mainly used for the base image solutions:<br/>`"resultResource":`<br/>`"{\"type\":\"STORAGE_PROVIDER\",`<br/>`\"storageType\":\"STORJ\",`<br/>`\"credentials\":`<br/>`{\"token\":\"<READ_ACCESS_TOKEN>\",`<br/>`\"storageId\":\"<BUCKET_NAME>\"},`<br/>`\"filepath\":\"<FILE_NAME>\"}"` |
+| `linkage`         |Not implemented yet (verification of the solutions linked to the current offer)|Leave empty|
+| `hash`            |Not implemented yet (verification of the solutions linked to the current offer)|Leave empty|
 
-**Note:** once `linkage` and `hash` are set, they can not be changed later.
+Offer JSON file template with example values for a solution identical to [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offer=offerId%3D18):
 
-JSON example:
-```json title="value-offer.json"
+```json title="offer.json"
 {
-  "name": "Image Classification",
-  "group": "0", // belongs to input group
-  "offerType": "2", // belongs to solution type
+  "name": "Image Classification Dataset #1",
+  "group": "0",
+  "offerType": "3",
   "cancelable": false,
-  "description": "My Image Classification solution",
+  "description": "Dataset with images of various breeds of dogs<br/><br/>This demo dataset is compatible with the Image Classification solution. Refer to the documentation for detailed instructions.",
   "restrictions": {
-    "offers": [ 
-      "5", // should be executed together with solution offer 5
-      "16" // should be executed together with data offer 16
+    "offers": [
+      "8",
+      "5"
     ],
     "types": [
       "2",
-      "3"
+      "2"
     ]
   },
   "metadata": "",
@@ -83,48 +80,26 @@ JSON example:
   "output": "",
   "allowedArgs": "",
   "allowedAccounts": [],
-  "argsPublicKey": "{}",
+  "argsPublicKey": "",
   "resultResource": "",
   "linkage": "",
   "hash": ""
 }
 ```
 
-### TEE offers
+The file may contain only the fields that need to be updated. For example, to only update the `name` and `description` fields, the file must look like this:
 
-
-| **Field**            | **Description**                                                                                                                                                          | **Comments**                                                                                                                                                                                                                                       |
-|:---------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`               | Offer name                                                                                                                                                               |                                                                                                                                                                                                                                                    |
-| `description`        | Offer description                                                                                                                                                        |                                                                                                                                                                                                                                                    |
-| `teeType`            | Offer type                                                                                                                                                               | 0 - TEE offers                                                                                                                                                                                                                                     |
-| `properties`         | Will be deprecated                                                                                                                                                       | For now, it should be empty                                                                                                                                                                                                                        |
-| `tlb`                | TEE Loader Block                                                                                                                                                         |                                                                                                                                                                                                                                                    |
-| `argsPublicKey`  | Additional enryption information in a string format<br/><br/>`algo` - algorithm for encrypting arguments<br/>`encoding` - encoding scheme<br/>`key` - public key         | Example:<br/>`"argsPublicKey":`<br/>`"{\"algo\":\"ECIES\",`<br/>`\"encoding\":\"base64\",`<br/>`\"key\":\"<PUBLIC KEY>\"}"`                                                                                                                        |
-| `hardwareInfo`       | Overall computing power configuration<br/><br/>`cpuCores` - a float value<br/>`gpuCores` - a float value<br/>`diskUsage` - a value in bytes<br/>`ram` - a value in bytes | in the Marketplace<br/><br/>`diskUsage` and `ram` values will be converted to GB in accordance with the formula `initial value / (1024 ^ 3)`                                                                                                            |
-| `optionInfo`         | Overall internet access configuration<br/><br/>`bandwidth` - a value in bits<br/>`traffic` - a value in bits<br/>`externalPort` - 1 for Yes, 0 for No                    | in the Marketplace<br/><br/>`bandwidth` value will be converted to Mbit in accordance with the formula `initial value / (1000 ^ 2)`<br/><br/>`traffic` value will be converted to Gbit in accordance with the formula `initial value / (1000 ^ 3)` |
-
-JSON example:
-```json title="tee-offer.json"
+```json
 {
-  "name": "TEE Offer",
-  "description": "My TEE offer",
-  "teeType": "0",
-  "properties": "",
-  "tlb": "",
-  "argsPublicKey": "{}",
-  "hardwareInfo": {
-    "slotInfo": {
-      "cpuCores": 48,
-      "gpuCores": 0,
-      "diskUsage": 405825660000,
-      "ram": 715710130680
-    },
-    "optionInfo": {
-      "bandwidth": 12500000,
-      "traffic": 0,
-      "externalPort": 1
-    }
-  }
+  "name": "New Image Classification",
+  "description": "New improved Image Classification solution"
 }
+```
+
+## Example
+
+The following command updates an existing value offer (ID 39) using the information in the `updated-offer-39.json` in the SPCTL root directory:
+
+```
+./spctl offers update value 39 --path ./updated-offer-39.json
 ```

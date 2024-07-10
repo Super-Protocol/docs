@@ -32,7 +32,7 @@ Every folder contains output.csv file and processing.error file in case there we
 
 **LINKS**
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=9).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/solutions?offer=offerId%3D10&tab=about).
 
 
 ## Compatibility
@@ -45,7 +45,7 @@ Archive size is 15.3 MB. Inside are 18 JPG files (two for each movie star) and t
 
 You can download it [here](https://github.com/Super-Protocol/datasets/blob/main/Face%20Recognition%20Datasets/face-recognition-ds1.tar.gz?raw=true).
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=17).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/data?offer=offerId%3D22&tab=about).
 
 
 ### Face Recognition Dataset #2
@@ -56,4 +56,4 @@ Archive size is 7.2 MB. Inside are 30 JPG files (characters and actors) and the 
 
 You can download it [here](https://github.com/Super-Protocol/datasets/blob/main/Face%20Recognition%20Datasets/face-recognition-ds2.tar.gz?raw=true).
 
-See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/?offerId=18).
+See this offer through the Marketplace GUI [here](https://marketplace.superprotocol.com/data?offer=offerId%3D23&tab=about).

@@ -7,38 +7,35 @@ sidebar_position: 0
 
 ## Introduction
 
-Welcome to Super Protocol, the confidential Web3 cloud computing and marketplace.
+Welcome to Super Protocol, a confidential cloud and marketplace for Web3 and AI.
 
-This documentation is for developers who are interested in building applications for decentralized confidential environments. The documentation mostly covers topics related to fundamentals and hands-on tinkering with Super Protocol. Parts related to the Super Protocol technical architecture are covered in the [White Paper](/whitepaper).
+This documentation is for developers who are interested in building applications for a decentralized confidential environment. The articles mostly cover fundamental topics and practical questions of working with Super Protocol. If you are interested in the Super Protocol technical architecture, you can find it in the [Whitepaper](/whitepaper).
 
-This documentation is a work in progress and will be updated on regular basis. Your feedback is highly appreciated.
+Use the steps below as an outline of your learning curve with Super Protocol.
 
-You can use the steps below to get you started.
+## Create a first order with GUI (beginner)
 
-## Play around with GUI (beginner)
+If you are just starting out, feel your way around Super Protocol using the Marketplace GUI. 
 
-If you are just starting out, we advise you to feel your way around Super Protocol using the Marketplace GUI. 
+Follow the steps:
+1. [Get access](/testnet/) to the Testnet.
+2. [Set up MetaMask](/developers/marketplace/first-steps) and connect to the Marketplace GUI.
+3. Complete the Marketplace [Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnel order to get familiar with the Super Protocol logic.
 
-Please follow these steps:
+## Deploy a solution with CLI (advanced)
 
-1. Get access to Testnet [here](/testnet/).
+When you know the basics, try SPCTL—the Super Protocol CLI tool:
 
-2. Follow [this guide](/developers/marketplace/first-steps) to set up your Testnet wallet with Metamask and connect to the Marketplace GUI.
+1. [Configure SPCTL](/developers/cli_guides/) as a user.
+2. Read about the [fundamentals](/developers/fundamentals), [Testnet limitations](/testnet/limitations), and key [CLI commands](/developers/cli_commands).
+3. Read the [Quick Deployment Guide](/developers/cli_guides/quick_guide) to learn about deploying your solutions.
+4. Choose a [deployment guide](/developers/deployment_guides/) to get an example for additional deployment scenarios.
 
-3. Complete the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnels order.
+## Create your provider and offers with CLI (advanced)
 
-This should give you some idea of the Super Protocol logic. 
+1. Follow the [Providers and Offers](/developers/cli_guides/providers_offers) guide to create your provider and a first offer.
+2. Follow the [Moderation Guidelines](/developers/marketplace/moderation/) to approve your offer for Marketplace GUI.
+3. [Update SPCTL configuration](/developers/cli_guides/configure#for-offer-providers) as a provider to enable management of your provider and offers.
+4. Use the [SPCTL commands](/developers/cli_guides/providers_offers#faq) to manage your provider and offers.
 
-## Deploy solutions with CLI (advanced)
-
-Now you can dive right into it: 
-
-4. Follow [this guide](/developers/cli_guides/) to configure SPCTL (our CLI tool).
-
-5. Familiarize yourself with the [fundamentals](/developers/fundamentals) as well as key [CLI commands](/developers/cli_commands) and [Testnet limitations](/testnet/limitations).
-
-6. Take your pick of [deployment guides](/developers/deployment_guides/) with examples to help you through.
-
-This is, of course, just the tip of the iceberg. Super Protocol is a powerful tool and it's up to you to make it your own.
-
-We highly welcome any feedback and questions! Please join us at [Discord](https://discord.com/invite/superprotocol).
+Join us on [Discord](https://discord.gg/superprotocol). The Super Protocol team welcomes any feedback and questions!

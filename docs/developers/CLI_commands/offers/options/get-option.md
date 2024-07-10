@@ -1,37 +1,29 @@
 ---
 id: "get-option"
-title: "get-option"
+title: "offers get-option"
 slug: "/cli_commands/offers/options/get-option"
 sidebar_position: 4
 ---
 
-Display information for specific option of a specific offer.
+Display the information for an option of a compute offer.
 
-## Usage
-
-Syntax.
+## Synopsis
 
 ```
-./spctl offers get-option <type> --offer <id> --option <id>
-```
-
-For example, this line will get you option information for [this](https://marketplace.superprotocol.com/compute?offerId=1) compute offer.
-
-```
-./spctl offers get-option tee --offer 1 --option 1
+./spctl offers get-option tee --offer <offerId> --option <optionId>
 ```
 
 ## Arguments
 
 |**Name**| **Description**                 |
 | :- |:--------------------------------|
-|`type`| Type of offer: `tee` or `value` |
+| `offerId`  |Offer ID  |
+| `optionId`  |Option ID |
 
-## Options
+## Example
 
-You will need to use both `offer` and `option` with their id's.
+The following command displays the information for the option (ID 3) of [TEE Offer #1](https://marketplace.superprotocol.com/compute?offerId=1):
 
-| **Name, shorthand** | **Default** | **Description**             |
-|:--------------------|:------------|:----------------------------|
-| `--offer`           |             | Available fields: offer ID  |
-| `--option`          |             | Available fields: option ID |
+```
+./spctl offers get-option tee --offer 1 --option 3
+```

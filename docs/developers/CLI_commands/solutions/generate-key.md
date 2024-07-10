@@ -1,26 +1,36 @@
 ---
 id: "solutions-generate-key"
-title: "Generate a key"
+title: "solutions generate-key"
 slug: "/cli_commands/solutions/generate-key"
 sidebar_label: "generate-key"
 ---
 
-For Docker image to run inside the TEE, the image has to be built and signed with Gramine (a.k.a graminized). To [pack](/developers/cli_commands/solutions/prepare) the solution into a Docker image you will need to generate a signing key. 
+Generate a signing key necessary to prepare a solution.
 
-## Usage
+Docker needs this key to [pack the solution](/developers/cli_commands/solutions/prepare) into a container.
+
+## Synopsis
 
 ```
-./spctl solutions generate-key <outputPath> [OPTIONS]
+./spctl solutions generate-key <outputPath> [option]
 ```
 
-## Arguments
+## Argument
 
 |**Name**| **Description**                      |
 | :- |:-------------------------------------|
-|`outputPath`| Path to save the generated key file. |
+|`outputPath`| Path to save the generated key file |
 
-## Options
+## Option
 
-|**Name, shorthand**|**Default**|**Description**|
-| :- | :- | :- |
-|`--config`|`./config.json`|Path to the configuration file|
+|**Name**|**Description**|
+| :- | :- |
+|`--config`|Path to the configuration file. Default is `./config.json`|
+
+## Example
+
+The following command generates a signing key and saves it to the `new-key` file in the SPCTL root directory:
+
+```
+./spctl solutions generate-key new-key
+```

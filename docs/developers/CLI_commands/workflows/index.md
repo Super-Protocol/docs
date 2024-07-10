@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ---
 
-Commands related to the creation of new orders.
+Create an order and generate a private key to access order results.
 
-## Usage
+## Synopsis
 
 ```
 ./spctl workflows <command>
@@ -18,5 +18,5 @@ Commands related to the creation of new orders.
 
 | **Command**                                                     |**Description**|
 |:----------------------------------------------------------------| :- |
-| [generate-key](/developers/cli_commands/workflows/generate-key) |Generate private key to encrypt order results|
-| [create](/developers/cli_commands/workflows/create)             |Create new orders|
+| [generate-key](/developers/cli_commands/workflows/generate-key) |Generate a private key to decrypt order results|
+| [create](/developers/cli_commands/workflows/create)             |Create an order|
