@@ -69,8 +69,8 @@ You need to add the following secrets:
 
 You need to change two variables:
  
-- `TUNNEL_SERVER_MRENCLAVE` - f539fcf25af2c8221bd150aa87f624379e2b216caa3f0689da03b2a74af6c833
-- `TUNNEL_SERVER_MRSIGNER` - 22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513
+- `TUNNEL_SERVER_MRENCLAVE` - 40154d45ffb11e7298c90b6092404cd974616c021a5e7e8ccf184ec8f585ab14
+- `TUNNEL_SERVER_MRSIGNER` - 292dbf9d7256b124de0259dca586c53135175f431f2336d4a27c49c3cd60b518
 - `DOMAIN` (optional) - specify here your domain if you are using wildcard SSL certificate
 
 Your hex codes should be just like this, without changes.
