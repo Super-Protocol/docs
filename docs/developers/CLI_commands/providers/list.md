@@ -5,9 +5,9 @@ slug: "/cli_commands/providers/list"
 sidebar_label: "list"
 ---
 
-List all registered providers on the blockchain.
+Lists all registered providers on the blockchain.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl providers list [option ...]

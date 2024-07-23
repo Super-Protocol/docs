@@ -5,36 +5,29 @@ slug: "/cli_commands/files/upload"
 sidebar_label: "upload"
 ---
 
-Upload a file to remote storage such as Storj.
+Uploads a file to remote storage such as Storj.
 
-Users can temporarily store their solution and data files to create an order using the [workflows create](/developers/cli_commands/workflows/create) command. Providers can store the content of their solution and data offers to make it available for user's orders long-term.
+The primary purpose of this command is to make the uploading files available for download and execution by compute providers. It is necessary in two cases:
 
-Depending on the options, the command does one of the following:
+- With the [`workflows create`](/developers/cli_commands/workflows/create) command, **users** can add the uploaded solution or data to an order instead of a Marketplace offer. In this case, a short-term storage period is enough.
+- Solution and data **providers** can store the contents of their offers to make them available for customers' orders. This requires a long-term storage period.
 
-- Uploads to storage directly. This requires a Storj account and SPCTL [configured](/developers/cli_guides/configure#set-up-storj) to use it.
-- Creates a storage order using one of the storage offers. This does not require a Storj account but requires paying TEE tokens for the order according to the offer pricing and selected lease duration.
+Depending on the options, the command offers two ways to upload and store the files. Choose one that suits you better:
 
-Choose one of these methods that suits you better.
+- **Uploads to storage directly.** This requires a Storj account and SPCTL [configured](/developers/cli_guides/configure#set-up-storj) to use it. The command will upload the file to the root directory of the bucket specified in the SPCTL configuration file.
+- **Creates a storage order using one of the Marketplace storage offers.** This does not require a Storj account but requires paying TEE tokens for the order according to the offer pricing and selected lease duration.
 
-## Synopsis
+The input of the command is a TAR.GZ archive file. For solutions, this file is created by the [`solutions prepare`](/developers/cli_commands/solutions/prepare) command. For data, it is an archive containing the dataset files.
+
+The output of the command is a resource JSON file with the information for a compute provider on how to access the uploaded file.
+
+## Syntax
 
 ```
 ./spctl files upload <localPath> [option ...]
 ```
 
-**Input:**
-
-- TAR.GZ archive. For solutions, this file is created by the [solutions prepare](/developers/cli_commands/solutions/prepare) command. For data, it is an archive containing the dataset files.
-
-:::note
-Upload each archive separately. For example, if you are deploying a solution with two datasets, run the upload command three times using different inputs.
-:::
-
-**Output:**
-
-- Resource JSON file containing the information for a compute provider on how to access the uploaded file.
-
-## Argument
+## Arguments
 
 |**Name**| **Description**                |
 | :- |:-------------------------------|
@@ -65,7 +58,7 @@ The following command uploads the `content.tar.gz` file located in the SPCTL roo
 
 To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configure#set-up-storj) section to create a bucket and access grants and set up SPCTL.
 
-**Example 2.** Upload using a storage offer
+**Example 2.** Upload by creating a storage order
 
 The following command uploads the `content.tar.gz` located in the SPCTL root directory:
 
@@ -75,12 +68,12 @@ The following command uploads the `content.tar.gz` located in the SPCTL root dir
 
 Options used:
 
-- `--storage 25,33`: create a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing) (ID 25) and the requirement slot (ID 33)
-- `--min-rent-minutes 120`: set the lease period for 120 minutes
+- `--storage 25,33`: create a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing) (offer ID: 25) and the requirement slot with ID 33.
+- `--min-rent-minutes 120`: set the lease period for 120 minutes.
 
 Since the `--storage` option is set, the command does not require a Storj account. However, when the lease period is over, the content will become unavailable unless you [replenish the order deposit](/developers/cli_commands/orders/replenish-deposit).
 
-**Example 3.** Additional options
+**Example 3.** Use additional options
 
 The following command uploads the `content.tar.gz` file located in the `data` directory in the SPCTL root directory:
 
@@ -91,6 +84,6 @@ The following command uploads the `content.tar.gz` file located in the `data` di
 Options used:
 
 - `--filename ./fileData.tar.gz`: name the uploaded file `fileData.tar.gz`
-- `--output ./fileResource.json`: name the output resource JSON file `fileResource.json` and save in to the SPCTL root directory
+- `--output ./fileResource.json`: name the output resource JSON file `fileResource.json` and save it to the SPCTL root directory
 - `--metadata ./fileMetadata.json`: add the `fileMetadata.json` metadata file to the resource file during the upload
-- other options are explained in the previous example
+- other options are explained in the previous example.

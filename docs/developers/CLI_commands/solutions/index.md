@@ -6,9 +6,9 @@ sidebar_position: 2
 
 ---
 
-Prepare a solution for deployment on Super Protocol and generate a key for singing a Docker container with the solution.
+Prepares a solution for deployment on Super Protocol and generates a key for singing a Docker container with the solution.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl solutions <command>

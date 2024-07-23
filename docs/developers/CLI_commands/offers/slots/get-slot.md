@@ -5,11 +5,11 @@ slug: "/cli_commands/offers/slots/get-slot"
 sidebar_position: 4
 ---
 
-Display the information for a requirement slot in an offer.
+Displays the information for a [requirement slot](/developers/fundamentals/slots#requirements) in an offer.
 
-Use the [offers get](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer.
+Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers get-slot <type> --offer <offerId> --slot <slotId>
@@ -31,7 +31,7 @@ Use the [offers get](/developers/cli_commands/offers/offers/get) command to get 
 
 ## Example
 
-The following command displays the information on the slot (ID 47) in the offer (ID 39):
+The following command displays the information on the slot with ID 47 in the offer with ID 39:
 
 ```
 ./spctl offers get-slot tee --offer 39 --slot 47

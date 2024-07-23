@@ -5,7 +5,7 @@ slug: "/fundamentals/orders"
 sidebar_position: 4
 ---
 
-_Orders_ and _suborders_ on Super Protocol are digital contracts between a customer and [offer](/developers/fundamentals/offers) providers. The term "order" always implies the usage of a compute offer. Every other offer added to the order creates a separate suborder related to the main order. Solutions and data uploaded by the customer create no suborders.
+_Orders_ and _suborders_ on Super Protocol are digital contracts between a customer and [offer](/developers/fundamentals/offers) providers. The term _order_ always implies the usage of a [compute offer](/developers/fundamentals/offers#compute). Every other offer added to the order creates a separate suborder related to the main order. Solutions and data uploaded by the customer create no suborders.
 
 <img src={require('./../images/fundamentals_orders_1.png').default} width="auto" height="auto"/>
 
@@ -19,6 +19,8 @@ There are two ways to create orders:
 Orders, just like everything else, are accessible on the blockchain. So, while the content inside a Trusted Execution Environment is confidential, the general information about the order is available to anyone.
 
 The content of the order, including the order result, is encrypted. Only the customer knows the private key necessary to decrypt the result. The order result is kept by the storage suborder for as long as the customer keeps paying for it.
+
+Every order and suborder has a unique identification number—_order ID_. It is incremental and continuous for both orders and suborders.
 
 ## Combinations
 
@@ -101,6 +103,8 @@ A storage suborder also starts as **New**. When the order result is ready, the s
 When the lease expires the suborder becomes **Done**. It means the order result is no longer available.
 
 Typically the storage suborder is created when the main order is almost completed to keep the result available for the customer. However, sometimes there is no order result to store. In this case, the storage suborder is not created.
+
+Users can create independent storage orders to keep files, for example, for [community offers](/developers/fundamentals/offers#community-offers). This functionality is only available in CLI using the [`files upload`](/developers/cli_commands/files/upload) command. Note that such orders do not appear in [**All orders**](https://marketplace.superprotocol.com/all-orders) in the Marketplace GUI.
 
 ### Cancelations
 

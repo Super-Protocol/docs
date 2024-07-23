@@ -5,11 +5,11 @@ slug: "/cli_commands/offers/offers/disable"
 sidebar_position: 7
 ---
 
-Disable an existing enabled offer.
+Disables an existing enabled offer.
 
-**Important:** The `offers disable` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers disable <offerId> [option]
@@ -26,3 +26,11 @@ Disable an existing enabled offer.
 | **Name** |**Description**                |
 |:--------------------|:-------------------------------|
 | `--config`          |Path to the configuration file. The default is `./config.json` |
+
+## Example
+
+The following command disables the offer with ID 39:
+
+```
+./spctl offers enable 39
+```

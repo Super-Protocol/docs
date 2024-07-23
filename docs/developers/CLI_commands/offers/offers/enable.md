@@ -5,11 +5,11 @@ slug: "/cli_commands/offers/offers/enable"
 sidebar_position: 8
 ---
 
-Enable an existing disabled offer.
+Enables an existing disabled offer.
 
-**Important:** The `offers enable` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers enable <offerId> [option]
@@ -29,7 +29,7 @@ Enable an existing disabled offer.
 
 ## Example
 
-The following command enables the offer (ID 39):
+The following command enables the offer with ID 39:
 
 ```
 ./spctl offers enable 39

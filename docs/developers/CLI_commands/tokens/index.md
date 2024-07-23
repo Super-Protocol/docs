@@ -6,11 +6,11 @@ sidebar_position: 1
 
 ---
 
-Manage test TEE and MATIC tokens.
+Manages test TEE and MATIC tokens.
 
 TEE tokens are necessary to pay for orders in Super Protocol. MATIC tokens are for processing transactions on Polygon blockchains.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl tokens <command>

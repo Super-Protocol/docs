@@ -6,11 +6,11 @@ sidebar_position: 4
 
 ---
 
-Download the content of an offer.
+Downloads the content of an offer.
 
-The command only works for offers that allow this operation.
+The command only works with offers that allow this operation.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers download-content <offerId> [option ...]

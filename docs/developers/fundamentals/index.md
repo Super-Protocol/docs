@@ -7,27 +7,49 @@ sidebar_position: 2
 
 This section describes the most essential concepts of Super Protocol.
 
-## Trusted Execution Environment
-
-A _Trusted Execution Environment_ (TEE) is a secure area in memory, [CPU](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html), and [GPU](https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/). This area is protected from unauthorized access from the outside, so the data inside TEE cannot be read or edited without the authorized code.
-
-This hardware-based data protection is an integral part of Super Protocol. It ensures confidentiality and protects both providers and customers. Customers' orders cannot be accessed even by the owners of the hardware that performs the computation. And no one can download, modify, or otherwise access the provider's offer content even if they use it in their orders.
-
 ## Marketplace
 
-The Super Protocol Marketplace is a blockchain-based system that connects the sellers and the buyers of digital products and services. It consists of providers of solutions, data, storage, and compute resources, as well as the offers that these providers created. Currently, users who registered as providers can create solution and data offers, and only Super Protocol provides compute and storage resources. In future releases, providers will receive this functionality as well.
+Governed by smart contracts, the Super Protocol Marketplace is a distributed blockchain-based ecosystem that connects the sellers and the buyers of digital products and services. It consists of
 
-Super Protocol Marketplace is accessible via [CLI](/developers/cli_guides) and, more conveniently, via the [web app GUI](/developers/marketplace).
+- Providers of solutions, data, storage, and compute resources
+- Offers that providers create
+- Customers who rent the offers and pay for the usage.
+
+Users who register a provider create offers to share and monetize their solutions, scripts, datasets, AI models, libraries, frameworks, etc. Currently, only Super Protocol provides compute and storage resources. In future releases, users will receive this functionality as well. [Read more](/developers/fundamentals/offers) about providers, offers, and offer types.
+
+Customers place orders by adding offers and paying for them according to the prices set by the providers of these offers. [Read more](/developers/fundamentals/orders) about orders, order statuses, pricing, and possible usage scenarios.
+
+The Super Protocol Marketplace is accessible via
+
+- The command-line interface (CLI) using a special utility called [SPCTL](/developers/cli_guides), or
+- The graphical interface (GUI) using a browser-based [web application](https://marketplace.superprotocol.com/).
+
+GUI is more convenient to browse offers, create orders, and download results. However, the full functionality of the Marketplace is only available through the CLI.
+
+## Trusted Execution Environment
+
+A _Trusted Execution Environment_ is a secure area in memory, [CPU](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html), and [GPU](https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/). This area is protected from unauthorized access from the outside, so the data inside a Trusted Execution Environment cannot be read or edited without the authorized code.
+
+Confidentiality is an integral part of Super Protocol. All the user data in Super Protocol is encrypted and protected while stored, in transfer, and in use.
+
+Trusted Execution Environment ensures confidentiality and protects both providers and customers. Only the customer can access their orders. Customers themselves cannot download, modify, or otherwise access the provider's offer content even if they use it in their orders. Neither the Super Protocol team nor the owner of the machine that performs the computation have access to the order and offer content.
 
 ## Providers
 
 Super Protocol users can register providers on Super Protocol. Providers can share and monetize their applications and datasets by offering them to other users. Since Super Protocol is still in the testnet stage, monetization is only possible with test tokens as a demonstration.
 
-Provider registration and offer creation are available for anyone to try. Currently, this functionality is aimed at advanced users because it requires using CLI. In the future, with the updated Marketplace and the new possibilities it brings, there will be additional features and a more convenient GUI-based workflow. Refer to the [Providers and offers](/developers/cli_guides/providers_offers) guide to register a provider and create an offer.
+Provider registration and offer creation are available for anyone to try. Currently, this functionality requires CLI and is aimed at advanced users. Upcoming releases will bring an updated Marketplace, additional features, and a more convenient GUI-based workflow. Refer to the [Providers and offers](/developers/cli_guides/providers_offers) guide to register a provider and create an offer.
 
 ## Offers
 
-Offers are the basic building blocks of the Marketplace. There are four types of offers: solution, data, storage, and compute. When placing orders on Super Protocol, you can use existing offers or upload your solution and data instead. Moreover, it is possible to register a provider and monetize your solutions and datasets by offering them to others.
+Offers are the basic building blocks of the Marketplace. There are four types of offers:
+
+- Solution
+- Data
+- Storage
+- Compute.
+
+When placing orders on Super Protocol, you can use existing offers or upload your solution and data instead. Moreover, it is possible to register a provider and monetize your solutions and datasets by offering them to others.
 
 Note that Super Protocol users do not buy offers, only rent them for a limited period. TEE ensures that the content of offers remains confidential.
 

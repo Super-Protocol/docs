@@ -29,7 +29,7 @@ To set up a provider and create offers, you need:
   + _Testnet user account address_: the account public key
   + _Testnet private key_: to import the Testnet wallet to MetaMask
   + _Testnet access token_: to receive free test TEE and MATIC tokens.
-- [SPCTL](/developers/cli_guides/configure)—Super Protocol CLI tool to upload your offers and create an Offer Provisioner order.
+- [SPCTL](/developers/cli_guides/configure)—Super Protocol CLI tool for uploading your offers and creating an Offer Provisioner order.
 - [Storj](https://www.storj.io/) account, either Free Trial or Pro (optional).
 
 ### Set up Provider Tools
@@ -168,15 +168,11 @@ As a result, SPCTL generates the `resource.json` file with information for TEE o
 
 Offer providers need the following Super Protocol accounts:
 
-- _Testnet user account_. It is your main Testnet account provided by Super Protocol.
-
+- _Testnet user account_. the Testnet account provided by Super Protocol
 - Three _provider accounts_:
-
-  + _Authority account_. it is your main provider account on Super Protocol.
-
-  + _Action account_. It executes actions on behalf of the authority account.
-
-  + _Token receiver account_. It receives rewards in TEE tokens for providing offers on Super Protocol.
+  + _Authority account_: can change provider's records; the main provider account
+  + _Action account_: executes actions on behalf of the authority account
+  + _Token receiver account_: receives rewards in TEE tokens for providing offers on Super Protocol.
 
 ### Create accounts
 
@@ -309,7 +305,7 @@ For a data offer identical to [Image Classification Dataset #1](https://marketpl
 
 Image Classification Dataset #1 is a data offer, hence `"offerType": "3"`.
 
-Users must use it with the Image Classification solution offer (ID 8), so there is `"8"` in `"offers"`. Image Classification solution, in turn, requires Python Base Image solution offer (ID 5), so you must include its ID as well. Each ID is in quotation marks and separated with a comma: `"offers": ["8","5"]`
+Users must use it with the Image Classification solution offer (ID 8), so there is `"8"` in `"offers"`. Image Classification solution, in turn, requires Python Base Image solution offer (ID 5), so you must include its ID as well. Each ID is in quotation marks and separated by a comma: `"offers": ["8","5"]`
 
 Further, you must specify the type for every offer in `restrictions`. Both Image Classification and Python Base Image are solution offers, hence `"types": ["2","2"]`.
 
@@ -575,7 +571,7 @@ Similarly, you can use the [`offers add-slot`](/developers/cli_commands/offers/s
 
 ### Create additional offers
 
-To create a new offer in addition to an existing one on the same provider, back up the existing `execution-controller` or `execution-controller` directory. Then, go through the guide again, starting with [Step 2](/developers/cli_guides/providers_offers#step-2-prepare-content).
+To create a new offer in addition to an existing one on the same provider, back up the existing `data-execution-controller` or `solution-execution-controller` directory. Then, go through the guide again, starting with [Step 2](/developers/cli_guides/providers_offers#step-2-prepare-content).
 
 After you register the new offer in [Step 4](/developers/cli_guides/providers_offers/#step-4-create-the-provider-and-offer), Provider Tools adds a new object into the `PROVIDER_OFFERS_JSON` array in the `.env` file. Cancel the previous Offer Provisioner order and launch a new one using this updated `.env` file and `config.json` from the same `execution-controller` directory. This new Offer Provisioner order will serve both of your offers simultaneously.
 
@@ -598,7 +594,6 @@ It will make the offer unavailable to use but will not delete it. Later, if you 
 Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
 - If the offer content is no longer accessible because its [storage order has expired](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
-
 - If the lease on the [Offer Provisioner order has expired](/developers/cli_guides/providers_offers#lease-on-offer-provisioner). Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
 
 ### Troubleshooting

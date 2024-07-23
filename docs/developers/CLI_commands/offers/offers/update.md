@@ -5,13 +5,13 @@ slug: "/cli_commands/offers/offers/update"
 sidebar_position: 6
 ---
 
-Update information of an existing offer using an offer description JSON file.
+Updates information of an existing offer using an offer description JSON file.
 
-Refer to the [Offer description](/developers/cli_guides/providers_offers#offer-description) section to create the initial offer description.
+Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offer-description) guide to create the initial offer description.
 
-**Important:** The `offers update` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers update <type> <offerId> [option ...]
@@ -98,7 +98,7 @@ The file may contain only the fields that need to be updated. For example, to on
 
 ## Example
 
-The following command updates an existing value offer (ID 39) using the information in the `updated-offer-39.json` in the SPCTL root directory:
+The following command updates an existing value offer with ID 39 using the information in the `updated-offer-39.json` in the SPCTL root directory:
 
 ```
 ./spctl offers update value 39 --path ./updated-offer-39.json

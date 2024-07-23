@@ -5,11 +5,11 @@ slug: "/cli_commands/orders/replenish-deposit"
 sidebar_label: "replenish-deposit"
 ---
 
-Replenish the order deposit.
+Replenishes the order deposit.
 
-Certain orders (e.g. Offer Provisioner and storage orders) require a positive deposit balance to keep running. 
+Certain orders require a positive deposit balance to keep running. For example, [Offer Provisioner](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner) and storage orders.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl orders replenish-deposit <orderId> <amount> [option]

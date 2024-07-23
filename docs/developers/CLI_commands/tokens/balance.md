@@ -5,9 +5,9 @@ slug: "/cli_commands/tokens/balance"
 sidebar_label: "balance"
 ---
 
-Display the balance of TEE and MATIC tokens in your wallet.
+Displays the balance of TEE and MATIC tokens in your wallet.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl tokens balance [option]

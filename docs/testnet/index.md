@@ -7,7 +7,7 @@ sidebar_position: 0
 
 Testnet is an operational work-in-progress version of Super Protocol. The project uses a continuous delivery approach. The team constantly adds new functionality as Super Protocol moves towards the Mainnet.
 
-The [Marketplace web interface](https://marketplace.superprotocol.com/) is available to anyone to browse. However, you need a Testnet account to access the full functionality like receiving test tokens and creating orders.
+The [Marketplace web interface](https://marketplace.superprotocol.com/) is available for everyone to browse. However, you need a Testnet account to access the full functionality like receiving test tokens and creating orders.
 
 - If you are a new user and have never applied, fill out the [**Testnet participation form**](https://superprotocol.typeform.com/testnetm).
 - If you have previously applied for the Testnet, you do not need to reapply. Use your existing testnet account.

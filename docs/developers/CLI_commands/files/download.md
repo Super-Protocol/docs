@@ -5,11 +5,11 @@ slug: "/cli_commands/files/download"
 sidebar_label: "download"
 ---
 
-Download a file from remote storage and decrypt it using the information in a resource JSON file.
+Downloads a file from remote storage and decrypts it using the information in a resource JSON file.
 
 The resource JSON file is created as a result of the [`files upload`](/developers/cli_commands/files/upload) command.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl files download <resourceFilePath> <localPath> [option]

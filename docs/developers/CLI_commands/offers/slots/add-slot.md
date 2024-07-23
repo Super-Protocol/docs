@@ -5,13 +5,13 @@ slug: "/cli_commands/offers/slots/add-slot"
 sidebar_position: 1
 ---
 
-Create an additional [requirement slot](/developers/fundamentals/slots#requirements) in an offer using the information in the offer slot JSON file.
+Creates an additional [requirement slot](/developers/fundamentals/slots#requirements) in an offer using the information in an offer slot JSON file.
 
-Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) section to create the initial offer requirements.
+Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) to create the initial offer requirements.
 
-**Important:** The `offers add-slot` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers add-slot <type> --offer <offerId> [option ...]
@@ -82,8 +82,10 @@ Note that some of the data is represented differently in the Marketplace GUI:
 
 ## Example
 
-The following command adds a new requirement slot to the offer (ID 39) using the `offer-new-slot.json` file located in the SPCTL directory:
+The following command adds a new requirement slot to the offer with ID 39 using the `offer-new-slot.json` file located in the SPCTL directory:
 
 ```
 ./spctl offers add-slot value --offer 39 --path ./offer-new-slot.json
 ```
+
+Options used:
