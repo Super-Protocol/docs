@@ -23,9 +23,9 @@ Enable an existing disabled offer.
 
 ## Options
 
-| **Name, shorthand** |**Description**                |
+| **Name** |**Description**                |
 |:--------------------|:-------------------------------|
-| `--config`          |Path to the configuration file. Default is `./config.json` |
+| `--config`          |Path to the configuration file. The default is `./config.json` |
 
 ## Example
 

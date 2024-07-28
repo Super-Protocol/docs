@@ -17,10 +17,10 @@ List all registered providers on the blockchain.
 
 |**Name**   |**Description**|
 |:---------|:-|
-|`--fields`|Default fields: `address`, `name`.Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. Fields must be separated with commas|
-|`--limit`|Number of records to display. Default is `10`|
+|`--fields`|Default fields: `address`, `name`. Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. Fields must be separated with commas|
+|`--limit`|Number of records to display. The default is `10`|
 |`--cursor`|Cursor for pagination|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Example
 

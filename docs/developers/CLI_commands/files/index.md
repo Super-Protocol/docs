@@ -8,7 +8,7 @@ sidebar_position: 3
 
 Manage files in third-party storage such as Storj.
 
-The majority of these commands require a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configure#set-up-storj) section to create a bucket and access grants and set up SPCTL.
+Most of these commands require a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/developers/cli_guides/configure#set-up-storj) section to create a bucket and access grants and set up SPCTL.
 
 ## Synopsis
 

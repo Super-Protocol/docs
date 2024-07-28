@@ -5,11 +5,9 @@ slug: "/marketplace/moderation/"
 sidebar_position: 4
 ---
 
-## About
+This section is for providers who want their solution or data offers to appear in the **Approved** category in Marketplace GUI. As a prerequisite, you must complete the [Providers and Offers](/developers/cli_guides/providers_offers) guide.
 
-This section is for providers who want their solution or data offers to appear in the **Approved** category in Marketplace GUI. As a prerequisite you must complete the [Providers and Offers](/developers/cli_guides/providers_offers) guide.
-
-Super Protocol is a permissionless cloud and does not moderate or restrict offers or deployments. Providers can create any offers on blockchain, which will be accessible by users through SPCTL. However, the Marketplace GUI is a separate Super Protocol product where offers are presented in a transparent and user-friendly manner.
+Super Protocol is a permissionless cloud and does not moderate or restrict offers or deployments. Providers can create any offers on the blockchain, which will be accessible by users through SPCTL. However, the Marketplace GUI is a separate Super Protocol product where offers are presented in a transparent and user-friendly manner.
 
 ## Offer filter
 
@@ -32,16 +30,16 @@ Your offer should be well-documented and operational. It also should not contain
 
 The [offer description](/developers/cli_guides/providers_offers#offer-description) must explain:
 
-- What your solution does
-- The expected result; provide an example
-- For solution offers: what kind of data the offer uses; provide examples of the required format and structure
-- For data offers: what kind of data the offer contains; provide examples of the format and structure
+- What your solution does.
+- The expected result; provide an example.
+- For solution offers: what kind of data the offer uses; provide examples of the required format and structure.
+- For data offers: what kind of data the offer contains; provide examples of the format and structure.
 
-In the description, you can also use HTML links to outside resources like GitHub for additional description or downloads of your offer content. By default, neither the users nor the Super Protocol team have access to the actual content of your offers due to confidentiality reasons.
+In the description, you can also use HTML links to outside resources like GitHub for additional information or downloads of your offer content. By default, neither the users nor the Super Protocol team have access to the actual content of your offers due to confidentiality reasons.
 
 ### Operational
 
-Your offer has to work. Test it locally and [deploy it](/developers/cli_guides/quick_guide) to Super Protocol before turning it into an offer. After you create the offer, test it before submitting for review.
+Your offer has to work. Test it locally and [deploy it](/developers/cli_guides/quick_guide) to Super Protocol before turning it into an offer. After you create the offer, test it before submitting it for review.
 
 ### Not illegal
 

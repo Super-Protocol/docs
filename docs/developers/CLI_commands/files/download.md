@@ -5,7 +5,7 @@ slug: "/cli_commands/files/download"
 sidebar_label: "download"
 ---
 
-Download a file from remote storage and decrypts it using the information in a resource JSON file.
+Download a file from remote storage and decrypt it using the information in a resource JSON file.
 
 The resource JSON file is created as a result of the [`files upload`](/developers/cli_commands/files/upload) command.
 
@@ -26,7 +26,7 @@ The resource JSON file is created as a result of the [`files upload`](/developer
 
 |**Name**|**Description**|
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Example
 

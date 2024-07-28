@@ -38,9 +38,9 @@ For both offer types:
 |**Name**|**Description**|
 |:-|:-|
 |`--ids`|Filter by the offer ID. Accepts multiple values separated by spaces|
-|`--limit`|Number of rows to display. Default is `10`|
+|`--limit`|Number of rows to display. The default is `10`|
 |`--cursor`|Cursor for pagination|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Examples
 

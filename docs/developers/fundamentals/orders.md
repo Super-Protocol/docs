@@ -24,14 +24,14 @@ The content of the order, including the order result, is encrypted. Only the cus
 
 Most orders consist of four building blocks:
 
-- **Solutionss**: applications and base images
+- **Solutions**: applications and base images
 - **Data**: data required by solutions
 - **Storage**: remote storage to keep solutions and data before the execution inside a Trusted Execution Environment as well as order results
-- **Compute**: compute resources and a Trusted Execution Environment to execute together solutions and data
+- **Compute**: compute resources and a Trusted Execution Environment to execute together solutions and data.
 
 Solutions and data may be either provided by offers or deployed by users. Offers are available for monetization on the Marketplace. But users can also upload solutions and data they have locally and add them to orders instead of using offers.
 
-Storage and compute may only be offers. Currently, only Super Protocol provides storage and compute resources.
+Storage and compute can only be provided by offers. Currently, only Super Protocol provides storage and compute resources.
 
 ## Usage scenarios
 
@@ -72,7 +72,7 @@ You can check the status of any order in the Marketplace GUI on the [**All order
 
 ### Compute order statuses
 
-A compute order—the main order—begins as **Suspended**. It means that the order waits for the creation of solution and data suborders.
+A compute order—the main order—begins as **Suspended**. This status means that the order waits for the creation of solution and data suborders.
 
 When the suborders are created, the compute order gets the **Blocked** status. At this stage, the solution and data providers generate keys and authorize the compute provider to access the content.
 
@@ -82,7 +82,7 @@ When the machine is available, the compute order gets the status **Processing**,
 
 Note that the **Processing** and **Done** statuses may have different meanings depending on the usage scenario. For one-time orders such as Python models, **Processing** means that the machine is working with the solution and data. When this processing is over, the main order becomes **Done**.
 
-For long-term orders such as tunnel and storage orders, **Processing** means that the order is up and running normally, accessible to users, providing services, etc. And when the order is **Done**, the order has ended and no longer working.
+For long-term orders such as tunnel and storage orders, **Processing** means that the order is up and running normally, accessible to users, providing services, etc. And when the order is **Done**, the order has ended and is no longer working.
 
 ### Solution and data
 

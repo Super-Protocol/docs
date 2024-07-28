@@ -7,7 +7,7 @@ sidebar_label: "get"
 
 Display detailed information on an order.
 
-You can check any order, not only yours—this information is openly available for all orders on blockchain.
+You can check any order, not only yours. This information is openly available for all orders on the blockchain.
 
 ## Synopsis
 
@@ -26,6 +26,6 @@ You can check any order, not only yours—this information is openly available f
 |**Name**|**Description**|
 | :- | :- |
 |`--fields`|Default fields: `offer_name`, `offer_description`, `type`, `status`, `total_deposit`, `total_unspent_deposit`, `modified_date`. Additional fields: `id`, `offer_id`, `consumer_address`, `parent_order_id`, `deposit`, `unspent_deposit`, `cancelable`|
-|`--suborders`|Flag for showing suborders. Default is `false`|
+|`--suborders`|Flag for showing suborders. The default is `false`|
 |`--suborders_fields`|Default fields: `id`, `offer_name`, `offer_description`, `type`, `status`, `modified_date`. Additional fields: `cancelable`, `actual_cost`. Use together with `--suborders true`|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|

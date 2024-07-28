@@ -21,8 +21,8 @@ Provider Tools creates the provider JSON file in [Step 4 of the Providers and Of
 
 |**Name** |**Description**                     |
 |:--------------------|:------------------------------------|
-|`--path`            |Path to the provider info JSON file. Default is `./provider.json`|
-|`--config`          |Path to the configuration file. Default is `./config.json`      |
+|`--path`            |Path to the provider info JSON file. The default is `./provider.json`|
+|`--config`          |Path to the configuration file. The default is `./config.json`      |
 
 ### Provider info file requirements
 

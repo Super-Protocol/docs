@@ -26,4 +26,4 @@ Certain orders (e.g. Offer Provisioner and storage orders) require a positive de
 
 |**Name**|**Description**|
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|

@@ -13,7 +13,7 @@ For quote verification, use the [`quotes validate`](/developers/cli_commands/quo
 
 ## Check how it works
 
-Create a tunnels order using the [Marketplace GUI](/developers/marketplace/walkthrough) or [CLI](/developers/deployment_guides/tunnels). Your order result will be a domain address.
+Create a tunnel order using the [Marketplace GUI](/developers/marketplace/walkthrough) or [CLI](/developers/deployment_guides/tunnels). Your order result will be a domain address.
 
 Go to the Instruments panel and select **Check Confidentiality**.
 
@@ -45,7 +45,7 @@ If the deployed solution is not from the Marketplace, you will see the _"Deploye
 
 **MRENCLAVE**
 
-_MRENCLAVE_ is a value that represents the hash of the code and data inside a TEE. This measurement identifies the TEE and ensures its integrity.
+_MRENCLAVE_ is a value that representing the hash of the code and data inside a TEE. This measurement identifies the TEE and ensures its integrity.
 
 **MRSIGNER**
 

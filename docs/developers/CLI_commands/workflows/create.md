@@ -5,7 +5,7 @@ slug: "/cli_commands/workflows/create"
 sidebar_label: "create"
 ---
 
-Create a main compute order and necessary suborders: solution, data, storage.
+Create a main compute order and necessary suborders: solution, data, and storage.
 
 For solutions and data, it is possible to use existing offers or [uploaded](/developers/cli_commands/files/upload) files. Be mindful of the [testnet limitations](/testnet/limitations).
 
@@ -23,16 +23,16 @@ After creating the order, the command shows the order ID in the terminal output.
 
 |**Name**|**Description**|
 | :- | :- |
-|`--tee`|IDs of the compute offer and slot separated with a comma. Default is automatic selection|
-|`--tee-slot-count`|Compute slot increments—how many times use the selected slot. Use this option together with `--tee`. Default is automatic selection|
-|`--tee-options`|ID of the compute option. Use this option together with `--tee`. Default is automatic selection|
-|`--tee-options-count`|Number of compute option increments. Use this option together with `--tee`. Default is automatic selection|
-|`--deposit`|Deposit in TEE tokens. Default is the minimum required deposit|
-|`--min-rent-minutes`|Compute lease time in minutes. Using this option will increase the required deposit. Default is the minimum required time|
+|`--tee`|IDs of the compute offer and slot separated with a comma. The default is automatic selection|
+|`--tee-slot-count`|Compute slot increments—how many times use the selected slot. Use this option together with `--tee`. The default is automatic selection|
+|`--tee-options`|ID of the compute option. Use this option together with `--tee`. The default is automatic selection|
+|`--tee-options-count`|Number of compute option increments. Use this option together with `--tee`. The default is automatic selection|
+|`--deposit`|Deposit in TEE tokens. The default is the minimum required deposit|
+|`--min-rent-minutes`|Compute lease time in minutes. Using this option will increase the required deposit. The default is the minimum required time|
 |`--solution`|IDs of the solution offer and slot separated with a comma, or the path to the solution resource JSON file. Use this option multiple times if necessary|
 |`--data`|IDs of the data offer and slot separated with a comma or the path to the data resource JSON file. Use this option multiple times if necessary|
 |`--storage`|IDs of the storage offer and slot separated with a comma|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 If you run an uploaded solution that does not require data, do not use the `--data` option.
 
@@ -43,7 +43,6 @@ If you run an uploaded solution that does not require data, do not use the `--da
 The following command deploys [Super Chat](/developers/offers/superchat):
 
 ```
-./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
@@ -57,7 +56,6 @@ Options used:
 The absence of the `--tee` option means that SPCTL automatically selects the most suitable compute offer and configuration for your workload. However, in certain scenarios, you might want to specify the exact compute offer but let SPCTL select the requirement slot and option automatically:
 
 ```
-./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 

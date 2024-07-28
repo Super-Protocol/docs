@@ -77,7 +77,6 @@ If you are using a community offer in your order and the offer fails to respond,
 Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
 - If the offer content is no longer accessible because its [storage order has expired](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
-
 - If the lease on the [Offer Provisioner order has expired](/developers/cli_guides/providers_offers#lease-on-offer-provisioner). Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
 
 ## Metadata
@@ -88,10 +87,10 @@ Every offer comes with the following descriptive parameters:
 - **Id**: unique identification number of the offer
 - **Description**: text description of the offer
 - **Provider**: name of the provider who created the offer
-- **Published date**: date when the offer was created
-- **Updated date**: date when changes were made to the offer
+- **Published date**: the date when the offer was created
+- **Updated date**: the date when changes were made to the offer
 - **MRENCLAVE**: value that represents the hash of the code and data inside a Trusted Execution Environment
-- **MRSIGNER**: value for identifying the signing entity of a Trusted Execution Environment
+- **MRSIGNER**: value for identifying the signing entity of a Trusted Execution Environment.
 
 ## Rules
 
