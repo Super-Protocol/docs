@@ -29,15 +29,14 @@ Additionally, providers can make their offers available for a fixed price or per
 
 _Configuration_ is a way to divide the resources of a compute offer into smaller parts. This division enables a better distribution of offer resources between orders. Customers often do not need the resources of a whole machine for their orders.
 
-Configuration is a combination of
+Configuration is a combination of _slots_ and _options_:
 
-- _Configuration slots_ responsible for compute resources:
+- _Configuration slots_ are responsible for compute resources:
     + Number of CPU cores
     + RAM
     + Disk space
     + Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
-
-- _Configuration options_ responsible for network-related resources:
+- _Configuration options_ are responsible for network-related resources:
     + Bandwidth
     + Traffic
     + External port.
@@ -78,4 +77,4 @@ The system calculates the sum of all requirements in the order. When a customer 
 
 <img src={require('./../images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
 
-In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specified no `--tee`-related options. Read more in the description of the [`workflows create`](/developers/cli_commands/workflows/create) command.
+In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specifies no `--tee`-related options. Read more in the description of the [`workflows create`](/developers/cli_commands/workflows/create) command.

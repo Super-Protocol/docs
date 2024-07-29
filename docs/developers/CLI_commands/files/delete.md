@@ -25,7 +25,7 @@ The resource JSON file is created as a result of the [`files upload`](/developer
 
 |**Name**|**Description**|
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Example
 

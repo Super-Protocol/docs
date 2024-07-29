@@ -15,7 +15,7 @@ This hardware-based data protection is an integral part of Super Protocol. It en
 
 ## Marketplace
 
-The Super Protocol Marketplace is a blockchain-based system that connects the sellers and the buyers of digital products and services. It consists of providers of solutions, data, storage, and compute resources, as well as the offers that these providers created. Currently, users who registered as providers can create solution and data offers, and only Super Protocol provides compute and storage resources. But in future releases, providers will receive this functionality as well.
+The Super Protocol Marketplace is a blockchain-based system that connects the sellers and the buyers of digital products and services. It consists of providers of solutions, data, storage, and compute resources, as well as the offers that these providers created. Currently, users who registered as providers can create solution and data offers, and only Super Protocol provides compute and storage resources. In future releases, providers will receive this functionality as well.
 
 Super Protocol Marketplace is accessible via [CLI](/developers/cli_guides) and, more conveniently, via the [web app GUI](/developers/marketplace).
 

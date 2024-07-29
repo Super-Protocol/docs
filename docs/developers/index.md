@@ -5,11 +5,9 @@ slug: "/"
 sidebar_position: 0
 ---
 
-## Introduction
-
 Welcome to Super Protocol, a confidential cloud and marketplace for Web3 and AI.
 
-This documentation is for developers who are interested in building applications for a decentralized confidential environment. The articles mostly cover fundamental topics and practical questions of working with Super Protocol. If you are interested in the Super Protocol technical architecture, you can find it in the [Whitepaper](/whitepaper).
+This documentation is for developers interested in building applications for a decentralized confidential environment. The articles mostly cover fundamental topics and practical questions of working with Super Protocol. If you are interested in the Super Protocol technical architecture, you can find it in the [Whitepaper](/whitepaper).
 
 Use the steps below as an outline of your learning curve with Super Protocol.
 
@@ -17,7 +15,6 @@ Use the steps below as an outline of your learning curve with Super Protocol.
 
 If you are just starting out, feel your way around Super Protocol using the Marketplace GUI. 
 
-Follow the steps:
 1. [Get access](/testnet/) to the Testnet.
 2. [Set up MetaMask](/developers/marketplace/first-steps) and connect to the Marketplace GUI.
 3. Complete the Marketplace [Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnel order to get familiar with the Super Protocol logic.

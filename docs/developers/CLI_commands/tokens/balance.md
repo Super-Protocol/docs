@@ -17,4 +17,4 @@ Display the balance of TEE and MATIC tokens in your wallet.
 
 | **Name** |**Description**                      |
 |:--------------------|:-------------------------------------|
-| `--config`          | Path to the configuration file. Default is `./config.json`       |
+| `--config`          | Path to the configuration file. The default is `./config.json`       |

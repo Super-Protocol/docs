@@ -21,11 +21,11 @@ This command is only available during Testnet. Be mindful of [Testnet limitation
 |:--------------------|:-------------------------------------|
 | `--tee`             | Request Super Protocol TEE tokens    |
 | `--matic`           | Request Polygon Amoy MATIC tokens  |
-| `--config`          | Path to the configuration file. Default is `./config.json`       |
+| `--config`          | Path to the configuration file. The default is `./config.json`       |
 
 ## Example
 
-The followin command requests TEE tokens:
+The following command requests TEE tokens:
 
 ```
 ./spctl tokens request --tee

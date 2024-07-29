@@ -23,4 +23,4 @@ Cancel an order.
 
 |**Name**|**Description**|
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|

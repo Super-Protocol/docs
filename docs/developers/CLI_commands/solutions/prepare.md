@@ -38,18 +38,18 @@ This allows the execution of the "graminized" solution code inside a confidentia
 
 ## Options
 
-|**Name, shorthand**                        |**Description**                                                  |
+|**Name**                        |**Description**                                                  |
 |:------------------------------------------|:----------------------------------------------------------------|
-|`--metadata`                  |Path to save the resulting metadata file (hash and MrEnclave). Default is `./metadata.json` |
+|`--metadata`                  |Path to save the resulting metadata file (hash and MrEnclave). The default is `./metadata.json` |
 |`--pack-solution`           |Path to save the resulting TAR.GZ archive                        |
-|`--write-default-manifest`  |Write a default manifest for solutions with empty MrEnclave. Default is `false`  |
+|`--write-default-manifest`  |Write a default manifest for solutions with empty MrEnclave. The default is `false`  |
 |`--env`                      |List of environment variables to set into solution manifest      |
-|`--hash-algo`               |Hash calculation algorithm for the solution. Default is `sha256`     |
+|`--hash-algo`               |Hash calculation algorithm for the solution. The default is `sha256`     |
 |`--sgx-max-threads`           |Number of maximum threads, a Gramine 1.4 option                  |
 |`--sgx-enclave-size`         |Entire enclave size (#M or #G), must be a value to the power of 2|
 |`--sgx-loader-internal-size`|Size of the internal enclave structs (#M or #G)                  |
 |`--sgx-stack-size`         |Size of the enclave thread stack (#K, #M or #G)                  |
-|`--config`                    |Path to the configuration file. Default is `./config.json`   |
+|`--config`                    |Path to the configuration file. The default is `./config.json`   |
 |`--help`, `-h`                |Display help for the command                                     |
 
 ## Example

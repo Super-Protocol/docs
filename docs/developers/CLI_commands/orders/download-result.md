@@ -29,8 +29,8 @@ If the order status is `Error`, the result archive will contain a text file with
 
 |**Name**|**Description**|
 | :- |:---------------------------------------| :- |
-|`--save-to`|Path to save the result file. Default is the SPCTL root directory|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--save-to`|Path to save the result file. The default is the SPCTL root directory|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Example
 

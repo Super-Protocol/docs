@@ -26,5 +26,5 @@ The command only works for offers that allow this operation.
 
 |**Name**|**Description**|
 | :- | :- |
-|`--save-to`|Path to save the content. Default is the original filename|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--save-to`|Path to save the content. The default is the original filename|
+|`--config`|Path to the configuration file. The default is `./config.json`|

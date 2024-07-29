@@ -25,7 +25,7 @@ In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/
 
 |**Name**|**Description**|
 |:-|:-|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Example
 

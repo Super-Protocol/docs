@@ -5,7 +5,7 @@ slug: "/cli_commands/offers/offers/get-info"
 sidebar_position: 3
 ---
 
-Display information on an offer as stored on blockchain.
+Display information on an offer as stored on the blockchain.
 
 ## Synopsis
 
@@ -28,7 +28,7 @@ Display information on an offer as stored on blockchain.
 
 ## Example
 
-The following command displays information as stored on blockchain on the data offer [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offer=offerId%3D19):
+The following command displays information on the data offer [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offer=offerId%3D19), as stored on the blockchain:
 
 ```
 ./spctl offers get-info value 19 --save-to ./offer-19.json

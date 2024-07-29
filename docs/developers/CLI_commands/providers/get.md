@@ -24,7 +24,7 @@ Display information on a provider using its authority account address.
 |**Name**|**Description**|
 |:-|:-|
 |`--fields`|Default fields: `name`, `description`, `authority_account`, `action_account`, `token_receiver`, `metadata`. Additional fields: `address`, `modified_date`. Fields must be separated with commas|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+|`--config`|Path to the configuration file. The default is `./config.json`|
 
 ## Example
 

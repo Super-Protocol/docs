@@ -13,7 +13,7 @@ The Super Protocol team sends out invites daily, but it may take a few days if t
 
 ## MetaMask
 
-MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
+MetaMask is a software crypto wallet available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
 
 :::note
 The mobile version of the Marketplace GUI is view-only. Use a desktop or laptop for full functionality.
@@ -99,7 +99,7 @@ Enter the Private Key you received from Super Protocol and press the **Import** 
 
 ## Step 5. Check the account
 
-Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter. Testnet Account address looks something like this:
+Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter. The Testnet Account address looks something like this:
 
 >0xDe0f32cJ7a2c3j85a3E572972EC7764154e75380
 
@@ -171,7 +171,7 @@ To get tokens, use the buttons at the top of the page.
 <br/>
 <br/>
 
-When you request tokens for the first time, the system asks you to enter your Access Token. You can find it in the Testnet invitation letter along with your Testnet Account and Private Key. The Access Token looks something like this:
+When you request tokens for the first time, the system asks you to enter your Access Token. You can find it in the Testnet invitation letter next to your Testnet Account and Private Key. The Access Token looks something like this:
 
 >eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
 

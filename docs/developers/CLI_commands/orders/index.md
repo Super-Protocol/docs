@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ---
 
-View and manage your orders. For the majority of these commands, it is more convenient to use the [Marketplace GUI](/developers/marketplace).
+View and manage your orders. [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of these commands.
 
 ## Synopsis
 

@@ -32,8 +32,8 @@ Refer to the [Offer requirements](/developers/cli_guides/providers_offers#offer-
 
 | **Name** |**Description**                |
 |:--------------------|:-------------------------------|
-| `--path`    |Path to the slot content file. Default is `./offer-slot.json`|
-| `--config`          |Path to the configuration file. Default is `./config.json` |
+| `--path`    |Path to the slot content file. The default is `./offer-slot.json`|
+| `--config`          |Path to the configuration file. The default is `./config.json` |
 
 ## Example
 
