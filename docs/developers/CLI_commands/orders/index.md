@@ -6,20 +6,14 @@ sidebar_position: 5
 
 ---
 
-Tracks and manages [orders](/developers/fundamentals/orders). Note that [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of these commands.
+This command group contains commands to track and manage [orders](/developers/fundamentals/orders). Note that [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of the commands in this group.
 
-## Syntax
+## Commands
 
-```
-./spctl orders <command>
-```
-
-## Child commands
-
-|**Command**|**Description**|
+| **Command** | **Description** |
 | :- | :- |
-|[cancel](/developers/cli_commands/orders/cancel)|Cancel an order|
-|[download-result](/developers/cli_commands/orders/download-result)|Download the order result|
-|[get](/developers/cli_commands/orders/get)|Display detailed information on an order|
-|[list](/developers/cli_commands/orders/list)|List orders|
-|[replenish-deposit](/developers/cli_commands/orders/replenish-deposit)|Replenish the order deposit|
+| [orders cancel](/developers/cli_commands/orders/cancel) | Cancels an order. |
+| [orders download-result](/developers/cli_commands/orders/download-result) | Downloads the order result. |
+| [orders get](/developers/cli_commands/orders/get) | Displays information on an order. |
+| [orders list](/developers/cli_commands/orders/list) | Lists orders. |
+| [orders replenish-deposit](/developers/cli_commands/orders/replenish-deposit) | Replenishes the order deposit. |

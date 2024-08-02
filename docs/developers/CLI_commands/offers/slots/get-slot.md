@@ -12,27 +12,33 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
 ## Syntax
 
 ```
-./spctl offers get-slot <type> --offer <offerId> --slot <slotId>
+./spctl offers get-slot offerType \
+    --offer offerId \
+    --slot slotId \
+    [option]
 ```
+
+Replace `offerType` with `tee` for a compute offer or `value` for a solution, data, or storage offer.
 
 ## Arguments
 
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-|`type`   |Type of the offer: `tee` for a compute offer or `value` for a value offer |
-| `offerId`  |Offer ID  |
-| `slotId`  |Slot ID |
+| **Name** | **Description** |
+| :- | :- |
+| `--offer` | Offer ID. |
+| `--slot` | Slot ID. |
 
 ## Option
 
-| **Name** |**Description**                |
-|:--------------------|:-------------------------------|
-| `--config`          |Path to the configuration file. The default is `./config.json` |
+| **Name** | **Description** |
+| :- | :-|
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 
-The following command displays the information on the slot with ID 47 in the offer with ID 39:
+The following command displays the information on a requirement slot with ID 47 in a value offer with ID 39:
 
 ```
-./spctl offers get-slot tee --offer 39 --slot 47
+./spctl offers get-slot value \
+    --offer 39 \
+    --slot 47
 ```

@@ -6,17 +6,11 @@ sidebar_position: 2
 
 ---
 
-Prepares a solution for deployment on Super Protocol and generates a key for singing a Docker container with the solution.
+This command group contains commands to prepare a solution for deployment on Super Protocol and generate a key for signing a Docker container with a solution.
 
-## Syntax
+## Commands
 
-```
-./spctl solutions <command>
-```
-
-## Child commands
-
-|**Command**|**Description**|
+| **Command** | **Description** |
 | :- | :- |
-|[generate-key](/developers/cli_commands/solutions/generate-key)|Generate a solution signing key|
-|[prepare](/developers/cli_commands/solutions/prepare)|Prepare a solution for deployment|
+| [solutions generate-key](/developers/cli_commands/solutions/generate-key) | Generates a solution signing key. |
+| [solutions prepare](/developers/cli_commands/solutions/prepare) | Prepares a solution for deployment. |

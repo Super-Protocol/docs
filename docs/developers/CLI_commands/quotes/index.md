@@ -6,16 +6,10 @@ sidebar_position: 9
 
 ---
 
-Verifies the authenticity and integrity of a Trusted Execution Environment by examining the enclave quote.
+This command group contains a single command to verify the authenticity and integrity of a Trusted Execution Environment by examining the enclave quote.
 
-## Syntax
+## Command
 
-```
-./spctl quotes <command>
-```
-
-## Child command
-
-| **Command** | **Description**    |
-|:-|:-------------------------|
-| [validate](/developers/cli_commands/quotes/validate) | Check the confidentiality of a domain|
+| **Command** | **Description** |
+| :- | :- |
+| [quotes validate](/developers/cli_commands/quotes/validate) | Checks the confidentiality of a domain. |

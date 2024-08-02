@@ -19,22 +19,22 @@ Provider Tools creates a provider JSON file in [Step 4 of the Providers and Offe
 
 ## Options
 
-|**Name** |**Description**                     |
-|:--------------------|:------------------------------------|
-|`--path`            |Path to the provider info JSON file. The default is `./provider.json`|
-|`--config`          |Path to the configuration file. The default is `./config.json`      |
+| **Name** | **Description** |
+| :- | :- |
+| `--path` | Path to the provider info JSON file. The default is `./provider.json`. |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ### Provider info file requirements
 
 The provider info file must contain the following strings:
 
-| **Field**       | **Description**                                  | 
-|:----------------|:-------------------------------------------------|
-| `name`          | Provider name                                    | 
-| `description`   | Description of services provided by the provider | 
-| `tokenReceiver` | Token receiver account address                   |
-| `actionAccount` | Action account address                           | 
-| `metadata`      | Additional information about the provider        | 
+| **Field** | **Description** | 
+| :- | :- |
+| `name` | Provider name. | 
+| `description` | Description of services provided by the provider. | 
+| `tokenReceiver` | Token receiver account address. |
+| `actionAccount` | Action account address. | 
+| `metadata` | Additional information about the provider. | 
 
 The `description` and `metadata` strings may be empty. All other strings require values.
 
@@ -44,8 +44,8 @@ Provider JSON file template with example values:
 {
   "name": "Data Provider",
   "description": "It provides various datasets for modeling",
-  "tokenReceiver": "0xB9f0b77BDbeA9fBe60BdC563E7E453f503605BAa",
-  "actionAccount": "0xfe9CB4941639a3aB7892ab7F0A994Eed89477120",
+  "tokenReceiver": "0xB9f0bB77DbeA9fBeC563E60Bd7E453f503605BAa",
+  "actionAccount": "0xfe9CB4557639a3aB7892ab7F0A994Eed89477120",
   "metadata": ""
 }
 ```

@@ -1,6 +1,6 @@
 ---
 id: "offers"
-title: "Offers and providers"
+title: "Offers and Providers"
 slug: "/fundamentals/offers"
 sidebar_position: 2
 ---

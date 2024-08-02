@@ -53,7 +53,7 @@ When placing orders on Super Protocol, you can use existing offers or upload you
 
 Note that Super Protocol users do not buy offers, only rent them for a limited period. TEE ensures that the content of offers remains confidential.
 
-Learn more about the offers [**here**](/developers/fundamentals/offers).
+[Learn more](/developers/fundamentals/offers) about the offers.
 
 ## Slots
 

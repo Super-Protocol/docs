@@ -16,29 +16,35 @@ Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requ
 ## Syntax
 
 ```
-./spctl offers update-slot <type> --offer <offerId> --slot <slotId> [option ...]
+./spctl offers update-slot offerType \
+    --offer offerId \
+    --slot slotId \
+    [option ...]
 ```
+
+Replace `offerType` with `tee` for a compute offer or `value` for a solution, data, or storage offer.
 
 ## Arguments
 
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-|`type`   |Type of the offer: `tee` for a compute offer or `value` for a value offer |
-| `offerId`  |Offer ID  |
-| `slotId`  |Slot ID |
-
+| **Name** | **Description** |
+| :- | :- |
+| `--offer` | Offer ID. |
+| `--slot` | Slot ID. |
 
 ## Options
 
-| **Name** |**Description**                |
-|:--------------------|:-------------------------------|
-| `--path`    |Path to the slot content file. The default is `./offer-slot.json`|
-| `--config`          |Path to the configuration file. The default is `./config.json` |
+| **Name** |**Description** |
+| :- | :- |
+| `--path` | Path to the slot content file. The default is `./offer-slot.json`. |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 
-The following command updates the slot with ID 47 in the offer with ID 39 using the information in the file `offer-slot.json` in the SPCTL directory:
+The following command updates a slot with ID 47 in a value offer with ID 39 using the information in the file `offer-slot.json` in the SPCTL directory:
 
 ```
-./spctl offers update-slot value --offer 39 --slot 47 --path ./offer-slot.json
+./spctl offers update-slot value \
+    --offer 39 \
+    --slot 47 \
+    --path ./offer-slot.json
 ```

@@ -17,21 +17,17 @@ If the order status is `Error`, the result archive will contain a text file with
 ## Syntax
 
 ```
-./spctl orders download-result <orderId> [option ...]
+./spctl orders download-result orderId [option ...]
 ```
 
-## Arguments
-
-|**Name**|**Description**|
-| :- | :- |
-|`orderId`|Order ID|
+Replace `orderId` with the ID of the order.
 
 ## Options
 
-|**Name**|**Description**|
-| :- |:---------------------------------------| :- |
-|`--save-to`|Path to save the result file. The default is the SPCTL root directory|
-|`--config`|Path to the configuration file. The default is `./config.json`|
+| **Name** | **Description** |
+| :- | :- | :- |
+| `--save-to` | Path to save the result file. The default is the SPCTL root directory. |
+| `--config` | Path to the configuration file. The default is `./config.json`.|
 
 ## Example
 

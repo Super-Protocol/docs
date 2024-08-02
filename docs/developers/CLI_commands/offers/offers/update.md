@@ -14,29 +14,25 @@ Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offe
 ## Syntax
 
 ```
-./spctl offers update <type> <offerId> [option ...]
+./spctl offers update offerType offerId [option ...]
 ```
 
-## Arguments
-
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer|
-| `offerId`     | Offer ID  |
+Replace the following:
+- `offerType`: `tee` for a compute offer or `value` for a solution, data, or storage offer.
+- `offerId`: ID of the offer.
 
 ## Options
 
-| **Name** | **Description**                |
-|:--------------------|:-------------------------------|
-| `--path`            |Path to the offer content file. The default is `./offerInfo.json`|
-| `--config`          |Path to the configuration file. The default is `./config.json`|
-
+| **Name** | **Description** |
+| :- | :- |
+| `--path` | Path to the offer content file. The default is `./offerInfo.json`. |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Offer description file
 
 The offer slot JSON file may contain the following objects, arrays, and strings:
 
-|**String,<br/>unless specified**|**Description**|**Comments** |
+|**String, array, <br/>or object**|**Description**|**Comments** |
 |:-|:-|:-|
 |`name`|Offer name ||
 |`group` |Offer group type| `0` for data and solution offers<br/>`2` for storage offers (not implemented yet)|
