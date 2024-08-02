@@ -5,11 +5,11 @@ slug: "/cli_commands/orders/list"
 sidebar_label: "list"
 ---
 
-List orders on the blockchain.
+Lists orders stored on the blockchain.
 
-By default, this command displays a list of all orders and suborders, unless you use the `--my-account true` option.
+This command displays a list of all orders and suborders, unless the `--my-account true` option is specified.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl orders list [option ...]
@@ -19,7 +19,7 @@ By default, this command displays a list of all orders and suborders, unless you
 
 |**Name**|**Description**|
 | :- | :- |
-|`--fields`|Default fields: `id`, `offer_name`, `status`. Available fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`|
+|`--fields`|Default fields: `id`, `offer_name`, `status`. Additional fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`|
 |`--my-account`|Flag for showing the orders created by the account specified in the config file. The default is `false`|
 |`--type`|Filter to only show orders of the specified type. Available types: `tee`, `storage`, `solution`, `data`|
 |`--save-to`| Path to save the output to the file|

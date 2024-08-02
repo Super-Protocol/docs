@@ -5,9 +5,9 @@ slug: "/cli_commands/offers/offers/list"
 sidebar_position: 1
 ---
 
-Display a list of available offers depending on the type.
+Displays a list of available offers.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers list <type> [option ...]
@@ -25,7 +25,7 @@ For the `tee` type:
 
 |**Name**|**Description**|
 |:-|:-|
-|`--fields`|Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, <br/>`total_cores`, `free_cores`, `cancelable`,`modified_date`. Fields must be separated with commas|
+|`--fields`|Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, `total_cores`, `free_cores`, `cancelable`,`modified_date`. Fields must be separated with commas|
 
 For the `value` type:
 
@@ -46,7 +46,7 @@ For both offer types:
 
 **Example 1.**
 
-The following command lists the first 30 solution and data offers:
+The following command displays the IDs, names, and types (the default fields) of the first 30 solution and data offers:
 
 ```
 ./spctl offers list value --limit 30

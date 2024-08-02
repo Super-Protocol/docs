@@ -5,16 +5,16 @@ slug: "/cli_commands/offers/slots/delete-slot"
 sidebar_position: 3
 ---
 
-Delete a requirement slot in an offer.
+Deletes a [requirement slot](/developers/fundamentals/slots#requirements) in an [offer](/developers/fundamentals/offers).
 
-Use the [offers get](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
+**Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-**Important:** The `offers delete-slot` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
+Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl offers delete-slot type --offer <offerId> --slot <slotId> [option]
+./spctl offers delete-slot <type> --offer <offerId> --slot <slotId> [option]
 ```
 
 ## Arguments
@@ -33,8 +33,13 @@ Use the [offers get](/developers/cli_commands/offers/offers/get) command to get 
 
 ## Example
 
-The following command deletes the requirement slot (ID 47) in the offer (ID 39):
+The following command deletes the specified requirement slot in the specified offer:
 
 ```
 ./spctl offers delete-slot value --offer 39 --slot 47
 ```
+
+Options used:
+`value`: 
+`--offer 39`: offer with ID 39
+`--slot 47`: slot with ID 47

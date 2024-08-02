@@ -5,7 +5,7 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
+This guide provides step-by-step instructions to help you set up MetaMask and access the Super Protocol Marketplace via the web-based [graphical user interface (GUI)](/developers/marketplace/). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
 
 The Marketplace GUI is available for anyone to browse even without the MetaMask extension installed. However, you need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your Testnet Account address, Private Key, and Access Token.
 
@@ -13,7 +13,7 @@ The Super Protocol team sends out invites daily, but it may take a few days if t
 
 ## MetaMask
 
-MetaMask is a software crypto wallet available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
+MetaMask is a software crypto wallet available as a browser extension or mobile app. You do not need it to browse Marketplace offers. However, to create orders, you must install and configure the MetaMask browser extension specifically for the Super Protocol Testnet.
 
 :::note
 The mobile version of the Marketplace GUI is view-only. Use a desktop or laptop for full functionality.
@@ -157,7 +157,7 @@ If everything is done correctly, you will see your account address and token bal
 <br/>
 <br/>
 
-### Step 7. Get testnet tokens
+## Step 7. Get testnet tokens
 
 Super Protocol uses two types of tokens, and you will need both of them:
 

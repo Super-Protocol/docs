@@ -6,9 +6,9 @@ sidebar_position: 9
 
 ---
 
-Verify the authenticity and integrity of a Trusted Execution Environment by examining the enclave quote.
+Verifies the authenticity and integrity of a Trusted Execution Environment by examining the enclave quote.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl quotes <command>

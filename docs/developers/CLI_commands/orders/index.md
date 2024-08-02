@@ -6,9 +6,9 @@ sidebar_position: 5
 
 ---
 
-View and manage your orders. [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of these commands.
+Tracks and manages [orders](/developers/fundamentals/orders). Note that [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of these commands.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl orders <command>

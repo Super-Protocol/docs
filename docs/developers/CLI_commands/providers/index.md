@@ -6,11 +6,11 @@ sidebar_position: 7
 
 ---
 
-View and update providers.
+Tracks and updates [providers](/developers/fundamentals/offers).
 
 Any user can register a provider and create solution and data offers. Currently, only Super Protocol provides storage and compute offers. In future releases, the ability to create compute and storage offers will be available to anyone with proper hardware.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl providers <command>

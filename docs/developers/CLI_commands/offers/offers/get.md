@@ -5,9 +5,9 @@ slug: "/cli_commands/offers/offers/get"
 sidebar_position: 2
 ---
 
-Display information on an offer.
+Displays information on an offer.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers get <type> <offerId> [option]
@@ -28,7 +28,7 @@ Display information on an offer.
 
 ## Example
 
-The following command displays information on the data offer [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offer=offerId%3D19):
+The following command displays information on the data offer [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offer=offerId%3D19) (offer ID: 18):
 
 ```
 ./spctl offers get value 18 --save-to ./offer-18.json

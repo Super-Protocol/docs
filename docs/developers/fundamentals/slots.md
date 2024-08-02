@@ -5,11 +5,11 @@ slug: "/fundamentals/slots"
 sidebar_position: 3
 ---
 
-Super Protocol provides flexibility in determining the parameters required by offers to run and the selection of confidential computing resources and internet access for their deployments.
+_Requirement slots_ describe the parameters an offer needs to run. _Configuration slots and options_ provide flexibility in selecting computing resources and internet access for offer deployment.
 
 ## Requirements
 
-_Requirements_ specify how much computing resources a value offer needs to run. A _requirement slot_ is a specific set of requirements that may include
+_Requirements_ specify how much computing resources a [value offer](/developers/fundamentals/offers#types-of-offers) needs to run. A _requirement slot_ is a specific set of requirements that may include the following:
 
 - Number of CPU cores
 - RAM
@@ -19,35 +19,35 @@ _Requirements_ specify how much computing resources a value offer needs to run. 
 - Traffic
 - Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
 
-Offer providers can define multiple requirement slots for every offer. Each slot can have a different [price](/developers/fundamentals/orders#cost-and-pricing) depending on expected usage. For example, a Python script will compute faster on 4 CPU cores than on 2 cores, and the price may reflect that.
+Offer providers can define multiple requirement slots for every offer. Each slot may have a different [price](/developers/fundamentals/orders#cost-and-pricing) depending on expected usage. For example, a Python script will compute faster on 4 CPU cores than on 2 cores, and the price may reflect that.
 
-Additionally, providers can make their offers available for a fixed price or per hour using different slots. And the customer can decide which one makes more economic sense in their case.
+Additionally, providers can make their offers available for a fixed price or per hour using different slots. The customer can choose which one makes more economic sense in their case.
 
 <img src={require('./../images/fundamentals_slots_1.png').default} width="auto" height="auto"/>
 
-## Configurations
+## Configuration
 
-_Configuration_ is a way to divide the resources of a compute offer into smaller parts. This division enables a better distribution of offer resources between orders. Customers often do not need the resources of a whole machine for their orders.
+_Configuration_ is a way to divide the resources of a physical confidential computing device into smaller parts. This division enables a better distribution of [compute offer](/developers/fundamentals/offers#types-of-offers) resources between orders. Customers usually do not need the resources of the whole machine for their orders.
 
-Configuration is a combination of _slots_ and _options_:
+Configuration is a combination of _configuration slots and options_. Configuration slots are responsible for compute resources:
 
-- _Configuration slots_ are responsible for compute resources:
-    + Number of CPU cores
-    + RAM
-    + Disk space
-    + Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
-- _Configuration options_ are responsible for network-related resources:
-    + Bandwidth
-    + Traffic
-    + External port.
+- Number of CPU cores
+- RAM
+- Disk space
+- Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
+
+Configuration options are responsible for network-related resources:
+- Bandwidth
+- Traffic
+- External port availability.
 
 When a customer creates an order, the selected configuration must be at least equal to the sum of all solution, data, and storage requirements in the order. This also applies to the lease time.
 
 Every slot and option has its price. Configuration slots are always priced per hour and never have a fixed price. The configuration option price may be fixed or per hour.
 
-A customer can only select one configuration slot for each order. But to meet the order requirements, they can add the selected slot multiple times or, in other words, apply increments.
+A customer can only select one configuration slot for each order. But to meet the order requirements, they can add the selected slot multiple times or, in other words, apply _increments_.
 
-For example, the physical machine behind a compute offer has 24 CPU cores, 48 GB of RAM, and 960 GB of disk space. The compute provider divided these resources proportionally into 12 parts and created a configuration slot of 2 cores, 4 GB of RAM, and 80 GB of disk space. A customer can add this slot to their order up to 12 times to meet the requirements. The division also lets the machine process up to 12 small orders simultaneously.
+For example, the physical machine behind a compute offer has 24 CPU cores, 48 GB of RAM, and 960 GB of disk space. The compute provider divided these resources proportionally into 12 parts and created a configuration slot of 2 CPU cores, 4 GB of RAM, and 80 GB of disk space. A customer can add this slot to their order up to 12 times to meet the requirements. The division also lets the machine process up to 12 small orders simultaneously.
 
 The same logic applies to configuration options, except customers can select multiple options multiple times.
 
@@ -57,9 +57,9 @@ The same logic applies to configuration options, except customers can select mul
 
 ## Parameters
 
-The full list of parameters is the same for requirements and configurations. In the Marketplace GUI:
+The full list of parameters is the same for requirements and configurations. In the [Marketplace GUI](/developers/marketplace/):
 
-- **Per Hour** or **Fixed**: slot or option pricing type
+- **Per Hour** or **Fixed**: pricing type of a slot or an option
 - **vCores**: number of CPU cores, can be a fraction
 - **RAM**: RAM for computations, GiB
 - **Disk**: disk space, GiB

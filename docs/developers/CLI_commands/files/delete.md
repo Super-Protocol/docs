@@ -5,11 +5,11 @@ slug: "/cli_commands/files/delete"
 sidebar_label: "delete"
 ---
 
-Delete a file in remote storage using information in a resource JSON file.
+Deletes a file in remote storage using the information in a resource JSON file.
 
 The resource JSON file is created as a result of the [`files upload`](/developers/cli_commands/files/upload) command.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl files delete <resourceFilePath> [option]

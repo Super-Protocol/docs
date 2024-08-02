@@ -5,9 +5,9 @@ slug: "/cli_commands/providers/get"
 sidebar_label: "get"
 ---
 
-Display information on a provider using its authority account address.
+Displays the information on a provider using its authority account address.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl providers get <address> [option ...]
@@ -28,8 +28,8 @@ Display information on a provider using its authority account address.
 
 ## Example
 
-The following command displays the name, address, and description of the provider with the authority account `0xB9fD0b77BbA3E60BdC567Ee9fBe453f506053BAa`:
+The following command displays the name, address, and description of the provider with the authority account `0xB9fD0bbA3E60BdC56777BEe9fBe453f506053BAa`:
 
 ```
-./spctl providers get 0xB9fD0b77BbA3E60BdC567Ee9fBe453f506053BAa --fields name,address,description
+./spctl providers get 0xB9fD0bbA3E60BdC56777BEe9fBe453f506053BAa --fields name,address,description
 ```

@@ -5,11 +5,11 @@ slug: "/cli_commands/tokens/request"
 sidebar_label: "request"
 ---
 
-Request test TEE and MATIC tokens.
+Requests test TEE and MATIC tokens.
 
 This command is only available during Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl tokens request [option ...]

@@ -6,9 +6,9 @@ sidebar_position: 6
 
 ---
 
-View and manage offers. [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of these commands.
+Tracks and manages [offers](/developers/fundamentals/offers). Note that [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of these commands.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl offers <command>
@@ -40,5 +40,3 @@ View and manage offers. [Marketplace GUI](/developers/marketplace) can be more c
 | **Command**                                                            | **Description**                                                    |
 |:-----------------------------------------------------------------------|:-------------------------------------------------------------------|
 | [get-option](/developers/cli_commands/offers/options/get-option)       | Display information for an option |
-
-

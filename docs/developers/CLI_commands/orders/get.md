@@ -5,11 +5,11 @@ slug: "/cli_commands/orders/get"
 sidebar_label: "get"
 ---
 
-Display detailed information on an order.
+Displays the information on an order.
 
-You can check any order, not only yours. This information is openly available for all orders on the blockchain.
+This command allows you to check any order, not only yours. The information on all orders is openly available on the blockchain.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl orders get <orderId> [option ...]

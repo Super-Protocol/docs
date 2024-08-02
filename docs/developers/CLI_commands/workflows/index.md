@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ---
 
-Create an order and generate a private key to access order results.
+Creates an order and generates a private key to access order results.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl workflows <command>

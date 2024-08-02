@@ -5,11 +5,11 @@ slug: "/cli_commands/solutions/generate-key"
 sidebar_label: "generate-key"
 ---
 
-Generate a signing key necessary to prepare a solution.
+Generates a signing key necessary to prepare a solution.
 
-Docker needs this key to [pack the solution](/developers/cli_commands/solutions/prepare) into a container.
+Docker needs this key to [pack a solution](/developers/cli_commands/solutions/prepare) into a container.
 
-## Synopsis
+## Syntax
 
 ```
 ./spctl solutions generate-key <outputPath> [option]
