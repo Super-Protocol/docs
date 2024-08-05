@@ -10,18 +10,26 @@ Displays the information on an offer as stored on the blockchain.
 ## Syntax
 
 ```
-./spctl offers get-info offerType offerId [option]
+./spctl offers get-info <offerType> <offerId> \
+    [--save-to <path>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-Replace the following:
-- `offerType`: `tee` for a compute offer or `value` for a solution, data, or storage offer.
-- `offerId`: ID of the offer.
+## Arguments
+
+| **Name** | **Description** |
+| :- | :- |
+| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
+| `<offerId>` | ID of the offer. |
 
 ## Option
 
 | **Name** | **Description** 
 | :- | :- |
-| `--save-to` | Path to save the output to a file. |
+| `--save-to <path>` | Path to save the output to a file. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 

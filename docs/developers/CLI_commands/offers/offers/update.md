@@ -14,19 +14,26 @@ Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offe
 ## Syntax
 
 ```
-./spctl offers update offerType offerId [option ...]
+./spctl offers update <offerType> <offerId> \
+    [--path <path>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-Replace the following:
-- `offerType`: `tee` for a compute offer or `value` for a solution, data, or storage offer.
-- `offerId`: ID of the offer.
+## Arguments
+
+| **Name** | **Description** |
+| :- | :- |
+| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
+| `<offerId>` | ID of the offer. |
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--path` | Path to the offer content file. The default is `./offerInfo.json`. |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--path <path>` | Path to the offer content file. The default is `./offerInfo.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Offer description file
 

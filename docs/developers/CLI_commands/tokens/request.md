@@ -12,23 +12,25 @@ This command is only available during Testnet. Be mindful of [Testnet limitation
 ## Syntax
 
 ```
-./spctl tokens request {--tee | --matic} [option]
+./spctl tokens request \
+    {--tee ┃ --matic} \
+    [--debug {true ┃ false}] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
-
-## Arguments
-
-| **Name** | **Description** |
-| :- | :- |
-| `--tee` | Request for Super Protocol TEE tokens. |
-| `--matic` | Request for Polygon Amoy MATIC tokens. |
-
-Note that these arguments are mutually exclusive. Run the command twice if you need both TEE and MATIC tokens.
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--tee` | Request for Super Protocol TEE tokens. |
+| `--matic` | Request for Polygon Amoy MATIC tokens. |
+| `--debug {true ┃ false}` | Flag for showing debug information. The default is `false`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+
+Note that options `--tee` and `--matic` are mutually exclusive. Execute the command twice if you need both TEE and MATIC tokens.
 
 ## Example
 
@@ -36,4 +38,10 @@ The following command requests TEE tokens:
 
 ```
 ./spctl tokens request --tee
+```
+
+And the following command requests MATIC tokens:
+
+```
+./spctl tokens request --matic
 ```

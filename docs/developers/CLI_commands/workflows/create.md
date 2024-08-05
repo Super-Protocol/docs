@@ -21,31 +21,36 @@ The example of the resulting order in the Marketplace GUI:
 
 ```
 ./spctl workflows create \
-    --solution {solutionOfferId,solutionSlotId | solutionResourceJson} [--solution ...] \
-    --data {dataOfferId,dataSlotId | dataResourceJson} [--data ...] \
-    --storage storageOfferId,storageSlotId \
-    [option ...]
+    --solution {<offerId>,[<slotId>] ┃ <resourcePath>} [--solution ...] \
+    --storage <offerId>,[<slotId>] \
+    [--data {<offerId>,[<slotId>] ┃ <resourcePath>}] [--data ...] \
+    [--tee <offerId>,[<slotId>]]
+    [--tee-slot-count <increment>]
+    [--tee-options <optionId> [<optionId> ...]]
+    [--tee-options-count <increment> [<increment> ...]]
+    [--deposit <teeTokens>]
+    [--min-rent-minutes <minutes>]
+    [--debug {true ┃ false}]
+    [--config <path>] \
+    [--help ┃ -h]
 ```
-
-## Arguments
-
-| **Name** | **Description** |
-| :- | :- |
-| `--solution` | Solution you are adding to the order: <br/>- For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID, separated by a comma. <br/>- For an uploaded solution, state the path to the solution resource JSON file. <br/><br/>You can use this option multiple times if necessary. See the [examples](/developers/cli_commands/workflows/create#examples) below. |
-| `--data` | Data you are adding to the order: <br/>- For a Marketplace offer, state the data offer ID and the data requirement slot ID, separated by a comma. <br/>- For uploaded data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times if necessary. See the [examples](/developers/cli_commands/workflows/create#examples) below. <br/><br/>Although this argument is obligatory in most cases, do not use it if you run an uploaded solution that does not require data. |
-| `--storage` | Storage offer you are adding to the order. State the storage offer ID and the storage requirement slot ID, separated by a comma. |
 
 ## Options
 
-| **Name** | **Description** |
+| <div style={{width:428}}>**Name**</div> | **Description** |
 | :- | :- |
-| `--tee` | Compute offer you are adding to the order. State the compute offer ID and the [configuration slot](/developers/fundamentals/slots#configuration) ID, separated by a comma. If this option is not specified, the compute offer and configuration slot will be chosen automatically. |
-| `--tee-slot-count` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. If this option is not specified, increments will be calculated automatically. |
-| `--tee-options` | [Configuration option](/developers/fundamentals/slots#configuration) ID. Use this option together with `--tee`. If this option is not specified, configuration options will be chosen automatically. |
-| `--tee-options-count` | Number of configuration option increments. Use this option together with `--tee`. If this option is not specified, increments will be calculated automatically. |
-| `--deposit` | [Deposit](/developers/fundamentals/orders#lease-deposit-and-balance) in TEE tokens. The default is the minimum required deposit. |
-| `--min-rent-minutes` | Compute [lease time](/developers/fundamentals/orders#lease-deposit-and-balance) in minutes. Using this option will increase the required deposit. The default is the minimum required time. |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--solution {<offerId>,[<slotId>] ┃ <resourcePath>}` | Solution you are adding to the order: <br/>- For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For an uploaded solution, state the path to the solution resource JSON file. <br/><br/>You can use this option multiple times if necessary. |
+| `--storage <offerId>,[<slotId>]` | Storage offer you are adding to the order. State the storage offer ID and the storage requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically. |
+| `--data {<offerId>,[<slotId>] ┃ <resourcePath>}` | Data you are adding to the order: <br/>- For a Marketplace offer, state the data offer ID and the data requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For uploaded data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times if necessary. <br/><br/>Although this option is obligatory in most cases, do not use it if you run a solution that does not require data. |
+| `--tee <offerId>,[<slotId>]` | Compute offer you are adding to the order. State the compute offer ID and the [configuration slot](/developers/fundamentals/slots#configuration) ID (optional), separated by a comma. If the configuration slot is not specified, it will be selected automatically. <br/><br/>If you do not use this option, the compute offer and its configuration will be selected automatically. |
+| `--tee-slot-count <increment>` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. <br/><br/>If you do not use this option, the increments will be calculated automatically. |
+| `--tee-options <optionId> [<optionId> ...]` | IDs of [configuration options](/developers/fundamentals/slots#configuration) separated by spaces. Use `--tee-options` together with `--tee`. <br/><br/>If you do not use `--tee-options`, configuration options will be selected automatically. |
+| `--tee-options-count <increment> [<increment> ...]` | Increments for each configuration option separated by spaces. Use `--tee-options-count` together with `--tee` and `--tee-options`. <br/><br/>If you do not use `--tee-options-count`, increments will be calculated automatically. |
+| `--deposit <teeTokens>` | [Deposit](/developers/fundamentals/orders#lease-deposit-and-balance) in TEE tokens. The default is the minimum required deposit. |
+| `--min-rent-minutes <minutes>` | Compute [lease time](/developers/fundamentals/orders#lease-deposit-and-balance) in minutes. Using this option will increase the required deposit. The default is the minimum required time. |
+| `--debug {true ┃ false}` | Flag for showing debug information. The default is `false`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Examples
 
@@ -77,7 +82,12 @@ Where:
 The absence of the `--tee` option means that SPCTL automatically selects the most suitable compute offer and configuration for your workload. However, in certain scenarios, you might want to specify the exact compute offer but let SPCTL select the configuration slots and options automatically:
 
 ```
-./spctl workflows create --tee 4 --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
+./spctl workflows create \
+    --tee 4 \
+    --solution 12,12 \
+    --solution 6,2 \
+    --data 17,22 \
+    --storage 25,30
 ```
 
 The `--tee 4` option means you want to use [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) (offer ID: 4) but automatically determine the slot and option to use.
@@ -115,7 +125,7 @@ If the `--deposit` and `--min-rent-minutes` are not specified, SPCTL uses the de
 For the offers in this example, the minimum deposit is 1.120 TEE tokens and the minimum lease time is 60 minutes:
 
 - The requirement slot with ID 7 of [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) has the minimum lease time of 10 minutes; four increments result in 40 minutes.
-- The requirement slot with ID 12 of [Tunnels Launcher](https://marketplace.superprotocol.com/solutions?offer=offerId%3D12) solution offer (offer ID: 12) has the minimum lease time of 60 minutes.
+- The requirement slot with ID 12 of [Tunnels Launcher](https://marketplace.superprotocol.com/solutions?offer=offerId%3D12) (offer ID: 12) has the minimum lease time of 60 minutes.
 - Other offers in the order do not restrict the minimum lease time.
 
 ### Example 3. Uploaded solution and data

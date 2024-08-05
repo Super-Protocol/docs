@@ -14,25 +14,27 @@ Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offe
 ## Syntax
 
 ```
-./spctl offers add-slot offerType \
-  --offer offerId \
-  [option ...]
+./spctl offers add-slot <offerType> \
+    --offer <offerId> \
+    [--path <path>] \
+    [--config <configPath>] \
+    [--help ┃ -h]
 ```
-
-Replace `offerType` with `tee` for a compute offer or `value` for a solution, data, or storage offer.
 
 ## Arguments
 
 | **Name** | **Description** |
 | :- | :- |
-| `--offer` | Offer ID. |
+| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--path` | Path to the offer slot JSON file. The default is `./offerSlot.json`. |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--offer <offerId>` | ID of the offer. |
+| `--path <path>` | Path to the offer slot JSON file. The default is `./offerSlot.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Offer slot file
 
@@ -78,17 +80,15 @@ Offer slot JSON file template with example values:
 ```
 
 Note that some of the data is represented differently in the Marketplace GUI:
-- `diskUsage` and `ram` values are converted to GiB by the formula `initialValue / (1024 ^ 3)`
+- `diskUsage` and `ram` values are converted to gibibytes (GiB) by the formula `initialValue / (1024 ^ 3)`
 - `price` value is converted to TEE tokens by the formula `initialValue / (10 ^ 18)`
-- `bandwidth` value is converted to Mb per second by the formula `initialValue / (10 ^ 6)`
-- `traffic` value is converted to GB by the formula `initialValue / (10 ^ 9)`
+- `bandwidth` value is converted to megabits per second (Mbps) by the formula `initialValue / (10 ^ 6)`
+- `traffic` value is converted to gigabytes (GB) by the formula `initialValue / (10 ^ 9)`
 
 ## Example
 
 The following command adds a new requirement slot to a value offer with ID 39 using the `offer-new-slot.json` file located in the SPCTL directory:
 
 ```
-./spctl offers add-slot value \
-  --offer 39 \
-  --path ./offer-new-slot.json
+./spctl offers add-slot value --offer 39 --path ./offer-new-slot.json
 ```

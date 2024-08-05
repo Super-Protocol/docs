@@ -13,17 +13,25 @@ The command only works with offers that allow this operation.
 ## Syntax
 
 ```
-./spctl offers download-content offerId [option ...]
+./spctl offers download-content <offerId> \
+    [--save-to <path>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-Replace `offerId` with the ID of the offer.
+## Arguments
+
+| **Name** | **Description** |
+| :- | :- |
+| `<offerId>` | ID of the offer. |
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--save-to` | Path to save the content. The default is the original filename. |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--save-to <path>` | Path to save the content. The default is the original filename. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 

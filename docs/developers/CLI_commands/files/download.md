@@ -12,18 +12,24 @@ The resource JSON file is created as a result of the [`files upload`](/developer
 ## Syntax
 
 ```
-./spctl files download resourceFilePath localPath [option]
+./spctl files download <resourceFilePath> <localPath> \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-Replace the following:
-- `resourceFilePath`: path to the resource JSON file.
-- `localPath`: path to save the downloaded file.
+## Arguments
+
+| **Name** | **Description** |
+| :- | :- |
+| `<resourceFilePath>` | Path to the resource JSON file. |
+| `<localPath>` | Path to save the downloaded file. |
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 
