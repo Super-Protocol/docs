@@ -12,20 +12,16 @@ Disables an existing enabled offer.
 ## Syntax
 
 ```
-./spctl offers disable <offerId> [option]
+./spctl offers disable offerId [option]
 ```
 
-## Argument
-
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-| `offerId`     | Offer ID  |
+Replace `offerId` with the ID of the offer.
 
 ## Option
 
-| **Name** |**Description**                |
-|:--------------------|:-------------------------------|
-| `--config`          |Path to the configuration file. The default is `./config.json` |
+| **Name** | **Description** |
+| :- | :- |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 

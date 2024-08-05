@@ -10,21 +10,18 @@ Displays the information on an offer as stored on the blockchain.
 ## Syntax
 
 ```
-./spctl offers get-info <type> <offerId> [option]
+./spctl offers get-info offerType offerId [option]
 ```
 
-## Arguments
-
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer |
-| `offerId`     | Offer ID                        |
+Replace the following:
+- `offerType`: `tee` for a compute offer or `value` for a solution, data, or storage offer.
+- `offerId`: ID of the offer.
 
 ## Option
 
-|**Name**|**Description**|
+| **Name** | **Description** 
 | :- | :- |
-|`--save-to`|Save the output to a file|
+| `--save-to` | Path to save the output to a file. |
 
 ## Example
 
@@ -34,8 +31,8 @@ The following command displays information on the data offer [Image Classificati
 ./spctl offers get-info value 19 --save-to ./offer-19.json
 ```
 
-Arguments and options used:
+Where:
 
 - `value`: type of the offer
 - `19`: offer ID
-- `--save-to ./offer-19.json`: path to the file for the output
+- `--save-to ./offer-19.json`: path to the file for the output.

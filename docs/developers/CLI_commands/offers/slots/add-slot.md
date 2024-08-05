@@ -7,29 +7,32 @@ sidebar_position: 1
 
 Creates an additional [requirement slot](/developers/fundamentals/slots#requirements) in an offer using the information in an offer slot JSON file.
 
-Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) to create the initial offer requirements.
+Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offer-requirements) guide to create the initial offer requirements.
 
 **Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
 ## Syntax
 
 ```
-./spctl offers add-slot <type> --offer <offerId> [option ...]
+./spctl offers add-slot offerType \
+  --offer offerId \
+  [option ...]
 ```
+
+Replace `offerType` with `tee` for a compute offer or `value` for a solution, data, or storage offer.
 
 ## Arguments
 
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer |
-| `offerId`  |Offer ID  |
+| **Name** | **Description** |
+| :- | :- |
+| `--offer` | Offer ID. |
 
 ## Options
 
-| **Name** |**Description**                |
-|:--------------------|:-------------------------------|
-| `--path`            |Path to the offer slot JSON file. The default is `./offerSlot.json`  |
-| `--config`          |Path to the configuration file. The default is `./config.json` |
+| **Name** | **Description** |
+| :- | :- |
+| `--path` | Path to the offer slot JSON file. The default is `./offerSlot.json`. |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Offer slot file
 
@@ -75,17 +78,17 @@ Offer slot JSON file template with example values:
 ```
 
 Note that some of the data is represented differently in the Marketplace GUI:
-- `diskUsage` and `ram` values are converted to GiB by the formula `initial value / (1024 ^ 3)`
-- `price` value is converted to TEE tokens by the formula `initial value / (10 ^ 18)`
-- `bandwidth` value is converted to Mbit per second by the formula `initial value / (10 ^ 6)`
-- `traffic` value is converted to GB by the formula `initial value / (10 ^ 9)`
+- `diskUsage` and `ram` values are converted to GiB by the formula `initialValue / (1024 ^ 3)`
+- `price` value is converted to TEE tokens by the formula `initialValue / (10 ^ 18)`
+- `bandwidth` value is converted to Mb per second by the formula `initialValue / (10 ^ 6)`
+- `traffic` value is converted to GB by the formula `initialValue / (10 ^ 9)`
 
 ## Example
 
-The following command adds a new requirement slot to the offer with ID 39 using the `offer-new-slot.json` file located in the SPCTL directory:
+The following command adds a new requirement slot to a value offer with ID 39 using the `offer-new-slot.json` file located in the SPCTL directory:
 
 ```
-./spctl offers add-slot value --offer 39 --path ./offer-new-slot.json
+./spctl offers add-slot value \
+  --offer 39 \
+  --path ./offer-new-slot.json
 ```
-
-Options used:

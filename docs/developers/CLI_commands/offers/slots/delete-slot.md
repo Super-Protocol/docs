@@ -14,32 +14,33 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
 ## Syntax
 
 ```
-./spctl offers delete-slot <type> --offer <offerId> --slot <slotId> [option]
+./spctl offers delete-slot offerType \
+    --offer offerId \
+    --slot slotId \
+    [option]
 ```
+
+Replace `offerType` with `tee` for a compute offer or `value` for a solution, data, or storage offer.
 
 ## Arguments
 
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-|`type`   |Type of the offer: `tee` for a compute offer or `value` for a value offer |
-| `offerId`  |Offer ID  |
-| `slotId`  |Slot ID |
+| **Name** | **Description** |
+| :- | :- |
+| `--offer` | Offer ID. |
+| `--slot` | Slot ID. |
 
 ## Option
 
-| **Name** |**Description**                |
-|:--------------------|:-------------------------------|
-| `--config`          |Path to the configuration file. The default is `./config.json` |
+| **Name** | **Description** |
+| :- | :- |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 
-The following command deletes the specified requirement slot in the specified offer:
+The following command deletes a requirement slot with ID 47 in a value offer with ID 39:
 
 ```
-./spctl offers delete-slot value --offer 39 --slot 47
+./spctl offers delete-slot value \
+    --offer 39 \
+    --slot 47
 ```
-
-Options used:
-`value`: 
-`--offer 39`: offer with ID 39
-`--slot 47`: slot with ID 47

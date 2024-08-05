@@ -17,12 +17,23 @@ This command displays a list of all orders and suborders, unless the `--my-accou
 
 ## Options
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--fields`|Default fields: `id`, `offer_name`, `status`. Additional fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`|
-|`--my-account`|Flag for showing the orders created by the account specified in the config file. The default is `false`|
-|`--type`|Filter to only show orders of the specified type. Available types: `tee`, `storage`, `solution`, `data`|
-|`--save-to`| Path to save the output to the file|
-|`--limit`|Number of records to display. The default is `10`|
-|`--cursor`|Cursor for pagination|
-|`--config`|Path to the configuration file. The default is `./config.json`|
+| `--fields` | Columns in the output table, separated by commas. Default fields: `id`, `offer_name`, `status`. Additional fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`. |
+| `--my-account` |Flag for showing the orders created by the account specified in the config file. The default is `false`. |
+| `--type` | Filter to only show orders of the specified type. Available types: `tee`, `storage`, `solution`, `data`. |
+| `--save-to` | Path to save the output to the file. |
+| `--limit` | Number of records to display. The default is `10`. |
+| `--cursor` | Cursor for pagination. |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
+
+## Example
+
+The following command displays the IDs, offer names, and offer descriptions of all the compute orders created by the current Testnet account:
+
+```
+./spctl orders list \
+    --fields id,offer_name,offer_description \
+    --my-account true \
+    --type tee
+```

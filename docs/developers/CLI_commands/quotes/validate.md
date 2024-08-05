@@ -12,20 +12,16 @@ In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/
 ## Syntax
 
 ```
-./spctl quotes validate <url> [option]
+./spctl quotes validate domainUrl [option]
 ```
 
-## Argument
+Reaplce `domainUrl` with the URL of the domain you want to check.
 
-| **Name** | **Description**                |
-|:---------|:-------------------------------|
-| `url`    |Domain URL |
+## Options
 
-## Option
-
-|**Name**|**Description**|
-|:-|:-|
-|`--config`|Path to the configuration file. The default is `./config.json`|
+| **Name** | **Description** |
+| :- | :- |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 

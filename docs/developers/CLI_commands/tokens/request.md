@@ -12,16 +12,23 @@ This command is only available during Testnet. Be mindful of [Testnet limitation
 ## Syntax
 
 ```
-./spctl tokens request [option ...]
+./spctl tokens request {--tee | --matic} [option]
 ```
+
+## Arguments
+
+| **Name** | **Description** |
+| :- | :- |
+| `--tee` | Request for Super Protocol TEE tokens. |
+| `--matic` | Request for Polygon Amoy MATIC tokens. |
+
+Note that these arguments are mutually exclusive. Run the command twice if you need both TEE and MATIC tokens.
 
 ## Options
 
-| **Name** | **Description**                      |
-|:--------------------|:-------------------------------------|
-| `--tee`             | Request Super Protocol TEE tokens    |
-| `--matic`           | Request Polygon Amoy MATIC tokens  |
-| `--config`          | Path to the configuration file. The default is `./config.json`       |
+| **Name** | **Description** |
+| :- | :- |
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 

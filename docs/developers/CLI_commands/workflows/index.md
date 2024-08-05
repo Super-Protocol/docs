@@ -6,17 +6,11 @@ sidebar_position: 4
 
 ---
 
-Creates an order and generates a private key to access order results.
+This command group contains commands to  create an [order](/developers/fundamentals/orders) and generate a private key to access order results.
 
-## Syntax
+## Commands
 
-```
-./spctl workflows <command>
-```
-
-## Child commands
-
-| **Command**                                                     |**Description**|
-|:----------------------------------------------------------------| :- |
-| [generate-key](/developers/cli_commands/workflows/generate-key) |Generate a private key to decrypt order results|
-| [create](/developers/cli_commands/workflows/create)             |Create an order|
+| **Command** | **Description** |
+| :- | :- |
+| [workflows generate-key](/developers/cli_commands/workflows/generate-key) |Generates a private key to decrypt order results. |
+| [workflows create](/developers/cli_commands/workflows/create) | Creates an order. |

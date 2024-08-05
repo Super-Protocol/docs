@@ -10,20 +10,24 @@ Displays the information on an [option](/developers/fundamentals/slots) of a com
 ## Syntax
 
 ```
-./spctl offers get-option tee --offer <offerId> --option <optionId>
+./spctl offers get-option tee \
+    --offer offerId \
+    --option optionId
 ```
 
 ## Arguments
 
-|**Name**| **Description**                 |
-| :- |:--------------------------------|
-| `offerId`  |Offer ID  |
-| `optionId`  |Option ID |
+| **Name** | **Description** |
+| :- | :- |
+| `--offer` | Offer ID. |
+| `--option` | Option ID. |
 
 ## Example
 
 The following command displays the information on the option with ID 3 of [TEE Offer #1](https://marketplace.superprotocol.com/compute?offerId=1) (offer ID: 1):
 
 ```
-./spctl offers get-option tee --offer 1 --option 3
+./spctl offers get-option tee \
+    --offer 1 \
+    --option 3
 ```

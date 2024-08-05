@@ -12,20 +12,16 @@ Docker needs this key to [pack a solution](/developers/cli_commands/solutions/pr
 ## Syntax
 
 ```
-./spctl solutions generate-key <outputPath> [option]
+./spctl solutions generate-key outputPath [option]
 ```
 
-## Argument
-
-|**Name**| **Description**                      |
-| :- |:-------------------------------------|
-|`outputPath`| Path to save the generated key file |
+Replace `outputPath` with the path to save the generated key file.
 
 ## Option
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--config`|Path to the configuration file. The default is `./config.json`|
+| `--config` | Path to the configuration file. The default is `./config.json`. |
 
 ## Example
 

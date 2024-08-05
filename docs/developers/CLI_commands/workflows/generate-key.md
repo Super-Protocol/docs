@@ -17,6 +17,6 @@ SPCTL generates this key automatically during the [configuration](/developers/cl
 
 ## Option
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--config`|Path to the configuration file. The default is `./config.json`|
+| `--config` | Path to the configuration file. The default is `./config.json`. |
