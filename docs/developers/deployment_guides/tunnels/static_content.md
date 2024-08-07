@@ -82,8 +82,8 @@ Copy the following configuration to the `config.json` file:
 {
   "tunnels": [
     {
-      "sgxMrSigner": "22c4c4c40ebf9874905cfc44782eec5149bf07429ec0bd3e7fd018e9942d0513",
-      "sgxMrEnclave": "f022aefb6d74aa6684761550aed6712c75bd0e1730f667037716c0a5d0cf451d"
+      "sgxMrSigner": "292dbf9d7256b124de0259dca586c53135175f431f2336d4a27c49c3cd60b518",
+      "sgxMrEnclave": "40154d45ffb11e7298c90b6092404cd974616c021a5e7e8ccf184ec8f585ab14"
     }
   ],
   "authToken": "<auth-token>",

@@ -1,6 +1,6 @@
 ---
 id: "architecture"
-title: "architecture"
+title: "Architecture"
 slug: "/architecture"
 sidebar_position: 8
 ---

@@ -6,25 +6,37 @@ sidebar_position: 4
 
 ---
 
-Download the content of an offer.
+Downloads the content of an offer.
 
-The command only works for offers that allow this operation.
+The command only works with offers that allow this operation.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl offers download-content <offerId> [option ...]
+./spctl offers download-content <offerId> \
+    [--save-to <path>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-## Argument
+## Arguments
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`offerId`|Offer ID|
+| `<offerId>` | ID of the offer. |
 
 ## Options
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--save-to`|Path to save the content. Default is the original filename|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+| `--save-to <path>` | Path to save the content. The default is the original filename. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+The following command downloads the content of the Python Base Image (offer ID: 5):
+
+```
+./spctl offers download-content 5
+```

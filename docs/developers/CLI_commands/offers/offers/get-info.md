@@ -5,37 +5,42 @@ slug: "/cli_commands/offers/offers/get-info"
 sidebar_position: 3
 ---
 
-Display information on an offer as stored on blockchain.
+Displays the information on an offer as stored on the blockchain.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl offers get-info <type> <offerId> [option]
+./spctl offers get-info <offerType> <offerId> \
+    [--save-to <path>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Arguments
 
-| **Name** | **Description**                 |
-|:---------|:--------------------------------|
-| `type`   | Type of the offer: `tee` for a compute offer or `value` for a value offer |
-| `offerId`     | Offer ID                        |
+| **Name** | **Description** |
+| :- | :- |
+| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
+| `<offerId>` | ID of the offer. |
 
 ## Option
 
-|**Name**|**Description**|
+| **Name** | **Description** 
 | :- | :- |
-|`--save-to`|Save the output to a file|
+| `--save-to <path>` | Path to save the output to a file. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 
-The following command displays information as stored on blockchain on the data offer [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offer=offerId%3D19):
+The following command displays information on the data offer [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offer=offerId%3D19) (offer ID: 19), as stored on the blockchain:
 
 ```
 ./spctl offers get-info value 19 --save-to ./offer-19.json
 ```
 
-Arguments and options used:
+Where:
 
 - `value`: type of the offer
 - `19`: offer ID
-- `--save-to ./offer-19.json`: path to the file for the output
+- `--save-to ./offer-19.json`: path to the file for the output.

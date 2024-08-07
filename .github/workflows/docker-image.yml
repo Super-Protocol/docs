@@ -2,7 +2,7 @@ name: Create and publish a Docker image
 
 on:
   push:
-    branches: ['main', 'develop']
+    branches: ['main', 'staging', 'develop']
 
 env:
   REGISTRY: ghcr.io
@@ -49,4 +49,3 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}
-

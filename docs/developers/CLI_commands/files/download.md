@@ -5,28 +5,31 @@ slug: "/cli_commands/files/download"
 sidebar_label: "download"
 ---
 
-Download a file from remote storage and decrypts it using the information in a resource JSON file.
+Downloads a file from remote storage and decrypts it using the information in a resource JSON file.
 
 The resource JSON file is created as a result of the [`files upload`](/developers/cli_commands/files/upload) command.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl files download <resourceFilePath> <localPath> [option]
+./spctl files download <resourceFilePath> <localPath> \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Arguments
 
-|**Name**| **Description**                      |
-| :- |:-------------------------------------|
-|`resourceFilePath`| Path to the resource JSON file |
-|`localPath`| Path to save the downloaded file        |
+| **Name** | **Description** |
+| :- | :- |
+| `<resourceFilePath>` | Path to the resource JSON file. |
+| `<localPath>` | Path to save the downloaded file. |
 
 ## Options
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 

@@ -5,36 +5,40 @@ slug: "/cli_commands/providers/update"
 sidebar_label: "update"
 ---
 
-Update the current provider using a provider JSON file.
+Updates the current provider using a provider info JSON file.
 
-Provider Tools creates the provider JSON file in [Step 4 of the Providers and Offers](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) guide.
+Provider Tools creates a provider info JSON file in [Step 4 of the Providers and Offers](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) guide.
 
-**Important:** The `providers update` command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-## Synopsis
+## Syntax
 
 ```
-./spctl providers update [option ...]
+./spctl providers update \
+    [--path <path>]
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Options
 
-|**Name** |**Description**                     |
-|:--------------------|:------------------------------------|
-|`--path`            |Path to the provider info JSON file. Default is `./provider.json`|
-|`--config`          |Path to the configuration file. Default is `./config.json`      |
+| **Name** | **Description** |
+| :- | :- |
+| `--path <path>` | Path to the provider info JSON file. The default is `./provider.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
-### Provider info file requirements
+## Provider info file
 
 The provider info file must contain the following strings:
 
-| **Field**       | **Description**                                  | 
-|:----------------|:-------------------------------------------------|
-| `name`          | Provider name                                    | 
-| `description`   | Description of services provided by the provider | 
-| `tokenReceiver` | Token receiver account address                   |
-| `actionAccount` | Action account address                           | 
-| `metadata`      | Additional information about the provider        | 
+| **Field** | **Description** | 
+| :- | :- |
+| `name` | Provider name. | 
+| `description` | Description of services provided by the provider. | 
+| `tokenReceiver` | Token receiver account address. |
+| `actionAccount` | Action account address. | 
+| `metadata` | Additional information about the provider. | 
 
 The `description` and `metadata` strings may be empty. All other strings require values.
 
@@ -44,8 +48,8 @@ Provider JSON file template with example values:
 {
   "name": "Data Provider",
   "description": "It provides various datasets for modeling",
-  "tokenReceiver": "0xB9f0b77BDbeA9fBe60BdC563E7E453f503605BAa",
-  "actionAccount": "0xfe9CB4941639a3aB7892ab7F0A994Eed89477120",
+  "tokenReceiver": "0xB9f0bB77DbeA9fBeC563E60Bd7E453f503605BAa",
+  "actionAccount": "0xfe9CB4557639a3aB7892ab7F0A994Eed89477120",
   "metadata": ""
 }
 ```

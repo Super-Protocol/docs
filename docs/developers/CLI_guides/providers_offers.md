@@ -24,15 +24,12 @@ This guide requires a general understanding of Super Protocol basic concepts suc
 
 To set up a provider and create offers, you need:
 
-- Computer with Linux or macOS operating system. On Windows, install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux).
-
+- Linux or macOS operating system. On Windows, install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux).
 - Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive an email with your _Testnet user account_:
   + _Testnet user account address_: the account public key
   + _Testnet private key_: to import the Testnet wallet to MetaMask
   + _Testnet access token_: to receive free test TEE and MATIC tokens.
-
-- [SPCTL](/developers/cli_guides/configure)—Super Protocol CLI tool. You need it to upload your offers and create an Offer Provisioner order.
-
+- [SPCTL](/developers/cli_guides/configure)—Super Protocol CLI tool for uploading your offers and creating an Offer Provisioner order.
 - [Storj](https://www.storj.io/) account, either Free Trial or Pro (optional).
 
 ### Set up Provider Tools
@@ -76,17 +73,11 @@ Provider Tools and SPCTL is a work in progress. Super Protocol keeps optimizing 
 To set up a provider and create an active offer, complete the following steps:
 
 1. [Prepare and upload the offer content](/developers/cli_guides/providers_offers#step-1-prepare-content). Use SPCTL to prepare your solution or data. Then, upload it to remote storage.
-
 2. [Set up provider accounts](/developers/cli_guides/providers_offers#step-2-set-up-accounts). Create three provider accounts using Provider Tools.
-
 3. [Configure the offer](/developers/cli_guides/providers_offers#step-3-configure-the-offer). Provide a general description of the offer, its properties, restrictions, and requirements.
-
 4. [Register the provider and offer](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) on the blockchain.
-
 5. [Deploy the offer on Super Protocol](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). Create an Offer Provisioner order to make your offer available for customers.
-
 6. [Pass the Marketplace moderation](/developers/cli_guides/providers_offers#step-6-marketplace-moderation) to move your offer from the **Unmoderated** category to the **Approved** category in the Marketplace GUI.
-
 7. [Keep your offer alive](/developers/cli_guides/providers_offers#step-7-keep-your-offer-active). Ensure the offer content remains available and the Offer Provisioner order keeps running.
 
 ## Step 1. Prepare content
@@ -99,7 +90,7 @@ Go to your SPCTL directory and create the offer content using your Testnet user 
 
 **For solution offers**
 
-Use the [`solutions prepare`](/developers/cli_commands/solutions/prepare) command. It will pack and sign the solution with [Gramine](https://gramineproject.io/) to prepare it for the execution inside a Trusted Execution Environment. The command will create a TAR.GZ archive with the solution and a metadata JSON file.
+Use the [`solutions prepare`](/developers/cli_commands/solutions/prepare) command. It will pack and sign the solution with [Gramine](https://gramineproject.io/) to prepare it for execution inside a Trusted Execution Environment. The command will create a TAR.GZ archive with the solution and a metadata JSON file.
 
 You can find a detailed example of preparing a Python solution in the [Python deployment guide](/developers/deployment_guides/python/solution_prep).
 
@@ -121,7 +112,7 @@ tar -czvf dataset1.tar.gz -C ./mydataset .
 
 ### Upload offer content
 
-You must upload your offer content to remote storage so compute provider can download it and use it in customers orders. There are two ways to do so:
+You must upload your offer content to remote storage so the compute provider can download it and use it in customers' orders. There are two ways to do so:
 
 - Create a storage order
 - Upload to a Storj account.
@@ -139,7 +130,7 @@ Execute the following [`files upload`](/developers/cli_commands/files/upload) co
 ```
 
 Where
-- `<offerContentArchive>` is the name of the archive with your prepared solution or data.
+- `<offerContentArchive>` is the name of the archive file with your prepared solution or data.
 - `--storage 25,33` is the slot ID 33 of the storage offer ID 25. The maximum disk capacity for this slot is 0.977 GB; you may choose [another slot](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing) that suits your offer content better.
 - `--min-rent-minutes 43200` is the lease time set to 30 days. The offer content will be available for that period. You can make the lease time shorter or longer. You can also [replenish the balance](/developers/cli_commands/orders/replenish-deposit) later to prolong the storage order.
 
@@ -171,21 +162,17 @@ As a result, SPCTL generates the `resource.json` file with information for TEE o
 
 **Expected step results:**
 - Prepared, packed, and uploaded offer content
-- `resource.json` with information to access the offer content.
+- `resource.json` with information on how to access the offer content.
 
 ## Step 2. Set up accounts
 
 Offer providers need the following Super Protocol accounts:
 
-- _Testnet user account_. It is your main Testnet account provided by Super Protocol.
-
+- _Testnet user account_. the Testnet account provided by Super Protocol
 - Three _provider accounts_:
-
-  + _Authority account_. it is your main provider account on Super Protocol.
-
-  + _Action account_. It executes actions on behalf of the authority account.
-
-  + _Token receiver account_. It receives rewards in TEE tokens for providing offers on Super Protocol.
+  + _Authority account_: can change provider's records; the main provider account
+  + _Action account_: executes actions on behalf of the authority account
+  + _Token receiver account_: receives rewards in TEE tokens for providing offers on Super Protocol.
 
 ### Create accounts
 
@@ -230,7 +217,7 @@ Your offer must be well-documented, operational, and not contain anything illega
 
 :::
 
-Copy and add the following into `offer-info.json` file:
+Copy and add the following to `offer-info.json` file:
 
 ```json title="offer-info.json"
 {
@@ -318,7 +305,7 @@ For a data offer identical to [Image Classification Dataset #1](https://marketpl
 
 Image Classification Dataset #1 is a data offer, hence `"offerType": "3"`.
 
-Users must use it with the Image Classification solution offer (ID 8), so there is `"8"` in `"offers"`. Image Classification solution, in turn, requires Python Base Image solution offer (ID 5), so you must include its ID as well. Each ID is in quotation marks and separated with a comma: `"offers": ["8","5"]`
+Users must use it with the Image Classification solution offer (ID 8), so there is `"8"` in `"offers"`. Image Classification solution, in turn, requires Python Base Image solution offer (ID 5), so you must include its ID as well. Each ID is in quotation marks and separated by a comma: `"offers": ["8","5"]`
 
 Further, you must specify the type for every offer in `restrictions`. Both Image Classification and Python Base Image are solution offers, hence `"types": ["2","2"]`.
 
@@ -344,9 +331,9 @@ Or via CLI using the SPCTL [`offers get`](/developers/cli_commands/offers/offers
 
 ### Offer requirements
 
-You must specify the configuration required by your offer. Each requirement slot has its price, either Fixed or Per Hour. Depending on the requirements, the customer will select a compute offer configuration, which cannot be lower than your requirements. Read more about [Slots and Options](/developers/fundamentals/slots).
+You must specify the configuration required by your offer. Each requirement slot has its price, either Fixed or Per Hour. Depending on the requirements, the customer will select a compute offer configuration that cannot be lower than your requirements. Read more about [Slots and Options](/developers/fundamentals/slots).
 
-Create second JSON file. In this guide, it will be called `offer-slot.json`, but you can choose any name you want.
+Create the second JSON file. In this guide, it will be called `offer-slot.json`, but you can choose any name you want.
 
 The following is an `offer-slot.json` template file with example values:
 
@@ -423,9 +410,9 @@ The `register` command initiates a series of steps:
   + If the provider exists, the prompt will go to the next step.
   + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#updating-provider-info) the provider description later.
 
-3. Provider Tools asks if this provider already has a solution or data offer created on the blockchain. If you want to create a new offer, select `No`. Provider Tools then asks for the `offer-info.json` and `offer-slot.json` from the [Step 3](/developers/cli_guides/providers_offers#step-3-configure-the-offer).
+3. Provider Tools asks if this provider already has a solution or data offer created on the blockchain. If you want to create a new offer, select `No`. Provider Tools then asks for the `offer-info.json` and `offer-slot.json` from [Step 3](/developers/cli_guides/providers_offers#step-3-configure-the-offer).
 
-When done, you will see a command in the output to launch an Offer Provisioner order in the [Step 5](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). It should look something like this:
+When done, you will see a command in the output to launch an Offer Provisioner order in [Step 5](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). It should look something like this:
 
 ```
 # To deploy this offer to SuperProtocol, use the following command:
@@ -433,7 +420,7 @@ When done, you will see a command in the output to launch an Offer Provisioner o
 ./provider-tools deploy solution --path "/mnt/hdd/provider-tools/solution-execution-controller"
 ```
 
-Provider Tools also creates a new directory `solution-execution-controller` or `data-execution-controller`, depending on your order type. This directory contains two files, `.env` and `config.json`, with all the necessary artifacts to launch an Offer Provisioner order in the [Step 5](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). Note that `.env` file is hidden.
+Provider Tools also creates a new directory `solution-execution-controller` or `data-execution-controller`, depending on your order type. This directory contains two files—`.env` and `config.json`—with all the necessary artifacts to launch an Offer Provisioner order in [Step 5](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). Note that the `.env` file is hidden.
 
 ### Provider SPCTL
 
@@ -447,7 +434,7 @@ Alternatively, copy this provider's SPCTL config to your SPCTL directory. Use th
 ./spctl orders list --my-account --type tee --config spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json
 ```
 
-Use must use your the provider SPCTL to perform any provider- and offer-related tasks: 
+Use your the provider SPCTL to perform any provider- and offer-related tasks: 
 - update your provider information
 - create and manage offers
 - create and manage Offer Provisioner orders.
@@ -494,7 +481,7 @@ When the order is created, you will see the ID of the Offer Provisioner order in
 {"Successfully created workflow with id: 3394. You can go to https://marketplace.superprotocol.com/order/3394 to track order status."}
 ```
 
-Alternatively, you can create an Offer Provisioner order manually. Pack the content of the `execution-controller` directory (`config.json` and `.env`) into a TAR.GZ archive and upload it using the [`files upload`](/developers/cli_commands/files/upload) command. Add the resulting `resource.json` to an order as data and the Offer Provisioner solution offer (ID 26) as solution using either Marketplace GUI or the `workflows create` SPCTL command.
+Alternatively, you can create an Offer Provisioner order manually. Pack the content of the `execution-controller` directory (`config.json` and `.env`) into a TAR.GZ archive and upload it using the [`files upload`](/developers/cli_commands/files/upload) command. Add the resulting `resource.json` to the order as data and the Offer Provisioner solution offer (ID 26) as a solution using either Marketplace GUI or the `workflows create` SPCTL command.
 
 Check that your offer is on the blockchain using the [offers get](/developers/cli_commands/offers/offers/get) command:
 
@@ -574,17 +561,17 @@ If you changed your action account address, update the Provider SPCTL's `config.
 
 **Offer description:**
 
-Modify `offer-info.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-description) and then run the [`offers update`](/developers/cli_commands/offers/offers/update) command from the Provider SPCTL.
+Modify `offer-info.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-description) and then run the [`offers update`](/developers/cli_commands/offers/offers/update) command using the Provider SPCTL.
 
 **Offer requirements (slots):**
 
-Modify `offer-slot.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [`offers update-slot`](/developers/cli_commands/offers/slots/update-slot) command the Provider SPCTL.
+Modify `offer-slot.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [`offers update-slot`](/developers/cli_commands/offers/slots/update-slot) command using the Provider SPCTL.
 
 Similarly, you can use the [`offers add-slot`](/developers/cli_commands/offers/slots/add-slot) command to add another slot and the [`offers delete-slot`](/developers/cli_commands/offers/slots/delete-slot) command to remove a slot.
 
 ### Create additional offers
 
-To create a new offer in addition to an existing one on the same provider, back up the existing `execution-controller` or `execution-controller` directory. Then, go through the guide again, starting with [Step 2](/developers/cli_guides/providers_offers#step-2-prepare-content).
+To create a new offer in addition to an existing one on the same provider, back up the existing `data-execution-controller` or `solution-execution-controller` directory. Then, go through the guide again, starting with [Step 2](/developers/cli_guides/providers_offers#step-2-prepare-content).
 
 After you register the new offer in [Step 4](/developers/cli_guides/providers_offers/#step-4-create-the-provider-and-offer), Provider Tools adds a new object into the `PROVIDER_OFFERS_JSON` array in the `.env` file. Cancel the previous Offer Provisioner order and launch a new one using this updated `.env` file and `config.json` from the same `execution-controller` directory. This new Offer Provisioner order will serve both of your offers simultaneously.
 
@@ -600,14 +587,13 @@ Disable your offer if you no longer want to provide your application or data on 
 
 Replace `<offerId>` with the ID of the offer you want to disable.
 
-It will make the offer unavailable to use but will not delete it. If later you want to reinstate it back to active status, use the [`offers enable`](/developers/cli_commands/offers/offers/enable) command.
+It will make the offer unavailable to use but will not delete it. Later, if you want to reinstate it back to active status, use the [`offers enable`](/developers/cli_commands/offers/offers/enable) command.
 
 ### Inactive offers
 
 Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
 - If the offer content is no longer accessible because its [storage order has expired](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
-
 - If the lease on the [Offer Provisioner order has expired](/developers/cli_guides/providers_offers#lease-on-offer-provisioner). Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
 
 ### Troubleshooting
