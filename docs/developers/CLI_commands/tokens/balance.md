@@ -5,16 +5,27 @@ slug: "/cli_commands/tokens/balance"
 sidebar_label: "balance"
 ---
 
-Display the balance of TEE and MATIC tokens in your wallet.
+Displays the balance of TEE and MATIC tokens in your wallet.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl tokens balance [option]
+./spctl tokens balance \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Option
 
-| **Name** |**Description**                      |
-|:--------------------|:-------------------------------------|
-| `--config`          | Path to the configuration file. Default is `./config.json`       |
+| **Name** | **Description** |
+| :- | :- |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+The following command checks the balance of the account specified in the `config-provider.json` file.
+
+```
+./spctl tokens balance --config ./config-provider.json
+```

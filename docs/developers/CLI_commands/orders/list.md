@@ -5,24 +5,41 @@ slug: "/cli_commands/orders/list"
 sidebar_label: "list"
 ---
 
-List orders on blockchain.
+Lists orders stored on the blockchain.
 
-By default displays a list of all orders and suborders, unless you use the `--my-account true` option.
+This command displays a list of all orders and suborders, unless the `--my-account true` option is specified.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl orders list [option ...]
+./spctl orders list \
+    [--fields <field>,[<field>,...]] \
+    [--my-account {true ┃ false}] \
+    [--type {tee ┃ storage ┃ solution ┃ data}] \
+    [--save-to <path>] \
+    [--limit <number>] \
+    [--cursor <cursorString>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Options
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--fields`|Default fields: `id`, `offer_name`, `status`. Available fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`|
-|`--my-account`|Flag for showing the orders created by the account specified in the config file. Default is `false`|
-|`--type`|Filter to only show orders of the specified type. Available types: `tee`, `storage`, `solution`, `data`|
-|`--save-to`| Path to save the output to the file|
-|`--limit`|Number of records to display. Default is `10`|
-|`--cursor`|Cursor for pagination|
-|`--config`|Path to the configuration file. Default is `./config.json`|
+| `--fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `offer_name`, `status`. Additional fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`. |
+| `--my-account {true ┃ false}` | Flag for showing the orders created by the account specified in the config file. The default is `false`. |
+| `--type {tee ┃ storage ┃ solution ┃ data}` | Filter to only show orders of the specified type. |
+| `--save-to <path>` | Path to save the output to the file. |
+| `--limit <number>` | Number of records to display. The default is `10`. |
+| `--cursor <cursorString>` | Cursor for pagination. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+The following command displays the IDs, offer names, and offer descriptions of all the compute orders created by the current Testnet account:
+
+```
+./spctl orders list --fields id,offer_name,offer_description --my-account true --type tee
+```

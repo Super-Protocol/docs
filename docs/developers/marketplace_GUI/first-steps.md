@@ -5,7 +5,7 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions to help you set up MetaMask and access [Super Protocol Marketplace](https://marketplace.superprotocol.com/) via the web-based graphical user interface (GUI). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
+This guide provides step-by-step instructions to help you set up MetaMask and access the Super Protocol Marketplace via the web-based [graphical user interface (GUI)](/developers/marketplace/). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
 
 The Marketplace GUI is available for anyone to browse even without the MetaMask extension installed. However, you need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your Testnet Account address, Private Key, and Access Token.
 
@@ -13,7 +13,7 @@ The Super Protocol team sends out invites daily, but it may take a few days if t
 
 ## MetaMask
 
-MetaMask is a software crypto wallet that is available as a browser extension or mobile app. It is not required to browse Marketplace offers. However, to create orders, you must install and configure MetaMask specifically for the Super Protocol Testnet.
+MetaMask is a software crypto wallet available as a browser extension or mobile app. You do not need it to browse Marketplace offers. However, to create orders, you must install and configure the MetaMask browser extension specifically for the Super Protocol Testnet.
 
 :::note
 The mobile version of the Marketplace GUI is view-only. Use a desktop or laptop for full functionality.
@@ -99,7 +99,7 @@ Enter the Private Key you received from Super Protocol and press the **Import** 
 
 ## Step 5. Check the account
 
-Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter. Testnet Account address looks something like this:
+Ensure that the imported wallet address matches the Testnet Account address you received in the Testnet invitation letter. The Testnet Account address looks something like this:
 
 >0xDe0f32cJ7a2c3j85a3E572972EC7764154e75380
 
@@ -157,7 +157,7 @@ If everything is done correctly, you will see your account address and token bal
 <br/>
 <br/>
 
-### Step 7. Get testnet tokens
+## Step 7. Get testnet tokens
 
 Super Protocol uses two types of tokens, and you will need both of them:
 
@@ -171,7 +171,7 @@ To get tokens, use the buttons at the top of the page.
 <br/>
 <br/>
 
-When you request tokens for the first time, the system asks you to enter your Access Token. You can find it in the Testnet invitation letter along with your Testnet Account and Private Key. The Access Token looks something like this:
+When you request tokens for the first time, the system asks you to enter your Access Token. You can find it in the Testnet invitation letter next to your Testnet Account and Private Key. The Access Token looks something like this:
 
 >eyJhbGciOiJFUzI1CiJ9.eyJhZGRyZXNzIjoiMHhEZTBmMjljRTdhMmMyZDg5YTNFNjg4OTcyRUM3NzY0PDU0ZTc1LzgwIiwiaKF0IjoxNjYwOTE4MTU4LCJleHAiOjE2OTI0NzU3NTh9.cNC2CFfqO3UN8RuMpAFUp0zI5wXEOIR_xk9Ejvmv7lzyF6SPo_f83R2SOBDg1Tp1ldS7O1dLvjL6DuXlwUs4Lw
 

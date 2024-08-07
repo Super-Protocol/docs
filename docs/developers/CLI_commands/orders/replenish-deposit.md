@@ -5,25 +5,36 @@ slug: "/cli_commands/orders/replenish-deposit"
 sidebar_label: "replenish-deposit"
 ---
 
-Replenish the order deposit.
+Replenishes the order deposit.
 
-Certain orders (e.g. Offer Provisioner and storage orders) require a positive deposit balance to keep running. 
+Certain orders require a positive deposit balance to keep running. For example, [Offer Provisioner](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner) and storage orders.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl orders replenish-deposit <orderId> <amount> [option]
+./spctl orders replenish-deposit <orderId> <tokenAmount> \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Arguments
 
-|**Name**| **Description**                  |
-| :- |:---------------------------------|
-|`orderId`| Order ID                       |
-|`amount`| Amount of TEE tokens to deposit |
+| **Name** | **Description** |
+| :- | :- |
+| `<orderId>` | ID of the order. |
+| `<tokenAmount>` | Amount of TEE tokens to deposit. |
 
 ## Option
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+The following command adds 3 TEE tokens to the deposit of the order with ID 1312:
+
+```
+./spctl orders replenish-deposit 1312 3
+```

@@ -5,22 +5,33 @@ slug: "/cli_commands/orders/cancel"
 sidebar_label: "cancel"
 ---
 
-Cancel an order.
+Cancels an order.
 
-## Synopsis
+## Syntax
 
 ```
-./spctl orders cancel <orderId> [option]
+./spctl orders cancel <orderId> \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-## Argument
+## Arguments
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`orderId`|Order ID|
+| `<orderId>` | ID of the order. |
 
 ## Options
 
-|**Name**|**Description**|
+| **Name** | **Description** |
 | :- | :- |
-|`--config`|Path to the configuration file. Default is `./config.json`|
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+The following command cancels the order with ID 1312:
+
+```
+./spctl orders cancel 1312
+```

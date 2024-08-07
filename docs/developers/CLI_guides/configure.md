@@ -198,7 +198,7 @@ It may take a couple of minutes for the tokens to appear on your account. When y
 ./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
 ```
 
-When your order is created, you will see the following in the last line of CLI output:
+When your order is created, you will see the following in the last line of the CLI output:
 
 ```
 Workflow was created, TEE order id: ["XXXX"]
@@ -222,15 +222,15 @@ If you use a free Storj account, your files will become unavailable after the en
 
 Create a bucket for your encrypted solutions and data. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/).
 
-Create two access grants for this bucket. One should provide **write** and **delete** permissions, and the other one – **read** permission. Alternatively, you can create a single access grant with **all** permission. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
+Create two access grants for this bucket. One should provide the **write** and **delete** permissions, and the other one the **read** permission. Alternatively, you can create a single access grant with the **all** permission. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
 
 Open SPCTL's `config.json` in a text editor and fill in the following parameters:
 
 |**Parameter**|**Description**|
 |:-|:-|
 |bucket| Name of a Storj bucket|
-|writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket|
-|readAccessToken| Storj access grant with **read** permission for this bucket|
+|writeAccessToken| Storj access grant with the **write** and **delete** permissions for this bucket|
+|readAccessToken| Storj access grant with the **read** permission for this bucket|
 
 ## Support
 

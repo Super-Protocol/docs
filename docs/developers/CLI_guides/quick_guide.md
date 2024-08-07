@@ -11,11 +11,11 @@ This quick guide will take you step by step through deploying a solution and dat
 
 ### Step 1. Pack a solution
 
-To prepare a solution for the execution inside a Trusted Execution Environment, pack and sign it with [Gramine](https://gramineproject.io/). To do this, run the [`solutions prepare`](/developers/cli_commands/solutions/prepare) command.
+To prepare a solution for execution inside a Trusted Execution Environment, pack and sign it with [Gramine](https://gramineproject.io/). To do this, run the [`solutions prepare`](/developers/cli_commands/solutions/prepare) command.
 
 It will create a TAR.GZ archive with the solution and a JSON file with essential metadata.
 
-### Step 2. Upload the solution to storage
+### Step 2. Upload the solution to the storage
 
 Run the [`files upload`](/developers/cli_commands/files/upload) command using the TAR.GZ archive from the previous step.
 
@@ -43,7 +43,7 @@ For example:
 tar -czvf archived_data.tar.gz -C ./data .
 ```
 
-### Step 2. Upload the data to storage
+### Step 2. Upload the data to the storage
 
 Run the [`files upload`](/developers/cli_commands/files/upload) command using the TAR.GZ archive from the previous step.
 

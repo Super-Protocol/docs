@@ -5,23 +5,22 @@ slug: "/marketplace/"
 sidebar_position: 3
 ---
 
-Marketplace GUI is a user-friendly web interface to [Marketplace](/developers/fundamentals). It also provides an interactive learning experience for new users. GUI serves as a companion tool to the Super Protocol CLI tool [SPCTL](/developers/cli_commands). However, GUI capabilities are currently limited so it is not a full alternative.
+Marketplace graphical interface (GUI) is a user-friendly web interface to [Marketplace](/developers/fundamentals). It also provides an interactive learning experience for new users. GUI serves as a companion tool to the Super Protocol command-line interface (CLI) tool [SPCTL](/developers/cli_commands). However, GUI capabilities are currently limited so it is not a full alternative to CLI.
 
 Go to Marketplace GUI: [**marketplace.superprotocol.com**](https://marketplace.superprotocol.com/)
 
-Follow the [First steps](/developers/marketplace/first-steps/) and [Marketplace walkthrough](/developers/marketplace/walkthrough/) guides to get you started.
+Follow the [First steps](/developers/marketplace/first-steps/) and [Marketplace walkthrough](/developers/marketplace/walkthrough/) guides to start using the Super Protocol Marketplace.
 
 ## Content
 
-| **Guide**                                   | **Description**                                                               |
+| **Guide**                                   | **Description**     |
 |:-------|:----------|
 | [First steps](/developers/marketplace/first-steps/)            | Set up Metamask and Marketplace GUI   |
 | [Marketplace walkthrough](developers/marketplace/walkthrough/)  | Create a sample order in the Marketplace GUI         |
 | [Check confidentiality](/developers/marketplace/confidentiality) | Check if a domain is secure and deployed inside a Trusted Execution Emvironment       |
 | [Moderation](/developers/marketplace/moderation/)                | Pass the offer verification to move your offer into the **Approved** category     |
 
-
-## Available in Marketplace GUI
+## Available in the Marketplace GUI
 
 The things you can do in the Marketplace GUI and the their respective CLI commands:
 
@@ -39,18 +38,18 @@ The things you can do in the Marketplace GUI and the their respective CLI comman
 | Receive order results                          | [`orders download-result`](/developers/cli_commands/orders/download-result)     |
 | Check confidentiality                          | [`quotes validate`](/developers/cli_commands/quotes/validate)                   |
 
-## Available in SPCTL only
+## Available in the Marketplace CLI only
 
-A list of most important functions that are available only through [SPCTL](/developers/cli_commands).
+The most important functions available only in [SPCTL](/developers/cli_commands):
 
 | **Function**                                   | **SPCTL Command**                                                               |
 |:-----------------------------------------------|:------------------------------------------------------------------------------|
-| Prepare your solutions for execution | [`solutions prepare`](/developers/cli_commands/solutions/prepare)                                     |
-| Upload your files to storage                | [`files upload`](/developers/cli_commands/files/upload)                     |
+| Prepare a solution for execution | [`solutions prepare`](/developers/cli_commands/solutions/prepare)                                     |
+| Upload files to storage                | [`files upload`](/developers/cli_commands/files/upload)                     |
 | Create orders using your solutions              | [`workflows create`](/developers/cli_commands/workflows/create)                       |
-| Updating your offers | [`offers update`](/developers/cli_commands/offers/offers/update) and [`offers update-slot`](/developers/cli_commands/offers/slots/update-slot)|
-| Updating your provider                     | [`providers update`](/developers/cli_commands/providers/update)                 |
+| Update an offer | [`offers update`](/developers/cli_commands/offers/offers/update) and [`offers update-slot`](/developers/cli_commands/offers/slots/update-slot)|
+| Update a provider                     | [`providers update`](/developers/cli_commands/providers/update)                 |
 
-You can also register a provider to create solution or data offers. Refer to the [Providers and offers](/developers/cli_guides/providers_offers) guide.
+Refer to the [Providers and offers](/developers/cli_guides/providers_offers) guide to register a provider and create a solution or data offer.
 
 
