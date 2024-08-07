@@ -12,19 +12,24 @@ Certain orders require a positive deposit balance to keep running. For example, 
 ## Syntax
 
 ```
-./spctl orders replenish-deposit orderId tokenAmount [option]
+./spctl orders replenish-deposit <orderId> <tokenAmount> \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-Replace the following:
+## Arguments
 
-- `orderId`: ID of the order.
-- `tokenAmount`: amount of TEE tokens to deposit.
+| **Name** | **Description** |
+| :- | :- |
+| `<orderId>` | ID of the order. |
+| `<tokenAmount>` | Amount of TEE tokens to deposit. |
 
 ## Option
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 

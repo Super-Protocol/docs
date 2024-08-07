@@ -27,43 +27,53 @@ Note that the base image is graminized but not included in the output archive fi
 ## Syntax
 
 ```
-./spctl solutions prepare solutionPath signingKeyPath \
-  --base-image-path baseImagePath \
-  [option ...]
+./spctl solutions prepare <solutionPath> <signingKeyPath>
+    [--base-image-path <path>] \
+    [--metadata <path>] \
+    [--pack-solution <path>] \
+    [--write-default-manifest {true ┃ false}] \
+    [--env <envVar>,[<envVar>,...]] \
+    [--hash-algo <hashAlgo>] \
+    [--sgx-max-threads <number>] \
+    [--sgx-enclave-size <number>] \
+    [--sgx-enclave-size <number>] \
+    [--sgx-loader-internal-size <number>] \
+    [--sgx-stack-size <number>] \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
-
-Replace the following:
-- `solutionPath`: path to the solution directory.
-- `solutionKeyPath`: path to the signing key file.
 
 ## Arguments
 
 | **Name** | **Description** |
 | :- | :- |
-| `--base-image-path` | Path to the base image file. |
+| `<solutionPath>` | Path to the solution directory. |
+| `<solutionKeyPath>` | Path to the signing key file. |
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--metadata` | Path to save the resulting metadata file (hash and MrEnclave). The default is `./metadata.json`. |
-| `--pack-solution` | Path to save the resulting TAR.GZ archive file. |
-| `--write-default-manifest` | Write a default manifest for solutions with empty MrEnclave. The default is `false`. |
-| `--env` | List of environment variables to set into solution manifest. |
-| `--hash-algo` | Hash calculation algorithm for the solution. The default is `sha256`. |
-| `--sgx-max-threads` | Number of maximum threads, a Gramine 1.4 option. |
-| `--sgx-enclave-size` | Entire enclave size (#M or #G), must be a value to the power of 2. |
-| `--sgx-loader-internal-size`| Size of the internal enclave structs (#M or #G). |
-| `--sgx-stack-size` | Size of the enclave thread stack (#K, #M or #G). |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
-| `--help`, `-h` |Display help for the command. |
+| `--base-image-path <path>` | Path to the base image file. |
+| `--metadata <path>` | Path to save the resulting metadata file (hash and MrEnclave). The default is `./metadata.json`. |
+| `--pack-solution <path>` | Path to save the resulting TAR.GZ archive file. |
+| `--write-default-manifest {true ┃ false}` | Write a default manifest for solutions with empty MrEnclave. The default is `false`. |
+| `--env <envVar>,[<envVar>,...]` | List of environment variables to set into solution manifest. |
+| `--hash-algo <hashAlgo>` | Hash calculation algorithm for the solution. The default is `sha256`. |
+| `--sgx-max-threads <number>` | Number of maximum threads, a Gramine 1.4 option. |
+| `--sgx-enclave-size <number>` | Entire enclave size (#M or #G), must be a power of 2. |
+| `--sgx-loader-internal-size <number>`| Size of the internal enclave structs (#M or #G). |
+| `--sgx-stack-size <number>` | Size of the enclave thread stack (#K, #M or #G). |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 
 The following command prepares a solution:
 
 ```
-./spctl solutions prepare ./my-solution/run ./my-solution/signing-key --base-image-path ./base-solution-image.tar.gz 
+./spctl solutions prepare ./my-solution/run ./my-solution/signing-key \
+    --base-image-path ./base-solution-image.tar.gz 
 ```
 
 Where:

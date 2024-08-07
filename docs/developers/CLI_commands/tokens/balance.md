@@ -10,11 +10,22 @@ Displays the balance of TEE and MATIC tokens in your wallet.
 ## Syntax
 
 ```
-./spctl tokens balance [option]
+./spctl tokens balance \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Option
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+The following command checks the balance of the account specified in the `config-provider.json` file.
+
+```
+./spctl tokens balance --config ./config-provider.json
+```

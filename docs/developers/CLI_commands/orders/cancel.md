@@ -10,16 +10,23 @@ Cancels an order.
 ## Syntax
 
 ```
-./spctl orders cancel orderId [option]
+./spctl orders cancel <orderId> \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-Replace `orderId` with the ID of the order.
+## Arguments
+
+| **Name** | **Description** |
+| :- | :- |
+| `<orderId>` | ID of the order. |
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 

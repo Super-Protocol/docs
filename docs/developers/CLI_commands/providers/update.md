@@ -5,26 +5,30 @@ slug: "/cli_commands/providers/update"
 sidebar_label: "update"
 ---
 
-Updates the current provider using a provider JSON file.
+Updates the current provider using a provider info JSON file.
 
-Provider Tools creates a provider JSON file in [Step 4 of the Providers and Offers](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) guide.
+Provider Tools creates a provider info JSON file in [Step 4 of the Providers and Offers](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) guide.
 
 **Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
 ## Syntax
 
 ```
-./spctl providers update [option ...]
+./spctl providers update \
+    [--path <path>]
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Options
 
 | **Name** | **Description** |
 | :- | :- |
-| `--path` | Path to the provider info JSON file. The default is `./provider.json`. |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--path <path>` | Path to the provider info JSON file. The default is `./provider.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
-### Provider info file requirements
+## Provider info file
 
 The provider info file must contain the following strings:
 

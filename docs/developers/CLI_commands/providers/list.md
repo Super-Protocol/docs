@@ -10,17 +10,21 @@ Lists all registered providers on the blockchain.
 ## Syntax
 
 ```
-./spctl providers list [option ...]
+./spctl providers list \
+    [--fields <field>,[<field>,...]]
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
-## Options
+## Options  
 
 | **Name** | **Description** |
 | :- | :- |
-| `--fields`|Columns in the output table, separated by commas. Default fields: `address`, `name`. Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. |
-| `--limit` | Number of records to display. The default is `10`. |
-| `--cursor` | Cursor for pagination. |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--fields <field>,[<field>,...]`| Columns in the output table, separated by commas. Default fields: `address`, `name`. Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. |
+| `--limit <number>` | Number of records to display. The default is `10`. |
+| `--cursor <cursorString>` | Cursor for pagination. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
 
 ## Example
 

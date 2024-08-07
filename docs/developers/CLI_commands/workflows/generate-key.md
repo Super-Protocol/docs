@@ -12,11 +12,20 @@ SPCTL generates this key automatically during the [configuration](/developers/cl
 ## Syntax
 
 ```
-./spctl workflows generate-key [option]
+./spctl workflows generate-key \
+    [--config <path>] \
+    [--help ┃ -h]
 ```
 
 ## Option
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config` | Path to the configuration file. The default is `./config.json`. |
+| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h` | Help for the command. |
+
+## Example
+
+```
+./spctl workflows generate-key
+```
