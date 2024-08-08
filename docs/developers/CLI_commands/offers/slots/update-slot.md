@@ -1,6 +1,6 @@
 ---
 id: "update-slot"
-title: "offers update-slot"
+title: "update-slot"
 slug: "/cli_commands/offers/slots/update-slot"
 sidebar_position: 2
 ---
@@ -16,12 +16,12 @@ Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requ
 ## Syntax
 
 ```
-./spctl offers update-slot offerType \
-    --offer offerId \
-    --slot slotId \
+./spctl offers update-slot <offerType> \
+    --offer <offerId> \
+    --slot <slotId> \
     [--path <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

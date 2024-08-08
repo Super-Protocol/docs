@@ -1,6 +1,6 @@
 ---
 id: "offers-list"
-title: "offers list"
+title: "list"
 slug: "/cli_commands/offers/offers/list"
 sidebar_position: 1
 ---
@@ -16,7 +16,7 @@ Displays a list of available offers.
     [--limit <number>] \
     [--cursor <cursorString>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 | **Name** | **Description** |
@@ -27,19 +27,19 @@ Displays a list of available offers.
 
 For the `tee` offer type:
 
-| **Name** | **Description** |
+| <div style={{width:265}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, `total_cores`, `free_cores`, `cancelable`, `modified_date`. |
 
 For the `value` offer type:
 
-| **Name** | **Description** |
+| <div style={{width:265}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `name`, `type`. Additional fields: `description`, `provider_address`, `provider_name`, `cancelable`, `modified_date`. |
 
 For both offer types:
 
-| **Name** | **Description** |
+| <div style={{width:275}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--ids <offerId> [<offerId> ...]` | Filter by offer IDs. This option accepts multiple values separated by spaces. |
 | `--limit <number>` | Number of rows to display. The default is `10`. |

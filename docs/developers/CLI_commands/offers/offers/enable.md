@@ -1,6 +1,6 @@
 ---
 id: "offers-enable"
-title: "offers enable"
+title: "enable"
 slug: "/cli_commands/offers/offers/enable"
 sidebar_position: 8
 ---
@@ -14,7 +14,7 @@ Enables an existing disabled offer.
 ```
 ./spctl offers enable <offerId> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

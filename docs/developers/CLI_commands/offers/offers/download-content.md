@@ -1,6 +1,6 @@
 ---
 id: "offers-download-content"
-title: "offers download-content"
+title: "download-content"
 slug: "/cli_commands/offers/offers/download-content"
 sidebar_position: 4
 
@@ -16,7 +16,7 @@ The command only works with offers that allow this operation.
 ./spctl offers download-content <offerId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments
@@ -35,7 +35,7 @@ The command only works with offers that allow this operation.
 
 ## Example
 
-The following command downloads the content of the Python Base Image (offer ID: 5):
+The following command downloads the content of the [Python Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D5) (offer ID: 5):
 
 ```
 ./spctl offers download-content 5

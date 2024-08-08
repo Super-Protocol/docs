@@ -11,14 +11,14 @@ Lists all registered providers on the blockchain.
 
 ```
 ./spctl providers list \
-    [--fields <field>,[<field>,...]]
+    [--fields <field>,[<field>,...]] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Options  
 
-| **Name** | **Description** |
+| <div style={{width:265}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--fields <field>,[<field>,...]`| Columns in the output table, separated by commas. Default fields: `address`, `name`. Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. |
 | `--limit <number>` | Number of records to display. The default is `10`. |

@@ -14,7 +14,7 @@ SPCTL generates this key automatically during the [configuration](/developers/cl
 ```
 ./spctl workflows generate-key \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Option

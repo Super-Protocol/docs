@@ -21,34 +21,34 @@ The example of the resulting order in the Marketplace GUI:
 
 ```
 ./spctl workflows create \
-    --solution {<offerId>,[<slotId>] ┃ <resourcePath>} [--solution ...] \
+    --solution {<offerId>,[<slotId>] | <path>} [--solution ...] \
     --storage <offerId>,[<slotId>] \
-    [--data {<offerId>,[<slotId>] ┃ <resourcePath>}] [--data ...] \
-    [--tee <offerId>,[<slotId>]]
-    [--tee-slot-count <increment>]
-    [--tee-options <optionId> [<optionId> ...]]
-    [--tee-options-count <increment> [<increment> ...]]
-    [--deposit <teeTokens>]
-    [--min-rent-minutes <minutes>]
-    [--debug {true ┃ false}]
+    [--data {<offerId>,[<slotId>] | <path>}] [--data ...] \
+    [--tee <offerId>,[<slotId>]] \
+    [--tee-slot-count <inc>] \
+    [--tee-options <optionId> [<optionId> ...]] \
+    [--tee-options-count <inc> [<inc> ...]] \
+    [--deposit <teeTokens>] \
+    [--min-rent-minutes <minutes>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [Command syntax](/developers/cli_commands#command-syntax).
 
 ## Options
 
-| <div style={{width:428}}>**Name**</div> | **Description** |
+| <div style={{width:375}}>**Name**</div> | **Description** |
 | :- | :- |
-| `--solution {<offerId>,[<slotId>] ┃ <resourcePath>}` | Solution you are adding to the order: <br/>- For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For an uploaded solution, state the path to the solution resource JSON file. <br/><br/>You can use this option multiple times if necessary. |
+| `--solution {<offerId>,[<slotId>] │ <path>}` | Solution you are adding to the order: <br/>- For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For an [uploaded](/developers/cli_commands/files/upload) solution, state the path to the solution resource JSON file. <br/><br/>You can use this option multiple times. |
 | `--storage <offerId>,[<slotId>]` | Storage offer you are adding to the order. State the storage offer ID and the storage requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically. |
-| `--data {<offerId>,[<slotId>] ┃ <resourcePath>}` | Data you are adding to the order: <br/>- For a Marketplace offer, state the data offer ID and the data requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For uploaded data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times if necessary. <br/><br/>Although this option is obligatory in most cases, do not use it if you run a solution that does not require data. |
+| `--data {<offerId>,[<slotId>] │ <path>}` | Data you are adding to the order: <br/>- For a Marketplace offer, state the data offer ID and the data requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For [uploaded](/developers/cli_commands/files/upload) data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times. <br/><br/>Although this option is technically not mandatory, most solutions require data. |
 | `--tee <offerId>,[<slotId>]` | Compute offer you are adding to the order. State the compute offer ID and the [configuration slot](/developers/fundamentals/slots#configuration) ID (optional), separated by a comma. If the configuration slot is not specified, it will be selected automatically. <br/><br/>If you do not use this option, the compute offer and its configuration will be selected automatically. |
-| `--tee-slot-count <increment>` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. <br/><br/>If you do not use this option, the increments will be calculated automatically. |
+| `--tee-slot-count <inc>` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. <br/><br/>If you do not use this option, the increments will be calculated automatically. |
 | `--tee-options <optionId> [<optionId> ...]` | IDs of [configuration options](/developers/fundamentals/slots#configuration) separated by spaces. Use `--tee-options` together with `--tee`. <br/><br/>If you do not use `--tee-options`, configuration options will be selected automatically. |
-| `--tee-options-count <increment> [<increment> ...]` | Increments for each configuration option separated by spaces. Use `--tee-options-count` together with `--tee` and `--tee-options`. <br/><br/>If you do not use `--tee-options-count`, increments will be calculated automatically. |
+| `--tee-options-count <inc> [<inc> ...]` | Increments for each configuration option separated by spaces. Use `--tee-options-count` together with `--tee` and `--tee-options`. <br/><br/>If you do not use `--tee-options-count`, increments will be calculated automatically. |
 | `--deposit <teeTokens>` | [Deposit](/developers/fundamentals/orders#lease-deposit-and-balance) in TEE tokens. The default is the minimum required deposit. |
 | `--min-rent-minutes <minutes>` | Compute [lease time](/developers/fundamentals/orders#lease-deposit-and-balance) in minutes. Using this option will increase the required deposit. The default is the minimum required time. |
-| `--debug {true ┃ false}` | Flag for showing debug information. The default is `false`. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 

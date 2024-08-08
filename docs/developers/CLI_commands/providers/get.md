@@ -13,7 +13,7 @@ Displays the information on a provider using its authority account address.
 ./spctl providers get <authorityAccount> \
     [--fields <field>,[<field>,...]] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments
@@ -24,7 +24,7 @@ Displays the information on a provider using its authority account address.
 
 ## Options
 
-| **Name** | **Description** |
+| <div style={{width:265}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--fields <field>,[<field>,...]` | Fields in the output, separated by commas. Default fields: `name`, `description`, `authority_account`, `action_account`, `token_receiver`, `metadata`. Additional fields: `address`, `modified_date`. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |

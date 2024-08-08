@@ -1,6 +1,6 @@
 ---
 id: "delete-slot"
-title: "offers delete-slot"
+title: "delete-slot"
 slug: "/cli_commands/offers/slots/delete-slot"
 sidebar_position: 3
 ---
@@ -17,8 +17,8 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
 ./spctl offers delete-slot <offerType> \
     --offer <offerId> \
     --slot <slotId> \
-    [--config <configPath>] \
-    [--help ┃ -h]
+    [--config <path>] \
+    [--help | -h]
 ```
 
 ## Arguments

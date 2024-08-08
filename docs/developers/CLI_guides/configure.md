@@ -35,7 +35,7 @@ To set up SPCTL, you need Super Protocol Testnet access. If you do not have it y
     ```
   </TabItem>
   <TabItem value="windows" label="Windows">
-    Open a WSL terminal in the directory where you want to place SPCTL and run the following command:
+    Launch [WSL](https://learn.microsoft.com/en-us/windows/wsl) from PowerShell, go to the directory where you want to place SPCTL, and run the following command:
     ```
     curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
     chmod +x ./spctl

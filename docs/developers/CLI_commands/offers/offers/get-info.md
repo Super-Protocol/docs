@@ -1,6 +1,6 @@
 ---
 id: "offers-get-info"
-title: "offers get-info"
+title: "get-info"
 slug: "/cli_commands/offers/offers/get-info"
 sidebar_position: 3
 ---
@@ -13,7 +13,7 @@ Displays the information on an offer as stored on the blockchain.
 ./spctl offers get-info <offerType> <offerId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

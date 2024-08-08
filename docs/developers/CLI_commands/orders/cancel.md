@@ -12,7 +12,7 @@ Cancels an order.
 ```
 ./spctl orders cancel <orderId> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

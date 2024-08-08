@@ -1,6 +1,6 @@
 ---
 id: "get-option"
-title: "offers get-option"
+title: "get-option"
 slug: "/cli_commands/offers/options/get-option"
 sidebar_position: 4
 ---
@@ -10,11 +10,11 @@ Displays the information on a [configuration option](/developers/fundamentals/sl
 ## Syntax
 
 ```
-./spctl offers get-option tee \
+./spctl offers get-option \
     --offer <offerId> \
     --option <optionId> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Options

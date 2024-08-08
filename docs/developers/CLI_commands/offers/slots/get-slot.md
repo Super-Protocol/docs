@@ -1,6 +1,6 @@
 ---
 id: "offers-get-slot"
-title: "offers get-slot"
+title: "get-slot"
 slug: "/cli_commands/offers/slots/get-slot"
 sidebar_position: 4
 ---
@@ -17,7 +17,7 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
     --slot <slotId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments
