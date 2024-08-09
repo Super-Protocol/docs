@@ -1,6 +1,6 @@
 ---
 id: "offers-update"
-title: "update"
+title: "offers update"
 slug: "/cli_commands/offers/offers/update"
 sidebar_position: 6
 ---

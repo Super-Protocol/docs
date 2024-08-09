@@ -1,6 +1,6 @@
 ---
 id: "offers-list"
-title: "list"
+title: "offers list"
 slug: "/cli_commands/offers/offers/list"
 sidebar_position: 1
 ---

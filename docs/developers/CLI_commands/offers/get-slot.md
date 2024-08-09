@@ -1,8 +1,8 @@
 ---
 id: "offers-get-slot"
-title: "get-slot"
+title: "offers get-slot"
 slug: "/cli_commands/offers/slots/get-slot"
-sidebar_position: 4
+sidebar_position: 13
 ---
 
 Displays the information for a [requirement slot](/developers/fundamentals/slots#requirements) in an offer.

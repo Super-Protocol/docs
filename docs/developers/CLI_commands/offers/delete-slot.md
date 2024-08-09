@@ -1,8 +1,8 @@
 ---
 id: "delete-slot"
-title: "delete-slot"
+title: "offers delete-slot"
 slug: "/cli_commands/offers/slots/delete-slot"
-sidebar_position: 3
+sidebar_position: 12
 ---
 
 Deletes a [requirement slot](/developers/fundamentals/slots#requirements) in an [offer](/developers/fundamentals/offers).

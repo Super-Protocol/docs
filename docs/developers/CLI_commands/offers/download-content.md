@@ -1,6 +1,6 @@
 ---
 id: "offers-download-content"
-title: "download-content"
+title: "offers download-content"
 slug: "/cli_commands/offers/offers/download-content"
 sidebar_position: 4
 

@@ -1,8 +1,8 @@
 ---
 id: "update-slot"
-title: "update-slot"
+title: "offers update-slot"
 slug: "/cli_commands/offers/slots/update-slot"
-sidebar_position: 2
+sidebar_position: 11
 ---
 
 Updates a [requirement slot](/developers/fundamentals/slots#requirements) in an existing offer using the information in a JSON file.
