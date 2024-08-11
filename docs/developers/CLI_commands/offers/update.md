@@ -17,7 +17,7 @@ Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offe
 ./spctl offers update <offerType> <offerId> \
     [--path <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

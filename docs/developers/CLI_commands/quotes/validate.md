@@ -14,7 +14,7 @@ In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/
 ```
 ./spctl quotes validate <domainUrl> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

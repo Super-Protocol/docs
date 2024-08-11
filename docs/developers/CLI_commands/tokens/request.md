@@ -13,10 +13,9 @@ This command is only available during Testnet. Be mindful of [Testnet limitation
 
 ```
 ./spctl tokens request \
-    {--tee ┃ --matic} \
-    [--debug {true ┃ false}] \
+    {--tee | --matic} \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Options
@@ -25,7 +24,6 @@ This command is only available during Testnet. Be mindful of [Testnet limitation
 | :- | :- |
 | `--tee` | Request for Super Protocol TEE tokens. |
 | `--matic` | Request for Polygon Amoy MATIC tokens. |
-| `--debug {true ┃ false}` | Flag for showing debug information. The default is `false`. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 

@@ -12,7 +12,7 @@ Displays the balance of TEE and MATIC tokens in your wallet.
 ```
 ./spctl tokens balance \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Option

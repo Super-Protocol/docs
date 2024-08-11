@@ -2,7 +2,7 @@
 id: "add-slot"
 title: "offers add-slot"
 slug: "/cli_commands/offers/slots/add-slot"
-sidebar_position: 1
+sidebar_position: 10
 ---
 
 Creates an additional [requirement slot](/developers/fundamentals/slots#requirements) in an offer using the information in an offer slot JSON file.
@@ -17,8 +17,8 @@ Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offe
 ./spctl offers add-slot <offerType> \
     --offer <offerId> \
     [--path <path>] \
-    [--config <configPath>] \
-    [--help ┃ -h]
+    [--config <path>] \
+    [--help | -h]
 ```
 
 ## Arguments

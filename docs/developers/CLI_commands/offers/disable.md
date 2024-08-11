@@ -14,7 +14,7 @@ Disables an existing enabled offer.
 ```
 ./spctl offers disable <offerId> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

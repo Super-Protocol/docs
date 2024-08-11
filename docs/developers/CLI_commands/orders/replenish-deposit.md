@@ -14,7 +14,7 @@ Certain orders require a positive deposit balance to keep running. For example, 
 ```
 ./spctl orders replenish-deposit <orderId> <tokenAmount> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

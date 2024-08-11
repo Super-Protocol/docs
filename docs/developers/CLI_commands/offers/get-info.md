@@ -13,7 +13,7 @@ Displays the information on an offer as stored on the blockchain.
 ./spctl offers get-info <offerType> <offerId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
 
 ## Arguments

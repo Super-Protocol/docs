@@ -14,10 +14,8 @@ The resource JSON file is created as a result of the [`files upload`](/developer
 ```
 ./spctl files delete <resourceFilePath> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
-
-Replace `resourceFilePath` with the path to the resource JSON file.
 
 ## Arguments
 
