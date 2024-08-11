@@ -20,6 +20,8 @@ This command allows you to check any order, not only yours. The information on a
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Arguments
 
 | **Name** | **Description** |

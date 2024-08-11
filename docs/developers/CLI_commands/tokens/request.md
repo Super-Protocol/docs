@@ -7,7 +7,7 @@ sidebar_label: "request"
 
 Requests test TEE and MATIC tokens.
 
-This command is only available during Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
+This command is only available during the Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
 
 ## Syntax
 
@@ -17,6 +17,8 @@ This command is only available during Testnet. Be mindful of [Testnet limitation
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Options
 

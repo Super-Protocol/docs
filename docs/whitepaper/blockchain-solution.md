@@ -138,17 +138,17 @@ The Slot, Option, and Usage entities are used to solve the problem of resource p
 
 A slot is a minimal piece of equipment that is used to allocate capacity for order processing. The slot includes the following:
 
-* **BCPUCores - the number of provided processor cores in the slot. The power of the cores is calculated using the consensus protocol**
-* **RAM - the amount of provided memory in a slot in bytes. The memory speed is calculated using the consensus protocol**
-* **SSD / HDD - provided capacity of SSD and/or HDD in a slot in bytes. Disk speed is calculated by consensus protocol**
+* **BCPUCores**: the number of provided processor cores in the slot. The power of the cores is calculated using the consensus protocol
+* **RAM**: the amount of provided memory in a slot in bytes. The memory speed is calculated using the consensus protocol
+* **SSD / HDD**: provided capacity of SSD and/or HDD in a slot in bytes. Disk speed is calculated by consensus protocol
 
 #### Option
 
 An option is an additional unit of provided equipment and services. The option includes the following:
 
-* **Bandwidth of the network provided in the option in bps**
-* **Maximum amount of traffic provided in the option in bytes**
-* **External port, which is available for use/forwarding in the solution offer. If it's specified in the TEE offer, then it's a flag to provide an external (static) IP address for executing the order with any port bound**
+* **Bandwidth** of the network provided in the option in bits per second.
+* **Maximum amount of traffic** provided in the option in bytes.
+* **External port**, which is available for use/forwarding in the solution offer. If it's specified in the TEE offer, then it's a flag to provide an external (static) IP address for executing the order with any port bound.
 
 Slots as well as options can be summed up (to be described later) and their sum represents the rented equipment for the execution of the order.
 
@@ -156,10 +156,10 @@ Slots as well as options can be summed up (to be described later) and their sum 
 
 The _SlotUsage_ entity describes the usage scenarios of a slot or option. It includes the following:
 
-* _**Price**_** is the price of use**
-* _**PriceType**_** is a type of price, which can be **_**PerHour**_** (per hour) or **_**Fixed**_** (fixed price)**
-* _**minTimeMinutes**_** is a minimum usage in minutes**
-* _**maxTimeMinutes**_** is a maximum usage in minutes**
+* **Price** is the price of use
+* **PriceType** is a type of price, which can be **PerHour** (per hour) or **Fixed** (fixed price)
+* **minTimeMinutes** is a minimum usage in minutes
+* **maxTimeMinutes** is a maximum usage in minutes.
 
 ### TEE offers
 

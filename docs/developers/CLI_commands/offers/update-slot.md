@@ -2,6 +2,7 @@
 id: "update-slot"
 title: "offers update-slot"
 slug: "/cli_commands/offers/slots/update-slot"
+sidebar_label: "update-slot"
 sidebar_position: 11
 ---
 
@@ -23,6 +24,8 @@ Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requ
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

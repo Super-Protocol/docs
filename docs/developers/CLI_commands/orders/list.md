@@ -23,6 +23,8 @@ This command displays a list of all orders and suborders, unless the `--my-accou
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Options
 
 | <div style={{width:370}}>**Name**</div> | **Description** |

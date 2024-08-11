@@ -16,6 +16,8 @@ Lists all registered providers on the blockchain.
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Options  
 
 | <div style={{width:265}}>**Name**</div> | **Description** |

@@ -2,6 +2,7 @@
 id: "offers-get-slot"
 title: "offers get-slot"
 slug: "/cli_commands/offers/slots/get-slot"
+sidebar_label: "get-slot"
 sidebar_position: 13
 ---
 
@@ -19,6 +20,8 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

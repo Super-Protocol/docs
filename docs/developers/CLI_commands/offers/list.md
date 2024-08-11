@@ -2,6 +2,7 @@
 id: "offers-list"
 title: "offers list"
 slug: "/cli_commands/offers/offers/list"
+sidebar_label: "list"
 sidebar_position: 1
 ---
 
@@ -18,6 +19,10 @@ Displays a list of available offers.
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
+## Arguments
 
 | **Name** | **Description** |
 | :- | :- |

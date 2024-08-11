@@ -2,6 +2,7 @@
 id: "add-slot"
 title: "offers add-slot"
 slug: "/cli_commands/offers/slots/add-slot"
+sidebar_label: "add-slot"
 sidebar_position: 10
 ---
 
@@ -20,6 +21,8 @@ Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offe
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

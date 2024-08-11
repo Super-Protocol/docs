@@ -2,6 +2,7 @@
 id: "delete-slot"
 title: "offers delete-slot"
 slug: "/cli_commands/offers/slots/delete-slot"
+sidebar_label: "delete-slot"
 sidebar_position: 12
 ---
 
@@ -20,6 +21,8 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

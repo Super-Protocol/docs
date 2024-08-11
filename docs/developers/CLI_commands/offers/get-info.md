@@ -2,6 +2,7 @@
 id: "offers-get-info"
 title: "offers get-info"
 slug: "/cli_commands/offers/offers/get-info"
+sidebar_label: "get-info"
 sidebar_position: 3
 ---
 
@@ -15,6 +16,8 @@ Displays the information on an offer as stored on the blockchain.
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

@@ -17,6 +17,8 @@ In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Arguments
 
 | **Name** | **Description** |

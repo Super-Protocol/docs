@@ -2,6 +2,7 @@
 id: "offers-get"
 title: "offers get"
 slug: "/cli_commands/offers/offers/get"
+sidebar_label: "get"
 sidebar_position: 2
 ---
 
@@ -15,6 +16,8 @@ Displays information on an offer.
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

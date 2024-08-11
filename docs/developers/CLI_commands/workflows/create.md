@@ -34,15 +34,15 @@ The example of the resulting order in the Marketplace GUI:
     [--help | -h]
 ```
 
-Read about the Super Protocol [Command syntax](/developers/cli_commands#command-syntax).
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Options
 
 | <div style={{width:375}}>**Name**</div> | **Description** |
 | :- | :- |
-| `--solution {<offerId>,[<slotId>] │ <path>}` | Solution you are adding to the order: <br/>- For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For an [uploaded](/developers/cli_commands/files/upload) solution, state the path to the solution resource JSON file. <br/><br/>You can use this option multiple times. |
+| `--solution {<offerId>,[<slotId>] │ <path>}` | Solution you are adding to the order: <br/><br/>• For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>• For an [uploaded](/developers/cli_commands/files/upload) solution, state the path to the solution resource JSON file.<br/><br/>You can use this option multiple times. |
 | `--storage <offerId>,[<slotId>]` | Storage offer you are adding to the order. State the storage offer ID and the storage requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically. |
-| `--data {<offerId>,[<slotId>] │ <path>}` | Data you are adding to the order: <br/>- For a Marketplace offer, state the data offer ID and the data requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>- For [uploaded](/developers/cli_commands/files/upload) data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times. <br/><br/>Although this option is technically not mandatory, most solutions require data. |
+| `--data {<offerId>,[<slotId>] │ <path>}` | Data you are adding to the order: <br/><br/>• For a Marketplace offer, state the data offer ID and the data requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>• For [uploaded](/developers/cli_commands/files/upload) data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times. <br/><br/>Although this option is technically not mandatory, most solutions require data. |
 | `--tee <offerId>,[<slotId>]` | Compute offer you are adding to the order. State the compute offer ID and the [configuration slot](/developers/fundamentals/slots#configuration) ID (optional), separated by a comma. If the configuration slot is not specified, it will be selected automatically. <br/><br/>If you do not use this option, the compute offer and its configuration will be selected automatically. |
 | `--tee-slot-count <inc>` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. <br/><br/>If you do not use this option, the increments will be calculated automatically. |
 | `--tee-options <optionId> [<optionId> ...]` | IDs of [configuration options](/developers/fundamentals/slots#configuration) separated by spaces. Use `--tee-options` together with `--tee`. <br/><br/>If you do not use `--tee-options`, configuration options will be selected automatically. |

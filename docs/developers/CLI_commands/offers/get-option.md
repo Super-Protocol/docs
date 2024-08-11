@@ -2,6 +2,7 @@
 id: "get-option"
 title: "offers get-option"
 slug: "/cli_commands/offers/options/get-option"
+sidebar_label: "get-option"
 sidebar_position: 9
 ---
 
@@ -16,6 +17,8 @@ Displays the information on a [configuration option](/developers/fundamentals/sl
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Options
 
