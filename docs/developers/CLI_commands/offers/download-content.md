@@ -2,8 +2,8 @@
 id: "offers-download-content"
 title: "offers download-content"
 slug: "/cli_commands/offers/offers/download-content"
+sidebar_label: "download-content"
 sidebar_position: 4
-
 ---
 
 Downloads the content of an offer.
@@ -18,6 +18,8 @@ The command only works with offers that allow this operation.
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

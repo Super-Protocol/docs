@@ -17,6 +17,8 @@ Certain orders require a positive deposit balance to keep running. For example, 
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Arguments
 
 | **Name** | **Description** |

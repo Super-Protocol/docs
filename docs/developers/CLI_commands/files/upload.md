@@ -36,6 +36,8 @@ The output of the command is a resource JSON file with the information for a com
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Arguments
 
 | **Name** | **Description** |

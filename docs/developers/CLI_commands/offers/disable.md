@@ -2,6 +2,7 @@
 id: "offers-disable"
 title: "offers disable"
 slug: "/cli_commands/offers/offers/disable"
+sidebar_label: "disable"
 sidebar_position: 7
 ---
 
@@ -16,6 +17,8 @@ Disables an existing enabled offer.
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

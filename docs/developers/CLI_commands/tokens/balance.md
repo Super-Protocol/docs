@@ -15,6 +15,8 @@ Displays the balance of TEE and MATIC tokens in your wallet.
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Option
 
 | **Name** | **Description** |

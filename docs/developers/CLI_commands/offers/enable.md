@@ -2,6 +2,7 @@
 id: "offers-enable"
 title: "offers enable"
 slug: "/cli_commands/offers/offers/enable"
+sidebar_label: "enable"
 sidebar_position: 8
 ---
 
@@ -16,6 +17,8 @@ Enables an existing disabled offer.
     [--config <path>] \
     [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

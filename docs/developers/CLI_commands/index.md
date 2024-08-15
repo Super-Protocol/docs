@@ -32,20 +32,17 @@ SPCTL uses the following syntax format for commands:
 
 _Command groups_ contain functionally related commands. Check the complete list of command groups in the [previous section](/developers/cli_commands#command-groups).
 
-_Commands_ perform a specific function, like uploading a file or showing the list of orders.
+_Commands_ perform a specific function, like placing an order or showing the list of providers.
 
 For example, the [`tokens`](/developers/cli_commands/tokens) command group includes the following commands:
 - [`balance`](/developers/cli_commands/tokens/balance) to check the balance
 - [`request`](/developers/cli_commands/tokens/request) to get testnet tokens.
 
-_Options_ modify the command behavior. _Arguments_ provide values for the command and its options. This documentation uses the following special characters to indicate arguments and options:
+_Options_ modify the command behavior and are prefixed by double hyphen `--`. For example, `--help` is an option that displays help information for a command.
 
-- Angle brackets `< >` indicate an argument. Replace the argument name and the brackets with a value.
-- Double hyphen `--` prefixes an option. Use options as given, including the double hyphen `--`.
+_Arguments_ provide values for commands and options. Arguments that follow a command are always required by the command and mandatory to use. Arguments that follow an option can be mandatory—required by the option—or be optional. Angle brackets `< >` indicate argument placeholders in the command syntax. When executing a command, replace placeholders, including the brackets, with values. For example, replace `<offerId>` with `5` for [Python Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D5) (offer ID: 5).
 
-Arguments can follow a command or an option. Command arguments are always required by the command and mandatory to use. Option arguments can be required by the option or be optional.
-
-Options can be mandatory—required by the command—or optional. Note that most options require at least one argument, although exceptions exist.
+Options, too, can be mandatory—required by the command—or be optional. Note that most options require at least one argument, although exceptions exist.
 
 Command syntax may also contain the following special characters:
 
@@ -55,19 +52,19 @@ Command syntax may also contain the following special characters:
 - An ellipsis `...` indicates you may use the preceding option or argument multiple times.
 - A backslash `\` breaks a long command line for better readability.
 
-Do not include these special characters, except backslash `\`, in the final command. Do not include backslashes `\` if you write the command in a single line, but include them if you are breaking the line.
+Never include these special characters, except backslash `\`, in the final command. Do not include backslashes `\` if you write a command in a single line.
 
 ### Example
 
-The following is a required option `--solution` of the [`workflows create`](/developers/cli_commands/workflows/create) command:
+The following is a mandatory option `--solution` of the [`workflows create`](/developers/cli_commands/workflows/create) command:
 
 ```
 --solution {<offerId>,[<slotId>] | <path>}
 ```
 
-The format `{<offerId>,[<slotId>] | <path>}` requires you to choose either `<offerId>,[<slotId>]` or `<path>` as an argument of this option:
-- `<offerId>,[<slotId>]` are a required argument `<offerId>` and an optional argument `<slotId>` (note the square brackets `[ ]`), separated by a comma.
-- `<path>` is a required argument.
+The format `{<offerId>,[<slotId>] | <path>}` requires you to choose either `<offerId>,[<slotId>]` or `<path>`:
+- `<offerId>,[<slotId>]` are a mandatory argument `<offerId>` and an optional argument `<slotId>` (note the square brackets `[ ]`), separated by a comma.
+- `<path>` is a mandatory argument.
 
 So, the final format of this option must be one of the following:
 - `--solution <offerId>`. For example, `--solution 13`.

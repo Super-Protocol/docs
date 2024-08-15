@@ -17,6 +17,8 @@ SPCTL generates this key automatically during the [configuration](/developers/cl
     [--help | -h]
 ```
 
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
+
 ## Option
 
 | **Name** | **Description** |
