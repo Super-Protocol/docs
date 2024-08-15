@@ -1,6 +1,6 @@
 ---
 id: "cli_commands"
-title: "CLI commands"
+title: "CLI Commands"
 slug: "/cli_commands"
 sidebar_position: 7
 ---
@@ -35,8 +35,8 @@ _Command groups_ contain functionally related commands. Check the complete list 
 _Commands_ perform a specific function, like placing an order or showing the list of providers.
 
 For example, the [`tokens`](/developers/cli_commands/tokens) command group includes the following commands:
-- [`balance`](/developers/cli_commands/tokens/balance) to check the balance
-- [`request`](/developers/cli_commands/tokens/request) to get testnet tokens.
+- [`balance`](/developers/cli_commands/tokens/balance): checks the balance
+- [`request`](/developers/cli_commands/tokens/request): requests testnet tokens.
 
 _Options_ modify the command behavior and are prefixed by double hyphen `--`. For example, `--help` is an option that displays help information for a command.
 
