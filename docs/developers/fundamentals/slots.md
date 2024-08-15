@@ -1,15 +1,15 @@
 ---
 id: "slots"
-title: "Slots and Options"
+title: "Requirements and Configurations"
 slug: "/fundamentals/slots"
 sidebar_position: 3
 ---
 
-_Requirement slots_ describe the parameters an offer needs to run. _Configuration slots and options_ provide flexibility in selecting computing resources and internet access for offer deployment.
+_Requirements_ describe the parameters that a solution, data, or storage offer needs to run. _Configurations_ provide flexibility in selecting computing resources and internet access for offer deployment.
 
 ## Requirements
 
-_Requirements_ specify how much computing resources a [value offer](/developers/fundamentals/offers#types-of-offers) needs to run. A _requirement slot_ is a specific set of requirements that may include the following:
+Requirements specify how much computing resources a [value offer](/developers/fundamentals/offers#types-of-offers) needs to run. A _requirement slot_ is a specific set of requirements that may include the following:
 
 - Number of CPU cores
 - RAM
@@ -17,7 +17,9 @@ _Requirements_ specify how much computing resources a [value offer](/developers/
 - Bandwidth
 - External port
 - Traffic
-- Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
+- Minimum and maximum lease time.
+
+_Lease time_ is the duration for which a customer can rent the services of an offer.
 
 Offer providers can define multiple requirement slots for every offer. Each slot may have a different [price](/developers/fundamentals/orders#cost-and-pricing) depending on expected usage. For example, a Python script will compute faster on 4 CPU cores than on 2 cores, and the price may reflect that.
 
@@ -29,23 +31,24 @@ Additionally, providers can make their offers available for a fixed price or per
 
 _Configuration_ is a way to divide the resources of a physical confidential computing device into smaller parts. This division enables a better distribution of [compute offer](/developers/fundamentals/offers#types-of-offers) resources between orders. Customers usually do not need the resources of the whole machine for their orders.
 
-Configuration is a combination of _configuration slots and options_. Configuration slots are responsible for compute resources:
+Configuration is a combination of _configuration slots_ and _configuration options_. Configuration slots are responsible for compute resources:
 
 - Number of CPU cores
 - RAM
 - Disk space
-- Minimum and maximum [lease time](/developers/fundamentals/orders#lease-deposit-and-balance).
+- Minimum and maximum lease time.
 
 Configuration options are responsible for network-related resources:
+
 - Bandwidth
 - Traffic
 - External port availability.
 
-When a customer creates an order, the selected configuration must be at least equal to the sum of all solution, data, and storage requirements in the order. This also applies to the lease time.
+When a customer creates an order, the selected configuration must equal or exceed the sum of all solution, data, and storage requirements in the order. Additionally, the requested lease time must be within the limits set by the minimum and maximum lease time.
 
-Every slot and option has its price. Configuration slots are always priced per hour and never have a fixed price. The configuration option price may be fixed or per hour.
+Every slot and option has its price. Configuration slots are always priced per hour and never have a fixed price, while configuration option prices may be fixed or per hour.
 
-A customer can only select one configuration slot for each order. But to meet the order requirements, they can add the selected slot multiple times or, in other words, apply _increments_.
+A customer can only select one configuration slot for each order. However, to meet the order requirements, they can add the chosen slot multiple times or, in other words, apply _increments_.
 
 For example, the physical machine behind a compute offer has 24 CPU cores, 48 GB of RAM, and 960 GB of disk space. The compute provider divided these resources proportionally into 12 parts and created a configuration slot of 2 CPU cores, 4 GB of RAM, and 80 GB of disk space. A customer can add this slot to their order up to 12 times to meet the requirements. The division also lets the machine process up to 12 small orders simultaneously.
 
@@ -54,20 +57,6 @@ The same logic applies to configuration options, except customers can select mul
 <img src={require('./../images/fundamentals_slots_2.png').default} width="auto" height="auto"/>
 
 <img src={require('./../images/fundamentals_slots_3.png').default} width="auto" height="auto"/>
-
-## Parameters
-
-The full list of parameters is the same for requirements and configurations. In the [Marketplace GUI](/developers/marketplace/):
-
-- **Per Hour** or **Fixed**: pricing type of a slot or an option
-- **vCores**: number of CPU cores, can be a fraction
-- **RAM**: RAM for computations, GiB
-- **Disk**: disk space, GiB
-- **Bandwidth**: rate of data transfer, Mbit per second
-- **Traffic**: traffic, decreases with use, GB
-- **Ext.Port**: external port for internet access, **Yes** or **No**
-- **Min Time**: minimum lease time
-- **Max Time**: maximum lease time.
 
 ## Automatic selection
 
@@ -78,3 +67,17 @@ The system calculates the sum of all requirements in the order. When a customer 
 <img src={require('./../images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
 
 In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specifies no `--tee`-related options. Read more in the description of the [`workflows create`](/developers/cli_commands/workflows/create) command.
+
+## Parameters
+
+The full list of parameters is the same for requirements and configurations. In the [Marketplace GUI](/developers/marketplace/):
+
+- **Per Hour** or **Fixed**: pricing type of a slot or an option
+- **vCores**: number of CPU cores, can be a fraction
+- **RAM**: RAM for computations in gibibytes (GiB)
+- **Disk**: disk space in gibibytes (GiB)
+- **Bandwidth**: rate of data transfer in megabit per second (Mbps)
+- **Traffic**: available traffic in gigabytes (GB), decreases with use
+- **Ext.Port**: availability of an external port for internet access
+- **Min Time**: minimum lease time, minutes
+- **Max Time**: maximum lease time, minutes.

@@ -2,7 +2,8 @@
 id: "delete-slot"
 title: "offers delete-slot"
 slug: "/cli_commands/offers/slots/delete-slot"
-sidebar_position: 3
+sidebar_label: "delete-slot"
+sidebar_position: 12
 ---
 
 Deletes a [requirement slot](/developers/fundamentals/slots#requirements) in an [offer](/developers/fundamentals/offers).
@@ -17,9 +18,11 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
 ./spctl offers delete-slot <offerType> \
     --offer <offerId> \
     --slot <slotId> \
-    [--config <configPath>] \
-    [--help ┃ -h]
+    [--config <path>] \
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

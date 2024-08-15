@@ -2,7 +2,8 @@
 id: "offers-get-slot"
 title: "offers get-slot"
 slug: "/cli_commands/offers/slots/get-slot"
-sidebar_position: 4
+sidebar_label: "get-slot"
+sidebar_position: 13
 ---
 
 Displays the information for a [requirement slot](/developers/fundamentals/slots#requirements) in an offer.
@@ -17,8 +18,10 @@ Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to ge
     --slot <slotId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

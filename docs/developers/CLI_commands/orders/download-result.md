@@ -20,8 +20,10 @@ If the order status is `Error`, the result archive will contain a text file with
 ./spctl orders download-result <orderId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

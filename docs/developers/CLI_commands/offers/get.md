@@ -2,6 +2,7 @@
 id: "offers-get"
 title: "offers get"
 slug: "/cli_commands/offers/offers/get"
+sidebar_label: "get"
 sidebar_position: 2
 ---
 
@@ -13,8 +14,10 @@ Displays information on an offer.
 ./spctl offers get <offerType> <offerId> \
     [--save-to <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 
