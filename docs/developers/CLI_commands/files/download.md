@@ -12,17 +12,19 @@ The resource JSON file is created as a result of the [`files upload`](/developer
 ## Syntax
 
 ```
-./spctl files download <resourceFilePath> <localPath> \
+./spctl files download <resourceFilePath> <saveToPath> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 
 | **Name** | **Description** |
 | :- | :- |
 | `<resourceFilePath>` | Path to the resource JSON file. |
-| `<localPath>` | Path to save the downloaded file. |
+| `<saveToPath>` | Path to save the downloaded file. |
 
 ## Options
 

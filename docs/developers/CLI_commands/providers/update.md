@@ -15,10 +15,12 @@ Provider Tools creates a provider info JSON file in [Step 4 of the Providers and
 
 ```
 ./spctl providers update \
-    [--path <path>]
+    [--path <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Options
 

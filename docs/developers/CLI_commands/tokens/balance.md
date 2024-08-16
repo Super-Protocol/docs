@@ -12,8 +12,10 @@ Displays the balance of TEE and MATIC tokens in your wallet.
 ```
 ./spctl tokens balance \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Option
 

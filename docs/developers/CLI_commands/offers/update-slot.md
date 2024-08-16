@@ -2,7 +2,8 @@
 id: "update-slot"
 title: "offers update-slot"
 slug: "/cli_commands/offers/slots/update-slot"
-sidebar_position: 2
+sidebar_label: "update-slot"
+sidebar_position: 11
 ---
 
 Updates a [requirement slot](/developers/fundamentals/slots#requirements) in an existing offer using the information in a JSON file.
@@ -16,13 +17,15 @@ Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requ
 ## Syntax
 
 ```
-./spctl offers update-slot offerType \
-    --offer offerId \
-    --slot slotId \
+./spctl offers update-slot <offerType> \
+    --offer <offerId> \
+    --slot <slotId> \
     [--path <path>] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

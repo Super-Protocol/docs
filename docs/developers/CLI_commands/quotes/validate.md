@@ -14,8 +14,10 @@ In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/
 ```
 ./spctl quotes validate <domainUrl> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 

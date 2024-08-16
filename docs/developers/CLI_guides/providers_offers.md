@@ -52,7 +52,7 @@ chmod +x ./provider-tools
 ```
   </TabItem>
   <TabItem value="windows" label="Windows">
-To install Provider Tools on Windows, create a separate directory, open a WSL terminal window, and run the following command:
+To install Provider Tools on Windows, create a separate directory, launch WSL from PowerShell, and run the following command:
 ```
 curl -L https://github.com/Super-Protocol/provider-tools/releases/latest/download/provider-tools-linux-x64 -o provider-tools
 chmod +x ./provider-tools

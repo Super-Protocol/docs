@@ -14,8 +14,10 @@ SPCTL generates this key automatically during the [configuration](/developers/cl
 ```
 ./spctl workflows generate-key \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Option
 

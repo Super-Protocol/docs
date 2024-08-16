@@ -14,11 +14,13 @@ This command allows you to check any order, not only yours. The information on a
 ```
 ./spctl orders get <orderId> \
     [--fields <field>,[<field>,...]] \
-    [--suborders {true ┃ false}] \
+    [--suborders] \
     [--suborders_fields <field>,[<field>,...]] \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 
@@ -28,10 +30,10 @@ This command allows you to check any order, not only yours. The information on a
 
 ## Options
 
-| **Name**> | **Description** |
+| <div style={{width:355}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--fields <field>,[<field>,...]` | Fields in the output, separated by commas. Default fields: `offer_name`, `offer_description`, `type`, `status`, `total_deposit`, `total_unspent_deposit`, `modified_date`. Additional fields: `id`, `offer_id`, `consumer_address`, `parent_order_id`, `deposit`, `unspent_deposit`, `cancelable`. |
-| `--suborders {true ┃ false}` | Flag for showing suborders. The default is `false`. |
+| `--suborders` | Flag for showing suborders. The default is `false`. |
 | `--suborders_fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `offer_name`, `offer_description`, `type`, `status`, `modified_date`. Additional fields: `cancelable`, `actual_cost`. Use together with `--suborders true`. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |

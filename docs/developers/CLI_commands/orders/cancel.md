@@ -12,8 +12,10 @@ Cancels an order.
 ```
 ./spctl orders cancel <orderId> \
     [--config <path>] \
-    [--help ┃ -h]
+    [--help | -h]
 ```
+
+Read about the Super Protocol [command syntax](/developers/cli_commands#command-syntax).
 
 ## Arguments
 
