@@ -5,7 +5,7 @@ slug: "/enter-marketplace"
 sidebar_position: 2
 ---
 
-The [AI Marketplace web app](https://beta.marketplace.superprotocol.com/) provides a graphical user interface to the Super Protocol AI Marketplace.
+The [**AI Marketplace web app**](https://beta.marketplace.superprotocol.com/) provides a graphical user interface to the Super Protocol AI Marketplace.
 
 Super Protocol has no manual account creation. Accounts are automatically created when users log in for the first time. You can log in as either
 
@@ -13,7 +13,6 @@ Super Protocol has no manual account creation. Accounts are automatically create
 - **Demo User**.
 
 <img src={require('./images/ai-marketplace-01.png').default} width="400" height="auto" border="1"/>
-
 <br/>
 <br/>
 

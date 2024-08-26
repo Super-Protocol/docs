@@ -59,11 +59,13 @@ Set the following parameters and press **Save**.
 
 | **Parameter** | **Value** |
 | :- | :- |
-| Network Name | SuperProtocol Polygon Amoy Testnet <br /><br />*You can change the network name if you'd like*|
+| Network Name | Super Protocol Polygon Amoy Testnet |
 | New RPC URL | [https://amoy.polygon.superprotocol.com/hesoyam](https://amoy.polygon.superprotocol.com/hesoyam)|
 | Chain ID | 80002 |
 | Currency Symbol | MATIC |
 | Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
+
+You can change the network name if you would like.
 
 ## Step 4. Import the Testnet Account
 
@@ -152,7 +154,7 @@ Finally, click **Connect**.
 
 If everything is done correctly, you will see your account address and token balance.
 
-<img src={require('./../images/metamask_13.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./../images/metamask_13.png').default} width="800" height="auto" border="1"/>
 
 <br/>
 <br/>

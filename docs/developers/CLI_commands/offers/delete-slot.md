@@ -10,7 +10,7 @@ Deletes a [requirement slot](/developers/fundamentals/slots#requirements) in an 
 
 **Important:** This command requires SPCTL with the [provider configuration file](/developers/cli_guides/configure#for-offer-providers).
 
-Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [offers get-slot](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
+Use the [`offers get`](/developers/cli_commands/offers/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/developers/cli_commands/offers/slots/get-slot) command to get additional information on a slot.
 
 ## Syntax
 

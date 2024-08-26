@@ -40,8 +40,10 @@ Read about the Super Protocol [command syntax](/developers/cli_commands#command-
 
 ## Example
 
-The following command display the information on the order with ID 1312, including the IDs and offer names of its suborders:
+The following command display the information on the order with ID 3770, including the IDs and offer names of its suborders:
 
 ```
-./spctl orders get 1312 --suborders true --suborders_fields id,offer_name
+./spctl orders get 3770 \
+    --suborders true \
+    --suborders_fields id,offer_name
 ```

@@ -201,10 +201,10 @@ It may take a couple of minutes for the tokens to appear on your account. When y
 When your order is created, you will see the following in the last line of the CLI output:
 
 ```
-Workflow was created, TEE order id: ["XXXX"]
+Workflow was created, TEE order id: ["<orderId>"]
 ```
 
-Where `XXXX` is the ID of your order.
+Where `<orderId>` is the ID of your order.
 
 It usually takes 20-25 minutes for this order to be done. You can then check the order status using the [`orders`](/developers/cli_commands/orders) command or in [Marketplace GUI](/developers/marketplace).
 
@@ -220,9 +220,9 @@ If you use a free Storj account, your files will become unavailable after the en
 
 :::
 
-Create a bucket for your encrypted solutions and data. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/).
+Create a bucket for your encrypted solutions and data. Refer to the [ Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
 
-Create two access grants for this bucket. One should provide the **write** and **delete** permissions, and the other one the **read** permission. Alternatively, you can create a single access grant with the **all** permission. Refer to [this guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
+Create two access grants for this bucket. One should provide the **write** and **delete** permissions, and the other one the **read** permission. Alternatively, you can create a single access grant with the **all** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
 
 Open SPCTL's `config.json` in a text editor and fill in the following parameters:
 
