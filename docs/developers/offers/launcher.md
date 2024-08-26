@@ -11,7 +11,7 @@ Tunnels Launcher is a pre-configured provisioner application that automates the 
 
 At the moment Tunnels Launcher works in two scenarios: deploying Super Chat and deploying static web pages.
 
-<img src={require('./../images/offers_launcher_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/offers_launcher_1.png').default} width="auto" height="auto"/>
 
 
 ## Deployment Scenarios

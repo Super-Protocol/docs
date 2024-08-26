@@ -29,21 +29,21 @@ Download and install the MetaMask browser extension from its [official website](
 
 Open the menu by clicking the three vertical dots at the MetaMask window's top-right corner. Go to **Settings** and then select **Networks**.
 
-<img src={require('./../images/metamask_1.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_1.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 There, press the **Add network** button.
 
-<img src={require('./../images/metamask_2.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_2.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 And then click **Add a network manually** at the bottom of the page.
 
-<img src={require('./../images/metamask_3.png').default} width="700" height="auto" border="1"/>
+<img src={require('../images/metamask_3.png').default} width="700" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -52,7 +52,7 @@ And then click **Add a network manually** at the bottom of the page.
 
 Set the following parameters and press **Save**.
 
-<img src={require('./../images/metamask_4.png').default} width="700" height="auto" border="1"/>
+<img src={require('../images/metamask_4.png').default} width="700" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -62,8 +62,8 @@ Set the following parameters and press **Save**.
 | Network Name | Super Protocol Polygon Amoy Testnet |
 | New RPC URL | [https://amoy.polygon.superprotocol.com/hesoyam](https://amoy.polygon.superprotocol.com/hesoyam)|
 | Chain ID | 80002 |
-| Currency Symbol | MATIC |
-| Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
+| Currency symbol | MATIC |
+| Block explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
 You can change the network name if you would like.
 
@@ -71,19 +71,19 @@ You can change the network name if you would like.
 
 Click on your account name at the top of the MetaMask window to open the list of your accounts.
 
-<img src={require('./../images/metamask_5.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_5.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 Click **Add account or hardware wallet** and select **Import Account**.
 
-<img src={require('./../images/metamask_6.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_6.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
-<img src={require('./../images/metamask_7.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_7.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -94,7 +94,7 @@ Enter the Private Key you received from Super Protocol and press the **Import** 
 
 <br/>
 
-<img src={require('./../images/metamask_8.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_8.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -107,7 +107,7 @@ Ensure that the imported wallet address matches the Testnet Account address you 
 
 <br/>
 
-<img src={require('./../images/metamask_9.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_9.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -126,35 +126,35 @@ Super Protocol generates ERC-20 wallets for use during Tesnet only. Do not use y
 
 To connect your wallet, open the [Marketplace GUI](https://marketplace.superprotocol.com/) and press the **Connect Wallet** button at the top-right corner.
 
-<img src={require('./../images/metamask_11.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_11.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 In the pop-up window, click **MetaMask**.
 
-<img src={require('./../images/metamask_12.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_12.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 Then open your MetaMask, select your Testnet account, and click **Next**.
 
-<img src={require('./../images/metamask_12-1.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_12-1.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 Finally, click **Connect**.
 
-<img src={require('./../images/metamask_12-2.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_12-2.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 If everything is done correctly, you will see your account address and token balance.
 
-<img src={require('./../images/metamask_13.png').default} width="800" height="auto" border="1"/>
+<img src={require('../images/metamask_13.png').default} width="800" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -168,7 +168,7 @@ Super Protocol uses two types of tokens, and you will need both of them:
 
 To get tokens, use the buttons at the top of the page.
 
-<img src={require('./../images/metamask_16.png').default} width="450" height="auto" border="1"/>
+<img src={require('../images/metamask_16.png').default} width="450" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -179,7 +179,7 @@ When you request tokens for the first time, the system asks you to enter your Ac
 
 <br/>
 
-<img src={require('./../images/metamask_10.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_10.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
@@ -198,14 +198,14 @@ If your Access Token doesn't work, check that you didn't accidentally copy it wi
 
 Also, ensure you have selected the correct account. Your Access Token only works with the Testnet account you received from Super Protocol. If you see the following error, you are trying to connect with the wrong MetaMask account:
 
-<img src={require('./../images/metamask_14.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_14.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>
 
 In that case, open MetaMask and change the account.
 
-<img src={require('./../images/metamask_15.png').default} width="300" height="auto" border="1"/>
+<img src={require('../images/metamask_15.png').default} width="300" height="auto" border="1"/>
 
 <br/>
 <br/>

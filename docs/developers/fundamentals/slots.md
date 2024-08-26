@@ -25,7 +25,7 @@ Offer providers can define multiple requirement slots for every offer. Each slot
 
 Additionally, providers can make their offers available for a fixed price or per hour using different slots. The customer can choose which one makes more economic sense in their case.
 
-<img src={require('./../images/fundamentals_slots_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_slots_1.png').default} width="auto" height="auto"/>
 
 ## Configuration
 
@@ -54,9 +54,9 @@ For example, the physical machine behind a compute offer has 24 CPU cores, 48 GB
 
 The same logic applies to configuration options, except customers can select multiple options multiple times.
 
-<img src={require('./../images/fundamentals_slots_2.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_slots_2.png').default} width="auto" height="auto"/>
 
-<img src={require('./../images/fundamentals_slots_3.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_slots_3.png').default} width="auto" height="auto"/>
 
 ## Automatic selection
 
@@ -64,7 +64,7 @@ Super Protocol supports the automatic selection of a configuration to simplify t
 
 The system calculates the sum of all requirements in the order. When a customer adds a compute offer to the order in the Marketplace GUI, the system automatically determines configuration slots, options, and their increments. Read more in the more in [Marketplace Walkthrough](/developers/marketplace/walkthrough).
 
-<img src={require('./../images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
 
 In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specifies no `--tee`-related options. Read more in the description of the [`workflows create`](/developers/cli_commands/workflows/create) command.
 

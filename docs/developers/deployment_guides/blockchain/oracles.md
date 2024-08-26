@@ -360,13 +360,13 @@ Open the dApp contract page on Oklink: `https://www.oklink.com/polygon/address/<
 - processA - requests the New York temperature in Celsius which is not older than 1 hour;
 - processB - requests the New York temperature in Fahrenheit which is not older than 1 hour;
 
-<img src={require('./../../images/guides_blockchain_2.png').default} width="auto" height="auto"/>
+<img src={require('../../images/guides_blockchain_2.png').default} width="auto" height="auto"/>
 
 If you are interested in directly monitoring the work of the oracle contract you can call its methods on the Oracle contract page on Oklink similarly to the dApp. However, as a key it won't take 'NewYork_temperature' directly, but rather the keccak256 hash of it.
 
 You can find open online services for convertation, but if you are using the same pair (NewYork_temperature), then the key will be `0xb186074e0e3ae110d728b99f004e457e6f557aab3f713681c9f5b906e3cc5cd0`. You can use it to call on the oracle methods.  
 
-<img src={require('./../../images/guides_blockchain_3.png').default} width="auto" height="auto"/>
+<img src={require('../../images/guides_blockchain_3.png').default} width="auto" height="auto"/>
 
 On the screenshot above getDataCounts shows how many times the price was refreshed in blockchain.
 

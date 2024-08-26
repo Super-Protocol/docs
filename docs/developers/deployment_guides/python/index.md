@@ -19,5 +19,5 @@ These are the detailed steps that may be used to deploy Python apps.
 
 <br/>
 
-<img src={require('./../../images/guides_python_1.png').default} width="auto" height="auto"/>
+<img src={require('../../images/guides_python_1.png').default} width="auto" height="auto"/>
 

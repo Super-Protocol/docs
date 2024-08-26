@@ -17,16 +17,16 @@ Create a tunnel order using the [Marketplace GUI](/developers/marketplace/walkth
 
 Go to the Instruments panel and select **Check Confidentiality**.
 
-<img src={require('./../images/gui_confidentiality_1.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_1.png').default} width="400" height="auto"/>
 
 Enter your domain.
 
-<img src={require('./../images/gui_confidentiality_2.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_2.png').default} width="400" height="auto"/>
 
 
 If the quote is verified, then you will see the results that look like this:
 
-<img src={require('./../images/gui_confidentiality_3.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_3.png').default} width="400" height="auto"/>
 
 ### Solution offers
 
@@ -38,7 +38,7 @@ The solution will be _"Tunnels Launcher"_ if deployed through Marketplace GUI, a
 
 If the deployed solution is not from the Marketplace, you will see the _"Deployed solution is not an offer"_. This is not an error, just a warning that the content of the solution cannot be verified. This is typically a response you will get when deploying your solutions. For instance, if a developer locally puts together a version of Tunnel Client, then it will not be recognized as an offer because it is not listed on the Marketplace. 
 
-<img src={require('./../images/gui_confidentiality_4.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_4.png').default} width="400" height="auto"/>
 
 <br/>
 <br/>
@@ -59,11 +59,11 @@ Super Protocol uses SSL/TLS certificates to encrypt the data exchange between th
 
 The following steps show the verification for the Chrome browser:
 
-<img src={require('./../images/gui_confidentiality_5.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_5.png').default} width="400" height="auto"/>
 
-<img src={require('./../images/gui_confidentiality_6.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_6.png').default} width="400" height="auto"/>
 
-<img src={require('./../images/gui_confidentiality_7.png').default} width="400" height="auto"/>
+<img src={require('../images/gui_confidentiality_7.png').default} width="400" height="auto"/>
 
 If the public key in the browser matches the public key fingerprint, the connection is secure.
 

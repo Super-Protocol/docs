@@ -1,6 +1,6 @@
 ---
 id: "web3-access"
-title: "Set Up Web3 User Access"
+title: "How to Set up Web3 Access"
 slug: "/web3-access"
 sidebar_position: 3
 ---
@@ -35,25 +35,25 @@ There, press the **+ Add network** button.
 
 Then, click **Add a network manually** at the bottom of the page.
 
-<img src={require('./images/ai-marketplace-04.png').default} width="800" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-04.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 Set the following parameters and press **Save**.
-
-<img src={require('./images/ai-marketplace-05.png').default} width="400" height="auto" border="1"/>
-<br/>
-<br/>
 
 | **Field** | **Value** |
 | :- | :- |
 | Network name | Super Protocol Polygon Amoy Testnet |
 | New RPC URL | https://amoy.polygon.superprotocol.com/hesoyam |
 | Chain ID | 80002 |
-| Currency Symbol | MATIC |
-| Block Explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
+| Currency symbol | MATIC |
+| Block explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
 You can change the network name if you would like.
+
+<img src={require('./images/ai-marketplace-05.png').default} width="400" height="auto" border="1"/>
+<br/>
+<br/>
 
 Switch to the newly added network.
 
@@ -64,7 +64,7 @@ Switch to the newly added network.
 
 On the main Marketplace screen, press the **Enter Marketplace** button.
 
-<img src={require('./images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-07.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -76,7 +76,7 @@ Select **MetaMask**.
 
 In the MetaMask windows, select the account you want to connect and press **Next**. Then, **Confirm** the permissions and the signature request to log in.
 
-<img src={require('./images/ai-marketplace-09.png').default} width="800" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-09.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -87,11 +87,11 @@ If you connect successfully, you will see your account address in the top-right 
 
 ## Step 4. Set up personal storage
 
-This step is optional—you can use Super Protocol as a storage provider. However, for additional control, set up and use your Storj account.
+This step is optional—you can use Super Protocol as a [storage provider](/ai-marketplace/upload-content#select-a-storage-provider) instead of personal storage. Note that uploading to the Super Protocol cloud creates a storage order that requires paying test TEE tokens to keep the uploaded files available (payment is not implemented yet).
 
 ### Register and set up Storj
 
-Register a [Storj](https://www.storj.io/) account if you do not have one yet. You can use either a free Trial or a Pro Storj account. However, with a Trial account, your files will become unavailable after the end of the trial period.
+Register a [Storj](https://www.storj.io/) account if you do not have one yet. Both free Trial and Pro Storj accounts are suitable. However, with a Trial account, your files will become unavailable after the end of the trial period.
 
 Create a new project and a bucket. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/).
 
@@ -99,7 +99,7 @@ Create two S3 Access Keys for this bucket. One should provide the **Write** and 
 
 ### Add to the Marketplace account
 
-In AI Marketplace, click on your account address in the top-right corner and select **Account**.
+In the AI Marketplace web app, click on your account address in the top-right corner and select **Account**.
 
 <img src={require('./images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
 <br/>
