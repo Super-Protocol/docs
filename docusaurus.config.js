@@ -54,6 +54,17 @@ const config = {
         rehypePlugins: [katex],
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "ai-marketplace",
+        path: "./docs/ai-marketplace",
+        routeBasePath: "/ai-marketplace",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
   ],
   presets: [
     [
@@ -106,6 +117,13 @@ const config = {
             label: "Whitepaper",
             docsPluginId: "whitepaper",
           },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "AI Marketplace",
+            docsPluginId: "ai-marketplace",
+          },
         ],
       },
       prism: {
@@ -127,7 +145,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: ["developers", "faq", "introduction", "testnet", "whitepaper"],
+      docsRouteBasePath: ["developers", "ai-marketplace", "testnet", "whitepaper"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
