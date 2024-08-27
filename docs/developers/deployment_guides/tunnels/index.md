@@ -32,7 +32,7 @@ Complementary to the main steps, these are specific examples on how to deploy se
 
 ## Tunnel Deployment
 
-<img src={require('./../../images/guides_tunnels_1.png').default} width="auto" height="auto"/>
+<img src={require('../../images/guides_tunnels_1.png').default} width="auto" height="auto"/>
 
 ### Overview
 
@@ -50,7 +50,7 @@ To obtain the IP address from the tunnel server, you need to create an order. Th
 
 The result of the tunnel server order is a JSON string, such as `{"ip":"123.123.123.123","port":443}`. This means that the tunnel server has assigned an IP address and is ready for connection at the specified IP and port for the tunnel clients with a matching token.
 
-<img src={require('./../../images/guides_tunnels_2.png').default} width="500" height="auto"/>
+<img src={require('../../images/guides_tunnels_2.png').default} width="500" height="auto"/>
 
 ### Tunnel Client
 

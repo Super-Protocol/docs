@@ -20,12 +20,6 @@ Web3 users can upload content to their Storj accounts or Super Protocol's Storj 
 <br/>
 <br/>
 
-Demo users are [limited](/ai-marketplace/enter-marketplace#demo-user-account-limitations) to the Super Protocol cloud.
-
-<img src={require('./images/ai-marketplace-14.png').default} width="400" height="auto" border="1"/>
-<br/>
-<br/>
-
 Uploading to a personal Storj:
 
 - Requires [creating and setting up](/ai-marketplace/web3-access#step-4-storj-account) a Storj account
@@ -34,13 +28,18 @@ Uploading to a personal Storj:
 Uploading to the Super Protocol cloud:
 
 - Does not require additional setup
-- Creates a storage order that requires paying TEE tokens to keep the uploaded files available (payment is not implemented yet).
+- Creates a storage order that requires paying test TEE tokens to keep the uploaded files available (payment is not implemented yet).
+
+Demo users are [limited](/ai-marketplace/enter-marketplace#demo-user-account-limitations) to the Super Protocol cloud.
+
+<img src={require('./images/ai-marketplace-14.png').default} width="400" height="auto" border="1"/>
+<br/>
 
 ## Manage the uploaded content
 
 The [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen contains the full list of the uploaded files. To show, hide, and rearrange the table columns, open the menu by clicking the cog button.
 
-<img src={require('./images/ai-marketplace-19.png').default} width="800" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-19.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -51,7 +50,7 @@ To manage the content, open the file menu by clicking the vertical ellipsis butt
 - **Create offer**: create an offer using the uploaded content (not implemented yet).
 - **Delete content**: delete the uploaded content.
 
-<img src={require('./images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-18.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## How to prepare and upload content
@@ -79,7 +78,7 @@ Pack dataset or model into a TAR.GZ archive before uploading to Super Protocol.
     tar.exe -czvf C:\SPData\dataset1.tar.gz -C C:\SPData\mydataset *
     ```
 
-    Alternatively, you can install [7-Zip](https://www.7-zip.org/) to create an archive using a graphical interface instead of a command line.
+    Alternatively, install [7-Zip](https://www.7-zip.org/) to create an archive using a graphical interface instead of a command line.
 
   </TabItem>
   <TabItem value="linux" label="Linux and macOS">
@@ -105,7 +104,7 @@ Pack dataset or model into a TAR.GZ archive before uploading to Super Protocol.
 
 On the [**My Content**](https://beta.marketplace.dev.superprotocol.com/my-content) screen, press the **Upload Content** button.
 
-<img src={require('./images/ai-marketplace-15.png').default} width="800" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-15.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

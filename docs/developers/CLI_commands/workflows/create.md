@@ -13,7 +13,7 @@ For solutions and data, you can add to an order either Marketplace [offers](/dev
 
 An example of the resulting order in the Marketplace GUI:
 
-<img src={require('./../../images/cli_workflows_1.png').default} width="auto" height="auto"/>
+<img src={require('../../images/cli_workflows_1.png').default} width="auto" height="auto"/>
 
 <br/>
 

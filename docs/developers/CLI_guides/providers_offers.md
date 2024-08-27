@@ -311,11 +311,11 @@ Further, you must specify the type for every offer in `restrictions`. Both Image
 
 To get more examples, check existing offers via the Marketplace GUI:
 
-<img src={require('./../images/cli_guides_providers_offers_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/cli_guides_providers_offers_1.png').default} width="auto" height="auto"/>
 
 <br/>
 
-<img src={require('./../images/cli_guides_providers_offers_2.png').default} width="auto" height="auto"/>
+<img src={require('../images/cli_guides_providers_offers_2.png').default} width="auto" height="auto"/>
 
 <br/>
 
@@ -325,7 +325,7 @@ Or via CLI using the SPCTL [`offers get`](/developers/cli_commands/offers/offers
 ./spctl offers get value 8
 ```
 
-<img src={require('./../images/cli_guides_providers_offers_3.png').default} width="auto" height="auto"/>
+<img src={require('../images/cli_guides_providers_offers_3.png').default} width="auto" height="auto"/>
 
 <br/>
 
@@ -365,7 +365,7 @@ Refer to the [`offers add-slot`](/developers/cli_commands/offers/slots/add-slot)
 
 To get more examples, check existing offers via the Marketplace GUI:
 
-<img src={require('./../images/cli_guides_providers_offers_4.png').default} width="auto" height="auto"/>
+<img src={require('../images/cli_guides_providers_offers_4.png').default} width="auto" height="auto"/>
 
 <br/>
 
@@ -375,7 +375,7 @@ Or via CLI using the [offers get-slot](/developers/cli_commands/offers/slots/get
 ./spctl offers get-slot value --offer 8 --slot 4
 ```
 
-<img src={require('./../images/cli_guides_providers_offers_5.png').default} width="300" height="auto"/>
+<img src={require('../images/cli_guides_providers_offers_5.png').default} width="300" height="auto"/>
 
 <br/>
 
@@ -491,7 +491,7 @@ Check that your offer is on the blockchain using the [offers get](/developers/cl
 
 Replace `<offerID>` with the ID of your offer. You can find it in `provider-tools-config.json` in the Provider Tools directory.
 
-<img src={require('./../images/cli_guides_providers_offers_6.png').default} width="500" height="auto"/>
+<img src={require('../images/cli_guides_providers_offers_6.png').default} width="500" height="auto"/>
 
 <br/>
 

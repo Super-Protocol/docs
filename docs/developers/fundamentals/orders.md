@@ -7,7 +7,7 @@ sidebar_position: 4
 
 _Orders_ and _suborders_ on Super Protocol are digital contracts between a customer and [offer](/developers/fundamentals/offers) providers. The term _order_ always implies the usage of a [compute offer](/developers/fundamentals/offers#compute). Every other offer added to the order creates a separate suborder related to the main order. Solutions and data uploaded by the customer create no suborders.
 
-<img src={require('./../images/fundamentals_orders_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_orders_1.png').default} width="auto" height="auto"/>
 
 ## Create orders
 
@@ -122,7 +122,7 @@ If you are using a community offer in your order and the offer fails to respond,
 
 ## Events
 
-<img src={require('./../images/fundamentals_orders_2.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_orders_2.png').default} width="auto" height="auto"/>
 <br/>
 
 Check the **Events** tab on the order page in the Marketplace GUI to get more information on what is happening with the order. The tab shows, among other things:

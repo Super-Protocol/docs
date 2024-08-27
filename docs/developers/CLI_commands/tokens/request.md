@@ -13,7 +13,8 @@ This command is only available during the Testnet. Be mindful of [Testnet limita
 
 ```
 ./spctl tokens request \
-    {--tee | --matic} \
+    [--tee] \
+    [--matic] \
     [--config <path>] \
     [--help | -h]
 ```
@@ -29,19 +30,10 @@ Read about the Super Protocol [command syntax](/developers/cli_commands#command-
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
-
-Note that options `--tee` and `--matic` are mutually exclusive. Execute the command twice if you need both TEE and MATIC tokens.
-
 ## Example
 
 The following command requests TEE tokens:
 
 ```
 ./spctl tokens request --tee
-```
-
-And the following command requests MATIC tokens:
-
-```
-./spctl tokens request --matic
 ```
