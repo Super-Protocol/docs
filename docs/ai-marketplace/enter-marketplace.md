@@ -16,7 +16,7 @@ Super Protocol has no manual account creation. The system creates accounts autom
 <br/>
 <br/>
 
-_Web3 mode_ provides the full functionality of the Super Protocol AI Marketplace. It requires an existing ERC-20 wallet and the MetaMask browser extension set up to access the Polygon Amoy testnet. Read [How to set up Web3 access](/ai-marketplace/web3-access).
+_Web3 mode_ provides the full functionality of the Super Protocol AI Marketplace. It requires an existing ERC-20 wallet and the MetaMask browser extension set up to access the Polygon Amoy testnet. Read [How to Set Up Web3 Access](/ai-marketplace/web3-access).
 
 _Demo mode_ is suitable for a quick introduction to the system but imposes [functionality restrictions](/ai-marketplace/enter-marketplace#demo-mode-limitations). Instead of MetaMask and an ERC-20 wallet, access in the demo mode required an existing account on one of the following platforms:
 

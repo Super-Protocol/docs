@@ -1,6 +1,6 @@
 ---
 id: "upload-content"
-title: "Upload Content"
+title: "Upload and Manage Content"
 slug: "/upload-content"
 sidebar_position: 4
 ---
@@ -14,7 +14,16 @@ The functionality related to compute orders and offers is not implemented yet.
 
 ## Select a storage provider
 
-Web3 users can upload content to their Storj accounts or Super Protocol's Storj account—Super Protocol cloud. Both methods encrypt the uploading files. No unauthorized parties, including the Super Protocol and Storj teams, can access the file contents, regardless of the method.
+Web3 users can choose a storage provider on the **Account** screen:
+
+<img src={require('./images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
+<br/>
+<br/>
+
+Two available methods of upload are
+
+- **Super Protocol cloud**: Super Protocol's Storj account
+- **Your Storj account**: personal Storj account.
 
 <img src={require('./images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
 <br/>
@@ -22,35 +31,20 @@ Web3 users can upload content to their Storj accounts or Super Protocol's Storj 
 
 Uploading to a personal Storj:
 
-- Requires [creating and setting up](/ai-marketplace/web3-access#step-4-storj-account) a Storj account
-- Gives more control over the uploaded content.
+- Requires [creating and setting up](/ai-marketplace/web3-access#step-4-set-up-personal-storage) a Storj account
+- Gives sole control over the uploaded content.
 
 Uploading to the Super Protocol cloud:
 
 - Does not require additional setup
-- Creates a storage order that requires paying test TEE tokens to keep the uploaded files available (payment is not implemented yet).
+- Creates a storage order that requires paying test TEE tokens to keep the uploaded files available (payment is not implemented yet)
+- Relies on Super Protocol as the storage provider.
+
+Both methods involve encryption of the uploaded files. No unauthorized parties, including the Super Protocol and Storj teams, can access the file contents, regardless of the method.
 
 Demo users are [limited](/ai-marketplace/enter-marketplace#demo-user-account-limitations) to the Super Protocol cloud.
 
 <img src={require('./images/ai-marketplace-14.png').default} width="400" height="auto" border="1"/>
-<br/>
-
-## Manage the uploaded content
-
-The [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen contains the full list of the uploaded files. To show, hide, and rearrange the table columns, open the menu by clicking the cog button.
-
-<img src={require('./images/ai-marketplace-19.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-To manage the content, open the file menu by clicking the vertical ellipsis button:
-
-- **Info**: check the uploaded content information and download a content resource JSON file with information on accessing the uploaded data for confidential computing devices.
-- **Edit**: change the content name and type.
-- **Create offer**: create an offer using the uploaded content (not implemented yet).
-- **Delete content**: delete the uploaded content.
-
-<img src={require('./images/ai-marketplace-18.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## How to prepare and upload content
@@ -59,7 +53,7 @@ Follow these steps to prepare and upload a model or dataset.
 
 ### Step 1. Prepare the content
 
-Pack dataset or model into a TAR.GZ archive before uploading to Super Protocol.
+Pack a dataset or model into a TAR.GZ archive before uploading it to Super Protocol.
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
@@ -67,7 +61,7 @@ Pack dataset or model into a TAR.GZ archive before uploading to Super Protocol.
     On Windows, open PowerShell or Windows Command Prompt and use the following command to create a TAR.GZ archive:
 
     ```
-    tar.exe -cvzf <offerContentArchivePath> -C <dataPath> *
+    tar.exe -czvf <offerContentArchivePath> -C <dataPath> *
     ```
 
     Replace `<offerContentArchive>` with the path and desired name of the output archive. Replace `<dataPath>` with the path to the directory with your data. Ensure no hidden or system files end up in the archive. Do not omit the asterisk `*` at the end of the command.
@@ -102,9 +96,9 @@ Pack dataset or model into a TAR.GZ archive before uploading to Super Protocol.
 
 ### Step 2. Upload the archive
 
-On the [**My Content**](https://beta.marketplace.dev.superprotocol.com/my-content) screen, press the **Upload Content** button.
+On the [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen, press the **Upload Content** button.
 
-<img src={require('./images/ai-marketplace-15.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-15.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -112,7 +106,7 @@ In the **Upload Content** window that appeared:
 
 1. Write any desired **Content Name**.
 2. Select the **Content Type**: **Model** or **Dataset**.
-3. Press **Select tar.gz archive** and select the archive file with the uploading data.
+3. Press **Select tar.gz archive** and select the archive file you want to upload.
 4. Press **Upload**.
 
 <img src={require('./images/ai-marketplace-16.png').default} width="400" height="auto" border="1"/>
@@ -122,5 +116,23 @@ In the **Upload Content** window that appeared:
 Do not close the window until the upload is complete.
 
 <img src={require('./images/ai-marketplace-17.png').default} width="400" height="auto" border="1"/>
+<br/>
+
+## Manage the uploaded content
+
+The [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen contains the full list of the uploaded files. To show, hide, and rearrange the table columns, open the menu by clicking the cog button.
+
+<img src={require('./images/ai-marketplace-19.png').default} width="800" height="auto" border="1"/>
+<br/>
+<br/>
+
+To manage the content, open the file menu by clicking the vertical ellipsis button:
+
+- **Info**: check the uploaded content information and download a content resource JSON file with information on accessing the uploaded data for confidential computing devices.
+- **Edit**: change the content name and type.
+- **Create offer**: create an offer using the uploaded content (not implemented yet).
+- **Delete content**: delete the uploaded content.
+
+<img src={require('./images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>

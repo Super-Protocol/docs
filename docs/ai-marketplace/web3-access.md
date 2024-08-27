@@ -1,6 +1,6 @@
 ---
 id: "web3-access"
-title: "How to Set up Web3 Access"
+title: "How to Set Up Web3 Access"
 slug: "/web3-access"
 sidebar_position: 3
 ---
@@ -15,9 +15,9 @@ The AI Marketplace web app does not support mobile devices. Use a desktop or lap
 
 ## Step 1. Install MetaMask
 
-If you already have MetaMask installed, consider creating a new wallet specifically for the Marketplace instead of using an existing one.
+If you already have MetaMask installed, create a new wallet or use an existing one.
 
-If you do not have MetaMask installed, add the MetaMask extension to your browser from its [official website](https://metamask.io/) or directly from your browser's extension store. During the installation, create a new wallet.
+If you do not have MetaMask installed, add the MetaMask extension to your browser from its [official website](https://metamask.io/) or directly from your browser's extension store. During the installation, create a new wallet or import an existing one.
 
 ## Step 2. Add a new network
 
@@ -35,7 +35,7 @@ There, press the **+ Add network** button.
 
 Then, click **Add a network manually** at the bottom of the page.
 
-<img src={require('./images/ai-marketplace-04.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-04.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -47,7 +47,7 @@ Set the following parameters and press **Save**.
 | New RPC URL | https://amoy.polygon.superprotocol.com/hesoyam |
 | Chain ID | 80002 |
 | Currency symbol | MATIC |
-| Block explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
+| Block explorer URL | https://www.oklink.com/amoy |
 
 You can change the network name if you would like.
 
@@ -64,7 +64,7 @@ Switch to the newly added network.
 
 On the main Marketplace screen, press the **Enter Marketplace** button.
 
-<img src={require('./images/ai-marketplace-07.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -76,7 +76,7 @@ Select **MetaMask**.
 
 In the MetaMask windows, select the account you want to connect and press **Next**. Then, **Confirm** the permissions and the signature request to log in.
 
-<img src={require('./images/ai-marketplace-09.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/ai-marketplace-09.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -105,12 +105,12 @@ In the AI Marketplace web app, click on your account address in the top-right co
 <br/>
 <br/>
 
-Select the **Your Storj account** radio button, fill in all the fields, and press **Save**.
+Select the **Your Storj account** radio button, fill in the fields, and press **Save**.
 
 | **Field** | **Value** |
 | :- | :- |
 | Bucket | Name of the Storj bucket |
-| Prefix | Path to the directory in the bucket; it can be empty |
+| Path | Path to the directory in the bucket; it can be empty |
 | WriteAccessKeyId | Access Key with the **Write** and **Delete** permissions |
 | WriteSecretAccessKey | Secret Key with the **Write** and **Delete** permissions |
 | ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
