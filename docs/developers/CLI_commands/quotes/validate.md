@@ -7,7 +7,7 @@ sidebar_label: "validate"
 
 Checks if the domain content runs in a confidential environment. The command also displays if the domain content is a Super Protocol offer.
 
-In the Marketplace GUI, use the [Check Confidentiality](/developers/marketplace/confidentiality) feature.
+In the Marketplace GUI, use the [**Check Confidentiality**](/developers/marketplace/confidentiality) feature.
 
 ## Syntax
 

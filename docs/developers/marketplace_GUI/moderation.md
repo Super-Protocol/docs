@@ -18,7 +18,7 @@ Marketplace GUI has a special filter that divides the offers into four categorie
 - **Unmoderated**: community offers that were not reviewed; all new offers appear here
 - **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read about [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers)
 
-<img src={require('./../images/gui_moderation_1.png').default} width="300" height="auto"/>
+<img src={require('../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
 These categories are exclusive meaning an offer can belong only to one category. Offers with the **Disabled** status do not appear in the Marketplace GUI. Providers can use [`offers disable`](/developers/cli_commands/offers/offers/disable) and [`offers enable`](/developers/cli_commands/offers/offers/enable) commands to manage this. 
 

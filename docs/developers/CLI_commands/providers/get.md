@@ -34,8 +34,9 @@ Read about the Super Protocol [command syntax](/developers/cli_commands#command-
 
 ## Example
 
-The following command displays the name, address, and description of the provider with the authority account 0xB9fD0bbA3E60BdC56777BEe9fBe453f506053BAa:
+The following command displays the name, address, and description of the provider with the authority account 0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa:
 
 ```
-./spctl providers get 0xB9fD0bbA3E60BdC56777BEe9fBe453f506053BCa --fields name,address,description
+./spctl providers get 0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa \
+    --fields name,address,description
 ```

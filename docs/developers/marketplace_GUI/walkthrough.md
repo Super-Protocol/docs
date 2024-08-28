@@ -29,9 +29,9 @@ Here you can pick the desired requirements for Tunnels Launcher. Learn more abou
 
 You can also see in the `Restricted` tab that this Solution requires another offer: a `NodeJS base image`. It is added to the order automatically.
 
-<img src={require('./../images/marketplace_1.png').default}/>
+<img src={require('../images/marketplace_1.png').default}/>
 
-<img src={require('./../images/marketplace_2.png').default}/>
+<img src={require('../images/marketplace_2.png').default}/>
 
 For the Solution and Data offers Marketplace GUI has a special filter that divides the offers in four categories:
 
@@ -42,7 +42,7 @@ For the Solution and Data offers Marketplace GUI has a special filter that divid
 
 For best results use offers either from Super Protocol or Approved categories. 
 
-<img src={require('./../images/gui_moderation_1.png').default} width="300" height="auto"/>
+<img src={require('../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
 
 <br/>
@@ -56,7 +56,7 @@ Go to the `Data` tab and add the `Super Chat Config` offer to the order. This wi
 
 Note: The `Super Chat Config` data offer contains the pre-configured settings such as DNS and SSL credentials to make deployment of Super Chat through the Marketplace more user-friendly for beginners. But this means that this deployment will be created at *.superprotocol.io domain. Advanced users can deploy with custom configuration through CLI.
 
-<img src={require('./../images/marketplace_3.png').default}/>
+<img src={require('../images/marketplace_3.png').default}/>
 
 <br/>
 <br/>
@@ -68,7 +68,7 @@ The storage offer is responsible for storing offer contents and order data. Go t
 
 :::
 
-<img src={require('./../images/marketplace_4.png').default}/>
+<img src={require('../images/marketplace_4.png').default}/>
 
 <br/>
 <br/>
@@ -80,7 +80,7 @@ Finish building the order by selecting a configuration of computing resources. G
 
 :::
 
-<img src={require('./../images/marketplace_5.png').default}/>
+<img src={require('../images/marketplace_5.png').default}/>
 
 <br/>
 <br/>
@@ -95,16 +95,16 @@ It's usually best to select the cheapest order, judging by the `Deposit` column,
 
 After you have added the compute configuration, let's see what is happening inside. Click on the compute configuration line and the offer window will open up. These are all the available `Slots` (computing power) and `Options` (internet access) for this compute offer (the machine). You can see that the auto-select combined multiples of slots and multiples of options to give you the best value for what you need. These slots and options are set up by the compute providers, so it's a very flexible system.
 
-<img src={require('./../images/marketplace_6.png').default}/>
+<img src={require('../images/marketplace_6.png').default}/>
 
-<img src={require('./../images/marketplace_7.png').default}/>
+<img src={require('../images/marketplace_7.png').default}/>
 
 <br/>
 <br/>
 
 You can also customize your configuration. Modify these fields as you see fit, but be mindful of the [testnet limitations](/testnet/limitations). The auto-select will update the configurations list automatically. You can press the `Reset to Order Compatible` button to reset back to the requirements as added to your order.
 
-<img src={require('./../images/marketplace_8.png').default}/>
+<img src={require('../images/marketplace_8.png').default}/>
 
 ## 3. Creating the Order
 
@@ -122,20 +122,20 @@ Here you will also see some totals:
 * *Per Hour* - the total Price per Hour for all offers. Now this is how much you can be expected to be charged every hour that your order is processing.
 * *Lease* - how much time, in hours, you initially want the order to work. This affects your deposit.
 * *Order total* - how much you paying right now to create this order (also, the deposit) using this formula: Fixed + (Lease * Per Hour). 
-<img src={require('./../images/marketplace_9.png').default}/>
+<img src={require('../images/marketplace_9.png').default}/>
 
 <br/>
 <br/>
 
 You can also see the total requirements or configurations by offer. 
 
-<img src={require('./../images/marketplace_10.png').default}/>
+<img src={require('../images/marketplace_10.png').default}/>
 <br/>
 <br/>
 
 To create this order via CLI, click the **Copy CLI workflow** button. It will generate an SPCTL command using the current order setup and copy it to the clipboard.
 
-<img src={require('./../images/marketplace_10a.png').default}/>
+<img src={require('../images/marketplace_10a.png').default}/>
 <br/>
 <br/>
 
@@ -147,7 +147,7 @@ Either input your own passphrase or generate a new one. Then press the `Place Or
 
 Note: Metamask is used only for Marketplace GUI. When creating orders via CLI your passphrase will be a part of your [SPCTL configuration](/developers/cli_guides/configure).
 
-<img src={require('./../images/marketplace_11.png').default}/>
+<img src={require('../images/marketplace_11.png').default}/>
 
 <br/>
 <br/>
@@ -159,7 +159,7 @@ If this is your first time using SP Testnet, Metamask will ask you to approve th
 
 :::
 
-<img src={require('./../images/marketplace_12a.png').default}/>
+<img src={require('../images/marketplace_12a.png').default}/>
 
 <br/>
 <br/>
@@ -171,7 +171,7 @@ After you have set up the Spending Cap for this smart contract, further approval
 
 :::
 
-<img src={require('./../images/marketplace_12b.png').default}/>
+<img src={require('../images/marketplace_12b.png').default}/>
 
 ## 4. Getting Results
 
@@ -183,9 +183,9 @@ If not forwarded to the order automatically, press the `All Orders` button and t
 
 :::
 
-<img src={require('./../images/marketplace_13.png').default}/>
+<img src={require('../images/marketplace_13.png').default}/>
 
-<img src={require('./../images/marketplace_14.png').default}/>
+<img src={require('../images/marketplace_14.png').default}/>
 
 <br/>
 <br/>
@@ -201,7 +201,7 @@ But while you wait, let's talk about the order. It consists of the main compute 
 
 A very important function is *Replenish Deposit*. Predictably, the order keeps working only as long as there is money (TEE) on the deposit. The deposit is being decreased every hour by the total *Price Per Hour* amount that you saw when creating the order. This includes charges by the compute, but also possibly by some other offers if they charge by the hour. When the deposit ends - the order stops. But you will be warned in advance when your deposit nearly depleted - you will see a very orange *Awaiting Payment* warning, which means that it's time to refill your deposit (if you want).
 
-<img src={require('./../images/marketplace_15.png').default}/>
+<img src={require('../images/marketplace_15.png').default}/>
 
 
 <br/>
@@ -214,7 +214,7 @@ The order changes to status `Done` - tunnels are deployed. Press the `Get Result
 
 :::
 
-<img src={require('./../images/marketplace_17.png').default}/>
+<img src={require('../images/marketplace_17.png').default}/>
 
 <br/>
 <br/>
@@ -232,11 +232,11 @@ Note that the tunnel client is running the Tunnel Client: Super Chat solution of
 Another note: tunnel server has a blue *Get Result* button. To open it you will need the *Private key for created orders* which you got from the Tunnels Launcher in Step 10. The result of the tunnel server is its IP and port. When deploying via CLI you would need this information to set up the DNS for your own domain. 
 
 
-<img src={require('./../images/marketplace_19.png').default}/>
+<img src={require('../images/marketplace_19.png').default}/>
 
-<img src={require('./../images/marketplace_18.png').default}/>
+<img src={require('../images/marketplace_18.png').default}/>
 
-<img src={require('./../images/marketplace_20.png').default}/>
+<img src={require('../images/marketplace_20.png').default}/>
 
 
 <br/>
