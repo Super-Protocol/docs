@@ -15,7 +15,7 @@ sidebar_position: 2
 
 ## Deploying a Blockchain Service
 
-<img src={require('./../../images/guides_blockchain_1.png').default} width="auto" height="auto"/>
+<img src={require('../../images/guides_blockchain_1.png').default} width="auto" height="auto"/>
 
 ### Overview
 

@@ -5,7 +5,7 @@ slug: "/cli_commands/providers/list"
 sidebar_label: "list"
 ---
 
-Lists all registered providers on the blockchain.
+Lists all registered providers.
 
 ## Syntax
 

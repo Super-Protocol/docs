@@ -11,9 +11,9 @@ The output of the command contains the order ID necessary to track and manage th
 
 For solutions and data, you can add to an order either Marketplace [offers](/developers/fundamentals/offers) or [uploaded files](/developers/cli_commands/files/upload). Refer to the [fundamentals](/developers/fundamentals) and the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to understand the logic of the Super Protocol order creation process.
 
-The example of the resulting order in the Marketplace GUI:
+An example of the resulting order in the Marketplace GUI:
 
-<img src={require('./../../images/cli_workflows_1.png').default} width="auto" height="auto"/>
+<img src={require('../../images/cli_workflows_1.png').default} width="auto" height="auto"/>
 
 <br/>
 
@@ -43,7 +43,7 @@ Read about the Super Protocol [command syntax](/developers/cli_commands#command-
 | `--solution {<offerId>,[<slotId>] │ <path>}` | Solution you are adding to the order: <br/><br/>• For a Marketplace offer, state the solution offer ID and the solution [requirement slot](/developers/fundamentals/slots#requirements) ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>• For an [uploaded](/developers/cli_commands/files/upload) solution, state the path to the solution resource JSON file.<br/><br/>You can use this option multiple times. |
 | `--storage <offerId>,[<slotId>]` | Storage offer you are adding to the order. State the storage offer ID and the storage requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically. |
 | `--data {<offerId>,[<slotId>] │ <path>}` | Data you are adding to the order: <br/><br/>• For a Marketplace offer, state the data offer ID and the data requirement slot ID (optional), separated by a comma. If the requirement slot is not specified, it will be selected automatically.<br/>• For [uploaded](/developers/cli_commands/files/upload) data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times. <br/><br/>Although this option is technically not mandatory, most solutions require data. |
-| `--tee <offerId>,[<slotId>]` | Compute offer you are adding to the order. State the compute offer ID and the [configuration slot](/developers/fundamentals/slots#configuration) ID (optional), separated by a comma. If the configuration slot is not specified, it will be selected automatically. <br/><br/>If you do not use this option, the compute offer and its configuration will be selected automatically. |
+| `--tee <offerId>,[<slotId>]` | Compute offer you are adding to the order. State the compute offer ID and, optionally, the [configuration slot](/developers/fundamentals/slots#configuration) ID, separated by a comma. If the configuration slot is not specified, it will be selected automatically. <br/><br/>If you do not use this option, the compute offer and its configuration will be selected automatically. |
 | `--tee-slot-count <inc>` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. <br/><br/>If you do not use this option, the increments will be calculated automatically. |
 | `--tee-options <optionId> [<optionId> ...]` | IDs of [configuration options](/developers/fundamentals/slots#configuration) separated by spaces. Use `--tee-options` together with `--tee`. <br/><br/>If you do not use `--tee-options`, configuration options will be selected automatically. |
 | `--tee-options-count <inc> [<inc> ...]` | Increments for each configuration option separated by spaces. Use `--tee-options-count` together with `--tee` and `--tee-options`. <br/><br/>If you do not use `--tee-options-count`, increments will be calculated automatically. |
@@ -79,7 +79,7 @@ Where:
 - `--data 17,22`: [Super Chat Config](https://marketplace.superprotocol.com/data?offer=offerId%3D17) dataset (offer ID 17, requirement slot ID 22)
 - `--storage 25,30`: [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25) (offer ID 25, requirement slot ID 30)
 
-The absence of the `--tee` option means that SPCTL automatically selects the most suitable compute offer and configuration for your workload. However, in certain scenarios, you might want to specify the exact compute offer but let SPCTL select the configuration slots and options automatically:
+The absence of the `--tee` option means that the system will automatically select the most suitable compute offer and its configuration for your workload. However, in certain scenarios, you might want to specify the exact compute offer:
 
 ```
 ./spctl workflows create \
@@ -90,7 +90,7 @@ The absence of the `--tee` option means that SPCTL automatically selects the mos
     --storage 25,30
 ```
 
-The `--tee 4` option means you want to use [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) (offer ID: 4) but automatically determine the slot and option to use.
+The `--tee 4` option adds [TEE Offer #4](https://marketplace.superprotocol.com/compute?offer=offerId%3D4) (offer ID: 4) to the order. The lack of other `--tee`-related options and arguments lets the system determine the configuration slot and options automatically.
 
 ### Example 2. Super Chat with manual compute selection
 
@@ -120,7 +120,7 @@ Where:
 - `--min-rent-minutes 120`: a minimum lease time is 120 minutes
 - Other options are explained in the previous example.
 
-If the `--deposit` and `--min-rent-minutes` are not specified, SPCTL uses the default minimums. The minimum lease time is the biggest of the minimum time values of all the offers in the order.
+If the `--deposit` and `--min-rent-minutes` options are not specified, SPCTL uses the default minimums. The minimum lease time is the biggest of the minimum time values of all the offers in the order.
 
 For the offers in this example, the minimum deposit is 1.120 TEE tokens and the minimum lease time is 60 minutes:
 

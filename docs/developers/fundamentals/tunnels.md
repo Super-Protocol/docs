@@ -17,7 +17,7 @@ Read more in the [Node.js with Tunnels](/developers/deployment_guides/tunnels/) 
 
 <br/>
 
-<img src={require('./../images/fundamentals_tunnels_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_tunnels_1.png').default} width="auto" height="auto"/>
 
 ## Advantages
 

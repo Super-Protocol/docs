@@ -7,7 +7,7 @@ sidebar_label: "upload"
 
 Uploads a file to remote storage such as Storj.
 
-The primary purpose of this command is to make the uploading files available for download and execution by compute providers. It is necessary in two cases:
+The primary purpose of this command is to make the uploading files available for download and execution. This is necessary in two cases:
 
 - With the [`workflows create`](/developers/cli_commands/workflows/create) command, **users** can add the uploaded solution or data to an order instead of a Marketplace offer. In this case, a short-term storage period is enough.
 - Solution and data **providers** can store the contents of their offers to make them available for customers' orders. This requires a long-term storage period.

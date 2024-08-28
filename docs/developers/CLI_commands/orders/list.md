@@ -27,7 +27,7 @@ Read about the Super Protocol [command syntax](/developers/cli_commands#command-
 
 ## Options
 
-| <div style={{width:370}}>**Name**</div> | **Description** |
+| <div style={{width:369}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `offer_name`, `status`. Additional fields: `offer_description`, `type`, `offer_id`, `consumer_address`, `parent_order_id`, `total_deposit`, `total_unspent_deposit`, `deposit`, `unspent_deposit`, `cancelable`, `sub_orders_count`, `modified_date`. |
 | `--my-account` | Flag for showing the orders created by the account specified in the config file. The default is `false`. |

@@ -20,7 +20,7 @@ Offers are the basic building blocks of the Marketplace. Four types of offers ex
 
 _Value offer_ is a collective term for solution, data, and storage offers.
 
-<img src={require('./../images/fundamentals_offers_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/fundamentals_offers_1.png').default} width="auto" height="auto"/>
 
 <br/>
 

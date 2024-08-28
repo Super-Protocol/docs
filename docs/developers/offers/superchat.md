@@ -13,7 +13,7 @@ Welcome to the Super Chat, developed by the Super Protocol, the confidential clo
 
 This chat is a technological demo app initially developed for Testnet 3 with a goal of demonstrating that a complex web app can be decentralized, confidential and accessible securely from any browser. 
 
-<img src={require('./../images/offers_superchat_1.png').default} width="auto" height="auto"/>
+<img src={require('../images/offers_superchat_1.png').default} width="auto" height="auto"/>
 
 ## Access Super Chat
 
