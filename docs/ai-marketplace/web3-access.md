@@ -9,7 +9,7 @@ This guide provides step-by-step instructions on how to log in to the Super Prot
 
 :::note
 
-The AI Marketplace web app does not support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
+The Marketplace web app does not support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
 
 :::
 
@@ -80,14 +80,14 @@ In the MetaMask windows, select the account you want to connect and press **Next
 <br/>
 <br/>
 
-If you connect successfully, you will see your account address in the top-right corner of the main AI Marketplace screen.
+If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
 <img src={require('./images/ai-marketplace-11.png').default} width="400" height="auto" border="1"/>
 <br/>
 
 ## Step 4. Set up personal storage
 
-This step is optional—you can use Super Protocol as a [storage provider](/ai-marketplace/upload-content#select-a-storage-provider) instead of personal storage. Note that uploading to the Super Protocol cloud creates a storage order that requires paying test TEE tokens to keep the uploaded files available (payment is not implemented yet).
+This step is optional—you can use Super Protocol as a [storage provider](/ai-marketplace/upload-content#select-a-storage-provider) instead of personal storage.
 
 ### Register and set up Storj
 
@@ -99,7 +99,7 @@ Create two S3 Access Keys for this bucket. One should provide the **Write** and 
 
 ### Add to the Marketplace account
 
-In the AI Marketplace web app, click on your account address in the top-right corner and select **Account**.
+In the Marketplace web app, click on your account address in the top-right corner and select **Account**.
 
 <img src={require('./images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
 <br/>
