@@ -62,7 +62,7 @@ Set the following parameters and press **Save**.
 | Network Name | Super Protocol Polygon Amoy Testnet |
 | New RPC URL | [https://amoy.polygon.superprotocol.com/hesoyam](https://amoy.polygon.superprotocol.com/hesoyam)|
 | Chain ID | 80002 |
-| Currency symbol | MATIC |
+| Currency symbol | POL |
 | Block explorer URL | [https://www.oklink.com/amoy](https://www.oklink.com/amoy) |
 
 You can change the network name if you would like.
@@ -163,7 +163,7 @@ If everything is done correctly, you will see your account address and token bal
 
 Super Protocol uses two types of tokens, and you will need both of them:
 
-- MATIC tokens, to pay for transactions on the Polygon blockchain
+- POL tokens, to pay for Polygon blockchain transactions
 - TEE tokens, to pay for offers and receive payments in Super Protocol.
 
 To get tokens, use the buttons at the top of the page.
@@ -188,7 +188,7 @@ Note that there is a limit to the maximum balance of each token in one account. 
 
 :::caution Important!
 
-Do not send MATIC tokens to other accounts. Violators will be banned from using the Super Protocol Testnet.
+Do not send POL tokens to other accounts. Violators will be banned from using the Super Protocol Testnet.
 
 :::
 

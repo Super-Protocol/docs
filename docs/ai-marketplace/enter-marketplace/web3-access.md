@@ -1,8 +1,8 @@
 ---
 id: "web3-access"
 title: "How to Set Up Web3 Access"
-slug: "/web3-access"
-sidebar_position: 3
+slug: "/enter-marketplace/web3-access"
+sidebar_position: 1
 ---
 
 This guide provides step-by-step instructions on how to log in to the Super Protocol AI Marketplace via the [web app](https://beta.marketplace.superprotocol.com/) as a Web3 user.
@@ -19,23 +19,23 @@ If you already have MetaMask installed, create a new wallet or use an existing o
 
 If you do not have MetaMask installed, add the MetaMask extension to your browser from its [official website](https://metamask.io/) or directly from your browser's extension store. During the installation, create a new wallet or import an existing one.
 
-## Step 2. Add a new network
+## Step 2. Add the Amoy network
 
 Open the MetaMask extension window and then the **Select a network** menu in the top-left corner.
 
-<img src={require('./images/ai-marketplace-02.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-02.png').default} width="400" height="auto" border="1"/>
 <br/>
 <br/>
 
 There, press the **+ Add network** button.
 
-<img src={require('./images/ai-marketplace-03.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-03.png').default} width="400" height="auto" border="1"/>
 <br/>
 <br/>
 
 Then, click **Add a network manually** at the bottom of the page.
 
-<img src={require('./images/ai-marketplace-04.png').default} width="800" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-04.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -46,43 +46,43 @@ Set the following parameters and press **Save**.
 | Network name | Super Protocol Polygon Amoy Testnet |
 | New RPC URL | https://amoy.polygon.superprotocol.com/hesoyam |
 | Chain ID | 80002 |
-| Currency symbol | MATIC |
+| Currency symbol | POL |
 | Block explorer URL | https://www.oklink.com/amoy |
 
 You can change the network name if you would like.
 
-<img src={require('./images/ai-marketplace-05.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-05.png').default} width="400" height="auto" border="1"/>
 <br/>
 <br/>
 
 Switch to the newly added network.
 
-<img src={require('./images/ai-marketplace-06.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-06.png').default} width="400" height="auto" border="1"/>
 <br/>
 
 ## Step 3. Connect the account
 
 On the main Marketplace screen, press the **Enter Marketplace** button.
 
-<img src={require('./images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
 Select **MetaMask**.
 
-<img src={require('./images/ai-marketplace-08.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-08.png').default} width="400" height="auto" border="1"/>
 <br/>
 <br/>
 
 In the MetaMask windows, select the account you want to connect and press **Next**. Then, **Confirm** the permissions and the signature request to log in.
 
-<img src={require('./images/ai-marketplace-09.png').default} width="800" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-09.png').default} width="800" height="auto" border="1"/>
 <br/>
 <br/>
 
 If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-<img src={require('./images/ai-marketplace-11.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-11.png').default} width="400" height="auto" border="1"/>
 <br/>
 
 ## Step 4. Set up personal storage
@@ -101,7 +101,7 @@ Create two S3 Access Keys for this bucket. One should provide the **Write** and 
 
 In the Marketplace web app, click on your account address in the top-right corner and select **Account**.
 
-<img src={require('./images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -116,6 +116,6 @@ Select the **Your Storj account** radio button, fill in the fields, and press **
 | ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
 | ReadSecretAccessKey | Secret Key with the **Read** and **List** permissions |
 
-<img src={require('./images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
+<img src={require('../images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
 <br/>
 <br/>

@@ -18,11 +18,11 @@ If you feel your solution's additional uptime would benefit Testnet and other us
 
 ### Token limits
 
-- You cannot request tokens if you have more than 9 TEE and 0.9 MATIC tokens in your testnet wallet.
-- You can request up to 15 TEE and 1.5 MATIC tokens per 24 hours.
+- You cannot request tokens if you have more than 9 TEE and 0.9 POL tokens in your testnet wallet.
+- You can request up to 15 TEE and 1.5 POL tokens per 24 hours.
 - You can request tokens an unlimited number of times.
-- Each token request grants 9 TEE and 0.5 MATIC tokens.
-- Do not transfer your test MATIC tokens to other accounts, or you will be banned.
+- Each token request grants 9 TEE and 0.5 POL tokens.
+- Do not transfer your test POL tokens to other accounts, or you will be banned.
 
 ### Marketplace GUI
 

@@ -5,7 +5,7 @@ slug: "/cli_commands/tokens/request"
 sidebar_label: "request"
 ---
 
-Requests test TEE and MATIC tokens.
+Requests test TEE and POL tokens.
 
 This command is only available during the Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
 
@@ -26,7 +26,7 @@ Read about the Super Protocol [command syntax](/developers/cli_commands#command-
 | **Name** | **Description** |
 | :- | :- |
 | `--tee` | Request for Super Protocol TEE tokens. |
-| `--matic` | Request for Polygon Amoy MATIC tokens. |
+| `--matic` | Request for Polygon Amoy POL tokens. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 

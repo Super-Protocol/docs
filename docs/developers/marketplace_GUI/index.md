@@ -27,7 +27,7 @@ The things you can do in the Marketplace GUI and the their respective CLI comman
 | **Function**                                   | **SPCTL Command**                                                             |
 |:-----------------------------------------------|:------------------------------------------------------------------------------|
 | View details of offers available on blockchain | [`offers`](/developers/cli_commands/offers)                                     |
-| Receive test TEE and MATIC tokens              | [`tokens request`](/developers/cli_commands/tokens/request)                     |
+| Receive test TEE and POL tokens              | [`tokens request`](/developers/cli_commands/tokens/request)                     |
 | Create orders using offers                     | [`workflows create`](/developers/cli_commands/workflows/create)                 |
 | Use your own data for the solution offers      | [`workflows create`](/developers/cli_commands/workflows/create)                 |
 | Generate encryption keys for orders            | [`workflows generate-key`](/developers/cli_commands/workflows/generate-key)     |
