@@ -1,11 +1,11 @@
 ---
 id: "enter-marketplace"
-title: "Enter the AI Marketplace"
+title: "Enter the Marketplace"
 slug: "/enter-marketplace"
 sidebar_position: 2
 ---
 
-The [**AI Marketplace web app**](https://beta.marketplace.superprotocol.com/) provides a graphical user interface to the Super Protocol AI Marketplace.
+The [**Marketplace web app**](https://beta.marketplace.superprotocol.com/) provides a graphical user interface to the Super Protocol AI Marketplace.
 
 Super Protocol has no manual account creation. The system creates accounts automatically when users log in for the first time. Two login modes are available:
 
@@ -28,10 +28,10 @@ _Demo mode_ is suitable for a quick introduction to the system but imposes [func
 
 :::note
 
-The AI Marketplace web app does not support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
+The Marketplace web app does not support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
 
 :::
 
 ## Demo mode limitations
 
-Demo users cannot upload files to their personal Storj accounts and are limited to using Super Protocol as a [storage provider](/ai-marketplace/upload-content#select-a-storage-provider). Future releases will introduce additional functionality for both Web3 and demo modes and, consequently, more limitations for demo users.
+Demo users cannot upload files to their personal Storj accounts and are limited to using Super Protocol as a [storage provider](/ai-marketplace/upload-content#select-a-storage-provider). Future releases of this version of the Marketplace will introduce additional functionality for both Web3 and demo modes and, consequently, more limitations for demo users.

@@ -8,13 +8,13 @@ sidebar_position: 4
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-The primary purpose of uploading models and datasets is to make them available for creating offers and adding to compute orders. During upload, the system encrypts the file and creates a content resource JSON file. This resource file contains the information for confidential computing devices on accessing the uploaded model or dataset to use in compute orders.
+The primary purpose of uploading models and datasets is to make them available for creating offers and adding to compute orders. While uploading a file, the system encrypts it and creates a content resource JSON file. This resource file contains the information for confidential computing devices on accessing the uploaded model or dataset to use in compute orders.
 
-The functionality related to compute orders and offers is not implemented yet.
+The functionality related to orders and offers is not implemented yet in this version of the Marketplace.
 
 ## Select a storage provider
 
-Web3 users can choose a storage provider on the **Account** screen:
+[Web3 users](/ai-marketplace/enter-marketplace) can choose a storage provider on the **Account** screen:
 
 <img src={require('./images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
 <br/>
@@ -37,7 +37,7 @@ Uploading to a personal Storj:
 Uploading to the Super Protocol cloud:
 
 - Does not require additional setup
-- Creates a storage order that requires paying test TEE tokens to keep the uploaded files available (payment is not implemented yet)
+- Creates a storage order that requires paying test TEE tokens to keep the uploaded files available (not implemented yet in this version of the Marketplace)
 - Relies on Super Protocol as the storage provider.
 
 Both methods involve encryption of the uploaded files. No unauthorized parties, including the Super Protocol and Storj teams, can access the file contents, regardless of the method.
@@ -49,7 +49,7 @@ Demo users are [limited](/ai-marketplace/enter-marketplace#demo-user-account-lim
 
 ## How to prepare and upload content
 
-Follow these steps to prepare and upload a model or dataset.
+Complete the following steps to prepare and upload a model or dataset.
 
 ### Step 1. Prepare the content
 
@@ -61,10 +61,10 @@ Pack a dataset or model into a TAR.GZ archive before uploading it to Super Proto
     On Windows, open PowerShell or Windows Command Prompt and use the following command to create a TAR.GZ archive:
 
     ```
-    tar.exe -czvf <offerContentArchivePath> -C <dataPath> *
+    tar.exe -czvf <contentArchivePath> -C <dataPath> *
     ```
 
-    Replace `<offerContentArchive>` with the path and desired name of the output archive. Replace `<dataPath>` with the path to the directory with your data. Ensure no hidden or system files end up in the archive. Do not omit the asterisk `*` at the end of the command.
+    Replace `<contentArchivePath>` with the path and desired name of the output archive. Replace `<dataPath>` with the path to the directory with the data. Ensure no hidden or system files end up in the archive. Do not omit the asterisk `*` at the end of the command.
 
     For example:
 
@@ -80,10 +80,10 @@ Pack a dataset or model into a TAR.GZ archive before uploading it to Super Proto
     On Linux and macOS, open a terminal and use the following command to create a TAR.GZ archive:
 
     ```
-    tar -czvf <offerContentArchive> -C <dataPath> .
+    tar -czvf <contentArchivePath> -C <dataPath> .
     ```
 
-    Replace `<offerContentArchive>` with the desired name of the output archive. Replace `<dataPath>` with the relative path to the directory with your data. Ensure no hidden or system files end up in the archive. Do not omit the dot `.` at the end of the command.
+    Replace `<contentArchivePath>` with the path and desired name of the output archive. Replace `<dataPath>` with the relative path to the directory with the data. Ensure no hidden or system files end up in the archive. Do not omit the dot `.` at the end of the command.
 
     For example:
 
@@ -130,7 +130,7 @@ To manage the content, open the file menu by clicking the vertical ellipsis butt
 
 - **Info**: check the uploaded content information and download a content resource JSON file with information on accessing the uploaded data for confidential computing devices.
 - **Edit**: change the content name and type.
-- **Create offer**: create an offer using the uploaded content (not implemented yet).
+- **Create offer**: create an offer using the uploaded content (not implemented yet in this version of the Marketplace).
 - **Delete content**: delete the uploaded content.
 
 <img src={require('./images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>
