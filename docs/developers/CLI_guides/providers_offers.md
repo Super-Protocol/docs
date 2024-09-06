@@ -28,7 +28,7 @@ To set up a provider and create offers, you need:
 - Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive an email with your _Testnet user account_:
   + _Testnet user account address_: the account public key
   + _Testnet private key_: to import the Testnet wallet to MetaMask
-  + _Testnet access token_: to receive free test TEE and MATIC tokens.
+  + _Testnet access token_: to receive free test TEE and POL tokens.
 - [SPCTL](/developers/cli_guides/configure)—Super Protocol CLI tool for uploading your offers and creating an Offer Provisioner order.
 - [Storj](https://www.storj.io/) account, either Free Trial or Pro (optional).
 

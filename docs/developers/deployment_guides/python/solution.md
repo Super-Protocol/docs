@@ -29,7 +29,7 @@ Create the following subdirectories in your solution root directory:
 
 Python executables and libraries will be placed into the `run` folder on the next steps.
 
-## Set-up entrypoint.py
+## Set up entrypoint.py
 
 Download the solutions repository.
 
@@ -38,8 +38,9 @@ git clone https://github.com/Super-Protocol/solutions
 ```
 
 Then download and decrypt solution using `resource.json` file in the `Image Classification` directory of the solutions repository to get the archive with the source code:
+
 ```shell
-./spctl files download ./solutions/Image\ Classification/resource.json  ./
+./spctl files download ./solutions/Image\ Classification/resource.json ./
 ```
 
 Unpack the archive, copy all the files from it, except `pypi` folder, into your `run` directory. We will create `pypi` folder later ourselves.
@@ -51,7 +52,6 @@ RUN_DIR = os.getenv('RUN_FOLDER', os.path.dirname(os.path.abspath(__file__)))
 INPUT_DIR = os.getenv('INPUT_DATA_FOLDER', os.path.join(RUN_DIR, "..", "inputs"))
 OUTPUT_DIR = os.getenv('OUTPUT_DATA_FOLDER', os.path.join(RUN_DIR, "..", "output"))
 ```
-
 
 ## Install Python base image
 

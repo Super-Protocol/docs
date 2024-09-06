@@ -62,10 +62,10 @@ Every offer has a cost set by its provider. The price can be either fixed or per
 
 | **Offer Type**   | **Pricing Conditions**  |**Description**   |
 |:-|:-|:-|
-| Solution  | Fixed or per hour| Solution orders may require payment for every use or every hour of usage.  |
-| Data      | Per hour| Data orders require payment for every hour of usage.  |
-| Compute  | Per hour         | The main order works until it is completed or the balance runs out.  |
-| Storage  | Per hour          | The storage order launches when the main order is completed to keep the order result until the balance runs out.  |
+| Solution  | Fixed or per hour | Solution may require one-time payment or every hour of usage. |
+| Data      | Fixed or per hour | Data may require one-time payment or every hour of usage. |
+| Compute  | Per hour | The main order works until it is completed or the balance runs out. |
+| Storage  | Per hour | The storage suborder launches when the main order is completed to keep the order result until the balance runs out. |
 
 ## Order status
 

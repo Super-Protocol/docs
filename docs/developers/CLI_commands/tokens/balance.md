@@ -5,7 +5,7 @@ slug: "/cli_commands/tokens/balance"
 sidebar_label: "balance"
 ---
 
-Displays the balance of TEE and MATIC tokens in your wallet.
+Displays the balance of TEE and POL tokens in your wallet.
 
 ## Syntax
 
