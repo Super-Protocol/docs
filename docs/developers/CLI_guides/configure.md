@@ -15,7 +15,7 @@ import TabItem from '@theme/TabItem';
 To set up SPCTL, you need Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive a Testnet invitation email with your Testnet credentials:
   - _Testnet Account address_: the public key of the Testnet Account wallet
   - _Private Key_: the private key of the Testnet Account wallet
-  - _Access Token_: necessary to receive free test TEE and MATIC tokens
+  - _Access Token_: necessary to receive free test TEE and POL tokens
 
 ## Download SPCTL
 
@@ -185,7 +185,7 @@ Before you create an order, ensure you have the latest version of SPCTL. Execute
 
 Go to the SPCTL's [GitHub page](https://github.com/Super-Protocol/ctl/releases) to see the latest version.
 
-Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/cli_commands/tokens/request) command to get free test TEE and MATIC tokens:
+Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/cli_commands/tokens/request) command to get free test TEE and POL tokens:
 
 ```
 ./spctl tokens request --tee
