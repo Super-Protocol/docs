@@ -33,12 +33,23 @@ const config = {
       },
     ],
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "ai-marketplace",
+        path: "./docs/ai-marketplace",
+        routeBasePath: "/ai-marketplace",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
           {
             from: "/",
-            to: "/developers",
+            to: "/ai-marketplace",
           },
         ],
       },
@@ -49,17 +60,6 @@ const config = {
         id: "whitepaper",
         path: "./docs/whitepaper",
         routeBasePath: "/whitepaper",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "ai-marketplace",
-        path: "./docs/ai-marketplace",
-        routeBasePath: "/ai-marketplace",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
@@ -108,6 +108,13 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
+            label: "AI Marketplace",
+            docsPluginId: "ai-marketplace",
+          },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
             label: "Developers",
           },
           {
@@ -116,13 +123,6 @@ const config = {
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "AI Marketplace",
-            docsPluginId: "ai-marketplace",
           },
         ],
       },
