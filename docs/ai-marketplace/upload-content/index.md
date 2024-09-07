@@ -5,7 +5,7 @@ slug: "/upload-content"
 sidebar_position: 3
 ---
 
-The primary purpose of uploading models and datasets is to make them available for creating offers and adding to compute orders. While uploading a file, the system encrypts it and creates a content resource JSON file. This resource file contains the information for confidential computing devices on accessing the uploaded model or dataset to use in compute orders.
+The primary purpose of uploading models and datasets is to make them available for creating offers and adding to compute orders. While uploading a file, the system encrypts it and creates a resource JSON file. This resource file contains the information for confidential computing devices on accessing the uploaded model or dataset to use in compute orders.
 
 The functionality related to orders and offers is not implemented yet in this version of the Marketplace.
 
@@ -35,7 +35,7 @@ Uploading to the Super Protocol cloud:
 
 - Does not require additional setup
 - Creates a storage order that requires paying test TEE tokens to keep the uploaded files available (not implemented yet in this version of the Marketplace)
-- Relies on Super Protocol as the storage provider.
+- Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
 
 Both methods involve encryption of the uploaded files. No unauthorized parties, including the Super Protocol and Storj teams, can access the file contents, regardless of the method.
 
