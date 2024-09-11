@@ -49,7 +49,7 @@ const config = {
         redirects: [
           {
             from: "/",
-            to: "/ai-marketplace",
+            to: "/developers",
           },
         ],
       },
@@ -108,13 +108,6 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "AI Marketplace",
-            docsPluginId: "ai-marketplace",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
             label: "Developers",
           },
           {
@@ -123,6 +116,13 @@ const config = {
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
+          },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "AI Marketplace",
+            docsPluginId: "ai-marketplace",
           },
         ],
       },
