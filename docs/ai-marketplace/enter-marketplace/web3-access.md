@@ -118,4 +118,3 @@ Select the **Your Storj account** radio button, fill in the fields, and press **
 
 <img src={require('../images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
 <br/>
-<br/>

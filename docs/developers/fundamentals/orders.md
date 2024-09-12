@@ -39,8 +39,8 @@ Storage and compute can only be provided by offers. Currently, only Super Protoc
 
 Super Protocol supports two order usage scenarios, depending on the solution:
 
-- One-time orders perform a specific task and produce a result when done. For example, using an ML/AI Python model to run an inference on a batch of data.
-- Long-term orders keep running and performing their functions as long as the order has money on the balance. For example, using tunnels to deploy an LLM with a web interface.
+- One-time orders perform a specific task and produce a result when done. For example, fine-tuning a rented or uploaded model with rented or uploaded datasets.
+- Long-term orders keep running and performing their functions as long as the order has money on the balance. For example, using tunnels to deploy a fine-tuned model as a service for end users outside Super Protocol.
 
 ## Lease, deposit, and balance
 
