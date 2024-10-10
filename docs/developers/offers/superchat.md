@@ -19,16 +19,18 @@ This chat is a technological demo app initially developed for Testnet 3 with a g
 
 ### Use our deployment
 
-Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes: [https://ayre-nyas-bomb.superprotocol.io/](https://ayre-nyas-bomb.superprotocol.io/).
+Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes:
+
+[mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/)
 
 This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
 
-Tunnel server order: [2535](https://marketplace.superprotocol.com/order/2535) <br/>
-Tunnel server order: [2556](https://marketplace.superprotocol.com/order/2556) <br/>
-Tunnel client order: [2538](https://marketplace.superprotocol.com/order/2538) <br/>
-Tunnel client order: [2559](https://marketplace.superprotocol.com/order/2559) <br/>
+- Tunnel server order: [6070](https://marketplace.superprotocol.com/order/6070)
+- Tunnel server order: [6076](https://marketplace.superprotocol.com/order/6076)
+- Tunnel client order: [6073](https://marketplace.superprotocol.com/order/6073)
+- Tunnel client order: [6079](https://marketplace.superprotocol.com/order/6079)
 
-You can check this domain's confidentiality [here](/developers/marketplace/confidentiality).
+Read how you can [Check Confidentiality](/developers/marketplace/confidentiality) of this domain.
 
 ### Deploy your own Super Chat
 
