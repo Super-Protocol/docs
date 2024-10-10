@@ -32,7 +32,7 @@ A _Trusted Execution Environment_ is a secure area in memory, [CPU](https://www.
 
 Confidentiality is an integral part of Super Protocol. All the user data in Super Protocol is encrypted and protected while stored, in transfer, and in use.
 
-Trusted Execution Environment ensures confidentiality and protects both providers and customers. Only the customer can access their orders. Customers themselves cannot download, modify, or otherwise access the provider's offer content even if they use it in their orders. Neither the Super Protocol team nor the owner of the machine that performs the computation have access to the order and offer content.
+Trusted Execution Environment ensures confidentiality and protects both providers and customers. Only the customer can access their orders. Customers themselves cannot download, modify, or otherwise access the provider's offer content even if they use it in their orders. Neither the Super Protocol team nor the owner of the computing device have access to the order and offer content.
 
 ## Providers
 
