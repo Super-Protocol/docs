@@ -37,10 +37,10 @@ Storage and compute can only be provided by offers. Currently, only Super Protoc
 
 ## Usage scenarios
 
-Super Protocol supports two order usage scenarios, depending on the solution:
+Depending on the solution, there are two typical usage scenarios:
 
-- One-time orders perform a specific task and produce a result when done. For example, fine-tuning a rented or uploaded model with rented or uploaded datasets.
-- Long-term orders keep running and performing their functions as long as the order has money on the balance. For example, using tunnels to deploy a fine-tuned model as a service for end users outside Super Protocol.
+- One-off order performs a specific computation and produce a result. For example, using an AI model to run an inference on a batch of data or fine-tuning an AI model.
+- Long-term order runs an app, such as [Super Chat](/developers/offers/superchat/), an [oracle](/developers/deployment_guides/blockchain), or an LLM with a web-interface deployed using the [tunnels](/developers/fundamentals/tunnels). It keeps running as long as the order has money on the balance.
 
 ## Lease, deposit, and balance
 
