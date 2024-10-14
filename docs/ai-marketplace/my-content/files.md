@@ -23,3 +23,9 @@ images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>
 <br/>
 
 Screen description...
+
+## Upload and edit content
+
+## Info
+
+## Delete content

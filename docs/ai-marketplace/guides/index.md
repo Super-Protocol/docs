@@ -2,5 +2,5 @@
 id: "guides"
 title: "Guides"
 slug: "/guides"
-sidebar_position: 19
+sidebar_position: 2
 ---
