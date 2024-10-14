@@ -11,6 +11,6 @@ Offer slots and requirements.
 
 Pricing.
 
-## Offer window description
+## Offer window
 
 ...

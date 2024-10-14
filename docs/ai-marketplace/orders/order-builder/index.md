@@ -1,7 +1,7 @@
 ---
 id: "order-builder"
 title: "Order Builder"
-slug: "/order-placement/order-builder"
+slug: "/orders/order-builder"
 sidebar_position: 1
 ---
 
@@ -11,7 +11,7 @@ sidebar_position: 1
 - Компоненты, как собирается
 - Офферы, слоты, загружаемые файлы, стоимость
 
-## Window description
+## Order Builder window
 
 Order Builder Empty Window
 

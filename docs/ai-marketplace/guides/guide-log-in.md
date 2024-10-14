@@ -1,7 +1,7 @@
 ---
 id: "guide-log-in"
 title: "How to Log In"
-slug: "/guide-log-in"
+slug: "/guides/guide-log-in"
 sidebar_position: 2
 ---
 
@@ -15,12 +15,8 @@ The Marketplace web app does not support mobile devices. Use a desktop or laptop
 
 Two login modes are
 
-- Demo user
-- Web3 user.
-
-## Demo user
-
-...
+- [Web3 user]
+- [Demo user].
 
 ## Web3 user 
 
@@ -129,3 +125,7 @@ Select the **Your Storj account** radio button, fill in the fields, and press **
 
 images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
 <br/>
+
+## Demo user
+
+...

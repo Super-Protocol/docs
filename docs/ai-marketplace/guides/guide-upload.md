@@ -1,7 +1,7 @@
 ---
 id: "guide-upload"
 title: "How to Upload Content"
-slug: "/guide-upload"
+slug: "/guides/guide-upload"
 sidebar_position: 3
 ---
 
@@ -83,7 +83,7 @@ images/ai-marketplace-16.png').default} width="400" height="auto" border="1"/>
     + **Disk, GB**: disk space in gigabytes  
     + **Bandwidth, Mbps**: required bandwidth in megabits per second  
     + **Traffic, GB**: required traffic in gigabytes  
-     + **Ext.Port**: external port availability  
+    + **Ext.Port**: external port availability  
 6. **Upload file**: press **Select tar.gz archive** and select the archive file you want to upload.  
 7. Press **Upload**.
 
