@@ -45,6 +45,6 @@ Demo users are [limited] to the Super Protocol cloud.
 images/ai-marketplace-14.png').default} width="400" height="auto" border="1"/>
 <br/>
 
-[Files](/my-content/files)
+[Files](/ai-marketplace/my-content/files)
 
-[Offers](/my-content/offers)
+[Offers](/ai-marketplace/my-content/offers)

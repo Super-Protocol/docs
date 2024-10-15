@@ -5,10 +5,10 @@ slug: "/guides"
 sidebar_position: 2
 ---
 
-[How to Log In](/guides/guide-log-in)
+[How to Log In](/ai-marketplace/guides/guide-log-in)
 
-[How to Upload Content](/guides/guide-upload)
+[How to Upload Content](/ai-marketplace/guides/guide-upload)
 
-[How to Place an Order](/guides/guide-place-order)
+[How to Place an Order](/ai-marketplace/guides/guide-place-order)
 
-[How to Create an Offer](/guides/guide-create-offer)
+[How to Create an Offer](/ai-marketplace/guides/guide-create-offer)

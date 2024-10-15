@@ -5,6 +5,6 @@ slug: "/services"
 sidebar_position: 16
 ---
 
-[Check Confidentiality](/services/check-confidentiality)
+[Check Confidentiality](/ai-marketplace/services/check-confidentiality)
 
-[Block Explorer](/services/block-explorer)
+[Block Explorer](/ai-marketplace/services/block-explorer)

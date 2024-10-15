@@ -5,14 +5,14 @@ slug: "/orders"
 sidebar_position: 14
 ---
 
-[Order builder](/orders/order-builder)
+[Order builder](/ai-marketplace/orders/order-builder):
 
-    + [Select Model and Datasets](/orders/order-builder/select-data)
-    + [Select AI Engine](/orders/order-builder/select-engine)
-    + [Select Compute](/orders/order-builder/select-compute)
-    + [Compatibility Issues](/orders/order-builder/compatibility)
-    + [Checkout](/orders/order-builder/checkout)
+- [Select Model and Datasets](/ai-marketplace/orders/order-builder/select-data)
+- [Select AI Engine](/ai-marketplace/orders/order-builder/select-engine)
+- [Select Compute](/ai-marketplace/orders/order-builder/select-compute)
+- [Compatibility Issues](/ai-marketplace/orders/order-builder/compatibility)
+- [Checkout](/ai-marketplace/orders/order-builder/checkout)
 
-[All Orders](/orders/all-orders)
+[All Orders](/ai-marketplace/orders/all-orders)
 
-[Order Screen](/orders/order)
+[Order Screen](/ai-marketplace/orders/order)

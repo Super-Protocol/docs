@@ -11,7 +11,7 @@ Models
 
 Datasets
 
-You can fine-tune models or launch AI services. To do so, you need to place an order. You can also use uploaded files instead of offers. Read [How to Place and Order](/guides/guide-place-order).
+You can fine-tune models or launch AI services. To do so, you need to place an order. You can also use uploaded files instead of offers. Read [How to Place and Order](/ai-marketplace/guides/guide-place-order).
 
 ## Models/Datasets screen
 

@@ -25,7 +25,7 @@ Metamask
 
 Do not close the window
 
-You can find you order on the [All orders](/orders/all-orders) screen
+You can find you order on the [All orders](/ai-marketplace/orders/all-orders) screen
 
 ## Demo
 

@@ -19,4 +19,4 @@ Slots
 
 Requirements; у uploaded files может не быть.
 
-Yellow warning icon / overlay symbol / exclamation mark warning / ? means not all requirements are specified and you need to select a more powerful (?) configuration slot when you [Select a Compute Offer](/orders/order-builder/select-compute).
+Yellow warning icon / overlay symbol / exclamation mark warning / ? means not all requirements are specified and you need to select a more powerful (?) configuration slot when you [Select a Compute Offer](/ai-marketplace/orders/order-builder/select-compute).

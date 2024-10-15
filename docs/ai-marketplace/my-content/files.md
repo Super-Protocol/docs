@@ -5,7 +5,7 @@ slug: "/my-content/files"
 sidebar_position: 1
 ---
 
-The [**File**]() screen contains the full list of the uploaded content files.
+The [**File**] screen contains the full list of the uploaded content files.
 
 ## Files screen
 
@@ -42,7 +42,7 @@ images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>
     + **Traffic, GB**: required traffic in gigabytes
     + **Ext.Port**: external port availability
 
-Read [How to Upload Content](/guides/guide-upload)
+Read [How to Upload Content](/ai-marketplace/guides/guide-upload)
 
 ## Info
 
