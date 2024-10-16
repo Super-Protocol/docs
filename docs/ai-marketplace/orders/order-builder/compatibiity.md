@@ -1,6 +1,7 @@
 ---
 id: "compatibility"
 title: "Compatibility Issues"
-slug: "/order-placement/compatibility"
+slug: "/orders/order-builder/compatibility"
 sidebar_position: 5
 ---
+

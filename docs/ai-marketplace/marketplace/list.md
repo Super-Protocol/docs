@@ -5,11 +5,15 @@ slug: "/marketplace/list"
 sidebar_position: 1
 ---
 
-The Models and Datasets screens display all the AI models and datasets offered for lease on the Marketplace.
+This screen displays Models and Datasets offered for lease on the Marketplace.
 
-To access...
+Models
 
-## List window description
+Datasets
+
+You can fine-tune models or launch AI services. To do so, you need to place an order. You can also use uploaded files instead of offers. Read [How to Place and Order](/ai-marketplace/guides/guide-place-order).
+
+## Models/Datasets screen
 
 Each screen displays the list of respective offers. To narrow down the results, apply filters in the left part of the screen.
 

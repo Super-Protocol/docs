@@ -1,6 +1,6 @@
 ---
 id: "guide-create-offer"
 title: "How to Create an Offer"
-slug: "/guide-create-offer"
+slug: "/guides/guide-create-offer"
 sidebar_position: 5
 ---
