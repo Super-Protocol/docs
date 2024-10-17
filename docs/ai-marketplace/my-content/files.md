@@ -5,24 +5,55 @@ slug: "/my-content/files"
 sidebar_position: 1
 ---
 
-The [**File**] screen contains the full list of the uploaded content files.
+The [**My Files**] screen allows uploading and managing AI models and datasets.
 
-## Files screen
+## My Files screen
 
-To show, hide, and rearrange the table columns, open the menu by clicking the cog button.
+The table contains the list of user-uploaded files:
 
-images/ai-marketplace-19.png').default} width="800" height="auto" border="1"/>
+- Type: the type of the uploaded content (Model or Dataset).
+- Name: the content name given by the user.
+- Date Uploaded: the date and time the file was uploaded.
+- Size: file size in gigabytes.
+- Storage: the [storage](/ai-marketplace/my-content) the file is uploaded to, either Super Cloud or personal Storj.
+- Offer ID: the identification number of the offer created from the uploaded file.
+
+image full screen, the table highlighted
 <br/>
 <br/>
 
 To manage the uploaded content, open the menu by clicking the vertical ellipsis button:
 
-- **Info**: check the uploaded content information and download a resource JSON file. This file contains the information for confidential computing devices on accessing the uploaded model or dataset to use in compute orders.
-- **Edit**: change the name and type of the uploaded content.
-- **Create offer**: create an offer using the uploaded content (not implemented yet in this version of the Marketplace).
-- **Delete content**: delete the uploaded content.
+- [**Info**]: check the uploaded content information.
+- [**Edit**]: change the name and type of the uploaded content.
+- [**Create offer**]: create an offer using the uploaded content (not yet implemented in this Marketplace version).
+- [**Delete content**]: delete the uploaded content.
 
 images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>
+<br/>
+<br/>
+
+Click the **+** button to add the uploaded file to an order. Click the **trash can** button to remove the file from the order.
+
+image blue + and trash buttons highlighted
+<br/>
+<br/>
+
+Click the **Upload File** button to open the **Upload Content** window. Read [How to Upload Content](/ai-marketplace/guides/guide-upload).
+
+image Upload File highlighted
+<br/>
+<br/>
+
+Use the drop-down menu to sort out the table content.
+
+image Newest drop-down highlighted
+<br/>
+<br/>
+
+Click the cog button menu to show, hide, and rearrange table columns.
+
+image cog button highlighted
 <br/>
 <br/>
 
