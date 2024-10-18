@@ -10,6 +10,44 @@ import TabItem from '@theme/TabItem';
 
 This guide provides step-by-step instructions on how to prepare and upload a model or dataset.
 
+## Step 1. Select a storage
+
+[Select a storage](/ai-marketplace/my-content)
+
+### Set up personal storage
+
+This step is optional—you can use Super Protocol as a [storage provider] instead of personal storage.
+
+#### Register and set up Storj
+
+Register a [Storj](https://www.storj.io/) account if you do not have one yet. Both free Trial and Pro Storj accounts are suitable. However, with a Trial account, your files will become unavailable after the end of the trial period.
+
+Create a new project and a bucket. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/).
+
+Create two S3 Access Keys for this bucket. One should provide the **Write** and **Delete** permissions, and the other one the **Read** and **List** permissions. Alternatively, you can create a single key with **Full Access** (**All permissions**). Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to generate S3 credentials.
+
+#### Add to the Marketplace account
+
+In the Marketplace web app, click on your account address in the top-right corner and select **Account**.
+
+images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
+<br/>
+<br/>
+
+Select the **Your Storj account** radio button, fill in the fields, and press **Save**.
+
+| **Field** | **Value** |
+| :- | :- |
+| Bucket | Name of the Storj bucket |
+| Path | Path to the directory in the bucket; it can be empty |
+| WriteAccessKeyId | Access Key with the **Write** and **Delete** permissions |
+| WriteSecretAccessKey | Secret Key with the **Write** and **Delete** permissions |
+| ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
+| ReadSecretAccessKey | Secret Key with the **Read** and **List** permissions |
+
+images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
+<br/>
+
 ## Step 1. Prepare the content
 
 Pack a dataset or model into a TAR.GZ archive before uploading it to Super Protocol.
