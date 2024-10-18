@@ -30,19 +30,19 @@ If you do not have MetaMask installed, add the MetaMask extension to your browse
 
 Open the MetaMask extension window and then the **Select a network** menu in the top-left corner.
 
-images/ai-marketplace-02.png').default} width="400" height="auto" border="1"
+(images/ai-marketplace-02.png').default} width="400" height="auto" border="1")
 <br/>
 <br/>
 
 There, press the **+ Add network** button.
 
-images/ai-marketplace-03.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-03.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
 Then, click **Add a network manually** at the bottom of the page.
 
-images/ai-marketplace-04.png').default} width="800" height="auto" border="1"/>
+(images/ai-marketplace-04.png').default} width="800" height="auto" border="1"/>)
 <br/>
 <br/>
 
@@ -58,37 +58,38 @@ Set the following parameters and press **Save**.
 
 You can change the network name if you would like.
 
-images/ai-marketplace-05.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-05.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
 Switch to the newly added network.
 
-images/ai-marketplace-06.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-06.png').default} width="400" height="auto" border="1"/>)
+<br/>
 <br/>
 
 ### Step 3. Connect the account
 
 On the main Marketplace screen, press the **Enter Marketplace** button.
 
-images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>
+(images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>)
 <br/>
 <br/>
 
 Select **MetaMask**.
 
-images/ai-marketplace-08.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-08.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
 In the MetaMask windows, select the account you want to connect and press **Next**. Then, **Confirm** the permissions and the signature request to log in.
 
-images/ai-marketplace-09.png').default} width="800" height="auto" border="1"/>
+(images/ai-marketplace-09.png').default} width="800" height="auto" border="1"/>)
 <br/>
 <br/>
 
 If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-images/ai-marketplace-11.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-11.png').default} width="400" height="auto" border="1"/>)
 <br/>
-
+<br/>

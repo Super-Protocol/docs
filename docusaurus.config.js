@@ -108,7 +108,7 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Developers",
+            label: "Fundamentals",
           },
           {
             type: "doc",

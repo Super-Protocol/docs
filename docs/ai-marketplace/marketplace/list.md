@@ -11,49 +11,49 @@ The **Models** and **Datasets** screens display content [offered](/developers/fu
 
 The table in the center of the screen contains the list of available offers:
 
-- ID: a unique offer identification number. It is incremental and continuous for model offers and dataset offers.
-- Name: the name given to the offer by its [provider](/developers/fundamentals/offers#providers).
-- Provider: the name of the offer provider.
-- Price, hr: price per hour for leasing the offer.
-- Price, fix: price for each use regardless of the lease duration.
+- **ID**: a unique offer identification number. It is incremental and continuous for model offers and dataset offers.
+- **Name**: the name given to the offer by its [provider](/developers/fundamentals/offers#providers).
+- **Provider**: the name of the offer provider.
+- **Price, hr**: price per hour for leasing the offer.
+- **Price, fix**: price for each use regardless of the lease duration.
 
-image full screen, the table highlighted
+(image full screen, the table highlighted)
 <br/>
 <br/>
 
 Click an offer to open a [window](/ai-marketplace/marketplace/offer) with the offer description, [requirement slots](/developers/fundamentals/slots#requirements), pricing, and other information.
 
-image one offer highlighted
+(image one offer highlighted)
 <br/>
 <br/>
 
 Click the blue **+** button to add the offer to an order. Click the **trash can** button to remove the offer from the order.
 
-image blue + and trash buttons highlighted
+(image blue + and trash buttons highlighted)
 <br/>
 <br/>
 
 Use the drop-down menu to sort out the table content.
 
-image Newest drop-down highlighted
+(image Newest drop-down highlighted)
 <br/>
 <br/>
 
 Click the **change view** button to switch between the table and tile views.
 
-image tile button highlighted
+(image tile button highlighted)
 <br/>
 <br/>
 
 While in the list view, click the cog button menu to show, hide, and rearrange table columns.
 
-image cog button highlighted
+(image cog button highlighted)
 <br/>
 <br/>
 
 Use filters on the left side of the screen to narrow down the results.
 
-image filters highlighted
+(image filters highlighted)
 <br/>
 <br/>
 

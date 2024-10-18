@@ -30,7 +30,7 @@ Create two S3 Access Keys for this bucket. One should provide the **Write** and 
 
 In the Marketplace web app, click on your account address in the top-right corner and select **Account**.
 
-images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
@@ -45,7 +45,7 @@ Select the **Your Storj account** radio button, fill in the fields, and press **
 | ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
 | ReadSecretAccessKey | Secret Key with the **Read** and **List** permissions |
 
-images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>)
 <br/>
 
 ## Step 1. Prepare the content
@@ -99,13 +99,13 @@ Pack a dataset or model into a TAR.GZ archive before uploading it to Super Proto
 
 On the [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen, press the **Upload Content** button.
 
-images/ai-marketplace-15.png').default} width="800" height="auto" border="1"/>
+(images/ai-marketplace-15.png').default} width="800" height="auto" border="1"/>)
 <br/>
 <br/>
 
 Fill in all the fields in the pop-up window.
 
-images/ai-marketplace-16.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-16.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
@@ -127,5 +127,5 @@ images/ai-marketplace-16.png').default} width="400" height="auto" border="1"/>
 
 Wait and do not close the window until the upload is complete.
 
-images/ai-marketplace-17.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-17.png').default} width="400" height="auto" border="1"/>)
 <br/>
