@@ -2,7 +2,7 @@
 id: "checkout"
 title: "Checkout"
 slug: "/orders/order-builder/checkout"
-sidebar_position: 6
+sidebar_position: 1
 ---
 
 When all order components are selected, you need to create a passphrase and confirm the transaction
@@ -21,7 +21,7 @@ Invalid format.
 
 ### Confirm transactions
 
-Metamask
+MetaMask
 
 Do not close the window
 

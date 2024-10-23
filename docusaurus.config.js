@@ -44,12 +44,23 @@ const config = {
       },
     ],
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "fundamentals",
+        path: "./docs/fundamentals",
+        routeBasePath: "/fundamentals",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
           {
             from: "/",
-            to: "/developers",
+            to: "/testnet",
           },
         ],
       },
@@ -94,7 +105,7 @@ const config = {
         logo: {
           alt: "Super Protocol Logo",
           src: "navbar/images/logo.svg",
-          href: '/developers'
+          href: '/testnet'
         },
         items: [
           {
@@ -108,7 +119,21 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
+            label: "AI Marketplace",
+            docsPluginId: "ai-marketplace",
+          },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
             label: "Fundamentals",
+            docsPluginId: "fundamentals",
+          },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "Developers",
           },
           {
             type: "doc",
@@ -116,13 +141,6 @@ const config = {
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "AI Marketplace",
-            docsPluginId: "ai-marketplace",
           },
         ],
       },
@@ -145,7 +163,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: ["developers", "ai-marketplace", "testnet", "whitepaper"],
+      docsRouteBasePath: ["developers", "ai-marketplace", "testnet", "whitepaper", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,

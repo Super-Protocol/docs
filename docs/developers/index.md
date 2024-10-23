@@ -24,7 +24,7 @@ If you are just starting out, feel your way around Super Protocol using the Mark
 When you know the basics, try SPCTL—the Super Protocol CLI tool:
 
 1. [Configure SPCTL](/developers/cli_guides/configure) as a user.
-2. Read about the [fundamentals](/developers/fundamentals), [Testnet limitations](/testnet/limitations), and key [CLI commands](/developers/cli_commands).
+2. Read about the [fundamentals](/fundamentals), [Testnet limitations](/testnet/limitations), and key [CLI commands](/developers/cli_commands).
 3. Read the [Quick Deployment Guide](/developers/cli_guides/quick_guide) to learn about deploying your solutions.
 4. Choose a [deployment guide](/developers/deployment_guides/) to get an example for additional deployment scenarios.
 

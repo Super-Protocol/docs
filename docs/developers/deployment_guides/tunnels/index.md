@@ -5,7 +5,7 @@ slug: '/deployment_guides/tunnels'
 sidebar_position: 3
 ---
 
-You can find a general overview of tunnels [here](/developers/fundamentals/tunnels).
+You can find a general overview of tunnels [here](/fundamentals/tunnels).
 
 ## Guides
 
