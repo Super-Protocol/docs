@@ -16,14 +16,14 @@ The functionality related to offers is not implemented yet in the current versio
 
 Web3 users can choose one of two methods of upload:
 
-- **Super Protocol cloud**: Super Protocol's Storj account
-- **Your Storj account**: personal Storj account.
+- _Super Protocol cloud_: Super Protocol's Storj account
+- _Your Storj account_: personal Storj account.
 
-images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
-images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>)
 <br/>
 <br/>
 
@@ -40,9 +40,9 @@ Uploading to the Super Protocol cloud:
 
 Both methods involve encryption of the uploaded files. No unauthorized parties, including the Super Protocol and Storj teams, can access the file contents, regardless of the method.
 
-Demo users are [limited] to the Super Protocol cloud.
+Demo users are [limited](/ai-marketplace/account/demo#demo-mode-limitations) to the Super Protocol cloud.
 
-images/ai-marketplace-14.png').default} width="400" height="auto" border="1"/>
+(images/ai-marketplace-14.png').default} width="400" height="auto" border="1"/>)
 <br/>
 
 [Files](/ai-marketplace/my-content/files)
