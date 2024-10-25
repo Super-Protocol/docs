@@ -2,9 +2,10 @@
 id: "marketplace"
 title: "Marketplace"
 slug: "/marketplace"
-sidebar_position: 12
+sidebar_position: 4
 ---
 
-[List of Offers](/ai-marketplace/marketplace/list)
-
-[Offer](/ai-marketplace/marketplace/offer)
+| **Document** | **Description** |
+| :- | :- |
+| [List of Offers](/ai-marketplace/marketplace/list) | The **Models** and **Datasets** showcase screens display lists of respective offers. |
+| [Offer](/ai-marketplace/marketplace/offer) | The **Offer** window contains detailed information about an offer. |

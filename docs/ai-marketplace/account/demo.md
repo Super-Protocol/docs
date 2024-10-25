@@ -5,7 +5,7 @@ slug: "/account/demo"
 sidebar_position: 2
 ---
 
-_Demo User_ account is suitable for a quick introduction to the system but imposes [functionality restrictions]. Instead of MetaMask and an ERC-20 wallet, access in the demo mode required an existing account on one of the following platforms:
+_Demo User_ account is suitable for a quick introduction to the system but imposes [functionality restrictions](/ai-marketplace/account/demo#demo-mode-limitations). Instead of MetaMask and an ERC-20 wallet, access in the Demo mode required an account on one of the following platforms:
 
 - Google
 - Hugging Face
@@ -13,23 +13,26 @@ _Demo User_ account is suitable for a quick introduction to the system but impos
 - Microsoft
 - Facebook.
 
-...
-
 ## Demo Mode Limitations
 
-Demo mode provides limited functionality compared to Web3 mode. Demo users cannot:
+Compared to Web3 users, Demo users cannot:
 
 - Upload files to their personal Storj accounts and can only use Super Protocol as a storage provider
 - Register providers
-- Create offers
-...
+- Create offers.
 
-Future releases of this version of the Marketplace will introduce additional functionality for both Web3 and demo modes and, consequently, more limitations for demo users.
+Future releases of the AI Marketplace will introduce additional functionality and, consequently, more limitations for Demo users.
 
 ## Demo Account window
 
-Demo Account
+This window displays information about your account when you are logged in as a Demo user.
 
-Storage
+(image Demo Account window)
+<br/>
+<br/>
 
-Provider
+**User ID**: your unique user identificator.
+
+**Login**: the OAuth2 login provider and the login name you are using.
+
+**Storage**: in the Demo mode, you can only [upload files](/ai-marketplace/my-content) to Super Protocol cloud. [Log in as a Web3 user](/ai-marketplace/guides/guide-log-in#web3-user) to unlock uploading to your personal Storj account.

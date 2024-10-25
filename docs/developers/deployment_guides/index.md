@@ -9,7 +9,7 @@ Described below are the top three technical use cases for Super Protocol.
 
 ## Confidential Tunnels
 
-[Confidential tunnels](/developers/fundamentals/tunnels), as introduced by Super Protocol, are a combination of confidential computing and network tunneling, where both ends of the tunnels - tunnel server and tunnel client - are deployed inside a TEE and interlinked via secure authorization tokens. The TEE protects data-in-use and the content inside the tunnel client, while tunnel server protects from external attacks.
+[Confidential tunnels](/fundamentals/tunnels), as introduced by Super Protocol, are a combination of confidential computing and network tunneling, where both ends of the tunnels - tunnel server and tunnel client - are deployed inside a TEE and interlinked via secure authorization tokens. The TEE protects data-in-use and the content inside the tunnel client, while tunnel server protects from external attacks.
 
 Any type of dynamic or static content may be deployed using tunnels in Super Protocol. Read [**this guide**](/developers/deployment_guides/tunnels) on how to deploy Node.js applications with tunnels, using examples such as Minecraft and Super Chat. 
 

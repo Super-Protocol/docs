@@ -23,7 +23,7 @@ Generally we expect that our test users deploy their own Super Chat. But if you 
 
 [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/)
 
-This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
+This domain is running on the following [tunnels](/fundamentals/tunnels) orders:
 
 - Tunnel server order: [6070](https://marketplace.superprotocol.com/order/6070)
 - Tunnel server order: [6076](https://marketplace.superprotocol.com/order/6076)

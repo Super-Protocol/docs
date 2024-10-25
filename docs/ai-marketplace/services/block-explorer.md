@@ -2,5 +2,5 @@
 id: "block-explorer"
 title: "Block Explorer"
 slug: "/services/block-explorer"
-sidebar_position: 2
+sidebar_position: 1
 ---

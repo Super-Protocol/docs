@@ -1,7 +1,7 @@
 ---
-id: "offers"
-title: "Offers"
-slug: "/my-content/offers"
+id: "my-offers"
+title: "My Offers"
+slug: "/my-content/my-offers"
 sidebar_position: 2
 ---
 

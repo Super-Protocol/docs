@@ -7,7 +7,7 @@ sidebar_position: 4
 
 This section describes the offers provided by the Super Protocol team. But in the near future Marketplace will be made accessible to all testnet users to create and monetize their own offers.
 
-Learn more about offers [here](/developers/fundamentals/offers).
+Learn more about [offers](/fundamentals/offers).
 
 ## For Developers
 
@@ -15,7 +15,7 @@ These are the offers that will be most useful for developers when deploying your
 
 ### Solutions
 
-These solution offers are instrumental in setting up [tunnels](/developers/fundamentals/tunnels) or other solutions based on Node.js or Python.
+These solution offers are instrumental in setting up [tunnels](/fundamentals/tunnels) or other solutions based on Node.js or Python.
 
 | **Id** | **Name**                          | **Description**                                                                |
 |:-------|:----------------------------------|:-------------------------------------------------------------------------------|
@@ -33,7 +33,7 @@ There are not preset data offers for developers, you will be uploading your own 
 
 ### Compute
 
-Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/developers/fundamentals/slots/). Explore each compute offer to see which best fits the requirements of your solution.
+Below are the compute offers available for Testnet from our CSP partners. Each machine is divided into [slots and options](/fundamentals/slots/). Explore each compute offer to see which best fits the requirements of your solution.
 
 | **Id** | **Name**                                                               | **Description**                                    |
 |:-------|:-----------------------------------------------------------------------|:---------------------------------------------------|

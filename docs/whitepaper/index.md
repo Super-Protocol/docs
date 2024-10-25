@@ -19,7 +19,7 @@ sidebar_position: 1
 |[Architecture](/whitepaper/architecture)|Published|
 |[TEE Provider](/whitepaper/tee-provider)|Published|
 |[TEE Confirmation Protocol (Part 1)](/whitepaper/tee-confirmation-protocol)|Published|
-|[TEE Confirmation Protocol (Part 2)](/whitepaper/tee-confirmation-protocol#mathematical-justification-of-consensus)|**New!**|
+|[TEE Confirmation Protocol (Part 2)](/whitepaper/tee-confirmation-protocol#mathematical-justification-of-consensus)|Published|
 |[Data Provider](/whitepaper/data-provider)|Published|
 |[Storage Provider](/whitepaper/storage-provider)|Published|
 |[Client Infrastructure](/whitepaper/client-infrastructure)|Published|
