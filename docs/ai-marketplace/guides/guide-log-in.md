@@ -67,6 +67,10 @@ You can change the network name if you like.
 Switch to the newly added network.
 
 (images/ai-marketplace-06.png').default} width="400" height="auto" border="1"/>)
+<<<<<<< HEAD
+=======
+<br/>
+>>>>>>> develop
 <br/>
 
 ### Step 3. Connect the account
