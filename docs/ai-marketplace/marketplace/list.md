@@ -66,3 +66,22 @@ While in the list view, click the cog button menu to show, hide, and rearrange t
 (image cog button highlighted)
 <br/>
 <br/>
+<<<<<<< HEAD
+=======
+
+Use filters on the left side of the screen to narrow down the results.
+
+(image filters highlighted)
+<br/>
+<br/>
+
+- Compatible:
+    + Show all: displays all offers.
+    + Show compatible: only displays offers compatible with those already added to an order.
+- Offers:
+    + Super Protocol: only displays offers provided by Super Protocol.
+    + Approved: only displays [community offers](/developers/fundamentals/offers#community-offers) reviewed by the Super Protocol team and [considered](/developers/marketplace/moderation/) acceptably operational.
+    + Unmoderated: only displays community offers that have not been reviewed yet. All new offers appear in this category.
+    + [Inactive](/developers/cli_guides/providers_offers/#inactive-offers): only diplays community offers that do not respond. These offers are nonfunctional and likely abandoned.
+- Categories: filters models and datasets by their main task.
+>>>>>>> develop
