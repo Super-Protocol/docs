@@ -5,6 +5,7 @@ slug: "/my-content/my-files/delete-content"
 sidebar_position: 5
 ---
 
+Убрать, как сюда попал. Написать лучше, зачем это вообще нужно, в каждом окне:
 To delete an [uploaded file](/ai-marketplace/my-content), open its menu by clicking the vertical ellipsis button on the [My Files](https://beta.marketplace.dev.superprotocol.com/my-files) screen and select **Delete File**.
 
 (image My Files, Delete File highlighted)

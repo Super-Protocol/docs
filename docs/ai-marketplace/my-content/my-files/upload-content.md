@@ -17,19 +17,10 @@ To upload a file, fill in the following fields:
 <br/>
 <br/>
 
-- **Content Name**: type any desired name.
+Написать, что все поля обязательные:
+
+- **Content Name**: type any desired name. -- меньше императива; написать, что это не то же самое, что имя файла
 - **Content Type**: select whether you are uploading a model or a dataset.
 - **Category**: choose the content categories from the drop-down menu. To remove a selected category, untick a checkbox next to it.
 - **Engine**: choose compatible AI engines from the drop-down menu. To remove a selected engine, untick a checkbox next to it.
 - **Upload file**: select a [TAR.GZ archive file](/ai-marketplace/guides/guide-upload#step-1-prepare-the-content) to upload.
-
-The **Requirements** section is optional. You can upload a file without filling it out. It contains the following parameters:
-
-- **CPU vCores**: number of CPUs; it can be fractional.
-- **CPU  RAM, GB**: RAM in gigabytes.
-- **GPU vCore**: number of GPUs; it can be fractional.
-- **GPU  RAM, GB**: VRAM in gigabytes.
-- **Disk, GB**: disk space in gigabytes.
-- **Bandwidth, Mbps**: bandwidth in megabits per second.
-- **Traffic, GB**: the amount of traffic in gigabytes.
-- **Ext.Port**: external port availability.

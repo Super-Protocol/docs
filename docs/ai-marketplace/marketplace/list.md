@@ -1,19 +1,17 @@
 ---
 id: "list"
-title: "List of Offers"
+title: "Models/Datasets"
 slug: "/marketplace/list"
 sidebar_position: 1
 ---
 
-The **Models** and **Datasets** screens display content [offered](/fundamentals/offers) for lease on the AI Marketplace. You can rent AI models and datasets by adding their offers to [orders](/fundamentals/orders). Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
+The **Models** and **Datasets** screens display content offered on the AI Marketplace. You can lease AI models and datasets listed here by adding them to orders. Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
 
-## Models/Datasets screen
-
-The table in the center of the screen contains the list of available offers.
-
-(image full screen, the table highlighted)
+(image full screen, UI elements highlighted and numbered)
 <br/>
 <br/>
+
+**[1] List of offers**:
 
 - **ID**: a unique offer identification number. It is incremental and continuous for model offers and dataset offers.
 - **Name**: the name given to the offer by its [provider](/fundamentals/offers#providers).
@@ -21,48 +19,15 @@ The table in the center of the screen contains the list of available offers.
 - **Price, hr**: price per hour for leasing the offer.
 - **Price, fix**: price for each use regardless of the lease duration.
 
-Use filters on the left side of the screen to narrow down the results.
-
-(image filters highlighted)
-<br/>
-<br/>
+**[2] Filters**:
 
 - **Compatible**:
     + **Show all**: displays all offers.
-    + **Show compatible**: only displays offers compatible with those already added to an order.
-- **Offers**:
-    + **Super Protocol**: only displays offers provided by Super Protocol.
-    + **Approved**: only displays [community offers](/fundamentals/offers#community-offers) reviewed by the Super Protocol team and [considered](/developers/marketplace/moderation/) acceptably operational.
-    + **Unmoderated**: only displays community offers that have not been reviewed yet. All new offers appear in this category.
-    + [**Inactive**](/developers/cli_guides/providers_offers/#inactive-offers): only diplays community offers that do not respond. These offers are nonfunctional and likely abandoned.
+    + **Show compatible**: only displays offers compatible with those already added to the order.
 - **Categories**: filters models and datasets by their main task.
 
-Click an offer to open an [Offer window](/ai-marketplace/marketplace/offer) with the offer description, [requirement slots](/fundamentals/slots#requirements), pricing, and other information.
+**[3] Table view options**: these buttons and menus allow you to sort the table content, switch between the table and tile views, and manage the table columns.
 
-(image one of the offers highlighted)
-<br/>
-<br/>
+**[4] Offer**: clicking an offer opens the [Offer window](/ai-marketplace/marketplace/offer) with the description, requirement slots, pricing, and other information.
 
-Click the blue **+** button to add the offer to an order. Click the **trash can** button to remove the offer from the order.
-
-(image blue + and trash buttons highlighted)
-<br/>
-<br/>
-
-Use the drop-down menu to sort out the table content.
-
-(image Newest drop-down highlighted)
-<br/>
-<br/>
-
-Click the **change view** button to switch between the table and tile views.
-
-(image tile button highlighted)
-<br/>
-<br/>
-
-While in the list view, click the cog button menu to show, hide, and rearrange table columns.
-
-(image cog button highlighted)
-<br/>
-<br/>
+**[5] Add and remove**: these buttons allow you to add or remove the offer from the order.

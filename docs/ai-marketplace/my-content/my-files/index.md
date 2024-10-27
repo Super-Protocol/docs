@@ -22,7 +22,7 @@ The table in the center of the screen contains the list of user-uploaded files.
 - **Storage**: the [storage](/ai-marketplace/my-content) to which the file was uploaded, either Super Cloud or personal Storj.
 - **Offer ID**: the identification number of the offer created from the uploaded file.
 
-To manage the uploaded content, open the menu by clicking the **vertical ellipsis** button.
+To manage the uploaded content, open the menu by clicking the **three vertical dots** button.
 
 (images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>)
 <br/>
@@ -39,6 +39,7 @@ Click the **+** button to add the uploaded file to an order. Click the **trash c
 <br/>
 <br/>
 
+Сдвинуть наверх, начать с этого:
 Click the **Upload File** button to open the **Upload Content** window. Read [How to Upload Content](/ai-marketplace/guides/guide-upload).
 
 (image Upload File highlighted)
