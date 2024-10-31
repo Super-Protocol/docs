@@ -115,15 +115,6 @@ Fill out the form in the [pop-up window](/ai-marketplace/my-content/my-files/upl
 - **Content Type**: select whether you are uploading a model or a dataset.
 - **Category**: choose the content categories from the drop-down menu.
 - **Engine**: choose compatible AI engines from the drop-down menu.
-- **Requirements** (optional): specify the requirements of the AI model or dataset:
-    + **CPU vCores**: number of CPUs; it can be fractional.
-    + **CPU  RAM, GB**: RAM in gigabytes.
-    + **GPU vCore**: number of GPUs; it can be fractional.
-    + **GPU  RAM, GB**: VRAM in gigabytes.
-    + **Disk, GB**: disk space in gigabytes.
-    + **Bandwidth, Mbps**: bandwidth in megabits per second.
-    + **Traffic, GB**: the amount of traffic in gigabytes.
-    + **Ext.Port**: external port availability.
 - **Upload file**: click **Select tar.gz archive** and select the TAR.GZ archive file you have prepared in [Step 1](/ai-marketplace/guides/guide-upload#step-1-upload-the-archive).
 
 Press **Upload** and wait for the process to complete. Do not close the window until the upload is done.
