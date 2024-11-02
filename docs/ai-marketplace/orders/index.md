@@ -5,6 +5,8 @@ slug: "/orders"
 sidebar_position: 6
 ---
 
+_Order_ on Super Protocol is a digital contract between a customer and provider.
+
 | **Document** | **Description** |
 | :- | :- |
 | [Order builder](/ai-marketplace/orders/order-builder) | 

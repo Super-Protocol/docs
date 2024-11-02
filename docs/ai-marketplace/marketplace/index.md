@@ -5,7 +5,7 @@ slug: "/marketplace"
 sidebar_position: 4
 ---
 
-The Super Protocol AI Marketplace is a distributed blockchain-based system that connects providers of AI models, datasets, and confidential computing resources and their customers.
+The Super Protocol AI Marketplace is a distributed blockchain-based system that connects customers with providers of AI models, datasets, and confidential computing resources.
 
 | **Document** | **Description** |
 | :- | :- |

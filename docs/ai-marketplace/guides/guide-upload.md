@@ -55,7 +55,7 @@ Pack the content into a TAR.GZ archive before uploading it to Super Protocol.
 
 ## Step 2. Select a storage provider
 
-Web3 users can [Select a storage](/ai-marketplace/my-content#select-a-storage-provider) to upload their files to:
+Web3 users can [Select a storage](/ai-marketplace/account#select-a-storage) to upload files to:
 
 - _Super Protocol cloud_: Super Protocol's Storj account.
 - _Your Storj account_: your personal Storj account.
@@ -70,9 +70,15 @@ This step is only for Web3 users who use a personal Storj account to upload file
 
 Register a [Storj](https://www.storj.io/) account if you do not have one yet. Both free Trial and Pro Storj accounts are suitable. However, with a Trial account, your files will become unavailable after the end of the trial period.
 
-Create a new project and a bucket. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for instructions.
+In the Storj dashboard, create a new project and a bucket. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for instructions.
 
-Create two S3 Access Keys for this bucket. One should provide the **Write** and **Delete** permissions, and the other—the **Read** and **List** permissions. Alternatively, create a single key with **Full Access** (**All permissions**). Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to generate S3 credentials.
+Then, create two S3 Access Keys for this bucket. One should provide the **Write** and **Delete** permissions, and the other—the **Read** and **List** permissions. Alternatively, create a single key with **Full Access** (or **All permissions**). Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to generate S3 credentials.
+
+S3 Credentials is a pair of keys:
+- Access Key that should look something like this: `jv7ke2msvqkyxffywr3qmc47ibxa`
+- Secret Key that should look something like this: `jzbf5fgqz56nlun2jhttpjoiapmowvbeuarpzeqb2t2wiivij3jvg`.
+
+Добавить про четыре ключа всего, расписать подробнее
 
 ### Add to the Marketplace account
 
