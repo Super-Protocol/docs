@@ -5,19 +5,13 @@ slug: "/my-content/my-files/edit-content"
 sidebar_position: 3
 ---
 
-To edit an [uploaded file](/ai-marketplace/my-content), open its menu by clicking the vertical ellipsis button on the [My Files](https://beta.marketplace.dev.superprotocol.com/my-files) screen and select **Edit**.
-
-(image My Files, Edit highlighted)
-<br/>
-<br/>
-
-In the pop-up window, change the parameters of the uploaded file.
+In the **Edit Content** window, you can change the metadata of the uploaded content.
 
 (image edit content window)
 <br/>
 <br/>
 
-- **Content Name**: type any desired name.
-- **Content Type**: select whether the content is a model or a dataset.
-- **Category**: choose the content categories from the drop-down menu.
-- **Engine**: choose compatible AI engines from the drop-down menu.
+- **Content Name**: any desired content name. It may differ from the name of the uploaded TAR.GZ archive.
+- **Content Type**: either an AI model or a dataset.
+- **Category**: the primary task for which the uploaded model or dataset is intended. Models can only belong to one category; datasets may belong to several categories. Category selection affects the list of compatible engines.
+- **Engine**: compatible AI engines. You can select multiple engines.

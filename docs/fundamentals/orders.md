@@ -16,9 +16,9 @@ There are two ways to create orders:
 - The [Marketplace GUI](/developers/marketplace) provides a more user-friendly experience, but you will be limited to the data and solution offers available on the Marketplace.
 - [CLI](/developers/cli_guides) offers the full functionality. Check the [Quick guide](/developers/cli_guides/quick_guide) to deploy your own solutions and data.
 
-Orders, just like everything else, are accessible on the blockchain. So, while the content inside a Trusted Execution Environment is confidential, the general information about the order is available to anyone.
+Orders are accessible on the blockchain just like everything else. So, while the content inside a Trusted Execution Environment is confidential, and the order results are encrypted, the general information about any order is available to anyone.
 
-The content of the order, including the order result, is encrypted. Only the customer knows the private key necessary to decrypt the result. The order result is kept by the storage suborder for as long as the customer keeps paying for it.
+The content of the order, including the order result, is encrypted. Only the customer knows the private key necessary to decrypt it. The order result is kept by the storage suborder for as long as the customer keeps paying for it.
 
 Every order and suborder has a unique identification number—_order ID_. It is incremental and continuous for both orders and suborders.
 

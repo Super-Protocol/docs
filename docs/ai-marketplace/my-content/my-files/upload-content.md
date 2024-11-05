@@ -5,22 +5,28 @@ slug: "/my-content/my-files/upload-content"
 sidebar_position: 1
 ---
 
-To [upload](/ai-marketplace/my-content) an AI model or a dataset to Super Protocol, click the **Upload File** button on the [My Files](https://beta.marketplace.dev.superprotocol.com/my-files) screen. Read [How to Upload Content](/ai-marketplace/guides/guide-upload).
+The Upload Content window allows you to upload files to Super Protocol. This serves two purposes:
 
-(image My Files, Upload File highlighted)
-<br/>
-<br/>
+- You can add your uploaded AI models and datasets to orders instead of Marketplace offers. Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
+- Registered providers can create offers to lease the uploaded models and datasets to other users.
 
-To upload a file, fill in the following fields:
+Web3 users can select a storage to upload files to in the [Account window](/ai-marketplace/account/web3):
+
+- Super Protocol's Storj account—Super Protocol cloud
+- Your personal Storj account.
+
+Demo users are limited to the Super Protocol cloud.
+
+Before uploading a model or dataset, pack it into a TAR.GZ archive. Read [How to Upload Content](/ai-marketplace/guides/guide-upload).
 
 (image upload window)
 <br/>
 <br/>
 
-Написать, что все поля обязательные:
+To upload a file, fill in all the fields:
 
-- **Content Name**: type any desired name. -- меньше императива; написать, что это не то же самое, что имя файла
-- **Content Type**: select whether you are uploading a model or a dataset.
-- **Category**: choose the content categories from the drop-down menu. To remove a selected category, untick a checkbox next to it.
-- **Engine**: choose compatible AI engines from the drop-down menu. To remove a selected engine, untick a checkbox next to it.
-- **Upload file**: select a [TAR.GZ archive file](/ai-marketplace/guides/guide-upload#step-1-prepare-the-content) to upload.
+- **Content Name**: any desired content name. It may be different from the name of the TAR.GZ archive you are uploading.
+- **Content Type**: either an AI model or a dataset.
+- **Category**: the primary task for which the uploaded model or dataset is intended. Models can only belong to one category; datasets may belong to several categories. Category selection affects the list of compatible engines.
+- **Engine**: compatible AI engines.
+- **Upload file**: click to select a TAR.GZ archive file to upload.

@@ -5,55 +5,33 @@ slug: "/my-content/my-files"
 sidebar_position: 1
 ---
 
-The [**My Files**] screen allows uploading and managing AI models and datasets. Users can add uploaded content to [orders](/fundamentals/orders) and create offers (not yet implemented in the current version of the AI Marketplace). Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
+The **My Files** screen allows you to upload and manage AI models and datasets.
 
-## My Files screen
-
-The table in the center of the screen contains the list of user-uploaded files.
-
-(image full screen, the table highlighted)
+(image full screen, UI elements highlighted and numbered)
 <br/>
 <br/>
 
-- **Type**: the type of the uploaded content (Model or Dataset).
-- **Name**: the content name given by the user.
-- **Date** Uploaded: the date and time the file was uploaded.
-- **Size**: file size in gigabytes.
-- **Storage**: the [storage](/ai-marketplace/my-content) to which the file was uploaded, either Super Cloud or personal Storj.
-- **Offer ID**: the identification number of the offer created from the uploaded file.
+**[1] Upload File**. This button allows you to upload content to Super Protocol. Read [How to Upload Content](/ai-marketplace/guides/guide-upload). Uploading files serves two purposes:
 
-To manage the uploaded content, open the menu by clicking the **three vertical dots** button.
+- You can add your uploaded AI models and datasets to orders instead of Marketplace offers. Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
+- Registered providers can create offers to lease the uploaded models and datasets to other users (not implemented yet).
 
-(images/ai-marketplace-18.png').default} width="800" height="auto" border="1"/>)
-<br/>
-<br/>
+**[2] The list of uploaded files**:
 
-- [**Info**]: check the uploaded content information.
-- [**Edit**]: change the name and type of the uploaded content.
-- [**Create offer**]: create an offer using the uploaded content (not yet implemented in this Marketplace version).
-- [**Delete content**]: delete the uploaded content.
+- **Type**: either **Model** or **Dataset**.
+- **Name**: the content name given by the user. Note that it may differ from the name of the uploaded file.
+- **Date Uploaded**: the date and time of the upload.
+- **Size**: file size in gigabytes. Check the file **Info** to learn the exact size in bytes.
+- **Storage**: the storage where the file was uploaded, either **Super Cloud** or **Storj**. Web3 users can select a storage to upload files to in the [Account window](/ai-marketplace/account/web3); Demo users are limited to the Super Protocol cloud.
+- **Offer ID**: the identification number of the offer created from the uploaded file. No number means no offer has been created yet.
 
-Click the **+** button to add the uploaded file to an order. Click the **trash can** button to remove the file from the order.
+**[3] View options**. This menu and button allow you to sort the table content and manage the table columns.
 
-(image blue + and trash buttons highlighted)
-<br/>
-<br/>
+**[4] Content management menu**. To open the menu, click the **three vertical dots** button:
 
-Сдвинуть наверх, начать с этого:
-Click the **Upload File** button to open the **Upload Content** window. Read [How to Upload Content](/ai-marketplace/guides/guide-upload).
+- [**Info**](/ai-marketplace/my-content/my-files/info): check the uploaded content information.
+- [**Edit**](/ai-marketplace/my-content/my-files/edit-content): edit the uploaded content's metadata, like the content name, type, categories, etc.
+- **Create offer**: create an offer using the uploaded content (not implemented yet).
+- [**Delete content**](/ai-marketplace/my-content/my-files/delete-content): delete the uploaded content.
 
-(image Upload File highlighted)
-<br/>
-<br/>
-
-Use the drop-down menu to sort out the table content.
-
-(image Newest drop-down highlighted)
-<br/>
-<br/>
-
-Click the cog button menu to show, hide, and rearrange table columns.
-
-(image cog button highlighted)
-<br/>
-<br/>
+**[5] Add and remove**. These buttons allow you to add or remove the offer from the order.
