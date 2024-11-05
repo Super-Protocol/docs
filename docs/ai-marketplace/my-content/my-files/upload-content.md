@@ -10,7 +10,7 @@ The Upload Content window allows you to upload files to Super Protocol. This ser
 - You can add your uploaded AI models and datasets to orders instead of Marketplace offers. Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
 - Registered providers can create offers to lease the uploaded models and datasets to other users.
 
-Web3 users can select a storage to upload files to in the [Account window](/ai-marketplace/account/web3):
+Web3 users can [select a storage](/ai-marketplace/account/web3) to upload files to in the Account window:
 
 - Super Protocol's Storj account—Super Protocol cloud
 - Your personal Storj account.
