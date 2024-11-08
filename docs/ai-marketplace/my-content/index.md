@@ -10,8 +10,6 @@ You can upload files to Super Protocol. This serves two purposes:
 - You can add your uploaded AI models and datasets to orders instead of Marketplace offers.
 - Registered providers can create offers to lease the uploaded models and datasets to other users.
 
-All files uploaded to Super Protocol are encrypted. No unauthorized parties, including the Super Protocol and Storj employees, can access the file contents.
-
 ## Table of contents
 
 | **Document** | **Description** |

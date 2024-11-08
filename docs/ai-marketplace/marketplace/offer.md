@@ -17,9 +17,7 @@ The **Offer** window displays detailed information about an [offer](/fundamental
 <br/>
 <br/>
 
-**[2] Pricing**: this tab contains offer's [requirement slots](/fundamentals/slots)—sets of offer requirements.
-
-The offer provider can define multiple requirement slots with different prices depending on expected usage. Higher requirements imply a higher expected workload, and the slot price may reflect that.
+**[2] Pricing**: this tab contains offer's [requirement slots](/fundamentals/slots)—how much resources an offer requires to run. The offer provider can define multiple requirement slots with different prices depending on expected usage. Higher requirements imply a higher expected workload, and the slot price may reflect that.
 
 **[3] Requirement slot**: a specific set of offer requirements and its price in TEE tokens.
 

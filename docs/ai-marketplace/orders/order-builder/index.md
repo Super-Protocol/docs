@@ -5,7 +5,7 @@ slug: "/orders/order-builder"
 sidebar_position: 1
 ---
 
-Order Builder is a tool for creating and placing [orders](/fundamentals/orders) on Super Protocol. Click Order in the header of any scree
+Order Builder is a tool for creating and placing orders on Super Protocol.
 
 ## Order Builder screen
 

@@ -11,10 +11,9 @@ The **My Files** screen allows you to upload and manage AI models and datasets.
 <br/>
 <br/>
 
-**[1] Upload File**. This button allows you to upload content to Super Protocol. Read [How to Upload Content](/ai-marketplace/guides/guide-upload). Uploading files serves two purposes:
+**[1] Upload File**. This button opens the [**Upload Content**](/ai-marketplace/my-content/my-files/upload-content) window that allows you to upload AI models and datasets to Super Protocol.
 
-- You can add your uploaded AI models and datasets to orders instead of Marketplace offers. Read [How to Place an Order](/ai-marketplace/guides/guide-place-order).
-- Registered providers can create offers to lease the uploaded models and datasets to other users (not implemented yet).
+Read [How to Upload Content](/ai-marketplace/guides/guide-upload).
 
 **[2] The list of uploaded files**:
 
@@ -27,7 +26,7 @@ The **My Files** screen allows you to upload and manage AI models and datasets.
 
 **[3] View options**. This menu and button allow you to sort the table content and manage the table columns.
 
-**[4] Content management menu**. To open the menu, click the **three vertical dots** button:
+**[4] Content management menu**:
 
 - [**Info**](/ai-marketplace/my-content/my-files/info): check the uploaded content information.
 - [**Edit**](/ai-marketplace/my-content/my-files/edit-content): edit the uploaded content's metadata, like the content name, type, categories, etc.
