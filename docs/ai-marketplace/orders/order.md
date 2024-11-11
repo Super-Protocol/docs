@@ -5,13 +5,11 @@ slug: "/orders/order"
 sidebar_position: 3
 ---
 
-This screen provides detailed information about an order.
+This screen provides detailed information about a placed order.
 
-_Order_ and _suborder_ on Super Protocol are a digital contracts between a customer and the providers of products and computing services calleed offers. The term _order_ always implies the usage of a compute offer. Every other offer added to the order creates a separate _suborder_ related to the main order. Models and datasets uploaded by the customer create no suborders.
+Note that the general information about orders and their suborders is visible to anyone. Blockchain is a transparent environment, and all orders are publicly accessible. However, the content of an order remains confidential and the order result is encrypted.
 
-Note that because a blockchain is a transparent environment, all orders are publicly accessible. So, while the content of an order remains confidential and the order result is encrypted, general information about an order is visible to anyone.
-
-Read about [Orders](/fundamentals/orders) to learn more.
+Learn more about [Orders](/fundamentals/orders).
 
 (image: full screen, UI elements highlighted and numbered)
 <br/>
@@ -24,9 +22,10 @@ Read about [Orders](/fundamentals/orders) to learn more.
 - **Blocked**: the solution and data providers generate access keys and authorize the compute provider to access the content. _ПЕРЕПИСАТЬ. Нужно придумать, что делать со словом provider, оно слишком многозначное_
 - **New**: the order is awaiting in the queue for the compute to become available.
 - **Processing**: the compute is executing the order inside a Trusted Execution Environment. Note that this status has different meanings depending on the order type:
+    _Поменять формулировки на Сашины:_
     + For Fine-tune orders, the compute is working with the data.
-    + For Deploy orders, the model is up and running.
-- **Done**: the computation is over, and the customer can download the order result. For Deploy orders, it also means the model is no longer working. For storage suborders, it means the order result is no longer available.
+    + For Deploy orders, the model is up and running. 
+- **Done**: the computation is over, and the customer can download the order result. For Deploy orders, it also means the model is no longer ПОДУМАТЬ НАД СЛОВОМ working. For storage suborders, it means the order result is no longer available for download.
 
 Additional possible statuses:
 
@@ -44,7 +43,7 @@ The **Financials** section shows payment-related information about the order:
 
 - **Cost To Date** is the total amount of TEE tokens spent on the order so far.
 - **Cost Per Hour** is the total cost of all the offers priced per hour. The order balance decreases by this amount every hour.
-- **Balance** is the remaining order balance. When it reaches zero, Deploy orders and storage suborders get the Done status. You can replenish the balance using the **Extend Lease** button.
+- **Balance** is the remaining order balance. When it reaches zero, Deploy orders and storage suborders ПЛОХОЕ СЛОВО _get_ the Done status. You can replenish the balance using the **Extend Lease** button.
 
 ## Tunnels section
 
@@ -80,6 +79,7 @@ Note that only the customer who placed the order can cancel it.
 
 The **Extend Lease** button opens a pop-up window that allows you to add TEE tokens to the order balance:
 
+- _Fine-tune ТОЖЕ_
 - For Deploy orders, replenishing the order balance increases the time the model will be operational.
 - For storage suborders, replenishing the order balance increases the time the order result will be available for download.
 
@@ -90,13 +90,16 @@ The **Get Result** button allows you to download a TAR.GZ archive file containin
 - The result of computation. For example, a new fine-tuned layer for a model.
 - Order logs. If the order was completed with an error, here you can check what went wrong.
 
+_Web3:_
 To download the order result, you must enter the order passphrase you created when you placed the order. If you lost the passphrase, there is no way to recover it, and you should place it again.
 
 Note that anyone can download the order result if they have the order passphrase.
 
+_Demo:_
+
 ## Providers tab
 
-The **Providers** tab contains short information about the order and its suborders:
+The **Providers** tab contains short information about the order and its suborders: ЗДЕСЬ МОЖНО ДАТЬ ССЫЛКУ на фандаменталз про сабордеры
 
 - **ID**
 - **Type**
@@ -138,7 +141,7 @@ The **Events** tab contains information on what is happening with the order:
 <br/>
 <br/>
 
-## Tunnel Orders
+## Tunnel Orders tab
 
 The **Tunnel Orders** tab contains information about tunnel orders related to the main order. It is visible only for orders that utilize tunnels. _РАСПИСАТЬ Tunnel Launcher и Tunnel Server, их сабордеры, пассфразу туннель сервера, Extend Lease, etc._
 
@@ -147,7 +150,7 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 - **Order ID**: a unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
 - **Offer**:
 - **Status**: current status of the order. [Read more](/ai-marketplace/orders#order-status) about statuses.
-- **Lease Remaining**: the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour. For Deploy orders, it is the duration the model will operate. For storage suborders, it is the duration the order result will remain available.
+- **Lease Remaining**: the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour. For Deploy orders, it is the duration the model will operate. For storage suborders, it is the duration the order result will remain available. _-- СОКРАТИТЬ, чтобы не было повторов, отправить назад_
 - **Cost to Date**: the total amount of TEE tokens spent on the order so far.
 - **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
 - **Balance**: the remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
