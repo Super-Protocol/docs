@@ -31,4 +31,4 @@ The **Models** and **Datasets** screens display content offered on the AI Market
 
 **[4]**. Clicking an offer opens the [Offer window](/ai-marketplace/marketplace/offer) with the description, requirement slots, pricing, and other information.
 
-**[5]**. The Add and Remove buttons allow you to add or remove the offer from the order.
+**[5]**. These buttons allow you to add or remove the offer from the order.
