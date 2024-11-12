@@ -7,7 +7,7 @@ sidebar_label: "request"
 
 Requests test TEE and POL tokens.
 
-This command is only available during the Testnet. Be mindful of [Testnet limitations](/testnet/limitations).
+This command is only available during the Testnet. Be mindful of [Testnet limitations](/marketplace/limitations).
 
 ## Syntax
 

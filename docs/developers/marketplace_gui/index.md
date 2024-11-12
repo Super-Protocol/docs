@@ -9,16 +9,16 @@ Marketplace graphical interface (GUI) is a user-friendly web interface to [Marke
 
 Go to Marketplace GUI: [**marketplace.superprotocol.com**](https://marketplace.superprotocol.com/)
 
-Follow the [First steps](/developers/marketplace/first-steps/) and [Marketplace walkthrough](/developers/marketplace/walkthrough/) guides to start using the Super Protocol Marketplace.
+Follow the [First steps](/developers/marketplace/first-steps) and [Marketplace walkthrough](/developers/marketplace/walkthrough) guides to start using the Super Protocol Marketplace.
 
 ## Content
 
 | **Guide**                                   | **Description**     |
 |:-------|:----------|
-| [First steps](/developers/marketplace/first-steps/)            | Set up MetaMask and Marketplace GUI   |
-| [Marketplace walkthrough](developers/marketplace/walkthrough/)  | Create a sample order in the Marketplace GUI         |
+| [First steps](/developers/marketplace/first-steps)            | Set up MetaMask and Marketplace GUI   |
+| [Marketplace walkthrough](/developers/marketplace/walkthrough)  | Create a sample order in the Marketplace GUI         |
 | [Check confidentiality](/developers/marketplace/confidentiality) | Check if a domain is secure and deployed inside a Trusted Execution Emvironment       |
-| [Moderation](/developers/marketplace/moderation/)                | Pass the offer verification to move your offer into the **Approved** category     |
+| [Moderation](/developers/marketplace/moderation)                | Pass the offer verification to move your offer into the **Approved** category     |
 
 ## Available in the Marketplace GUI
 

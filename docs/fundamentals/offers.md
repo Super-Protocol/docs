@@ -83,7 +83,7 @@ A _community offer_ is any offer not provided by Super Protocol. In the [Marketp
 - **Super Protocol**: offers provided by Super Protocol.
 - **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational.
 - **Unmoderated**: community offers that were not reviewed. All new offers appear in this category.
-- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#about-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information.
+- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information.
 
 <img src={require('../developers/images/gui_moderation_1.png').default} width="300" height="auto"/>
 

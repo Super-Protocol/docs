@@ -7,7 +7,7 @@ sidebar_position: 1
 
 This guide provides step-by-step instructions to help you set up MetaMask and access the Super Protocol Marketplace via the web-based [graphical user interface (GUI)](/developers/marketplace/). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
 
-The Marketplace GUI is available for anyone to browse even without the MetaMask extension installed. However, you need a Testnet Account to access the full functionality of Super Protocol Marketplace. If you don't have your Testnet access credentials yet, [apply to join](/testnet/). When your access is ready, you will receive a Testnet invitation letter with your Testnet Account address, Private Key, and Access Token.
+The Marketplace GUI is available for anyone to browse even without the MetaMask extension installed. However, you need a [Web3 account](/marketplace/account) to access the full functionality of Super Protocol Marketplace.
 
 The Super Protocol team sends out invites daily, but it may take a few days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request.
 
@@ -184,7 +184,7 @@ When you request tokens for the first time, the system asks you to enter your Ac
 <br/>
 <br/>
 
-Note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you can only request additional tokens once you spend some of them. Refer to testnet [limitations](/testnet/limitations).
+Note that there is a limit to the maximum balance of each token in one account. If you reach this limit, you can only request additional tokens once you spend some of them. Refer to testnet [limitations](/marketplace/limitations).
 
 :::caution Important!
 

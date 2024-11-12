@@ -15,16 +15,15 @@ Use the steps below as an outline of your learning curve with Super Protocol.
 
 If you are just starting out, feel your way around Super Protocol using the Marketplace GUI. 
 
-1. [Get access](/testnet/) to the Testnet.
-2. [Set up MetaMask](/developers/marketplace/first-steps) and connect to the Marketplace GUI.
-3. Complete the Marketplace [Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnel order to get familiar with the Super Protocol logic.
+1. [Set up MetaMask](/marketplace/guides/log-in) and connect to the Marketplace GUI.
+2. Complete the Marketplace [Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnel order to get familiar with the Super Protocol logic.
 
 ## Deploy a solution with CLI
 
 When you know the basics, try SPCTL—the Super Protocol CLI tool:
 
 1. [Configure SPCTL](/developers/cli_guides/configure) as a user.
-2. Read about the [fundamentals](/fundamentals), [Testnet limitations](/testnet/limitations), and key [CLI commands](/developers/cli_commands).
+2. Read about the [fundamentals](/fundamentals), [Testnet limitations](/marketplace/limitations), and key [CLI commands](/developers/cli_commands).
 3. Read the [Quick Deployment Guide](/developers/cli_guides/quick_guide) to learn about deploying your solutions.
 4. Choose a [deployment guide](/developers/deployment_guides/) to get an example for additional deployment scenarios.
 

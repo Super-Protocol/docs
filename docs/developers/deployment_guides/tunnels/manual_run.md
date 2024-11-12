@@ -40,7 +40,7 @@ Create an order for Tunnel Server using the `tunnel-server-data.json` file conta
 ./spctl workflows create --tee 1 --solution 6,2 --solution 11,10 --data tunnel-server-data.json --storage 25,30 --orders-limit 10 --min-rent-minutes 60
 ```
 
-**Tip:** to create order make sure that you have sufficient amount of TEE and POL tokens in your testnet wallet. You can get more tokens using the [tokens request](/developers/cli_commands/tokens/request) command. Be mindful of testnet [limitations](/testnet/limitations).
+**Tip:** to create order make sure that you have sufficient amount of TEE and POL tokens in your testnet wallet. You can get more tokens using the [tokens request](/developers/cli_commands/tokens/request) command. Be mindful of testnet [limitations](/marketplace/limitations).
 
 The last line of the output will look like this:
 
@@ -145,7 +145,6 @@ Workflow was created, TEE order id: ["XXXX"]
 
 Where XXXX is the order ID.
 
-
 ## Set up DNS
 
 Now, it's necessary for the Tunnel Client to connect with the Tunnel Server with its token. We will do this through DNS. Let's go back to the `result.txt` file you received from Tunnel Server order. The IP inside it is the address of your future server. You need to add two records to your domain's DNS:
@@ -189,7 +188,7 @@ For example, repeat some of the previous steps to deploy another couple of tunne
 
 ### Limits
 
-When creating an order in the example, the parameter `--min-rent-minutes` is set to 60. This means that the tunnel server and tunnel client will operate for 60 minutes. If needed, replace the minute value with the desired duration, but keep in mind that you may need more TEE tokens. Please refer to the testnet [limitations](/testnet/limitations).
+When creating an order in the example, the parameter `--min-rent-minutes` is set to 60. This means that the tunnel server and tunnel client will operate for 60 minutes. If needed, replace the minute value with the desired duration, but keep in mind that you may need more TEE tokens. Please refer to the testnet [limitations](/marketplace/limitations).
 
 ### Deploying your own solutions
 
