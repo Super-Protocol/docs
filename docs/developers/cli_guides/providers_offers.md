@@ -25,10 +25,6 @@ This guide requires a general understanding of Super Protocol basic concepts suc
 To set up a provider and create offers, you need:
 
 - Linux or macOS operating system. On Windows, install [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) (Windows Subsystem for Linux).
-- Super Protocol Testnet access. If you do not have it yet, [apply to join](/testnet/). The Super Protocol team sends out invites daily, but it may take several days if the number of requests is high. You can ask any Community Manager on the [Super Protocol Discord server](https://discord.gg/superprotocol) about the status of your request. When your access is ready, you will receive an email with your _Testnet user account_:
-  + _Testnet user account address_: the account public key
-  + _Testnet private key_: to import the Testnet wallet to MetaMask
-  + _Testnet access token_: to receive free test TEE and POL tokens.
 - [SPCTL](/developers/cli_guides/configure)—Super Protocol CLI tool for uploading your offers and creating an Offer Provisioner order.
 - [Storj](https://www.storj.io/) account, either Free Trial or Pro (optional).
 
@@ -75,7 +71,7 @@ To set up a provider and create an active offer, complete the following steps:
 1. [Prepare and upload the offer content](/developers/cli_guides/providers_offers#step-1-prepare-content). Use SPCTL to prepare your solution or data. Then, upload it to remote storage.
 2. [Set up provider accounts](/developers/cli_guides/providers_offers#step-2-set-up-accounts). Create three provider accounts using Provider Tools.
 3. [Configure the offer](/developers/cli_guides/providers_offers#step-3-configure-the-offer). Provide a general description of the offer, its properties, restrictions, and requirements.
-4. [Register the provider and offer](/developers/cli_guides/providers_offers#step-4-create-the-provider-and-offer) on the blockchain.
+4. [Register the provider and offer](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) on the blockchain.
 5. [Deploy the offer on Super Protocol](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). Create an Offer Provisioner order to make your offer available for customers.
 6. [Pass the Marketplace moderation](/developers/cli_guides/providers_offers#step-6-marketplace-moderation) to move your offer from the **Unmoderated** category to the **Approved** category in the Marketplace GUI.
 7. [Keep your offer alive](/developers/cli_guides/providers_offers#step-7-keep-your-offer-active). Ensure the offer content remains available and the Offer Provisioner order keeps running.
@@ -408,7 +404,7 @@ The `register` command initiates a series of steps:
 
 2. Provider Tools checks whether the provider with the Authority Account specified in `provider-tools-config.json` is already registered on the blockchain.
   + If the provider exists, the prompt will go to the next step.
-  + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#updating-provider-info) the provider description later.
+  + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#update-provider-info) the provider description later.
 
 3. Provider Tools asks if this provider already has a solution or data offer created on the blockchain. If you want to create a new offer, select `No`. Provider Tools then asks for the `offer-info.json` and `offer-slot.json` from [Step 3](/developers/cli_guides/providers_offers#step-3-configure-the-offer).
 
@@ -459,7 +455,7 @@ Without a response from Offer Provisioner, it is impossible to process an order.
 
 ### Create an Offer Provisioner order
 
-You should have received the command to launch an Offer Provisioner order in the output when you created the provider and offer in the [previous step](/developers/cli_guides/providers_offers#create-provider-and-offer). It should look like the following:
+You should have received the command to launch an Offer Provisioner order in the output when you created the provider and offer in the [previous step](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer). It should look like the following:
 
 ```
 ./provider-tools deploy <offerType> --path "/absolute/path/to/execution-controller"
@@ -553,7 +549,7 @@ Use the [`orders get`](/developers/cli_commands/orders/get) command to check the
 
 ### Update provider info
 
-It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#create-provider-and-offer) and use the [`providers update`](/developers/cli_commands/providers/update) SPCTL command from your current action account.
+It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/developers/cli_commands/providers/update) SPCTL command from your current action account.
 
 If you changed your action account address, update the Provider SPCTL's `config.json` with the new action account private key.
 
@@ -571,9 +567,9 @@ Similarly, you can use the [`offers add-slot`](/developers/cli_commands/offers/s
 
 ### Create additional offers
 
-To create a new offer in addition to an existing one on the same provider, back up the existing `data-execution-controller` or `solution-execution-controller` directory. Then, go through the guide again, starting with [Step 2](/developers/cli_guides/providers_offers#step-2-prepare-content).
+To create a new offer on the same provider, back up the existing `data-execution-controller` or `solution-execution-controller` directory. Then, go through the guide again, but skip Step 2 where you need to set up provider's accounts as you already have them configured.
 
-After you register the new offer in [Step 4](/developers/cli_guides/providers_offers/#step-4-create-the-provider-and-offer), Provider Tools adds a new object into the `PROVIDER_OFFERS_JSON` array in the `.env` file. Cancel the previous Offer Provisioner order and launch a new one using this updated `.env` file and `config.json` from the same `execution-controller` directory. This new Offer Provisioner order will serve both of your offers simultaneously.
+After you register the new offer in [Step 4](/developers/cli_guides/providers_offers/#step-4-register-the-provider-and-offer), Provider Tools adds a new object into the `PROVIDER_OFFERS_JSON` array in the `.env` file. Cancel the previous Offer Provisioner order and launch a new one using this updated `.env` file and `config.json` from the same `execution-controller` directory. This new Offer Provisioner order will serve both of your offers simultaneously.
 
 You can also manually edit the `PROVIDER_OFFERS_JSON` array in the `.env` file to add or remove offers. Recreate the Offer Provisioner order to apply changes.
 

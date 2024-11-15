@@ -24,20 +24,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "testnet",
-        path: "./docs/testnet",
-        routeBasePath: "/testnet",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "ai-marketplace",
-        path: "./docs/ai-marketplace",
-        routeBasePath: "/ai-marketplace",
+        id: "marketplace",
+        path: "./docs/marketplace",
+        routeBasePath: "/marketplace",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
@@ -60,7 +49,7 @@ const config = {
         redirects: [
           {
             from: "/",
-            to: "/testnet",
+            to: "/marketplace",
           },
         ],
       },
@@ -105,22 +94,15 @@ const config = {
         logo: {
           alt: "Super Protocol Logo",
           src: "navbar/images/logo.svg",
-          href: '/testnet'
+          href: '/marketplace'
         },
         items: [
           {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Testnet",
-            docsPluginId: "testnet",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "AI Marketplace",
-            docsPluginId: "ai-marketplace",
+            label: "Marketplace",
+            docsPluginId: "marketplace",
           },
           {
             type: "doc",
@@ -163,7 +145,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: ["developers", "ai-marketplace", "testnet", "whitepaper", "fundamentals"],
+      docsRouteBasePath: ["developers", "marketplace", "whitepaper", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,

@@ -38,7 +38,7 @@ For the Solution and Data offers Marketplace GUI has a special filter that divid
 * **Super Protocol** - offers produced by Super Protocol;
 * **Approved** - community offers that were reviewed by Super team and considered acceptably operational;
 * **Unmoderated** - community offers that were not reviewed, all offers end up here by default;
-* **Inactive** - offers that [did not respond](/developers/cli_guides/providers_offers#about-ec) to a request to create a new order, considered non-functional and likely abandoned.
+* **Inactive** - offers that [did not respond](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner) to a request to create a new order, considered non-functional and likely abandoned.
 
 For best results use offers either from Super Protocol or Approved categories. 
 
@@ -102,7 +102,7 @@ After you have added the compute configuration, let's see what is happening insi
 <br/>
 <br/>
 
-You can also customize your configuration. Modify these fields as you see fit, but be mindful of the [testnet limitations](/testnet/limitations). The auto-select will update the configurations list automatically. You can press the `Reset to Order Compatible` button to reset back to the requirements as added to your order.
+You can also customize your configuration. Modify these fields as you see fit, but be mindful of the [testnet limitations](/marketplace/limitations). The auto-select will update the configurations list automatically. You can press the `Reset to Order Compatible` button to reset back to the requirements as added to your order.
 
 <img src={require('../images/marketplace_8.png').default}/>
 

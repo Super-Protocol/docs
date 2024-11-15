@@ -39,7 +39,7 @@ Any Testnet 4 user can deploy their own Super Chat and share with friends. There
 * For beginners: Deploy using Marketplace GUI. Follow [this guide](/developers/marketplace/walkthrough).
 * For developers: Deploy by following the steps and examples in our CLI [deployment guides](/developers/deployment_guides/tunnels).
 
-Be mindful that any Super Chat orders, just like any other orders, are subject to the [Testnet limitations](/testnet/limitations).
+Be mindful that any Super Chat orders, just like any other orders, are subject to the [Testnet limitations](/marketplace/limitations).
 
 ## Guide
 
