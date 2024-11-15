@@ -17,7 +17,7 @@ Web3 users can [select a storage](/marketplace/account/web3) to upload files to 
 
 Demo users are limited to the Super Protocol cloud.
 
-Before uploading a model or dataset, pack it into a TAR.GZ archive. For detailed steps, refer to the guide on [How to Upload Content](/marketplace/guides/upload).
+Before uploading a model or dataset, pack it into a TAR.GZ archive. Read [How to Upload Content](/marketplace/guides/upload) for detailed instructions.
 
 (image upload window)
 <br/>

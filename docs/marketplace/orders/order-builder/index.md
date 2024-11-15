@@ -5,7 +5,7 @@ slug: "/orders/order-builder"
 sidebar_position: 1
 ---
 
-Order Builder is a tool for creating and placing orders on Super Protocol. Learn more about [Orders](/fundamentals/orders).
+Order Builder is a tool to pick the order's components, configure them, calculate prices, and place orders. Learn more about [Orders](/fundamentals/orders).
 
 (image: Order Builder full screen)
 <br/>
@@ -13,21 +13,25 @@ Order Builder is a tool for creating and placing orders on Super Protocol. Learn
 
 To build an order, you must select the **Order Type** and add main components:
 
-- **Model**
+- **Models**
 - **Datasets**
 - **Engine**
 - **Compute**
 
-For detailed steps, refer to the guide on [How to Place an Order](/marketplace/guides/place-order).
+Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
 ## Order Type
 
 **Order Type** determines the operating mode:
 
 - **Fine-tune** is an order to customize a pre-trained AI model for a specific purpose by creating an additional layer. This type of order performs a computation and generates a result. Once the order is complete, you can download the result as a file.
-- **Deploy** is an order to run a pre-trained AI model with a web interface. The model is accessible from the internet via secure tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time.
+- **Deploy** is an order to run a pre-trained AI model with a web interface. The model is accessible from the internet via secure confidential tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time. Learn more about [Tunnels](/fundamentals/tunnels).
 
-Learn more about [Tunnels](/fundamentals/tunnels).
+:::note
+
+Fine-tune orders are not yet available in the current version of the Marketplace.
+
+:::
 
 ## Model
 
@@ -43,7 +47,7 @@ To add a model to the order, use the blue **[+]** button next to the model or go
 
 :::warning
 
-A yellow warning icon indicates that the requirements of the selected model are not specified, and the system will not include the model to the automatic calculation of compute configuration. In this case, you should manually adjust the compute configuration before checkout to include the model's requirements.
+A yellow warning icon indicates that the requirements of the selected model are not specified, and the system will not include the model in the automatic calculation of the compute configuration. In this case, you should manually adjust the compute configuration before checkout to include the model's requirements.
 
 :::
 
@@ -51,17 +55,19 @@ A yellow warning icon indicates that the requirements of the selected model are 
 
 A dataset can be any data the model works with, for example, data for fine-tuning a model or a file with a new layer for Deploy orders.
 
-Selecting datasets is similar to selecting a model, but for Deploy orders, dataset is optional.
+Dataset is a mandatory component for Fine-tune orders, but optional for Deploy orders.
 
 :::note
 
-Datasets and Fine-tune orders are not availible yet in the current version of the Marketplace.
+Datasets are not yet available in the current version of the Marketplace.
 
 :::
 
 ## Engine
 
-The engine is required to launch an AI model and provide a user interface. You can select an engine offer only after adding the mandatory components to the order:
+The engine is required to launch an AI model and provide a user interface.
+
+You can add an engine offer only after adding the mandatory components to the order:
 
 - For Fine-tune orders: a model and dataset.
 - For Deploy orders: a model.
@@ -84,12 +90,12 @@ The **Engine** tab contains the main settings. Only make changes if you are conf
 
 For orders using tunnels, the engine settings will include the **Tunnels** tab with **Domain Settings**:
 
-- **Temporary Domain** uses pre-configured settings to create a domain on superprotocol.io with a generic name, for example, [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/).
-- **Manual Configuration** allows advanced users to host the model on a custom domain.
+- **Temporary Domain** uses pre-configured settings to create a domain on superprotocol.io with a generic name, for example, [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/). It is a recommended option that does not require additional setup.
+- **Manual Configuration** allows advanced users to host a model on a custom domain.
 
 ## Compute
 
-Compute refers to the confidential computing device that processes the order. You can select a compute only after adding the mandatory components to the order:
+Compute refers to a confidential computing device that processes the order. You can select a compute only after adding the mandatory components to the order:
 
 - For Fine-tune orders: a model, dataset, and engine.
 - For Deploy orders: a model and engine.
@@ -117,15 +123,18 @@ You can only select a single configuration slot for the order. However, to meet 
 
 The footer at the bottom of the screen displays the total costs of the offers added to the order:
 
-(image)
+(image: footer)
 <br/>
 <br/>
 
-These values are updated as you add more offers to the order:
+**Fixed** is the total cost in TEE tokens for all fixed-price offers added to the order. You will pay this sum immediately after placing the order.
 
-- **Fixed**: the total in TEE tokens for all fixed-price offers.
-- **Per Hour**: the total cost of all hourly-priced offers.
-- **Lease Time**: the duration for which you plan to lease the offers. Increasing the lease time raises the minimum deposit amount. For Fine-tune orders, ensure the lease time is sufficient to complete the computation. For Deploy orders, this is the duration the model will remain running. The lease time cannot exceed the maximum allowed lease time specified by any of the offers in the order.
-- **Pay now**: the initial order deposit required at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**). You can increase the deposit now by increasing the **Lease Time** or later while the order is processing.
+**Per Hour** is the total cost in TEE tokens of all hourly-priced offers added to the order. This sum will be gradually deducted from the order deposit for each hour the order is running.
 
-The **Checkout** button opens the [**Checkout** window](/marketplace/orders/order-builder/checkout), where you must create a passphrase and confirm the transaction to place the order.
+**Lease Time** is the duration in hours for which you plan to lease the offers. Increasing the lease time raises the initial deposit amount. For Fine-tune orders, ensure the lease time is sufficient to complete the computation. For Deploy orders, this is the duration for which the model will remain running.
+
+Note that some offers may have limits on the minimum and maximum allowed lease time. The lease time you are setting must be within the range defined by all offers in the order.
+
+**Pay now** is the initial order deposit you must pay at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**). You can increase the deposit now by increasing the **Lease Time** or later while the order is processing.
+
+The **Checkout** button opens the [**Checkout** window](/marketplace/orders/order-builder/checkout), where you must confirm the transaction to place the order.

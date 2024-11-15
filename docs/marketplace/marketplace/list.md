@@ -7,7 +7,7 @@ sidebar_position: 1
 
 This screen display AI models or datasets available on the Marketplace. You can lease AI models and datasets by adding them to orders. Read [How to Place an Order](/marketplace/guides/place-order) for detailed instructions.
 
-The list of offers in the center of the screen provides essential information about available offers:
+The list in the center of the screen provides essential information about available offers:
 
 (image: full screen tile view)
 <br/>
@@ -25,7 +25,7 @@ You can choose to view the list as either tiles or a table. The buttons in the t
 <br/>
 <br/>
 
-The list in the table view:
+The same list in the table view:
 
 (image: full screen table view)
 <br/>
