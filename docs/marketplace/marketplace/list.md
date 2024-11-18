@@ -5,7 +5,9 @@ slug: "/marketplace/list"
 sidebar_position: 1
 ---
 
-This screen display AI models or datasets available on the Marketplace. You can lease AI models and datasets by adding them to orders. Read [How to Place an Order](/marketplace/guides/place-order) for detailed instructions.
+This screen lists AI models or datasets offered for lease on the Marketplace. You can lease the content listed here by adding it to your orders. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
+
+## Offers
 
 The list in the center of the screen provides essential information about available offers:
 
@@ -13,13 +15,9 @@ The list in the center of the screen provides essential information about availa
 <br/>
 <br/>
 
-Use the filters on the left side of the screen to narrow down the list and quickly find specific offers:
+To add a model or dataset to an order, click the blue **[+]** button next to it or go to the **Pricing** tab in the **Offer** window.
 
-(image: filters)
-<br/>
-<br/>
-
-You can choose to view the list as either tiles or a table. The buttons in the top-right corner allow you to sort offers, switch between views, and customize table columns:
+You can view the list as either tiles or a table. The buttons in the top-right corner allow you to sort offers, switch between views, and customize table columns:
 
 (image: buttons)
 <br/>
@@ -41,4 +39,15 @@ In the table view, you can see the following columns:
 
 Clicking an offer opens the [**Offer** window](/marketplace/marketplace/offer), which provides further details such as descriptions, requirement slots, and pricing.
 
-To add a model or dataset to an order, click the blue **[+]** button next to it or go to the **Pricing** tab in the **Offer** window.
+## Filters
+
+Use the filters on the left side of the screen to narrow down the list and quickly find specific offers:
+
+(image: filters)
+<br/>
+<br/>
+
+In the current version of the Marketplace, you can only filter by the model category—the type of task that the model is designed to perform:
+
+- **Text Generation** is a Large Language Model (LLM) capable of processing text prompts written in natural human language and generating text responses. The best-known example is ChatGPT.
+- **Text-to-Image** is a model that generates images based on provided text instructions. The best-known examples are MidJourney and Stable Diffusion.

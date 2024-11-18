@@ -1,6 +1,6 @@
 ---
 id: "log-in"
-title: "How to Log In as a Web3 User"
+title: "How to Log In"
 slug: "/guides/log-in"
 sidebar_position: 1
 ---

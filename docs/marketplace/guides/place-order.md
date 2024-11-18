@@ -40,7 +40,7 @@ Click **Marketplace** if you want to add an offer from the Marketplace or **My C
 
 You can also add models right from the **Models** and **My Files** screens.
 
-Click the blue **[+]** button next to a model to add it to the order. Note that for offers, this adds the default requirement slot. To add another slot, click the model's name to open its **Offer** window and go to the **Pricing** tab.
+Click the blue **[+]** button next to a model to add it to the order. If the offer has multiple slots, this will open the **Offer** window with the list of slots.
 
 :::warning
 

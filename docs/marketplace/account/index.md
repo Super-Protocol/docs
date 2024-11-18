@@ -15,7 +15,7 @@ There are two types of accounts in Super Protocol:
 
 ## Web3 User account
 
-_Web3 User account_ is the recommended account type in Super Protocol. It provides access to all Marketplace features, including:
+_Web3 User account_ is the recommended account type in Super Protocol. It provides access to all Marketplace capabilities, including:
 
 - Full decentralization and sole control of user's funds, models, and datasets.
 - Ability to upload models and datasets to the Super Protocol cloud or a personal Storj account.
