@@ -5,30 +5,26 @@ slug: "/account/web3"
 sidebar_position: 1
 ---
 
-This window provides details about your [Web3 account](/marketplace/account#web3-account).
+This window allows you to manage your [Web3 account](/marketplace/account#web3-user-account).
 
 (image Demo Account window)
 <br/>
 <br/>
 
-**User ID**: your unique user ID; it is your ERC-20 wallet address.
+**User ID**: your unique user ID is your ERC-20 wallet address.
 
-**Login**: the Web3 login method and the ERC-20 wallet address you are using. Currently, Super Protocol only supports MetaMask.
+**Login**: the Web3 login method and the ERC-20 wallet address you are using. Currently, Super Protocol only supports MetaMask as a Web3 login method.
 
-**Storage**: as a Web3 user, you can select a storage to upload files to. The available options are:
+## Storage
 
-- **Super Protocol cloud**: Super Protocol's Storj account.
-- **Your Storj account**: your personal Storj account.
+You have two options of decentralized storage to upload files:
 
-Uploading to the Super Protocol cloud:
+- **Super Protocol cloud**:
+    + Does not require additional setup.
+    + Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
+    + Costs TEE tokens for additional storage beyond the basic free package.
+- **Your Storj account**:
+    + Requires creating and setting up a Storj account.
+    + Gives sole control over the uploaded content and storage account.
 
-- Does not require additional setup
-- Requires paying test TEE tokens to keep the uploaded files available (not implemented yet)
-- Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
-
-Uploading to a personal Storj:
-
-- Requires creating and setting up a Storj account
-- Gives sole control over the uploaded content.
-
-Read how to [Set up personal storage](/marketplace/guides/upload#step-3-set-up-personal-storage).
+Read [how to set up personal storage](/marketplace/guides/upload#step-3-set-up-personal-storage) for detailed instructions.

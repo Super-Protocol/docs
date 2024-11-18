@@ -5,45 +5,39 @@ slug: "/account"
 sidebar_position: 3
 ---
 
-Super Protocol offers two types of accounts:
+There are two types of accounts in Super Protocol:
 
-- Web3 account
-- Demo account
+- Web3 User account
+- Demo User account
 
 (image Enter Marketplace window)
 <br/>
-<br/>
 
-Accounts are generated automatically when you log in for the first time. You do not need to register an account manually.
+## Web3 User account
 
-## Web3 account
+_Web3 User account_ is the recommended account type in Super Protocol. It provides access to all Marketplace features, including:
 
-A _Web3 account_ is the primary type of account in Super Protocol. It provides the full functionality of the Marketplace, including:
+- Full decentralization and sole control of user's funds, models, and datasets.
+- Ability to upload models and datasets to the Super Protocol cloud or a personal Storj account.
+- Placement of orders with Marketplace offers or the user's own uploaded content.
+- Registration of individual providers and full control of earned funds and rewards.
+- Creation and monetization of model and dataset offers on the Marketplace.
+- Ability to request additional test TEE tokens.
 
-- Uploading files to the Super Protocol cloud or a personal Storj account.
-- Building and placing orders.
-- Registering providers and creating offers (not implemented yet).
+Read [How to Log In as a Web3 User](/marketplace/guides/log-in) for detailed instructions.
 
-To enter as a Web3 user, you need an ERC-20 wallet and the MetaMask browser extension configured for access to the Polygon Amoy testnet. Read the guide on [How to Log In](/marketplace/guides/log-in#as-a-web3-user) as a Web3 user.
+## Demo User account
 
-## Demo account
+_Demo User account_ is a quick way to start with the Marketplace. It streamlines a few steps, but this comes at the expense of full decentralization, such as using OAuth2 authentication for login instead of the decentralized MetaMask.
 
-A _Demo account_ offers a quick way to explore Super Protocol. It does not require MetaMask or an ERC-20 wallet; instead, it uses OAuth2 authentication through one of the following providers:
+Demo User accounts come with certain restrictions:
+
+- Uploading files is only possible to the Super Protocol cloud, not personal Storj accounts.
+- Offer creation is available only with the centralized Super Protocol provider.
+
+To log in as a Demo user, you need an account on one of the supported platforms:
 
 - Google
 - Hugging Face
 - GitHub
 - Microsoft
-- Facebook
-
-Every Demo account receives a limited amount of TEE tokens for placing orders but comes with functional restrictions.
-
-### Limitations for Demo Accounts
-
-Compared to Web3 accounts, Demo accounts have the following limitations:
-
-- Cannot upload files to personal Storj accounts and can only use Super Protocol cloud storage.
-- Cannot replenish their token balance.
-- Cannot register providers and create offers.
-
-Future updates to the Marketplace will introduce new features and, consequently, additional limitations for Demo accounts.

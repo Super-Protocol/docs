@@ -12,7 +12,7 @@ The primary purpose of this command is to make the uploading files available for
 - With the [`workflows create`](/developers/cli_commands/workflows/create) command, **users** can add the uploaded solution or data to an order instead of a Marketplace offer. In this case, a short-term storage period is enough.
 - Solution and data **providers** can store the contents of their offers to make them available for customers' orders. This requires a long-term storage period.
 
-Depending on the options, the command offers two ways to upload and store the files. Choose one that suits you better:
+Depending on the options, the command provides two ways to upload and store the files. Choose one that suits you better:
 
 - **Uploads to storage directly.** This requires a Storj account and SPCTL [configured](/developers/cli_guides/configure#set-up-storj) to use it. The command will upload the file to the root directory of the bucket specified in the SPCTL configuration file.
 - **Creates a storage order using a Marketplace storage offer.** This does not require a Storj account but requires paying TEE tokens for the order according to the offer pricing and selected lease duration.

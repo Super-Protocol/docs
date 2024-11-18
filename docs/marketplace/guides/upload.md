@@ -8,7 +8,7 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions on how to prepare and upload an AI model or dataset to Super Protocol. 
+This guide provides step-by-step instructions on how to prepare and upload an AI model or dataset to Super Protocol.
 
 ## Step 1. Prepare the content
 

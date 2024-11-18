@@ -9,6 +9,7 @@ This window allows you to add TEE tokens to the order balance and extend the lea
 
 - For Fine-tune orders, extending the lease may be necessary to complete the computation.
 - For Deploy orders, extending the lease increases the duration the model will remain operational.
+- For Tunnel orders, 
 - For storage suborders, it extends the period during which the order results will be available for download.
 
 When the order is complete, the remaining order deposit automatically returns to the customer's wallet.

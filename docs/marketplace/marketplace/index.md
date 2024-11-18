@@ -9,5 +9,5 @@ The Super Protocol Marketplace is a distributed blockchain-based system that con
 
 | **Document** | **Description** |
 | :- | :- |
-| [List of Offers](/marketplace/marketplace/list) | The **Models** and **Datasets** showcase screens display lists of respective offers. |
+| [List of Offers](/marketplace/marketplace/list) | The **Models** and **Datasets** screens display lists of available offers. |
 | [Offer](/marketplace/marketplace/offer) | The **Offer** window contains detailed information about an offer. |

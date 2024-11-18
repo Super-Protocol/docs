@@ -33,9 +33,7 @@ A _requirement slot_ is a specific set of offer requirements:
 - **Min Time** and **Max Time**: minimum and maximum lease time in hours. Note that the minimum lease time affects the initial order deposit. Learn more about [Lease, deposit, and balance](/fundamentals/orders/#lease-deposit-and-balance).
 - **slotID**: a unique identification number of the requirement slot. It is incremental and continuous for model offers and dataset offers.
 
-The offer provider can define multiple requirement slots with varying prices based on expected usage. Higher requirements imply a higher expected workload, and the slot price may reflect that.
-
-Learn more about [requirement slots](/fundamentals/slots#requirements).
+The offer provider can define multiple requirement slots with varying prices based on expected usage. Higher requirements imply a higher expected workload, and the slot price may reflect that. Learn more about [requirement slots](/fundamentals/slots#requirements).
 
 On the right side of the screen, you can see the offer's metadata:
 

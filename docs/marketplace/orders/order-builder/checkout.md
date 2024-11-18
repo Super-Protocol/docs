@@ -20,7 +20,7 @@ The confirmation process depends on the account type:
 
 The confirmation process also depends on the order type:
 
-- **Deploy** orders require confirmation of two separate transactions. This type of order launches confidential tunnels to make the running model accessible from the internet. These tunnels are created automatically by a separate **Tunnels Launcher** order, which requires an additional payment. Learn more about [confidential tunnels](/fundamentals/tunnels).
+- **Deploy** orders require confirmation of two separate transactions. This type of order launches confidential tunnels to make the running model accessible from the internet. These tunnels are created automatically by a separate **Tunnels Launcher** order, which requires an additional payment. Learn more about [Tunnels](/fundamentals/tunnels).
 - **Fine-tune** orders only require confirmation of a single transaction. This type of orders is not availible yet in the current version of the Marketplace.
 
 Once the order is placed successfully, you will be redirected to its [**Order** screen](/marketplace/orders/order).
