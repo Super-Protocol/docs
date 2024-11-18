@@ -8,7 +8,7 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions on how to prepare and upload an AI model or dataset to Super Protocol.
+This guide provides step-by-step instructions on how to prepare and upload an model or dataset to Super Protocol.
 
 ## Step 1. Select a storage
 
@@ -32,11 +32,7 @@ In the same Storj account dashboard, create two S3 Access Keys for this bucket. 
 - Access Key should look something like this: `jv7ke2msvqkyxffywr3qmc47ibxa`.
 - Secret Key should look something like this: `jzbf5fgqz56nlun2jhttpjoiapmowvbeuarpzeqb2t2wiivij3jvg`.
 
-One S3 Access Key should provide the **Write** and **Delete** permissions. The other—the **Read** and **List** permissions. Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to learn how to generate S3 Access Keys.
-
-As a result, you should have two Access Keys and two Secret Keys.
-
-### Set up Marketplace account
+One S3 Access Key should provide the **Write** and **Delete** permissions. The other one should provide the **Read** and **List** permissions. As a result, you should have two Access Keys and two Secret Keys. Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to learn how to generate S3 Access Keys.
 
 In the Marketplace web app, click on your account address in the top-right corner and select **Account**.
 

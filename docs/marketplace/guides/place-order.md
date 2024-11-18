@@ -16,8 +16,8 @@ Open Order Builder by clicking **Order** in the header of the Marketplace web ap
 
 **Order Type** determines the operating mode:
 
-- **Fine-tune** is an order to customize a pre-trained AI model for a specific purpose by creating an additional layer.
-- **Deploy** is an order to run a pre-trained AI model with a web interface.
+- **Fine-tune** is an order to customize a pre-trained model for a specific purpose by creating an additional layer.
+- **Deploy** is an order to run a pre-trained model with a web interface.
 
 :::note
 

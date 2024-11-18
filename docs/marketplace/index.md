@@ -22,7 +22,7 @@ Super Protocol is developing the new Marketplace in phases:
 - Phase 3: Marketplace
     + Creating and managing providers. 
     + Publishing models and datasets on the Marketplace.
-    + Fine-tuning and deploying AI models and datasets from the Marketplace.
+    + Fine-tuning and deploying models and datasets from the Marketplace.
 
 There will be more phases, but those three are in the immediate plans.
 

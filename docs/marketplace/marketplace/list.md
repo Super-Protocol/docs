@@ -5,7 +5,7 @@ slug: "/marketplace/list"
 sidebar_position: 1
 ---
 
-This screen lists AI models or datasets offered for lease on the Marketplace. You can lease the content listed here by adding it to your orders. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
+This screen lists models or datasets offered on the Marketplace. You can lease the content listed here by adding it to your orders. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
 ## Offers
 

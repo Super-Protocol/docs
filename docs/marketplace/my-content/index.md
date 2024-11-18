@@ -5,10 +5,19 @@ slug: "/my-content"
 sidebar_position: 5
 ---
 
-You can upload files to Super Protocol. This serves two purposes:
+**My Content** contains **My Files** with your uploaded files and **My Offers** with your offers created from the uploaded files.
 
-- You can add your uploaded AI models and datasets to orders instead of Marketplace offers.
-- Registered providers can create offers to lease the uploaded models and datasets to other users.
+You can reach it through the **My Content** menu in the header of the Marketplace web app, as shown on the following screenshot:
+
+(image: header, My Content menu expanded)
+<br/>
+<br/>
+
+:::note
+
+Registering providers and creating offers are not yet available in the current version of the Marketplace.
+
+:::
 
 ## Table of contents
 

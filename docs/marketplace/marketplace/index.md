@@ -5,9 +5,9 @@ slug: "/marketplace"
 sidebar_position: 4
 ---
 
-The Marketplace menu contains **Models** and **Datasets** offered for lease.
+The **Marketplace** menu contains **Models** and **Datasets** offered for lease.
 
-(image: footer, Marketplace menu expanded)
+(image: header, Marketplace menu expanded)
 <br/>
 <br/>
 

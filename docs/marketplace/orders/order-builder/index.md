@@ -24,8 +24,8 @@ Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step i
 
 **Order Type** determines the operating mode:
 
-- **Fine-tune** is an order to customize a pre-trained AI model for a specific purpose by creating an additional layer. This type of order performs a computation and generates a result. Once the order is complete, you can download the result as a file.
-- **Deploy** is an order to run a pre-trained AI model with a web interface. The model is accessible from the internet via secure confidential tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time. Learn more about [Tunnels](/fundamentals/tunnels).
+- **Fine-tune** is an order to customize a pre-trained model for a specific purpose by creating an additional layer. This type of order performs a computation and generates a result. Once the order is complete, you can download the result as a file.
+- **Deploy** is an order to run a pre-trained model with a web interface. The model is accessible from the internet via secure confidential tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time. Learn more about [Tunnels](/fundamentals/tunnels).
 
 :::note
 
@@ -65,7 +65,7 @@ Datasets are not yet available in the current version of the Marketplace.
 
 ## Engine
 
-The engine is required to launch an AI model and provide a user interface.
+The engine is required to launch an model and provide a user interface.
 
 You can add an engine offer only after adding the mandatory components to the order:
 

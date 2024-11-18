@@ -27,4 +27,4 @@ You have two options of decentralized storage to upload files:
     + Requires creating and setting up a Storj account.
     + Gives sole control over the uploaded content and storage account.
 
-Read [how to set up personal storage](/marketplace/guides/upload#step-3-set-up-personal-storage) for detailed instructions.
+Read [how to set up personal storage](/marketplace/guides/upload#set-up-your-storj-account) for detailed instructions.
