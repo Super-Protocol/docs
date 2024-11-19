@@ -5,13 +5,7 @@ slug: "/orders/order-builder"
 sidebar_position: 1
 ---
 
-Order Builder is a tool to pick the order's components, configure them, calculate prices, and place orders. Learn more about [Orders](/fundamentals/orders).
-
-(image: Order Builder full screen)
-<br/>
-<br/>
-
-To build an order, you must select the **Order Type** and add main components:
+Order Builder is a tool to configure and place orders. The main order components are the following:
 
 - **Models**
 - **Datasets**
@@ -20,12 +14,15 @@ To build an order, you must select the **Order Type** and add main components:
 
 Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
+(image: empty Order Builder full screen)
+<br/>
+
 ## Order Type
 
-**Order Type** determines the operating mode:
+Super Protocol supports two types of orders:
 
 - **Fine-tune** is an order to customize a pre-trained model for a specific purpose by creating an additional layer. This type of order performs a computation and generates a result. Once the order is complete, you can download the result as a file.
-- **Deploy** is an order to run a pre-trained model with a web interface. The model is accessible from the internet via secure confidential tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time. Learn more about [Tunnels](/fundamentals/tunnels).
+- **Deploy** is an order to run a pre-trained model with a web interface. The model is accessible from the internet via secure [confidential tunnels](/fundamentals/tunnels) deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time.
 
 :::note
 
@@ -35,25 +32,29 @@ Fine-tune orders are not yet available in the current version of the Marketplace
 
 ## Model
 
-A pre-trained model is a mandatory component for both types of orders. You can lease a model by selecting its offer from the **Marketplace**, or you can use your own model by uploading it to Super Protocol and adding it to the order from **My Content**.
+A pre-trained AI model is a mandatory component for both types of orders. You can lease a model from the **Marketplace**, or you can add your uploaded model from **My Content**.
 
-Clicking on **Marketplace** displays available offers. Clicking **My Content** displays your uploaded models. To narrow down the results, use the filters on the right side of the screen.
+(image: models)
+<br/>
+<br/>
 
-While browsing Marketplace offers, clicking the model's name opens the [**Offer** window](/marketplace/marketplace/offer), which provides a detailed description and pricing. Note that unlike offers, models from **My Content** do not have a price.
+To add a model to the order, click the blue **[+]** button next to it.
 
-To view the model's default requirement slot, expand the **Requirements** section. You can find the full list of the model's requirement slots in the **Pricing** tab within the model's **Offer** window.
+Clicking the model's name opens the [**Offer**](/marketplace/marketplace/offer) window. It provides a detailed description and pricing. Your uploaded models do not have such window, and they do not have a price.
 
-To add a model to the order, use the blue **[+]** button next to the model or go to the **Pricing** tab in the model's **Offer** window. Once you add a model, its settings may open for configuration.
+To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, then the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the full list of the model's requirement slots.
 
 :::warning
 
-A yellow warning icon indicates that the requirements of the selected model are not specified, and the system will not include the model in the automatic calculation of the compute configuration. In this case, you should manually adjust the compute configuration before checkout to include the model's requirements.
+If you add your uploaded model, a yellow warning icon will appear. It indicates that the requirements of the model are not specified. The system  will not include the model in the automatic calculation of the compute configuration.
+
+Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
 :::
 
 ## Datasets
 
-A dataset can be any data the model works with, for example, data for fine-tuning a model or a file with a new layer for Deploy orders.
+A dataset can be any data the model works with. For example, a dataset for fine-tuning a model or a file with a new layer for Deploy orders.
 
 Dataset is a mandatory component for Fine-tune orders, but optional for Deploy orders.
 
@@ -65,20 +66,16 @@ Datasets are not yet available in the current version of the Marketplace.
 
 ## Engine
 
-The engine is required to launch an model and provide a user interface.
+The engine is required to launch an model and provide a web UI.
 
-You can add an engine offer only after adding the mandatory components to the order:
+At the moment, Marketplace supports two AI engines:
 
-- For Fine-tune orders: a model and dataset.
-- For Deploy orders: a model.
+- Text Generation WebUI for text-to-text models.
+- ComfyUI for image- and video-related tasks.
 
-Clicking **Select AI engine** opens a list of engines compatible with the added model. Selecting an engine is similar to selecting a model. However, unlike models and datasets, engines are only available as Marketplace offers. Currently, users cannot upload engines, and Super Protocol is the sole provider of engine offers.
+The Super Protocol team will add more popular open-source AI engines in the future. Currently, user-uploaded engines are not allowed as they may have built-in vulnerabilities.
 
-:::warning
-
-A yellow warning icon indicates that the selected engine is incompatible with another offer or uploaded content already added to the order.
-
-:::
+To add an engine to the order, click the blue **[+]** button next to it. If a yellow warning icon appears, it indicates that the selected engine is incompatible with a selected model.
 
 Once you add an engine, its configuration will open:
 
@@ -86,55 +83,43 @@ Once you add an engine, its configuration will open:
 <br/>
 <br/>
 
-The **Engine** tab contains the main settings. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to malfunction. For detailed information about the settings, refer to the documentation for [Text Generation WebUI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
+The **Engine** tab contains the main settings specific for every engine. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation WebUI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 For orders using tunnels, the engine settings will include the **Tunnels** tab with **Domain Settings**:
 
-- **Temporary Domain** uses pre-configured settings to create a domain on superprotocol.io with a generic name, for example, [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/). It is a recommended option that does not require additional setup.
+- **Temporary Domain** uses pre-configured settings to create a domain on superprotocol.io with a generic name, for example, [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/). It is the recommended option that does not require additional setup.
 - **Manual Configuration** allows advanced users to host a model on a custom domain.
 
 ## Compute
 
-Compute refers to a confidential computing device that processes the order. You can select a compute only after adding the mandatory components to the order:
+The term _compute_ refers to a confidential computing device that processes the order.
 
-- For Fine-tune orders: a model, dataset, and engine.
-- For Deploy orders: a model and engine.
+To add a compute to the order, click the blue **[+]** button next to it. The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order.
 
-Clicking **Select Compute** opens a list of available compute offers. On the right side of the screen, you can adjust the required compute configuration:
+:::warning
 
-- **Price**. The slider allows you to limit the maximum price to narrow down the list of available compute offers.
-- **Slots**. Here, you can adjust the total required confidential compute resources:
-    + **CPU vCores**: number of CPU cores, can be fractional.
-    + **RAM, Gb**: amount of RAM in gigabytes (GB).
-    + **GPU vCores**: number of GPU cores, can be fractional.
-    + **GPU RAM**: amount of video RAM in gigabytes (GB).
-    + **Disk, Gb**: disk space in gigabytes (GB).
-- **Options**. Here, you can adjust the total required network-related resources:
-    + **Bandwidth, Mbps**: data transfer rate in megabits per second (Mbps).
-    + **Traffic, GB**: amount of traffic in gigabytes (GB).
-    + **Ext.Port**: availability of an external port for internet access; either **Yes** or **Any**.
-- **Lease**. Enter the minimum and maximum lease time to narrow down the list of available compute offers.
+If you added your uploaded model, a yellow warning icon will appear. It indicates that the requirements of the model are not specified. The system  will not include the model in the automatic calculation of the compute configuration.
 
-The selected compute configuration must meet or exceed the combined order requirements of the model, datasets, and engine added to the order. If the requirements of your uploaded models and datasets are not specified, and you add them to the order, you should manually adjust the automatically calculated requirements for the compute configuration.
+Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
-You can only select a single configuration slot for the order. However, to meet the order requirements, the system will automatically add this selected configuration slot multiple times if necessary. Learn more about [requirements and configurations](/fundamentals/slots).
+:::
 
-## Footer
+Learn more about [requirements and configurations](/fundamentals/slots).
 
-The footer at the bottom of the screen displays the total costs of the offers added to the order:
+## Checkout
+
+The panel at the bottom of the screen displays the total prices of the offers added to the order:
 
 (image: footer)
 <br/>
 <br/>
 
-**Fixed** is the total cost in TEE tokens for all fixed-price offers added to the order. You will pay this sum immediately after placing the order.
+**Fixed** is the total for all fixed-price offers. You will pay this sum immediately after placing the order.
 
-**Per Hour** is the total cost in TEE tokens of all hourly-priced offers added to the order. This sum will be gradually deducted from the order deposit for each hour the order is running.
+**Per Hour** is the total for all hourly-priced offers. This sum will be gradually deducted from the order deposit for each hour the order is running.
 
-**Lease Time** is the duration in hours for which you plan to lease the offers. Increasing the lease time raises the initial deposit amount. For Fine-tune orders, ensure the lease time is sufficient to complete the computation. For Deploy orders, this is the duration for which the model will remain running.
+**Lease Time** is the duration in hours for which you plan to run the order. Increasing the lease time raises the initial deposit amount. For Fine-tune orders, ensure the lease time is sufficient to complete the computation. For Deploy orders, this is the duration for which the model will remain running and available.
 
-Note that some offers may have limits on the minimum and maximum allowed lease time. The lease time you are setting must be within the range defined by all offers in the order.
-
-**Pay now** is the initial order deposit you must pay at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**). You can increase the deposit now by increasing the **Lease Time** or later while the order is processing.
+**Pay now** is the initial order deposit you must pay at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**). You can increase the deposit now by increasing the **Lease Time** or after checkout while the order is processing.
 
 The **Checkout** button opens the [**Checkout** window](/marketplace/orders/order-builder/checkout), where you must confirm the transaction to place the order.

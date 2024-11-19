@@ -5,7 +5,7 @@ slug: "/orders/order"
 sidebar_position: 3
 ---
 
-This screen provides detailed information about an order. Note that it is only available to the user who placed the order. Learn more about [Orders](/fundamentals/orders).
+This screen provides detailed information about an order. Note that this screen is only visible to the user who placed the order. Learn more about [Orders](/fundamentals/orders).
 
 (image: full screen, UI elements highlighted and numbered)
 <br/>
@@ -19,7 +19,7 @@ This screen provides detailed information about an order. Note that it is only a
 - **New**. The order is awaiting in the queue for the compute to become available.
 - **Processing**. The compute is executing the order inside a Trusted Execution Environment. Note that this status has different meanings depending on the order type:
     + For Fine-tune orders, the computation is in progress.
-    + For Deploy orders, the model is running normally.
+    + For Deploy orders, the model is running normally. -- _это неверно; модель работает хорошо и доступна, когда статус туннелей Online и есть ссылка_
     + _For Tunnel orders, the tunnel is deployed and running normally; the Tunnel client running the web server is available from the internet._
 - **Done**. This status also has different meanings depending on the order type:
     + For Fine-tune orders, the computation is done, and the customer can download the order result.
@@ -32,6 +32,8 @@ Additional possible statuses:
 - **Cancelling**: the order is being canceled by the customer's request.
 - **Canceled**: the order has been canceled successfully, and the remaining order deposit was transferred back to the customer's wallet.
 - **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button.
+
+Learn more about [statuses](/fundamentals/orders#order-status).
 
 **Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour.
 
@@ -69,20 +71,28 @@ Depending on the order status, different buttons are visible:
 <br/>
 <br/>
 
-The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that you should **Confirm** in MetaMask. If you **Reject** the transaction, the cancellation process will not proceed.
+### Cancel Order
+
+The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that _Web3 users_ should **Confirm** in MetaMask. If you **Reject** the transaction, the cancellation process will not proceed.
 
 (image: MetaMask, cancellation confirmation)
 <br/>
 <br/>
 
-The **Extend Lease** button opens the [**Extend Lease**](/marketplace/orders/order/extend-lease) window that allows you to add TEE tokens to the order balance and increase the time for which you lease the offers:
+### Extend Lease
+
+The **Extend Lease** button opens the **Extend Lease** window that allows you to add TEE tokens to the order balance:
 
 - For Fine-tune orders, it may be necessary to finish the computation.
 - For Deploy orders, it increases the time the model will be running.
-- _For Tunnel orders, it increases the time the tunnel will be deployed._
-- For storage suborders, it increases the time the order result will be available for download.
+
+(image)
+<br/>
+<br/>
 
 When the order is complete, all unspent TEE tokens on the order balance automatically return to the customer's wallet.
+
+### Get Result
 
 The **Get Result** button allows you to download a TAR.GZ archive file containing:
 
@@ -142,8 +152,6 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 - **Cost to Date**: the total amount of TEE tokens spent on the order so far.
 - **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
 - **Balance**: the remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
-
-_Tunnel Launcher, Get Result, passphrase, Tunnel Server, Extend Lease, etc._
 
 (image: Tunnel Orders tab)
 <br/>

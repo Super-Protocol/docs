@@ -16,7 +16,9 @@ Before your order can be processed, you must pay the initial order deposit. [**O
 The confirmation process depends on the account type:
 
 - **Web3 users** must confirm the transactions in the MetaMask window. If it does not appear automatically, manually open the MetaMask browser extension, select the transaction in the **Activity** tab, and confirm it.
-- **Demo users** do not need to confirm the transaction manually, as they pay using free TEE tokens they provided at account creation. The transaction is processed automatically.
+- **Demo users** do not need to confirm the transaction manually, _as they pay using free TEE tokens_ they provided at account creation. The transaction is processed automatically.
+
+_Дело в централизации, и не во фри токенах_
 
 The confirmation process also depends on the order type:
 
@@ -33,4 +35,4 @@ If an error occurs during transaction confirmation, you will see the error messa
 <br/>
 <br/>
 
-To retry, click the **Try again** button. If the error persists, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) for assistance.
+To retry, click the **Try again** button. If the error persists, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

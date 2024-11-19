@@ -2,7 +2,7 @@
 id: "edit-content"
 title: "Edit Content"
 slug: "/my-content/my-files/edit-content"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Use this window to change the metadata of the uploaded content.

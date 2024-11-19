@@ -7,14 +7,25 @@ sidebar_position: 1
 
 Testnet has a limited amount of compute resources. Super Protocol imposed limits on compute configurations and amounts of available tokens so everyone could participate in the testnet.
 
-If you feel your solution's additional uptime would benefit Testnet and other users, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol).
+## Model limitations
+
+The maximum model size is 7 billion parameters, the maximum file size is 10 GB.
+
+## Compute limitations
+
+## Token limitations
+
+## Marketplace GUI
+
+Deployed confidential use the Super Protocol temporary domain name such as [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/).
+
+_Old:_
 
 ### Order limits
 
 - Tunnel orders created by Tunnels Launcher expire after 72 hours, regardless of the deposit.
 - You can have up to two open orders. Orders in the Done, Error, or Canceled statuses do not count towards this limit. The total number of orders is unlimited.
 - Compute configurations for Marketplace offers cannot exceed the selected offer requirements more than twice. For example, if the sum of solutions and data requirements equals two CPU cores, then the maximum compute you can select is four CPU cores. The same applies to other parameters.
-- For uploaded solutions, the limit is 2 CPU cores, 100 MB of traffic, and 1 Mbit/sec bandwidth. The selected configuration cannot exceed this limit.
 
 ### Token limits
 
