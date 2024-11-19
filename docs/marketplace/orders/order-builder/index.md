@@ -24,8 +24,8 @@ Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step i
 
 **Order Type** determines the operating mode:
 
-- **Fine-tune** is an order to customize a pre-trained AI model for a specific purpose by creating an additional layer. This type of order performs a computation and generates a result. Once the order is complete, you can download the result as a file.
-- **Deploy** is an order to run a pre-trained AI model with a web interface. The model is accessible from the internet via secure confidential tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time. Learn more about [Tunnels](/fundamentals/tunnels).
+- **Fine-tune** is an order to customize a pre-trained model for a specific purpose by creating an additional layer. This type of order performs a computation and generates a result. Once the order is complete, you can download the result as a file.
+- **Deploy** is an order to run a pre-trained model with a web interface. The model is accessible from the internet via secure confidential tunnels deployed automatically by a separate order. The model continues to run as long as the order balance remains positive, without a set end time. Learn more about [Tunnels](/fundamentals/tunnels).
 
 :::note
 
@@ -65,7 +65,7 @@ Datasets are not yet available in the current version of the Marketplace.
 
 ## Engine
 
-The engine is required to launch an AI model and provide a user interface.
+The engine is required to launch an model and provide a user interface.
 
 You can add an engine offer only after adding the mandatory components to the order:
 
@@ -100,19 +100,19 @@ Compute refers to a confidential computing device that processes the order. You 
 - For Fine-tune orders: a model, dataset, and engine.
 - For Deploy orders: a model and engine.
 
-Clicking **Select Compute** opens a list of available compute offers. On the right side of the screen, you can manage the compute configuration:
+Clicking **Select Compute** opens a list of available compute offers. On the right side of the screen, you can adjust the required compute configuration:
 
-- **Price**. The slider allows you to adjust the maximum price to narrow down the list of available compute offers.
-- **Slots** section displays the sum of required compute resources:
+- **Price**. The slider allows you to limit the maximum price to narrow down the list of available compute offers.
+- **Slots**. Here, you can adjust the total required confidential compute resources:
     + **CPU vCores**: number of CPU cores, can be fractional.
-    + **CPU RAM, Gb**: amount of RAM in gigabytes.
+    + **RAM, Gb**: amount of RAM in gigabytes (GB).
     + **GPU vCores**: number of GPU cores, can be fractional.
-    + **GPU RAM**: amount of video RAM in gigabytes.
-    + **Disk, Gb**: disk space in gigabytes.
-- **Options** section displays the sum of required network-related resources:
-    + **Bandwidth, Mbps**: data transfer rate in megabits per second.
-    + **Traffic, GB**: amount of traffic in gigabytes.
-    + **Ext.Port**: external port for internet access.
+    + **GPU RAM**: amount of video RAM in gigabytes (GB).
+    + **Disk, Gb**: disk space in gigabytes (GB).
+- **Options**. Here, you can adjust the total required network-related resources:
+    + **Bandwidth, Mbps**: data transfer rate in megabits per second (Mbps).
+    + **Traffic, GB**: amount of traffic in gigabytes (GB).
+    + **Ext.Port**: availability of an external port for internet access; either **Yes** or **Any**.
 - **Lease**. Enter the minimum and maximum lease time to narrow down the list of available compute offers.
 
 The selected compute configuration must meet or exceed the combined order requirements of the model, datasets, and engine added to the order. If the requirements of your uploaded models and datasets are not specified, and you add them to the order, you should manually adjust the automatically calculated requirements for the compute configuration.

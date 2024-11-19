@@ -5,7 +5,11 @@ slug: "/marketplace"
 sidebar_position: 4
 ---
 
-The Super Protocol Marketplace is a distributed blockchain-based system that connects customers with providers of AI models, datasets, and confidential computing resources.
+The **Marketplace** menu contains **Models** and **Datasets** offered for lease.
+
+(image: header, Marketplace menu expanded)
+<br/>
+<br/>
 
 | **Document** | **Description** |
 | :- | :- |

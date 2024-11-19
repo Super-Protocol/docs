@@ -94,7 +94,7 @@ const config = {
         logo: {
           alt: "Super Protocol Logo",
           src: "navbar/images/logo.svg",
-          href: '/marketplace'
+          href: 'https://superprotocol.com/'
         },
         items: [
           {

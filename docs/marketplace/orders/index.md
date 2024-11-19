@@ -5,12 +5,14 @@ slug: "/orders"
 sidebar_position: 6
 ---
 
-_Order_ on Super Protocol is a digital contract between a customer and provider.
+This section includes 
 
 | **Document** | **Description** |
 | :- | :- |
-| [Order builder](/marketplace/orders/order-builder) | 
-| - [Compatibility Issues](/marketplace/orders/order-builder/compatibility) |
-| - [Checkout](/marketplace/orders/order-builder/checkout) | 
-| [All Orders](/marketplace/orders/all-orders) | 
-| [Order Screen](/marketplace/orders/order) |
+| [Order Builder](/marketplace/orders/order-builder) | Order Builder is a tool to pick the order's components, configure them, calculate prices, and place orders. |
+| - [Compatibility Issues](/marketplace/orders/order-builder/compatibility) | |
+| - [Checkout](/marketplace/orders/order-builder/checkout) | |
+| [All Orders](/marketplace/orders/all-orders) | |
+| [Order](/marketplace/orders/order) | |
+| - [Extend Lease](/marketplace/orders/order/extend-lease) | |
+| - [Create Passphrase](/marketplace/orders/order/passphrase) | |

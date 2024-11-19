@@ -19,10 +19,12 @@ This screen provides detailed information about an order. Note that it is only a
 - **New**. The order is awaiting in the queue for the compute to become available.
 - **Processing**. The compute is executing the order inside a Trusted Execution Environment. Note that this status has different meanings depending on the order type:
     + For Fine-tune orders, the computation is in progress.
-    + For Deploy orders, the AI model is running normally.
+    + For Deploy orders, the model is running normally.
+    + _For Tunnel orders, the tunnel is deployed and running normally; the Tunnel client running the web server is available from the internet._
 - **Done**. This status also has different meanings depending on the order type:
     + For Fine-tune orders, the computation is done, and the customer can download the order result.
     + For Deploy orders, the computation is done, the model is no longer running, and the customer can download the order result.
+    + _For Tunnel orders, the tunnel is no longer deployed; the Tunnel client and the web server are no longer available from the internet._
     + For storage suborders, the main order's result is no longer available for download.
 
 Additional possible statuses:
@@ -45,7 +47,7 @@ The **Financials** section shows payment-related information about the order:
 
 ## Tunnels
 
-The **Tunnels** section shows information about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+The **Tunnels** section informs about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
 
 **Status** indicates the current state of the tunnel:
 
@@ -73,10 +75,11 @@ The **Cancel Order** button lets you cancel the order and transfer the remaining
 <br/>
 <br/>
 
-The **Extend Lease** button opens the [**Extend Lease** window](/marketplace/orders/order/extend-lease) that allows you to add TEE tokens to the order balance and increase the time for which you lease the offers:
+The **Extend Lease** button opens the [**Extend Lease**](/marketplace/orders/order/extend-lease) window that allows you to add TEE tokens to the order balance and increase the time for which you lease the offers:
 
 - For Fine-tune orders, it may be necessary to finish the computation.
 - For Deploy orders, it increases the time the model will be running.
+- _For Tunnel orders, it increases the time the tunnel will be deployed._
 - For storage suborders, it increases the time the order result will be available for download.
 
 When the order is complete, all unspent TEE tokens on the order balance automatically return to the customer's wallet.
@@ -99,10 +102,7 @@ The **Providers** tab contains additional information about the order and its su
 - **Modified Date**
 - **Cost**
 
-To show, hide, and rearrange table columns, use the **cogwheel** button.
-
 (image: Providers tab)
-<br/>
 <br/>
 
 ## Events tab
@@ -127,7 +127,6 @@ The **Events** tab contains information on what is happening with the order:
 - **Txn Hash**: transaction hash. Clicking it opens the transaction in the OKLink block explorer.
 
 (image: Events tab)
-<br/>
 <br/>
 
 ## Tunnel Orders tab

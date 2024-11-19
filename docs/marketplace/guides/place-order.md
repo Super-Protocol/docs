@@ -16,8 +16,8 @@ Open Order Builder by clicking **Order** in the header of the Marketplace web ap
 
 **Order Type** determines the operating mode:
 
-- **Fine-tune** is an order to customize a pre-trained AI model for a specific purpose by creating an additional layer.
-- **Deploy** is an order to run a pre-trained AI model with a web interface.
+- **Fine-tune** is an order to customize a pre-trained model for a specific purpose by creating an additional layer.
+- **Deploy** is an order to run a pre-trained model with a web interface.
 
 :::note
 
@@ -40,7 +40,7 @@ Click **Marketplace** if you want to add an offer from the Marketplace or **My C
 
 You can also add models right from the **Models** and **My Files** screens.
 
-Click the blue **[+]** button next to a model to add it to the order. Note that for offers, this adds the default requirement slot. To add another slot, click the model's name to open its **Offer** window and go to the **Pricing** tab.
+Click the blue **[+]** button next to a model to add it to the order. If the offer has multiple slots, this will open the **Offer** window with the list of slots.
 
 :::warning
 
