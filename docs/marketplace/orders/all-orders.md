@@ -33,10 +33,8 @@ The drop-down menu and cogwheel button in the top-right corner allow you to sort
 <br/>
 <br/>
 
-The **Extend Lease** button allows you to add TEE tokens to the order balance:
+The **Extend Lease** button allows you to add TEE tokens to the balance of orders with the Suspended, Blocked, New, or Processing statuses:
 
 (image)
 <br/>
 <br/>
-
-Clicking the button opens the [**Extend Lease** window](/marketplace/orders/order/extend-lease). Note that this is only possible for orders with the Suspended, Blocked, New, or Processing statuses.

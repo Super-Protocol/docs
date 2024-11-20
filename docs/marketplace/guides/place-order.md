@@ -128,7 +128,11 @@ Note that placing a Deploy order also places a Tunnels order. So, you need to co
 
 Once the order is placed successfully, you will be redirected to its [**Order** screen](/marketplace/orders/order).
 
-## Handling errors
+## Keep a Deploy order running
+
+_Extend Lease for the main order and the Tunnel Server order._
+
+## Handle errors
 
 If an error occurs during transaction confirmation, you will see the error message in this window and a notification in the bottom-right corner of the screen.
 
