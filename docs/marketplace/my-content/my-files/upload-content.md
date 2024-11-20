@@ -17,7 +17,7 @@ Use this window to upload files—models and datasets. This allow you to do the 
 To upload a file, fill in all the fields:
 
 - **Content Name**: any desired content name. It may be different from the name of the TAR.GZ archive you are uploading.
-- **Content Type**: either an model or a dataset.
+- **Content Type**: either a model or a dataset.
 - **Category**: the type of task that the model is designed to perform. Models can only belong to one category; datasets may belong to several categories. Category selection affects the list of compatible engines.
 - **Engine**: compatible engines. Engine are required to launch models and provide a user interface.
 - **Upload file**: click to select a TAR.GZ archive file to upload.
