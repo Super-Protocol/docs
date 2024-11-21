@@ -16,7 +16,7 @@ Follow the [First steps](/developers/marketplace/first-steps/) and [Marketplace 
 | **Guide**                                   | **Description**     |
 |:-------|:----------|
 | [First steps](/developers/marketplace/first-steps/)            | Set up Metamask and Marketplace GUI   |
-| [Marketplace walkthrough](developers/marketplace/walkthrough/)  | Create a sample order in the Marketplace GUI         |
+| [Marketplace walkthrough](/developers/marketplace/walkthrough/)  | Create a sample order in the Marketplace GUI         |
 | [Check confidentiality](/developers/marketplace/confidentiality) | Check if a domain is secure and deployed inside a Trusted Execution Emvironment       |
 | [Moderation](/developers/marketplace/moderation/)                | Pass the offer verification to move your offer into the **Approved** category     |
 

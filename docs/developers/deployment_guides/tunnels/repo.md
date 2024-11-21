@@ -164,4 +164,4 @@ Now go to the tab `Actions` from your repository and run `Run Test App tunnel-cl
 
 You will have to change DNS manually. Get the order ID in the `last-orders` artifact for tunnel server and then use the order ID to download the order result for tunnel server, which will provide you the IP.
 
-Once you have the IP, you'll need to add two records to the DNS as in [Step 3: Setup DNS](/developers/deployment_guides/tunnels/manual_run#setup-dns).
+Once you have the IP, you'll need to add two records to the DNS as in [Step 3: Setup DNS](/developers/deployment_guides/tunnels/manual_run#set-up-dns).
