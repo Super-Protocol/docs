@@ -55,7 +55,7 @@ Pack a dataset or model into a TAR.GZ archive before uploading it to Super Proto
 
 ### Step 2. Upload the archive
 
-On the [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen, press the **Upload Content** button.
+On the **My Content** screen, press the **Upload Content** button.
 
 <img src={require('../images/ai-marketplace-15.png').default} width="800" height="auto" border="1"/>
 <br/>

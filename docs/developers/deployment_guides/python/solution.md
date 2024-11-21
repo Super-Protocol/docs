@@ -17,7 +17,7 @@ You need to have the following installed and configured:
 
 - [OpenSSL](https://www.openssl.org/) - you will need OpenSSL installed to generate solution signing key. Linux: by default, Ubuntu: `apt install openssl`, MacOs: `brew install openssl`.
 
-- [SPCTL](/developers/CLI_guides/) - our CLI tool, must be fully configured, including access to decentralized storage.
+- [SPCTL](/developers/cli_guides/) - our CLI tool, must be fully configured, including access to decentralized storage.
 
 ## Create folder structure
 

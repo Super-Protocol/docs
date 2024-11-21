@@ -5,7 +5,7 @@ slug: "/enter-marketplace/web3-access"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions on how to log in to the Super Protocol AI Marketplace via the [web app](https://beta.marketplace.superprotocol.com/) as a Web3 user.
+This guide provides step-by-step instructions on how to log in to the Super Protocol Marketplace via the [web app](https://marketplace.superprotocol.com/) as a Web3 user.
 
 :::note
 
