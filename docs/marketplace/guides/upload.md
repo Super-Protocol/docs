@@ -14,7 +14,7 @@ This guide provides step-by-step instructions on how to upload a model to Super 
 
 In the **My Files** screen, press the **Upload File** button.
 
-(image My Files screen; My Content menu expanded, Files highlighted; Upload Content button is highlighted)
+<img src={require('../images/myfiles-upload.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -25,8 +25,7 @@ Fill out the form in the **Upload Content** window that appears:
 - **Category**: choose the content categories from the drop-down menu. Models can only belong to one category; datasets may belong to several categories.
 - **Engine**: choose compatible AI engines from the drop-down menu.
 
-(image)
-<br/>
+<img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Step 2. Prepare the content
@@ -78,5 +77,5 @@ Back in the **Upload Content** window, click **Select tar.gz archive** and selec
 
 Press **Upload** and wait for the process to complete. Do not close the window until the upload is done.
 
-(images/ai-marketplace-17.png').default} width="400" height="auto" border="1"/>)
+<img src={require('../images/upload-content-done.png').default} width="auto" height="auto" border="1"/>
 <br/>

@@ -40,5 +40,5 @@ _Old:_
 The Super Protocol team has streamlined some configuration steps to simplify the Marketplace GUI for new users. For detailed configurations, use the [CLI](/developers/cli_guides/).
 
 - All orders created through the GUI use the storage offer [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25) by Super Protocol. Although your order results are saved to the Super Protocol Storj account, only you have the key. No one besides you can access the results, including the Super Protocol team.
-- Tunnels created using [Tunnels Launcher](/developers/offers/launcher) use the Super Protocol DNS. Your domain name will look like this: [nap-larn-nef.superprotocol.io](https://nap-larn-nef.superprotocol.io/).
+- Tunnels created using [Tunnels Launcher](/developers/offers/launcher) use the Super Protocol DNS. Your domain name will have a randomly generated name, for example, `nap-larn-nef.superprotocol.io`.
 - Tunnels Launcher orders have enough deposit for 72 hours. Not that these orders expire after 72 hours, even if you replenish the deposit.

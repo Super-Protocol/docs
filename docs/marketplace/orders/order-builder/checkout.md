@@ -7,7 +7,7 @@ sidebar_position: 1
 
 This window informs you about the creation of transactions on the blockchain, which is the final step in placing an order.
 
-(image: window)
+<img src={require('../../images/confirm-transactions.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -29,7 +29,7 @@ Once the order is placed successfully, you will be redirected to its [**Order** 
 
 If an error occurs during transaction confirmation, you will see the error message in this window and a notification in the bottom-right corner of the screen.
 
-(image: errors)
+<img src={require('../../images/confirm-transactions-error.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

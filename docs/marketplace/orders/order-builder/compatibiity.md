@@ -11,7 +11,7 @@ This window informs you about issues with your order. You must fix them before y
 
 This message appears when a selected dataset does not belong to the model's category. An example of such a message:
 
-(image: 2nd tile)
+<img src={require('../../images/compatibility-issues-2.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -23,7 +23,7 @@ To fix this issue, change the conflicting datasets.
 
 This message appears when the selected model or dataset belongs to a category that the engine does not support. An example of such a message:
 
-(image: 1st tile)
+<img src={require('../../images/compatibility-issues-1.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -35,7 +35,7 @@ To fix this issue, select another engine that will be compatible with the select
 
 This message appears when the selected compute configuration does not meet the combined requirements of the models, datasets, and engine added to the order.
 
-(image: 3rd tile)
+<img src={require('../../images/compatibility-issues-3.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -45,7 +45,7 @@ To fix this issue, change the order components or select a more capable compute 
 
 This message appears when the lease time you specified lies outside of the limits set by selected order components. An example of such a message:
 
-(image: 4th tile)
+<img src={require('../../images/compatibility-issues-4.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

@@ -10,7 +10,7 @@ Use this window to upload files—models and datasets. This allow you to do the 
 - Add your uploaded models and datasets to orders.
 - Create offers to lease the uploaded models and datasets to other users.
 
-(image upload window)
+<img src={require('../../images/upload-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

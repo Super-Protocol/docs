@@ -17,11 +17,11 @@ The Marketplace web app does not support mobile devices. Use a desktop or laptop
 
 ## Step 1. Create a new wallet address
 
-To log in as a Web3 user, you need the MetaMask browser extension and an Ethereum account or, in other words, ERC-20 wallet address.
+To log in as a Web3 user, you need the MetaMask browser extension and an Ethereum account or, using another term, an ERC-20 wallet address.
 
-:::note 
+:::note
 
-Super Protocol Marketplace is in an early beta stage, and bugs and unexpected behavior are possible. Although you can use an existing ERC-20 wallet address, it is recommended to create a new one specifically to test Super Protocol.
+Super Protocol Marketplace is in an early beta stage, and bugs and unexpected behavior are possible. Although you can use an existing ERC-20 wallet address, it is recommended that you create a new one specifically to test Super Protocol.
 
 :::
 
@@ -31,27 +31,27 @@ If you already have MetaMask installed, complete [Step 1-2](/marketplace/guides/
 
 ### Step 1-1. Install MetaMask
 
-Add the MetaMask extension to your browser from its [official website](https://metamask.io/) or directly from your browser's extension store. During the installation, choose **Create a new wallet**.
+Add the MetaMask extension to your browser from its [official website](https://metamask.io/) or your browser's extension store. During the installation, choose **Create a new wallet**.
 
-(image: Let's get started, agree checkbox, Create a new wallet button)
+<img src={require('../images/metamask-install-new.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Create a password. This password will only unlock your MetaMask browser extension. It does not affect your future ERC-20 wallet address.
+Create a password that will unlock your MetaMask browser extension.
 
-(image: Create password)
+<img src={require('../images/metamask-install-password.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Secure your wallet address by creating, saving, and confirming a 12-word Secret Recovery Phrase.
+When prompted to secure your wallet, select **Remind me later** for a quick start or **Secure my wallet** to be able to restore it if you uninstall MetaMask. You can secure your wallet any time later.
 
-(image: Secure your wallet)
+<img src={require('../images/metamask-install-secure.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-When you are done, you will see the address of your new ERC-20 wallet in the MetaMask extension window.
+You can find the address of your newly created wallet in the MetaMask extension window.
 
-(image: MetaMask)
+<img src={require('../images/metamask-install-complete.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -59,40 +59,38 @@ Skip Step 1-2, as you already have a new wallet, and go directly to [Step 2](/ma
 
 ### Step 1-2. Add new account
 
-If you already completed Step 1-1 and created a new wallet address, skip this step and go to [Step 2](/marketplace/guides/log-in#step-2-add-the-amoy-testnet).
+To create a new ERC-20 wallet address, open MetaMask and click your current account name at the top of the window.
 
-To create a new ERC-20 wallet address, open the MetaMask window and click your current account name at the top of the window.
-
-(image: account name highlighted)
+<img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Click **Add account or hardware wallet**.
+Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
 
-(image: Select an account)
+<img src={require('../images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Click **Add a new Ethereum account**.
+Type any desired account name and click **Add account**.
 
-(image: Add account)
+<img src={require('../images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Type any desired account name and click **Add account**. If you wish to recover this wallet address later, save its Secret Key. You can find in the **Account details**.
+If you wish to recover this wallet address later, save its Secret Key. You can find it in the **Account details**.
 
-(image: Select an account, menu opened)
+<img src={require('../images/metamask-newacc-details.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Step 2. Add the Amoy testnet
 
-In the MetaMask window, open the menu in the top-left corner and click **Add a custom network**.
+In the MetaMask window, open the menu in the top-left corner and press **Add a custom network**.
 
-(image: MetaMask, menu highlighted + Add a custom network))
+<img src={require('../images/metamask-testnet-add.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Set the following parameters and press **Save**.
+Set the following parameters and press **Save**:
 
 | **Field** | **Value** |
 | :- | :- |
@@ -104,34 +102,38 @@ Set the following parameters and press **Save**.
 
 You can change the network name if you like.
 
+<img src={require('../images/metamask-testnet-form.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
 Switch to the newly added network.
 
-(image: MetaMask, menu highlighted + Amoy))
+<img src={require('../images/metamask-testnet-switch.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Step 3. Connect the account
 
 In the main Marketplace screen, press the **Enter Marketplace** button.
 
-(images/ai-marketplace-07.png').default} width="800" height="auto" border="1"/>)
+<img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 Select **MetaMask**.
 
-(images/ai-marketplace-08.png').default} width="400" height="auto" border="1"/>)
+<img src={require('../images/enter-marketplace-mm.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 In the MetaMask window that appears, click **Connect** and then **Confirm** the signature request.
 
-(image: connect + confirm)
+<img src={require('../images/metamask-connect.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-(image: account address highlighted)
+<img src={require('../images/marketplace-web3acc.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Step 4. Request TEE and POL
@@ -143,13 +145,13 @@ Super Protocol users need two types of tokens:
 
 Both types are necessary to place orders. During the testnet, Super Protocol provides free tokens for testing purposes. To request them, open the **Account** setting.
 
-(image: account, menu)
+<img src={require('../images/marketplace-web3acc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 Click the **Get TEE** and **Get POL** buttons. You will get tokens in a couple of minutes.
 
-(image: buttons)
+<img src={require('../images/web3acc-teepol.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -167,6 +169,10 @@ You have two options of decentralized storage to upload files:
 
 - **Super Protocol cloud**
 - **Your Storj account**
+
+<img src={require('../images/web3acc-storage.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
 **Super Protocol cloud** is the recommended default option for most users. It does not require additional setup. Feel free to select this option and skip the following instructions.
 
@@ -191,15 +197,11 @@ One S3 Access Key should provide the **Write** and **Delete** permissions. The o
 
 In the Marketplace web app, open the **Account** window.
 
-(images/ai-marketplace-12.png').default} width="400" height="auto" border="1"/>)
+<img src={require('../images/marketplace-web3acc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 Select the **Your Storj account** radio button, fill in the fields, and click **Save**.
-
-(images/ai-marketplace-13.png').default} width="400" height="auto" border="1"/>)
-<br/>
-<br/>
 
 | **Field** | **Value** |
 | :- | :- |
@@ -209,3 +211,7 @@ Select the **Your Storj account** radio button, fill in the fields, and click **
 | WriteSecretAccessKey | Secret Key with the **Write** and **Delete** permissions |
 | ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
 | ReadSecretAccessKey | Secret Key with the **Read** and **List** permissions |
+
+<img src={require('../images/web3acc-storj.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>

@@ -12,10 +12,11 @@ Order Builder is a tool to configure orders from the main components:
 - **Engine**
 - **Compute**
 
-Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
-
-(image: empty Order Builder full screen)
+<img src={require('../../images/order-builder-empty.png').default} width="auto" height="auto" border="1"/>
 <br/>
+<br/>
+
+Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
 ## Order Type
 
@@ -34,21 +35,23 @@ Fine-tune orders are not yet available in the current version of the Marketplace
 
 A pre-trained AI model is a mandatory component for both types of orders. You can lease a model from the **Marketplace**, or you can add your uploaded model from **My Content**.
 
-(image: models)
-<br/>
-<br/>
-
 To add a model to the order, click the blue **[+]** button next to it.
 
 Clicking the model's name opens the [**Offer**](/marketplace/marketplace/offer) window. It provides a detailed description and pricing. Your uploaded models do not have such window, and they do not have a price.
 
 To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, then the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the full list of the model's requirement slots.
 
+If you add your uploaded model, a yellow warning icon will appear. 
+
+<img src={require('../../images/model-warning.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+It indicates that the requirements of the model are not specified. The system will not include the model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
+
 :::warning
 
-If you add your uploaded model, a yellow warning icon will appear. It indicates that the requirements of the model are not specified. The system will not include the model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
-
-Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
+Ensure your uploaded model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
 :::
 
@@ -79,7 +82,7 @@ To add an engine to the order, click the blue **[+]** button next to it. If a ye
 
 Once you add an engine, its configuration will open:
 
-(image: engine settings)
+<img src={require('../../images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -87,7 +90,7 @@ The **Engine** tab contains the main settings specific for every engine. Only ma
 
 For orders using tunnels, the engine settings will include the **Tunnels** tab with **Domain Settings**:
 
-- **Temporary Domain** uses pre-configured settings to create a domain on superprotocol.io with a generic name, for example, [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/). It is the recommended option that does not require additional setup.
+- **Temporary Domain** uses pre-configured settings to create a domain on `superprotocol.io` with a randomly generated name, for example, `mund-avys-kefs.superprotocol.io`. It is the recommended option that does not require additional setup.
 - **Manual Configuration** will allow advanced users to host a model on a custom domain. This feature is not yet available in the current version of the Marketplace.
 
 ## Compute
@@ -108,11 +111,7 @@ Learn more about [requirements and configurations](/fundamentals/slots).
 
 ## Checkout
 
-The panel at the bottom of the screen displays the total prices of the offers added to the order:
-
-(image: footer)
-<br/>
-<br/>
+The panel at the bottom of the screen displays the total prices of the offers added to the order.
 
 **Fixed** is the total for all fixed-price offers. You will pay this sum immediately after placing the order.
 

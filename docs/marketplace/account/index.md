@@ -10,7 +10,7 @@ There are two types of accounts in Super Protocol:
 - Web3 User account
 - Demo User account
 
-(image Enter Marketplace window)
+<img src={require('../images/enter-marketplace.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Web3 User account

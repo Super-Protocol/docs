@@ -7,7 +7,7 @@ sidebar_position: 2
 
 This screens displays the full list of the orders you placed on Super Protocol. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
-(image full screen)
+<img src={require('../images/all-orders.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

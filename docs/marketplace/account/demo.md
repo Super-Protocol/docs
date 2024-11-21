@@ -5,9 +5,9 @@ slug: "/account/demo"
 sidebar_position: 2
 ---
 
-This window shows the settings of your [Demo account](/marketplace/account#demo-user-account).
+This window shows the settings of your [Demo User account](/marketplace/account#demo-user-account).
 
-(image Demo Account window)
+<img src={require('../images/demo-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

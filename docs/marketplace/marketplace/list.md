@@ -7,25 +7,16 @@ sidebar_position: 1
 
 This screen lists models or datasets offered on the Marketplace. You can lease the content listed here by adding it to your orders. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
+<img src={require('../images/models-tiles.png').default} width="auto" height="auto" border="1"/>
+<br/>
+
 ## Offers
 
-The list in the center of the screen provides essential information about available offers:
+To add a model or dataset to an order, click the blue **[+]** button next to it.
 
-(image: full screen tile view)
-<br/>
-<br/>
+You can view the list as either tiles or a table. The buttons in the top-right corner allow you to sort offers, switch between views, and customize table columns. The same list in the table view:
 
-To add a model or dataset to an order, click the blue **[+]** button next to it or go to the **Pricing** tab in the **Offer** window.
-
-You can view the list as either tiles or a table. The buttons in the top-right corner allow you to sort offers, switch between views, and customize table columns:
-
-(image: buttons)
-<br/>
-<br/>
-
-The same list in the table view:
-
-(image: full screen table view)
+<img src={require('../images/models-table.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -41,11 +32,7 @@ Clicking an offer opens the [**Offer** window](/marketplace/marketplace/offer), 
 
 ## Filters
 
-Use the filters on the left side of the screen to narrow down the list and quickly find specific offers:
-
-(image: filters)
-<br/>
-<br/>
+Use the filters on the left side of the screen to narrow down the list and quickly find specific offers.
 
 In the current version of the Marketplace, you can only filter by the model category—the type of task that the model is designed to perform:
 

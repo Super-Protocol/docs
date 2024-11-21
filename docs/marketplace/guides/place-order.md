@@ -11,40 +11,44 @@ Marketplace has an integrated tool called **Order Builder** to pick the order's 
 
 ## Step 1. Select a model
 
-Select a model you want to deploy. You can use either a Marketplace offer or your model.
+Select a model you want to deploy. You can add either a model from Marketplace or your model.
 
 ### Marketplace offer
 
-To lease a model on Marketplace, open the list of available **Models**, as show on the following screenshot:
+To lease a model on Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model to add it to the order.
 
-(image header, Marketplace menu, Models)
+<img src={require('../images/models-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Click the blue **[+]** button next to a model to add it to the order. Once you added a model, open the **Order Builder**, as show on the following screenshot:
+Once you added a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
-(image: header, Order highlighted)
+<img src={require('../images/order-builder-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ### Your model
 
 To add your model, you must upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
 
-When your model is uploaded, open the list of your files, as show on the following screenshot:
+When your model is uploaded, open **My Files** with the list of your uploaded models and click the blue **[+]** button next to the model to add it to the order.
 
-(image header, My Content menu, Files)
+<img src={require('../images/myfiles-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Click the blue **[+]** button next to a model to add it to the order. Once you added a model, open the **Order Builder**, as show on the following screenshot:
+Once you added a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
-(image: header, Order highlighted)
+<img src={require('../images/order-builder-open.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+A yellow warning indicates that the requirements of the model are not specified. The system will not include the model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
+
+<img src={require('../images/model-warning.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 :::warning
-
-A yellow warning indicates that the requirements of the model are not specified. The system will not include the model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
 
 Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
@@ -52,13 +56,15 @@ Ensure your model fits into the total maximum compute configuration allowed for 
 
 ## Step 2. Add an engine
 
-In the **Order Builder**, click **Select AI engine** to open the list of engines compatible with the added model:
+In the **Order Builder**, click **Select AI engine** to open the list of engines compatible with the added model.
 
-(image: order builder, Engine highlighted)
+Click the blue **[+]** button to add the engine to the order.
+
+<img src={require('../images/order-builder-engine.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Click the blue **[+]** button to add the engine to the order and open its configuration. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
+Once the engine is added, its configuration will open. Only make changes if you are confident in what you are doing, as modifying the engine's settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 If a yellow warning icon appears, it indicates that the selected engine is incompatible with a selected model. Select another engine.
 
@@ -67,6 +73,10 @@ If a yellow warning icon appears, it indicates that the selected engine is incom
 Once you add an engine, click **Select Compute** to open the list of available confidential computing devices.
 
 Click the blue **[+]** button to add a compute to the order. The system calculates the compute configuration automatically.
+
+<img src={require('../images/order-builder-compute.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
 :::warning
 
@@ -83,29 +93,35 @@ The panel at the bottom of the screen displays the total prices:
 - **Lease Time** is the duration for which you plan to run the order.
 - **Pay now** is the initial order deposit you must pay at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**).
 
-(image: footer)
+Set the desired **Lease Time**.
+
+<img src={require('../images/order-builder-footer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Set the desired **Lease Time**. Note that increasing lease time increases the initial order deposit. You can also increase the deposit and, consequently, the lease time after checkout while the order is processing.
+Note that increasing lease time increases the initial order deposit. You can also increase the deposit and, consequently, the lease time after checkout while the order is processing. However, offers may have limits on the minimum and maximum allowed lease time. The lease time of your order must be within these limits. Refer to the [Testnet Limitations](/marketplace/limitations).
 
-The order's lease time must be within the limits set by all offers in the order. Refer to the [Testnet Limitations](/marketplace/limitations).
-
-Click the **Checkout** button. The system will check for [compatibility issues](/orders/order-builder/compatibility) you need to fix. If there are no issues, the order will proceed to the next step.
+Click the **Checkout** button. The system will check for [compatibility issues](/marketplace/orders/order-builder/compatibility) you need to fix. If there are no issues, the order will proceed to the next step.
 
 ## Step 5. Confirm transactions
 
 This step is for Web3 users only.
 
-Demo users do not need to confirm transactions, as they do not pay using decentralized wallets. Instead, payment relies on Super Protocol. The transactions are processed automatically.
+Demo users do not need to confirm transactions; they do not pay using decentralized wallets. Instead, their payment relies on Super Protocol. The transactions are processed automatically.
 
-Web3 users, however, must confirm two transactions in MetaMask, each transaction may take 15-30 second to appear. If the MetaMask browser extension do not open automatically, open it manually, select the transaction in the **Activity** tab, and confirm it.
+Web3 users, however, must confirm two transactions in MetaMask. The first transaction is for the main model's order, the second one is placed automatically to deploy a set of confidential tunnels to make the running model available from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
 
-(image)
+Each transaction may take 15-30 second to appear.
+
+<img src={require('../images/metamask-transaction.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-The first transaction is for the main model's order, the second one is placed automatically to deploy a set of confidential tunnels to make the running model available from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+If the MetaMask browser extension do not open automatically, open it manually, select the transaction in the **Activity** tab, and confirm it.
+
+<img src={require('../images/metamask-transaction-manually.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
 Once the Deploy order is placed successfully, you will be redirected to its **Order** screen.
 
@@ -113,7 +129,7 @@ Once the Deploy order is placed successfully, you will be redirected to its **Or
 
 Your order may take 20-30 minutes to process. You can check its status in the **Order** screen.
 
-(image: order screen)
+<img src={require('../images/order-full.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -121,13 +137,17 @@ When the model is deployed and available, you will see **Online** in the tunnel'
 
 To increase the time the model remains running, add tokens to the order deposit using the **Extend Lease** button.
 
-Learn more about the [**Order**](/marketplace/orders/order) screen and order statuses.
+<img src={require('../images/order-online.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Learn more about the [**Order**](/marketplace/orders/order) screen.
 
 ## Handling errors
 
 If an error occurs during transaction confirmation, you will see the error message in this window and a notification in the bottom-right corner of the screen.
 
-(image: errors)
+<img src={require('../images/error.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
