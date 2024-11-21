@@ -26,4 +26,4 @@ Super Protocol is developing the new Marketplace in phases:
 
 There will be more phases, but those three are in the immediate plans.
 
-Right now, Super Protocol has launched Phase 1 in a [closed beta](https://beta.marketplace.superprotocol.com). Any feedback would be very much appreciated—please join our [Discord server](https://discord.gg/superprotocol).
+Right now, Super Protocol has launched Phase 1 in a closed beta. Any feedback would be very much appreciated—please join our [Discord server](https://discord.gg/superprotocol).
