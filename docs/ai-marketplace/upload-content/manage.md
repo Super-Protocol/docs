@@ -5,7 +5,7 @@ slug: "/upload-content/manage"
 sidebar_position: 2
 ---
 
-The [**My Content**](https://beta.marketplace.superprotocol.com/my-content) screen contains the full list of the uploaded content files. To show, hide, and rearrange the table columns, open the menu by clicking the cog button.
+The **My Content** screen contains the full list of the uploaded content files. To show, hide, and rearrange the table columns, open the menu by clicking the cog button.
 
 <img src={require('../images/ai-marketplace-19.png').default} width="800" height="auto" border="1"/>
 <br/>
