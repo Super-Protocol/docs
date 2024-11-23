@@ -7,7 +7,7 @@ sidebar_position: 4
 
 Use this window to change the metadata of the uploaded content.
 
-(image edit content window)
+<img src={require('../../images/edit-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

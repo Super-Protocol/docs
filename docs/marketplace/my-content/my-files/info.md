@@ -7,7 +7,7 @@ sidebar_position: 2
 
 This window contains information about the uploaded file.
 
-(image info window)
+<img src={require('../../images/info.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

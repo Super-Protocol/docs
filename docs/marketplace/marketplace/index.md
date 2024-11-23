@@ -7,10 +7,6 @@ sidebar_position: 4
 
 The **Marketplace** menu contains **Models** and **Datasets** offered for lease.
 
-(image: header, Marketplace menu expanded)
-<br/>
-<br/>
-
 | **Document** | **Description** |
 | :- | :- |
 | [List of Offers](/marketplace/marketplace/list) | The **Models** and **Datasets** screens display lists of available offers. |

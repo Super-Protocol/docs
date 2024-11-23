@@ -5,7 +5,7 @@ slug: "/orders"
 sidebar_position: 6
 ---
 
-This section includes documentation related to creating and managing orders.
+This section contains documentation related to creating and managing orders.
 
 | **Document** | **Description** |
 | :- | :- |

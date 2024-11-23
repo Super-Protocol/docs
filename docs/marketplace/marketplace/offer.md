@@ -7,12 +7,12 @@ sidebar_position: 2
 
 This window provides detailed information about a model or dataset available for lease on the Marketplace.
 
-(image: full window, About tab opened)
+<img src={require('../images/offer-about.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Metadata
 
-On the right side of the screen, you can see the offer's metadata:
+On the right side of the window, you can see the offer's metadata:
 
 - **Offer ID**: a unique offer identification number. It is incremental and continuous for model offers and dataset offers.
 - **Offer Type**: the type of the offer, either **Model** or **Dataset**.
@@ -30,7 +30,7 @@ The **About** tab displays the general description of the offer's content given 
 
 The **Pricing** tab contains the offer requirements, detailing how many confidential computing resources the offer needs.
 
-(image: Pricing tab)
+<img src={require('../images/offer-pricing.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -54,6 +54,4 @@ The offer provider can configure multiple requirement slots with varying prices 
 
 To add the offer to an order, click the blue **[+]** button next to a slot. **Offer added to Order** in the bottom-right corner of the window indicates that a requirement slot was added to the order:
 
-(image: added)
-<br/>
-<br/>
+<img src={require('../images/offer-added.png').default} width="auto" height="auto" border="1"/>
