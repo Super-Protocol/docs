@@ -17,17 +17,17 @@ The Marketplace web app does not support mobile devices. Use a desktop or laptop
 
 ## Step 1. Create a new wallet address
 
-To log in as a Web3 user, you need the MetaMask browser extension and an Ethereum account or, using another term, an ERC-20 wallet address.
+To log in as a Web3 user, you need the MetaMask browser extension. MetaMask is one of the most popular software cryptocurrency wallets for Ethereum and EVM-compatible blockchains like Polygon.
+
+If you do not have MetaMask installed, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new Ethereum account or, using another term, an ERC-20 wallet address.
+
+If you already have MetaMask installed, complete [Step 1-2](/marketplace/guides/log-in#step-1-2-add-new-account) instead to create a new ERC-20 wallet address.
 
 :::note
 
-Super Protocol Marketplace is in an early beta stage, and bugs and unexpected behavior are possible. Although you can use an existing ERC-20 wallet address, it is recommended that you create a new one specifically to test Super Protocol.
+Super Protocol Marketplace is in an early beta stage, and bugs and unexpected behavior are possible. Although you can use an existing Ethereum wallet address, it is recommended that you create a new one specifically to test Super Protocol.
 
 :::
-
-If you do not have MetaMask installed, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new wallet address.
-
-If you already have MetaMask installed, complete [Step 1-2](/marketplace/guides/log-in#step-1-2-add-new-account) instead to create a new wallet address.
 
 ### Step 1-1. Install MetaMask
 

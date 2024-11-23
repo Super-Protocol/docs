@@ -11,17 +11,17 @@ Marketplace has an integrated tool called **Order Builder** to pick the order's 
 
 ## Step 1. Select a model
 
-Select a model you want to deploy. You can add either a model from Marketplace or your model.
+Select a model you want to deploy. You can add either a model from the Marketplace or your model.
 
 ### Marketplace offer
 
-To lease a model on Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model to add it to the order.
+To lease a model listed on the Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model you want to add to the order.
 
 <img src={require('../images/models-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Once you added a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
+Once you added the model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
 <img src={require('../images/order-builder-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -145,7 +145,7 @@ Learn more about the [**Order**](/marketplace/orders/order) screen.
 
 ## Handling errors
 
-If an error occurs during transaction confirmation, you will see the error message in this window and a notification in the bottom-right corner of the screen.
+If an error occurs during transaction confirmation, you will see an error message in this window and a notification in the bottom-right corner of the screen.
 
 <img src={require('../images/error.png').default} width="auto" height="auto" border="1"/>
 <br/>

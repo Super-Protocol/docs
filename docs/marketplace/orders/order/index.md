@@ -5,9 +5,9 @@ slug: "/orders/order"
 sidebar_position: 3
 ---
 
-This screen provides detailed information about an order. Note that this screen is only visible to the user who placed the order. Learn more about [Orders](/fundamentals/orders).
+This screen provides detailed information about an order. Note that this screen is only accessible to the user who placed the order. Learn more about [Orders](/fundamentals/orders).
 
-<img src={require('../../images/confirm-transactions-error.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../../images/order-full.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Order
@@ -95,10 +95,24 @@ The **Providers** tab contains additional information about the order and its su
 
 <img src={require('../../images/order-providers.png').default} width="auto" height="auto" border="1"/>
 <br/>
+<br/>
+
+- **ID**
+- **Type**
+- **Provider**
+- **Name**
+- **Status**
+- **Created Date**
+- **Modified Date**
+- **Cost**
 
 ## Tunnel Orders tab
 
-The **Tunnel Orders** tab contains information about tunnel orders related to the main order:
+The **Tunnel Orders** tab contains information about tunnel orders related to the main order. The tab is visible only for orders that utilize tunnels.
+
+<img src={require('../../images/order-tunnels.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
 - **Date Created** (hidden by default): the date and time when the customer placed the order.
 - **Date Modified**: the date and time of the latest change in the order status.
@@ -110,14 +124,13 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 - **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
 - **Balance**: the remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
 
-The tab is visible only for orders that utilize tunnels.
-
-<img src={require('../../images/order-tunnels.png').default} width="auto" height="auto" border="1"/>
-<br/>
-
 ## Events tab
 
-The **Events** tab contains information on what is happening with the order:
+The **Events** tab contains information on what is happening with the order.
+
+<img src={require('../../images/order-events.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
 - **Date**: the date and time of the event.
 - **Order ID**: the identification number of the order or suborder to which the event is related.
@@ -135,5 +148,3 @@ The **Events** tab contains information on what is happening with the order:
     + **OrderProfitWithdrawn**: the provider withdrew the offer payment from the order balance.
 - **Value**: transaction value in TEE tokens, if applicable.
 - **Txn Hash**: transaction hash. Clicking it opens the transaction in the [OKLink block explorer](https://www.oklink.com/).
-
-<img src={require('../../images/order-events.png').default} width="auto" height="auto" border="1"/>
