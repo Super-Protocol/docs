@@ -80,7 +80,7 @@ The Super Protocol team will add more popular open-source AI engines in the futu
 
 To add an engine to the order, click the blue **[+]** button next to it. If a yellow warning icon appears, it indicates that the selected engine is incompatible with a selected model.
 
-Once you add an engine, its configuration will open:
+Once you add an engine, its configuration will open.
 
 <img src={require('../../images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -97,11 +97,11 @@ For orders using tunnels, the engine settings will include the **Tunnels** tab w
 
 The term _compute_ refers to a confidential computing device that processes the order.
 
-To add a compute to the order, click the blue **[+]** button next to it. The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order.
+The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order. To add a compute to the order, click the blue **[+]** button next to it.
 
 :::warning
 
-If you added your uploaded model, a yellow warning icon will appear next to it. It indicates that the requirements of the model are not specified. The system will not include the model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
+The requirements of your uploaded models are not specified. The system will not include such a model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
 
 Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
