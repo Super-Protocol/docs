@@ -17,18 +17,18 @@ Governed by smart contracts, the Super Protocol Marketplace is a distributed blo
 
 Users who register a provider create offers to share and monetize their solutions, scripts, datasets, AI models, libraries, frameworks, etc. Currently, only Super Protocol provides compute and storage resources. In future releases, users will receive this functionality as well. [Read more](/fundamentals/offers) about providers, offers, and offer types.
 
-Customers place orders by adding offers and paying for them according to the prices set by the providers of these offers. [Read more](/fundamentals/orders) about orders, order statuses, pricing, and possible usage scenarios.
+Customers place orders by adding offers and paying for them according to the prices set by the providers of these offers. To learn more about orders, order statuses, pricing, and possible usage scenarios, refer to the [documentation](/fundamentals/orders).
 
-The Super Protocol Marketplace is accessible via
+The Super Protocol Marketplace is accessible via one of the following:
 
-- The command-line interface (CLI) using a special utility called [SPCTL](/developers/cli_guides), or
-- The graphical interface (GUI) using a browser-based [web application](https://marketplace.superprotocol.com/).
+- The command-line interface (CLI) using a special utility called SPCTL.
+- The graphical user interface (GUI) using a browser-based [web application](https://marketplace.superprotocol.com/).
 
 GUI is more convenient to browse offers, create orders, and download results. However, the full functionality of the Marketplace is only available through the CLI.
 
 ## Trusted Execution Environment
 
-A _Trusted Execution Environment_ is a secure area in memory, [CPU](https://www.intel.com/content/www/us/en/products/docs/accelerator-engines/software-guard-extensions.html), and [GPU](https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/). This area is protected from unauthorized access from the outside, so the data inside a Trusted Execution Environment cannot be read or edited without the authorized code.
+A _Trusted Execution Environment_ is a secure area in memory, [CPU](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html), and [GPU](https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/). This area is protected from unauthorized access from the outside, so the data inside a Trusted Execution Environment cannot be read or edited without the authorized code.
 
 Confidentiality is an integral part of Super Protocol. All the user data in Super Protocol is encrypted and protected while stored, in transfer, and in use.
 
@@ -38,7 +38,7 @@ Trusted Execution Environment ensures confidentiality and protects both provider
 
 Super Protocol users can register providers on Super Protocol. Providers can share and monetize their applications and datasets by offering them to other users. Since Super Protocol is still in the testnet stage, monetization is only possible with test tokens as a demonstration.
 
-Provider registration and offer creation are available for anyone to try. Currently, this functionality requires CLI and is aimed at advanced users. Upcoming releases will bring an updated Marketplace, additional features, and a more convenient GUI-based workflow. Refer to the [Providers and offers](/developers/cli_guides/providers_offers) guide to register a provider and create an offer.
+Provider registration and offer creation are available for anyone to try. Currently, this functionality requires CLI and is aimed at advanced users. Upcoming releases will bring an updated Marketplace, additional features, and a more convenient GUI-based workflow. Refer to the Providers and Offers guide for step-by-step instructions on how to register a provider and create an offer.
 
 ## Offers
 
@@ -53,7 +53,7 @@ When placing orders on Super Protocol, you can use existing offers or upload you
 
 Note that Super Protocol users do not buy offers, only rent them for a limited period. TEE ensures that the content of offers remains confidential.
 
-[Learn more](/fundamentals/offers) about the offers.
+Learn more about [Offers](/fundamentals/offers).
 
 ## Slots
 
@@ -61,16 +61,16 @@ Slots are also known as requirements and configurations. Strictly speaking, s
 
 In short, the _requirements_ are the compute resources that solutions and data need to run (vCores, RAM, Disk, Bandwidth, Traffic, External Port). The _configurations_ are the compute resources that run them. It is a very flexible system that can accommodate any usage scenario for the offer providers and the customers.
 
-Learn more about the slots [**here**](/fundamentals/slots).
+Learn more about [slots](/fundamentals/slots).
 
 ## Orders
 
 An _order_ involves paying the providers in TEE tokens for their products and services. The order manages the operational and financial settlements between the participants. Because Super Protocol is decentralized, the order system is P2P with no central authority. The centerpiece of an order is a confidential compute offer where solutions and data are executed in the TEE.
 
-Learn more about the orders [**here**](/fundamentals/orders).
+Learn more about [Orders](/fundamentals/orders).
 
 ## Tunnels
 
 The _tunnel protocol_ allows web services to run inside a TEE. The purpose of tunnels is load balancing, scalability, and protection from DDOS attacks. Tunnels consist of servers and clients, where the server has an external public IP. Multiple servers and clients may support a single domain. Ideally, each tunnel is hosted by a different compute provider to ensure stability, fault tolerance, and decentralization.
 
-Learn more about the tunnels [**here**](/fundamentals/tunnels).
+Learn more about [Tunnels](/fundamentals/tunnels).

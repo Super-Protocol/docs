@@ -63,7 +63,7 @@ As with solution and data offers, providers of storage offers can divide them in
 
 ## Providers
 
-Any Super Protocol user can [register a provider](/developers/cli_guides/providers_offers/) and create solution and data offers. This way, users can share and monetize their applications and datasets.
+Any Super Protocol user can register a provider and create solution and data offers. This way, users can share and monetize their applications and datasets.
 
 Besides the user Testnet account, providers also have three _provider accounts_:
 - _Authority account_ can change provider's records. It is the main provider account.
@@ -74,24 +74,20 @@ Because Super Protocol is still in the testnet stage, monetization is only possi
 
 Upcoming releases will bring an updated Marketplace, a more convenient GUI-based workflow, and additional features like creating compute and hardware offers.
 
-Besides, providers will have to pay a security deposit to register. If a provider is penalized, does not replenish the security deposit balance, and lets it decrease below the limit, then the provider's offers can no longer be added to orders. If a provider [disables](/developers/cli_commands/offers/offers/disable) all their offers, they may withdraw the remaining security deposit.
+Besides, providers will have to pay a security deposit to register. If a provider is penalized, does not replenish the security deposit balance, and lets it decrease below the limit, then the provider's offers can no longer be added to orders. If a provider disables all their offers, they may withdraw the remaining security deposit.
 
 ### Community offers
 
-A _community offer_ is any offer not provided by Super Protocol. In the [Marketplace GUI](/developers/marketplace/), the filter on the left side of the screen divides all offers into four categories:
+A _community offer_ is any offer not provided by Super Protocol. In the [Marketplace GUI](/marketplace), the filter on the left side of the screen divides all offers into four categories:
 
 - **Super Protocol**: offers provided by Super Protocol.
-- **Approved**: community offers [reviewed](/developers/marketplace/moderation/) by the Super Protocol team and considered acceptably operational.
+- **Approved**: community offers reviewed by the Super Protocol team and considered acceptably operational.
 - **Unmoderated**: community offers that were not reviewed. All new offers appear in this category.
-- **Inactive**: community offers that [do not respond](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner) and, therefore, are nonfunctional and likely abandoned. Read [Inactive offers](/developers/cli_guides/providers_offers#inactive-offers) for more information.
+- **Inactive**: community offers that do not respond and, therefore, are nonfunctional and likely abandoned.
 
-<img src={require('../developers/images/gui_moderation_1.png').default} width="300" height="auto"/>
+<img src={require('./images/gui_moderation_1.png').default} width="300" height="auto"/>
 
 <br/>
-
-### Offer posts on Discord
-
-All offers from the **Super Protocol** and **Approved** categories in the Marketplace GUI have dedicated posts in the [#offers](https://discord.com/channels/951018794590023681/1239934457041916035) channel on the Super Protocol Discord server. There, you can find descriptions, links, and other information. To quickly find an offer, search by its name or ID.
 
 ### Stuck orders
 
@@ -101,8 +97,8 @@ If you add a community offer to your order and the offer fails to respond, your 
 
 Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
-- If the offer content is no longer accessible because its [storage order has expired](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
-- If the lease on the [Offer Provisioner order has expired](/developers/cli_guides/providers_offers#lease-on-offer-provisioner). Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
+- If the offer content is no longer accessible because its storage order has expired. Due to confidentiality and security, the Super Protocol team cannot change the resource link in offers. In this case, you have to create your offer again.
+- If the lease on the Offer Provisioner order has expired. Create a new Offer Provisioner order and contact Super Protocol Community Managers [Discord](https://discord.gg/superprotocol). They will reactivate your offer.
 
 ## Metadata
 
@@ -127,7 +123,7 @@ Providers can set the rules to govern what offers can and cannot do.
 
 _Restrictions_ determine whether an offer has dependencies. The provider can make a solution or data offer run only with certain other offers of any type—compute, data, solution, and storage. On the other hand, compute and storage offers cannot impose restrictions.
 
-For example, if a Node.js-based solution depends on [Node.js Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D6), the offer provider must set up this solution offer to require the base image.
+For example, if a Node.js-based solution depends on Node.js Base Image, the offer provider must set up this solution offer to require the base image.
 
 Additionally, the provider can make the offer available only for certain customers.
 

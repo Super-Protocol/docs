@@ -111,12 +111,12 @@ const config = {
             label: "Fundamentals",
             docsPluginId: "fundamentals",
           },
-          {
+          /*{
             type: "doc",
             docId: "index",
             position: "right",
             label: "Developers",
-          },
+          },*/
           {
             type: "doc",
             docId: "index",
@@ -145,7 +145,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: ["developers", "marketplace", "whitepaper", "fundamentals"],
+      docsRouteBasePath: [/*"developers", */"marketplace", "whitepaper", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,

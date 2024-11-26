@@ -13,8 +13,8 @@ _Orders_ and _suborders_ on Super Protocol are digital contracts between a custo
 
 There are two ways to create orders:
 
-- The [Marketplace GUI](/developers/marketplace) provides a more user-friendly experience, but you will be limited to the data and solution offers available on the Marketplace.
-- [CLI](/developers/cli_guides) offers the full functionality. Check the [Quick guide](/developers/cli_guides/quick_guide) to deploy your own solutions and data.
+- The [Marketplace GUI](/marketplace) provides a more user-friendly experience, but you will be limited to the data and solution offers available on the Marketplace.
+- CLI offers additional functionality (has not yet been fully implemented).
 
 Orders are accessible on the blockchain just like everything else. So, while the content inside a Trusted Execution Environment is confidential, and the order results are encrypted, the general information about any order is available to anyone.
 
@@ -40,7 +40,7 @@ Storage and compute can only be provided by offers. Currently, only Super Protoc
 Depending on the solution, there are two typical usage scenarios:
 
 - One-off order performs a specific computation and produce a result. For example, using an AI model to run an inference on a batch of data or fine-tuning an AI model.
-- Long-term order runs an app, such as [Super Chat](/developers/offers/superchat/), an [oracle](/developers/deployment_guides/blockchain), or an LLM with a web-interface deployed using the [tunnels](/fundamentals/tunnels). It keeps running as long as the order has money on the balance.
+- Long-term order runs an app, such as an LLM with a web-interface deployed using [confidential tunnels](/fundamentals/tunnels). It keeps running as long as the order has money on the balance.
 
 ## Lease, deposit, and balance
 
@@ -69,7 +69,7 @@ Every offer has a cost set by its provider. The price can be either fixed or per
 
 ## Order status
 
-You can check the status of any order in the Marketplace GUI on the [**All orders**](https://marketplace.superprotocol.com/all-orders) page. In the Marketplace CLI, use the [`orders get`](/developers/cli_commands/orders/get) command.
+You can check the status of any order in the Marketplace GUI on the **All Orders** page. In the Marketplace CLI, use the `orders get` command.
 
 ### Compute order statuses
 
@@ -103,7 +103,7 @@ When the lease expires the suborder becomes **Done**. It means the order result 
 
 Typically the storage suborder is created when the main order is almost completed to keep the result available for the customer. However, sometimes there is no order result to store. In this case, the storage suborder is not created.
 
-Users can create independent storage orders to keep files, for example, for [community offers](/fundamentals/offers#community-offers). This functionality is only available in CLI using the [`files upload`](/developers/cli_commands/files/upload) command. Note that such orders do not appear in [**All orders**](https://marketplace.superprotocol.com/all-orders) in the Marketplace GUI.
+Users can create independent storage orders to keep files, for example, for [community offers](/fundamentals/offers#community-offers). This functionality is only available in CLI using the `files upload` command. Note that such orders do not appear in **All orders** in the Marketplace GUI.
 
 ### Cancelations
 
