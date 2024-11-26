@@ -11,7 +11,7 @@ Marketplace has an integrated tool called **Order Builder** to pick the order's 
 
 ## Step 1. Select a model
 
-Select a model you want to deploy. You can add either a model from the Marketplace or your model.
+Select a model you want to deploy. You can add either a model from the Marketplace or one you uploaded.
 
 ### Marketplace offer
 
@@ -21,14 +21,14 @@ To lease a model listed on the Marketplace, open the list of available **Models*
 <br/>
 <br/>
 
-Once you added the model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
+Once you add the model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
 <img src={require('../images/order-builder-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ### Your model
 
-To add your model, you must upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
+To add your own model, you must upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
 
 When your model is uploaded, open **My Files** with the list of your uploaded models and click the blue **[+]** button next to the model to add it to the order.
 
@@ -36,7 +36,7 @@ When your model is uploaded, open **My Files** with the list of your uploaded mo
 <br/>
 <br/>
 
-Once you added a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
+Once you add a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
 <img src={require('../images/order-builder-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -50,7 +50,7 @@ A yellow warning indicates that the requirements of the model are not specified.
 
 :::warning
 
-Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
+Ensure your model fits into the maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
 :::
 
@@ -64,7 +64,7 @@ Click the blue **[+]** button to add the engine to the order.
 <br/>
 <br/>
 
-Once the engine is added, its configuration will open. Only make changes if you are confident in what you are doing, as modifying the engine's settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
+Once you add the engine, its configuration will open. Only make changes if you are confident in what you are doing, as modifying the engine's settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 If a yellow warning icon appears, it indicates that the selected engine is incompatible with a selected model. Select another engine.
 
@@ -80,7 +80,7 @@ Click the blue **[+]** button to add a compute to the order. The system calculat
 
 :::warning
 
-If you added your uploaded model, ensure it fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
+If you add your uploaded model, ensure it fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
 
 :::
 
@@ -109,15 +109,15 @@ This step is for Web3 users only.
 
 Demo users do not need to confirm transactions; they do not pay using decentralized wallets. Instead, their payment relies on Super Protocol. The transactions are processed automatically.
 
-Web3 users, however, must confirm two transactions in MetaMask. The first transaction is for the main model's order, the second one is placed automatically to deploy a set of confidential tunnels to make the running model available from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+Web3 users, however, must confirm two transactions in MetaMask. The first transaction is for the main model's order; the second one is placed automatically to deploy a set of confidential tunnels to make the running model available from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
 
-Each transaction may take 15-30 second to appear.
+Each transaction may take 15-30 seconds to appear.
 
 <img src={require('../images/metamask-transaction.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-If the MetaMask browser extension do not open automatically, open it manually, select the transaction in the **Activity** tab, and confirm it.
+If the MetaMask browser extension does not open automatically, open it manually, select the transaction in the **Activity** tab, and confirm it.
 
 <img src={require('../images/metamask-transaction-manually.png').default} width="auto" height="auto" border="1"/>
 <br/>

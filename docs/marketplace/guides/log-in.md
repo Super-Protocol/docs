@@ -37,13 +37,13 @@ Add the MetaMask extension to your browser from its [official website](https://m
 <br/>
 <br/>
 
-Create a password that will unlock your MetaMask browser extension.
+Create a password. You will use it to unlock MetaMask.
 
 <img src={require('../images/metamask-install-password.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-When prompted to secure your wallet, select **Remind me later** for a quick start or **Secure my wallet** to be able to restore it if you uninstall MetaMask. You can secure your wallet any time later.
+When prompted to secure your wallet, select **Remind me later** for a quick start or **Secure my wallet** to be able to restore your wallet address if you uninstall MetaMask. You can secure your wallet any time later.
 
 <img src={require('../images/metamask-install-secure.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -59,7 +59,7 @@ Skip Step 1-2, as you already have a new wallet, and go directly to [Step 2](/ma
 
 ### Step 1-2. Add new account
 
-To create a new ERC-20 wallet address, open MetaMask and click your current account name at the top of the window.
+To create a new ERC-20 wallet address in the already installed MetaMask, click your current account name at the top of the MetaMask window.
 
 <img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -140,8 +140,8 @@ If you connect successfully, you will see your account address in the top-right 
 
 Super Protocol users need two types of tokens:
 
-- POL tokens: to pay for Polygon blockchain transactions.
-- TEE tokens: to pay for offers and receive payments in Super Protocol.
+- TEE tokens to pay and receive payments in Super Protocol.
+- POL tokens to pay for Polygon's Amoy blockchain transactions.
 
 Both types are necessary to place orders. During the testnet, Super Protocol provides free tokens for testing purposes. To request them, open the **Account** setting.
 
@@ -155,7 +155,7 @@ Click the **Get TEE** and **Get POL** buttons. You will get tokens in a couple o
 <br/>
 <br/>
 
-There is a limit on the daily amount of tokens you can get. Refer to the [Testnet Limitations](/marketplace/limitations).
+There is a limit to the daily amount of tokens you can get. Refer to the [Testnet Limitations](/marketplace/limitations).
 
 :::warning
 
@@ -180,7 +180,7 @@ You have two options of decentralized storage to upload files:
 
 Learn more about [types of storage](/marketplace/account/web3#storage).
 
-### Set up Storj account
+### Set up Storj
 
 Register a [Storj](https://www.storj.io/) account if you do not have one yet. Both free Trial and Pro Storj accounts are suitable. However, with a Trial account, your files will become unavailable after the end of the trial period.
 
@@ -193,7 +193,7 @@ In the same Storj account dashboard, create two S3 Access Keys for this bucket. 
 
 One S3 Access Key should provide the **Write** and **Delete** permissions. The other one should provide the **Read** and **List** permissions. As a result, you should have two Access Keys and two Secret Keys. Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to learn how to generate S3 Access Keys.
 
-### Set up Marketplace account
+### Set up the Marketplace account
 
 In the Marketplace web app, open the **Account** window.
 
