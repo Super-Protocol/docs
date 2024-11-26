@@ -13,7 +13,7 @@ _Offer providers_ share and monetize their applications and datasets by creating
 
 Offers are the basic building blocks of the Marketplace. Four types of offers exist in Super Protocol:
 
-- _Compute offers_: confidential computing resources to execute solutions and data inside a Trusted Execution Environment
+- _Compute offers_: confidential computing resources to execute solutions and data inside a Trusted Execution Environment.
 - _Solution offers_: applications such as AI frameworks, base images, tunnels, oracles, etc.
 - _Data offers_: AI models, webpages, configs, datasets, databases, etc.
 - _Storage offers_: decentralized storage, such as Storj, to keep the offer content, order results, and service files.
@@ -43,7 +43,7 @@ To balance the load and set better prices for the users, the compute provider ca
 
 Each solution or data offer is a combination of two parts:
 
-- A record on the blockchain containing the parameters that govern how to order the offer
+- A record on the blockchain containing the parameters that govern how to order the offer.
 - Files in decentralized storage that the compute provider downloads and executes.
 
 Every solution and data require certain amount of computer resources to run. Solution and data providers can define sets of such requirements called _requirement slots_ and price them differently. Refer to [Requirements](/fundamentals/slots#requirements) to learn more.
@@ -56,7 +56,7 @@ Storage offers are necessary to store the order results. It is also possible to 
 
 A storage offer is a combination of two parts:
 
-- A record on the blockchain containing the parameters that govern how to order the offer
+- A record on the blockchain containing the parameters that govern how to order the offer.
 - A decentralized storage account to upload and download files.
 
 As with solution and data offers, providers of storage offers can divide them into [slots](/fundamentals/slots#requirements). Every slot can have a different price depending on the disk space and lease time.
@@ -66,6 +66,7 @@ As with solution and data offers, providers of storage offers can divide them in
 Any Super Protocol user can register a provider and create solution and data offers. This way, users can share and monetize their applications and datasets.
 
 Besides the user Testnet account, providers also have three _provider accounts_:
+
 - _Authority account_ can change provider's records. It is the main provider account.
 - _Action account_ executes actions on behalf of the authority account.
 - _Token receiver account_ receives rewards in TEE tokens for providing offers on Super Protocol.
@@ -104,17 +105,17 @@ Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 
 Every offer comes with the following descriptive parameters:
 
-- **Type**: offer types are
-    + compute
-    + solution
-    + data
-    + storage
-- **Id**: unique identification number of the offer
-- **Description**: text description of the offer
-- **Provider**: name of the provider who created the offer
-- **Published date**: the date when the offer was created
-- **Updated date**: the date when changes were made to the offer
-- **MRENCLAVE**: value that represents the hash of the code and data inside a Trusted Execution Environment
+- **Type**:
+    + Compute
+    + Solution
+    + Data
+    + Storage
+- **Id**: unique identification number of the offer.
+- **Description**: text description of the offer.
+- **Provider**: name of the provider who created the offer.
+- **Published date**: the date when the offer was created.
+- **Updated date**: the date when changes were made to the offer.
+- **MRENCLAVE**: value that represents the hash of the code and data inside a Trusted Execution Environment.
 - **MRSIGNER**: value for identifying the signing entity of a Trusted Execution Environment.
 
 ## Rules
@@ -136,13 +137,13 @@ _Configuration slots_ are sets of compute-related parameters of compute offers:
 - The number of CPU cores
 - RAM
 - Disk space
-- Minimum and maximum [lease time](/fundamentals/orders#lease-deposit-and-balance).
+- Minimum and maximum [lease time](/fundamentals/orders#lease-deposit-and-balance)
 
 _Configuration options_ are sets of network-related parameters of compute offers:
 
 - Bandwidth
 - Traffic
-- External port availability.
+- External port availability
 
 Compute providers can create multiple configuration slots and options for every offer and price them differently. The customer must choose a compute configuration to meet the sum of all the solution, data, and storage requirements in the order.
 
