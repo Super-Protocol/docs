@@ -1,6 +1,6 @@
 ---
 id: "web3"
-title: "Web3 Account"
+title: "Web3 User Account"
 slug: "/account/web3"
 sidebar_position: 1
 ---
@@ -11,9 +11,9 @@ This window allows you to manage your [Web3 User account](/marketplace/account#w
 <br/>
 <br/>
 
-**User ID**: your unique user ID is your ERC-20 wallet address.
+**User ID**: your unique user ID is your EVM wallet address.
 
-**Login**: the Web3 login method and the ERC-20 wallet address you are using. Currently, Super Protocol only supports MetaMask as a Web3 login method.
+**Login**: the Web3 login method and the EVM wallet address you are using. Currently, Super Protocol only supports MetaMask as a Web3 login method.
 
 ## Storage
 

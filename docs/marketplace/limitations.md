@@ -5,40 +5,31 @@ slug: "/limitations"
 sidebar_position: 1
 ---
 
-Testnet has a limited amount of compute resources. Super Protocol imposed limits on compute configurations and amounts of available tokens so everyone could participate in the testnet.
+Testnet has a limited amount of compute resources. Super Protocol has set limits on CPU/GPU compute configurations and amounts of available tokens so everyone can participate. More NVIDIA H100 machines are on the way.
 
-## Model limitations
+## Order limits and pricing
 
-The maximum model size is 7 billion parameters, the maximum file size is 10 GB.
+On testnet, you can deploy models using Intel TDX CPU or NVIDIA H100 GPU. GPU is much faster, but CPU is more available and cheaper. We currently have two machines available for public use:
 
-## Compute limitations
+- **Super 2: TDX+H100 (Public)** can run orders on CPU and GPU.
+- **Super 3: TDX (Public)** can run orders on CPU only.
 
-## Token limitations
+Limits:
 
-## Marketplace GUI
+- The minimum order lease time is 2 hours, and the maximum lease time is 4 hours.
+- Price per hour is 2 TEE tokens for CPU and 4 TEE for GPU.
+- All models on Marketplace cost 1 TEE per order.
+- All AI engines cost 1 TEE per order.
+- There is also an estimated 1 TEE fee for Tunnels Launcher services that set up the confidential tunnel.
 
-Deployed confidential use the Super Protocol temporary domain name such as [mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/).
+For example, a four-hour GPU order will cost you 4*4+1+1+1=19 TEE.
 
-_Old:_
+## Token limits
 
-### Order limits
+- Demo users receive a one-time advance of 50 TEE tokens. These may not be replenished. To continue testing, users must [log in with a Web3 account](https://docs.superprotocol.com/marketplace/guides/log-in).
+- Web3 users receive a maximum of 24 TEE tokens and 5 POL tokens per day. These may be replenished daily.
+- Web3 users can have a maximum of 24 TEE tokens and 5 POL tokens in their wallets at one time.
 
-- Tunnel orders created by Tunnels Launcher expire after 72 hours, regardless of the deposit.
-- You can have up to two open orders. Orders in the Done, Error, or Canceled statuses do not count towards this limit. The total number of orders is unlimited.
-- Compute configurations for Marketplace offers cannot exceed the selected offer requirements more than twice. For example, if the sum of solutions and data requirements equals two CPU cores, then the maximum compute you can select is four CPU cores. The same applies to other parameters.
+## Model limits
 
-### Token limits
-
-- You cannot request tokens if you have more than 9 TEE and 0.9 POL tokens in your testnet wallet.
-- You can request up to 15 TEE and 1.5 POL tokens per 24 hours.
-- You can request tokens an unlimited number of times.
-- Each token request grants 9 TEE and 0.5 POL tokens.
-- Do not transfer your test POL tokens to other accounts, or you will be banned.
-
-### Marketplace GUI
-
-The Super Protocol team has streamlined some configuration steps to simplify the Marketplace GUI for new users. For detailed configurations, use the [CLI](/developers/cli_guides/).
-
-- All orders created through the GUI use the storage offer [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25) by Super Protocol. Although your order results are saved to the Super Protocol Storj account, only you have the key. No one besides you can access the results, including the Super Protocol team.
-- Tunnels created using [Tunnels Launcher](/developers/offers/launcher) use the Super Protocol DNS. Your domain name will have a randomly generated name, for example, `nap-larn-nef.superprotocol.io`.
-- Tunnels Launcher orders have enough deposit for 72 hours. Not that these orders expire after 72 hours, even if you replenish the deposit.
+For your uploaded models, the maximum size of all the model's files must not exceed 10 GB. Otherwise, the deployment may fail.
