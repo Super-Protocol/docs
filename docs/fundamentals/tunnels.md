@@ -13,8 +13,6 @@ Super Protocol supports the deployment of multiple instances of clients and serv
 
 A good practice when deploying tunnels through Super Protocol is to deploy multiple instances of clients and servers and distribute them over different CSPs, thus increasing decentralization and fault tolerance.
 
-Read more in the [Node.js with Tunnels](/developers/deployment_guides/tunnels/) deployment guide.
-
 <img src={require('./images/fundamentals_tunnels_1.png').default} width="auto" height="auto"/>
 <br/>
 

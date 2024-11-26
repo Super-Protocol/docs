@@ -62,15 +62,15 @@ The same logic applies to configuration options, except customers can select mul
 
 Super Protocol supports the automatic selection of a configuration to simplify the order creation.
 
-The system calculates the sum of all requirements in the order. When a customer adds a compute offer to the order in the Marketplace GUI, the system automatically determines configuration slots, options, and their increments. Read more in the more in [Marketplace Walkthrough](/developers/marketplace/walkthrough).
+The system calculates the sum of all requirements in the order. When a customer adds a compute offer to the order in the Marketplace GUI, the system automatically determines configuration slots, options, and their increments.
 
 <img src={require('./images/fundamentals_slots_4.png').default} width="auto" height="auto"/>
 
-In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specifies no `--tee`-related options. Read more in the description of the [`workflows create`](/developers/cli_commands/workflows/create) command.
+In the Marketplace CLI, SPCTL selects the configuration automatically if the customer specifies no `--tee`-related options. Read more in the description of the `workflows create` command.
 
 ## Parameters
 
-The full list of parameters is the same for requirements and configurations. In the [Marketplace GUI](/developers/marketplace/):
+The full list of parameters is the same for requirements and configurations. In the [Marketplace GUI](/marketplace):
 
 - **Per Hour** or **Fixed**: pricing type of a slot or an option
 - **vCores**: number of CPU cores, can be a fraction
