@@ -24,9 +24,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "testnet",
-        path: "./docs/testnet",
-        routeBasePath: "/testnet",
+        id: "marketplace",
+        path: "./docs/marketplace",
+        routeBasePath: "/marketplace",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
@@ -35,9 +35,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "ai-marketplace",
-        path: "./docs/ai-marketplace",
-        routeBasePath: "/ai-marketplace",
+        id: "fundamentals",
+        path: "./docs/fundamentals",
+        routeBasePath: "/fundamentals",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
@@ -49,7 +49,7 @@ const config = {
         redirects: [
           {
             from: "/",
-            to: "/developers",
+            to: "/marketplace",
           },
         ],
       },
@@ -94,35 +94,35 @@ const config = {
         logo: {
           alt: "Super Protocol Logo",
           src: "navbar/images/logo.svg",
-          href: '/developers'
+          href: 'https://superprotocol.com/'
         },
         items: [
           {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Testnet",
-            docsPluginId: "testnet",
+            label: "Marketplace",
+            docsPluginId: "marketplace",
           },
           {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Developers",
+            label: "Fundamentals",
+            docsPluginId: "fundamentals",
           },
+          /*{
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "Developers",
+          },*/
           {
             type: "doc",
             docId: "index",
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "AI Marketplace",
-            docsPluginId: "ai-marketplace",
           },
         ],
       },
@@ -145,7 +145,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: ["developers", "ai-marketplace", "testnet", "whitepaper"],
+      docsRouteBasePath: [/*"developers", */"marketplace", "whitepaper", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
