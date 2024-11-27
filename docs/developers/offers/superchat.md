@@ -17,21 +17,6 @@ This chat is a technological demo app initially developed for Testnet 3 with a g
 
 ## Access Super Chat
 
-### Use our deployment
-
-Generally we expect that our test users deploy their own Super Chat. But if you just want to see what it looks like, you can use our permanently running domain for illustration purposes:
-
-[mund-avys-kefs.superprotocol.io](https://mund-avys-kefs.superprotocol.io/)
-
-This domain is running on the following [tunnels](/developers/fundamentals/tunnels) orders:
-
-- Tunnel server order: [6070](https://marketplace.superprotocol.com/order/6070)
-- Tunnel server order: [6076](https://marketplace.superprotocol.com/order/6076)
-- Tunnel client order: [6073](https://marketplace.superprotocol.com/order/6073)
-- Tunnel client order: [6079](https://marketplace.superprotocol.com/order/6079)
-
-Read how you can [Check Confidentiality](/developers/marketplace/confidentiality) of this domain.
-
 ### Deploy your own Super Chat
 
 Any Testnet 4 user can deploy their own Super Chat and share with friends. There are two ways to do that:
@@ -39,7 +24,7 @@ Any Testnet 4 user can deploy their own Super Chat and share with friends. There
 * For beginners: Deploy using Marketplace GUI. Follow [this guide](/developers/marketplace/walkthrough).
 * For developers: Deploy by following the steps and examples in our CLI [deployment guides](/developers/deployment_guides/tunnels).
 
-Be mindful that any Super Chat orders, just like any other orders, are subject to the [Testnet limitations](/testnet/limitations).
+Be mindful that any Super Chat orders, just like any other orders, are subject to the [Testnet limitations](/marketplace/limitations).
 
 ## Guide
 

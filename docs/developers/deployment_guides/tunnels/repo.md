@@ -9,7 +9,7 @@ sidebar_position: 4
 
 For your convenience, we have prepared a GitHub Actions repository with scripts that you can use for the automatic deployment of your application to Super Protocol.
 
-These Github Actions are automating the commands outlined in the  [previous step](/developers/deployment_guides/tunnels/manual_run) of this guide.
+These Github Actions are automating the commands outlined in the [previous step](/developers/deployment_guides/tunnels/manual_run) of this guide.
 
 ## Prepare Git Repository
 
