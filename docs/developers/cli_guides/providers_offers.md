@@ -72,6 +72,7 @@ To set up a provider and create an active offer, complete the following steps:
 2. [Set up provider accounts](/developers/cli_guides/providers_offers#step-2-set-up-accounts). Create three provider accounts using Provider Tools.
 3. [Configure the offer](/developers/cli_guides/providers_offers#step-3-configure-the-offer). Provide a general description of the offer, its properties, restrictions, and requirements.
 4. [Register the provider and offer](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) on the blockchain.
+4. [Register the provider and offer](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) on the blockchain.
 5. [Deploy the offer on Super Protocol](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner). Create an Offer Provisioner order to make your offer available for customers.
 6. [Pass the Marketplace moderation](/developers/cli_guides/providers_offers#step-6-marketplace-moderation) to move your offer from the **Unmoderated** category to the **Approved** category in the Marketplace GUI.
 7. [Keep your offer alive](/developers/cli_guides/providers_offers#step-7-keep-your-offer-active). Ensure the offer content remains available and the Offer Provisioner order keeps running.
@@ -405,6 +406,7 @@ The `register` command initiates a series of steps:
 2. Provider Tools checks whether the provider with the Authority Account specified in `provider-tools-config.json` is already registered on the blockchain.
   + If the provider exists, the prompt will go to the next step.
   + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#update-provider-info) the provider description later.
+  + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#update-provider-info) the provider description later.
 
 3. Provider Tools asks if this provider already has a solution or data offer created on the blockchain. If you want to create a new offer, select `No`. Provider Tools then asks for the `offer-info.json` and `offer-slot.json` from [Step 3](/developers/cli_guides/providers_offers#step-3-configure-the-offer).
 
@@ -549,6 +551,7 @@ Use the [`orders get`](/developers/cli_commands/orders/get) command to check the
 
 ### Update provider info
 
+It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/developers/cli_commands/providers/update) SPCTL command from your current action account.
 It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/developers/cli_commands/providers/update) SPCTL command from your current action account.
 
 If you changed your action account address, update the Provider SPCTL's `config.json` with the new action account private key.
