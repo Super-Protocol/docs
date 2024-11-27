@@ -1,6 +1,6 @@
 ---
 id: "demo"
-title: "Demo Account"
+title: "Demo User Account"
 slug: "/account/demo"
 sidebar_position: 2
 ---

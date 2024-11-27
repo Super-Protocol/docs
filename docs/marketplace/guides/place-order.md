@@ -58,6 +58,11 @@ Ensure your model fits into the maximum compute configuration allowed for the te
 
 In the **Order Builder**, click **Select AI engine** to open the list of engines compatible with the added model.
 
+Each engine exists in two variants:
+
+- Engines marked with [GPU] are for models that need an NVIDIA H100 Tensor Core GPU to function correctly. These engines are not compatible with computing devices without an H100.
+- Engines marked with [CPU] are for models that can operate correctly on computing devices without an NVIDIA H100 Tensor Core GPU. These engines will not utilize the GPU, even if the computing device includes an H100. Note that models running in this mode may work significantly slower. However, due to limited resources available during the testnet, it may be a suitable way to deploy smaller models.
+
 Click the blue **[+]** button to add the engine to the order.
 
 <img src={require('../images/order-builder-engine.png').default} width="auto" height="auto" border="1"/>
