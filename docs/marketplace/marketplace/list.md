@@ -28,7 +28,7 @@ In the table view, you can see the following columns:
 - **Price, hr**: the hourly rate for leasing the offer.
 - **Price, fix**: the fixed price for each use of the offer, regardless of the lease duration.
 
-Clicking an offer opens the [**Offer** window](/marketplace/marketplace/offer), which provides further details such as descriptions, requirement slots, and pricing.
+Clicking an offer opens the [**Offer**](/marketplace/marketplace/offer) window, which provides further details such as descriptions, requirement slots, and pricing.
 
 ## Filters
 
