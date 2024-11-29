@@ -97,14 +97,9 @@ The **Providers** tab contains additional information about the order and its su
 <br/>
 <br/>
 
-- **ID**
-- **Type**
-- **Provider**
-- **Name**
-- **Status**
-- **Created Date**
-- **Modified Date**
-- **Cost**
+Click the suborder's **ID** number to open its **Order** screen. Note that some suborders may not be available to view.
+
+Read more about [order types](/fundamentals/orders).
 
 ## Tunnel Orders tab
 

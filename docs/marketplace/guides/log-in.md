@@ -1,13 +1,11 @@
 ---
 id: "log-in"
-title: "How to Log In as a Web3 User"
+title: "How to Log In"
 slug: "/guides/log-in"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user and set up the account.
-
-Learn more about [user account types](/marketplace/account).
+This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user. Learn more about [user account types](/marketplace/account).
 
 :::note
 
@@ -19,7 +17,7 @@ The Marketplace web app does not support mobile devices. Use a desktop or laptop
 
 To log in as a Web3 user, you need the MetaMask browser extension. MetaMask is one of the most popular software cryptocurrency wallets for Ethereum and EVM-compatible blockchains like Polygon.
 
-If you do not have MetaMask installed, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new Ethereum account or, using another term, an EVM wallet address.
+If you do not have MetaMask installed, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new EVM wallet address.
 
 If you already have MetaMask installed, complete [Step 1-2](/marketplace/guides/log-in#step-1-2-add-new-account) instead to create a new EVM wallet address.
 
@@ -94,7 +92,7 @@ Set the following parameters and press **Save**:
 
 | **Field** | **Value** |
 | :- | :- |
-| Network name | Super Protocol Polygon Amoy Testnet |
+| Network name | Amoy |
 | New RPC URL | https://amoy.polygon.superprotocol.com/hesoyam |
 | Chain ID | 80002 |
 | Currency symbol | POL |
@@ -113,7 +111,7 @@ Switch to the newly added network.
 
 ## Step 3. Connect the account
 
-In the main Marketplace screen, press the **Enter Marketplace** button.
+In the [Marketplace web app](https://marketplace.superprotocol.com/), press the **Enter Marketplace** button.
 
 <img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -163,55 +161,6 @@ Do not send TEE and POL tokens to other accounts. Violators will be banned from 
 
 :::
 
-## Step 5. Set up storage
+## Contact Super Protocol
 
-You have two options of decentralized storage to upload files:
-
-- **Super Protocol cloud**
-- **Your Storj account**
-
-<img src={require('../images/web3acc-storage.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-**Super Protocol cloud** is the recommended default option for most users. It does not require additional setup. Feel free to select this option and skip the following instructions.
-
-**Your Storj account** is intended for advanced Web3 users. It requires you to register and set up a Storj account.
-
-Learn more about [types of storage](/marketplace/account/web3#storage).
-
-### Set up Storj
-
-Register a [Storj](https://www.storj.io/) account if you do not have one yet. Both free Trial and Pro Storj accounts are suitable. However, with a Trial account, your files will become unavailable after the end of the trial period.
-
-In the Storj account dashboard, create a new project and a bucket. Refer to the Storj documentation for instructions on how to [create a project](https://storj.dev/support/projects) and [create a buckets](https://storj.dev/support/object-browser#configure-object-browser-access).
-
-In the same Storj account dashboard, create two S3 Access Keys for this bucket. Creating an Access Key also generates a Secret Key:
-
-- Access Key should look something like this: `jv7ke2m5vqkyxffywr3qmc47ibxa`.
-- Secret Key should look something like this: `jzbf5fgqz56nlun2jht7pjoiapmowvb3uarpzeqb2t2wiivij3jvg`.
-
-One S3 Access Key should provide the **Write** and **Delete** permissions. The other one should provide the **Read** and **List** permissions. As a result, you should have two Access Keys and two Secret Keys. Refer to the Storj documentation to learn how to [generate S3 Access Keys](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials).
-
-### Set up the Marketplace account
-
-In the Marketplace web app, open the **Account** window.
-
-<img src={require('../images/marketplace-web3acc-menu.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-Select the **Your Storj account** radio button, fill in the fields, and click **Save**.
-
-| **Field** | **Value** |
-| :- | :- |
-| Bucket | Name of the Storj bucket |
-| Path | Path to a directory inside the bucket; it can be empty |
-| WriteAccessKeyId | Access Key with the **Write** and **Delete** permissions |
-| WriteSecretAccessKey | Secret Key with the **Write** and **Delete** permissions |
-| ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
-| ReadSecretAccessKey | Secret Key with the **Read** and **List** permissions |
-
-<img src={require('../images/web3acc-storj.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistan

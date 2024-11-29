@@ -9,27 +9,27 @@ Testnet has a limited amount of compute resources. Super Protocol has set limits
 
 ## Order limits and pricing
 
-On testnet, you can deploy models using Intel TDX CPU or NVIDIA H100 GPU. GPU is much faster, but CPU is more available and cheaper. We currently have two machines available for public use:
+On testnet, you can deploy models using Intel TDX CPU or NVIDIA H100 GPU. GPU is much faster, but CPU has more availability and cheaper. We currently have two machines for public use:
 
-- **Super 2: TDX+H100 (Public)** can run orders on CPU and GPU.
-- **Super 3: TDX (Public)** can run orders on CPU only.
+- **Super 2: TDX+H100 (Public)** can run orders on GPU.
+- **Super 3: TDX (Public)** can only run orders on CPU.
 
 Limits:
 
 - The minimum order lease time is 2 hours, and the maximum lease time is 4 hours.
-- Price per hour is 2 TEE tokens for CPU and 4 TEE for GPU.
+- Price per hour is 2.13 TEE tokens for CPU and 4.126 TEE for GPU.
 - All models on Marketplace cost 1 TEE per order.
-- All AI engines cost 1 TEE per order.
-- There is also an estimated 1 TEE fee for Tunnels Launcher services that set up the confidential tunnel.
+- All engines cost 0.5 TEE per order.
+- There is also an estimated 1-2 TEE fee for Tunnels Launcher services that set up the confidential tunnel.
 
-For example, a four-hour GPU order will cost you 4*4+1+1+1=19 TEE.
+For example, a four-hour GPU order will cost you approximately 19-20 TEE (4.126 * 4 + 1 + 0.5 + 2).
 
 ## Token limits
 
-- Demo users receive a one-time advance of 50 TEE tokens. These may not be replenished. To continue testing, users must [log in with a Web3 account](https://docs.superprotocol.com/marketplace/guides/log-in).
-- Web3 users receive a maximum of 24 TEE tokens and 5 POL tokens per day. These may be replenished daily.
-- Web3 users can have a maximum of 24 TEE tokens and 5 POL tokens in their wallets at one time.
+- Demo users receive a one-time advance of 50 TEE tokens. These may not be replenished. To continue testing, users must [log in with a Web3 account](/marketplace/guides/log-in).
+- Web3 users receive a maximum of 25 TEE tokens and 5 POL tokens per day. These may be replenished daily.
+- Web3 users can have a maximum of 25 TEE tokens and 5 POL tokens in their wallets at one time.
 
 ## Model limits
 
-The total size of your model's files must be less than 10 GB. Otherwise, the deployment may fail.
+The total size of your model's files must be less than 10 GB. Otherwise, the deployment may fail. Read more about the [requirements for the user-uploaded models](/marketplace/guides/upload#step-1-choose-a-model).

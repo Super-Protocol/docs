@@ -2,7 +2,7 @@
 id: "upload"
 title: "How to Upload a Model"
 slug: "/guides/upload"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,20 +12,20 @@ This guide provides step-by-step instructions on how to upload a model to Super 
 
 ## Step 1. Choose a model
 
-Ensure that Super Protocol supports your model. Otherwise, the order may fail.
+Your model must fit into the Super Protocol requirements. Otherwise, the order may fail.
 
 ### Model category
 
-Your uploaded model must be of supported category. Marketplace currently supports two AI engines—solutions that are used to deploy the models.
+Your model must be of a supported category. To deploy models, Super Protocol provides two solutions called _engines_.
 
-**Text Generation Web UI** supports models that involve text-based chats. Doesn’t support any type of image generation.
+**Text Generation Web UI** supports models that involve text-based chats. It does not support any type of image generation.
 
-- Text Generation,
-- Text Classification,
-- Translation,
+- Text Generation
+- Text Classification
+- Translation
 - Text2Text Generation
 
-**ComfyUI** supports image- and video-related tasks.
+**ComfyUI** supports various image- and video-related tasks.
 
 - Image Classification
 - Object Detection
@@ -38,66 +38,75 @@ Your uploaded model must be of supported category. Marketplace currently support
 - Text-to-Video
 - Mask Generation
 
-If you download your model from Hugging Face, ensure that its category (called _task_ in Hugging Face) matches those supported by our AI engines.
+If you download your model from Hugging Face, ensure that one of the engines supports its category (called _task_ in Hugging Face).
 
 <img src={require('../images/hf-task.png').default} width="auto" height="auto" border="1"/>
-<br/>
 <br/>
 
 ### Model size
 
-Model size must be 10 GB or less.
+Your model must be 10 GB or less.
 
-To deploy correctly, the model must fully fit in the RAM or VRAM. This includes all the model’s files. 
+To ensure proper deployment, all model files must fit entirely within the available RAM or VRAM. On the testnet, compute configuration slots are currently limited to 10 GB. Larger slots to support bigger models will come in the future with more compute availability.
 
-The reason for this limitation is that the slots on the testnet are 10 GB. With more compute availability we will have larger slots to accommodate larger models.
-
-Additionally, note that large models will perform poorly on TDX CPU without GPU support. It’s a good idea to choose smaller models if you plan on deploying on CPU.
+Additionally, large models will perform poorly on TDX CPU without GPU support. If you plan on deploying on CPU, choose a smaller model.
 
 ## Step 2. Create a TAR.GZ archive
 
-A model must be archived with TAR.GZ before uploading to Super Protocol.
+Prepare the model files and archive them to the TAR.GZ format.
 
-### Select files
+### Prepare files
 
-**GGUF format**
+#### GGUF format
 
-These are usually quantized, and you only need one file. Pick whichever one you like. Higher quantization usually means a larger file.
+Models in the GGUF formats are quantized, and you only need one file. Pick whichever one you like and put it in a separate directory. Note that higher quantization means a larger file.
 
-You can see an example on the following screenshot:
+For example:
 
 <img src={require('../images/hf-gguf.png').default} width="auto" height="auto" border="1"/>
 <br/>
+
+#### GGML format
+
+Models in the GGML formal are quantized as well. You need only one model file along with all other non-model files in the directory. For example:
+
+<img src={require('../images/hf-ggml.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-You can put this file in a folder and archive the folder or just archive the file itself.
+#### Safetensors and BIN formats
 
-**SafeTensors or Bin format**
+Models in the Safetensors format must include all the files available in the repository.
 
-These model formats must include all the files in the repository.
-
-You can see an example on the following screenshot:
+Sometimes, the model files include both a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files. For example:
 
 <img src={require('../images/hf-safetensors.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-You need to archive the whole folder with the files.
+Exclude one set. You need only one set along with all other files. Do not add the consolidated file and multiple parts of the same model simultaneously.
 
-If the model's files include both a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files, add only one set.
+Also, the model files on Hugging Face may include the model in multiple formats. For example:
 
-### Add to an archive
+<img src={require('../images/hf-formats.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Similarly, choose only one format and remove the other.
+
+### Archive the files
+
+When your model along with necessary files is in a separate folder, put it into a TAR.GZ archive.
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
 
-    On Windows, open PowerShell or Windows Command Prompt and use the following command to create a TAR.GZ archive:
+    On Windows, open PowerShell or Windows Command Prompt and use the following command
 
     ```
     tar.exe -czvf <contentArchivePath> <modelPath>
     ```
 
-    Replace `<contentArchivePath>` with the path and desired name of the output archive. Replace `<modelPath>` with the path to the folder with the model's files.
+    Replace `<contentArchivePath>` with the path and desired name of the output archive. Replace `<modelPath>` with the path to the folder with the model files.
 
     For example:
 
@@ -112,13 +121,13 @@ If the model's files include both a single consolidated `model.safetensors` file
   </TabItem>
   <TabItem value="linux" label="Linux and macOS">
 
-    On Linux and macOS, open a terminal and use the following command to create a TAR.GZ archive:
+    On Linux and macOS, open a terminal and use the following command:
 
     ```
     tar -czvf <contentArchivePath> <modelPath>
     ```
 
-    Replace `<contentArchivePath>` with the path and desired name of the output archive. Replace `<modelPath>` with the path to the directory with the model's files.
+    Replace `<contentArchivePath>` with the path and desired name of the output archive. Replace `<modelPath>` with the path to the directory with the model files.
 
     For example:
 
@@ -131,7 +140,7 @@ If the model's files include both a single consolidated `model.safetensors` file
   </TabItem>
 </Tabs>
 
-## Step 3. Upload the model through Marketplace
+## Step 3. Upload the archive
 
 In the **My Files** screen, press the **Upload File** button. 
 
@@ -139,25 +148,38 @@ In the **My Files** screen, press the **Upload File** button.
 <br/>
 <br/>
 
-Fill out the form in the **Upload Content** window that appears:
+Fill out the form in the **Upload Content** window that appears.
 
 **Content Name**: type the desired model name. It may be different from the file name. Providing a meaningful name makes it easier to find the model later.
 
-**Category**: choose the model's category from the drop-down menu. You can only choose one.
+**Category**: choose the model category from the drop-down menu. You can only choose one.
 
-**Engine**: choose compatible AI engines from the drop-down menu. Each engine exists in two variants:
+**Engine**: choose compatible engines from the drop-down menu. Each engine exists in two variants:
 
-- Engines marked as 'GPU only' will run the model on an NVIDIA H100 GPU.
-- Engines marked as 'CPU only' will run the model on an Intel TDX CPU.
+- Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
+- Engines marked as 'CPU only' run the model on an Intel TDX CPU.
 
-You can choose both and then decide during order creation how you want to run the model. 
+It is recommended to choose both and then decide how you want to run the model during order creation.
 
 <img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 Click **Select tar.gz archive** and select the TAR.GZ archive file.
 
+:::note
+
+Super Protocol has [two options of decentralized storage](/marketplace/account/web3#storage) to upload your model:
+
+- **Super Protocol cloud** is the recommended option selected by default. It does not require a setup or any additional actions.
+- **Personal Storj account** is intended for advanced users. Read [How to Set Up Storage](/marketplace/guides/storage) for step-by-step instructions.
+
+:::
+
 Press **Upload** and wait for the process to complete. Do not close the window until the upload is done.
 
 <img src={require('../images/upload-content-done.png').default} width="auto" height="auto" border="1"/>
 <br/>
+
+## Contact Super Protocol
+
+If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistan
