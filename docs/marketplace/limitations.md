@@ -32,4 +32,4 @@ For example, a four-hour GPU order will cost you 4*4+1+1+1=19 TEE.
 
 ## Model limits
 
-For your uploaded models, the maximum size of all the model's files must not exceed 10 GB. Otherwise, the deployment may fail.
+The total size of your model's files must be less than 10 GB. Otherwise, the deployment may fail.

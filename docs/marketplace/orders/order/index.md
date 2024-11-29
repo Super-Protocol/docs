@@ -117,7 +117,7 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 - **Date Created** (hidden by default): the date and time when the customer placed the order.
 - **Date Modified**: the date and time of the latest change in the order status.
 - **Order ID**: a unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
-- **Offer**:
+- **Offer**: the solution used in the tunnel's order or suborder. Learn more about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
 - **Status**: current status of the order. Learn more about [statuses](/fundamentals/orders#order-status).
 - **Lease Remaining**: the remaining time until the order is complete and gets the Done status.
 - **Cost to Date**: the total amount of TEE tokens spent on the order so far.
