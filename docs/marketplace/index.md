@@ -11,19 +11,19 @@ Super Protocol launched Marketplace 1.0 in 2022 with limited capabilities and su
 
 Super Protocol launched the first public release of [Marketplace 2.0](https://marketplace.superprotocol.com/) on November 27, 2024. It has the following capabilities:
 
-* A demo account with AOuth2 login for a quick start.
-* Support for Intel TDX and NVIDIA GPU confidential computing.
-* Uploading your model files to the Super Cloud or personal StorJ accounts.
-* Deploying AI models in confidential tunnels using a variety of AI engines and settings.
-* UI/UX redesign.
+- A demo account with AOuth2 login for a quick start.
+- Support for Intel TDX and NVIDIA GPU confidential computing.
+- Uploading your model files to the Super Cloud or personal StorJ accounts.
+- Deploying AI models in confidential tunnels using a variety of AI engines and settings.
+- UI/UX redesign.
 
 Features coming up in the next phases:
 
-* Publishing offers in the Marketplace from the uploaded files.
-* Fine-tuning mode (train new layers of the base models).
-* Support for datasets.
-* More models and datasets available in the Marketplace.
-* More AI engines available (and more model categories).
-* A light UI theme.
+- Publishing offers in the Marketplace from the uploaded files.
+- Fine-tuning mode (train new layers of the base models).
+- Support for datasets.
+- More models and datasets available in the Marketplace.
+- More AI engines available (and more model categories).
+- A light UI theme.
 
 Any feedback would be very much appreciated—please join our [Discord](https://discord.gg/superprotocol) or use the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
