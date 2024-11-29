@@ -21,7 +21,7 @@ The table in the middle of the screen includes the following columns:
 - **Name**: the name of the content. It may differ from the original file name.
 - **Date Uploaded**: the date and time when the content was uploaded.
 - **Size**: file size of the file in gigabytes. For the exact size in bytes, check the file's [**Info**](/marketplace/my-content/my-files/info).
-- **Storage**: the storage to where you uploaded the content, either **Super Cloud** or **Storj**. Learn more about [types of storage](/marketplace/account/web3).
+- **Storage**: the storage to where you uploaded the content, either **Super Cloud** or **Storj**. Learn more about [types of storage](/marketplace/account/web3#storage).
 - **Offer ID**: the identification number of the offer created from the uploaded file. No number means an offer has not yet been created.
 
 For more actions, click the buttons with three vertical dots next to a file to open the content's management menu:

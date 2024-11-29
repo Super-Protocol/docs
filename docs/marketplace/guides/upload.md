@@ -10,44 +10,83 @@ import TabItem from '@theme/TabItem';
 
 This guide provides step-by-step instructions on how to upload a model to Super Protocol.
 
-Before uploading, ensure your model fits into current [testnet limitations](/marketplace/limitations):
+## Step 1. Choose a model
 
-- The model's file size is less than 10 GB.
-- One of the available engines supports your model's category.
+Ensure that Super Protocol supports your model. Otherwise, the order may fail.
 
-## Step 1. Describe your model
+### Model category
 
-In the **My Files** screen, press the **Upload File** button.
+Your uploaded model must be of supported category. Marketplace currently supports two AI engines—solutions that are used to deploy the models.
 
-<img src={require('../images/myfiles-upload.png').default} width="auto" height="auto" border="1"/>
+**Text Generation Web UI** supports models that involve text-based chats. Doesn’t support any type of image generation.
+
+- Text Generation,
+- Text Classification,
+- Translation,
+- Text2Text Generation
+
+**ComfyUI** supports image- and video-related tasks.
+
+- Image Classification
+- Object Detection
+- Image Segmentation
+- Text-to-Image
+- Image-to-Text
+- Image-to-Image
+- Image-to-Video
+- Video Classification
+- Text-to-Video
+- Mask Generation
+
+If you download your model from Hugging Face, ensure that its category (called _task_ in Hugging Face) matches those supported by our AI engines.
+
+<img src={require('../images/hf-task.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Fill out the form in the **Upload Content** window that appears:
+### Model size
 
-**Content Name**: type the desired model name. It may be different from the file name. Providing a meaningful name makes it easier to find the model later.
+Model size must be 10 GB or less.
 
-**Category**: choose the model's category from the drop-down menu. If you downloaded your model from Hugging Face, ensure the model's task there matches one of the supported categories.
+To deploy correctly, the model must fully fit in the RAM or VRAM. This includes all the model’s files. 
 
-**Engine**: choose compatible AI engines from the drop-down menu. Each engine exists in two variants:
+The reason for this limitation is that the slots on the testnet are 10 GB. With more compute availability we will have larger slots to accommodate larger models.
 
-- Engines marked as 'GPU only' are for models that need an NVIDIA H100 Tensor Core GPU to function correctly. These engines are not compatible with computing devices without an H100.
-- Engines marked as 'CPU only' are for models that can operate correctly on computing devices without an NVIDIA H100 Tensor Core GPU. These engines will not utilize the GPU, even if the computing device includes an H100. Note that models running in this mode may work significantly slower. However, due to the expected high demand for the TDX+H100 confidential computing device, launching a model on the TDX confidential computing device may be a suitable way to deploy smaller models.
+Additionally, note that large models will perform poorly on TDX CPU without GPU support. It’s a good idea to choose smaller models if you plan on deploying on CPU.
 
-<img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
+## Step 2. Create a TAR.GZ archive
+
+A model must be archived with TAR.GZ before uploading to Super Protocol.
+
+### Select files
+
+**GGUF format**
+
+These are usually quantized, and you only need one file. Pick whichever one you like. Higher quantization usually means a larger file.
+
+You can see an example on the following screenshot:
+
+<img src={require('../images/hf-gguf.png').default} width="auto" height="auto" border="1"/>
+<br/>
 <br/>
 
-## Step 2. Prepare the model
+You can put this file in a folder and archive the folder or just archive the file itself.
 
-For models compatible with Text Generation Web UI, put all the files that come with the model in a separate directory.
+**SafeTensors or Bin format**
 
-For models compatible with ComfyUI, put only the files that contain the model itself in a separate directory; do not add other files.
+These model formats must include all the files in the repository.
 
-Ensure to exclude duplicates:
+You can see an example on the following screenshot:
 
-- If the model is in several formats, for example, SAFETENSORS and BIN, choose between them.
-- If the model's files include several GGUF files for different quantization levels, add only one of them.
-- If the model's files include both a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files, add only one set.
+<img src={require('../images/hf-safetensors.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+You need to archive the whole folder with the files.
+
+If the model's files include both a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files, add only one set.
+
+### Add to an archive
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
@@ -92,9 +131,31 @@ Ensure to exclude duplicates:
   </TabItem>
 </Tabs>
 
-## Step 3. Upload the archive
+## Step 3. Upload the model through Marketplace
 
-Back in the **Upload Content** window, click **Select tar.gz archive** and select the TAR.GZ archive file you prepared in the previous step.
+In the **My Files** screen, press the **Upload File** button. 
+
+<img src={require('../images/myfiles-upload.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Fill out the form in the **Upload Content** window that appears:
+
+**Content Name**: type the desired model name. It may be different from the file name. Providing a meaningful name makes it easier to find the model later.
+
+**Category**: choose the model's category from the drop-down menu. You can only choose one.
+
+**Engine**: choose compatible AI engines from the drop-down menu. Each engine exists in two variants:
+
+- Engines marked as 'GPU only' will run the model on an NVIDIA H100 GPU.
+- Engines marked as 'CPU only' will run the model on an Intel TDX CPU.
+
+You can choose both and then decide during order creation how you want to run the model. 
+
+<img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
+<br/>
+
+Click **Select tar.gz archive** and select the TAR.GZ archive file.
 
 Press **Upload** and wait for the process to complete. Do not close the window until the upload is done.
 
