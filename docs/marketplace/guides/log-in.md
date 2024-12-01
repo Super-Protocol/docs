@@ -92,7 +92,7 @@ Set the following parameters and press **Save**:
 
 | **Field** | **Value** |
 | :- | :- |
-| Network name | Super Protocol Polygon Amoy Testnet |
+| Network name | Amoy |
 | New RPC URL | https://amoy.polygon.superprotocol.com/hesoyam |
 | Chain ID | 80002 |
 | Currency symbol | POL |
@@ -111,7 +111,7 @@ Switch to the newly added network.
 
 ## Step 3. Connect the account
 
-In the main Marketplace screen, press the **Enter Marketplace** button.
+In the [Marketplace web app](https://marketplace.superprotocol.com/), press the **Enter Marketplace** button.
 
 <img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
 <br/>

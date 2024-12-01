@@ -2,7 +2,7 @@
 id: "upload"
 title: "How to Upload a Model"
 slug: "/guides/upload"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
