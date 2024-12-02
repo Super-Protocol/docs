@@ -22,7 +22,7 @@ To lease a model listed on the Marketplace, open the list of available **Models*
 
 To add your own model, you must prepare and upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
 
-When your model is uploaded, open **My Files** with the list of your uploaded models and click the blue **[+]** button next to the model to add it to the order.
+When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
 
 <img src={require('../images/myfiles-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -48,7 +48,7 @@ In the **Order Builder**, click **Select AI engine** to open the list of engines
 Each engine exists in two variants:
 
 - Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
-- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models running in this mode are significantly slower. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and may have more availability than TDX+H100.
+- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models may run slower in this mode. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and have more availability than TDX+H100 compute.
 
 Click the blue **[+]** button to add the engine to the order.
 
@@ -136,7 +136,7 @@ When the model is deployed and available, you will see **Online** in the tunnel'
 
 To increase the time the model remains running, click the **Extend Lease** button and add tokens to the order deposit.
 
-## Handling errors
+## Handle errors
 
 If an error occurs during transaction confirmation, you will see an error message in this window and a notification in the bottom-right corner of the screen.
 
