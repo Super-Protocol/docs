@@ -21,7 +21,6 @@ To lease a model listed on the Marketplace, open the list of available **Models*
 ### Your model
 
 To add your own model, you must prepare and upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
-To add your own model, you must prepare and upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
 
 When your model is uploaded, open **My Files** with the list of your uploaded models and click the blue **[+]** button next to the model to add it to the order.
 
@@ -50,14 +49,12 @@ Each engine exists in two variants:
 
 - Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
 - Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models running in this mode are significantly slower. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and may have more availability than TDX+H100.
-- Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
-- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models running in this mode are significantly slower. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and may have more availability than TDX+H100.
 
 Click the blue **[+]** button to add the engine to the order.
 
 Once you add the engine, its configuration will become available. Only make changes if you are confident in what you are doing, as modifying the engine's settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
-If a yellow warning icon appears, it indicates that the selected engine is [incompatible](/marketplace/orders/order-builder/compatibility) with a selected model. Select another engine.
+If a yellow warning icon appears, it indicates that the selected engine is [incompatible](/marketplace/orders/order-builder/compatibility) with the selected model. Select another engine.
 
 ## Step 3. Add compute
 
@@ -116,18 +113,15 @@ After that, confirm two transactions. Each may take 15-30 seconds to appear.
 <br/>
 
 If the MetaMask browser extension does not open automatically, open it manually , select the transaction in the **Activity** tab, and confirm it.
-If the MetaMask browser extension does not open automatically, open it manually , select the transaction in the **Activity** tab, and confirm it.
 
 <img src={require('../images/metamask-transaction-manually.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 Once the Deploy order is placed successfully, you will be redirected to its [**Order**](/marketplace/orders/order) screen.
-Once the Deploy order is placed successfully, you will be redirected to its [**Order**](/marketplace/orders/order) screen.
 
 ## Step 6. Manage the order
 
-Your order may take about 30 minutes to process if you used a model from Marketplace and up to one hour for uploaded models. You can check the order status in the **Order** screen.
 Your order may take about 30 minutes to process if you used a model from Marketplace and up to one hour for uploaded models. You can check the order status in the **Order** screen.
 
 <img src={require('../images/order-full.png').default} width="auto" height="auto" border="1"/>
