@@ -24,7 +24,7 @@ Additional possible statuses:
 
 - **Cancelling**: the order is being canceled by the customer's request.
 - **Canceled**: the order has been canceled successfully, and the remaining order deposit was transferred back to the customer's wallet.
-- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them](/marketplace/guides/troubleshooting).
+- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them].
 
 Learn more about [statuses](/fundamentals/orders#order-status).
 
