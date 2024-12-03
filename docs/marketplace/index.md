@@ -17,13 +17,13 @@ Super Protocol launched the first public release of [Marketplace 2.0](https://ma
 - Deploying AI models in confidential tunnels using a variety of AI engines and settings.
 - UI/UX redesign.
 
-Features coming up in the next phases:
+Upcoming features in the next phases:
 
 - Publishing offers in the Marketplace from the uploaded files.
-- Fine-tuning mode (train new layers of the base models).
+- Fine-tuning models—creating new layers for base models.
 - Support for datasets.
-- More models and datasets available in the Marketplace.
-- More AI engines available (and more model categories).
+- More models available in the Marketplace.
+- More AI engines and more supported model categories.
 - A light UI theme.
 
 Any feedback would be very much appreciated—please join our [Discord](https://discord.gg/superprotocol) or use the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).

@@ -22,4 +22,4 @@ The table in the center of the screen provides essential information about your 
 - **Model**: the main model used in the order; only for Deploy and Fine-tune orders.
 - **Datasets** (hidden by default): the main dataset used in the order.
 
-Clicking an order opens its [**Order** screen](/marketplace/orders/order) with detailed information.
+Clicking an order opens its [**Order**](/marketplace/orders/order) screen with detailed information.
