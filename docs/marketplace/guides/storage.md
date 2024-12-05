@@ -15,22 +15,26 @@ The guide is intended for advanced Web3 users; feel free to skip it and continue
 
 Demo users must first [log in as a Web3 user](/marketplace/guides/log-in) to be able to upload to a personal Storj account instead of the Super Protocol cloud.
 
-## Step 1. Set up Storj
+## Step 1. Register a Storj account
 
-Register a [Storj](https://www.storj.io/) account if you do not have one yet. Both free Trial and Pro Storj accounts are suitable. However, with a Trial account, your files will become unavailable after the end of the trial period.
+If you don't already have a [Storj](https://www.storj.io/) account, register one. Both free Trial and Pro accounts are suitable. However, with a Trial account, your files will become inaccessible once the trial period ends.
 
-In the Storj account dashboard, create a new project and a bucket. Refer to the Storj documentation for instructions on how to [create a project](https://storj.dev/support/projects) and [create a buckets](https://storj.dev/support/object-browser#configure-object-browser-access).
+## Step 2. Create a project and bucket
 
-In the same Storj account dashboard, create two S3 Access Keys for this bucket. Creating an Access Key also generates a Secret Key:
+Log in to your Storj account dashboard and create a new project and a bucket. Refer to the Storj documentation for instructions on how to [create a project](https://storj.dev/support/projects) and [create a bucket](https://storj.dev/support/object-browser#configure-object-browser-access).
 
-- Access Key should look something like this: `jv7ke2m5vqkyxffywr3qmc47ibxa`.
-- Secret Key should look something like this: `jzbf5fgqz56nlun2jht7pjoiapmowvb3uarpzeqb2t2wiivij3jvg`.
+## Step 3. Generate S3 Access Keys
 
-One S3 Access Key should provide the **Write** and **Delete** permissions. The other one should provide the **Read** and **List** permissions. As a result, you should have two Access Keys and two Secret Keys. Refer to the Storj documentation to learn how to [generate S3 Access Keys](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials).
+In the Storj dashboard, generate two S3 Access Keys for the bucket. Assign **Write** and **Delete** permissions to one key. Assign **Read** and **List** permissions to the other key. Note that each S3 Access Key comes with a corresponding Secret Key:
 
-## Step 2. Set up your Web3 account
+- Example Access Key: `jv7ke2m5vqkyxffywr3qmc47ibxa`.
+- Example Secret Key: `jzbf5fgqz56nlun2jht7pjoiapmowvb3uarpzeqb2t2wiivij3jvg`.
 
-In the Marketplace web app, open the **Account** window.
+As a result, you should have two pairs Access Key + Secret Key. Refer to the Storj documentation to learn how to [generate S3 Access Keys](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials).
+
+## Step 4. Set up your Super Protocol Web3 account
+
+Open the [Marketplace web app](https://marketplace.superprotocol.com/). Log in as a Web3 user and open the **Account** window.
 
 <img src={require('../images/marketplace-web3acc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -42,10 +46,10 @@ Select the **Your Storj account** radio button, fill in the fields, and click **
 | :- | :- |
 | Bucket | Name of the Storj bucket |
 | Path | Path to a directory inside the bucket; it can be empty |
-| WriteAccessKeyId | Access Key with the **Write** and **Delete** permissions |
-| WriteSecretAccessKey | Secret Key with the **Write** and **Delete** permissions |
-| ReadAccessKeyId | Access Key with the **Read** and **List** permissions |
-| ReadSecretAccessKey | Secret Key with the **Read** and **List** permissions |
+| WriteAccessKeyId | Access Key with **Write** and **Delete** permissions |
+| WriteSecretAccessKey | Secret Key with **Write** and **Delete** permissions |
+| ReadAccessKeyId | Access Key with **Read** and **List** permissions |
+| ReadSecretAccessKey | Secret Key with **Read** and **List** permissions |
 
 <img src={require('../images/web3acc-storj.png').default} width="auto" height="auto" border="1"/>
 <br/>

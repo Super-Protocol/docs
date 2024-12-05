@@ -12,11 +12,10 @@ Order Builder is a tool to configure orders from the main components:
 - **Engine**
 - **Compute**
 
+Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
+
 <img src={require('../../images/order-builder-empty.png').default} width="auto" height="auto" border="1"/>
 <br/>
-<br/>
-
-Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
 ## Order Type
 
@@ -37,9 +36,9 @@ A pre-trained AI model is a mandatory component for both types of orders. You ca
 
 To add a model to the order, click the blue **[+]** button next to it.
 
-Clicking the model's name opens the [**Offer**](/marketplace/marketplace/offer) window. It provides a detailed description and pricing. Your uploaded models do not have such window, and they do not have a price.
+Clicking the model's name opens its [**Offer**](/marketplace/marketplace/offer) window. It provides a detailed description and pricing. Your uploaded models do not have such window, and they do not have a price.
 
-To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, then the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the full list of the model's requirement slots.
+To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the complete list of the model's requirement slots.
 
 If you add your uploaded model, a yellow warning icon will appear. 
 
@@ -57,7 +56,7 @@ Ensure your uploaded model fits into the total maximum compute configuration all
 
 ## Datasets
 
-A dataset can be any data the model works with. For example, a dataset for fine-tuning a model or a file with a new layer for Deploy orders.
+A dataset is any data the model works with. For example, it can be a set of files for fine-tuning a model or a single file with a new layer for Deploy orders.
 
 Dataset is a mandatory component for Fine-tune orders, but optional for Deploy orders.
 
@@ -69,29 +68,29 @@ Datasets are not yet available in the current version of the Marketplace.
 
 ## Engine
 
-The engine is required to launch a model and provide a web UI.
+The engine is required to deploy and fine-tune models. It also provides a web UI.
 
 At the moment, Marketplace supports two AI engines:
 
-- Text Generation Web UI for text-to-text models.
-- ComfyUI for image- and video-related tasks.
+- **Text Generation Web UI** for text-to-text models.
+- **ComfyUI** for image- and video-related tasks.
 
 The Super Protocol team will add more popular open-source AI engines in the future. Currently, user-uploaded engines are not allowed as they may have built-in vulnerabilities.
 
 To add an engine to the order, click the blue **[+]** button next to it. If a yellow warning icon appears, it indicates that the selected engine is incompatible with a selected model.
 
-Once you add an engine, its configuration will open.
+Clicking the engine's name opens its [**Offer**](/marketplace/marketplace/offer) window.
+
+Once you add an engine, you can open its configuration by pressing the **Settings** button. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to fail to deploy. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 <img src={require('../../images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-The **Engine** tab contains the main settings specific for every engine. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
-
 For orders using tunnels, the engine settings will include the **Tunnels** tab with **Domain Settings**:
 
 - **Temporary Domain** uses pre-configured settings to create a domain on `superprotocol.io` with a randomly generated name, for example, `mund-avys-kefs.superprotocol.io`. It is the recommended option that does not require additional setup.
-- **Manual Configuration** will allow advanced users to host a model on a custom domain. This feature is not yet available in the current version of the Marketplace.
+- **Manual Configuration** is not available right now. It will allow advanced users to host a model on a custom domain. This feature is not yet available in the current version of the Marketplace.
 
 ## Compute
 
@@ -99,13 +98,7 @@ The term _compute_ refers to a confidential computing device that processes the 
 
 The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order. To add a compute to the order, click the blue **[+]** button next to it.
 
-:::warning
-
-The requirements of your uploaded models are not specified. The system will not include such a model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
-
-Ensure your model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
-
-:::
+Clicking the compute's name opens its [**Offer**](/marketplace/marketplace/offer) window.
 
 Learn more about [requirements and configurations](/fundamentals/slots).
 
@@ -118,6 +111,8 @@ The panel at the bottom of the screen displays the total prices of the offers ad
 **Per Hour** is the total for all hourly-priced offers. This sum will be gradually deducted from the order deposit for each hour the order is running.
 
 **Lease Time** is the duration in hours for which you plan to run the order. Increasing the lease time raises the initial deposit amount. For Fine-tune orders, ensure the lease time is sufficient to complete the computation. For Deploy orders, this is the duration for which the model will remain running and available.
+
+Note that providers may set the minimum and maximum allowed lease time for their offers to limit the usage. The lease time you enter must be within these limits.
 
 **Pay now** is the initial order deposit you must pay at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**). You can increase the deposit now by increasing the **Lease Time** or after checkout while the order is processing.
 

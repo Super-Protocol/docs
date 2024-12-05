@@ -2,7 +2,7 @@
 id: "upload"
 title: "How to Upload a Model"
 slug: "/guides/upload"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
@@ -59,7 +59,7 @@ Prepare the model files and archive them to the TAR.GZ format.
 
 #### GGUF format
 
-Models in the GGUF formats are quantized, and you only need one file. Pick whichever one you like and put it in a separate directory. Note that higher quantization means a larger file.
+Models in the GGUF formats are quantized, and you only need one file. Pick whichever one you like and put it in a separate directory. Note that higher-bit quantization means a larger file.
 
 For example:
 
@@ -83,7 +83,7 @@ Sometimes, the model files include both a single consolidated `model.safetensors
 <br/>
 <br/>
 
-Exclude one set. You need only one set along with all other files. Do not add the consolidated file and multiple parts of the same model simultaneously.
+Include only one set along with all other files. Do not add the consolidated file and multiple parts of the same model simultaneously.
 
 Also, the model files on Hugging Face may include the model in multiple formats. For example:
 

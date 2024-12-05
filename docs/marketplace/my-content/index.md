@@ -18,7 +18,7 @@ Registering providers and creating offers are not yet available in the current v
 | **Document** | **Description** |
 | :- | :- |
 | [My Files](/marketplace/my-content/my-files) | The **My Files** screen displays the list of your uploaded files. |
-| - [Upload Content](/marketplace/my-content/my-files/upload-content) | The **Upload Content** window allows uploading files to Super Protocol. |
-| - [Info](/marketplace/my-content/my-files/info) | The **Info** window displays the information about an uploaded file. |
-| - [Edit Content](/marketplace/my-content/my-files/upload-content) | The **Edit Content** window allows editing the information about an uploaded file. |
+| [Upload Content](/marketplace/my-content/my-files/upload-content) | The **Upload Content** window allows uploading files to Super Protocol. |
+| [Info](/marketplace/my-content/my-files/info) | The **Info** window displays the information about an uploaded file. |
+| [Edit Content](/marketplace/my-content/my-files/upload-content) | The **Edit Content** window allows editing the information about an uploaded file. |
 | [My Offers](/marketplace/my-content/my-offers) | The **My Offers** screen displays the list of your offers. |
