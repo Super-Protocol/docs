@@ -9,6 +9,9 @@ This screen provides detailed information about an order. Learn more about [Orde
 
 <img src={require('../../images/order-full.png').default} width="auto" height="auto" border="1"/>
 <br/>
+<br/>
+
+The contents of an order are encrypted and accessible only to the user who placed it. However, general information about orders is recorded on the blockchain and publicly visible due to the blockchain's transparent nature.
 
 ## Order
 
@@ -24,7 +27,7 @@ Additional possible statuses:
 
 - **Cancelling**: the order is being canceled by the customer's request.
 - **Canceled**: the order has been canceled successfully, and the remaining order deposit was transferred back to the customer's wallet.
-- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them].
+- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them](/marketplace/guides/troubleshooting).
 
 Learn more about [statuses](/fundamentals/orders#order-status).
 
@@ -50,7 +53,7 @@ The **Tunnels** section informs about the launched tunnel. Tunnels enable end us
 - **Online**: the tunnel is operational, and the model is running. End users may access the AI engine's web UI via the **Access Link**.
 - **Offline**: the tunnel order is done, and the tunnel is no longer available. The AI engine's web UI is inaccessible, but the expired **Access Link** remains visible.
 
-To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. Note that the **Tunnels** section and the **Tunnels Orders** tab are visible only for orders that utilize tunnels.
+To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. The **Tunnels** section and the **Tunnels Orders** tab only exist for orders that utilize tunnels and are only visible to the user who placed the order.
 
 ## Order management buttons
 
@@ -60,7 +63,7 @@ Depending on the order status, different buttons are visible:
 - **Get Result** for orders with the Done, Error, and Canceled statuses.
 - No buttons for orders with the Cancelling statuses.
 
-These buttons are hidden when viewing an order created by another user.
+These buttons are only visible to the user who placed the order.
 
 ### Cancel Order
 

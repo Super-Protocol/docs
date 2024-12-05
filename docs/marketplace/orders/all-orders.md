@@ -23,3 +23,5 @@ The table in the center of the screen provides essential information about your 
 - **Datasets** (hidden by default): the main dataset used in the order.
 
 Clicking an order opens its [**Order**](/marketplace/orders/order) screen with detailed information.
+
+The contents of all orders are encrypted and accessible only to the users who placed them. However, general information about orders is recorded on the blockchain and publicly visible due to the blockchain's transparent nature.
