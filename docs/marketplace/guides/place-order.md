@@ -52,9 +52,9 @@ Each engine exists in two variants:
 
 Click the blue **[+]** button to add the engine to the order.
 
-Once you add the engine, its configuration will become available. Only make changes if you are confident in what you are doing, as modifying the engine's settings can cause the model to function incorrectly. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
-
 If a yellow warning icon appears, it indicates that the selected engine is [incompatible](/marketplace/orders/order-builder/compatibility) with the selected model. Select another engine.
+
+Once you add an engine, you can open its configuration by pressing the **Settings** button. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to fail to deploy. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 ## Step 3. Add compute
 

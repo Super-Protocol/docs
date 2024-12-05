@@ -36,9 +36,9 @@ A pre-trained AI model is a mandatory component for both types of orders. You ca
 
 To add a model to the order, click the blue **[+]** button next to it.
 
-Clicking the model's name opens the [**Offer**](/marketplace/marketplace/offer) window. It provides a detailed description and pricing. Your uploaded models do not have such window, and they do not have a price.
+Clicking the model's name opens its [**Offer**](/marketplace/marketplace/offer) window. It provides a detailed description and pricing. Your uploaded models do not have such window, and they do not have a price.
 
-To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, then the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the full list of the model's requirement slots.
+To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the complete list of the model's requirement slots.
 
 If you add your uploaded model, a yellow warning icon will appear. 
 
@@ -68,7 +68,7 @@ Datasets are not yet available in the current version of the Marketplace.
 
 ## Engine
 
-The engine is required to launch a model and provide a web UI.
+The engine is required to deploy and fine-tune models. It also provides a web UI.
 
 At the moment, Marketplace supports two AI engines:
 
@@ -79,13 +79,13 @@ The Super Protocol team will add more popular open-source AI engines in the futu
 
 To add an engine to the order, click the blue **[+]** button next to it. If a yellow warning icon appears, it indicates that the selected engine is incompatible with a selected model.
 
-Once you add an engine, you may open its configuration.
+Clicking the engine's name opens its [**Offer**](/marketplace/marketplace/offer) window.
+
+Once you add an engine, you can open its configuration by pressing the **Settings** button. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to fail to deploy. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 <img src={require('../../images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
-
-The **Engine** tab contains the main settings specific for every engine. Only make changes if you are confident in what you are doing, as modifying these settings can cause the model to fail to deploy. For more information about the settings, refer to the documentation for [Text Generation Web UI](https://github.com/oobabooga/text-generation-webui/wiki) and [ComfyUI](https://docs.comfy.org/).
 
 For orders using tunnels, the engine settings will include the **Tunnels** tab with **Domain Settings**:
 
@@ -97,6 +97,8 @@ For orders using tunnels, the engine settings will include the **Tunnels** tab w
 The term _compute_ refers to a confidential computing device that processes the order.
 
 The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order. To add a compute to the order, click the blue **[+]** button next to it.
+
+Clicking the compute's name opens its [**Offer**](/marketplace/marketplace/offer) window.
 
 Learn more about [requirements and configurations](/fundamentals/slots).
 
