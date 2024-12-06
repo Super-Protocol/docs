@@ -48,7 +48,7 @@ In the **Order Builder**, click **Select AI engine** to open the list of engines
 Each engine exists in two variants:
 
 - Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
-- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models may run slower in this mode. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and have more availability than TDX+H100 compute.
+- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models may run slower in this mode. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and has more availability than TDX+H100 compute.
 
 Click the blue **[+]** button to add the engine to the order.
 
@@ -145,3 +145,7 @@ If an error occurs during transaction confirmation, you will see an error messag
 <br/>
 
 To retry, click the **Try again** button. If the error persists, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+
+## Contact Super Protocol
+
+If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

@@ -61,7 +61,7 @@ Depending on the order status, different buttons are visible:
 
 - **Cancel Order** and **Extend Lease** for orders with the Suspended, Blocked, New, or Processing statuses.
 - **Get Result** for orders with the Done, Error, and Canceled statuses.
-- No buttons for orders with the Cancelling statuses.
+- No buttons for orders with the Cancelling status.
 
 These buttons are only visible to the user who placed the order.
 

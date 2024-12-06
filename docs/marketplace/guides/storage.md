@@ -1,6 +1,6 @@
 ---
 id: "storage"
-title: "How to Set Up Storage"
+title: "How to Set Up Personal Storage"
 slug: "/guides/storage"
 sidebar_position: 4
 ---
@@ -17,11 +17,11 @@ Demo users must first [log in as a Web3 user](/marketplace/guides/log-in) to be 
 
 ## Step 1. Register a Storj account
 
-If you don't already have a [Storj](https://www.storj.io/) account, register one. Both free Trial and Pro accounts are suitable. However, with a Trial account, your files will become inaccessible once the trial period ends.
+If you don't already have a [Storj](https://www.storj.io/) account, register one. Both free Trial and Pro accounts are suitable. Note that with a Trial account, your files will become inaccessible once the trial period ends.
 
 ## Step 2. Create a project and bucket
 
-Log in to your Storj account dashboard and create a new project and a bucket. Refer to the Storj documentation for instructions on how to [create a project](https://storj.dev/support/projects) and [create a bucket](https://storj.dev/support/object-browser#configure-object-browser-access).
+[Log in](https://www.storj.io/login) to your Storj account dashboard and create a new project and a bucket. Refer to the Storj documentation for instructions on how to [create a project](https://storj.dev/support/projects) and [create a bucket](https://storj.dev/support/object-browser#configure-object-browser-access).
 
 ## Step 3. Generate S3 Access Keys
 
