@@ -17,7 +17,7 @@ If the **Enter Marketplace** button is stuck in the loading state, open the Meta
 
 If MetaMask shows no requests, refresh the page and press the **Enter Marketplace** button again.
 
-If the problem persists, restart your browser and log in to MetaMask before trying to enter the Marketplace.
+If the problem persists, restart your browser and unlock MetaMask before trying to enter the Marketplace.
 
 ## Order status: Error
 
@@ -27,7 +27,7 @@ The **Error** status means something went completely wrong, and the model was no
 <br/>
 <br/>
 
-Click the **Get Result** button to download the order log file containing technical information about the error. If the file is difficult to read, you can analyze it using a chatbot like Claude or ChatGPT.
+Click the **Get Result** button to download the order log file containing technical information about the error. If the file is difficult to read, you can analyze it using a chatbot like Claude, ChatGPT, or similar.
 
 ### Trust remote code
 
@@ -35,7 +35,7 @@ Some models may contain scripts without which the model will not run. If you dep
 
 An example of a model that relies on remote scripts is [cerebras/btlm-3b-8k-base](https://huggingface.co/cerebras/btlm-3b-8k-base).
 
-To avoid this error, allow executing remote code in the engine settings before checkout using the following instructions:
+To avoid this error, allow executing remote code in the engine settings using the following instructions.
 
 In the Order Builder, open the engine settings.
 

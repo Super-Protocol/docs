@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 This guide provides step-by-step instructions for uploading a model to Super Protocol.
 
-## Step 1. Requirements for models
+## Step 1. Check requirements
 
 Ensure your model meets the Super Protocol requirements. Otherwise, the order may fail.
 
@@ -42,13 +42,13 @@ If your model is from Hugging Face, ensure its _task_ matches one of the support
 
 ### Model size
 
-The total size of your model files must not exceed 10 GB; otherwise, deployment may fail. Larger slots to support bigger models will be available in the future.
+The total size of your model files must not exceed 10 GB; otherwise, deployment may fail. More compute with larger slots to support bigger models will be available in the future.
 
-Note that large models perform poorly on TDX CPU without GPU support. If you plan on deploying on CPU, choose a smaller model.
+Note that large models may perform poorly on TDX machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
 
 ## Step 2. Select files
 
-Models consist of multiple files. Usually, not all of them are required. Select files following the instructions for your model's format.
+Models consist of multiple files. Often, not all of them are required. Select files following the instructions for your model's format.
 
 ### GGUF format
 
@@ -61,7 +61,7 @@ Choose one GGUF file and place it in a separate directory. For example:
 
 ### GGML format
 
-Models in the GGML formal are quantized as well.
+Models in the GGML formal are often quantized as well.
 
 Choose one BIN and all other files and place them in a separate directory. For example:
 
@@ -70,15 +70,27 @@ Choose one BIN and all other files and place them in a separate directory. For e
 
 ### Safetensors formats
 
-Place all files from the repository into a separate directory.
+Place all files from the repository in a separate directory. For example:
 
-Ensure to avoid duplications. If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files are available, select one set and remove the other. For example:
+<img src={require('../images/hf-safetensors.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Avoid duplications. Some repositories contain several variants of the same model. For example, one of the the highlighted files on the following screenshot can be removed:
+
+<img src={require('../images/hf-safetensors-duplicates.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files are available, choose one set and remove the other. For example, one of the highlighted sets of files on the following screenshot should be removed:
 
 <img src={require('../images/hf-safetensors-consolidated.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-If multiple formats are available, select one format and remove the others. For example:
+### Multiple formats
+
+If multiple formats are available, choose one of them and remove the others. For example, one of the highlighted sets of files on the following screenshot should be removed:
 
 <img src={require('../images/hf-formats.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -142,9 +154,9 @@ Fill out the form:
 
 - **Content Name**: type the desired model name. It may be different from the file name. Providing a meaningful name makes it easier to find the model later.
 - **Category**: choose the model category from the drop-down menu. You can only choose one.
-- **Engine**: choose compatible engines from the drop-down menu. It is recommended to choose both and then decide how you want to run the model during order creation:
-  + Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
-  + Engines marked as 'CPU only' run the model on an Intel TDX CPU.
+- **Engine**: choose compatible engines from the drop-down menu. You can choose both **CPU only** and **GPU only** variants and decide how you want to run the model later during order creation:
+  + Engines marked as **GPU only** run the model on an NVIDIA H100 Tensor Core GPU.
+  + Engines marked as **CPU only** run the model on an Intel TDX CPU.
 
 <img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
