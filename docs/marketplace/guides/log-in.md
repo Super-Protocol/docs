@@ -17,15 +17,9 @@ The Marketplace web app does not support mobile devices. Use a desktop or laptop
 
 To log in as a Web3 user, you need the MetaMask browser extension. MetaMask is one of the most popular software cryptocurrency wallets for Ethereum and EVM-compatible blockchains like Polygon.
 
-If you do not have MetaMask installed, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new EVM wallet address.
+If you do not have MetaMask, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new EVM wallet address.
 
-If you already have MetaMask installed, complete [Step 1-2](/marketplace/guides/log-in#step-1-2-add-new-account) instead to create a new EVM wallet address.
-
-:::note
-
-Super Protocol Marketplace is in an early beta stage, and bugs and unexpected behavior are possible. Although you can use an existing Ethereum wallet address, it is recommended that you create a new one specifically to test Super Protocol.
-
-:::
+If you already have MetaMask installed, skip Step 1-1 and complete [Step 1-2](/marketplace/guides/log-in#step-1-2-add-new-account) instead to create a new EVM wallet address.
 
 ### Step 1-1. Install MetaMask
 
@@ -57,7 +51,15 @@ Skip Step 1-2, as you already have a new wallet, and go directly to [Step 2](/ma
 
 ### Step 1-2. Add new account
 
-To create a new EVM wallet address in the already installed MetaMask, click your current account name at the top of the MetaMask window.
+If you have previously installed MetaMask, create a new EVM wallet address.
+
+:::note
+
+Although you can use an existing Ethereum wallet address, it is recommended that you create a new one specifically for Super Protocol.
+
+:::
+
+Click your current account name at the top of the MetaMask window.
 
 <img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -111,7 +113,7 @@ Switch to the newly added network.
 
 ## Step 3. Connect the account
 
-In the [Marketplace web app](https://marketplace.superprotocol.com/), press the **Enter Marketplace** button.
+Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press the **Enter Marketplace** button.
 
 <img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
 <br/>
