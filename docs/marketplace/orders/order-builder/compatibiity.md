@@ -45,6 +45,6 @@ For example, you add offers with the following lease time limitations:
 
 - The model's minimum lease time is 3 hours, and the maximum lease time is not limited.
 - The engine does not have restrictions on the lease time.
-- The compute's minimum lease time is 2 hours, and the maximum is 4 hours.
+- The computing device's minimum lease time is 2 hours, and the maximum is 4 hours.
 
 In this example, your lease time must be between 3 and 4 hours.

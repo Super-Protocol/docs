@@ -15,7 +15,7 @@ This window provides detailed information about a model or dataset available for
 On the right side of the window, you can see the offer's metadata:
 
 - **Offer ID**: a unique offer identification number. It is incremental and continuous for model offers and dataset offers.
-- **Offer Type**: the type of the offer, either **Model** or **Dataset**.
+- **Offer Type**: the type of the offer, either **Model**, **Dataset**, **Engine**, or **Compute**.
 - **Category**: the types of tasks that the model or dataset is designed to perform. Models can only belong to one category; datasets may belong to several categories.
 - **Provider**: the name of the provider that created the offer.
 - **Published**: the date and time when the offer was created.

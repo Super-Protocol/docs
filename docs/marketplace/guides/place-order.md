@@ -5,29 +5,39 @@ slug: "/guides/place-order"
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 This guide provides step-by-step instructions on how to build and place an order on Super Protocol.
+
+:::note
+
+The Marketplace web app does not officially support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
+
+:::
 
 ## Step 1. Select a model
 
 Select a model you want to deploy. You can add either a model from the Marketplace or your own model from My Content.
 
-### From the Marketplace
+<Tabs>
+  <TabItem value="marketplace" label="Marketplace" default>
 
-To lease a model listed on the Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model you want to add to the order.
+    To lease a model listed on the Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model you want to add to the order.
 
-<img src={require('../images/models-open.png').default} width="auto" height="auto" border="1"/>
-<br/>
+    <img src={require('../images/models-open.png').default} width="auto" height="auto" border="1"/>
 
-### Your model
+  </TabItem>
+  <TabItem value="my-content" label="My Content">
 
-To add your own model, you must prepare and upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
+    To add your own model, you must prepare and upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
 
-When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
+    When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
 
-<img src={require('../images/myfiles-open.png').default} width="auto" height="auto" border="1"/>
-<br/>
+    <img src={require('../images/myfiles-open.png').default} width="auto" height="auto" border="1"/>
 
-### Open Order Builder
+  </TabItem>
+</Tabs>
 
 Once you add a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
@@ -48,7 +58,7 @@ In the **Order Builder**, click **Select AI engine** to open the list of engines
 Each engine exists in two variants:
 
 - Engines marked as 'GPU only' run the model on an NVIDIA H100 Tensor Core GPU.
-- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models may run slower in this mode. However, it may be a suitable way to deploy smaller models since the TDX-only compute is cheaper and has more availability than TDX+H100 compute.
+- Engines marked as 'CPU only' run the model on an Intel TDX CPU. Models may run slower in this mode. However, it may be a suitable way to deploy smaller models since the TDX-only machines are cheaper and has more availability than TDX+H100 machines.
 
 Click the blue **[+]** button to add the engine to the order.
 
@@ -64,16 +74,7 @@ Once you add an engine, click **Select Compute** to open the list of available c
 <br/>
 <br/>
 
-Click the blue **[+]** button to add a compute to the order.
-
-:::warning
-
-If you added your uploaded model, ensure it fits into the maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
-
-:::
-
-<img src={require('../images/order-builder-compute.png').default} width="auto" height="auto" border="1"/>
-<br/>
+Click the blue **[+]** button to add a machine to the order.
 
 ## Step 4. Set lease time
 
@@ -122,17 +123,13 @@ Once the Deploy order is placed successfully, you will be redirected to its [**O
 
 ## Step 6. Manage the order
 
-Your order may take about 30 minutes to process if you used a model from Marketplace and up to one hour for uploaded models. You can check the order status in the **Order** screen.
-
-<img src={require('../images/order-full.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-When the model is deployed and available, you will see **Online** in the tunnel's status. To interact with the model, use the **Access Link** to open the engine's web UI in your browser.
+Your order may take about 30 minutes to process if you used a model from Marketplace and up to one hour for uploaded models. You can check the order status in the **Order** screen. When the model is deployed and available, you will see **Online** in the tunnel's status.
 
 <img src={require('../images/order-online.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
+
+To interact with the model, use the **Access Link** to open the engine's web UI in your browser.
 
 To increase the time the model remains running, click the **Extend Lease** button and add tokens to the order deposit.
 

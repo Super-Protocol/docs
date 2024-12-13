@@ -11,20 +11,20 @@ The testnet has a limited amount of computing resources. To ensure fair access, 
 
 On the testnet, you can deploy models using either Intel TDX CPUs or NVIDIA H100 Tensor Core GPUs.
 
-Super Protocol has two types of compute:
+Super Protocol has two types of machines:
 
-- **TDX+H100** machines can run orders on GPU or CPU, depending on the selected engine type.
-- **TDX** machines can only run orders on CPU. Note that this mode is much slower.
+- **TDX+H100 (CPU and GPU)**: can run orders on GPU or CPU, depending on the selected engine type.
+- **TDX (CPU only)**: can only run orders on CPU. Note that CPUs are much slower.
 
 Super Protocol constantly adds more TDX+H100 machines and will soon begin onboarding machines from third-party providers.
 
 Pricing and restrictions:
 
-- Order lease time: minimum 2 hours and maximum 4 hours.
-- Compute costs 4.134 TEE tokens per hour.
+- Order lease time: minimum 2 hours and maximum 8 hours.
+- Compute costs 4.134 TEE tokens per hour for GPU orders and 2.13 TEE per hour for CPU orders in most cases.
 - Models from the Marketplace cost 1 TEE per order.
 - Engines cost 0.5 TEE per order.
-- Tunnels Launcher fee to set up a confidential tunnel is approximately 1-2 TEE per order.
+- Tunnels Launcher fee for setting up a confidential tunnel is approximately 1-2 TEE per order.
 
 For example, a four-hour GPU order will cost approximately:
 
@@ -37,7 +37,7 @@ For example, a four-hour GPU order will cost approximately:
 
 ## Model limits
 
-The total size of your model files should not exceed 10 GB; otherwise, deployment may fail. More compute with larger slots to support bigger models will be available in the future.
+The total size of your model files should not exceed 10 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
 Also, deployed models must belong to a category supported by one of the AI engines:
 
