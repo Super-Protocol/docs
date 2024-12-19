@@ -96,9 +96,9 @@ For orders using tunnels, the engine settings will include the **Tunnels** tab w
 
 The term _compute_ refers to a confidential computing device that processes the order.
 
-The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order. To add a compute to the order, click the blue **[+]** button next to it.
+The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order. To add a machine to the order, click the blue **[+]** button next to it.
 
-Clicking the compute's name opens its [**Offer**](/marketplace/marketplace/offer) window.
+Clicking the machine's name opens its [**Offer**](/marketplace/marketplace/offer) window.
 
 Learn more about [requirements and configurations](/fundamentals/slots).
 
