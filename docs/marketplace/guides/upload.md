@@ -42,30 +42,21 @@ If your model is from Hugging Face, ensure its _task_ matches one of the support
 
 ### Model size
 
-The total size of your model files must not exceed 10 GB; otherwise, deployment may fail. More compute with larger slots to support bigger models will be available in the future.
+The size of your model should not exceed 10 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
 Note that large models may perform poorly on TDX machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
 
 ## Step 2. Select files
 
-Models consist of multiple files. Often, not all of them are required. Select files following the instructions for your model's format.
+Model repositories contain multiple files. Often, not all of them are required. Select files following the instructions for your model's format.
 
-### GGUF format
+### GGUF and GGML formats
 
-For models in this format, the files in the repository usually contain variants of the same model with different quantization. Note that higher-bit quantization means a larger file.
+For models in thes formats, the files in the repository usually contain variants of the same model with different quantization. Note that higher-bit quantization means a larger file.
 
-Choose one GGUF file and place it in a separate directory. For example:
+Choose one file and place it in a separate directory. For example:
 
 <img src={require('../images/hf-gguf.png').default} width="auto" height="auto" border="1"/>
-<br/>
-
-### GGML format
-
-Models in the GGML formal are often quantized as well.
-
-Choose one BIN and all other files and place them in a separate directory. For example:
-
-<img src={require('../images/hf-ggml.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ### Safetensors formats
@@ -76,7 +67,7 @@ Place all files from the repository in a separate directory. For example:
 <br/>
 <br/>
 
-Avoid duplications. Some repositories contain several variants of the same model. For example, one of the the highlighted files on the following screenshot can be removed:
+Avoid duplications to reduce uploading time. Some repositories contain several variants of the same model. For example, one of the the highlighted files on the following screenshot can be removed:
 
 <img src={require('../images/hf-safetensors-duplicates.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -86,7 +77,6 @@ If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-y
 
 <img src={require('../images/hf-safetensors-consolidated.png').default} width="auto" height="auto" border="1"/>
 <br/>
-<br/>
 
 ### Multiple formats
 
@@ -94,10 +84,17 @@ If multiple formats are available, choose one of them and remove the others. For
 
 <img src={require('../images/hf-formats.png').default} width="auto" height="auto" border="1"/>
 <br/>
+<br/>
+
+:::note
+
+For some models, you should remove additional formats in the model's root directory and subdirectories.
+
+:::
 
 ## Step 3. Create a TAR.GZ archive
 
-Archive the directory with the model files into a TAR.GZ file using the following instructions:
+Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
@@ -154,11 +151,10 @@ Fill out the form:
 
 - **Content Name**: type the desired model name. It may be different from the file name. Providing a meaningful name makes it easier to find the model later.
 - **Category**: choose the model category from the drop-down menu. You can only choose one.
-- **Engine**: choose compatible engines from the drop-down menu. You can choose both **CPU only** and **GPU only** variants and decide how you want to run the model later during order creation:
-  + Engines marked as **GPU only** run the model on an NVIDIA H100 Tensor Core GPU.
-  + Engines marked as **CPU only** run the model on an Intel TDX CPU.
+- **Engine**: choose compatible engines from the drop-down menu. Select both available options.
 
 <img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
+<br/>
 <br/>
 
 Click **Select tar.gz archive** and select the TAR.GZ archive file.
@@ -172,7 +168,7 @@ Super Protocol has [two options of decentralized storage](/marketplace/account/w
 
 :::
 
-Press **Upload** and wait for the process to complete. Do not close the window until the upload is done.
+Press **Upload** and wait for the process to complete. Do not close the window until the upload is done and the resource file is created.
 
 <img src={require('../images/upload-content-done.png').default} width="auto" height="auto" border="1"/>
 <br/>

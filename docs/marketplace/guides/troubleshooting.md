@@ -27,23 +27,33 @@ The **Error** status means something went completely wrong, and the model was no
 <br/>
 <br/>
 
-Click the **Get Result** button to download the order log file containing technical information about the error. If the file is difficult to read, you can analyze it using a chatbot like Claude, ChatGPT, or similar.
+Click the **Get Result** button to download the order log file containing technical information about the error. The file may be difficult to read, but you can analyze it using a chatbot like Claude, ChatGPT, or similar.
 
-### Trust remote code
+### Model is too big
 
-Some models may contain scripts without which the model will not run. If you deploy such a model with default settings, the order will end with an error.
+If your model is too big to fit into current [Testnet Limitations](/marketplace/limitations), the deployment will fail with an error similar to the following:
 
-An example of a model that relies on remote scripts is [cerebras/btlm-3b-8k-base](https://huggingface.co/cerebras/btlm-3b-8k-base).
+```
+UserWarning: Current model requires 167773440 bytes of buffer for offloaded layers, which seems does not fit any GPU's remaining memory.
+```
 
-To avoid this error, allow executing remote code in the engine settings using the following instructions.
+Upload a variant of the model with a lower-bit quantization or choose another model. Support for bigger models will be available in the future.
 
-In the Order Builder, open the engine settings.
+### Remote code
+
+Some models rely on scripts without which they will not run. If you deploy such a model with the default settings, the order will end with an error.
+
+An example of such a model is [cerebras/btlm-3b-8k-base](https://huggingface.co/cerebras/btlm-3b-8k-base).
+
+To avoid this error, allow executing remote code in the engine settings:
+
+1. In the Order Builder, open the engine settings.
 
 <img src={require('../images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Go to the **Model loader** tab, select your model's loader from the drop-down menu, and tick the **trust-remote-code** checkbox.
+2. Go to the **Model loader** tab, select your model's loader from the drop-down menu, and tick the **trust-remote-code** checkbox.
 
 <img src={require('../images/order-builder-trust-remote-code.png').default} width="auto" height="auto" border="1"/>
 <br/>
