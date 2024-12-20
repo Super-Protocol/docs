@@ -2,7 +2,7 @@
 id: "troubleshooting"
 title: "Troubleshooting"
 slug: "/guides/troubleshooting"
-sidebar_position: 4
+sidebar_position: 6
 ---
 
 This page contains the most common issues and ways to fix them. This list is incomprehensive and is constantly updated.

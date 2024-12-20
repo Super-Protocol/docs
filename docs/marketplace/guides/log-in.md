@@ -137,7 +137,7 @@ If you connect successfully, you will see your account address in the top-right 
 <img src={require('../images/marketplace-web3acc.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## Step 4. Request TEE and POL
+## Step 4. Get testnet tokens
 
 Super Protocol users need two types of tokens:
 

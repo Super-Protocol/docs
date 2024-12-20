@@ -94,7 +94,7 @@ For some models, you should remove additional formats in the model's root direct
 
 ## Step 3. Create a TAR.GZ archive
 
-Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
+Ensure your model's directory contains no hidden files and subdirectories. Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
@@ -118,9 +118,9 @@ Archive the directory with the selected model files into a TAR.GZ file using the
     Alternatively, install a file archiver like [7-Zip](https://www.7-zip.org/) or similar to create a TAR.GZ archive using a graphical user interface instead of a command line.
 
   </TabItem>
-  <TabItem value="linux" label="Linux and macOS">
+  <TabItem value="linux" label="Linux">
 
-    On Linux and macOS, open a terminal and run the following command:
+    On Linux, open a terminal and run the following command:
 
     ```
     tar -czvf <ARCHIVE_PATH> <MODEL_PATH>
@@ -132,6 +132,25 @@ Archive the directory with the selected model files into a TAR.GZ file using the
 
     ```
     tar -czvf mymodel.tar.gz ./my-model
+    ```
+
+    Wait for the process to complete; it may take a few minutes.
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+    On macOS, open the Terminal and run the following command:
+
+    ```
+    tar --no-mac-metadata --no-xattrs -czvf <ARCHIVE_PATH> <MODEL_PATH>
+    ```
+
+    Replace `<ARCHIVE_PATH>` with the path and desired name of the output archive. Replace `<MODEL_PATH>` with the path to the directory with the model files.
+
+    For example:
+
+    ```
+    tar --no-mac-metadata --no-xattrs -czvf mymodel.tar.gz ./my-model
     ```
 
     Wait for the process to complete; it may take a few minutes.
