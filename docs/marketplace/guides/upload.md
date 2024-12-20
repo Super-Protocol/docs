@@ -94,7 +94,7 @@ For some models, you should remove additional formats in the model's root direct
 
 ## Step 3. Create a TAR.GZ archive
 
-Make sure your model's directory does not contain any hidden files and subdirectories. Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
+Ensure your model's directory contains no hidden files and subdirectories. Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
@@ -142,7 +142,7 @@ Make sure your model's directory does not contain any hidden files and subdirect
     On macOS, open the Terminal and run the following command:
 
     ```
-    tar -czvf --no-mac-metadata --no-xattrs <ARCHIVE_PATH> <MODEL_PATH>
+    tar --no-mac-metadata --no-xattrs -czvf <ARCHIVE_PATH> <MODEL_PATH>
     ```
 
     Replace `<ARCHIVE_PATH>` with the path and desired name of the output archive. Replace `<MODEL_PATH>` with the path to the directory with the model files.
@@ -150,7 +150,7 @@ Make sure your model's directory does not contain any hidden files and subdirect
     For example:
 
     ```
-    tar -czvf --no-mac-metadata --no-xattrs mymodel.tar.gz ./my-model
+    tar --no-mac-metadata --no-xattrs -czvf mymodel.tar.gz ./my-model
     ```
 
     Wait for the process to complete; it may take a few minutes.
