@@ -5,31 +5,55 @@ slug: "/limitations"
 sidebar_position: 1
 ---
 
-Testnet has a limited amount of compute resources. Super Protocol has set limits on CPU/GPU compute configurations and amounts of available tokens so everyone can participate. More NVIDIA H100 machines are on the way.
+The testnet has a limited amount of computing resources. To ensure fair access, Super Protocol has set limits on CPU/GPU compute configurations and token availability, allowing everyone to participate.
 
-## Order limits and pricing
+## Pricing for orders
 
-On testnet, you can deploy models using Intel TDX CPU or NVIDIA H100 GPU. GPU is much faster, but CPU has more availability and cheaper. We currently have two machines for public use:
+On the testnet, you can deploy models using either Intel TDX CPUs or NVIDIA H100 Tensor Core GPUs.
 
-- **Super 2: TDX+H100 (Public)** can run orders on GPU.
-- **Super 3: TDX (Public)** can only run orders on CPU.
+Super Protocol has two types of machines:
 
-Limits:
+- **TDX+H100 (CPU and GPU)**: can run orders on GPU or CPU, depending on the selected engine type.
+- **TDX (CPU only)**: can only run orders on CPU. Note that CPUs are much slower.
 
-- The minimum order lease time is 2 hours, and the maximum lease time is 4 hours.
-- Price per hour is 2.13 TEE tokens for CPU and 4.126 TEE for GPU.
-- All models on Marketplace cost 1 TEE per order.
-- All engines cost 0.5 TEE per order.
-- There is also an estimated 1-2 TEE fee for Tunnels Launcher services that set up the confidential tunnel.
+Super Protocol constantly adds more TDX+H100 machines and will soon begin onboarding machines from third-party providers.
 
-For example, a four-hour GPU order will cost you approximately 19-20 TEE (4.126 * 4 + 1 + 0.5 + 2).
+Pricing and restrictions:
+
+- Order lease time: minimum 2 hours and maximum 8 hours.
+- Compute costs 4.134 TEE tokens per hour for GPU orders and 2.13 TEE per hour for CPU orders in most cases.
+- Models from the Marketplace cost 1 TEE per order.
+- Engines cost 0.5 TEE per order.
+- Tunnels Launcher fee for setting up a confidential tunnel is approximately 1-2 TEE per order.
+
+For example, a four-hour GPU order will cost approximately:
+
+4.134 * 4 + 1 + 0.5 + 2 = **~19-20 TEE** tokens.
 
 ## Token limits
 
-- Demo users receive a one-time advance of 50 TEE tokens. These may not be replenished. To continue testing, users must [log in with a Web3 account](/marketplace/guides/log-in).
-- Web3 users receive a maximum of 25 TEE tokens and 5 POL tokens per day. These may be replenished daily.
-- Web3 users can have a maximum of 25 TEE tokens and 5 POL tokens in their wallets at one time.
+- **Demo users** receive a one-time advance of 50 TEE tokens with no replenishment possibility. To continue testing, users must [log in with a Web3 account](/marketplace/guides/log-in).
+- **Web3 users** can receive up to 25 TEE tokens and 5 POL tokens daily. At any given time, Web3 users can hold a maximum of 25 TEE tokens and 5 POL tokens in their wallets.
 
 ## Model limits
 
-The total size of your model's files must be less than 10 GB. Otherwise, the deployment may fail. Read more about the [requirements for the user-uploaded models](/marketplace/guides/upload#step-1-choose-a-model).
+The total size of your model files should not exceed 10 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
+
+Also, deployed models must belong to a category supported by one of the AI engines:
+
+- **Text Generation Web UI** supports models that involve text-based chats:
+  + Text Generation
+  + Text Classification
+  + Translation
+  + Text2Text Generation
+- **ComfyUI** supports various image- and video-related tasks:
+  + Image Classification
+  + Object Detection
+  + Image Segmentation
+  + Text-to-Image
+  + Image-to-Text
+  + Image-to-Image
+  + Image-to-Video
+  + Video Classification
+  + Text-to-Video
+  + Mask Generation

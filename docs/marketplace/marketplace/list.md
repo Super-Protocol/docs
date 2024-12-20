@@ -7,6 +7,12 @@ sidebar_position: 1
 
 This screen lists models or datasets offered on the Marketplace. You can lease the content listed here by adding it to your orders. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
 
+:::note
+
+Datasets are not yet available in the current version of the Marketplace.
+
+:::
+
 <img src={require('../images/models-tiles.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
@@ -34,7 +40,19 @@ Clicking an offer opens the [**Offer**](/marketplace/marketplace/offer) window, 
 
 Use the filters on the left side of the screen to narrow down the list and quickly find specific offers.
 
-In the current version of the Marketplace, you can only filter by the model category—the type of task that the model is designed to perform:
+In the current version of the Marketplace, you can only filter by the category—the type of task that models are designed to perform:
 
-- **Text Generation** is a Large Language Model (LLM) capable of processing text prompts written in natural human language and generating text responses. The best-known example is ChatGPT.
-- **Text-to-Image** is a model that generates images based on provided text instructions. The best-known examples are MidJourney and Stable Diffusion.
+- Image Classification
+- Image Segmentation
+- Image-to-Image
+- Image-to-Text
+- Image-to-Video
+- Mask Generation
+- Object Detection
+- Text Classification
+- Text Generation
+- Text-to-Image
+- Text-to-Video
+- Text2Text Generation
+- Translation
+- Video Classification

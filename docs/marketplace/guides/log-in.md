@@ -5,11 +5,14 @@ slug: "/guides/log-in"
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user. Learn more about [user account types](/marketplace/account).
 
 :::note
 
-The Marketplace web app does not support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
+The Marketplace web app does not officially support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
 
 :::
 
@@ -17,72 +20,72 @@ The Marketplace web app does not support mobile devices. Use a desktop or laptop
 
 To log in as a Web3 user, you need the MetaMask browser extension. MetaMask is one of the most popular software cryptocurrency wallets for Ethereum and EVM-compatible blockchains like Polygon.
 
-If you do not have MetaMask installed, complete [Step 1-1](/marketplace/guides/log-in#step-1-1-install-metamask) to install it and create a new EVM wallet address.
+<Tabs>
+  <TabItem value="no-mm" label="If you do not have MetaMask" default>
 
-If you already have MetaMask installed, complete [Step 1-2](/marketplace/guides/log-in#step-1-2-add-new-account) instead to create a new EVM wallet address.
+    If you do not have MetaMask, you need to install it and create a new EVM wallet address.
 
-:::note
+    Add the MetaMask extension to your browser from its [official website](https://metamask.io/) or your browser's extension store. During the installation, choose **Create a new wallet**.
 
-Super Protocol Marketplace is in an early beta stage, and bugs and unexpected behavior are possible. Although you can use an existing Ethereum wallet address, it is recommended that you create a new one specifically to test Super Protocol.
+    <img src={require('../images/metamask-install-new.png').default} width="auto" height="auto" border="1"/>
+    <br/>
+    <br/>
 
-:::
+    Create a password. You will use it to unlock MetaMask.
 
-### Step 1-1. Install MetaMask
+    <img src={require('../images/metamask-install-password.png').default} width="auto" height="auto" border="1"/>
+    <br/>
+    <br/>
 
-Add the MetaMask extension to your browser from its [official website](https://metamask.io/) or your browser's extension store. During the installation, choose **Create a new wallet**.
+    When prompted to secure your wallet, select **Remind me later** for a quick start or **Secure my wallet** to be able to restore your wallet address if you uninstall MetaMask. You can secure your wallet any time later.
 
-<img src={require('../images/metamask-install-new.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+    <img src={require('../images/metamask-install-secure.png').default} width="auto" height="auto" border="1"/>
+    <br/>
+    <br/>
 
-Create a password. You will use it to unlock MetaMask.
+    You can find the address of your newly created wallet in the MetaMask extension window.
 
-<img src={require('../images/metamask-install-password.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+    <img src={require('../images/metamask-install-complete.png').default} width="auto" height="auto" border="1"/>
 
-When prompted to secure your wallet, select **Remind me later** for a quick start or **Secure my wallet** to be able to restore your wallet address if you uninstall MetaMask. You can secure your wallet any time later.
+  </TabItem>
+  <TabItem value="mm" label="If you already have MetaMask">
 
-<img src={require('../images/metamask-install-secure.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+    If you have previously installed MetaMask, create a new EVM wallet address. Although you can use an existing EVM wallet address, it is recommended that you create a new one specifically for Super Protocol.
 
-You can find the address of your newly created wallet in the MetaMask extension window.
+    Open MetaMask and click your current account name:
 
-<img src={require('../images/metamask-install-complete.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+    <img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
+    <br/>
+    <br/>
 
-Skip Step 1-2, as you already have a new wallet, and go directly to [Step 2](/marketplace/guides/log-in#step-2-add-the-amoy-testnet).
+    Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
 
-### Step 1-2. Add new account
+    <img src={require('../images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
+    <br/>
+    <br/>
 
-To create a new EVM wallet address in the already installed MetaMask, click your current account name at the top of the MetaMask window.
+    Type any desired account name and click **Add account**.
 
-<img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+    <img src={require('../images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
+    <br/>
+    <br/>
 
-Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
+    If you wish to recover this wallet address later, save its Secret Key. You can find it in the **Account details**.
 
-<img src={require('../images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
+    <img src={require('../images/metamask-newacc-details.png').default} width="auto" height="auto" border="1"/>
 
-Type any desired account name and click **Add account**.
-
-<img src={require('../images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-If you wish to recover this wallet address later, save its Secret Key. You can find it in the **Account details**.
-
-<img src={require('../images/metamask-newacc-details.png').default} width="auto" height="auto" border="1"/>
-<br/>
+  </TabItem>
+</Tabs>
 
 ## Step 2. Add the Amoy testnet
 
-In the MetaMask window, open the menu in the top-left corner and press **Add a custom network**.
+Open the MetaMask window.
+
+<img src={require('../images/metamask-open.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Open the menu in the top-left corner and press **Add a custom network**.
 
 <img src={require('../images/metamask-testnet-add.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -92,7 +95,7 @@ Set the following parameters and press **Save**:
 
 | **Field** | **Value** |
 | :- | :- |
-| Network name | Super Protocol Polygon Amoy Testnet |
+| Network name | Amoy |
 | New RPC URL | https://amoy.polygon.superprotocol.com/hesoyam |
 | Chain ID | 80002 |
 | Currency symbol | POL |
@@ -111,7 +114,7 @@ Switch to the newly added network.
 
 ## Step 3. Connect the account
 
-In the main Marketplace screen, press the **Enter Marketplace** button.
+Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press the **Enter Marketplace** button.
 
 <img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -134,7 +137,7 @@ If you connect successfully, you will see your account address in the top-right 
 <img src={require('../images/marketplace-web3acc.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## Step 4. Request TEE and POL
+## Step 4. Get testnet tokens
 
 Super Protocol users need two types of tokens:
 

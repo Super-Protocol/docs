@@ -5,26 +5,29 @@ slug: "/orders/order"
 sidebar_position: 3
 ---
 
-This screen provides detailed information about an order. Note that this screen is only accessible to the user who placed the order. Learn more about [Orders](/fundamentals/orders).
+This screen provides detailed information about an order. Learn more about [Orders](/fundamentals/orders).
 
 <img src={require('../../images/order-full.png').default} width="auto" height="auto" border="1"/>
 <br/>
+<br/>
+
+The contents of an order are encrypted and accessible only to the user who placed it. However, general information about orders is recorded on the blockchain and publicly visible due to the blockchain's transparent nature.
 
 ## Order
 
 **Status** indicates the current state of the order:
 
 - **Suspended**. The order is awaiting the creation of suborders.
-- **Blocked**. A suborder temporarily blocks the order to generate access keys and authorize the compute to access the suborder's content.
-- **New**. The order is awaiting in the queue for the compute to become available.
-- **Processing**. The compute is executing the order inside a Trusted Execution Environment. Note that for Deploy orders this status may also mean the model is running normally; in this case the status of the tunnels will be **Online**.
+- **Blocked**. A suborder temporarily blocks the order to generate access keys and authorize the confidential computing device to access the suborder's content.
+- **New**. The order is awaiting in the queue for the computing device to become available.
+- **Processing**. The computign device is executing the order inside a Trusted Execution Environment. Note that for Deploy orders this status may also mean the model is deployed and running normally; in this case the status of the tunnels will be **Online**.
 - **Done**. The computation is done, and the order result is available for download. For Deploy orders, it also means the model is no longer running.
 
 Additional possible statuses:
 
 - **Cancelling**: the order is being canceled by the customer's request.
 - **Canceled**: the order has been canceled successfully, and the remaining order deposit was transferred back to the customer's wallet.
-- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button.
+- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them](/marketplace/guides/troubleshooting).
 
 Learn more about [statuses](/fundamentals/orders#order-status).
 
@@ -50,7 +53,7 @@ The **Tunnels** section informs about the launched tunnel. Tunnels enable end us
 - **Online**: the tunnel is operational, and the model is running. End users may access the AI engine's web UI via the **Access Link**.
 - **Offline**: the tunnel order is done, and the tunnel is no longer available. The AI engine's web UI is inaccessible, but the expired **Access Link** remains visible.
 
-To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. Note that the **Tunnels** section and the **Tunnels Orders** tab are visible only for orders that utilize tunnels.
+To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. The **Tunnels** section and the **Tunnels Orders** tab only exist for orders that utilize tunnels and are only visible to the user who placed the order.
 
 ## Order management buttons
 
@@ -58,11 +61,13 @@ Depending on the order status, different buttons are visible:
 
 - **Cancel Order** and **Extend Lease** for orders with the Suspended, Blocked, New, or Processing statuses.
 - **Get Result** for orders with the Done, Error, and Canceled statuses.
-- No buttons for orders with the Cancelling statuses.
+- No buttons for orders with the Cancelling status.
+
+These buttons are only visible to the user who placed the order.
 
 ### Cancel Order
 
-The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that _Web3 users_ should **Confirm** in MetaMask. If you **Reject** the transaction, the cancellation process will not proceed.
+The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that Web3 users should **Confirm** in MetaMask. If you **Reject** the transaction, the cancellation process will not proceed.
 
 <img src={require('../../images/metamask-transaction.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -84,10 +89,10 @@ When the order is complete, all unspent TEE tokens on the order balance automati
 
 ### Get Result
 
-The **Get Result** button allows you to download a TAR.GZ archive file containing:
+The **Get Result** button allows you to download a file containing:
 
-- The result of computation. For example, a new fine-tuned layer for a model.
-- Order logs. If the order was completed with an error, here you can check what went wrong.
+- Order logs. If the order was completed with an error, you can check what went wrong.
+- The result of computation if the order was completed successfully. For example, a new fine-tuned layer for a model.
 
 ## Providers tab
 
@@ -97,14 +102,9 @@ The **Providers** tab contains additional information about the order and its su
 <br/>
 <br/>
 
-- **ID**
-- **Type**
-- **Provider**
-- **Name**
-- **Status**
-- **Created Date**
-- **Modified Date**
-- **Cost**
+Click the suborder's **ID** number to open its **Order** screen. Note that some suborders may not be available to view.
+
+Read more about [order types](/fundamentals/orders).
 
 ## Tunnel Orders tab
 

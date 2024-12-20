@@ -2,7 +2,7 @@
 id: "checkout"
 title: "Confirm Transactions"
 slug: "/orders/order-builder/checkout"
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 This window informs you about the creation of transactions on the blockchain, which is the final step in placing an order.
@@ -20,12 +20,12 @@ The confirmation process depends on the account type:
 
 Besides the account type, the confirmation process also depends on the order type:
 
-- **Deploy** orders require confirmation of two separate transactions. This type of order launches confidential tunnels to make the running model accessible from the internet. These tunnels are created automatically by a separate **Tunnels Launcher** order, which requires an additional payment. Learn more about [Tunnels](/fundamentals/tunnels).
+- **Deploy** orders require confirmation of two transactions—one to pay for the Deploy order and another for the Tunnels Launcher order. Tunnels Launcher creates a set of confidential tunnels necessary to access the running model from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
 - **Fine-tune** orders only require confirmation of a single transaction. This type of orders is not availible yet in the current version of the Marketplace.
 
-Once the order is placed successfully, you will be redirected to its [**Order** screen](/marketplace/orders/order).
+Once the order is placed successfully, you will be redirected to its [**Order**](/marketplace/orders/order) screen.
 
-## Handling errors
+## Handle errors
 
 If an error occurs during transaction confirmation, you will see the error message in this window and a notification in the bottom-right corner of the screen.
 
