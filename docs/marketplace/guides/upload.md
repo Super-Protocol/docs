@@ -94,7 +94,7 @@ For some models, you should remove additional formats in the model's root direct
 
 ## Step 3. Create a TAR.GZ archive
 
-Make sure your model's directory does not contain any hidden files and subdirectories. Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
+Ensure your model's directory contains no hidden files and subdirectories. Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
