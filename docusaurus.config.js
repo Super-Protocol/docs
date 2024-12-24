@@ -44,6 +44,17 @@ const config = {
       },
     ],
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "cli",
+        path: "./docs/cli",
+        routeBasePath: "/cli",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
@@ -111,6 +122,13 @@ const config = {
             label: "Fundamentals",
             docsPluginId: "fundamentals",
           },
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "CLI",
+            docsPluginId: "cli",
+          },
           /*{
             type: "doc",
             docId: "index",
@@ -145,7 +163,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: [/*"developers", */"marketplace", "whitepaper", "fundamentals"],
+      docsRouteBasePath: [/*"developers", */"marketplace", "whitepaper", "fundamentals", "cli"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
