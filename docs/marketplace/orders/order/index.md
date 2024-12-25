@@ -20,7 +20,8 @@ The contents of an order are encrypted and accessible only to the user who place
 - **Suspended**. The order is awaiting the creation of suborders.
 - **Blocked**. A suborder temporarily blocks the order to generate access keys and authorize the confidential computing device to access the suborder's content.
 - **New**. The order is awaiting in the queue for the computing device to become available.
-- **Processing**. The computign device is executing the order inside a Trusted Execution Environment. Note that for Deploy orders this status may also mean the model is deployed and running normally; in this case the status of the tunnels will be **Online**.
+- **Processing**. The machine is executing the order inside a Trusted Execution Environment. 
+- **Deployed**. The model is deployed and running.
 - **Done**. The computation is done, and the order result is available for download. For Deploy orders, it also means the model is no longer running.
 
 Additional possible statuses:
@@ -43,9 +44,9 @@ The **Financials** section shows payment-related information about the order:
 - **Cost Per Hour** is the total cost of all the offers priced per hour. The order balance decreases by this amount every hour.
 - **Balance** is the remaining order balance. You can replenish the balance using the **Extend Lease** button.
 
-## Tunnels
+## Deployment
 
-The **Tunnels** section informs about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+The **Deployment** section informs about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
 
 **Status** indicates the current state of the tunnel:
 
