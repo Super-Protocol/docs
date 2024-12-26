@@ -76,6 +76,11 @@ Once you add an engine, click **Select Compute** to open the list of available c
 
 Click the blue **[+]** button to add a machine to the order.
 
+**In Queue** shows the number of orders waiting for an empty slot on this machine. If it is not zero, your order may take longer to process. Consider choosing another compute offer.
+
+<img src={require('../images/order-builder-queue.png').default} width="auto" height="auto" border="1"/>
+<br/>
+
 ## Step 4. Set lease time
 
 The panel at the bottom of the screen displays the total prices:
@@ -123,7 +128,7 @@ Once the Deploy order is placed successfully, you will be redirected to its [**O
 
 ## Step 6. Manage the order
 
-Your order may take about 30 minutes to process if you used a model from Marketplace and up to one hour for uploaded models. You can check the order status in the **Order** screen. When the model is deployed and available, you will see **Online** in the tunnel's status.
+Your order may take about 30 minutes to process if you used a model from Marketplace and up to one hour for uploaded models. You can check the order status in the **Order** screen. When the model is deployed and available, you will see **Deployed** in the order status and **Online** in the tunnel's status.
 
 <img src={require('../images/order-online.png').default} width="auto" height="auto" border="1"/>
 <br/>

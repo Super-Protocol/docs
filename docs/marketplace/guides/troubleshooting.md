@@ -19,6 +19,8 @@ If MetaMask shows no requests, refresh the page and press the **Enter Marketplac
 
 If the problem persists, restart your browser and unlock MetaMask before trying to enter the Marketplace.
 
+This issue may also occur due to Marketplace maintenance. Wait a few minutes and try again, or contact Super Protocol on Discord for a quick update.
+
 ## Order status: Error
 
 The **Error** status means something went completely wrong, and the model was not deployed.

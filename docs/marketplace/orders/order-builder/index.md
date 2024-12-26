@@ -40,13 +40,7 @@ Clicking the model's name opens its [**Offer**](/marketplace/marketplace/offer) 
 
 To view the model's requirement slot, expand the **Requirements**. If an offer has multiple requirement slots, the **[+]** and **Requirements** buttons will open the **Pricing** tab within the model's **Offer** window. There, you can find the complete list of the model's requirement slots.
 
-If you add your uploaded model, a yellow warning icon will appear. 
-
-<img src={require('../../images/model-warning.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-It indicates that the requirements of the model are not specified. The system will not include the model in the automatic calculation of the compute configuration because it doesn't know how much resources it needs to run.
+If you add your uploaded model, its requirements are not specified. The system does not include such models in the automatic calculation of the compute configuration.
 
 :::warning
 
@@ -94,11 +88,16 @@ For orders using tunnels, the engine settings will include the **Tunnels** tab w
 
 ## Compute
 
-The term _compute_ refers to a confidential computing device that processes the order.
+The term _compute_ refers to a confidential computing machine that processes the order.
 
 The system automatically calculates a compute configuration that meets or exceeds the combined requirements of the models, datasets, and engine added to the order. To add a machine to the order, click the blue **[+]** button next to it.
 
+**In Queue** shows the number of orders waiting for an empty slot on this machine. If it is not zero, your order may take longer to process. Consider choosing another compute offer.
+
 Clicking the machine's name opens its [**Offer**](/marketplace/marketplace/offer) window.
+
+<img src={require('../../images/order-builder-queue.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
 Learn more about [requirements and configurations](/fundamentals/slots).
 
