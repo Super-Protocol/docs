@@ -22,15 +22,15 @@ If you are just starting out, feel your way around Super Protocol using the Mark
 
 When you know the basics, try SPCTL—the Super Protocol CLI tool:
 
-1. [Configure SPCTL](/developers/cli_guides/configure) as a user.
-2. Read about the [fundamentals](/fundamentals), [Testnet limitations](/marketplace/limitations), and key [CLI commands](/developers/cli_commands).
+1. [Configure SPCTL](/cli) as a user.
+2. Read about the [fundamentals](/fundamentals), [Testnet limitations](/marketplace/limitations), and key [CLI commands](/cli/cli_commands).
 3. Read the [Quick Deployment Guide](/developers/cli_guides/quick_guide) to learn about deploying your solutions.
 4. Choose a [deployment guide](/developers/deployment_guides/) to get an example for additional deployment scenarios.
 
 ## Create your provider and offers with CLI
 1. Follow the [Providers and Offers](/developers/cli_guides/providers_offers) guide to create your provider and a first offer.
 2. Follow the [Moderation Guidelines](/developers/marketplace/moderation/) to approve your offer for Marketplace GUI.
-3. [Update SPCTL configuration](/developers/cli_guides/configure#for-offer-providers) as a provider to enable management of your provider and offers.
+3. [Update SPCTL configuration](/cli#for-offer-providers) as a provider to enable management of your provider and offers.
 4. Use the [SPCTL commands](/developers/cli_guides/providers_offers#faq) to manage your provider and offers.
 
 Join us on [Discord](https://discord.gg/superprotocol). The Super Protocol team welcomes any feedback and questions!
