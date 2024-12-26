@@ -24,7 +24,7 @@ Please make sure that system or hidden files are not included into the archive.
 :::
 ## Upload data archives
 
-And [upload](/cli/cli_commands/files/upload) archives to storage:
+And [upload](/cli/commands/files/upload) archives to storage:
 
 ```
 ./spctl files upload input-1.tar.gz --output input-1.json --filename input-1.tar.gz

@@ -87,7 +87,7 @@ Go to your SPCTL directory and create the offer content using your Testnet user 
 
 **For solution offers**
 
-Use the [`solutions prepare`](/cli/cli_commands/solutions/prepare) command. It will pack and sign the solution with [Gramine](https://gramineproject.io/) to prepare it for execution inside a Trusted Execution Environment. The command will create a TAR.GZ archive with the solution and a metadata JSON file.
+Use the [`solutions prepare`](/cli/commands/solutions/prepare) command. It will pack and sign the solution with [Gramine](https://gramineproject.io/) to prepare it for execution inside a Trusted Execution Environment. The command will create a TAR.GZ archive with the solution and a metadata JSON file.
 
 You can find a detailed example of preparing a Python solution in the [Python deployment guide](/developers/deployment_guides/python/solution_prep).
 
@@ -120,7 +120,7 @@ Both ways have pros and cons. Pick the one that suits you better.
 
 It is a simpler and quicker way to upload offer content if you do not have a Storj account and have not configured SPCTL to use it. However, you must regularly check the storage order and [keep it alive](/developers/cli_guides/providers_offers#lease-on-uploaded-offer-content). Otherwise, your offer content will eventually become unavailable.
 
-Execute the following [`files upload`](/cli/cli_commands/files/upload) command to create a storage order on Super Protocol with your offer content:
+Execute the following [`files upload`](/cli/commands/files/upload) command to create a storage order on Super Protocol with your offer content:
 
 ```
 ./spctl files upload <offerContentArchive> --storage 25,33 --min-rent-minutes 43200
@@ -129,11 +129,11 @@ Execute the following [`files upload`](/cli/cli_commands/files/upload) command t
 Where
 - `<offerContentArchive>` is the name of the archive file with your prepared solution or data.
 - `--storage 25,33` is the slot ID 33 of the storage offer ID 25. The maximum disk capacity for this slot is 0.977 GB; you may choose [another slot](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing) that suits your offer content better.
-- `--min-rent-minutes 43200` is the lease time set to 30 days. The offer content will be available for that period. You can make the lease time shorter or longer. You can also [replenish the balance](/cli/cli_commands/orders/replenish-deposit) later to prolong the storage order.
+- `--min-rent-minutes 43200` is the lease time set to 30 days. The offer content will be available for that period. You can make the lease time shorter or longer. You can also [replenish the balance](/cli/commands/orders/replenish-deposit) later to prolong the storage order.
 
 As a result, SPCTL generates the `resource.json` file with information for a compute provider to access your uploaded offer content. Copy this file to the Provider Tools directory. This file also contains the storage order ID. Use it to check the storage order and replenish the deposit if necessary.
 
-You can check all your orders, including storage orders, by using the [`orders list`](/cli/cli_commands/orders/list) command. Note that you cannot see your storage orders in the Marketplace GUI.
+You can check all your orders, including storage orders, by using the [`orders list`](/cli/commands/orders/list) command. Note that you cannot see your storage orders in the Marketplace GUI.
 
 **Upload to a Storj account**
 
@@ -145,7 +145,7 @@ Both Free Trial and Pro Storj accounts are suitable. However, if you have a free
 
 :::
 
-Execute the following [`files upload`](/cli/cli_commands/files/upload) command to upload your offer content to Storj using SPCTL:
+Execute the following [`files upload`](/cli/commands/files/upload) command to upload your offer content to Storj using SPCTL:
 
 ```
 ./spctl files upload <offerContentArchive>
@@ -254,7 +254,7 @@ Fill in the following values:
   + `offers`: state the IDs of such required offers, including the IDs of their dependencies. Put each ID in quotation marks and separate with a comma. See the examples below.
   + `types`: state the types of the required offers. The type must be either `2` for a solution offer in `"offers"` or `3` for a data offer in `"offers"`. If there are several IDs in `"offers"`, state the type for each of them. Put each number in quotation marks and separate with a comma. See the examples below.
 
-Refer to the documentation of the [`offers update`](/cli/cli_commands/offers/offers/update) command to learn more.
+Refer to the documentation of the [`offers update`](/cli/commands/offers/update) command to learn more.
 
 **Example 1**
 
@@ -316,7 +316,7 @@ To get more examples, check existing offers via the Marketplace GUI:
 
 <br/>
 
-Or via CLI using the SPCTL [`offers get`](/cli/cli_commands/offers/offers/get) command:
+Or via CLI using the SPCTL [`offers get`](/cli/commands/offers/get) command:
 
 ```
 ./spctl offers get value 8
@@ -358,7 +358,7 @@ The following is an `offer-slot.json` template file with example values:
 
 Copy it to your `offer-slot.json` file and modify all the values as necessary. Since this is your offer, only you know the [price](/fundamentals/orders#cost-and-pricing) and compute configuration your solution or data needs to run. Every offer can have multiple requirements slots. You must create a separate JSON file for each slot.
 
-Refer to the [`offers add-slot`](/cli/cli_commands/offers/slots/add-slot) command's documentation to learn more about the objects and strings in this file.
+Refer to the [`offers add-slot`](/cli/commands/offers/add-slot) command's documentation to learn more about the objects and strings in this file.
 
 To get more examples, check existing offers via the Marketplace GUI:
 
@@ -366,7 +366,7 @@ To get more examples, check existing offers via the Marketplace GUI:
 
 <br/>
 
-Or via CLI using the [offers get-slot](/cli/cli_commands/offers/slots/get-slot) command:
+Or via CLI using the [offers get-slot](/cli/commands/offers/get-slot) command:
 
 ```
 ./spctl offers get-slot value --offer 8 --slot 4
@@ -426,7 +426,7 @@ Provider Tools also creates a provider SPCTL configuration file in its root dire
 
 Rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or [download](/cli) SPCTL to the Provider Tools directory. It is your provider SPCTL.
 
-Alternatively, copy this provider's SPCTL config to your SPCTL directory. Use the `--config` option with [SPCTL commands](/cli/cli_commands) to manage your provider and orders. For example:
+Alternatively, copy this provider's SPCTL config to your SPCTL directory. Use the `--config` option with [SPCTL commands](/cli/commands) to manage your provider and orders. For example:
 
 ```
 ./spctl orders list --my-account --type tee --config spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json
@@ -479,9 +479,9 @@ When the order is created, you will see the ID of the Offer Provisioner order in
 {"Successfully created workflow with id: 3394. You can go to https://marketplace.superprotocol.com/order/3394 to track order status."}
 ```
 
-Alternatively, you can create an Offer Provisioner order manually. Pack the content of the `execution-controller` directory (`config.json` and `.env`) into a TAR.GZ archive and upload it using the [`files upload`](/cli/cli_commands/files/upload) command. Add the resulting `resource.json` to the order as data and the Offer Provisioner solution offer (ID 26) as a solution using either Marketplace GUI or the `workflows create` SPCTL command.
+Alternatively, you can create an Offer Provisioner order manually. Pack the content of the `execution-controller` directory (`config.json` and `.env`) into a TAR.GZ archive and upload it using the [`files upload`](/cli/commands/files/upload) command. Add the resulting `resource.json` to the order as data and the Offer Provisioner solution offer (ID 26) as a solution using either Marketplace GUI or the `workflows create` SPCTL command.
 
-Check that your offer is on the blockchain using the [offers get](/cli/cli_commands/offers/offers/get) command:
+Check that your offer is on the blockchain using the [offers get](/cli/commands/offers/get) command:
 
 ```
 ./spctl offers get value <offerID>
@@ -515,17 +515,17 @@ As a provider, you must ensure your offer stays active. Keep track of the storag
 
 Ensure your storage order does not end.
 
-If you created a [storage order](/cli/cli_commands/files/upload) for your offer content in [Step 1](/developers/cli_guides/providers_offers#upload-offer-content), keep track of the balance and replenish it in time.
+If you created a [storage order](/cli/commands/files/upload) for your offer content in [Step 1](/developers/cli_guides/providers_offers#upload-offer-content), keep track of the balance and replenish it in time.
 
 :::
 
-If the storage order expires, the TEE can no longer access your uploaded offer content, and the customer order will fail. Execute the [`orders list`](/cli/cli_commands/orders/list) SPCTL command from your user account to get the list of your storage orders:
+If the storage order expires, the TEE can no longer access your uploaded offer content, and the customer order will fail. Execute the [`orders list`](/cli/commands/orders/list) SPCTL command from your user account to get the list of your storage orders:
 
 ```
 ./spctl orders list --my-account --type storage
 ```
 
-Use the [`orders get`](/cli/cli_commands/orders/get) command to check the total and unspent deposits. Use the [`orders replenish-deposit`](/cli/cli_commands/orders/replenish-deposit) command to add tokens to the balance of the storage order.
+Use the [`orders get`](/cli/commands/orders/get) command to check the total and unspent deposits. Use the [`orders replenish-deposit`](/cli/commands/orders/replenish-deposit) command to add tokens to the balance of the storage order.
 
 ### Lease on Offer Provisioner
 
@@ -537,7 +537,7 @@ Keep track of the balance and replenish it in time. Without a response from Offe
 
 :::
 
-Execute the [`orders list`](/cli/cli_commands/orders/list) command using the provider SPCTL to get the list of your Offer Provisioner orders:
+Execute the [`orders list`](/cli/commands/orders/list) command using the provider SPCTL to get the list of your Offer Provisioner orders:
 
 ```
 ./spctl orders list --my-account --type tee
@@ -545,14 +545,14 @@ Execute the [`orders list`](/cli/cli_commands/orders/list) command using the pro
 
 An [Offer Provisioner order](/developers/cli_guides/providers_offers#create-an-offer-provisioner-order) must always be active and ready to authorize its offer.
 
-Use the [`orders get`](/cli/cli_commands/orders/get) command to check the total and unspent deposits. Use the [`orders replenish-deposit`](/cli/cli_commands/orders/replenish-deposit) command to add tokens to the Offer Provisioner order.
+Use the [`orders get`](/cli/commands/orders/get) command to check the total and unspent deposits. Use the [`orders replenish-deposit`](/cli/commands/orders/replenish-deposit) command to add tokens to the Offer Provisioner order.
 
 ## FAQ
 
 ### Update provider info
 
-It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/cli/cli_commands/providers/update) SPCTL command from your current action account.
-It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/cli/cli_commands/providers/update) SPCTL command from your current action account.
+It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/cli/commands/providers/update) SPCTL command from your current action account.
+It is possible to update provider information such as name, description, action account, and token receiver account. Make changes to `provider.json` you saved in [Step 4](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) and use the [`providers update`](/cli/commands/providers/update) SPCTL command from your current action account.
 
 If you changed your action account address, update the Provider SPCTL's `config.json` with the new action account private key.
 
@@ -560,13 +560,13 @@ If you changed your action account address, update the Provider SPCTL's `config.
 
 **Offer description:**
 
-Modify `offer-info.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-description) and then run the [`offers update`](/cli/cli_commands/offers/offers/update) command using the Provider SPCTL.
+Modify `offer-info.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-description) and then run the [`offers update`](/cli/commands/offers/update) command using the Provider SPCTL.
 
 **Offer requirements (slots):**
 
-Modify `offer-slot.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [`offers update-slot`](/cli/cli_commands/offers/slots/update-slot) command using the Provider SPCTL.
+Modify `offer-slot.json` you have prepared in [Step 3](/developers/cli_guides/providers_offers#offer-requirements) and then run the [`offers update-slot`](/cli/commands/offers/update-slot) command using the Provider SPCTL.
 
-Similarly, you can use the [`offers add-slot`](/cli/cli_commands/offers/slots/add-slot) command to add another slot and the [`offers delete-slot`](/cli/cli_commands/offers/slots/delete-slot) command to remove a slot.
+Similarly, you can use the [`offers add-slot`](/cli/commands/offers/add-slot) command to add another slot and the [`offers delete-slot`](/cli/commands/offers/delete-slot) command to remove a slot.
 
 ### Create additional offers
 
@@ -578,7 +578,7 @@ You can also manually edit the `PROVIDER_OFFERS_JSON` array in the `.env` file t
 
 ### Enable/disable offers
 
-Disable your offer if you no longer want to provide your application or data on Super Protocol. Execute the [`offers disable`](/cli/cli_commands/offers/offers/disable) command from your Provider SPCTL:
+Disable your offer if you no longer want to provide your application or data on Super Protocol. Execute the [`offers disable`](/cli/commands/offers/disable) command from your Provider SPCTL:
 
 ```
 ./spctl offers disable <offerId>
@@ -586,7 +586,7 @@ Disable your offer if you no longer want to provide your application or data on 
 
 Replace `<offerId>` with the ID of the offer you want to disable.
 
-It will make the offer unavailable to use but will not delete it. Later, if you want to reinstate it back to active status, use the [`offers enable`](/cli/cli_commands/offers/offers/enable) command.
+It will make the offer unavailable to use but will not delete it. Later, if you want to reinstate it back to active status, use the [`offers enable`](/cli/commands/offers/enable) command.
 
 ### Inactive offers
 

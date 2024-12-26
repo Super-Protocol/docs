@@ -134,7 +134,7 @@ Remember the resulting order ID.
 
 ### Check Order Status
 
-You can check the status of the server and client tunnels using the order ID's using this [command](/cli/cli_commands/orders/get):
+You can check the status of the server and client tunnels using the order ID's using this [command](/cli/commands/orders/get):
 
 ```
 ./spctl orders get <tunnel server order ID>

@@ -20,7 +20,7 @@ Marketplace GUI has a special filter that divides the offers into four categorie
 
 <img src={require('../images/gui_moderation_1.png').default} width="300" height="auto"/>
 
-These categories are exclusive meaning an offer can belong only to one category. Offers with the **Disabled** status do not appear in the Marketplace GUI. Providers can use [`offers disable`](/cli/cli_commands/offers/offers/disable) and [`offers enable`](/cli/cli_commands/offers/offers/enable) commands to manage this. 
+These categories are exclusive meaning an offer can belong only to one category. Offers with the **Disabled** status do not appear in the Marketplace GUI. Providers can use [`offers disable`](/cli/commands/offers/disable) and [`offers enable`](/cli/commands/offers/enable) commands to manage this. 
 
 ## Requirements
 

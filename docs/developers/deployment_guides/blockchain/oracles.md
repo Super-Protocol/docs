@@ -174,7 +174,7 @@ In this step we will cover the first component.
 
 All the solutions deployed on Super Protocol have to use a base image solution offer. In this case it will be a Node.js base image.
 
-Go to your project root directory and execute this [command](/cli/cli_commands/offers/offers/download-content):
+Go to your project root directory and execute this [command](/cli/commands/offers/download-content):
 
 ```shell
 ./spctl offers download-content 6
@@ -190,7 +190,7 @@ Next, we will build a Docker image of the service. For the Docker image to run i
 ./spctl solutions generate-key signing-key
 ```
 
-Execute the following [command](/cli/cli_commands/solutions/prepare) in the root of your project to prepare and pack the solution:
+Execute the following [command](/cli/commands/solutions/prepare) in the root of your project to prepare and pack the solution:
 
 ```shell
 ./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path <path to the Node.js base image archive> ./solutions/Blockchain/sp-oracle/script/run/ signing-key
@@ -207,7 +207,7 @@ MRSIGNER: 36f3bb39d10617852d1eef2f5066d8f9add2c65fb1a026d86398fec405fe725c
 
 **Save these values!** Important: different MRENCLAVE and MRSIGNER values are generated for each run of the `prepare` command. 
 
-Finally, we will [encrypt and upload](/cli/cli_commands/files/upload) the prepared solution to decentralized storage (Storj):
+Finally, we will [encrypt and upload](/cli/commands/files/upload) the prepared solution to decentralized storage (Storj):
 
 ```shell
 ./spctl files upload oracle-solution.tar.gz --output oracle-solution.json --filename oracle-solution.tar.gz --metadata ./metadata.json
@@ -344,7 +344,7 @@ An `oracle-input.json` will be created. We will use this file and `oracle-soluti
 
 The result will be an order ID.
 
-You can check the status of the order using [Marketplace GUI](/developers/marketplace) or this [command](/cli/cli_commands/orders/get):
+You can check the status of the order using [Marketplace GUI](/developers/marketplace) or this [command](/cli/commands/orders/get):
 
 ```shell
 ./spctl orders get <order ID>
