@@ -114,7 +114,7 @@ If done correctly, the `output` directory should contain `.csv` file with result
 
 Now that we are happy with the way solution runs locally, the next steps are related to preparation for deployment to Super Protocol.
 
-Run the following [command](/developers/cli_commands/solutions/generate-key) in the directory where you placed the SPCTL executable to generate the signing key for the solution:
+Run the following [command](/cli/cli_commands/solutions/generate-key) in the directory where you placed the SPCTL executable to generate the signing key for the solution:
 
 ```
 ./spctl solutions generate-key signing-key
@@ -122,7 +122,7 @@ Run the following [command](/developers/cli_commands/solutions/generate-key) in 
 
 ## Pack the solution
 
-When the Docker image should run inside an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following [command](/developers/cli_commands/solutions/prepare) to prepare and pack the solution:
+When the Docker image should run inside an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following [command](/cli/cli_commands/solutions/prepare) to prepare and pack the solution:
 
 ```
 ./spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \
@@ -138,7 +138,7 @@ After running the command, `solution.tar.gz` and `metadata.json` files are gener
 
 ## Upload the solution
 
-Solution needs to be uploaded to decentralized storage before it may be executed in TEE. The storage credentials have been configured during the [SPCTL setup](/developers/cli_guides/configure#set-up-storj).
+Solution needs to be uploaded to decentralized storage before it may be executed in TEE. The storage credentials have been configured during the [SPCTL setup](/cli#set-up-storj).
 
 Run the following command:
 

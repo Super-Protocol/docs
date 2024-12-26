@@ -5,7 +5,7 @@ slug: "/marketplace/first-steps/"
 sidebar_position: 1
 ---
 
-This guide provides step-by-step instructions to help you set up MetaMask and access the Super Protocol Marketplace via the web-based [graphical user interface (GUI)](/developers/marketplace/). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/developers/cli_guides/configure/) guide.
+This guide provides step-by-step instructions to help you set up MetaMask and access the Super Protocol Marketplace via the web-based [graphical user interface (GUI)](/developers/marketplace/). If you want to use the command-line interface (CLI), check the [Configure SPCTL](/cli/) guide.
 
 The Marketplace GUI is available for anyone to browse even without the MetaMask extension installed. However, you need a [Web3 account](/marketplace/account) to access the full functionality of Super Protocol Marketplace.
 

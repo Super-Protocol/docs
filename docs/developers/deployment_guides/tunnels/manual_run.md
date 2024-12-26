@@ -26,7 +26,7 @@ Create an archive of the token:
 tar -czf tunnel-server-data.tar.gz -C ./tunnel-server-data .
 ```
 
-Encrypt and upload the archive to storage using the [`files upload`](/developers/cli_commands/files/upload) command:
+Encrypt and upload the archive to storage using the [`files upload`](/cli/cli_commands/files/upload) command:
 
 ```bash
 ./spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
@@ -40,7 +40,7 @@ Create an order for Tunnel Server using the `tunnel-server-data.json` file conta
 ./spctl workflows create --tee 1 --solution 6,2 --solution 11,10 --data tunnel-server-data.json --storage 25,30 --orders-limit 10 --min-rent-minutes 60
 ```
 
-**Tip:** to create order make sure that you have sufficient amount of TEE and POL tokens in your testnet wallet. You can get more tokens using the [tokens request](/developers/cli_commands/tokens/request) command. Be mindful of testnet [limitations](/marketplace/limitations).
+**Tip:** to create order make sure that you have sufficient amount of TEE and POL tokens in your testnet wallet. You can get more tokens using the [tokens request](/cli/cli_commands/tokens/request) command. Be mindful of testnet [limitations](/marketplace/limitations).
 
 The last line of the output will look like this:
 
@@ -50,7 +50,7 @@ Workflow was created, TEE order id: ["XXXX"]
 
 Where XXXX is the order ID.
 
-You can check the status of the order using [Marketplace GUI](/developers/marketplace) or this [command](/developers/cli_commands/orders/get):
+You can check the status of the order using [Marketplace GUI](/developers/marketplace) or this [command](/cli/cli_commands/orders/get):
 
 ```shell
 ./spctl orders get <order ID>
@@ -123,7 +123,7 @@ Add the folder to archive:
 tar -czf tunnel-client-data.tar.gz  -C ./tunnel-client-data .
 ```
 
-Encrypt and upload the archive to storage using the [files upload](/developers/cli_commands/files/upload) command:
+Encrypt and upload the archive to storage using the [files upload](/cli/cli_commands/files/upload) command:
 
 ```bash
 ./spctl files upload tunnel-client-data.tar.gz --output tunnel-client-data.json --filename tunnel-client-data.tar.gz
