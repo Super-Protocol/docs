@@ -8,7 +8,7 @@ sidebar_position: 8
 
 Creates an additional [requirement slot](/fundamentals/slots#requirements) in an offer using the information in an offer slot JSON file.
 
-Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offer-requirements) guide to create the initial offer requirements.
+Refer to the [Providers and Offers] guide to create the initial offer requirements.
 
 **Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
 

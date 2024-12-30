@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ---
 
-This command group contains commands to track and manage [orders](/fundamentals/orders). Note that [Marketplace GUI](/developers/marketplace) can be more convenient to use than most of the commands in this group.
+This command group contains commands to track and manage [orders](/fundamentals/orders). Note that [Marketplace web app](https://marketplace.superprotocol.com/marketplace) can be more convenient to use than most of the commands in this group.
 
 ## Commands
 

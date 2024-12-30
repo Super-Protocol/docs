@@ -7,7 +7,7 @@ sidebar_label: "replenish-deposit"
 
 Replenishes the order deposit.
 
-Certain orders require a positive deposit balance to keep running. For example, [Offer Provisioner](/developers/cli_guides/providers_offers#step-5-run-offer-provisioner) and storage orders.
+Certain orders require a positive deposit balance to keep running.
 
 ## Syntax
 

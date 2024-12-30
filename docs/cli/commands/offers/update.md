@@ -8,7 +8,7 @@ sidebar_position: 5
 
 Updates information of an existing offer using an offer description JSON file.
 
-Refer to the [Providers and Offers](/developers/cli_guides/providers_offers#offer-description) guide to create the initial offer description.
+Refer to the [Providers and Offers] guide to create the initial offer description.
 
 **Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
 

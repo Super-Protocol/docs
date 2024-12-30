@@ -96,9 +96,9 @@ Do not change the preconfigured parameters and fill in the following ones:
 
 ## For offer providers
 
-This section is for offer providers only. If you are a regular user, skip it and go to the next section to [create a test order](/cli#create-a-test-order).
+This section is for offer providers only. Skip it if you are a regular user.
 
-Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers](/developers/cli_guides/providers_offers) guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks like this:
+Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers] guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks like this:
 
 ```spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json```
 
@@ -167,39 +167,6 @@ You can find the section with your Authority and Action Accounts Private Keys in
         "tokenReceiver": "0x167d93786ghbf058065a5a592a1d55ca1e620d19b7d1e47330f2b64d9fcb6a38"
     },
 ```
-
-## Create a test order
-
-Before you create an order, ensure you have the latest version of SPCTL. Execute the following command to see the version you are currently using:
-
-```
-./spctl --version
-```
-
-Go to the SPCTL's [GitHub page](https://github.com/Super-Protocol/ctl/releases) to see the latest version.
-
-Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/commands/tokens/request) command to get free test TEE and POL tokens:
-
-```
-./spctl tokens request --tee
-./spctl tokens request --matic
-```
-
-It may take a couple of minutes for the tokens to appear on your account. When you have them, execute the [`workflows create`](/cli/commands/workflows/create) command to create a [Super Chat](/developers/offers/superchat) order:
-
-```
-./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
-```
-
-When your order is created, you will see the following in the last line of the CLI output:
-
-```
-Workflow was created, TEE order id: ["<orderId>"]
-```
-
-Where `<orderId>` is the ID of your order.
-
-It usually takes 20-25 minutes for this order to be done. You can then check the order status using the [`orders`](/cli/commands/orders) command or in [Marketplace GUI](/developers/marketplace).
 
 ## Set up Storj
 

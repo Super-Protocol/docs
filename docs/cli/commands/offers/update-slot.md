@@ -12,7 +12,7 @@ Updates a [requirement slot](/fundamentals/slots#requirements) in an existing of
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/cli/commands/offers/get-slot) command to get additional information on a slot.
 
-Refer to [Offer requirements](/developers/cli_guides/providers_offers#offer-requirements) to create the initial offer requirements. Refer to the description of the [`offers add-slot`](/cli/commands/offers/add-slot) command for the JSON file format and object descriptions.
+Refer to [Offer requirements] to create the initial offer requirements. Refer to the description of the [`offers add-slot`](/cli/commands/offers/add-slot) command for the JSON file format and object descriptions.
 
 ## Syntax
 

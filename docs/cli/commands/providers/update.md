@@ -7,7 +7,7 @@ sidebar_label: "update"
 
 Updates the current provider using a provider info JSON file.
 
-Provider Tools creates a provider info JSON file in [Step 4 of the Providers and Offers](/developers/cli_guides/providers_offers#step-4-register-the-provider-and-offer) guide.
+Provider Tools creates a provider info JSON file in [Step 4 of the Providers and Offers] guide.
 
 **Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
 
