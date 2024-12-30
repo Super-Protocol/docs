@@ -5,25 +5,21 @@ slug: "/release-history"
 sidebar_position: 7
 ---
 
+Features coming up in the next phases:
 
+- Publishing offers on the Marketplace from the uploaded files.
+- Fine-tuning—train new layers of the original models.
+- Support for datasets.
+- More models available on the Marketplace.
+- More AI engines and model categories.
+- A light UI theme.
 
-**AI Marketplace Phase 2 is live!**
+_November 21, 2024:_
 
-_November 21, 2024_
-
-We have deployed the new Marketplace for AI to testnet. It includes new features and capabilities:
+**AI Marketplace Phase 2**
 
 - A demo account with AOuth2 login for a quick start.
 - Support for Intel TDX and NVIDIA GPU confidential computing.
-- Uploading your model files to the Super Cloud or personal Storj accounts.
-- Deploying AI models in confidential tunnels using a variety of AI engines and settings.
+- Deploying AI models with confidential tunnels using a variety of AI engines and settings.
+- Uploading your models to the Super Protocol cloud or personal Storj accounts.
 - UI/UX redesign.
-
-Features coming up in the next phase:
-
-- Publishing offers in the Marketplace from the uploaded files.
-- Fine-tuning mode (train new layers of the original models).
-- Support for datasets.
-- More models and datasets available in the Marketplace.
-- More AI engines available (and more model categories).
-- A daytime UI theme.
