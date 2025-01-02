@@ -89,16 +89,16 @@ Do not change the preconfigured parameters and fill in the following ones:
 |:-|:-|
 |accessToken| Your Testnet Access Token from the Testnet invitation email||
 |accountPrivateKey| Your Testnet Private Key from the Testnet invitation email|
-|key| Private key for order result encryption. Use the [workflows generate-key](/cli/cli_commands/workflows/generate-key) command to create this key|
+|key| Private key for order result encryption. Use the [workflows generate-key](/cli/commands/workflows/generate-key) command to create this key|
 |bucket| Name of your Storj bucket (optional)|
 |writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket (optional)|
 |readAccessToken| Storj access grant with **read** permission for this bucket (optional)|
 
 ## For offer providers
 
-This section is for offer providers only. If you are a regular user, skip it and go to the next section to [create a test order](/cli#create-a-test-order).
+This section is for offer providers only. Skip it if you are a regular user.
 
-Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers](/developers/cli_guides/providers_offers) guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks like this:
+Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers] guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks like this:
 
 ```spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json```
 
@@ -106,7 +106,7 @@ Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa` is your Authority Account wal
 
 Rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or download the SPCTL executable to the Provider Tools root directory.
 
-Alternatively, copy this provider's SPCTL config to your User Account's SPCTL directory. Use the `--config` option with [SPCTL commands](/cli/cli_commands) to manage your provider and orders. For example:
+Alternatively, copy this provider's SPCTL config to your User Account's SPCTL directory. Use the `--config` option with [SPCTL commands](/cli/commands) to manage your provider and orders. For example:
 
 ```
 ./spctl orders list --my-account --type tee --config spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json
@@ -153,7 +153,7 @@ Do not change the preconfigured parameters and fill in the following ones:
 |accessToken| Your regular Testnet Access Token from the Testnet invitation email|
 |accountPrivateKey| Private Key of your provider's Action Account|
 |authorityAccountPrivateKey| Private Key of your provider's Authority Account|
-|key| Private key for order result encryption. Use the key from your User Account or generate a new one with the [workflows generate-key](/cli/cli_commands/workflows/generate-key) command|
+|key| Private key for order result encryption. Use the key from your User Account or generate a new one with the [workflows generate-key](/cli/commands/workflows/generate-key) command|
 |bucket| Name of your Storj bucket (optional)|
 |writeAccessToken| Storj access grant with **write** and **delete** permissions for this bucket (optional)|
 |readAccessToken| Storj access grant with **read** permission for this bucket (optional)|
@@ -168,42 +168,9 @@ You can find the section with your Authority and Action Accounts Private Keys in
     },
 ```
 
-## Create a test order
-
-Before you create an order, ensure you have the latest version of SPCTL. Execute the following command to see the version you are currently using:
-
-```
-./spctl --version
-```
-
-Go to the SPCTL's [GitHub page](https://github.com/Super-Protocol/ctl/releases) to see the latest version.
-
-Use the [`tokens request`](https://docs.dev.superprotocol.com/developers/cli_commands/tokens/request) command to get free test TEE and POL tokens:
-
-```
-./spctl tokens request --tee
-./spctl tokens request --matic
-```
-
-It may take a couple of minutes for the tokens to appear on your account. When you have them, execute the [`workflows create`](/cli/cli_commands/workflows/create) command to create a [Super Chat](/developers/offers/superchat) order:
-
-```
-./spctl workflows create --solution 12,12 --solution 6,2 --data 17,22 --storage 25,30
-```
-
-When your order is created, you will see the following in the last line of the CLI output:
-
-```
-Workflow was created, TEE order id: ["<orderId>"]
-```
-
-Where `<orderId>` is the ID of your order.
-
-It usually takes 20-25 minutes for this order to be done. You can then check the order status using the [`orders`](/cli/cli_commands/orders) command or in [Marketplace GUI](/developers/marketplace).
-
 ## Set up Storj
 
-This step is optional. You can add a Marketplace storage offer to the [`files upload`](/cli/cli_commands/files/upload) command instead of configuring Storj. However, for additional control, you can set up and use your storage.
+This step is optional. You can add a Marketplace storage offer to the [`files upload`](/cli/commands/files/upload) command instead of configuring Storj. However, for additional control, you can set up and use your storage.
 
 Register a [Storj](https://www.storj.io/) account if you do not have one yet.
 
