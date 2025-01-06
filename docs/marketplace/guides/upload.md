@@ -50,7 +50,7 @@ Note that large models may perform poorly on CPU-only machines without GPU suppo
 
 Model repositories contain multiple files. Often, not all of them are required.
 
-Create a directory for the model files—the model directory. Select files following the instructions for your model format.
+Create a directory for the model files—the model directory. Select files following the instructions for your model format and place them to the model directory.
 
 If multiple formats are available, choose one of them and remove the others. For example, one of the highlighted sets of files on the following screenshot should be removed:
 
@@ -73,8 +73,6 @@ Place all model files from the repository in the model directory. For example:
 <img src={require('../images/hf-safetensors.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## Step 3. Remove duplications
-
 Some repositories contain several variants of the same model. Avoid duplications to reduce upload time. For example, one of the the highlighted files on the following screenshot can be removed:
 
 <img src={require('../images/hf-safetensors-duplicates.png').default} width="auto" height="auto" border="1"/>
@@ -86,7 +84,7 @@ If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-y
 <img src={require('../images/hf-safetensors-consolidated.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## Step 4. Create a TAR.GZ archive
+## Step 3. Create a TAR.GZ archive
 
 Ensure the model directory contains no hidden files and directories. Archive the model directory into a TAR.GZ file using the following instructions:
 
@@ -178,7 +176,7 @@ Ensure the model directory contains no hidden files and directories. Archive the
   </TabItem>
 </Tabs>
 
-## Step 5. Upload the archive
+## Step 4. Upload the archive
 
 In the [Marketplace web app](https://marketplace.superprotocol.com/), go to the **My Files** screen and press the **Upload File** button. 
 
