@@ -87,7 +87,7 @@ server.listen(port, () => {
 
 ## Testing
 
-Test your solution using our Node.js base image. You need to test specifically with the same base image that is contained in the Node.js base image offer. You can download it using this [command](/cli/cli_commands/offers/offers/download-content):
+Test your solution using our Node.js base image. You need to test specifically with the same base image that is contained in the Node.js base image offer. You can download it using this [command](/cli/commands/offers/download-content):
 
 ```bash
 ./spctl offers download-content 6 

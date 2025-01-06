@@ -12,7 +12,7 @@ This guide provides step-by-step instructions for uploading a model to Super Pro
 
 ## Step 1. Check requirements
 
-Ensure your model meets the Super Protocol requirements. Otherwise, the order may fail.
+Ensure your model meets the following Super Protocol requirements.
 
 ### Model category
 
@@ -44,30 +44,36 @@ If your model is from Hugging Face, ensure its _task_ matches one of the support
 
 The size of your model should not exceed 10 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
-Note that large models may perform poorly on TDX machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
+Note that large models may perform poorly on CPU-only machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
 
 ## Step 2. Select files
 
-Model repositories contain multiple files. Often, not all of them are required. Select files following the instructions for your model's format.
+Model repositories contain multiple files. Often, not all of them are required.
 
-### GGUF and GGML formats
+Create a directory for the model files—the model directory. Select files following the instructions for your model format and place them to the model directory.
 
-For models in thes formats, the files in the repository usually contain variants of the same model with different quantization. Note that higher-bit quantization means a larger file.
+If multiple formats are available, choose one of them and remove the others. For example, one of the highlighted sets of files on the following screenshot should be removed:
 
-Choose one file and place it in a separate directory. For example:
+<img src={require('../images/hf-formats.png').default} width="auto" height="auto" border="1"/>
+<br/>
+
+### GGUF and GGML
+
+For models in these formats, the files in the repository usually contain variants of the same model with different quantization. Note that higher-bit quantization means a larger file.
+
+Choose one file and place it in the model directory. For example:
 
 <img src={require('../images/hf-gguf.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-### Safetensors formats
+### Safetensors
 
-Place all files from the repository in a separate directory. For example:
+Place all model files from the repository in the model directory. For example:
 
 <img src={require('../images/hf-safetensors.png').default} width="auto" height="auto" border="1"/>
 <br/>
-<br/>
 
-Avoid duplications to reduce uploading time. Some repositories contain several variants of the same model. For example, one of the the highlighted files on the following screenshot can be removed:
+Some repositories contain several variants of the same model. Avoid duplications to reduce upload time. For example, one of the the highlighted files on the following screenshot can be removed:
 
 <img src={require('../images/hf-safetensors-duplicates.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -78,82 +84,94 @@ If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-y
 <img src={require('../images/hf-safetensors-consolidated.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-### Multiple formats
-
-If multiple formats are available, choose one of them and remove the others. For example, one of the highlighted sets of files on the following screenshot should be removed:
-
-<img src={require('../images/hf-formats.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-:::note
-
-For some models, you should remove additional formats in the model's root directory and subdirectories.
-
-:::
-
 ## Step 3. Create a TAR.GZ archive
 
-Ensure your model's directory contains no hidden files and subdirectories. Archive the directory with the selected model files into a TAR.GZ file using the following instructions:
+Ensure the model directory contains no hidden files and directories. Archive the model directory into a TAR.GZ file using the following instructions:
 
 <Tabs>
   <TabItem value="windows" label="Windows" default>
 
-    On Windows, open PowerShell or Windows Command Prompt and run the following command:
+    On Windows, open PowerShell, navigate to the directory that contains the model directory, and run the following command:
 
     ```
-    tar.exe -czvf <ARCHIVE_PATH> <MODEL_PATH>
+    tar.exe -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
     ```
 
-    Replace `<ARCHIVE_PATH>` with the path and desired name of the output archive. Replace `<MODEL_PATH>` with the path to the folder with the model files.
+    - Replace `<ARCHIVE_FILE>` with the desired name of the output archive.
+    - Replace `<MODEL_DIRECTORY>` with the name of the model directory.
 
     For example:
 
     ```
-    tar.exe -czvf C:\SPData\mymodel.tar.gz C:\SPData\my-model
+    tar.exe -czvf my-model.tar.gz my-model
     ```
 
     Wait for the process to complete; it may take a few minutes.
+
+    Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
+
+    ```
+    tar.exe -tzvf <ARCHIVE_FILE>
+    ```
+
+    - Replace `<ARCHIVE_FILE>` with the name of the archive.
 
     Alternatively, install a file archiver like [7-Zip](https://www.7-zip.org/) or similar to create a TAR.GZ archive using a graphical user interface instead of a command line.
 
   </TabItem>
   <TabItem value="linux" label="Linux">
 
-    On Linux, open a terminal and run the following command:
+    On Linux, open a terminal, navigate to the directory that contains the model directory, and run the following command:
 
     ```
-    tar -czvf <ARCHIVE_PATH> <MODEL_PATH>
+    tar -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
     ```
 
-    Replace `<ARCHIVE_PATH>` with the path and desired name of the output archive. Replace `<MODEL_PATH>` with the path to the directory with the model files.
+    - Replace `<ARCHIVE_FILE>` with the path and desired name of the output archive.
+    - Replace `<MODEL_DIRECTORY>` with the name of the model directory.
 
     For example:
 
     ```
-    tar -czvf mymodel.tar.gz ./my-model
+    tar -czvf mymodel.tar.gz my-model
     ```
 
     Wait for the process to complete; it may take a few minutes.
+    
+    Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
+
+    ```
+    tar -tzvf <ARCHIVE_FILE>
+    ```
+
+    - Replace `<ARCHIVE_FILE>` with the name of the archive.
 
   </TabItem>
   <TabItem value="macos" label="macOS">
 
-    On macOS, open the Terminal and run the following command:
+    On macOS, open the Terminal, navigate to the directory that contains the model directory, and run the following command:
 
     ```
-    tar --no-mac-metadata --no-xattrs -czvf <ARCHIVE_PATH> <MODEL_PATH>
+    tar --no-mac-metadata --no-xattrs -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
     ```
 
-    Replace `<ARCHIVE_PATH>` with the path and desired name of the output archive. Replace `<MODEL_PATH>` with the path to the directory with the model files.
+    Replace `<ARCHIVE_FILE>` with the path and desired name of the output archive. Replace `<MODEL_DIRECTORY>` with the name of the model directory.
 
     For example:
 
     ```
-    tar --no-mac-metadata --no-xattrs -czvf mymodel.tar.gz ./my-model
+    tar --no-mac-metadata --no-xattrs -czvf mymodel.tar.gz my-model
     ```
 
     Wait for the process to complete; it may take a few minutes.
+    
+    Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
+
+    ```
+    tar -tzvf <ARCHIVE_FILE>
+    ```
+
+    - Replace `<ARCHIVE_FILE>` with the name of the archive.
 
   </TabItem>
 </Tabs>
@@ -168,7 +186,7 @@ In the [Marketplace web app](https://marketplace.superprotocol.com/), go to the 
 
 Fill out the form:
 
-- **Content Name**: type the desired model name. It may be different from the file name. Providing a meaningful name makes it easier to find the model later.
+- **Content Name**: type the desired model name. It may be different from the archive name. Providing a meaningful name makes it easier to find the model later.
 - **Category**: choose the model category from the drop-down menu. You can only choose one.
 - **Engine**: choose compatible engines from the drop-down menu. Select both available options.
 

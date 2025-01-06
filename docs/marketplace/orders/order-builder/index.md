@@ -96,7 +96,7 @@ The system automatically calculates a compute configuration that meets or exceed
 
 Clicking the machine's name opens its [**Offer**](/marketplace/marketplace/offer) window.
 
-<img src={require('../../images/order-builder-queue.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../../images/order-builder-queue.png').default} width="auto" height="auto" border="1" alt="Screenshot showing the queue status indicator for compute offers"/>
 <br/>
 
 Learn more about [requirements and configurations](/fundamentals/slots).

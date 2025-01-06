@@ -19,22 +19,28 @@ The contents of an order are encrypted and accessible only to the user who place
 
 - **Suspended**. The order is awaiting the creation of suborders.
 - **Blocked**. A suborder temporarily blocks the order to generate access keys and authorize the confidential computing device to access the suborder's content.
-- **New**. The order is awaiting in the queue for the computing device to become available.
-- **Processing**. The machine is executing the order inside a Trusted Execution Environment. 
-- **Deployed**. The model is deployed and running.
-- **Done**. The computation is done, and the order result is available for download. For Deploy orders, it also means the model is no longer running.
+- **In Queue**. The order is awaiting in the queue for the computing device to become available.
+- **Processing**. The machine is executing the order inside a Trusted Execution Environment.
+
+Statuses specific for Deploy orders:
+
+- **Deployed**. The model is running and available via the **Access Link**.
+- **Done**. The model is no longer running.
+
+Statuses specific for Fine-tune orders:
+
+- **Ready**. The new layer is available for download using the **Get Result** button.
+- **Done**. The order result is no longer available for download.
 
 Additional possible statuses:
 
-- **Cancelling**: the order is being canceled by the customer's request.
+- **Canceling**: the order is being canceled by the customer's request.
 - **Canceled**: the order has been canceled successfully, and the remaining order deposit was transferred back to the customer's wallet.
-- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them](/marketplace/guides/troubleshooting).
+- **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them](/marketplace/guides/troubleshooting#order-status-error).
 
 Learn more about [statuses](/fundamentals/orders#order-status).
 
-**Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour.
-
-For Deploy orders, it is the duration the model will remain operational. For storage suborders, it is the duration the order result will remain available for download.
+**Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour. For Deploy orders with the Deployed status, it is the duration the model will remain operational.
 
 ## Financials
 
@@ -52,7 +58,7 @@ The **Deployment** section informs about the launched tunnel. Tunnels enable end
 
 - **Creating**: the tunnel order has been placed, but the tunnel or the model is not ready yet. The AI engine's web UI is not accessible.
 - **Online**: the tunnel is operational, and the model is running. End users may access the AI engine's web UI via the **Access Link**.
-- **Offline**: the tunnel order is done, and the tunnel is no longer available. The AI engine's web UI is inaccessible, but the expired **Access Link** remains visible.
+- **Offline**: the tunnel order is done, and the tunnel is no longer available. The model is inaccessible, but the expired **Access Link** remains visible.
 
 To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. The **Tunnels** section and the **Tunnels Orders** tab only exist for orders that utilize tunnels and are only visible to the user who placed the order.
 
@@ -62,7 +68,7 @@ Depending on the order status, different buttons are visible:
 
 - **Cancel Order** and **Extend Lease** for orders with the Suspended, Blocked, New, or Processing statuses.
 - **Get Result** for orders with the Done, Error, and Canceled statuses.
-- No buttons for orders with the Cancelling status.
+- No buttons for orders with the Canceling status.
 
 These buttons are only visible to the user who placed the order.
 
