@@ -1,8 +1,8 @@
 ---
 id: "upload"
-title: "How to Upload a Model"
+title: "How to Upload your Model"
 slug: "/guides/upload"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';
@@ -16,24 +16,18 @@ Ensure your model meets the following Super Protocol requirements.
 
 ### Model category
 
-You model must belong to a category supported by one of the engines:
+You model must be supported by Text Generaion Web UI and belong to one of the following categories:
 
-- **Text Generation Web UI** supports models that involve text-based chats:
-  + Text Generation
-  + Text Classification
-  + Translation
-  + Text2Text Generation
-- **ComfyUI** supports various image- and video-related tasks:
-  + Image Classification
-  + Object Detection
-  + Image Segmentation
-  + Text-to-Image
-  + Image-to-Text
-  + Image-to-Image
-  + Image-to-Video
-  + Video Classification
-  + Text-to-Video
-  + Mask Generation
++ Text Generation
++ Text Classification
++ Translation
++ Text2Text Generation
+
+:::note
+
+Uploading models for ComfyUI is temporarily unavailable.
+
+:::
 
 If your model is from Hugging Face, ensure its _task_ matches one of the supported categories.
 
@@ -42,7 +36,7 @@ If your model is from Hugging Face, ensure its _task_ matches one of the support
 
 ### Model size
 
-The size of your model should not exceed 10 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
+The size of your model should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
 Note that large models may perform poorly on CPU-only machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
 
@@ -91,7 +85,7 @@ Ensure the model directory contains no hidden files and directories. Archive the
 <Tabs>
   <TabItem value="windows" label="Windows" default>
 
-    On Windows, open PowerShell, navigate to the directory that contains the model directory, and run the following command:
+    1. On Windows, open PowerShell, navigate to the directory that contains the model directory, and run the following command:
 
     ```
     tar.exe -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
@@ -106,9 +100,9 @@ Ensure the model directory contains no hidden files and directories. Archive the
     tar.exe -czvf my-model.tar.gz my-model
     ```
 
-    Wait for the process to complete; it may take a few minutes.
+    2. Wait for the process to complete; it may take a few minutes.
 
-    Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
+    3. Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
 
     ```
     tar.exe -tzvf <ARCHIVE_FILE>
@@ -116,12 +110,36 @@ Ensure the model directory contains no hidden files and directories. Archive the
 
     - Replace `<ARCHIVE_FILE>` with the name of the archive.
 
-    Alternatively, install a file archiver like [7-Zip](https://www.7-zip.org/) or similar to create a TAR.GZ archive using a graphical user interface instead of a command line.
+    An example of a **correct** directory structure inside the archive:
+
+    ```
+    my-model\
+    my-model\tokenizer_config.json
+    my-model\added_tokens.json
+    my-model\model.safetensors
+    my-model\special_tokens_map.json
+    my-model\tokenizer.json
+    my-model\generation_config.json
+    my-model\config.json
+    ```
+
+    An example of an **incorrect** directory structure inside the archive:
+
+    ```
+    Downloads\models\my-model\
+    Downloads\models\my-model\tokenizer_config.json
+    Downloads\models\my-model\added_tokens.json
+    Downloads\models\my-model\model.safetensors
+    Downloads\models\my-model\special_tokens_map.json
+    Downloads\models\my-model\tokenizer.json
+    Downloads\models\my-model\generation_config.json
+    Downloads\models\my-model\config.json
+    ```
 
   </TabItem>
   <TabItem value="linux" label="Linux">
 
-    On Linux, open a terminal, navigate to the directory that contains the model directory, and run the following command:
+    1. On Linux, open a terminal, navigate to the directory that contains the model directory, and run the following command:
 
     ```
     tar -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
@@ -136,20 +154,46 @@ Ensure the model directory contains no hidden files and directories. Archive the
     tar -czvf mymodel.tar.gz my-model
     ```
 
-    Wait for the process to complete; it may take a few minutes.
+    2. Wait for the process to complete; it may take a few minutes.
     
-    Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
+    3. Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
 
     ```
     tar -tzvf <ARCHIVE_FILE>
-    ```
+    ```  
 
     - Replace `<ARCHIVE_FILE>` with the name of the archive.
+
+    An example of a **correct** directory structure inside the archive:
+
+    ```
+    my-model/
+    my-model/tokenizer_config.json
+    my-model/added_tokens.json
+    my-model/model.safetensors
+    my-model/special_tokens_map.json
+    my-model/tokenizer.json
+    my-model/generation_config.json
+    my-model/config.json
+    ```
+
+    An example of an **incorrect** directory structure inside the archive:
+
+    ```
+    Downloads/models/my-model/
+    Downloads/models/my-model/tokenizer_config.json
+    Downloads/models/my-model/added_tokens.json
+    Downloads/models/my-model/model.safetensors
+    Downloads/models/my-model/special_tokens_map.json
+    Downloads/models/my-model/tokenizer.json
+    Downloads/models/my-model/generation_config.json
+    Downloads/models/my-model/config.json
+    ```
 
   </TabItem>
   <TabItem value="macos" label="macOS">
 
-    On macOS, open the Terminal, navigate to the directory that contains the model directory, and run the following command:
+    1. On macOS, open the Terminal, navigate to the directory that contains the model directory, and run the following command:
 
     ```
     tar --no-mac-metadata --no-xattrs -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
@@ -163,15 +207,41 @@ Ensure the model directory contains no hidden files and directories. Archive the
     tar --no-mac-metadata --no-xattrs -czvf mymodel.tar.gz my-model
     ```
 
-    Wait for the process to complete; it may take a few minutes.
+    2. Wait for the process to complete; it may take a few minutes.
     
-    Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
+    3. Ensure the model directory is at the root of the archive; otherwise, deployment may fail. Run the following command to view the contents of the archive:
 
     ```
     tar -tzvf <ARCHIVE_FILE>
     ```
 
     - Replace `<ARCHIVE_FILE>` with the name of the archive.
+
+    An example of a **correct** directory structure inside the archive:
+
+    ```
+    my-model/
+    my-model/tokenizer_config.json
+    my-model/added_tokens.json
+    my-model/model.safetensors
+    my-model/special_tokens_map.json
+    my-model/tokenizer.json
+    my-model/generation_config.json
+    my-model/config.json
+    ```
+
+    An example of an **incorrect** directory structure inside the archive:
+
+    ```
+    Downloads/models/my-model/
+    Downloads/models/my-model/tokenizer_config.json
+    Downloads/models/my-model/added_tokens.json
+    Downloads/models/my-model/model.safetensors
+    Downloads/models/my-model/special_tokens_map.json
+    Downloads/models/my-model/tokenizer.json
+    Downloads/models/my-model/generation_config.json
+    Downloads/models/my-model/config.json
+    ```
 
   </TabItem>
 </Tabs>
