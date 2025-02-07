@@ -406,7 +406,6 @@ The `register` command initiates a series of steps:
 2. Provider Tools checks whether the provider with the Authority Account specified in `provider-tools-config.json` is already registered on the blockchain.
   + If the provider exists, the prompt will go to the next step.
   + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#update-provider-info) the provider description later.
-  + If the provider does not exist, Provider Tools asks you to create one. Specify the desired provider name and write a short description. Provider Tools also prompts you to save the provider info to a JSON file in case you need to [update](/developers/cli_guides/providers_offers#update-provider-info) the provider description later.
 
 3. Provider Tools asks if this provider already has a solution or data offer created on the blockchain. If you want to create a new offer, select `No`. Provider Tools then asks for the `offer-info.json` and `offer-slot.json` from [Step 3](/developers/cli_guides/providers_offers#step-3-configure-the-offer).
 
