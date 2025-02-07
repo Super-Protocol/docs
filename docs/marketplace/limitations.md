@@ -20,24 +20,24 @@ Super Protocol constantly adds more TDX+H100 machines and will soon begin onboar
 
 Pricing and restrictions:
 
-- Order lease time: minimum 2 hours and maximum 8 hours.
-- Compute costs 4.134 TEE tokens per hour for GPU orders and 2.13 TEE per hour for CPU orders in most cases.
+- Order lease time: minimum 2 hours.
+- Compute costs 2.126 TEE tokens in most cases.
 - Models from the Marketplace cost 1 TEE per order.
 - Engines cost 0.5 TEE per order.
-- Tunnels Launcher fee for setting up a confidential tunnel is approximately 1-2 TEE per order.
+- Tunnels Launcher fee for setting up a confidential tunnel is approximately 2 TEE per order.
 
-For example, a four-hour GPU order will cost approximately:
+For example, a two-hour GPU order will cost approximately:
 
-4.134 * 4 + 1 + 0.5 + 2 = **~19-20 TEE** tokens.
+2.126 * 2 + 1 + 0.5 + 2 = **~8** TEE tokens.
 
 ## Token limits
 
 - **Demo users** receive a one-time advance of 50 TEE tokens with no replenishment possibility. To continue testing, users must [log in with a Web3 account](/marketplace/guides/log-in).
-- **Web3 users** can receive up to 25 TEE tokens and 5 POL tokens daily. At any given time, Web3 users can hold a maximum of 25 TEE tokens and 5 POL tokens in their wallets.
+- **Web3 users** can receive up to 35 TEE tokens and 5 POL tokens daily. At any given time, Web3 users can hold a maximum of 35 TEE tokens and 5 POL tokens in their wallets.
 
 ## Model limits
 
-The total size of your model files should not exceed 10 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
+The total size of your model files should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
 Also, deployed models must belong to a category supported by one of the AI engines:
 
