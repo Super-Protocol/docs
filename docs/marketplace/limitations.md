@@ -20,8 +20,8 @@ Super Protocol constantly adds more TDX+H100 machines and will soon begin onboar
 
 Pricing and restrictions:
 
-- Order lease time: minimum 2 hours and maximum 8 hours.
-- Compute costs 2.126 TEE tokens per hour for GPU orders and 2.126 TEE per hour for CPU orders in most cases.
+- Order lease time: minimum 2 hours.
+- Compute costs 2.126 TEE tokens in most cases.
 - Models from the Marketplace cost 1 TEE per order.
 - Engines cost 0.5 TEE per order.
 - Tunnels Launcher fee for setting up a confidential tunnel is approximately 2 TEE per order.
