@@ -11,9 +11,9 @@ Displays information on an offer.
 ## Syntax
 
 ```
-./spctl offers get <offerType> <offerId> \
-    [--save-to <path>] \
-    [--config <path>] \
+./spctl offers get <offerType> <offerId>
+    [--save-to <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

@@ -24,15 +24,15 @@ The output of the command is a resource JSON file with the information for a com
 ## Syntax
 
 ```
-./spctl files upload <targzArchivePath> \
-    [--filename <string>] \
-    [--output <path>] \
-    [--skip-encryption] \
-    [--metadata <path>] \
-    [--max-concurrent <number>] \
-    [--storage <offerId,slotId>] \
-    [--min-rent-minutes <minutes>] \
-    [--config <path>] \
+./spctl files upload <targzArchivePath>
+    [--filename <string>]
+    [--output <path>]
+    [--skip-encryption]
+    [--metadata <path>]
+    [--max-concurrent <number>]
+    [--storage <offerId,slotId>]
+    [--min-rent-minutes <minutes>]
+    [--config <path>]
     [--help | -h]
 ```
 

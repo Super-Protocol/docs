@@ -11,9 +11,9 @@ Displays the information on an offer as stored on the blockchain.
 ## Syntax
 
 ```
-./spctl offers get-info <offerType> <offerId> \
-    [--save-to <path>] \
-    [--config <path>] \
+./spctl offers get-info <offerType> <offerId>
+    [--save-to <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

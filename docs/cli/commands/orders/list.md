@@ -12,14 +12,14 @@ This command displays a list of all orders and suborders, unless the `--my-accou
 ## Syntax
 
 ```
-./spctl orders list \
-    [--fields <field>,[<field>,...]] \
-    [--my-account] \
-    [--type {tee | storage | solution | data}] \
-    [--save-to <path>] \
-    [--limit <number>] \
-    [--cursor <cursorString>] \
-    [--config <path>] \
+./spctl orders list
+    [--fields <field>,[<field>,...]]
+    [--my-account]
+    [--type {tee | storage | solution | data}]
+    [--save-to <path>]
+    [--limit <number>]
+    [--cursor <cursorString>]
+    [--config <path>]
     [--help | -h]
 ```
 

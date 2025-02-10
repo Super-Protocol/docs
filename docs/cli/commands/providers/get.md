@@ -10,9 +10,9 @@ Displays the information on a provider using its authority account address.
 ## Syntax
 
 ```
-./spctl providers get <authorityAccount> \
-    [--fields <field>,[<field>,...]] \
-    [--config <path>] \
+./spctl providers get <authorityAccount>
+    [--fields <field>,[<field>,...]]
+    [--config <path>]
     [--help | -h]
 ```
 

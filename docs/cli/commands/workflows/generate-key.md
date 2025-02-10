@@ -12,8 +12,8 @@ SPCTL generates this key automatically during the [configuration](/cli). Use thi
 ## Syntax
 
 ```
-./spctl workflows generate-key \
-    [--config <path>] \
+./spctl workflows generate-key
+    [--config <path>]
     [--help | -h]
 ```
 

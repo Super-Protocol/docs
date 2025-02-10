@@ -11,12 +11,12 @@ Displays a list of available offers.
 ## Syntax
 
 ```
-./spctl offers list <offerType> \
-    [--fields <field>,[<field>,...]] \
-    [--ids <offerId> [<offerId> ...]] \
-    [--limit <number>] \
-    [--cursor <cursorString>] \
-    [--config <path>] \
+./spctl offers list <offerType>
+    [--fields <field>,[<field>,...]]
+    [--ids <offerId> [<offerId> ...]]
+    [--limit <number>]
+    [--cursor <cursorString>]
+    [--config <path>]
     [--help | -h]
 ```
 

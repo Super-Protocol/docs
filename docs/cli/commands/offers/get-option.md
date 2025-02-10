@@ -11,10 +11,10 @@ Displays the information on a [configuration option](/fundamentals/slots) of a c
 ## Syntax
 
 ```
-./spctl offers get-option \
-    --offer <offerId> \
-    --option <optionId> \
-    [--config <path>] \
+./spctl offers get-option
+    --offer <offerId>
+    --option <optionId>
+    [--config <path>]
     [--help | -h]
 ```
 

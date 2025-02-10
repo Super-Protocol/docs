@@ -9,7 +9,7 @@ The testnet has a limited amount of computing resources. To ensure fair access, 
 
 ## Pricing for orders
 
-On the testnet, you can deploy models using either Intel TDX CPUs or NVIDIA H100 Tensor Core GPUs.
+During the testnet, you can deploy models using either Intel TDX CPUs or NVIDIA H100 Tensor Core GPUs.
 
 Super Protocol has two types of machines:
 
@@ -33,7 +33,7 @@ For example, a two-hour GPU order will cost approximately:
 ## Token limits
 
 - **Demo users** receive a one-time advance of 50 TEE tokens with no replenishment possibility. To continue testing, users must [log in with a Web3 account](/marketplace/guides/log-in).
-- **Web3 users** can receive up to 35 TEE tokens and 5 POL tokens daily. At any given time, Web3 users can hold a maximum of 35 TEE tokens and 5 POL tokens in their wallets.
+- **Web3 users** can receive up to 35 TEE tokens tokens daily. At any given time, Web3 users can hold a maximum of 35 TEE tokens in their wallets.
 
 ## Model limits
 

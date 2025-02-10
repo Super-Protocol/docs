@@ -2,7 +2,7 @@
 id: "storage"
 title: "How to Set Up Personal Storage"
 slug: "/guides/storage"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 This guide provides step-by-step instructions on how to set up your personal Storj account.
@@ -25,12 +25,14 @@ If you don't already have a [Storj](https://www.storj.io/) account, register one
 
 ## Step 3. Generate S3 Access Keys
 
-In the Storj dashboard, generate two S3 Access Keys for the bucket. Assign **Write** and **Delete** permissions to one key. Assign **Read** and **List** permissions to the other key. Note that each S3 Access Key comes with a corresponding Secret Key:
+In the Storj dashboard, generate two S3 Access Keys for the bucket. Refer to the [Storj documentation](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials) to learn how to do it.
+
+Assign **Read** permission to one key. Assign **Full** permission (**Read**, **List**, **Write**, and **Delete**) to the other key. Note that each S3 Access Key comes with a corresponding Secret Key:
 
 - Example Access Key: `jv7ke2m5vqkyxffywr3qmc47ibxa`.
 - Example Secret Key: `jzbf5fgqz56nlun2jht7pjoiapmowvb3uarpzeqb2t2wiivij3jvg`.
 
-As a result, you should have two pairs Access Key + Secret Key. Refer to the Storj documentation to learn how to [generate S3 Access Keys](https://storj.dev/dcs/getting-started#generate-s3-compatible-credentials).
+As a result, you should have two pairs Access Key + Secret Key.
 
 ## Step 4. Set up your Super Protocol Web3 account
 
@@ -46,10 +48,10 @@ Select the **Your Storj account** radio button, fill in the fields, and click **
 | :- | :- |
 | Bucket | Name of the Storj bucket |
 | Path | Path to a directory inside the bucket; it can be empty |
-| WriteAccessKeyId | Access Key with **Write** and **Delete** permissions |
-| WriteSecretAccessKey | Secret Key with **Write** and **Delete** permissions |
-| ReadAccessKeyId | Access Key with **Read** and **List** permissions |
-| ReadSecretAccessKey | Secret Key with **Read** and **List** permissions |
+| WriteAccessKeyId | Access Key with **Full** permission |
+| WriteSecretAccessKey | Secret Key with **Full** permission |
+| ReadAccessKeyId | Access Key with **Read** permission |
+| ReadSecretAccessKey | Secret Key with **Read** permissions |
 
 <img src={require('../images/web3acc-storj.png').default} width="auto" height="auto" border="1"/>
 <br/>

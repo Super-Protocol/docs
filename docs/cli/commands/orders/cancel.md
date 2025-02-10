@@ -10,8 +10,8 @@ Cancels an order.
 ## Syntax
 
 ```
-./spctl orders cancel <orderId> \
-    [--config <path>] \
+./spctl orders cancel <orderId>
+    [--config <path>]
     [--help | -h]
 ```
 

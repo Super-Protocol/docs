@@ -4,8 +4,8 @@
         "accessToken": ""
     },
     "blockchain": {
-        "rpcUrl": "https://amoy.polygon.superprotocol.com/hesoyam",
-        "smartContractAddress": "0x589c5F093524e9a6cD4bAEe786859bC6C3e38bec",
+        "rpcUrl": "https://polygon.superprotocol.com/",
+        "smartContractAddress": "0x3C69ea105Fc716C1Dcb41859281Aa817D0A0B279",
         "accountPrivateKey": ""
     },
     "storage": {
