@@ -13,11 +13,11 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
 ## Syntax
 
 ```
-./spctl offers get-slot <offerType> \
-    --offer <offerId> \
-    --slot <slotId> \
-    [--save-to <path>] \
-    [--config <path>] \
+./spctl offers get-slot <offerType>
+    --offer <offerId>
+    --slot <slotId>
+    [--save-to <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

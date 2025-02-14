@@ -15,10 +15,10 @@ Refer to the [Providers and Offers] guide to create the initial offer requiremen
 ## Syntax
 
 ```
-./spctl offers add-slot <offerType> \
-    --offer <offerId> \
-    [--path <path>] \
-    [--config <path>] \
+./spctl offers add-slot <offerType>
+    --offer <offerId>
+    [--path <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

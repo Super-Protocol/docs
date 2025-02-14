@@ -50,9 +50,8 @@ Command syntax may also contain the following special characters:
 - Curly brackets `{ }` indicate a required choice between two or more options or arguments.
 - A vertical bar `|` separates mutually exclusive options or arguments you must choose from.
 - An ellipsis `...` indicates you may use the preceding option or argument multiple times.
-- A backslash `\` breaks a long command line for better readability.
 
-Never include these special characters, except backslash `\`, in the final command. Do not include backslashes `\` if you type a command in a single line.
+Never include these special characters in the final command.
 
 ### Example
 

@@ -186,7 +186,7 @@ Select `Yes`.
 `Do you need to generate a new TokenReceiver account?`<br/>
 Select `Yes`.
 
-Alternatively, you can use previously created Polygon accounts. Create them through MetaMask and then follow [this guide](https://docs.polygon.technology/tools/wallets/metamask/add-polygon-network/) to add the Polygon Amoy Testnet network. Select `No` in the menu when asked to generate new accounts and enter their private keys.
+Alternatively, you can use previously created accounts. Select `No` and enter their private keys.
 
 Import these accounts to MetaMask using their private keys to get their addresses and better control over the balances.
 
