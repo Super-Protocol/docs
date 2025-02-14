@@ -12,8 +12,8 @@ The resource JSON file is created as a result of the [`files upload`](/cli/comma
 ## Syntax
 
 ```
-./spctl files delete <resourceFilePath> \
-    [--config <path>] \
+./spctl files delete <resourceFilePath>
+    [--config <path>]
     [--help | -h]
 ```
 

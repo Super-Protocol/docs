@@ -17,11 +17,11 @@ Refer to [Offer requirements] to create the initial offer requirements. Refer to
 ## Syntax
 
 ```
-./spctl offers update-slot <offerType> \
-    --offer <offerId> \
-    --slot <slotId> \
-    [--path <path>] \
-    [--config <path>] \
+./spctl offers update-slot <offerType>
+    --offer <offerId>
+    --slot <slotId>
+    [--path <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

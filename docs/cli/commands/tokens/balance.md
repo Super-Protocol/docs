@@ -10,8 +10,8 @@ Displays the balance of TEE and POL tokens in your wallet.
 ## Syntax
 
 ```
-./spctl tokens balance \
-    [--config <path>] \
+./spctl tokens balance
+    [--config <path>]
     [--help | -h]
 ```
 

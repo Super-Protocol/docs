@@ -24,4 +24,4 @@ To upload a file, fill in all the fields:
 
 You can change all this data later except for the uploaded file itself.
 
-Note that before uploading a model or dataset, you must pack it into a TAR.GZ archive. The file will be uploaded to the storage specified in the Account settings. Read [How to Upload Content](/marketplace/guides/upload) for step-by-step instructions.
+Note that before uploading a model or dataset, you must pack it into a TAR.GZ archive. The file will be uploaded to the storage specified in the Account settings. Read [How to Upload Your Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload Your Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.

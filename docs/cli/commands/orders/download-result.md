@@ -17,9 +17,9 @@ If the order status is `Error`, the result archive will contain a text file with
 ## Syntax
 
 ```
-./spctl orders download-result <orderId> \
-    [--save-to <path>] \
-    [--config <path>] \
+./spctl orders download-result <orderId>
+    [--save-to <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

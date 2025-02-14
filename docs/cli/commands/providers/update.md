@@ -14,9 +14,9 @@ Provider Tools creates a provider info JSON file in [Step 4 of the Providers and
 ## Syntax
 
 ```
-./spctl providers update \
-    [--path <path>] \
-    [--config <path>] \
+./spctl providers update
+    [--path <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

@@ -12,8 +12,8 @@ Certain orders require a positive deposit balance to keep running.
 ## Syntax
 
 ```
-./spctl orders replenish-deposit <orderId> <tokenAmount> \
-    [--config <path>] \
+./spctl orders replenish-deposit <orderId> <tokenAmount>
+    [--config <path>]
     [--help | -h]
 ```
 

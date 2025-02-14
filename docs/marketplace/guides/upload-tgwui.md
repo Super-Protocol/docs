@@ -1,14 +1,21 @@
 ---
-id: "upload"
-title: "How to Upload your Model"
-slug: "/guides/upload"
+id: "upload-tgwui"
+title: "How to Upload Your Model (TGWUI)"
+slug: "/guides/upload-tgwui"
 sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions for uploading a model to Super Protocol.
+This guide provides step-by-step instructions for uploading a model supported by **Text Generation Web UI** to Super Protocol. If your model is supported by ComfyUI, refer to the [respective upload guide](/marketplace/guides/upload-comfyui).
+
+To deploy your model in Super Protocol, you need to complete the following steps:
+
+- [Step 1](/marketplace/guides/upload-tgwui#step-1-check-requirements): Ensure it fits the requirements and current limitations.
+- [Step 2](/marketplace/guides/upload-tgwui#step-2-select-files): Prepare the model files.
+- [Step 3](/marketplace/guides/upload-tgwui#step-3-create-a-targz-archive): Create a TAR.GZ archive with your model files.
+- [Step 4](/marketplace/guides/upload-tgwui#step-4-upload-the-archive): Upload the archive to Super Protocol.
 
 ## Step 1. Check requirements
 
@@ -16,22 +23,16 @@ Ensure your model meets the following Super Protocol requirements.
 
 ### Model category
 
-You model must be supported by Text Generaion Web UI and belong to one of the following categories:
+You model must belong to a category supported by Text Generation Web UI:
 
-+ Text Generation
-+ Text Classification
-+ Translation
-+ Text2Text Generation
-
-:::note
-
-Uploading models for ComfyUI is temporarily unavailable.
-
-:::
+- Text Generation
+- Text Classification
+- Translation
+- Text2Text Generation
 
 If your model is from Hugging Face, ensure its _task_ matches one of the supported categories.
 
-<img src={require('../images/hf-task.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/hf-text-generation.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ### Model size
@@ -42,18 +43,18 @@ Note that large models may perform poorly on CPU-only machines without GPU suppo
 
 ## Step 2. Select files
 
-Model repositories contain multiple files. Often, not all of them are required.
+Model repositories contain multiple files. Not all of them are required.
 
-Create a directory for the model files—the model directory. Select files following the instructions for your model format and place them to the model directory.
+Create a directory for the model files—the _model directory_. Select files following the instructions for your model format and place them to the model directory.
 
-If multiple formats are available, choose one of them and remove the others. For example, one of the highlighted sets of files on the following screenshot should be removed:
+If multiple formats are available, choose one of them and do not include the others. For example, only one of the highlighted sets of files on the following screenshot should be selected:
 
 <img src={require('../images/hf-formats.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ### GGUF and GGML
 
-For models in these formats, the files in the repository usually contain variants of the same model with different quantization. Note that higher-bit quantization means a larger file.
+For models in these formats, the files in the repository usually contain variants of the same model with different quantization. Note that higher-bit quantization leads to better model responses but a larger model file.
 
 Choose one file and place it in the model directory. For example:
 
@@ -62,18 +63,14 @@ Choose one file and place it in the model directory. For example:
 
 ### Safetensors
 
-Place all model files from the repository in the model directory. For example:
+Place all model files from the repository in the model directory, except the hidden .git directory and the .gitattributes file. For example:
 
 <img src={require('../images/hf-safetensors.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-Some repositories contain several variants of the same model. Avoid duplications to reduce upload time. For example, one of the the highlighted files on the following screenshot can be removed:
+Some repositories contain several variants of the same model. Avoid duplications to reduce upload time.
 
-<img src={require('../images/hf-safetensors-duplicates.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files are available, choose one set and remove the other. For example, one of the highlighted sets of files on the following screenshot should be removed:
+If a single consolidated `model.safetensors` file and multiple `model-xxxxx-of-yyyyy.safetensors` files are available, choose one set and do not include the other. For example, one of the highlighted sets of files on the following screenshot should be removed:
 
 <img src={require('../images/hf-safetensors-consolidated.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -85,7 +82,7 @@ Ensure the model directory contains no hidden files and directories. Archive the
 <Tabs>
   <TabItem value="windows" label="Windows" default>
 
-    1. On Windows, open PowerShell, navigate to the directory that contains the model directory, and run the following command:
+    1. On Windows, open PowerShell, go to the directory that contains the model directory, and run the following command to create a TAR.GZ archive:
 
     ```
     tar.exe -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
@@ -139,7 +136,7 @@ Ensure the model directory contains no hidden files and directories. Archive the
   </TabItem>
   <TabItem value="linux" label="Linux">
 
-    1. On Linux, open a terminal, navigate to the directory that contains the model directory, and run the following command:
+    1. On Linux, open a terminal, navigate to the directory that contains the model directory, and run the following command to create a TAR.GZ archive:
 
     ```
     tar -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
@@ -193,13 +190,14 @@ Ensure the model directory contains no hidden files and directories. Archive the
   </TabItem>
   <TabItem value="macos" label="macOS">
 
-    1. On macOS, open the Terminal, navigate to the directory that contains the model directory, and run the following command:
+    1. On macOS, open the Terminal, navigate to the directory that contains the model directory, and run the following command to create a TAR.GZ archive:
 
     ```
     tar --no-mac-metadata --no-xattrs -czvf <ARCHIVE_FILE> <MODEL_DIRECTORY>
     ```
 
-    Replace `<ARCHIVE_FILE>` with the path and desired name of the output archive. Replace `<MODEL_DIRECTORY>` with the name of the model directory.
+    - Replace `<ARCHIVE_FILE>` with the path and desired name of the output archive.
+    - Replace `<MODEL_DIRECTORY>` with the name of the model directory.
 
     For example:
 

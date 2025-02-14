@@ -13,8 +13,8 @@ Enables an existing disabled offer.
 ## Syntax
 
 ```
-./spctl offers enable <offerId> \
-    [--config <path>] \
+./spctl offers enable <offerId>
+    [--config <path>]
     [--help | -h]
 ```
 

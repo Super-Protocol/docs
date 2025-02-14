@@ -10,8 +10,8 @@ Checks if the domain content runs in a confidential environment. The command als
 ## Syntax
 
 ```
-./spctl quotes validate <domainUrl> \
-    [--config <path>] \
+./spctl quotes validate <domainUrl>
+    [--config <path>]
     [--help | -h]
 ```
 

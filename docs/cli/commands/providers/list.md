@@ -10,9 +10,9 @@ Lists all registered providers.
 ## Syntax
 
 ```
-./spctl providers list \
-    [--fields <field>,[<field>,...]] \
-    [--config <path>] \
+./spctl providers list
+    [--fields <field>,[<field>,...]]
+    [--config <path>]
     [--help | -h]
 ```
 

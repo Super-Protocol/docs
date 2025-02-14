@@ -2,7 +2,7 @@
 id: "slots"
 title: "Slots and Options"
 slug: "/slots"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 _Requirements_ describe the parameters that a solution, data, or storage offer needs to run. _Configurations_ provide flexibility in selecting computing resources and internet access for offer deployment. The compute offer configuration added to an order must meet all the value offer requirements in this order.

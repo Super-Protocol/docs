@@ -14,17 +14,17 @@ For solutions and data, you can add to an order either Marketplace [offers](/fun
 ## Syntax
 
 ```
-./spctl workflows create \
-    --solution {<offerId>,[<slotId>] | <path>} [--solution ...] \
-    --storage <offerId>,[<slotId>] \
-    [--data {<offerId>,[<slotId>] | <path>}] [--data ...] \
-    [--tee <offerId>,[<slotId>]] \
-    [--tee-slot-count <inc>] \
-    [--tee-options <optionId> [<optionId> ...]] \
-    [--tee-options-count <inc> [<inc> ...]] \
-    [--deposit <teeTokens>] \
-    [--min-rent-minutes <minutes>] \
-    [--config <path>] \
+./spctl workflows create
+    --solution {<offerId>,[<slotId>] | <path>} [--solution ...]
+    --storage <offerId>,[<slotId>]
+    [--data {<offerId>,[<slotId>] | <path>}] [--data ...]
+    [--tee <offerId>,[<slotId>]]
+    [--tee-slot-count <inc>]
+    [--tee-options <optionId> [<optionId> ...]]
+    [--tee-options-count <inc> [<inc> ...]]
+    [--deposit <teeTokens>]
+    [--min-rent-minutes <minutes>]
+    [--config <path>]
     [--help | -h]
 ```
 

@@ -15,9 +15,9 @@ Refer to the [Providers and Offers] guide to create the initial offer descriptio
 ## Syntax
 
 ```
-./spctl offers update <offerType> <offerId> \
-    [--path <path>] \
-    [--config <path>] \
+./spctl offers update <offerType> <offerId>
+    [--path <path>]
+    [--config <path>]
     [--help | -h]
 ```
 
