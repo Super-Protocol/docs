@@ -12,8 +12,8 @@ Docker needs this key to [pack a solution](/cli/commands/solutions/prepare) into
 ## Syntax
 
 ```
-./spctl solutions generate-key <outputPath> \
-    [--config <path>] \
+./spctl solutions generate-key <outputPath>
+    [--config <path>]
     [--help | -h]
 ```
 

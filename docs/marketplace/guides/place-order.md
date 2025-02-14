@@ -30,7 +30,7 @@ Select a model you want to deploy. You can add either a model from the Marketpla
   </TabItem>
   <TabItem value="my-content" label="My Content">
 
-    To add your own model, you must prepare and upload it first. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
+    To add your own model, you must prepare and upload it first. Read [How to Upload Your Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload Your Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
 
     When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
 

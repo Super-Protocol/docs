@@ -13,9 +13,9 @@ The command only works with offers that allow this operation.
 ## Syntax
 
 ```
-./spctl offers download-content <offerId> \
-    [--save-to <path>] \
-    [--config <path>] \
+./spctl offers download-content <offerId>
+    [--save-to <path>]
+    [--config <path>]
     [--help | -h]
 ```
 

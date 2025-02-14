@@ -2,7 +2,7 @@
 id: "orders"
 title: "Orders"
 slug: "/orders"
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 _Orders_ and _suborders_ on Super Protocol are digital contracts between a customer and [offer](/fundamentals/offers) providers. The term _order_ always implies the usage of a [compute offer](/fundamentals/offers#compute). Every other offer added to the order creates a separate suborder related to the main order. Solutions and data uploaded by the customer create no suborders.

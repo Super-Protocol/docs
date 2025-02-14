@@ -27,18 +27,18 @@ Note that the base image is graminized but not included in the output archive fi
 ## Syntax
 
 ```
-./spctl solutions prepare <solutionPath> <signingKeyPath> \
-    [--base-image-path <path>] \
-    [--metadata <path>] \
-    [--pack-solution <path>] \
-    [--write-default-manifest] \
-    [--env <envVariable> [--env ...]] \
-    [--hash-algo <hashAlgo>] \
-    [--sgx-max-threads <number>] \
-    [--sgx-enclave-size <number>] \
-    [--sgx-loader-internal-size <number>] \
-    [--sgx-stack-size <number>] \
-    [--config <path>] \
+./spctl solutions prepare <solutionPath> <signingKeyPath>
+    [--base-image-path <path>]
+    [--metadata <path>]
+    [--pack-solution <path>]
+    [--write-default-manifest]
+    [--env <envVariable> [--env ...]]
+    [--hash-algo <hashAlgo>]
+    [--sgx-max-threads <number>]
+    [--sgx-enclave-size <number>]
+    [--sgx-loader-internal-size <number>]
+    [--sgx-stack-size <number>]
+    [--config <path>]
     [--help | -h]
 ```
 

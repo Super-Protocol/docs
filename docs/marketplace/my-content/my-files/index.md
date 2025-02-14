@@ -17,7 +17,7 @@ Datasets are not yet available in the current version of the Marketplace.
 <br/>
 <br/>
 
-The **Upload File** button opens the [**Upload Content**](/marketplace/my-content/my-files/upload-content) window. Read [How to Upload a Model](/marketplace/guides/upload) for step-by-step instructions.
+The **Upload File** button opens the [**Upload Content**](/marketplace/my-content/my-files/upload-content) window. Read [How to Upload Your Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload Your Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
 
 The table in the middle of the screen includes the following columns:
 

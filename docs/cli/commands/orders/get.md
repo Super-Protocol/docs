@@ -12,11 +12,11 @@ This command allows you to check any order, not only yours. The information on a
 ## Syntax
 
 ```
-./spctl orders get <orderId> \
-    [--fields <field>,[<field>,...]] \
-    [--suborders] \
-    [--suborders_fields <field>,[<field>,...]] \
-    [--config <path>] \
+./spctl orders get <orderId>
+    [--fields <field>,[<field>,...]]
+    [--suborders]
+    [--suborders_fields <field>,[<field>,...]]
+    [--config <path>]
     [--help | -h]
 ```
 

@@ -15,10 +15,10 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
 ## Syntax
 
 ```
-./spctl offers delete-slot <offerType> \
-    --offer <offerId> \
-    --slot <slotId> \
-    [--config <path>] \
+./spctl offers delete-slot <offerType>
+    --offer <offerId>
+    --slot <slotId>
+    [--config <path>]
     [--help | -h]
 ```
 
