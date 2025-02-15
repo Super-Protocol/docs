@@ -1,6 +1,6 @@
 ---
 id: "upload-comfyui"
-title: "How to Upload Your Model (ComfyUI)"
+title: "How to Upload a Model (ComfyUI)"
 slug: "/guides/upload-comfyui"
 sidebar_position: 5
 ---
@@ -8,7 +8,7 @@ sidebar_position: 5
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions for uploading a model supported by **ComfyUI** to Super Protocol. If your model is supported by Text Generation Web UI, refer to the [respective upload guide](/marketplace/guides/upload-tgwui).
+This guide provides step-by-step instructions for uploading a model supported by **ComfyUI** to Super Protocol. If your model is supported by Text Generation Web UI, refer to the [respective guide](/marketplace/guides/upload-tgwui).
 
 To deploy your model in Super Protocol, you need to complete the following steps:
 

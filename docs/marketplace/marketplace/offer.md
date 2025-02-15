@@ -47,7 +47,7 @@ The **Pricing** tab contains the offer requirements, detailing how many confiden
 - **Min Time** and **Max Time**: providers may set the minimum and maximum allowed lease time to limit the usage of the offer.
 - **slotID**: a unique identification number of the requirement slot. It is incremental and continuous for model offers and dataset offers.
 
-The offer provider can configure multiple requirement slots with varying prices based on expected usage. Higher requirements imply a higher expected workload, and the slot price may reflect that. Learn more about [requirement slots](/fundamentals/slots#requirements).
+The offer provider can configure multiple requirement slots with varying prices based on expected usage. Higher requirements imply a higher expected workload, and the slot price may reflect that. Read about [requirement slots](/fundamentals/slots#requirements).
 
 To add the offer to an order, click the blue **[+]** button next to a slot. **Offer added to Order** in the bottom-right corner of the window indicates that a requirement slot was added to the order:
 

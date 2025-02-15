@@ -29,7 +29,7 @@ This message appears when the selected compute configuration does not meet the c
 <br/>
 <br/>
 
-Ensure your order fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
+Ensure your order fits into the total maximum compute configuration allowed for the testnet. Check the [Testnet Limitations](/marketplace/limitations).
 
 ## Incorrect lease time
 
