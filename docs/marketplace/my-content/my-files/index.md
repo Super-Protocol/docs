@@ -17,7 +17,7 @@ Datasets are not yet available in the current version of the Marketplace.
 <br/>
 <br/>
 
-The **Upload File** button opens the [**Upload Content**](/marketplace/my-content/my-files/upload-content) window. Read [How to Upload Your Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload Your Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
+The **Upload File** button opens the [**Upload Content**](/marketplace/my-content/my-files/upload-content) window. Read [How to Upload a Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload a Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
 
 The table in the middle of the screen includes the following columns:
 
@@ -25,7 +25,7 @@ The table in the middle of the screen includes the following columns:
 - **Name**: the name of the content. It may differ from the original file name.
 - **Date Uploaded**: the date and time when the content was uploaded.
 - **Size**: file size of the file in gigabytes. For the exact size in bytes, check the file's [**Info**](/marketplace/my-content/my-files/info).
-- **Storage**: the storage to where you uploaded the content, either **Super Cloud** or **Storj**. Learn more about [types of storage](/marketplace/account/web3#storage).
+- **Storage**: the storage to where you uploaded the content, either **Super Cloud** or **Storj**. Read about [types of storage](/marketplace/account/web3#storage).
 - **Offer ID**: the identification number of the offer created from the uploaded file. No number means an offer has not yet been created.
 
 To add a model or dataset to an order, click the blue **[+]** button next to it.

@@ -16,11 +16,11 @@ Before your order can be processed, you must pay the initial order deposit. [**O
 The confirmation process depends on the account type:
 
 - **Web3 users** must confirm transactions in MetaMask. If the MetaMask browser extension do not open automatically, open it manually, select the transaction in the **Activity** tab, and confirm it.
-- **Demo users** do not need to confirm transactions, as they do not pay using decentralized wallets. Instead, payment relies on Super Protocol. The transactions are processed automatically.
+- **Web2 users** do not need to confirm transactions, as they do not pay using decentralized wallets. Instead, payment relies on Super Protocol. The transactions are processed automatically.
 
 Besides the account type, the confirmation process also depends on the order type:
 
-- **Deploy** orders require confirmation of two transactions—one to pay for the Deploy order and another for the Tunnels Launcher order. Tunnels Launcher creates a set of confidential tunnels necessary to access the running model from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+- **Deploy** orders require confirmation of two transactions—one to pay for the Deploy order and another for the Tunnels Launcher order. Tunnels Launcher creates a set of confidential tunnels necessary to access the running model from the internet. Read about [Tunnels](/fundamentals/tunnels).
 - **Fine-tune** orders only require confirmation of a single transaction. This type of orders is not availible yet in the current version of the Marketplace.
 
 Once the order is placed successfully, you will be redirected to its [**Order**](/marketplace/orders/order) screen.

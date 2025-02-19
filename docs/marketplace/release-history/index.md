@@ -14,6 +14,10 @@ Features coming up in the next phases:
 - More AI engines and model categories.
 - A light UI theme.
 
+_February 17, 2025:_
+
+- AI Marketplace moves from the Amoy testnet to the Polygon mainnet.
+
 _November 21, 2024:_
 
 **AI Marketplace Phase 2**

@@ -1,11 +1,11 @@
 ---
 id: "demo"
-title: "Demo User Account"
+title: "Web2 User Account"
 slug: "/account/demo"
 sidebar_position: 2
 ---
 
-This window shows the settings of your [Demo User account](/marketplace/account#demo-user-account).
+This window shows the settings of your [Web2 User account](/marketplace/account#demo-user-account).
 
 <img src={require('../images/demo-account.png').default} width="auto" height="auto" border="1"/>
 <br/>

@@ -8,7 +8,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user. Learn more about [user account types](/marketplace/account).
+This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user. Read about [user account types](/marketplace/account).
 
 :::note
 
@@ -128,7 +128,7 @@ Both types are necessary to place orders. During the testnet, you can request fr
 <br/>
 <br/>
 
-There is a limit to the daily amount of tokens you can get. Refer to the [Testnet Limitations](/marketplace/limitations).
+There is a limit to the daily amount of tokens you can get. Check the [Testnet Limitations](/marketplace/limitations).
 
 ## Contact Super Protocol
 

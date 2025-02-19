@@ -5,7 +5,7 @@ slug: "/orders/order"
 sidebar_position: 3
 ---
 
-This screen provides detailed information about an order. Learn more about [Orders](/fundamentals/orders).
+This screen provides detailed information about an order. Read about [Orders](/fundamentals/orders).
 
 <img src={require('../../images/order-full.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -38,7 +38,7 @@ Additional possible statuses:
 - **Canceled**: the order has been canceled successfully, and the remaining order deposit was transferred back to the customer's wallet.
 - **Error**: the order was not completed successfully due to an error. To check the error message, download the order result by clicking the **Get Result** button. Read about the [most common errors and how to fix them](/marketplace/guides/troubleshooting#order-status-error).
 
-Learn more about [statuses](/fundamentals/orders#order-status).
+Read about [statuses](/fundamentals/orders#order-status).
 
 **Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour. For Deploy orders with the Deployed status, it is the duration the model will remain operational.
 
@@ -52,7 +52,7 @@ The **Financials** section shows payment-related information about the order:
 
 ## Deployment
 
-The **Deployment** section informs about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+The **Deployment** section informs about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Read about [Tunnels](/fundamentals/tunnels).
 
 **Status** indicates the current state of the tunnel:
 
@@ -90,7 +90,7 @@ The **Extend Lease** button opens the **Extend Lease** window that allows you to
 <br/>
 <br/>
 
-During the testnet, the maximum running time for orders is limited due to limited computing resources. Refer to the [Testnet Limitations](/marketplace/limitations).
+During the testnet, the maximum running time for orders is limited due to limited computing resources. Check the [Testnet Limitations](/marketplace/limitations).
 
 When the order is complete, all unspent TEE tokens on the order balance automatically return to the customer's wallet.
 
@@ -124,8 +124,8 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 - **Date Created** (hidden by default): the date and time when the customer placed the order.
 - **Date Modified**: the date and time of the latest change in the order status.
 - **Order ID**: a unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
-- **Offer**: the solution used in the tunnel's order or suborder. Learn more about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
-- **Status**: current status of the order. Learn more about [statuses](/fundamentals/orders#order-status).
+- **Offer**: the solution used in the tunnel's order or suborder. Read about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
+- **Status**: current status of the order. Read about [statuses](/fundamentals/orders#order-status).
 - **Lease Remaining**: the remaining time until the order is complete and gets the Done status.
 - **Cost to Date**: the total amount of TEE tokens spent on the order so far.
 - **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.

@@ -30,7 +30,7 @@ Select a model you want to deploy. You can add either a model from the Marketpla
   </TabItem>
   <TabItem value="my-content" label="My Content">
 
-    To add your own model, you must prepare and upload it first. Read [How to Upload Your Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload Your Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
+    To add your own model, you must prepare and upload it first. Read [How to Upload a Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload a Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
 
     When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
 
@@ -45,7 +45,7 @@ Once you add a model, open the **Order Builder** by clicking **Order** in the to
 <br/>
 <br/>
 
-**Order Builder** is a tool to pick the order's components, configure them, calculate prices, and place orders. Refer to the [Order Builder](/marketplace/orders/order-builder) documentation to learn more.
+**Order Builder** is a tool to pick the order's components, configure them, calculate prices, and place orders. Read about the [Order Builder](/marketplace/orders/order-builder).
 
 ## Step 2. Add an engine
 
@@ -90,7 +90,7 @@ The panel at the bottom of the screen displays the total prices:
 - **Lease Time** is the duration for which you plan to run the order. Offers may have limits on the minimum and maximum allowed lease time.
 - **Pay now** is the initial order deposit you must pay at checkout. It is calculated using the formula: **Fixed** + (**Per Hour** * **Lease Time**).
 
-Set the desired **Lease Time**. During the testnet, it must be from two to four hours. Refer to the [Testnet Limitations](/marketplace/limitations).
+Set the desired **Lease Time**. During the testnet, it must be from two to four hours. Check the [Testnet Limitations](/marketplace/limitations).
 
 <img src={require('../images/order-builder-footer.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -102,9 +102,9 @@ Click the **Checkout** button. The system will check for [compatibility issues](
 
 This step is for Web3 users only.
 
-Demo users do not need to confirm transactions; they do not pay using decentralized wallets. Instead, their payment relies on Super Protocol. The transactions are processed automatically.
+Web2 users do not need to confirm transactions; they do not pay using decentralized wallets. Instead, their payment relies on Super Protocol. The transactions are processed automatically.
 
-Web3 users, however, must confirm two transactions in MetaMask. The first transaction is for the main model's order; the second one is placed automatically to deploy a set of confidential tunnels to make the running model available from the internet. Learn more about [Tunnels](/fundamentals/tunnels).
+Web3 users, however, must confirm two transactions in MetaMask. The first transaction is for the main model's order; the second one is placed automatically to deploy a set of confidential tunnels to make the running model available from the internet. Read about [Tunnels](/fundamentals/tunnels).
 
 If you create an order for the first time, you need to confirm the spending cap. Click **Next** and then **Approve**.
 
