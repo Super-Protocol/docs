@@ -21,19 +21,20 @@ Super Protocol constantly adds more TDX+H100 machines and will soon begin onboar
 Pricing and restrictions:
 
 - Order lease time: minimum 2 hours.
-- Compute costs 2.126 TEE tokens in most cases.
-- Models from the Marketplace cost 1 TEE per order.
-- Engines cost 0.5 TEE per order.
-- Tunnels Launcher fee for setting up a confidential tunnel is approximately 2 TEE per order.
+- Compute costs 0.326 TEE tokens per hour in most cases.
+- Models from the Marketplace cost 0 TEE per order.
+- Engines cost 0 TEE per order.
+- Setting up a confidential tunnel costs approximately 0.5 TEE per order.
 
-For example, a two-hour GPU order will cost approximately:
+For example, a two-hour GPU-order would cost:
 
-2.126 * 2 + 1 + 0.5 + 2 = **~8** TEE tokens.
+0.326 x 2 + ~0.5 = **1.1-1.2 TEE** tokens.
+
+The total gas fee varies, but it is approximately **0.25-0.6 POL** per order.
 
 ## Token limits
 
-- **Demo users** receive a one-time advance of 50 TEE tokens with no replenishment possibility. To continue testing, users must [log in with a Web3 account](/marketplace/guides/log-in).
-- **Web3 users** can receive up to 35 TEE tokens tokens daily. At any given time, Web3 users can hold a maximum of 35 TEE tokens in their wallets.
+All users can receive up to **5 TEE** tokens daily. Web3 users can also get up to **2 POL** tokens daily.
 
 ## Model limits
 

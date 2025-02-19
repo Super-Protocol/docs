@@ -44,7 +44,7 @@ If you add your uploaded model, its requirements are not specified. The system d
 
 :::warning
 
-Ensure your uploaded model fits into the total maximum compute configuration allowed for the testnet. Refer to the [Testnet Limitations](/marketplace/limitations).
+Ensure your uploaded model fits into the total maximum compute configuration allowed for the testnet. Check the [Testnet Limitations](/marketplace/limitations).
 
 :::
 
@@ -99,7 +99,7 @@ Clicking the machine's name opens its [**Offer**](/marketplace/marketplace/offer
 <img src={require('../../images/order-builder-queue.png').default} width="auto" height="auto" border="1" alt="Screenshot showing the queue status indicator for compute offers"/>
 <br/>
 
-Learn more about [requirements and configurations](/fundamentals/slots).
+Read about [requirements and configurations](/fundamentals/slots).
 
 ## Checkout
 
