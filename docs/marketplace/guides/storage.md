@@ -48,10 +48,10 @@ Select the **Your Storj account** radio button, fill in the fields, and click **
 | :- | :- |
 | Bucket | Name of the Storj bucket |
 | Path | Path to a directory inside the bucket; it can be empty |
-| WriteAccessKeyId | Access Key with **Full** permission |
-| WriteSecretAccessKey | Secret Key with **Full** permission |
-| ReadAccessKeyId | Access Key with **Read** permission |
-| ReadSecretAccessKey | Secret Key with **Read** permissions |
+| S3 Access Key (Full) | Access Key with **Full** permission |
+| S3 Secret Key (Full) | Secret Key with **Full** permission |
+| S3 Access Key (Read) | Access Key with **Read** permission |
+| S3 Secret Key (Read) | Secret Key with **Read** permissions |
 
 <img src={require('../images/web3acc-storj.png').default} width="auto" height="auto" border="1"/>
 <br/>
