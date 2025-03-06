@@ -14,8 +14,6 @@ sidebar_position: 1
 |[Target Audience](/whitepaper/target-audience)|Published|
 |[High-Level Description of the Protocol](/whitepaper/high-level-description)|Published|
 |[Protocol Use Cases](/whitepaper/use-cases)|Published|
-|[Tokenomics (Part 1)](/whitepaper/tokenomics)|Published|
-|Tokenomics (Part 2)|*Coming soon*|
 |[Architecture](/whitepaper/architecture)|Published|
 |[TEE Provider](/whitepaper/tee-provider)|Published|
 |[TEE Confirmation Protocol (Part 1)](/whitepaper/tee-confirmation-protocol)|Published|
