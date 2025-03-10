@@ -17,7 +17,7 @@ The table in the center of the screen provides essential information about your 
 - **Modified Date**: the date and time of the latest change in the order status.
 - **Order ID**: a unique order identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
 - **Status**: current status of the order. Read about [statuses](/fundamentals/orders#order-status).
-- **Cost to Date**: the total amount of TEE tokens spent on the order so far.
+- **Cost to Date**: the total amount of SPPI tokens spent on the order so far.
 - **Balance**: the remaining order balance. When it reaches zero, the order processing stops. To replenish the balance, open the **Order** screen and click the **Extend Lease** button.
 - **Engine**: the AI engine that launches the model in the order.
 - **Model**: the main model used in the order.

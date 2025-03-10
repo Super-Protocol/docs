@@ -12,7 +12,7 @@ This guide explains how to register a _provider_ on Super Protocol and create _s
 
 :::info Testnet limitations
 
-As of Testnet 5, you can only create solution and data offers. The ability to create _storage_ and _compute offers_ will be available in future releases. Monetization is only possible with test TEE tokens until the project goes to Mainnet.
+As of Testnet 5, you can only create solution and data offers. The ability to create _storage_ and _compute offers_ will be available in future releases. Monetization is only possible with SPPI tokens until the project goes to Mainnet.
 
 :::
 
@@ -169,7 +169,7 @@ Offer providers need the following Super Protocol accounts:
 - Three _provider accounts_:
   + _Authority account_: can change provider's records; the main provider account
   + _Action account_: executes actions on behalf of the authority account
-  + _Token receiver account_: receives rewards in TEE tokens for providing offers on Super Protocol.
+  + _Token receiver account_: receives rewards in SPPI tokens for providing offers on Super Protocol.
 
 ### Create accounts
 

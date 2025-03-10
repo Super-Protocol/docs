@@ -33,7 +33,7 @@ The **Pricing** tab contains the offer requirements, detailing how many confiden
 <br/>
 <br/>
 
-- Pricing type and cost in TEE tokens:
+- Pricing type and cost in SPPI tokens:
     + **Fixed** indicates you must pay only once to lease the offer, regardless of the lease duration.
     + **Per Hour** indicates you must pay for each hour of leasing the offer.
 - **CPU vCores**: number of CPU cores, can be fractional.

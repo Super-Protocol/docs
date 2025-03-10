@@ -24,7 +24,7 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | **Name** | **Description** |
 | :- | :- |
 | `<orderId>` | ID of the order. |
-| `<tokenAmount>` | Amount of TEE tokens to deposit. |
+| `<tokenAmount>` | Amount of SPPI tokens to deposit. |
 
 ## Option
 
@@ -35,7 +35,7 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command adds 3 TEE tokens to the deposit of the order with ID 1312:
+The following command adds 3 SPPI tokens to the deposit of the order with ID 1312:
 
 ```
 ./spctl orders replenish-deposit 1312 3

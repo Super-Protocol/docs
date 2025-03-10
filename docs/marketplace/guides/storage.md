@@ -9,7 +9,7 @@ This guide provides step-by-step instructions on how to set up your personal Sto
 
 The guide is intended for advanced Web3 users; feel free to skip it and continue using the default recommended option—**Super Protocol cloud**. Read about [types of storage](/marketplace/account/web3#storage).
 
-<img src={require('../images/web3acc-storage.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/web3-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

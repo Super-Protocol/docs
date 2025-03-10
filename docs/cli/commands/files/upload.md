@@ -14,8 +14,8 @@ The primary purpose of this command is to make the uploading files available for
 
 Depending on the options, the command provides two ways to upload and store the files. Choose one that suits you better:
 
-- **Uploads to storage directly.** This requires a Storj account and SPCTL [configured](/cli#set-up-storj) to use it. The command will upload the file to the root directory of the bucket specified in the SPCTL configuration file.
-- **Creates a storage order using a Marketplace storage offer.** This does not require a Storj account but requires paying TEE tokens for the order according to the offer pricing and selected lease duration.
+- **Uploads to storage directly.** This requires a Storj account and SPCTL [configured](/cli#set-up-storj-access) to use it. The command will upload the file to the root directory of the bucket specified in the SPCTL configuration file.
+- **Creates a storage order using a Marketplace storage offer.** This does not require a Storj account but requires paying SPPI tokens for the order according to the offer pricing and selected lease duration.
 
 The input of the command is a TAR.GZ archive file. For solutions, this file is created by the [`solutions prepare`](/cli/commands/solutions/prepare) command. For data, it is an archive containing the dataset files.
 
@@ -74,7 +74,7 @@ The following command uploads the `content.tar.gz` file located in the SPCTL roo
 ./spctl files upload content.tar.gz
 ```
 
-To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/cli#set-up-storj) section to create a bucket and access grants and set up SPCTL.
+To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/cli#set-up-storj-access) section to create a bucket and access grants and set up SPCTL.
 
 ### Example 2. Upload by creating a storage order
 

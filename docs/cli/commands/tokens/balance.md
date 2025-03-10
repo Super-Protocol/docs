@@ -5,7 +5,7 @@ slug: "/commands/tokens/balance"
 sidebar_label: "balance"
 ---
 
-Displays the balance of TEE and POL tokens in your wallet.
+Displays the balance of SPPI and BNB tokens in your wallet.
 
 ## Syntax
 

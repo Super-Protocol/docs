@@ -23,7 +23,6 @@ You have two options of decentralized storage to upload files:
     + Recommended for most users.
     + Does not require additional setup.
     + Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
-    + Costs TEE tokens for additional storage beyond the basic free package.
 - **Your Storj account**:
     + Intended for advanced users.
     + Requires creating and setting up a Storj account.

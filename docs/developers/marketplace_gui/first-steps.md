@@ -163,8 +163,8 @@ If everything is done correctly, you will see your account address and token bal
 
 Super Protocol uses two types of tokens, and you will need both of them:
 
-- POL tokens, to pay for Polygon blockchain transactions
-- TEE tokens, to pay for offers and receive payments in Super Protocol.
+- BNB tokens, to pay for opBNB blockchain transactions.
+- SPPI tokens, to pay for offers and receive payments in Super Protocol.
 
 To get tokens, use the buttons at the top of the page.
 
