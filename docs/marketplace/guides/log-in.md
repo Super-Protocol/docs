@@ -107,7 +107,7 @@ To log in as a Web3 user, you need the MetaMask browser extension. MetaMask is o
 Super Protocol users need two types of tokens:
 
 - SPPI tokens to pay and receive payments in Super Protocol.
-- BNB tokens to pay for PopBNB blockchain transactions.
+- BNB tokens to pay for opBNB blockchain transactions.
 
 Both types are necessary to place orders. During the testnet, you can request free tokens in the **Account** setting.
 
