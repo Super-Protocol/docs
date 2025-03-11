@@ -44,7 +44,7 @@ You will need:
 - Polygon Testnet Wallet #1 - for deploying "x509 verifier" smart contract. Wallet needs to contain test POL tokens.
 - Polygon Testnet Wallet #2 - for deploying Oracle smart contract. Wallet needs to contain test POL tokens.
 
-You can create the wallets using MetaMask and follow [this guide](https://support.polygon.technology/support/solutions/articles/82000907114-how-to-add-amoy-network-in-your-wallet-) to add the Polygon Amoy Testnet network. Save their addresses and private keys, you will need them later in the guide. You can receive free test POL tokens [here](https://faucet.polygon.technology/).
+You can create the wallets using MetaMask and follow [this guide](https://support.polygon.technology/support/solutions/articles/82000907114-how-to-add-amoy-network-in-your-wallet-) to add the Polygon Amoy Testnet network. Save their addresses and private keys, you will need them later in the guide.
 
 We highly recommend that you create two different wallets on Polygon Testnet specifically for this guide. But if you are going to use a single wallet, please make sure that you do not use it for any other operations, as they might disrupt the Oracle.
 

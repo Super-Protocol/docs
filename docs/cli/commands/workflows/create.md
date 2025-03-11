@@ -41,7 +41,7 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--tee-slot-count <inc>` | Configuration slot increments—how many times the selected slot is applied. Use this option together with `--tee`. <br/><br/>If you do not use this option, the increments will be calculated automatically. |
 | `--tee-options <optionId> [<optionId> ...]` | IDs of [configuration options](/fundamentals/slots#configuration) separated by spaces. Use `--tee-options` together with `--tee`. <br/><br/>If you do not use `--tee-options`, configuration options will be selected automatically. |
 | `--tee-options-count <inc> [<inc> ...]` | Increments for each configuration option separated by spaces. Use `--tee-options-count` together with `--tee` and `--tee-options`. <br/><br/>If you do not use `--tee-options-count`, increments will be calculated automatically. |
-| `--deposit <teeTokens>` | [Deposit](/fundamentals/orders#lease-deposit-and-balance) in TEE tokens. The default is the minimum required deposit. |
+| `--deposit <teeTokens>` | [Deposit](/fundamentals/orders#lease-deposit-and-balance) in SPPI tokens. The default is the minimum required deposit. |
 | `--min-rent-minutes <minutes>` | Compute [lease time](/fundamentals/orders#lease-deposit-and-balance) in minutes. Using this option will increase the required deposit. The default is the minimum required time. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |

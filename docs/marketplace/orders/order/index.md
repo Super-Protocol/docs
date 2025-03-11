@@ -7,7 +7,7 @@ sidebar_position: 3
 
 This screen provides detailed information about an order. Read about [Orders](/fundamentals/orders).
 
-<img src={require('../../images/order-full.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../../images/order.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -46,7 +46,7 @@ Read about [statuses](/fundamentals/orders#order-status).
 
 The **Financials** section shows payment-related information about the order:
 
-- **Cost To Date** is the total amount of TEE tokens spent on the order so far.
+- **Cost To Date** is the total amount of SPPI tokens spent on the order so far.
 - **Cost Per Hour** is the total cost of all the offers priced per hour. The order balance decreases by this amount every hour.
 - **Balance** is the remaining order balance. You can replenish the balance using the **Extend Lease** button.
 
@@ -81,7 +81,7 @@ The **Cancel Order** button lets you cancel the order and transfer the remaining
 
 ### Extend Lease
 
-The **Extend Lease** button opens the **Extend Lease** window that allows you to add TEE tokens to the order balance:
+The **Extend Lease** button opens the **Extend Lease** window that allows you to add SPPI tokens to the order balance:
 
 - For Fine-tune orders, it may be necessary to finish the computation.
 - For Deploy orders, it increases the time the model will be running.
@@ -92,7 +92,7 @@ The **Extend Lease** button opens the **Extend Lease** window that allows you to
 
 During the testnet, the maximum running time for orders is limited due to limited computing resources. Check the [Testnet Limitations](/marketplace/limitations).
 
-When the order is complete, all unspent TEE tokens on the order balance automatically return to the customer's wallet.
+When the order is complete, all unspent SPPI tokens on the order balance automatically return to the customer's wallet.
 
 ### Get Result
 
@@ -127,7 +127,7 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 - **Offer**: the solution used in the tunnel's order or suborder. Read about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
 - **Status**: current status of the order. Read about [statuses](/fundamentals/orders#order-status).
 - **Lease Remaining**: the remaining time until the order is complete and gets the Done status.
-- **Cost to Date**: the total amount of TEE tokens spent on the order so far.
+- **Cost to Date**: the total amount of SPPI tokens spent on the order so far.
 - **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
 - **Balance**: the remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
 
@@ -153,5 +153,5 @@ The **Events** tab contains information on what is happening with the order.
     + **OrderEncryptedResultUpdated**: the resource path to the order result was written to the blockchain.
     + **OrderChangeWithdrawn**: the remaining token balance was returned to the customer.
     + **OrderProfitWithdrawn**: the provider withdrew the offer payment from the order balance.
-- **Value**: transaction value in TEE tokens, if applicable.
+- **Value**: transaction value in SPPI tokens, if applicable.
 - **Txn Hash**: transaction hash. Clicking it opens the transaction in the [OKLink block explorer](https://www.oklink.com/).

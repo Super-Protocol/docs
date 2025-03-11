@@ -40,7 +40,7 @@ Create an order for Tunnel Server using the `tunnel-server-data.json` file conta
 ./spctl workflows create --tee 1 --solution 6,2 --solution 11,10 --data tunnel-server-data.json --storage 25,30 --orders-limit 10 --min-rent-minutes 60
 ```
 
-**Tip:** to create order make sure that you have sufficient amount of TEE and POL tokens in your testnet wallet. You can get more tokens using the [tokens request](/cli/commands/tokens/request) command. Be mindful of testnet [limitations](/marketplace/limitations).
+**Tip:** to create order make sure that you have sufficient amount of SPPI and BNB tokens in your testnet wallet. You can get more tokens using the [tokens request](/cli/commands/tokens/request) command. Be mindful of testnet [limitations](/marketplace/limitations).
 
 The last line of the output will look like this:
 
@@ -160,7 +160,7 @@ Record changes might take some time. Please contact your domain registrar for mo
 
 After a few minutes, open your browser and go to your domain!
 
-Don't forget to replenish the tunnel orders with TEE tokens if you want your site to stay up.
+Don't forget to replenish the tunnel orders with SPPI tokens if you want your site to stay up.
 
 ## Create more tunnels
 
@@ -188,7 +188,7 @@ For example, repeat some of the previous steps to deploy another couple of tunne
 
 ### Limits
 
-When creating an order in the example, the parameter `--min-rent-minutes` is set to 60. This means that the tunnel server and tunnel client will operate for 60 minutes. If needed, replace the minute value with the desired duration, but keep in mind that you may need more TEE tokens. Please refer to the testnet [limitations](/marketplace/limitations).
+When creating an order in the example, the parameter `--min-rent-minutes` is set to 60. This means that the tunnel server and tunnel client will operate for 60 minutes. If needed, replace the minute value with the desired duration, but keep in mind that you may need more SPPI tokens. Please refer to the testnet [limitations](/marketplace/limitations).
 
 ### Deploying your own solutions
 

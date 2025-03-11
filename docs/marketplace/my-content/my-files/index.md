@@ -13,7 +13,7 @@ Datasets are not yet available in the current version of the Marketplace.
 
 :::
 
-<img src={require('../../images/myfiles.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../../images/my-files.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

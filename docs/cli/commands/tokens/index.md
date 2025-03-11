@@ -6,13 +6,13 @@ sidebar_position: 1
 
 ---
 
-This command group contains commands to manage test TEE and POL tokens.
+This command group contains commands to manage SPPI and BNB tokens.
 
-TEE tokens are necessary to pay for orders in Super Protocol. POL tokens are for processing transactions on Polygon blockchains.
+SPPI tokens are necessary to pay for orders in Super Protocol. BNB tokens are necessary for processing transactions on the opBNB blockchain.
 
 ## Commands
 
 | **Command** | **Description** |
 | :- | :- |
 | [tokens balance](/cli/commands/tokens/balance) | Gets the wallet balance. |
-| [tokens request](/cli/commands/tokens/request) | Requests test tokens; **testnet only**. |
+| [tokens request](/cli/commands/tokens/request) | Requests test tokens. |
