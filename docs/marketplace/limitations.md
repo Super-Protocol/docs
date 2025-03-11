@@ -21,20 +21,20 @@ Super Protocol constantly adds more TDX+H100 machines and will soon begin onboar
 Pricing and restrictions:
 
 - Order lease time: minimum 2 hours.
-- Compute costs 0.326 TEE tokens per hour in most cases.
-- Models from the Marketplace cost 0 TEE per order.
-- Engines cost 0 TEE per order.
-- Setting up a confidential tunnel costs approximately 0.5 TEE per order.
+- Compute costs 0.326 SPPI tokens per hour in most cases.
+- Models from the Marketplace cost 0 SPPI per order.
+- Engines cost 0 SPPI per order.
+- Setting up a confidential tunnel costs 0.1 SPPI per order or less.
 
 For example, a two-hour GPU-order would cost:
 
-0.326 x 2 + ~0.5 = **1.1-1.2 TEE** tokens.
+0.326 x 2 + ~0.1 = **0.752 SPPI** tokens.
 
-The total gas fee varies, but it is approximately **0.25-0.6 POL** per order.
+The total gas fee varies, but it is approximately **0.00001 BNB** per order.
 
 ## Token limits
 
-All users can receive up to **5 TEE** tokens daily. Web3 users can also get up to **2 POL** tokens daily.
+All users can receive up to **5 SPPI** tokens daily. Web3 users can also get up to **0.0001 BNB** tokens daily.
 
 ## Model limits
 

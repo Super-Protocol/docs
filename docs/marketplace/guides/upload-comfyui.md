@@ -72,7 +72,7 @@ You can prepare your model manually or using Docker and a script provided by Sup
 
     If everything is fine, you will see the message `ComfyUI is running!` in the output.
 
-    If you receive the error `bind source path does not exist`, add the directory with the repository to **File sharing** in the Docker's settings to make it available to the container.
+    If you receive the error `bind source path does not exist`, add the repository directory to **File sharing** in the Docker's settings to make it available to the container.
 
     4. Open http://localhost:8188/ in your browser to access the running ComfyUI if it has not opened automatically.
 
@@ -170,11 +170,11 @@ You can prepare your model manually or using Docker and a script provided by Sup
     │    └── checkpoints
     │          └── mdjrny-v4.safetensors
     └── user
-          └── default
-                ├── ComfyUI-Manager
-                │    └── snapshots
-                └── workflows
-                      └── my-openjourney-workflow.json
+         └── default
+               ├── ComfyUI-Manager
+               │    └── snapshots
+               └── workflows
+                    └── my-openjourney-workflow.json
     ```
     
     6. Run the following command to create a TAR.GZ archive:
@@ -200,7 +200,7 @@ You can prepare your model manually or using Docker and a script provided by Sup
 
 In the [Marketplace web app](https://marketplace.superprotocol.com/), go to the **My Files** screen and press the **Upload File** button. 
 
-<img src={require('../images/myfiles-upload.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-files-upload.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

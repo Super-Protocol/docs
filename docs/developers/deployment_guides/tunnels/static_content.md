@@ -34,7 +34,7 @@ This will result in `tunnel-server-data.tar.gz`.
 
 ### Upload archive
 
-Solution needs to be encrypted and uploaded to decentralized storage before it may be executed in Super Protocol. The storage credentials will need to have been configured during the [SPCTL setup](/cli#set-up-storj):
+Solution needs to be encrypted and uploaded to decentralized storage before it may be executed in Super Protocol. The storage credentials will need to have been configured during the [SPCTL setup](/cli#set-up-storj-access):
 
 ```
 ./spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz
@@ -44,7 +44,7 @@ This command will produce `tunnel-server-data.json`.
 
 ### Create a tunnel server order
 
-You are now ready to start the Tunnel Server order. Note the parameter `--min-rent-minutes` which will deposit enough TEE tokens to ensure the tunnel is running for at least the specified period of time (in minutes). For this example we've set it to 60 minutes.
+You are now ready to start the Tunnel Server order. Note the parameter `--min-rent-minutes` which will deposit enough SPPI tokens to ensure the tunnel is running for at least the specified period of time (in minutes). For this example we've set it to 60 minutes.
 
 ```
 ./spctl workflows create --tee 1 --solution 6,2 --solution 11,10 --data tunnel-server-data.json --storage 25,30 --min-rent-minutes 60

@@ -51,7 +51,7 @@ The offer slot JSON file must contain the following objects and strings:
 - `usage`: object with terms and conditions of usage
   + `maxTimeMinutes`: minutes; `0` for no limit
   + `minTimeMinutes`: minutes; `0` for no limit
-  + `price`: denominations of TEE token
+  + `price`: denominations of SPPI token
   + `priceType`: `1` for fixed price, `0` for price per hour; learn more about [price types](/fundamentals/orders#cost-and-pricing)
 - `option`: object with internet access configuration (only for value offers)
   + `bandwidth`: bits per second
@@ -84,7 +84,7 @@ Offer slot JSON file template with example values:
 
 Note that some of the data is represented differently in the Marketplace GUI:
 - `diskUsage` and `ram` values are converted to gibibytes (GiB) by the formula `initialValue / (1024 ^ 3)`
-- `price` value is converted to TEE tokens by the formula `initialValue / (10 ^ 18)`
+- `price` value is converted to SPPI tokens by the formula `initialValue / (10 ^ 18)`
 - `bandwidth` value is converted to megabits per second (Mbps) by the formula `initialValue / (10 ^ 6)`
 - `traffic` value is converted to gigabytes (GB) by the formula `initialValue / (10 ^ 9)`
 

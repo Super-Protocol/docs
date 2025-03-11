@@ -39,10 +39,6 @@ sidebar_position: 8
 
       The Execution Controller receives the request for a solution and returns the URL of the encrypted solution along with the key to then decrypt it into the blockchain. The key is encrypted with the trusted loader key.
 
-## Protocol Speed
-
-Polygon has been chosen as the main network. Polygon supports the execution of up to [7,200 transactions per second](https://twitter.com/0xpolygon/status/1283467641076584448?lang=en). A minimum of 4 transactions is required to process one request. Thus, Super Protocol allows you to process up to 1,800 orders per second. There are no limitations on the data volume provided as the protocol allows the use of any file storage.
-
 ## Security
 
 Since confidentiality is the core feature of Super Protocol, data is secured at all stages of processing.

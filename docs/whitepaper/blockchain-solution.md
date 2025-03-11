@@ -618,8 +618,6 @@ The user can work with either network through the same smart contract interface.
 
 If Sidechain solutions are used, the entire logic is represented as an overlay on top of the blockchains. In order to pay for services in the Super Protocol system, the consumer uses tokens on the root network and wrapped tokens provided by Sidechain gateways on the child network.
 
-In the case of Ethereum and Polygon networks, the [State Transfer](https://docs.polygon.technology/docs/develop/l1-l2-communication/state-transfer) mechanism is used for RPC.
-
 #### Parachain
 
 ![](images%2Fblockchain-solution-21.png)
