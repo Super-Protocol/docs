@@ -248,7 +248,7 @@ Ensure the model directory contains no hidden files and directories. Archive the
 
 In the [Marketplace web app](https://marketplace.superprotocol.com/), go to the **My Files** screen and press the **Upload File** button. 
 
-<img src={require('../images/myfiles-upload.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-files-upload.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

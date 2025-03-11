@@ -42,7 +42,7 @@ You can also download and install SPCTL manually from the Super Protocol [GitHub
 
 Execute the `./spctl setup` command to initiate the setup dialog. First, provide your Testnet Access Token and then your Testnet Private Key. You can find them in your Testnet invitation email.
 
-Further, SPCTL asks if you have a Storj bucket with configured access grants. This step is optional. Select `No` if you do not have them yet. You can configure Storj and provide this information [later in this guide](/cli#set-up-storj) or skip this step entirely.
+Further, SPCTL asks if you have a Storj bucket with configured access grants. This step is optional. Select `No` if you do not have them yet. You can configure Storj and provide this information [later in this guide](/cli#set-up-storj-access) or skip this step entirely.
 
 After that, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in any text editor.
 

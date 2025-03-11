@@ -5,7 +5,7 @@ slug: "/offers"
 sidebar_position: 2
 ---
 
-_Offer_ is an open listing for a resource available on the Marketplace. To add an offer to an [order](/fundamentals/orders), users must pay the price in TEE tokens set by the offer provider.
+_Offer_ is an open listing for a resource available on the Marketplace. To add an offer to an [order](/fundamentals/orders), users must pay the price in SPPI tokens set by the offer provider.
 
 _Offer providers_ share and monetize their applications and datasets by creating and maintaining _community offers_ on the Super Protocol Marketplace. 
 
@@ -21,7 +21,7 @@ Offers are the basic building blocks of the Marketplace. Four types of offers ex
 _Value offer_ is a collective term for solution, data, and storage offers.
 
 <img src={require('./images/fundamentals_offers_1.png').default} width="auto" height="auto"/>
-
+<br/>
 <br/>
 
 Usually, placing an order involves adding all four types of offers. However, customers can also upload their solutions and data instead of using an existing offer.
@@ -69,7 +69,7 @@ Besides the user Testnet account, providers also have three _provider accounts_:
 
 - _Authority account_ can change provider's records. It is the main provider account.
 - _Action account_ executes actions on behalf of the authority account.
-- _Token receiver account_ receives rewards in TEE tokens for providing offers on Super Protocol.
+- _Token receiver account_ receives rewards in SPPI tokens for providing offers on Super Protocol.
 
 Because Super Protocol is still in the testnet stage, monetization is only possible with test tokens as a demonstration. Moreover, providers can create only solution and data offers.
 

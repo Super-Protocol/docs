@@ -13,7 +13,7 @@ This section contains the list of commands for the Super Protocol CLI tool SPCTL
 
 | **Group** | **Description** |
 | :- | :- |
-| [tokens](/cli/commands/tokens) | Receive test TEE and POL test tokens; **testnet only**. |
+| [tokens](/cli/commands/tokens) | Receive SPPI and BNB test tokens; **testnet only**. |
 | [solutions](/cli/commands/solutions) | Prepare a solution for deployment. |
 | [files](/cli/commands/files) | Manage files in decentralized storage. |
 | [workflows](/cli/commands/workflows) | Create a new order. |

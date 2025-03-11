@@ -181,7 +181,7 @@ The code at the TEE level executes almost [as fast as normal code](https://mediu
 
 The entire Super Protocol stack is built on the use of distributed systems. At the heart of such systems is the blockchain, with which the value customer and the value provider interact. For the results of completed orders, the blockchain also provides references to the distributed storage.
 
-The main Super Protocol blockchain is Polygon. The Polygon blockchain network uses the so-called **Proof of Stake (PoS)** consensus system, which is backed by **Tower Consensus** to ensure fault tolerance. It is a variation of the system known as Practical Byzantine Fault Tolerance (PBFT). It allows distributed networks to achieve consensus despite attacks from malicious nodes.
+The blockchain network selected for Super Protocol uses the so-called **Proof of Stake (PoS)** consensus system, which is backed by **Tower Consensus** to ensure fault tolerance. It is a variation of the system known as Practical Byzantine Fault Tolerance (PBFT). It allows distributed networks to achieve consensus despite attacks from malicious nodes.
 
 As a distributed storage, it is proposed to use systems based on the same principle as PBFT. An example of such a system could be Filecoin. Also, in order to add extra fault tolerance for important data, backup mechanisms can be applied.
 

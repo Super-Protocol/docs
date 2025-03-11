@@ -25,7 +25,7 @@ Select a model you want to deploy. You can add either a model from the Marketpla
 
     To lease a model listed on the Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model you want to add to the order.
 
-    <img src={require('../images/models-open.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('../images/marketplace-models-menu.png').default} width="auto" height="auto" border="1"/>
 
   </TabItem>
   <TabItem value="my-content" label="My Content">
@@ -34,14 +34,14 @@ Select a model you want to deploy. You can add either a model from the Marketpla
 
     When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
 
-    <img src={require('../images/myfiles-open.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('../images/my-files-menu.png').default} width="auto" height="auto" border="1"/>
 
   </TabItem>
 </Tabs>
 
 Once you add a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
 
-<img src={require('../images/order-builder-open.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/marketplace-order-builder.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

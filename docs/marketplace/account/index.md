@@ -22,7 +22,7 @@ _Web3 User account_ is the recommended account type in Super Protocol. It provid
 - Placement of orders with Marketplace offers or the user's own uploaded content.
 - Registration of individual providers and full control of earned funds and rewards.
 - Creation and monetization of model and dataset offers on the Marketplace.
-- Ability to request additional test TEE tokens.
+- Ability to request additional SPPI tokens.
 
 Read [How to Log In as a Web3 User](/marketplace/guides/log-in) for step-by-step instructions.
 

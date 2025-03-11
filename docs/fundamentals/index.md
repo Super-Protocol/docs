@@ -63,7 +63,7 @@ Learn more about [slots](/fundamentals/slots).
 
 ## Orders
 
-An _order_ involves paying the providers in TEE tokens for their products and services. The order manages the operational and financial settlements between the participants. Because Super Protocol is decentralized, the order system is P2P with no central authority. The centerpiece of an order is a confidential compute offer where solutions and data are executed in the TEE.
+An _order_ involves paying the providers in SPPI tokens for their products and services. The order manages the operational and financial settlements between the participants. Because Super Protocol is decentralized, the order system is P2P with no central authority. The centerpiece of an order is a confidential compute offer where solutions and data are executed inside a TEE.
 
 Learn more about [Orders](/fundamentals/orders).
 
