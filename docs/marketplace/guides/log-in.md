@@ -91,7 +91,7 @@ To log in as a Web3 user, you need the MetaMask browser extension. MetaMask is o
 <br/>
 <br/>
 
-3. In the MetaMask window that appears, **Approve** adding a new network (opBNB) and then **Confirm** the signature request.
+3. In the MetaMask window that appears, press **Connect**, then **Approve** adding a new network (opBNB Mainnet), and finally, **Confirm** the signature request.
 
 <img src={require('../images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
 <br/>
