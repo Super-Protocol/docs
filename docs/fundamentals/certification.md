@@ -11,30 +11,41 @@ All the system components are open-source, ensuring transparency and verifiabili
 
 ## Architecture
 
-The backbone of the system is a hierarchical structure of Certification Authorities. Each Certification Authority operates inside a Trusted Execution Environment (TEE)—Intel SGX enclave.
+The backbone of the system is a hierarchical structure of Certification Authorities operating inside Trusted Execution Environments (TEE)—Intel SGX enclaves.
 
 <img src={require('./images/certification-system-architecture.png').default} width="auto" height="auto"/>
 <br/>
 <br/>
 
-The Root Certification Authority (*Root CA*) is located at the highest hierarchical level. At the start, Root CA generates a self-signed certificate, embedding an SGX attestation quote.
+The Root Certification Authority (*Root CA*) is located at the highest hierarchical level. At the start, Root CA generates a self-signed certificate, embedding the SGX attestation quote.
 
-Distributed SubRoot Certification Authorities (*SubRoot CAs*) are located at the next hierarchical level. They provide their quotes and public keys to the Root CA and request certificates.
+SubRoot Certification Authorities (*SubRoot CAs*) are located at the next hierarchical level. These submit their quotes and public keys to the Root CA and request certificates. The Root CA verifies these incoming requests and then issues and signs certificates for the SubRoot CAs.
 
-Root CA verifies the incoming requests and then issues and signs certificates for SubRoot CAs. The SubRoot CAs, in turn, issue and sign certificates for [orders](/fundamentals/orders).
+The SubRoot CAs, in turn, issue and sign certificates for [orders](/fundamentals/orders) by request.
 
 ## Order certificates
 
-The issuing of order certificates involves [Trusted Loader](/whitepaper/tee-provider/#trusted-loader-mechanism)—a mechanism developed to load and run applications within a TEE. Trusted Loader operates inside a Confidential VM that executes the order. This VM is deployed within Intel TDX, AMD SEV-SNP, NVIDIA GPU TEE, or other TEEs.
+The issuing of order certificates involves [Trusted Loader](/whitepaper/tee-provider/#trusted-loader-mechanism)—a mechanism developed to load and run applications within a TEE. Trusted Loader operates inside the Confidential VM that executes the order. This Confidential VM may be deployed within a CPU- or CPU/GPU-based TEE, such as Intel TDX, AMD SEV-SNP, NVIDIA GPU TEE, or other, making the whole system TEE-agnostic.
 
-To receive an order certificate, the Trusted Loader sends a request to a SubRoot CA providing the quote and a public key. The SubRoot CA verifies the quote and issues the order certificate using the provided public key.
+To receive an order certificate, the Trusted Loader sends a request to a SubRoot CA providing the quote and a public key. The SubRoot CA verifies the quote, issues the order certificate, and signs it with the provided public key.
 
-### Workload Info
+### Order validation
 
-All orders in Super Protocol contain necessary input data, including the hash of the executed application—the *solution hash*. This execution environment is referred to as *Workload Info*.
+Orders in Super Protocol are created with necessary input data. This execution environment is referred to as *Workload Info*.
 
-The Workload Info includes an array called `runtimeInfo[]`, which contains each order component’s `Type`, `Hash`, and `Size`. It may also contain a signature key (`SignatureKey`), stored as a hash, and hashes of input arguments (`Args`). Each application, dataset, or other order component has a corresponding entry in this array.
+The Workload Info includes an array called `runtimeInfo[]` with metadata about solutions and datasets used in the order. Each such order component has an entry in this array, which includes:
 
-The hash of the Workload Info is stored in the certificate generated for each order. The certificate’s public component, private key, Workload Info, and complete certificate chain are stored in the `sp/certs` directory, available to the order during execution.
+- Type
+- Hash
+- Size
+- Signature key hash (optional)
+- Hash of the input arguments (optional)
 
-Additionally, the public component of the certificate and the `runtimeInfo[]` array are recorded on the blockchain, allowing anyone to validate the order and verify the certificate chain.
+The hash of the Workload Info is included in the order certificate.
+
+The system generates and publishes a report in the blockchain, allowing anyone to validate the order. The order report includes:
+
+- The public components of all the certificates in the chain
+- Workload Info:
+    + Order creation date
+    + `runtimeInfo[]`
