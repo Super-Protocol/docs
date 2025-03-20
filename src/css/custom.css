@@ -39,6 +39,11 @@ ol > li::marker {
     height: 1.12em;
 }
 
+.navbar__logo img {
+    height: 110%;
+    margin-top: -10px;
+}
+
 .navbar__link {
     font-weight: 300;
 }
