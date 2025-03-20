@@ -105,6 +105,7 @@ const config = {
         logo: {
           alt: "Super Protocol Logo",
           src: "navbar/images/logo.svg",
+          srcDark: "navbar/images/logo-gray.svg",
           href: 'https://superprotocol.com/'
         },
         items: [
