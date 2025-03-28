@@ -1,7 +1,7 @@
 ---
 id: "upload-content"
 title: "Upload Content"
-slug: "/my-content/my-files/upload-content"
+slug: "/my-content/upload-content"
 sidebar_position: 1
 ---
 
@@ -10,7 +10,7 @@ Use this window to upload models. Uploading models is necessary to deploy and ru
 - Upload datasets and use them to fine-tune models.
 - Create offers to lease your uploaded models and datasets to other users.
 
-<img src={require('../../images/upload-content.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/upload-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

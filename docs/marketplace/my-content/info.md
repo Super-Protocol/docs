@@ -1,13 +1,13 @@
 ---
 id: "info"
 title: "Info"
-slug: "/my-content/my-files/info"
+slug: "/my-content/info"
 sidebar_position: 2
 ---
 
 This window contains information about the uploaded file.
 
-<img src={require('../../images/info.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/info.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

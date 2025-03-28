@@ -25,7 +25,7 @@ The SubRoot CAs, in turn, issue and sign certificates for [orders](/fundamentals
 
 ## Order certificates
 
-The issuing of order certificates involves [Trusted Loader](/whitepaper/tee-provider/#trusted-loader-mechanism)—a mechanism developed to load and run applications within a TEE. Trusted Loader operates inside the Confidential VM that executes the order. This Confidential VM may be deployed within a CPU- or CPU/GPU-based TEE, such as Intel TDX, AMD SEV-SNP, NVIDIA GPU TEE, or other, making the whole system TEE-agnostic.
+The issuing of order certificates involves [Trusted Loader](/whitepaper/tee-provider/#trusted-loader-mechanism)—a mechanism developed to load and run applications within a TEE. Trusted Loader operates inside the Confidential VM that executes the order. This Confidential VM may be deployed within a CPU-based or CPU/GPU-augmented TEE using technologies such as Intel TDX, AMD SEV-SNP, NVIDIA Confidential Computing, or others, making the system TEE-agnostic.
 
 To receive an order certificate, the Trusted Loader sends a request to a SubRoot CA providing the quote and a public key. The SubRoot CA verifies the quote, issues the order certificate, and signs it with the provided public key.
 

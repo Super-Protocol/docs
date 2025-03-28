@@ -1,13 +1,13 @@
 ---
 id: "edit-content"
 title: "Edit Content"
-slug: "/my-content/my-files/edit-content"
+slug: "/my-content/edit-content"
 sidebar_position: 4
 ---
 
 Use this window to change the metadata of the uploaded content.
 
-<img src={require('../../images/edit-content.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/edit-content.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

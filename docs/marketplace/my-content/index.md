@@ -5,20 +5,34 @@ slug: "/my-content"
 sidebar_position: 5
 ---
 
-**My Content** contains **My Files** with your uploaded files and **My Offers** with your offers created from the uploaded files.
+This screen allows you to manage your uploaded models and datasets.
 
 :::note
 
-Registering providers and creating offers are not yet available in the current version of the Marketplace.
+Datasets are not yet available in the current version of the Marketplace.
 
 :::
 
-## Table of contents
+<img src={require('../images/my-content.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-| **Document** | **Description** |
-| :- | :- |
-| [My Files](/marketplace/my-content/my-files) | The **My Files** screen displays the list of your uploaded files. |
-| [Upload Content](/marketplace/my-content/my-files/upload-content) | The **Upload Content** window allows uploading files to Super Protocol. |
-| [Info](/marketplace/my-content/my-files/info) | The **Info** window displays the information about an uploaded file. |
-| [Edit Content](/marketplace/my-content/my-files/upload-content) | The **Edit Content** window allows editing the information about an uploaded file. |
-| [My Offers](/marketplace/my-content/my-offers) | The **My Offers** screen displays the list of your offers. |
+The **Upload File** button opens the [**Upload Content**](/marketplace/my-content/upload-content) window. Read [How to Upload a Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload a Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
+
+The table in the middle of the screen includes the following columns:
+
+- **Type**: indicates whether the content is a **Model** or **Dataset**.
+- **Name**: the name of the content. It may differ from the original file name.
+- **Date Uploaded**: the date and time when the content was uploaded.
+- **Size**: file size of the file in gigabytes. For the exact size in bytes, check the file's [**Info**](/marketplace/my-content/info).
+- **Storage**: the storage to where you uploaded the content, either **Super Cloud** or **Storj**. Read about [types of storage](/marketplace/account/web3#storage).
+- **Offer ID**: the identification number of the offer created from the uploaded file. No number means an offer has not yet been created.
+
+To add a model or dataset to an order, click the blue **[+]** button next to it.
+
+For more actions, click the buttons with three vertical dots next to a file to open the content's management menu:
+
+- [**Info**](/marketplace/my-content/info): view detailed information about the uploaded content.
+- [**Edit**](/marketplace/my-content/edit-content): edit the content's metadata, such as name, type, categories, etc.
+- **Create offer**: create an offer using the uploaded content (not yet implemented).
+- **Delete content**: delete the uploaded content from the storage.
