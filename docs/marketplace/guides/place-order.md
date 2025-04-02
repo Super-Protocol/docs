@@ -1,6 +1,6 @@
 ---
 id: "place-order"
-title: "How to Place an Order"
+title: "Place an Order"
 slug: "/guides/place-order"
 sidebar_position: 2
 ---
@@ -23,29 +23,23 @@ Select a model you want to deploy. You can add either a model from the Marketpla
 <Tabs>
   <TabItem value="marketplace" label="Marketplace" default>
 
-    To lease a model listed on the Marketplace, open the list of available **Models** and click the blue **[+]** button next to a model you want to add to the order.
+    To lease a model listed on the Marketplace, open the list of available **Models** and click the blue **Deploy** button next to a model you want to add to the order.
 
-    <img src={require('../images/marketplace-models-menu.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('../images/deploy-models.png').default} width="auto" height="auto" border="1"/>
 
   </TabItem>
   <TabItem value="my-content" label="My Content">
 
     To add your own model, you must prepare and upload it first. Read [How to Upload a Model (TGWUI)](/marketplace/guides/upload-tgwui) and [How to Upload a Model (ComfyUI)](/marketplace/guides/upload-comfyui) for step-by-step instructions.
 
-    When your model is uploaded, open **My Files** and click the blue **[+]** button next to a model to add it to the order.
+    When your model is uploaded, open **My Content** and click the blue **Deploy** button next to a model to add it to the order.
 
-    <img src={require('../images/my-files-menu.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('../images/deploy-my-content.png').default} width="auto" height="auto" border="1"/>
 
   </TabItem>
 </Tabs>
 
-Once you add a model, open the **Order Builder** by clicking **Order** in the top panel of the Marketplace web app.
-
-<img src={require('../images/marketplace-order-builder.png').default} width="auto" height="auto" border="1"/>
-<br/>
-<br/>
-
-**Order Builder** is a tool to pick the order's components, configure them, calculate prices, and place orders. Read about the [Order Builder](/marketplace/orders/order-builder).
+Once you add a model, you will be redirected to the **Order Builder**. There, you can modify the order's components, configure them, check the prices, and place the order. Read about the [Order Builder](/marketplace/orders/order-builder).
 
 ## Step 2. Add an engine
 
