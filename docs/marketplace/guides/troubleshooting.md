@@ -17,6 +17,8 @@ If the **Enter Marketplace** button is stuck in the loading state, open the Meta
 
 If MetaMask shows no requests, refresh the page and press the **Enter Marketplace** button again.
 
+Some wallet extensions may interfere with login attempts. If you have other wallet extensions installed, temporarily switch them off and try to log in again.
+
 If the problem persists, restart your browser and unlock MetaMask before trying to enter the Marketplace.
 
 This issue may also occur due to Marketplace maintenance. Wait a few minutes and try again, or contact Super Protocol on [Discord](https://discord.gg/superprotocol) for a quick update.

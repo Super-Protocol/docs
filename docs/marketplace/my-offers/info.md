@@ -1,7 +1,7 @@
 ---
 id: "info"
 title: "Info"
-slug: "/my-content/info"
+slug: "/my-offers/info"
 sidebar_position: 2
 ---
 

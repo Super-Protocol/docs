@@ -1,7 +1,7 @@
 ---
 id: "upload-content"
 title: "Upload Content"
-slug: "/my-content/upload-content"
+slug: "/my-offers/upload-content"
 sidebar_position: 1
 ---
 

@@ -1,11 +1,11 @@
 ---
-id: "list"
-title: "Models/Datasets"
-slug: "/marketplace/list"
-sidebar_position: 1
+id: "models"
+title: "Models"
+slug: "/models"
+sidebar_position: 4
 ---
 
-This screen lists models or datasets offered on the Marketplace. You can lease the content listed here by adding it to your orders. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
+This screen lists models or datasets offered on the Marketplace. You can lease the content listed here by adding it to your orders.
 
 :::note
 
@@ -18,7 +18,7 @@ Datasets are not yet available in the current version of the Marketplace.
 
 ## Offers
 
-To add a model or dataset to an order, click the blue **[+]** button next to it.
+To deploy a model, click the blue **Deploy** button next to it.
 
 You can view the list as either tiles or a table. The buttons in the top-right corner allow you to sort offers, switch between views, and customize table columns. The same list in the table view:
 
@@ -34,13 +34,21 @@ In the table view, you can see the following columns:
 - **Price, hr**: the hourly rate for leasing the offer.
 - **Price, fix**: the fixed price for each use of the offer, regardless of the lease duration.
 
-Clicking an offer opens the [**Offer**](/marketplace/marketplace/offer) window, which provides further details such as descriptions, requirement slots, and pricing.
+Clicking an offer opens the [**Offer**](/marketplace/models/offer) window, which provides further details such as descriptions, requirement slots, and pricing.
 
-## Filters
+## Filters and search
 
-Use the filters on the left side of the screen to narrow down the list and quickly find specific offers.
+Use the search bar above the list of offers to find an offer by its name or ID.
 
-In the current version of the Marketplace, you can only filter by the category—the type of task that models are designed to perform:
+To clear the search results and set filters to default values, click **Reset filters** on the left side of the screen.
+
+**Offers** filters by the verification status:
+
+- **All**: shows all offers.
+- **Verified**: only shows offers that passed the initial check and can be deployed. Note that this status does not mean the model works well; it just indicates that the model can be deployed successfully.
+- **Unsorted**: only shows offers that have yet to pass the initial check.
+
+**Category** filters by the type of task that models are designed to perform:
 
 - Image Classification
 - Image Segmentation

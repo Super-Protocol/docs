@@ -1,11 +1,11 @@
 ---
 id: "all-orders"
 title: "All Orders"
-slug: "/orders/all-orders"
-sidebar_position: 2
+slug: "/all-orders"
+sidebar_position: 6
 ---
 
-This screens displays the full list of the orders you placed on Super Protocol. Read [How to Place an Order](/marketplace/guides/place-order) for step-by-step instructions.
+This screens displays the full list of the orders you placed on Super Protocol.
 
 <img src={require('../images/all-orders.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -23,6 +23,6 @@ The table in the center of the screen provides essential information about your 
 - **Model**: the main model used in the order.
 - **Datasets**: the main dataset used in the order. Note that there may be several datasets in the order.
 
-Clicking an order opens its [**Order**](/marketplace/orders/order) screen with detailed information.
+Clicking an order opens its [**Order**](/marketplace/all-orders/order) screen with detailed information.
 
 The contents of all orders are encrypted and accessible only to the users who placed them. However, general information about orders is recorded on the blockchain and publicly visible due to the blockchain's transparent nature.
