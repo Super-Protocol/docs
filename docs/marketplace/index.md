@@ -7,9 +7,9 @@ sidebar_position: 0
 
 [Super Protocol](https://superprotocol.com/) is an AI cloud and Marketplace based on the principles of confidentiality, decentralization, and self-sovereignty. In the Super Protocol cloud, confidential computing technology protects data during execution, while blockchain-based decentralized networks provide orchestration, transparency, and verifiability of all processes.
 
-Super Protocol launched Marketplace 1.0 in 2022 with limited capabilities, supporting only Intel SGX CPUs. Now, the company is developing Marketplace 2.0 with a full range of capabilities, support for Intel TDX CPU and NVIDIA H100 GPU confidential computing, and a specific focus on confidential AI fine-tuning and deployments.
+Super Protocol launched Marketplace 1.0 in 2022 with limited capabilities, supporting only Intel SGX CPUs. Now, the company is developing [Marketplace 2.0](https://marketplace.superprotocol.com/) with a full range of capabilities, support for Intel TDX CPU and NVIDIA H100 GPU confidential computing, and a specific focus on confidential AI fine-tuning and deployments.
 
-Super Protocol launched the first public release of [Marketplace 2.0](https://marketplace.superprotocol.com/) on November 27, 2024. It includes the following capabilities:
+Super Protocol launched the first public release of Marketplace 2.0 on November 27, 2024. It includes the following capabilities:
 
 - Demo account with OAuth2 login for a quick start.
 - Support for Intel TDX and NVIDIA GPU confidential computing.
