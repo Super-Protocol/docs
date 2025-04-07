@@ -1,13 +1,13 @@
 ---
 id: "order"
 title: "Order"
-slug: "/orders/order"
-sidebar_position: 3
+slug: "/all-orders/order"
+sidebar_position: 1
 ---
 
-This screen provides detailed information about an order. Read about [Orders](/fundamentals/orders).
+This screen provides detailed information about a particular order. Read about [Orders](/fundamentals/orders).
 
-<img src={require('../../images/order.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/order.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -26,11 +26,6 @@ Statuses specific for Deploy orders:
 
 - **Deployed**. The model is running and available via the **Access Link**.
 - **Done**. The model is no longer running.
-
-Statuses specific for Fine-tune orders:
-
-- **Ready**. The new layer is available for download using the **Get Result** button.
-- **Done**. The order result is no longer available for download.
 
 Additional possible statuses:
 
@@ -76,7 +71,7 @@ These buttons are only visible to the user who placed the order.
 
 The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that Web3 users should **Confirm** in MetaMask. If you **Reject** the transaction, the cancellation process will not proceed.
 
-<img src={require('../../images/metamask-transaction.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-transaction.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ### Extend Lease
@@ -86,7 +81,7 @@ The **Extend Lease** button opens the **Extend Lease** window that allows you to
 - For Fine-tune orders, it may be necessary to finish the computation.
 - For Deploy orders, it increases the time the model will be running.
 
-<img src={require('../../images/extend-lease.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/extend-lease.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -105,7 +100,7 @@ The **Get Result** button allows you to download a file containing:
 
 The **Providers** tab contains additional information about the order and its suborders.
 
-<img src={require('../../images/order-providers.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/order-providers.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -117,7 +112,7 @@ Read more about [order types](/fundamentals/orders).
 
 The **Tunnel Orders** tab contains information about tunnel orders related to the main order. The tab is visible only for orders that utilize tunnels.
 
-<img src={require('../../images/order-tunnels.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/order-tunnels.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -135,7 +130,7 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 
 The **Events** tab contains information on what is happening with the order.
 
-<img src={require('../../images/order-events.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/order-events.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

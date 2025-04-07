@@ -1,7 +1,7 @@
 ---
 id: "offer"
 title: "Offer"
-slug: "/marketplace/offer"
+slug: "/models/offer"
 sidebar_position: 2
 ---
 
@@ -22,6 +22,7 @@ On the right-hand side of the window, you can find metadata about the offer:
     + **Compute**.
 - **Provider**: name of the provider that created the offer.
 - **Category**: the tasks the model or dataset is intended for.
+- **Source**: link to the resource from which the model was taken.
 - **Published**: date and time when the offer was created.
 - **Updated**: date and time of the most recent update.
 
@@ -31,12 +32,21 @@ The **About** tab displays the general description of the offer's content given 
 
 ## Pricing tab
 
-The **Pricing** tab contains details about how many confidential computing resources the offer requires.
-
-The offer provider can configure multiple sets of requirements called *[slots](/fundamentals/slots#requirements)*. Each slot may have a different price based on expected usage—higher workload typically imply higher pricing.
+The **Pricing** tab contains the cost of leasing the model and details about how many confidential computing resources the offer requires.
 
 <img src={require('../images/offer-pricing.png').default} width="auto" height="auto" border="1"/>
 <br/>
+
+**Model Format** allows you to change the model format if others are available.
+
+### Slots
+
+The offer provider can configure multiple sets of requirements called *[slots](/fundamentals/slots#requirements)*. Each slot may have a different price based on expected usage—higher workload typically imply higher pricing.
+
+Slots may be divided into two categories:
+
+- For GPU: run the model on an NVIDIA H100 Tensor Core GPU.
+- For CPU: run the model on an Intel TDX CPU. Note that the model may run slower in this mode. However, it may be a suitable way to deploy smaller models since the TDX-only machines are cheaper and has more availability than TDX+H100 machines.
 
 Super Protocol supports two pricing types:
 

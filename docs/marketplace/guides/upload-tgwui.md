@@ -37,9 +37,7 @@ If your model is from Hugging Face, ensure its _task_ matches one of the support
 
 ### Model size
 
-The size of your model should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
-
-Note that large models may perform poorly on CPU-only machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
+Due to current [testnet limitations](/marketplace/limitations), the size of your model should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
 ## Step 2. Select files
 

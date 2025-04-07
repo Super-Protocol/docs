@@ -1,7 +1,7 @@
 ---
 id: "edit-content"
 title: "Edit Content"
-slug: "/my-content/edit-content"
+slug: "/my-offers/edit-content"
 sidebar_position: 4
 ---
 
