@@ -1,6 +1,6 @@
 ---
 id: "upload-comfyui"
-title: "How to Upload a Model (ComfyUI)"
+title: "Upload a Model (ComfyUI)"
 slug: "/guides/upload-comfyui"
 sidebar_position: 5
 ---
@@ -42,9 +42,7 @@ If your model is from Hugging Face, ensure its _task_ matches one of the support
 
 ### Model size
 
-The size of your model should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
-
-Note that large models may perform poorly on CPU-only machines without GPU support. If you plan on deploying on CPU, choose a smaller model.
+Due to current [testnet limitations](/marketplace/limitations), the size of your model should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
 
 ## Step 2. Create a TAR.GZ archive
 
@@ -200,7 +198,7 @@ You can prepare your model manually or using Docker and a script provided by Sup
 
 In the [Marketplace web app](https://marketplace.superprotocol.com/), go to the **My Files** screen and press the **Upload File** button. 
 
-<img src={require('../images/my-files-upload.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-content-upload.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

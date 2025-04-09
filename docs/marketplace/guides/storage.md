@@ -1,6 +1,6 @@
 ---
 id: "storage"
-title: "How to Set Up Personal Storage"
+title: "Set Up Personal Storage"
 slug: "/guides/storage"
 sidebar_position: 6
 ---
@@ -53,7 +53,7 @@ Select the **Your Storj account** radio button, fill in the fields, and click **
 | S3 Access Key (Read) | Access Key with **Read** permission |
 | S3 Secret Key (Read) | Secret Key with **Read** permissions |
 
-<img src={require('../images/web3acc-storj.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/web3-storage.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Contact Super Protocol

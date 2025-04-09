@@ -7,7 +7,7 @@ sidebar_position: 2
 
 This window shows the settings of your [Web2 User account](/marketplace/account#web2-user-account).
 
-<img src={require('../images/demo-account.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/web2-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
