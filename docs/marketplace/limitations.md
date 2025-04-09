@@ -22,19 +22,19 @@ Pricing and restrictions:
 
 - Order lease time: minimum 2 hours.
 - Compute costs 0.2126 SPPI tokens per hour in most cases.
-- Models from the Marketplace cost 0 SPPI per order.
+- Currently, models from the Marketplace cost 0 SPPI per order.
 - Engines cost 0 SPPI per order.
-- Setting up a confidential tunnel costs 0.1-0.2 SPPI per order or less.
+- Setting up a confidential tunnel costs 0.1-0.2 SPPI per order.
 
 For example, a two-hour GPU-order would cost:
 
 0.2126 x 2 + ~0.15 = **~0.5752 SPPI** tokens.
 
-The total gas fee varies, but it is approximately **0.00001 BNB** per order.
+The total gas fee varies, but usually, it is about **0.00001 BNB** per order.
 
 ## Token limits
 
-Web3 users can receive up to **5 SPPI** tokens and **0.0001 BNB** tokens daily.
+Web3 users can receive up to **1.5 SPPI** tokens and **0.0001 BNB** tokens daily.
 
 ## Model limits
 
@@ -58,4 +58,3 @@ Also, deployed models must belong to a category supported by one of the AI engin
   + Video Classification
   + Text-to-Video
   + Mask Generation
-
