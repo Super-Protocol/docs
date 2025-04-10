@@ -40,8 +40,8 @@ ol > li::marker {
 }
 
 .navbar__logo img {
-    height: 110%;
-    margin-top: -10px;
+    height: 140%;
+    margin-top: -3px;
 }
 
 .navbar__link {
@@ -88,6 +88,32 @@ ol > li::marker {
 div[class*="docItemContainer_"] {
     width: 85% !important;
     margin: auto;
+}
+
+[data-theme='light'] {
+    .dotted-underline {
+        border-bottom: 1px dotted #1c1e21;
+        color: #1c1e21;
+        text-decoration: none;
+    }
+    .dashed-underline {
+        border-bottom: 1px dashed #1c1e21;
+        color: #1c1e21;
+        text-decoration: none;
+    }
+}
+
+[data-theme='dark'] {
+    .dotted-underline {
+        border-bottom: 1px dotted #e3e3e3;
+        color: #e3e3e3;
+        text-decoration: none;
+    }
+    .dashed-underline {
+        border-bottom: 1px dashed #e3e3e3;
+        color: #e3e3e3;
+        text-decoration: none;
+    }
 }
 
 /* TOC */
