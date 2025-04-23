@@ -90,6 +90,7 @@ div[class*="docItemContainer_"] {
     margin: auto;
 }
 
+/* tooltips */
 [data-theme='light'] {
     .dotted-underline {
         border-bottom: 1px dotted #1c1e21;
@@ -100,6 +101,12 @@ div[class*="docItemContainer_"] {
         border-bottom: 1px dashed #1c1e21;
         color: #1c1e21;
         text-decoration: none;
+    }
+    .react-tooltip {
+        background-color: #44494f;
+        color: #e3e3e3;
+        border: 1px solid #111;
+        opacity: 1 !important;
     }
 }
 
@@ -113,6 +120,12 @@ div[class*="docItemContainer_"] {
         border-bottom: 1px dashed #e3e3e3;
         color: #e3e3e3;
         text-decoration: none;
+    }
+    .react-tooltip {
+        background-color: #44494f;
+        color: #e3e3e3;
+        border: 1px solid #ccc;
+        opacity: 1 !important;
     }
 }
 

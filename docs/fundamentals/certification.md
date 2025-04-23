@@ -11,7 +11,7 @@ All the system components are open-source, ensuring transparency and verifiabili
 
 ## Architecture
 
-The backbone of the system is a hierarchical structure of <a id="ca"><span className="dotted-underline">Certification Authorities</span></a> operating inside Trusted Execution Environments (TEE)—Intel SGX enclaves.
+The backbone of the system is a hierarchical structure of <a id="ca"><span className="dashed-underline">Certification Authorities</span></a> operating inside Trusted Execution Environments (TEE)—Intel SGX enclaves.
 
 <img src={require('./images/certification-system-architecture.png').default} width="auto" height="auto"/>
 <br/>
