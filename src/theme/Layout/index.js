@@ -12,7 +12,7 @@ export default function Layout(props) {
       </Tooltip>
 
       <Tooltip anchorSelect="#ca">
-        Certification Authority (CA) is an entity<br/> that signs and issues digital certificates.
+        Certification Authority (CA) is an entity that signs and issues<br/> digital certificates.
       </Tooltip>
     </>
   );
