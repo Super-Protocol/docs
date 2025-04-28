@@ -11,10 +11,10 @@ The testnet has a limited amount of computing resources. To ensure fair access, 
 
 During the testnet, you can deploy models using either Intel TDX CPUs or NVIDIA H100 Tensor Core GPUs.
 
-Super Protocol has two types of machines:
+Super Protocol supports two types of machines:
 
-- **TDX+H100 (CPU and GPU)**: can run orders on GPU or CPU, depending on the selected engine type.
-- **TDX (CPU only)**: can only run orders on CPU. Note that CPUs are much slower.
+- **TDX+H100 (CPU and GPU)** can run orders on GPU or CPU, depending on the selected engine type.
+- **TDX (CPU only)** can only run orders on CPU. Note that CPUs are much slower.
 
 Super Protocol constantly adds more TDX+H100 machines and will soon begin onboarding machines from third-party providers.
 
