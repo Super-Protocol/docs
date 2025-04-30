@@ -37,13 +37,13 @@ The Tunnel Client signs the fingerprint of the domain SSL/TLS certificate with t
 
 You can compare the certificate fingerprint with the expected fingerprint, preventing possible man-in-the-middle attacks.
 
-The Check Confidentiality service displays the expected SSL/TLS certificate signature:
+The Check Confidentiality service displays the expected SSL/TLS certificate fingerprint:
 
 <img src={require('./images/check-confidentiality-fingerprint.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-To compare the expected SSL/TLS certificate signature with the domain SSL/TLS certificate signature, find the latter in your web browser:
+Find the domain SSL/TLS certificate fingerprint in your web browser to compare it with the expected fingerprint provided by the Check Confidentiality service:
 
 <img src={require('./images/check-confidentiality-connection-1.png').default} width="auto" height="auto" border="1"/>
 <br/>

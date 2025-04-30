@@ -53,7 +53,7 @@ jobs:
             type=raw,value=${{ env.REPO_NAME }}-${{ github.ref_name }}-build-${{ github.run_id }}
 
       - name: "Build and push Docker image"
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v6
         with:
           context: .
           tags: ${{ steps.meta.outputs.tags }}

@@ -5,13 +5,13 @@ slug: "/certification"
 sidebar_position: 6
 ---
 
-Super Protocol uses a certification system for signing data, verifying signatures, and ensuring applications operate within a trusted confidential computing environment. Verified data is published on the blockchain on behalf of confidential containers, allowing anyone to validate application integrity and ensure confidentiality. End users only interact with issued certificates and verify signatures, while the complexities of Remote Attestation are seamlessly managed in the background.
+Super Protocol uses a certification system for signing data, verifying signatures, and ensuring applications operate within a trusted <a id="tee"><span className="dashed-underline">confidential computing environment</span></a>. Verified data is published on the blockchain on behalf of confidential containers, allowing anyone to validate application integrity and ensure confidentiality. End users only interact with issued certificates and verify signatures, while the complexities of Remote Attestation are seamlessly managed in the background.
 
 All the system components are open-source, ensuring transparency and verifiability.
 
 ## Architecture
 
-The backbone of the system is a hierarchical structure of Certification Authorities operating inside Trusted Execution Environments (TEE)—Intel SGX enclaves.
+The backbone of the system is a hierarchical structure of <a id="ca"><span className="dashed-underline">Certification Authorities</span></a> operating inside Trusted Execution Environments (TEE)—Intel SGX enclaves.
 
 <img src={require('./images/certification-system-architecture.png').default} width="auto" height="auto"/>
 <br/>
@@ -43,9 +43,9 @@ The Workload Info includes an array called `runtimeInfo[]` with metadata about s
 
 The hash of the Workload Info is included in the order certificate.
 
-The system generates and publishes a report in the blockchain, allowing anyone to validate the order. The order report includes:
+Trusted Loader generates and publishes a report in the blockchain, allowing anyone to validate the order. This order report includes:
 
 - The public components of all the certificates in the chain
 - Workload Info:
     + Order creation date
-    + `runtimeInfo[]`
+    + The `runtimeInfo[]` array
