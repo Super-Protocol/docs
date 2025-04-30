@@ -30,7 +30,7 @@ Ensure your uploaded model fits into the maximum compute configuration [allowed 
 
 ## Engine
 
-The term _engine_ refers to the software necessary to deploy models and provide a web UI.
+The term _engine_ refers to the software necessary to deploy models and provide a user interface.
 
 Currently, Super Protocol supports two AI engines:
 
