@@ -30,7 +30,7 @@ Ensure your uploaded model fits into the maximum compute configuration [allowed 
 
 ## Engine
 
-The term _engine_ refers to the software necessary to deploy models and provide a web UI.
+The term _engine_ refers to the software necessary to deploy models and provide a user interface.
 
 Currently, Super Protocol supports two AI engines:
 
@@ -70,7 +70,7 @@ Where:
 An example of an API request:
 
 ```bash
-curl https://crow-prs-coma.superprotocol.io/v1/chat/completions \
+curl https://mund-avys-kefs.superprotocol.io/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer authkey123" \
   -d '{
@@ -78,7 +78,7 @@ curl https://crow-prs-coma.superprotocol.io/v1/chat/completions \
     "mode": "instruct",
     "instruction_template": "Alpaca",
     "max_tokens": 300,
-    "temperature": 0.8,
+    "temperature": 0.9,
     "top_p": 0.95
   }'
 ```

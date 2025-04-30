@@ -5,23 +5,24 @@ slug: "/"
 sidebar_position: 1
 ---
 
+import { Tooltip } from 'react-tooltip';
+
 This section describes the most essential concepts of Super Protocol.
 
 ## Marketplace
 
-Governed by smart contracts, the Super Protocol Marketplace is a distributed blockchain-based ecosystem that connects the sellers and the buyers of digital products and services. It consists of the following:
+Super Protocol Marketplace is a distributed blockchain-based ecosystem governed by smart contracts. It connects the sellers and buyers of digital products and services:
 
-- Providers of solutions, data, storage, and compute resources.
-- Offers that providers create.
-- Customers who rent the offers and pay for the usage.
+- Providers who offer solutions, data, and compute resources.
+- Customers who lease the offers and pay for the usage.
 
-Users who register a provider create offers to share and monetize their solutions, scripts, datasets, AI models, libraries, frameworks, etc. Currently, only Super Protocol provides compute and storage resources. In future releases, users will receive this functionality as well. Read more about [offers and providers](/fundamentals/offers).
+Providers create offers to share and monetize their compute resources as well as solutions, scripts, datasets, AI models, libraries, frameworks, etc. Read more about [offers and providers](/fundamentals/offers).
 
 Customers place orders by adding offers and paying for them according to the prices set by the providers of these offers. To learn more about orders, order statuses, pricing, and possible usage scenarios, refer to the [documentation](/fundamentals/orders).
 
 The Super Protocol Marketplace is accessible via one of the following:
 
-- The command-line interface (CLI) using a special utility called SPCTL.
+- The command-line interface (CLI) using a utility called SPCTL.
 - The graphical user interface (GUI) using a browser-based [web application](https://marketplace.superprotocol.com/).
 
 ## Trusted Execution Environment
