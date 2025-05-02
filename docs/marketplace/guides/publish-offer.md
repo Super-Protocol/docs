@@ -75,7 +75,7 @@ Alternatively, click the **Edit** button next to the offer in the **My Offers** 
 
 ## 4. Check the model files
 
-In the **Files** tab, ensure the model format is recognized correctly.
+In the **Files** tab, ensure the model formats are recognized correctly.
 
 <img src={require('../images/publish-offer-files.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -111,7 +111,9 @@ In the **Pricing** tab, click the **Add Slot** button to open an editable templa
 <br/>
 <br/>
 
-Note that if you selected both GPU-only and CPU-only engines, you should create at least one slot for each of them.
+You can create and configure multiple slots for each offer.
+
+If the offer supports both GPU-only and CPU-only engines, create at least one slot for each type to enable deployment on both.
 
 <Tabs>
     <TabItem value="gpu" label="To deploy the model on GPU" default>

@@ -129,7 +129,7 @@ Use the following `config.json` template:
 {
     "backend": {
         "url": "https://bff.superprotocol.com/graphql",
-        "accessToken": "https://superprotocol.atlassian.net/browse/SP-6027?atlOrigin=eyJpIjoiOWExYzZiMTcyM2U4NGE3MTg1NTg4MTYyZDAyYTdhOWYiLCJwIjoiamlyYS1zbGFjay1pbnQifQ"
+        "accessToken": "eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDAwMDU3ODI3NGEyIiwiaWF0IjoxNjc5OTk4OTQyLCJleHAiOjE3NDMxMTQxNDJ9.x2lx90D733mToYYdOWhh4hhXn3YowFW4JxFjDFtI7helgp2uqekDHFgekT5yjbBWeHTzRap7SHbDC3VvMIDe0g"
     },
     "blockchain": {
         "rpcUrl": "https://polygon.superprotocol.com/",
@@ -164,7 +164,7 @@ Do not change the preconfigured parameters and fill in the following ones:
 |writeAccessToken| Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket (optional)|
 |readAccessToken| Storj access grant with **Read** permission for this bucket (optional)|
 
-You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory:
+You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory. Example:
 
 ```json title="provider-tools-config.json"
     "account": {
