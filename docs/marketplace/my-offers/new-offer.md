@@ -5,7 +5,7 @@ slug: "/my-offers/new-offer"
 sidebar_position: 1
 ---
 
-This window allows you to upload a model and create an offer. After uploading, you can publish the offer on the Marketplace to lease the model to other users or deploy the model without publishing.
+This window allows you to upload a model and create an offer. After uploading, you can deploy the model. Additionally, you can configure and publish the offer on the Marketplace to lease the uploaded model to other users.
 
 <img src={require('../images/new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -13,9 +13,11 @@ This window allows you to upload a model and create an offer. After uploading, y
 
 To upload a model, complete all the fields:
 
-- **Name**: Provide any desired name.
-- **Category**: Select the type of task that a model is designed to perform.
-- **Engine**: Select compatible engines. Engine are required to deploy models and provide a user interface. Each engine exists in two variants, 'CPU only' and 'GPU only'. It is recommended that you choose both and decide how you want to run the model later during order creation.
-- **Upload**: Click to select files or directories to upload.
+- **Name**: A model name. Providing a meaningful name makes it easier to find the model later.
+- **Category**: Type of task that a model is designed to perform.
+- **Engine**: A solution to deploy the model and provide a user interface. Each engine has two variants:
+    + **GPU-only** engines require CPU+GPU compute offers to run.
+    + **CPU-only** engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
+- **Upload**: A directory or files to upload. The uploaded model files are encrypted and accessible only to the Confidential Computing machine that deploys the model.
 
-You can change all this data later, including the uploaded files.
+You can modify all of this data later using the [Offer Builder](/marketplace/my-offers/offer-builder), including replacing or adding uploaded files.
