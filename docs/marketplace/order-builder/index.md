@@ -18,7 +18,7 @@ _Order Builder_ is a tool to configure deployment orders for AI models. Deployme
 
 If no model is currently added to the Order Builder, go to the **Marketplace** or **My Content** using the links and click the **Deploy** button next to the desired model. This will add the model to the order along with automatically selected engine and compute offers.
 
-If the model offer has multiple [requirement slots](/fundamentals/slots), the **Deploy** button adds the first slot configured for GPU deployment. To deploy the model on CPU, click the model's name to open its [**Offer**](/marketplace/models/offer) window, go to the **Pricing** tab, and click the <img src={require('../images/mas.png').default}  width="15" height="15" border="0"/> button next to the desired slot.
+If the model offer has multiple [requirement slots](/fundamentals/slots), the **Deploy** button adds the first slot configured for GPU deployment. To deploy the model on CPU, click the model's name to open its [**Offer**](/marketplace/models/offer) window, go to the **Pricing** tab, and click the blue **[+]** button next to the desired slot.
 
 To view the model's selected slot, expand the **Requirements**. If you add your uploaded model to the order, its requirements are not specified. The system does not include such models in the automatic calculation of the compute configuration.
 
