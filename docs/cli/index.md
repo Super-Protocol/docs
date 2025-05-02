@@ -40,11 +40,19 @@ You can also download and install SPCTL manually from the Super Protocol [GitHub
 
 ## For users
 
-Execute the `./spctl setup` command to initiate the setup dialog. First, provide your Testnet Access Token and then your Testnet Private Key. You can find them in your Testnet invitation email.
+Execute the `./spctl setup` command to initiate the setup dialog.
+
+Enter the following Access Token when prompted:
+
+```
+eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDAwMDU3ODI3NGEyIiwiaWF0IjoxNjc5OTk4OTQyLCJleHAiOjE3NDMxMTQxNDJ9.x2lx90D733mToYYdOWhh4hhXn3YowFW4JxFjDFtI7helgp2uqekDHFgekT5yjbBWeHTzRap7SHbDC3VvMIDe0g
+```
+
+Then, enter a private key to your testnet EVM wallet.
 
 Further, SPCTL asks if you have a Storj bucket with configured access grants. This step is optional. Select `No` if you do not have them yet. You can configure Storj and provide this information [later in this guide](/cli#set-up-storj-access) or skip this step entirely.
 
-After that, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in any text editor.
+After that, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in a text editor.
 
 :::note
 
@@ -60,7 +68,7 @@ You can also skip the `./spctl setup` command completely and set up SPCTL manual
 {
     "backend": {
         "url": "https://bff.superprotocol.com/graphql",
-        "accessToken": ""
+        "accessToken": "eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDAwMDU3ODI3NGEyIiwiaWF0IjoxNjc5OTk4OTQyLCJleHAiOjE3NDMxMTQxNDJ9.x2lx90D733mToYYdOWhh4hhXn3YowFW4JxFjDFtI7helgp2uqekDHFgekT5yjbBWeHTzRap7SHbDC3VvMIDe0g"
     },
     "blockchain": {
         "rpcUrl": "https://polygon.superprotocol.com/",
@@ -87,7 +95,6 @@ Do not change the preconfigured parameters and fill in the following ones:
 
 |**Parameter**|**Description**|
 |:-|:-|
-|accessToken| Your Testnet Access Token from the Testnet invitation email||
 |accountPrivateKey| Your Testnet Private Key from the Testnet invitation email|
 |key| Private key for order result encryption. Use the [workflows generate-key](/cli/commands/workflows/generate-key) command to create this key|
 |bucket| Name of your Storj bucket (optional)|
@@ -98,7 +105,7 @@ Do not change the preconfigured parameters and fill in the following ones:
 
 This section is for offer providers only. Skip it if you are a regular user.
 
-Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers] guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks similar to this:
+Offer providers need another copy of SPCTL configured for their provider accounts. If you completed all the necessary steps in the [Providers and Offers] guide, you should have the configuration file created automatically in your Provider Tools directory. Its name looks similar to the following:
 
 ```spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb.json```
 
@@ -122,7 +129,7 @@ Use the following `config.json` template:
 {
     "backend": {
         "url": "https://bff.superprotocol.com/graphql",
-        "accessToken": ""
+        "accessToken": "eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDAwMDU3ODI3NGEyIiwiaWF0IjoxNjc5OTk4OTQyLCJleHAiOjE3NDMxMTQxNDJ9.x2lx90D733mToYYdOWhh4hhXn3YowFW4JxFjDFtI7helgp2uqekDHFgekT5yjbBWeHTzRap7SHbDC3VvMIDe0g"
     },
     "blockchain": {
         "rpcUrl": "https://polygon.superprotocol.com/",
@@ -150,7 +157,6 @@ Do not change the preconfigured parameters and fill in the following ones:
 
 |**Parameter**|**Description**|
 |:-|:-|
-|accessToken| Your regular Testnet Access Token from the Testnet invitation email|
 |accountPrivateKey| Private Key of your provider's Action Account|
 |authorityAccountPrivateKey| Private Key of your provider's Authority Account|
 |key| Private key for order result encryption. Use the key from your User Account or generate a new one with the [workflows generate-key](/cli/commands/workflows/generate-key) command|
@@ -158,7 +164,7 @@ Do not change the preconfigured parameters and fill in the following ones:
 |writeAccessToken| Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket (optional)|
 |readAccessToken| Storj access grant with **Read** permission for this bucket (optional)|
 
-You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory:
+You can find the section with your Authority and Action Accounts Private Keys in `provider-tools-config.json` in the Provider Tools directory. Example:
 
 ```json title="provider-tools-config.json"
     "account": {
@@ -180,7 +186,7 @@ If you use a free Storj account, your files will become unavailable after the en
 
 :::
 
-Create a bucket for your encrypted solutions and data. Refer to the [ Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
+Create a bucket for your encrypted solutions and data. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
 
 Create two access grants for this bucket. One should provide **Full** permission (**Read**, **List**, **Write**, **Delete**), and the other one **Read** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
 

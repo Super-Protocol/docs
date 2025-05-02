@@ -45,7 +45,7 @@ This tab contains general information about the offer.
 - **Category\***: The tasks for which the model is intended.
 - **Engine\***: A solution that launches the model and provides a user interface. Each engine exists in two variants:
     + GPU-only engines require CPU+GPU compute offers.
-    + CPU-only engines can run on both CPU-only and CPU+GPU compute offers.
+    + CPU-only engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
 - **Parameters**: Model parameters in millions or billions.
 - **License\***: The license under which the model is distributed.
 - **Source URL**: A link to the resource with the model files.
@@ -72,7 +72,7 @@ The **Add Slot** button opens an editable template for a slot that allows you to
 
 - **Price**: The price in SPPI tokens for leasing the model and the pricing type:
     + **Fixed**: A one-time payment for each order, regardless of the lease duration.
-    + **Per Hour**: payment is based on the number of hours the offer is leased.
+    + **Per Hour**: Payment is based on the number of hours the offer is leased.
 - **CPU vCores**: Number of virtual CPU cores; can be fractional. Set to `0` to create a slot for GPU-only engines.
 - **CPU RAM**: RAM in gigabytes (GB). Set to `0` to create a slot for GPU-only engines.
 - **GPU vCores**: Number of virtual GPU cores; can be fractional. Set to `0` to create a slot for CPU-only engines.
@@ -102,4 +102,4 @@ Publishing an offer makes the model available to other users for deploying. Howe
 
 The **Deploy** button adds the offer to an order and redirects you to the Order Builder. Note that you do not have to publish the offer to deploy the model.
 
-Click the **[ ⋮ ]** button in the top-right corner of the screen to unpublish the offer. Note that offers cannot be completely deleted due to the blockchain immutability. However, unpublished offers do not appear on the Marketplace and cannot be used in orders.
+The **[ ⋮ ]** button in the top-right corner of the screen allows you to unpublish the offer. Note that offers cannot be completely deleted due to the blockchain immutability. However, unpublished offers do not appear on the Marketplace and cannot be used in orders.
