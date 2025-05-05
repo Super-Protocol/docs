@@ -10,7 +10,7 @@ Updates information of an existing offer using an offer description JSON file.
 
 Refer to the [Providers and Offers] guide to create the initial offer description.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 

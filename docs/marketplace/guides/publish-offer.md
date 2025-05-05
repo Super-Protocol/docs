@@ -20,20 +20,20 @@ Creating offers is currently available to Web2 users only.
 
 1.1. In the [Marketplace web app](https://marketplace.superprotocol.com/), open your account settings.
 
-<img src={require('../images/publish-offer-account.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-offers-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 1.2. Scroll down, type in the desired **Provider Name**, and click **Create Provider**.
 
-<img src={require('../images/publish-offer-create-provider.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/account-create-provider.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 2. Create an offer
 
 2.1. In the **My Offers** screen, click the **New Offer** button.
 
-<img src={require('../images/publish-offer-new-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -56,7 +56,7 @@ Due to [Testnet limitations](/marketplace/limitations), the total size of the mo
 
 :::
 
-2.3. Click the **Create Offer** button. Do not close the window until the upload is complete.
+1.3. Click the **Create Offer** button. Do not close the window until the upload is complete. This may take a few minutes.
 
 ## 3. Open the Offer Builder
 
@@ -64,7 +64,7 @@ The created offer is unpublished. You need to configure it in the Offer Builder 
 
 To open the offer in the Offer Builder, click **Go to Offer** in the **New Offer** window.
 
-<img src={require('../images/publish-offer-new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -77,7 +77,7 @@ Alternatively, click the **Edit** button next to the offer in the **My Offers** 
 
 In the **Files** tab, ensure the model formats are recognized correctly.
 
-<img src={require('../images/publish-offer-files.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/offer-builder-format.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

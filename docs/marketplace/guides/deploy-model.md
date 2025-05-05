@@ -5,7 +5,7 @@ slug: "/guides/deploy-model"
 sidebar_position: 4
 ---
 
-This guide provides step-by-step instructions on how to upload and deploy an AI model.
+This guide provides step-by-step instructions for uploading and deploying an AI model.
 
 :::note
 
@@ -13,15 +13,15 @@ Uploading models is currently available to Web2 users only.
 
 :::
 
-## 1. Create an offer
+## 1. Upload
 
 1.1. In the **My Offers** screen, click the **New Offer** button.
 
-<img src={require('../images/publish-offer-new-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-1.2. Complete all the fields in the appearing window.
+1.2. Complete all fields in the appearing window.
 
 <img src={require('../images/new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -40,33 +40,29 @@ Due to [Testnet limitations](/marketplace/limitations), the total size of model 
 
 :::
 
-1.3. Click the **Create Offer** button. Do not close the window until the upload is complete.
+1.3. Click the **Create Offer** button. Do not close the window until the upload is complete. This may take a few minutes.
 
-## 2. Open the Offer Builder
+1.4. When the upload is complete, close the New Offer window or click **Go to Offer** to open the offer in the [Offer Builder](/marketplace/my-offers/offer-builder).
 
-The created offer is unpublished. You need to configure it in the Offer Builder before publishing to the Marketplace.
+<img src={require('../images/new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
-To open the offer in the Offer Builder, click **Go to Offer** in the **New Offer** window.
+## 2. Deploy
 
-<img src={require('../images/publish-offer-new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
+2.1. Click the **Deploy** button next to your offer in the My Offers screen or the bottom-right corner of the Offer Builder. You will be redirected to the [Order Builder](/marketplace/order-builder) with a preconfigured order for a quick deployment.
+
+2.2. In the Order Builder, review and modify the order if necessary. Click **Pay Now** to place the order.
+
+<img src={require('../images/order-builder-pay-now.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Or click the **Edit** button next to your offer in the **My Offers** screen.
+2.3. When the order is created, you will be redirected to the [Order](/marketplace/all-orders/order) screen. Wait until the deployment is ready. It may take 15-45 minutes, depending on the model size and other factors.
 
-<img src={require('../images/my-offers-edit.png').default} width="auto" height="auto" border="1"/>
-<br/>
-
-## 3. Check the model files
-
-In the **Files** tab, ensure the model format is recognized correctly.
-
-<img src={require('../images/publish-offer-files.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/order-processing.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-If you need to upload more files related to this model, click the **Add Files** button.
+2.4. When your order is ready, you will see the Deployed status and an Access Link to your model's interface.
 
-## 4. Deploy the model
-
-Click the **Deploy** button in the bottom-right corner of the screen. This will build an order with your model for a quick deployment.
+<img src={require('../images/order-deployed-online.png').default} width="auto" height="auto" border="1"/>
