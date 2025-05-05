@@ -24,7 +24,7 @@ This section contains the list of commands for the Super Protocol CLI tool SPCTL
 
 ## Command syntax
 
-SPCTL uses the following syntax format for commands:
+The syntax format for commands:
 
 ```
 ./spctl <command group> <command> <arguments> <options>

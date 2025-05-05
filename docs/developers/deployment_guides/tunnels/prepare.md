@@ -42,7 +42,7 @@ To generate a certificate without registration we recommend using [Certbot](http
 Make sure that after you generate the certificate you download the file with the private key (e.g. `private.key`) and the certificate itself (e.g. `certificate.crt`). There may also be another file with the root and intermediary certificates (e.g. `ca_bundle.crt`). Copy the contents of that file into your certificate file.
 
 :::note
-A self-generated and self-signed certificate will not work in Super Protocol. You need a certificate provided by the Certificate Authority.
+A self-generated and self-signed certificate will not work in Super Protocol. You need a certificate provided by a Certificate Authority.
 :::
 
 :::note

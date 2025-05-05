@@ -19,7 +19,7 @@ _Web3 User account_ is the recommended account type in Super Protocol. It provid
 
 - Full decentralization and sole control of user's funds, models, and datasets.
 - Ability to upload models and datasets to the Super Protocol cloud or a personal Storj account.
-- Placement of orders with Marketplace offers or the user's own uploaded content.
+- Placement of <a id="order"><span className="dashed-underline">orders</span></a> using Marketplace <a id="offer"><span className="dashed-underline">offers</span></a> or the user's own uploaded content.
 - Registration of individual providers and full control of earned funds and rewards.
 - Creation and monetization of model and dataset offers on the Marketplace.
 - Ability to request additional SPPI tokens.

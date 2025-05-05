@@ -5,7 +5,7 @@ slug: "/all-orders/order"
 sidebar_position: 1
 ---
 
-This screen provides detailed information about a particular order. Read about [Orders](/fundamentals/orders).
+This screen provides detailed information about a particular <a id="order"><span className="dashed-underline">order</span></a>. Read about [Orders](/fundamentals/orders).
 
 <img src={require('../images/order.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -35,7 +35,7 @@ Additional possible statuses:
 
 Read about [statuses](/fundamentals/orders#order-status).
 
-**Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the offers priced per hour. For Deploy orders with the Deployed status, it is the duration the model will remain operational.
+**Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the <a id="offer"><span className="dashed-underline">offers</span></a> priced per hour. For Deploy orders with the Deployed status, it is the duration the model will remain operational.
 
 ## Financials
 

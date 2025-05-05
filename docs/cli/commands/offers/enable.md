@@ -8,7 +8,7 @@ sidebar_position: 7
 
 Enables an existing disabled offer.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 

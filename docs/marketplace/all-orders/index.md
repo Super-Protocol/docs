@@ -5,7 +5,7 @@ slug: "/all-orders"
 sidebar_position: 6
 ---
 
-This screens displays the full list of the orders you placed on Super Protocol.
+This screens displays the full list of the <a id="order"><span className="dashed-underline">orders</span></a> you placed on Super Protocol.
 
 <img src={require('../images/all-orders.png').default} width="auto" height="auto" border="1"/>
 <br/>

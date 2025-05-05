@@ -5,7 +5,7 @@ slug: "/offers"
 sidebar_position: 2
 ---
 
-_Offer_ is an open listing for a resource available on the Marketplace. To add an offer to an [order](/fundamentals/orders), users must pay the price in SPPI tokens set by the offer provider.
+_Offer_ is an open listing for a resource available on the Marketplace. To add an offer to an <a id="order"><span className="dashed-underline">order</span></a>, users must pay the price in SPPI tokens set by the offer provider.
 
 _Offer providers_ share and monetize their applications and datasets by creating and maintaining _community offers_ on the Super Protocol Marketplace. 
 
