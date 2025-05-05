@@ -9,7 +9,7 @@ This guide provides step-by-step instructions for uploading and deploying an AI 
 
 :::note
 
-Uploading models is currently available to Web2 users only.
+Uploading models and creating <a id="offer"><span className="dashed-underline">offers</span></a> are currently available to Web2 users only.
 
 :::
 
@@ -49,7 +49,7 @@ Due to [Testnet limitations](/marketplace/limitations), the total size of model 
 
 ## 2. Deploy
 
-2.1. Click the **Deploy** button next to your offer in the My Offers screen or the bottom-right corner of the Offer Builder. You will be redirected to the [Order Builder](/marketplace/order-builder) with a preconfigured order for a quick deployment.
+2.1. Click the **Deploy** button next to your offer in the My Offers screen or the bottom-right corner of the Offer Builder. You will be redirected to the [Order Builder](/marketplace/order-builder) with a preconfigured <a id="order"><span className="dashed-underline">order</span></a> for a quick deployment.
 
 2.2. In the Order Builder, review and modify the order if necessary. Click **Pay Now** to place the order.
 

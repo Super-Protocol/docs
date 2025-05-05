@@ -12,7 +12,7 @@ This guide provides step-by-step instructions on how to register a provider and 
 
 :::note
 
-Creating offers is currently available to Web2 users only.
+Uploading models and creating <a id="offer"><span className="dashed-underline">offers</span></a> are currently available to Web2 users only.
 
 :::
 
@@ -120,7 +120,7 @@ If the offer supports both GPU-only and CPU-only engines, create at least one sl
         Complete the following fieds:
 
         - **Price**: Set the price in SPPI tokens for leasing the model and select the pricing type:
-            + **Fixed**: A one-time payment for each order, regardless of the lease duration.
+            + **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
             + **Per Hour**: Payment is based on the number of hours the offer is leased.
         - **Disk**: Set the required disk space in gigabytes (GB). It should not be less than the sum of all model files.
         - **GPU RAM**: Set the required video RAM in gigabytes (GB).

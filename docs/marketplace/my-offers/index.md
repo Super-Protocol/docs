@@ -5,7 +5,7 @@ slug: "/my-offers"
 sidebar_position: 5
 ---
 
-This screen allows you to browse your offers and deploy uploaded models.
+This screen allows you to browse your <a id="offer"><span className="dashed-underline">offers</span></a> and deploy uploaded models.
 
 <img src={require('../images/my-offers.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -17,4 +17,4 @@ The table in the center of the screen lists all your offers—both published and
 
 The **Edit** button opens the [Offer Builder](/marketplace/my-offers/offer-builder),  where you can configure and publish the offer.
 
-The **Deploy** button adds the offer to an order and opens the [Order Builder](/marketplace/order-builder) for quick deployment.
+The **Deploy** button adds the offer to an <a id="order"><span className="dashed-underline">order</span></a> and opens the [Order Builder](/marketplace/order-builder) for quick deployment.
