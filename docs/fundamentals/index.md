@@ -5,20 +5,18 @@ slug: "/"
 sidebar_position: 1
 ---
 
-import { Tooltip } from 'react-tooltip';
-
 This section describes the most essential concepts of Super Protocol.
 
 ## Marketplace
 
 Super Protocol Marketplace is a distributed blockchain-based ecosystem governed by smart contracts. It connects the sellers and buyers of digital products and services:
 
-- Providers who offer solutions, data, and compute resources.
+- Providers who <a id="offer"><span className="dashed-underline">offer</span></a> solutions, data, and compute resources.
 - Customers who lease the offers and pay for the usage.
 
 Providers create offers to share and monetize their compute resources as well as solutions, scripts, datasets, AI models, libraries, frameworks, etc. Read more about [offers and providers](/fundamentals/offers).
 
-Customers place orders by adding offers and paying for them according to the prices set by the providers of these offers. To learn more about orders, order statuses, pricing, and possible usage scenarios, refer to the [documentation](/fundamentals/orders).
+Customers place <a id="order"><span className="dashed-underline">orders</span></a> by adding offers and paying for them according to the prices set by the providers of these offers. To learn more about orders, order statuses, pricing, and possible usage scenarios, refer to the [documentation](/fundamentals/orders).
 
 The Super Protocol Marketplace is accessible via one of the following:
 

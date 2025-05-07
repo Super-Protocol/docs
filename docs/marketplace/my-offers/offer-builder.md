@@ -5,7 +5,7 @@ slug: "/my-offers/offer-builder"
 sidebar_position: 2
 ---
 
-_Offer Builder_ is a tool for uploading models and creating, editing, and publishing offers.
+_Offer Builder_ is a tool for uploading models and creating, editing, and publishing <a id="offer"><span className="dashed-underline">offers</span></a>.
 
 To deploy your AI model, you must upload it and create an offer. Newly created offers are unpublished, meaning only you can view them and add them to orders for deployment.
 
@@ -71,7 +71,7 @@ To support both CPU-only and GPU-only engines, create separate requirement slots
 The **Add Slot** button opens an editable template for a slot that allows you to set the offer requirements:
 
 - **Price**: The price in SPPI tokens for leasing the model and the pricing type:
-    + **Fixed**: A one-time payment for each order, regardless of the lease duration.
+    + **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
     + **Per Hour**: Payment is based on the number of hours the offer is leased.
 - **CPU vCores**: Number of virtual CPU cores; can be fractional. Set to `0` to create a slot for GPU-only engines.
 - **CPU RAM**: RAM in gigabytes (GB). Set to `0` to create a slot for GPU-only engines.

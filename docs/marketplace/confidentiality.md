@@ -5,19 +5,19 @@ slug: "/confidentiality"
 sidebar_position: 21
 ---
 
-*Check Confidentiality* is a service that verifies the authenticity of a domain deployed on Super Protocol and ensures its content is running in a valid Trusted Execution Environment (TEE).
+*Check Confidentiality* is a service that verifies the authenticity of a domain deployed on Super Protocol and ensures its content is running in a valid <a id="tee"><span className="dashed-underline">Trusted Execution Environment (TEE)</span></a>.
 
 <img src={require('./images/check-confidentiality.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-Super Protocol uses *SSL/TLS certificates* to encrypt the data exchange between the user's browser and the web server inside the Tunnel Client deployment. Besides, Super Protocol Certification Authorities issue certificates for every order—[*order certificates*](/fundamentals/certification).
+Super Protocol uses *SSL/TLS certificates* to encrypt the data exchange between the user's browser and the web server inside the Tunnel Client deployment. Besides, Super Protocol Certification Authorities issue certificates for every <a id="order"><span className="dashed-underline">order</span></a>—[*order certificates*](/fundamentals/certification).
 
 The Check Confidentiality service performs the following:
 
 - Validates the order certificate chain to ensure the order is being processed in a correct TEE.
 - Validates the integrity of the [Tunnel Client](/fundamentals/tunnels) deployment.
-- Checks if the solution is a Marketplace offer (for instance, a specific [engine](/marketplace/order-builder#engine)). Otherwise, you will see a warning "Deployed solution is not an offer" meaning the solution cannot be verified.
+- Checks if the solution is a Marketplace <a id="offer"><span className="dashed-underline">offer</span></a> (for instance, a specific [engine](/marketplace/order-builder#engine)). Otherwise, you will see a warning "Deployed solution is not an offer" meaning the solution cannot be verified.
 
 <img src={require('./images/check-confidentiality-not-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>

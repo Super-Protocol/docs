@@ -34,7 +34,7 @@ This will result in `tunnel-server-data.tar.gz`.
 
 ### Upload archive
 
-Solution needs to be encrypted and uploaded to decentralized storage before it may be executed in Super Protocol. The storage credentials will need to have been configured during the [SPCTL setup](/cli#set-up-storj-access):
+Solution needs to be encrypted and uploaded to decentralized storage before it may be executed in Super Protocol. The storage credentials will need to have been configured during the [SPCTL setup](/cli/#set-up-storj-access-optional):
 
 ```
 ./spctl files upload tunnel-server-data.tar.gz --output tunnel-server-data.json --filename tunnel-server-data.tar.gz

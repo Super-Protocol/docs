@@ -19,7 +19,7 @@ Super Protocol launched the first public release of Marketplace 2.0 on November 
 
 Upcoming features in the future development phases:
 
-- Publishing offers in the Marketplace from uploaded files. Currently, publishing is limited to selected researchers, testers, and developers.
+- Publishing <a id="offer"><span className="dashed-underline">offers</span></a> in the Marketplace from uploaded files. Currently, publishing is limited to selected researchers, testers, and developers.
 - Fine-tuning models by creating new layers for base models.
 - Support for datasets.
 - Expanded model availability in the Marketplace.

@@ -109,7 +109,7 @@ Super Protocol users need two types of tokens:
 - SPPI tokens to pay and receive payments in Super Protocol.
 - BNB tokens to pay for opBNB blockchain transactions.
 
-Both types are necessary to place orders. During the testnet, you can request free tokens in the **Account** setting.
+Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
 
 <img src={require('../images/marketplace-web3acc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
