@@ -12,7 +12,7 @@ This window provides information about a model available for lease on the Market
 
 ## Metadata
 
-On the right-hand side of the window, you can find metadata about the offer:
+On the right-hand side of the window, you can find metadata about the <a id="offer"><span className="dashed-underline">offer</span></a>:
 
 - **Offer ID**: A unique identifier; it is incremental and continuous across all offers.
 - **Offer Type**: The type of the offer:
@@ -50,7 +50,7 @@ Slots may be divided into two categories:
 
 Super Protocol supports two pricing types:
 
-- **Fixed**: a one-time payment for each order, regardless of the lease duration.
+- **Fixed**: a one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
 - **Per Hour**: payment is based on the number of hours the offer is leased.
 
 Each slot includes the following requirements:

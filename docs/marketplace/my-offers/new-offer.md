@@ -5,7 +5,7 @@ slug: "/my-offers/new-offer"
 sidebar_position: 1
 ---
 
-This window allows you to upload a model and create an offer. After uploading, you can deploy the model. Additionally, you can configure and publish the offer on the Marketplace to lease the uploaded model to other users.
+This window allows you to upload a model and create an <a id="offer"><span className="dashed-underline">offer</span></a>. After uploading, you can deploy the model. Additionally, you can configure and publish the offer on the Marketplace to lease the uploaded model to other users.
 
 <img src={require('../images/new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>

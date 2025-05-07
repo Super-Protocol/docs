@@ -10,7 +10,7 @@ Creates an additional [requirement slot](/fundamentals/slots#requirements) in an
 
 Refer to the [Providers and Offers] guide to create the initial offer requirements.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -53,7 +53,7 @@ The offer slot JSON file must contain the following objects and strings:
   + `minTimeMinutes`: minutes; `0` for no limit
   + `price`: denominations of SPPI token
   + `priceType`: `1` for fixed price, `0` for price per hour; learn more about [price types](/fundamentals/orders#cost-and-pricing)
-- `option`: object with internet access configuration (only for value offers)
+- `option`: object with internet access configuration (only for <a id="value-offer"><span className="dashed-underline">value offers</span></a>)
   + `bandwidth`: bits per second
   + `traffic`: bytes
   + `externalPort`: `1` for yes, `0` for no

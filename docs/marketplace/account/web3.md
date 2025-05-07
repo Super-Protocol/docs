@@ -15,7 +15,7 @@ This window allows you to manage your [Web3 User account](/marketplace/account#w
 
 **Login**: the Web3 login method and the EVM wallet address you are using. Currently, Super Protocol only supports MetaMask as a Web3 login method.
 
-**Get SPPI** and **Get BNB** buttons allow you to get tokens necessary to place orders:
+**Get SPPI** and **Get BNB** buttons allow you to get tokens necessary to place <a id="order"><span className="dashed-underline">orders</span></a>:
 
 - SPPI tokens are required to pay and receive payments in Super Protocol.
 - BNB tokens are required to pay for opBNB blockchain transactions.

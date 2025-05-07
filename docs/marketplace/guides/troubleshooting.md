@@ -25,7 +25,7 @@ Possible solutions:
 
 ## Order status: Error
 
-Issue: the order processing stops due to the **Error** status.
+Issue: the <a id="order"><span className="dashed-underline">order</span></a> processing stops due to the **Error** status.
 
 <img src={require('../images/order-error.png').default} width="auto" height="auto" border="1"/>
 <br/>

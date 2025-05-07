@@ -9,7 +9,7 @@ Updates the current provider using a provider info JSON file.
 
 Provider Tools creates a provider info JSON file in [Step 4 of the Providers and Offers] guide.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 

@@ -21,7 +21,7 @@ The Root Certification Authority (*Root CA*) is located at the highest hierarchi
 
 SubRoot Certification Authorities (*SubRoot CAs*) are located at the next hierarchical level. These submit their quotes and public keys to the Root CA and request certificates. The Root CA verifies these incoming requests and then issues and signs certificates for the SubRoot CAs.
 
-The SubRoot CAs, in turn, issue and sign certificates for [orders](/fundamentals/orders) by request.
+The SubRoot CAs, in turn, issue and sign certificates for <a id="order"><span className="dashed-underline">orders</span></a> by request.
 
 ## Order certificates
 

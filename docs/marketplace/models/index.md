@@ -5,11 +5,11 @@ slug: "/models"
 sidebar_position: 4
 ---
 
-This screen lists models or datasets offered on the Marketplace. You can lease the content listed here by adding it to your orders.
+This screen lists AI models that users <a id="offer"><span className="dashed-underline">offer</span></a> on the Marketplace. You can lease the content listed here by adding it to your <a id="order"><span className="dashed-underline">orders</span></a>.
 
 :::note
 
-Datasets are not yet available in the current version of the Marketplace.
+Datasets will be available in future versions of the Marketplace.
 
 :::
 

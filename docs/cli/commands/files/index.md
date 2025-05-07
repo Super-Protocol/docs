@@ -8,7 +8,7 @@ sidebar_position: 3
 
 This command group contains commands to manage files in third-party storage such as Storj.
 
-Most of these commands require a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/cli#set-up-storj-access) section to create a bucket and access grants and set up SPCTL.
+Most of these commands require a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/cli/#set-up-storj-access-optional) section to create a bucket and access grants and set up SPCTL.
 
 ## Commands
 

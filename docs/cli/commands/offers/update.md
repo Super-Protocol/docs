@@ -10,7 +10,7 @@ Updates information of an existing offer using an offer description JSON file.
 
 Refer to the [Providers and Offers] guide to create the initial offer description.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli#for-offer-providers).
+**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -104,7 +104,7 @@ The file may contain only the fields that need to be updated. For example, to on
 
 ## Example
 
-The following command updates an existing value offer with ID 39 using the information in the `updated-offer-39.json` in the SPCTL root directory:
+The following command updates an existing <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39 using the information in the `updated-offer-39.json` in the SPCTL root directory:
 
 ```
 ./spctl offers update value 39 --path ./updated-offer-39.json

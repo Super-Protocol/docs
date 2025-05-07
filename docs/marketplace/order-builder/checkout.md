@@ -5,7 +5,7 @@ slug: "/order-builder/checkout"
 sidebar_position: 2
 ---
 
-This window informs you about the creation of transactions on the blockchain, which is the final step in placing an order.
+This window informs you about the creation of transactions on the blockchain, which is the final step in placing an <a id="order"><span className="dashed-underline">order</span></a>.
 
 <img src={require('../images/confirm-transactions.png').default} width="auto" height="auto" border="1"/>
 <br/>
