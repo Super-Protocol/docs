@@ -45,7 +45,7 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command updates a slot with ID 47 in a value offer with ID 39 using the information in the file `offer-slot.json` in the SPCTL directory:
+The following command updates a slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39 using the information in the file `offer-slot.json` in the SPCTL directory:
 
 ```
 ./spctl offers update-slot value --offer 39 --slot 47 --path ./offer-slot.json

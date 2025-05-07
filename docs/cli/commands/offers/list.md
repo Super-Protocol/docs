@@ -56,7 +56,7 @@ For both offer types:
 
 ### Example 1
 
-The following command displays the IDs, names, and types of the first 30 value offers:
+The following command displays the IDs, names, and types of the first 30 <a id="value-offer"><span className="dashed-underline">value offers</span></a>:
 
 ```
 ./spctl offers list value --limit 30
