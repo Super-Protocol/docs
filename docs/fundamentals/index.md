@@ -5,8 +5,6 @@ slug: "/"
 sidebar_position: 1
 ---
 
-import { Tooltip } from 'react-tooltip';
-
 This section describes the most essential concepts of Super Protocol.
 
 ## Marketplace

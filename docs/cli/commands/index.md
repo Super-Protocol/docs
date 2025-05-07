@@ -20,7 +20,7 @@ This section contains the list of commands for the Super Protocol CLI tool SPCTL
 | [orders](/cli/commands/orders) | Manage your orders. |
 | [offers](/cli/commands/offers) | View and manage Marketplace offers. |
 | [providers](/cli/commands/providers) | View and manage offer providers. |
-| [quotes](/cli/commands/quotes) | Verify the authenticity and integrity of a Trusted Execution Environment. |
+| [quotes](/cli/commands/quotes) | Verify the authenticity and integrity of a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>. |
 
 ## Command syntax
 

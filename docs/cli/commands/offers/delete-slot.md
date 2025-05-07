@@ -41,7 +41,7 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command deletes a requirement slot with ID 47 in a value offer with ID 39:
+The following command deletes a requirement slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39:
 
 ```
 ./spctl offers delete-slot value --offer 39 --slot 47

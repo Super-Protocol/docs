@@ -7,7 +7,7 @@ sidebar_label: "prepare"
 
 Packs and signs a solution with [Gramine](https://gramineproject.io/) and writes a [manifest](https://gramine.readthedocs.io/en/stable/manifest-syntax.html).
 
-This allows the execution of the "graminized" solution code inside a Trusted Execution Environment. When the solution is prepared and packed, you can [upload](/cli/commands/files/upload) the resulting archive to a distributed storage to use the solution in orders.
+This allows the execution of the "graminized" solution code inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>. When the solution is prepared and packed, you can [upload](/cli/commands/files/upload) the resulting archive to a distributed storage to use the solution in orders.
 
 The input of the command is the following:
 

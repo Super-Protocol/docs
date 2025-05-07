@@ -5,7 +5,7 @@ slug: "/confidentiality"
 sidebar_position: 21
 ---
 
-*Check Confidentiality* is a service that verifies the authenticity of a domain deployed on Super Protocol and ensures its content is running in a valid Trusted Execution Environment (TEE).
+*Check Confidentiality* is a service that verifies the authenticity of a domain deployed on Super Protocol and ensures its content is running in a valid <a id="tee"><span className="dashed-underline">Trusted Execution Environment (TEE)</span></a>.
 
 <img src={require('./images/check-confidentiality.png').default} width="auto" height="auto" border="1"/>
 <br/>

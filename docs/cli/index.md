@@ -147,6 +147,7 @@ Providers need another copy of SPCTL configured for their accounts to manage off
             "storage": {
                 "type": "STORJ",
                 "bucket": "",
+                "prefix": "",
                 "writeAccessToken": "",
                 "readAccessToken": ""
             },

@@ -13,7 +13,7 @@ _Offer providers_ share and monetize their applications and datasets by creating
 
 Offers are the basic building blocks of the Marketplace. Four types of offers exist in Super Protocol:
 
-- _Compute offers_: confidential computing resources to execute solutions and data inside a Trusted Execution Environment.
+- _Compute offers_: confidential computing resources to execute solutions and data inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
 - _Solution offers_: applications such as AI frameworks, base images, tunnels, oracles, etc.
 - _Data offers_: AI models, webpages, configs, datasets, databases, etc.
 - _Storage offers_: decentralized storage, such as Storj, to keep the offer content, order results, and service files.

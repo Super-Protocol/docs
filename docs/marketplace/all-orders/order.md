@@ -20,7 +20,7 @@ The contents of an order are encrypted and accessible only to the user who place
 - **Suspended**. The order is awaiting the creation of suborders.
 - **Blocked**. A suborder temporarily blocks the order to generate access keys and authorize the confidential computing device to access the suborder's content.
 - **In Queue**. The order is awaiting in the queue for the computing device to become available.
-- **Processing**. The machine is executing the order inside a Trusted Execution Environment.
+- **Processing**. The machine is executing the order inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
 
 Statuses specific for Deploy orders:
 
@@ -134,19 +134,19 @@ The **Events** tab contains information on what is happening with the order.
 <br/>
 <br/>
 
-- **Date**: the date and time of the event.
-- **Order ID**: the identification number of the order or suborder to which the event is related.
+- **Date**: The date and time of the event.
+- **Order ID**: The identification number of the order or suborder to which the event is related.
 - **Order Type**: either **Order** or **Suborder**.
 - **Type**: **Compute** for the main order; **Solution**, **Data**, or **Storage** for suborders.
-- **Provider**: the name of the provider.
-- **Name**: the name of the offer.
-- **Status**: status of the order or suborder when the event occurred.
-- **Event**: code of what happened. The full list of the events:
-    + **OrderCreated**: the order or suborder is created on the blockchain.
-    + **OrderStarted**: the compute order has started.
-    + **OrderStatusUpdated**: the order or suborder status has changed without any new events.
-    + **OrderEncryptedResultUpdated**: the resource path to the order result was written to the blockchain.
-    + **OrderChangeWithdrawn**: the remaining token balance was returned to the customer.
-    + **OrderProfitWithdrawn**: the provider withdrew the offer payment from the order balance.
-- **Value**: transaction value in SPPI tokens, if applicable.
-- **Txn Hash**: transaction hash. Clicking it opens the transaction in the [OKLink block explorer](https://www.oklink.com/).
+- **Provider**: The name of the provider.
+- **Name**: The name of the offer.
+- **Status**: The status of the order or suborder when the event occurred.
+- **Event**: The code of what happened. The main blockchain events:
+    + **OrderCreated**: The order or suborder is created on the blockchain.
+    + **OrderStarted**: The compute order has started.
+    + **OrderStatusUpdated**: The order or suborder status has changed without any new events.
+    + **OrderEncryptedResultUpdated**: The resource path to the order result was written to the blockchain.
+    + **OrderChangeWithdrawn**: The remaining token balance was returned to the customer.
+    + **OrderProfitWithdrawn**: The provider withdrew the offer payment from the order balance.
+- **Value**: The transaction value in SPPI tokens, if applicable.
+- **Txn Hash**: The transaction hash. Clicking it opens the transaction in the [OKLink block explorer](https://www.oklink.com/).
