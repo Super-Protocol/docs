@@ -6,7 +6,7 @@ sidebar_label: "get"
 sidebar_position: 2
 ---
 
-Displays information on an offer.
+Displays information on an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 ## Syntax
 
@@ -16,8 +16,6 @@ Displays information on an offer.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

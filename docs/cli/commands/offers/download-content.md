@@ -6,7 +6,7 @@ sidebar_label: "download-content"
 sidebar_position: 4
 ---
 
-Downloads the content of an offer.
+Downloads the content of an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 The command only works with offers that allow this operation.
 
@@ -18,8 +18,6 @@ The command only works with offers that allow this operation.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

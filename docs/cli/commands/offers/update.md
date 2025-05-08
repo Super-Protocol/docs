@@ -6,11 +6,11 @@ sidebar_label: "update"
 sidebar_position: 5
 ---
 
-Updates information of an existing offer using an offer description JSON file.
+Updates information about an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 Refer to the [Providers and Offers] guide to create the initial offer description.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -20,8 +20,6 @@ Refer to the [Providers and Offers] guide to create the initial offer descriptio
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

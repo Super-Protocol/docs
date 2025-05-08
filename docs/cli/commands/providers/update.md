@@ -5,11 +5,9 @@ slug: "/commands/providers/update"
 sidebar_label: "update"
 ---
 
-Updates the current provider using a provider info JSON file.
+Updates information about a provider.
 
-Provider Tools creates a provider info JSON file in [Step 4 of the Providers and Offers] guide.
-
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -19,8 +17,6 @@ Provider Tools creates a provider info JSON file in [Step 4 of the Providers and
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Options
 
@@ -32,9 +28,9 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Provider info file
 
-The provider info file must contain the following strings:
+The provider info JSON file must contain the following keys:
 
-| **Field** | **Description** | 
+| **Key** | **Description** | 
 | :- | :- |
 | `name` | Provider name. | 
 | `description` | Description of services provided by the provider. | 
@@ -42,14 +38,14 @@ The provider info file must contain the following strings:
 | `actionAccount` | Action account address. | 
 | `metadata` | Additional information about the provider. | 
 
-The `description` and `metadata` strings may be empty. All other strings require values.
+The `description` and `metadata` may be empty. All other strings require values.
 
-Provider JSON file template with example values:
+Template with example values:
 
-```json title="provider.json"
+```json title="providerInfo.json"
 {
   "name": "Data Provider",
-  "description": "It provides various datasets for modeling",
+  "description": "Various data for modeling",
   "tokenReceiver": "0xB9f0bB77DbeA9fBeC563E60Bd7E453f503605BAa",
   "actionAccount": "0xfe9CB4557639a3aB7892ab7F0A994Eed89477120",
   "metadata": ""

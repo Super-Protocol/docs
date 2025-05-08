@@ -51,8 +51,8 @@ The **Deployment** section informs about the launched tunnel. Tunnels enable end
 
 **Status** indicates the current state of the tunnel:
 
-- **Creating**: the tunnel order has been placed, but the tunnel or the model is not ready yet. The AI engine's web UI is not accessible.
-- **Online**: the tunnel is operational, and the model is running. End users may access the AI engine's web UI via the **Access Link**.
+- **Creating**: the tunnel order has been placed, but the tunnel or the model is not ready yet. The model interface is not accessible.
+- **Online**: the tunnel is operational, and the model is running. End users may access the model interface via the **Access Link**.
 - **Offline**: the tunnel order is done, and the tunnel is no longer available. The model is inaccessible, but the expired **Access Link** remains visible.
 
 To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. The **Tunnels** section and the **Tunnels Orders** tab only exist for orders that utilize tunnels and are only visible to the user who placed the order.
@@ -116,15 +116,15 @@ The **Tunnel Orders** tab contains information about tunnel orders related to th
 <br/>
 <br/>
 
-- **Date Created** (hidden by default): the date and time when the customer placed the order.
-- **Date Modified**: the date and time of the latest change in the order status.
-- **Order ID**: a unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
-- **Offer**: the solution used in the tunnel's order or suborder. Read about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
-- **Status**: current status of the order. Read about [statuses](/fundamentals/orders#order-status).
-- **Lease Remaining**: the remaining time until the order is complete and gets the Done status.
-- **Cost to Date**: the total amount of SPPI tokens spent on the order so far.
-- **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
-- **Balance**: the remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
+- **Date Created** (hidden by default): The date and time when the customer placed the order.
+- **Date Modified**: The date and time of the latest change in the order status.
+- **Order ID**: A unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
+- **Offer**: The <a id="solution"><span className="dashed-underline">solution</span></a> used in the tunnel's order or suborder. Read about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
+- **Status**: The current [order status](/fundamentals/orders#order-status).
+- **Lease Remaining**: The remaining time until the order is complete and gets the Done status.
+- **Cost to Date**: The total amount of SPPI tokens spent on the order so far.
+- **Cost Per Hour** (hidden by default): The total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
+- **Balance**: The remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
 
 ## Events tab
 

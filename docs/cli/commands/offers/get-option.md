@@ -6,7 +6,7 @@ sidebar_label: "get-option"
 sidebar_position: 12
 ---
 
-Displays the information on a [configuration option](/fundamentals/slots) of a compute offer.
+Displays the information on a [configuration option](/fundamentals/slots) of a <a id="offer"><span className="dashed-underline">compute offer</span></a>.
 
 ## Syntax
 
@@ -17,8 +17,6 @@ Displays the information on a [configuration option](/fundamentals/slots) of a c
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Options
 

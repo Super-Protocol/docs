@@ -6,9 +6,9 @@ sidebar_label: "get-slot"
 sidebar_position: 11
 ---
 
-Displays the information for a [requirement slot](/fundamentals/slots#requirements) in an offer.
+Displays the information for a [requirement slot](/fundamentals/slots#requirements) of an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer.
+Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all the offer's slots.
 
 ## Syntax
 
@@ -20,8 +20,6 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

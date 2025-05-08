@@ -16,8 +16,6 @@ Displays the information on a provider using its authority account address.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |

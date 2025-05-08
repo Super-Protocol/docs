@@ -5,11 +5,11 @@ slug: "/order-builder"
 sidebar_position: 7
 ---
 
-_Order Builder_ is a tool to configure <a id="order"><span className="dashed-underline">orders</span></a> to deploy AI models. Deployment orders consist of three main components:
+_Order Builder_ is a tool to configure <a id="order"><span className="dashed-underline">orders</span></a> to deploy AI models. A deployment order consists of three main components:
 
-- **Model**
-- **Engine**
-- **Compute**
+- **AI model**
+- <a id="engine"><span className="dashed-underline">**Engine**</span></a>
+- <a id="compute"><span className="dashed-underline">**Compute**</span></a>
 
 <img src={require('../images/order-builder.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -30,9 +30,9 @@ Ensure your uploaded model fits into the maximum compute configuration [allowed 
 
 ## Engine
 
-The term _engine_ refers to the software necessary to deploy models and provide a user interface.
+_Engine_ is an application designed to launch AI models, execute model tasks, customize parameters, and provide an interface to interact with models.
 
-Currently, Super Protocol supports two AI engines:
+Currently, Super Protocol supports two engines:
 
 - **Text Generation Web UI** for text-to-text models.
 - **ComfyUI** for image- and video-related tasks.

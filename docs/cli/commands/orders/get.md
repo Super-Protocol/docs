@@ -5,7 +5,7 @@ slug: "/commands/orders/get"
 sidebar_label: "get"
 ---
 
-Displays the information on an order.
+Displays the information on an <a id="order"><span className="dashed-underline">order</span></a>.
 
 This command allows you to check any order, not only yours. The information on all orders is openly available on the blockchain.
 
@@ -19,8 +19,6 @@ This command allows you to check any order, not only yours. The information on a
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

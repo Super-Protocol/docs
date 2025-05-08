@@ -9,7 +9,7 @@ Uploads a file to remote storage such as Storj.
 
 The primary purpose of this command is to make the uploading files available for download and execution. This is necessary in two cases:
 
-- With the [`workflows create`](/cli/commands/workflows/create) command, **users** can add the uploaded solution or data to an order instead of a Marketplace offer. In this case, a short-term storage period is enough.
+- With the [`workflows create`](/cli/commands/workflows/create) command, **users** can add the uploaded <a id="solution"><span className="dashed-underline">solution</span></a> or <a id="data"><span className="dashed-underline">data</span></a> to an <a id="order"><span className="dashed-underline">order</span></a> instead of an <a id="offer"><span className="dashed-underline">offer</span></a>. In this case, a short-term storage period is enough.
 - Solution and data **providers** can store the contents of their offers to make them available for customers' orders. This requires a long-term storage period.
 
 Depending on the options, the command provides two ways to upload and store the files. Choose one that suits you better:
@@ -35,8 +35,6 @@ The output of the command is a resource JSON file with the information for a com
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

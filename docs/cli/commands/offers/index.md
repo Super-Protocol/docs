@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ---
 
-This command group contains commands to view and manage [offers](/fundamentals/offers). Note that [Marketplace web app](https://marketplace.superprotocol.com/marketplace) can be more convenient to use than most of these commands.
+This group contains commands to view and manage <a id="offer"><span className="dashed-underline">offers</span></a>.
 
 ## Commands
 

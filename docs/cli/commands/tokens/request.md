@@ -19,8 +19,6 @@ This command is only available during the Testnet. Be mindful of [Testnet limita
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Options
 
 | **Name** | **Description** |

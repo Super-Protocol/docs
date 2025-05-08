@@ -6,9 +6,9 @@ sidebar_label: "delete-slot"
 sidebar_position: 10
 ---
 
-Deletes a [requirement slot](/fundamentals/slots#requirements) in an [offer](/fundamentals/offers).
+Deletes a [requirement slot](/fundamentals/slots#requirements) in an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/cli/commands/offers/get-slot) command to get additional information on a slot.
 
@@ -21,8 +21,6 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

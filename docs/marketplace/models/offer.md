@@ -18,8 +18,8 @@ On the right-hand side of the window, you can find metadata about the <a id="off
 - **Offer Type**: The type of the offer:
     + **Model**
     + **Dataset**
-    + **Engine**
-    + **Compute**.
+    + <a id="engine"><span className="dashed-underline">**Engine**</span></a>
+    + <a id="compute"><span className="dashed-underline">**Compute**</span></a>.
 - **Provider**: The name of the provider that created the offer.
 - **Category**: The tasks the model is intended for.
 - **Source**: A link to the resource from which the model was taken.

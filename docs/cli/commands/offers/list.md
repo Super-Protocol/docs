@@ -6,7 +6,7 @@ sidebar_label: "list"
 sidebar_position: 1
 ---
 
-Displays a list of available offers.
+Displays a list of available <a id="offer"><span className="dashed-underline">offers</span></a>.
 
 ## Syntax
 
@@ -19,8 +19,6 @@ Displays a list of available offers.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

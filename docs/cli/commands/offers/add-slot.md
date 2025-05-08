@@ -6,11 +6,11 @@ sidebar_label: "add-slot"
 sidebar_position: 8
 ---
 
-Creates an additional [requirement slot](/fundamentals/slots#requirements) in an offer using the information in an offer slot JSON file.
+Creates an additional [requirement slot](/fundamentals/slots#requirements) for an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 Refer to the [Providers and Offers] guide to create the initial offer requirements.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -21,8 +21,6 @@ Refer to the [Providers and Offers] guide to create the initial offer requiremen
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

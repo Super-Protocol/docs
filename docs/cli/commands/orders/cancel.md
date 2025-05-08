@@ -5,7 +5,7 @@ slug: "/commands/orders/cancel"
 sidebar_label: "cancel"
 ---
 
-Cancels an order.
+Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 
 ## Syntax
 
@@ -14,8 +14,6 @@ Cancels an order.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 

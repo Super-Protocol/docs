@@ -43,8 +43,8 @@ This tab contains general information about the offer.
 - **About\***: Offer description with Markdown support. If the model files contain a `README.md` file, the description will be taken from it.
 - **Name\***: The offer name. Providing a meaningful name makes it easier to find the model on the Marketplace.
 - **Category\***: The tasks for which the model is intended.
-- **Engine\***: A solution that launches the model and provides a user interface. Each engine exists in two variants:
-    + GPU-only engines require CPU+GPU compute offers.
+- **Engine\***: A <a id="solution"><span className="dashed-underline">solution</span></a> designed to launch AI models, customize parameters, configure workflows, and provide an interface to interact with models. Each engine exists in two variants:
+    + GPU-only engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
     + CPU-only engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
 - **Parameters**: Model parameters in millions or billions.
 - **License\***: The license under which the model is distributed.

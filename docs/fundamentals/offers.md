@@ -5,18 +5,18 @@ slug: "/offers"
 sidebar_position: 2
 ---
 
-_Offer_ is an open listing for a resource available on the Marketplace. To add an offer to an <a id="order"><span className="dashed-underline">order</span></a>, users must pay the price in SPPI tokens set by the offer provider.
+_Offer_ is an open listing for a computing service, software product, or data available on the Marketplace. To add an offer to an <a id="order"><span className="dashed-underline">order</span></a>, users must pay the price in SPPI tokens set by the offer provider.
 
-_Offer providers_ share and monetize their applications and datasets by creating and maintaining _community offers_ on the Super Protocol Marketplace. 
+_Providers_ share and monetize their applications and datasets by creating and maintaining _community offers_ on the Super Protocol Marketplace. 
 
 ## Types of offers
 
 Offers are the basic building blocks of the Marketplace. Four types of offers exist in Super Protocol:
 
-- _Compute offers_: confidential computing resources to execute solutions and data inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
-- _Solution offers_: applications such as AI frameworks, base images, tunnels, oracles, etc.
+- _Compute offers_: Confidential computing resources required to deploy models, launch confidential tunnels, and execute <a id="solution"><span className="dashed-underline">solutions</span></a> inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
+- _Solution offers_: Applications such as AI frameworks, base images, tunnels, oracles, etc.
 - _Data offers_: AI models, webpages, configs, datasets, databases, etc.
-- _Storage offers_: decentralized storage, such as Storj, to keep the offer content, order results, and service files.
+- _Storage offers_: Decentralized storage, such as Storj, to keep the offer content, order results, and service files.
 
 _Value offer_ is a collective term for solution, data, and storage offers.
 
@@ -52,7 +52,7 @@ An order can include several solution and data offers. For example, a solution o
 
 ### Storage
 
-Storage offers are necessary to store the order results. It is also possible to create independent [storage orders](/fundamentals/orders#storage) for encrypted solution and data files for respective community offers.
+Storage offers are necessary to store the order results. It is also possible to create independent storage orders for encrypted solution and data files for respective community offers.
 
 A storage offer is a combination of two parts:
 
@@ -137,7 +137,7 @@ _Configuration slots_ are sets of compute-related parameters of compute offers:
 - The number of CPU cores
 - RAM
 - Disk space
-- Minimum and maximum [lease time](/fundamentals/orders#lease-deposit-and-balance)
+- Minimum and maximum [lease time](/fundamentals/orders#usage-scenarios)
 
 _Configuration options_ are sets of network-related parameters of compute offers:
 

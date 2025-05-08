@@ -17,8 +17,6 @@ The resource JSON file is created as a result of the [`files upload`](/cli/comma
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |

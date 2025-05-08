@@ -6,7 +6,7 @@ sidebar_position: 9
 
 ---
 
-This command group contains a single command to verify the authenticity and integrity of a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> by examining the enclave quote.
+This group contains a single command to verify the authenticity and integrity of a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> by examining its quote.
 
 ## Command
 

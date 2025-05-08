@@ -6,9 +6,9 @@ sidebar_position: 1
 
 ---
 
-This command group contains commands to manage SPPI and BNB tokens.
+This group contains commands to manage SPPI and BNB tokens.
 
-SPPI tokens are necessary to pay for orders in Super Protocol. BNB tokens are necessary for processing transactions on the opBNB blockchain.
+SPPI tokens are necessary to pay for <a id="order"><span className="dashed-underline">orders</span></a> in Super Protocol. BNB tokens are necessary for processing transactions on the opBNB blockchain.
 
 ## Commands
 

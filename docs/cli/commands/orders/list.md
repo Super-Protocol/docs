@@ -5,7 +5,7 @@ slug: "/commands/orders/list"
 sidebar_label: "list"
 ---
 
-Lists orders stored on the blockchain.
+Lists <a id="order"><span className="dashed-underline">orders</span></a> stored on the blockchain.
 
 This command displays a list of all orders and suborders, unless the `--my-account true` option is specified.
 
@@ -22,8 +22,6 @@ This command displays a list of all orders and suborders, unless the `--my-accou
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Options
 

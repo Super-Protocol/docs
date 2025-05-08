@@ -16,8 +16,6 @@ Lists all registered providers.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Options  
 
 | <div style={{width:265}}>**Name**</div> | **Description** |

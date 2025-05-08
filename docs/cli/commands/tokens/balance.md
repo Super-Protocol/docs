@@ -15,8 +15,6 @@ Displays the balance of SPPI and BNB tokens in your wallet.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Option
 
 | **Name** | **Description** |
