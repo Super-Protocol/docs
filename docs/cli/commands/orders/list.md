@@ -38,8 +38,6 @@ This command displays a list of all orders and suborders, unless the `--my-accou
 
 ## Example
 
-The following command displays the IDs, offer names, and offer descriptions of all the compute orders created by the current Testnet account:
-
 ```
 ./spctl orders list --fields id,offer_name,offer_description --my-account true --type tee
 ```

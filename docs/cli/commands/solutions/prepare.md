@@ -67,15 +67,7 @@ Note that the base image is graminized but not included in the output archive fi
 
 ## Example
 
-The following command prepares a solution:
-
 ```
 ./spctl solutions prepare ./my-solution/run ./my-solution/signing-key \
     --base-image-path ./base-solution-image.tar.gz 
 ```
-
-Where:
-
-- `./my-solution/run`: solution directory
-- `./my-solution/signing-key`: path to the signing key
-- `--base-image-path ./base-solution-image.tar.gz`: path to the base image file `base-solution-image.tar.gz`.

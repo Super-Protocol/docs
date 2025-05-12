@@ -1,6 +1,6 @@
 ---
 id: "offers"
-title: "Offers and Providers"
+title: "Providers and Offers"
 slug: "/offers"
 sidebar_position: 2
 ---
@@ -13,7 +13,7 @@ _Providers_ share and monetize their applications and datasets by creating and m
 
 Offers are the basic building blocks of the Marketplace. Four types of offers exist in Super Protocol:
 
-- _Compute offers_: Confidential computing resources required to deploy models, launch confidential tunnels, and execute <a id="solution"><span className="dashed-underline">solutions</span></a> inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
+- _Compute offers_: Confidential computing resources required to deploy models, launch confidential tunnels, and execute <a id="solution"><span className="dashed-underline">solutions</span></a> inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> (TEE).
 - _Solution offers_: Applications such as AI frameworks, base images, tunnels, oracles, etc.
 - _Data offers_: AI models, webpages, configs, datasets, databases, etc.
 - _Storage offers_: Decentralized storage, such as Storj, to keep the offer content, order results, and service files.
@@ -30,11 +30,11 @@ Every offer has an identification number—_offer ID_. It is incremental and uni
 
 ### Compute
 
-Compute offer is the main component in any order. It provides the resources and a Trusted Execution Environment necessary to perform a secure execution of solutions.
+Compute offer is the main component in any order. It provides the resources and a TEE necessary to perform a secure execution of solutions.
 
 A compute offer is a combination of two parts:
 
-- A record on the blockchain containing the parameters that govern how to order the offer
+- A record on the blockchain containing the parameters that govern how to order the offer.
 - A physical confidential computing device connected to Super Protocol.
 
 To balance the load and set better prices for the users, the compute provider can divide the resources of the physical machine into smaller parts—configuration [slots and options](/fundamentals/slots#configuration).
@@ -115,8 +115,8 @@ Every offer comes with the following descriptive parameters:
 - **Provider**: name of the provider who created the offer.
 - **Published date**: the date when the offer was created.
 - **Updated date**: the date when changes were made to the offer.
-- **MRENCLAVE**: value that represents the hash of the code and data inside a Trusted Execution Environment.
-- **MRSIGNER**: value for identifying the signing entity of a Trusted Execution Environment.
+- **MRENCLAVE**: value that represents the hash of the code and data inside a TEE.
+- **MRSIGNER**: value for identifying the signing entity of a TEE.
 
 ## Rules
 
@@ -145,6 +145,6 @@ _Configuration options_ are sets of network-related parameters of compute offers
 - Traffic
 - External port availability
 
-Compute providers can create multiple configuration slots and options for every offer and price them differently. The customer must choose a compute configuration to meet the sum of all the solution, data, and storage requirements in the order.
+Compute providers can create multiple configuration slots and options for every offer and price them differently. A compute configuration selected for an order must meet the sum of all the solution, data, and storage requirements in this order.
 
 Read more in [Slots and Options](/fundamentals/slots).

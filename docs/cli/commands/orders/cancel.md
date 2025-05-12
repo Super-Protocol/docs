@@ -30,8 +30,6 @@ Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 
 ## Example
 
-The following command cancels the order with ID 1312:
-
 ```
 ./spctl orders cancel 1312
 ```

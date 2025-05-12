@@ -30,8 +30,6 @@ This command is only available during the Testnet. Be mindful of [Testnet limita
 
 ## Example
 
-The following command requests SPPI tokens:
-
 ```
 ./spctl tokens request --tee
 ```

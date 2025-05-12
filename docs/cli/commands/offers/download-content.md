@@ -35,8 +35,6 @@ The command only works with offers that allow this operation.
 
 ## Example
 
-The following command downloads the content of the [Python Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D5) (offer ID: 5):
-
 ```
-./spctl offers download-content 5
+./spctl offers download-content 12
 ```

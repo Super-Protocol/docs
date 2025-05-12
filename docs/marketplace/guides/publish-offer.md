@@ -149,3 +149,7 @@ If the uploaded model exists in several formats, create requirement slots for ea
 Click **Publish Offer** in the bottom-right corner to validate and publish the offer on the Marketplace. If validation is unsuccessful, you will see yellow indicators marking the fields that need to be configured before the offer can be published.
 
 If you want to unpublish the offer, click the **[ ⋮ ]** button in the top-right corner of the screen. Note that offers cannot be completely deleted due to the blockchain immutability. However, unpublished offers do not appear on the Marketplace and cannot be used in orders.
+
+## Contact Super Protocol
+
+If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

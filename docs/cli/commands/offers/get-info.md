@@ -34,14 +34,6 @@ Displays the information on an <a id="offer"><span className="dashed-underline">
 
 ## Example
 
-The following command displays information on the data offer [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offer=offerId%3D19) (offer ID: 19), as stored on the blockchain:
-
 ```
-./spctl offers get-info value 19 --save-to ./offer-19.json
+./spctl offers get-info value 30 --save-to ./offer-30.json
 ```
-
-Where:
-
-- `value`: type of the offer
-- `19`: offer ID
-- `--save-to ./offer-19.json`: path to the file for the output.

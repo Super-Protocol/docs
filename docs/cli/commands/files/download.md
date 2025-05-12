@@ -33,8 +33,6 @@ The resource JSON file is created as a result of the [`files upload`](/cli/comma
 
 ## Example
 
-The following command downloads and decrypts a file from remote storage using the information in the `resource-data.json` file located in the SPCTL root directory. The downloaded file will appear in the SPCTL root directory.
-
 ```
 ./spctl files download ./resource-data.json  ./
 ```

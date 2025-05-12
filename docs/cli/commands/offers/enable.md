@@ -33,8 +33,6 @@ Enables an existing disabled <a id="offer"><span className="dashed-underline">of
 
 ## Example
 
-The following command enables the offer with ID 39:
-
 ```
 ./spctl offers enable 39
 ```

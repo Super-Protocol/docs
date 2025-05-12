@@ -33,8 +33,6 @@ Certain <a id="order"><span className="dashed-underline">orders</span></a> requi
 
 ## Example
 
-The following command adds 3 SPPI tokens to the deposit of the order with ID 1312:
-
 ```
 ./spctl orders replenish-deposit 1312 3
 ```

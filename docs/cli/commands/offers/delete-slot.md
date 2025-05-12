@@ -39,8 +39,6 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
 
 ## Example
 
-The following command deletes a requirement slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39:
-
 ```
 ./spctl offers delete-slot value --offer 39 --slot 47
 ```

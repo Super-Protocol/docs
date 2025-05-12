@@ -5,7 +5,7 @@ slug: "/commands/quotes/validate"
 sidebar_label: "validate"
 ---
 
-Checks if the domain content runs in a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>. The command also displays if the domain content is a Super Protocol <a id="offer"><span className="dashed-underline">offer</span></a>.
+Checks if the domain content runs in a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>. The command also displays if the domain content is an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 ## Syntax
 

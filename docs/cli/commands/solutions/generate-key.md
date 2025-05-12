@@ -32,8 +32,6 @@ Docker needs this key to [pack a solution](/cli/commands/solutions/prepare) into
 
 ## Example
 
-The following command generates a signing key and saves it to the `new-key` file in the SPCTL root directory:
-
 ```
 ./spctl solutions generate-key ./new-key
 ```

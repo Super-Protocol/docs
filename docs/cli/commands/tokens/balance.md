@@ -24,8 +24,6 @@ Displays the balance of SPPI and BNB tokens in your wallet.
 
 ## Example
 
-The following command checks the balance of the account specified in the `config-provider.json` file.
-
 ```
 ./spctl tokens balance --config ./config-provider.json
 ```

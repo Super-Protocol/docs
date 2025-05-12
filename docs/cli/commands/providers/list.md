@@ -28,8 +28,6 @@ Lists all registered providers.
 
 ## Example
 
-The following command displays the names, descriptions, authority account addresses, and action account addresses of all registered providers:
-
 ```
 ./spctl providers list --fields name,description,authority_account,action_account
 ```

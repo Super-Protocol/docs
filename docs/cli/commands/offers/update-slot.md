@@ -43,8 +43,6 @@ Refer to [Offer requirements] to create the initial offer requirements. Refer to
 
 ## Example
 
-The following command updates a slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39 using the information in the file `offer-slot.json` in the SPCTL directory:
-
 ```
-./spctl offers update-slot value --offer 39 --slot 47 --path ./offer-slot.json
+./spctl offers update-slot value --offer 46 --slot 45 --path ./offer-slot.json
 ```

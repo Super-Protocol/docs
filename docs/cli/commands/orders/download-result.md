@@ -37,8 +37,6 @@ If the order status is `Error`, the result archive will contain a text file with
 
 ## Example
 
-The following command downloads the result of the order 1312 and saves it to the `1312.tar.gz` file in the `results` directory:
-
 ```
 ./spctl orders download-result 1312 --save-to ./results/1312.tar.gz
 ```

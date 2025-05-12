@@ -32,8 +32,6 @@ The resource JSON file is created as a result of the [`files upload`](/cli/comma
 
 ## Example
 
-The following command deletes a file in remote storage using the information in the `resource-old-data.json` file located in the SPCTL root directory:
-
 ```
 ./spctl files delete ./resource-old-data.json
 ```

@@ -39,8 +39,6 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all t
 
 ## Example
 
-The following command displays the information on a requirement slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39:
-
 ```
-./spctl offers get-slot value --offer 39 --slot 47
+./spctl offers get-slot value --offer 39 --slot 38
 ```

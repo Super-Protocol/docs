@@ -29,8 +29,6 @@ Displays the information on a [configuration option](/fundamentals/slots) of a <
 
 ## Example
 
-The following command displays the information on the option with ID 3 of [TEE Offer #1](https://marketplace.superprotocol.com/compute?offerId=1) (offer ID: 1):
-
 ```
 ./spctl offers get-option --offer 1 --option 3
 ```

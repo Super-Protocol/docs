@@ -198,7 +198,7 @@ If you use a free Storj account, your files will become unavailable after the en
 
 :::
 
-2. Create a bucket for your encrypted <a id="solution"><span className="dashed-underline">solutions</span></a> and data. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
+2. Create a bucket for your encrypted <a id="solution"><span className="dashed-underline">solutions</span></a> and <a id="data"><span className="dashed-underline">data</span></a>. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
 
 3. Create two access grants for this bucket. One should provide **Full** permission (**Read**, **List**, **Write**, **Delete**), and the other one **Read** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
 

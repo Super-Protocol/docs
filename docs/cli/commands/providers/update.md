@@ -54,8 +54,6 @@ Template with example values:
 
 ## Example
 
-The following command updates the current provider using the `updated-provider.json` file located in the SPCTL root directory:
-
 ```
 ./spctl providers update --path ./updated-provider.json
 ```

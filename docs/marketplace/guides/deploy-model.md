@@ -66,3 +66,7 @@ Due to [Testnet limitations](/marketplace/limitations), the total size of model 
 2.4. When your order is ready, you will see the Deployed status and an Access Link to your model's interface.
 
 <img src={require('../images/order-deployed-online.png').default} width="auto" height="auto" border="1"/>
+
+## Contact Super Protocol
+
+If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

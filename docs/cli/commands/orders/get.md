@@ -38,8 +38,6 @@ This command allows you to check any order, not only yours. The information on a
 
 ## Example
 
-The following command display the information on the order with ID 3770, including the IDs and offer names of its suborders:
-
 ```
 ./spctl orders get 3770 \
     --suborders true \

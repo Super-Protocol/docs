@@ -62,8 +62,6 @@ The following command displays the IDs, names, and types of the first 30 <a id="
 
 ### Example 2
 
-The following command displays the IDs, names, and descriptions of value offers with IDs 37, 39, and 40:
-
 ```
-./spctl offers list value --ids 37 39 40 --fields id,name,description
+./spctl offers list value --ids 30 31 32 33 --fields id,name,description
 ```
