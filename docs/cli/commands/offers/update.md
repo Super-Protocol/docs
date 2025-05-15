@@ -6,11 +6,11 @@ sidebar_label: "update"
 sidebar_position: 5
 ---
 
-Updates information of an existing offer using an offer description JSON file.
+Updates information about an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 Refer to the [Providers and Offers] guide to create the initial offer description.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -20,8 +20,6 @@ Refer to the [Providers and Offers] guide to create the initial offer descriptio
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -64,32 +62,32 @@ The offer slot JSON file may contain the following objects, arrays, and strings:
 
 Offer JSON file template with example values for a solution identical to [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offer=offerId%3D18):
 
-```json title="offer.json"
+```json title="offerInfo.json"
 {
-  "name": "Image Classification Dataset #1",
-  "group": "0",
-  "offerType": "3",
-  "cancelable": false,
-  "description": "Dataset with images of various breeds of dogs<br/><br/>This demo dataset is compatible with the Image Classification solution. Refer to the documentation for detailed instructions.",
-  "restrictions": {
-    "offers": [
+  "name":"Image Classification Dataset #1",
+  "group":"0",
+  "offerType":"3",
+  "cancelable":false,
+  "description":"Dataset with images of various breeds of dogs<br/><br/>This demo dataset is compatible with the Image Classification solution. Refer to the documentation for detailed instructions.",
+  "restrictions":{
+    "offers":[
       "8",
       "5"
     ],
-    "types": [
+    "types":[
       "2",
       "2"
     ]
   },
-  "metadata": "",
-  "input": "",
-  "output": "",
-  "allowedArgs": "",
-  "allowedAccounts": [],
-  "argsPublicKey": "",
-  "resultResource": "",
-  "linkage": "",
-  "hash": ""
+  "metadata":"",
+  "input":"",
+  "output":"",
+  "allowedArgs":"",
+  "allowedAccounts":[],
+  "argsPublicKey":"",
+  "resultResource":"",
+  "linkage":"",
+  "hash":""
 }
 ```
 
@@ -104,8 +102,6 @@ The file may contain only the fields that need to be updated. For example, to on
 
 ## Example
 
-The following command updates an existing <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39 using the information in the `updated-offer-39.json` in the SPCTL root directory:
-
 ```
-./spctl offers update value 39 --path ./updated-offer-39.json
+./spctl offers update value 46 --path ./updated-offer-46.json
 ```

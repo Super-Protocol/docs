@@ -5,7 +5,7 @@ slug: "/commands/orders/list"
 sidebar_label: "list"
 ---
 
-Lists orders stored on the blockchain.
+Lists <a id="order"><span className="dashed-underline">orders</span></a> stored on the blockchain.
 
 This command displays a list of all orders and suborders, unless the `--my-account true` option is specified.
 
@@ -23,8 +23,6 @@ This command displays a list of all orders and suborders, unless the `--my-accou
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Options
 
 | <div style={{width:369}}>**Name**</div> | **Description** |
@@ -39,8 +37,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command displays the IDs, offer names, and offer descriptions of all the compute orders created by the current Testnet account:
 
 ```
 ./spctl orders list --fields id,offer_name,offer_description --my-account true --type tee

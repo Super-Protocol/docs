@@ -6,7 +6,7 @@ sidebar_label: "get-info"
 sidebar_position: 3
 ---
 
-Displays the information on an offer as stored on the blockchain.
+Displays the information on an <a id="offer"><span className="dashed-underline">offer</span></a> as stored on the blockchain.
 
 ## Syntax
 
@@ -16,8 +16,6 @@ Displays the information on an offer as stored on the blockchain.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -36,14 +34,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command displays information on the data offer [Image Classification Dataset #2](https://marketplace.superprotocol.com/data?offer=offerId%3D19) (offer ID: 19), as stored on the blockchain:
-
 ```
-./spctl offers get-info value 19 --save-to ./offer-19.json
+./spctl offers get-info value 30 --save-to ./offer-30.json
 ```
-
-Where:
-
-- `value`: type of the offer
-- `19`: offer ID
-- `--save-to ./offer-19.json`: path to the file for the output.

@@ -6,7 +6,7 @@ sidebar_label: "get"
 sidebar_position: 2
 ---
 
-Displays information on an offer.
+Displays information on an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 ## Syntax
 
@@ -16,8 +16,6 @@ Displays information on an offer.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -36,14 +34,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command displays information on the data offer [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offer=offerId%3D19) (offer ID: 18):
-
 ```
-./spctl offers get value 18 --save-to ./offer-18.json
+./spctl offers get value 30 --save-to ./offer-30.json
 ```
-
-Where:
-
-- `value`: type of the offer
-- `18`: offer ID
-- `--save-to ./offer-19.json`: save the output to `offer-19.json` in the SPCTL root directory.

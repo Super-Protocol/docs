@@ -5,7 +5,7 @@ slug: "/all-orders/order"
 sidebar_position: 1
 ---
 
-This screen provides detailed information about a particular <a id="order"><span className="dashed-underline">order</span></a>. Read about [Orders](/fundamentals/orders).
+This screen provides detailed information about a particular <a id="order"><span className="dashed-underline">order</span></a>.
 
 <img src={require('../images/order.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -22,7 +22,7 @@ The contents of an order are encrypted and accessible only to the user who place
 - **In Queue**. The order is awaiting in the queue for the computing device to become available.
 - **Processing**. The machine is executing the order inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
 
-Statuses specific for Deploy orders:
+Statuses specific for deployment orders:
 
 - **Deployed**. The model is running and available via the **Access Link**.
 - **Done**. The model is no longer running.
@@ -35,7 +35,7 @@ Additional possible statuses:
 
 Read about [statuses](/fundamentals/orders#order-status).
 
-**Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the <a id="offer"><span className="dashed-underline">offers</span></a> priced per hour. For Deploy orders with the Deployed status, it is the duration the model will remain operational.
+**Lease Remaining** indicates the remaining time until the order is completed and gets the Done status. It is calculated by dividing the remaining order balance by the total cost of all the <a id="offer"><span className="dashed-underline">offers</span></a> priced per hour. For deployment orders with the Deployed status, it is the duration the model will remain operational.
 
 ## Financials
 
@@ -47,12 +47,12 @@ The **Financials** section shows payment-related information about the order:
 
 ## Deployment
 
-The **Deployment** section informs about the launched tunnel. Tunnels enable end users to securely access a model deployed on Super Protocol from the internet. Read about [Tunnels](/fundamentals/tunnels).
+The **Deployment** section informs about the launched <a id="tunnel"><span className="dashed-underline">tunnel</span></a>.
 
 **Status** indicates the current state of the tunnel:
 
-- **Creating**: the tunnel order has been placed, but the tunnel or the model is not ready yet. The AI engine's web UI is not accessible.
-- **Online**: the tunnel is operational, and the model is running. End users may access the AI engine's web UI via the **Access Link**.
+- **Creating**: the tunnel order has been placed, but the tunnel or the model is not ready yet. The model interface is not accessible.
+- **Online**: the tunnel is operational, and the model is running. End users may access the model interface via the **Access Link**.
 - **Offline**: the tunnel order is done, and the tunnel is no longer available. The model is inaccessible, but the expired **Access Link** remains visible.
 
 To get detailed information about the tunnel orders related to the main order, open the **Tunnels Orders** tab at the bottom of the screen. The **Tunnels** section and the **Tunnels Orders** tab only exist for orders that utilize tunnels and are only visible to the user who placed the order.
@@ -69,7 +69,7 @@ These buttons are only visible to the user who placed the order.
 
 ### Cancel Order
 
-The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that Web3 users should **Confirm** in MetaMask. If you **Reject** the transaction, the cancellation process will not proceed.
+The **Cancel Order** button lets you cancel the order and transfer the remaining balance back to your wallet. Clicking the button initiates the cancellation process by creating a transaction that Web3 users should **Confirm** in MetaMask.
 
 <img src={require('../images/metamask-transaction.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -79,7 +79,7 @@ The **Cancel Order** button lets you cancel the order and transfer the remaining
 The **Extend Lease** button opens the **Extend Lease** window that allows you to add SPPI tokens to the order balance:
 
 - For Fine-tune orders, it may be necessary to finish the computation.
-- For Deploy orders, it increases the time the model will be running.
+- For deployment orders, it increases the time the model will be running.
 
 <img src={require('../images/extend-lease.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -106,25 +106,23 @@ The **Providers** tab contains additional information about the order and its su
 
 Click the suborder's **ID** number to open its **Order** screen. Note that some suborders may not be available to view.
 
-Read more about [order types](/fundamentals/orders).
-
 ## Tunnel Orders tab
 
-The **Tunnel Orders** tab contains information about tunnel orders related to the main order. The tab is visible only for orders that utilize tunnels.
+The **Tunnel Orders** tab contains information about the tunnel orders related to the main order. The tab is visible only for orders that utilize <a id="tunnel"><span className="dashed-underline">tunnels</span></a>.
 
 <img src={require('../images/order-tunnels.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-- **Date Created** (hidden by default): the date and time when the customer placed the order.
-- **Date Modified**: the date and time of the latest change in the order status.
-- **Order ID**: a unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
-- **Offer**: the solution used in the tunnel's order or suborder. Read about [orders](/fundamentals/orders) and [tunnels](/fundamentals/tunnels).
-- **Status**: current status of the order. Read about [statuses](/fundamentals/orders#order-status).
-- **Lease Remaining**: the remaining time until the order is complete and gets the Done status.
-- **Cost to Date**: the total amount of SPPI tokens spent on the order so far.
-- **Cost Per Hour** (hidden by default): the total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
-- **Balance**: the remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
+- **Date Created** (hidden by default): The date and time when the customer placed the order.
+- **Date Modified**: The date and time of the latest change in the order status.
+- **Order ID**: A unique offer identification number. It is incremental and continuous for all orders and suborders on Super Protocol.
+- **Offer**: The <a id="solution"><span className="dashed-underline">solution</span></a> used in the tunnel order or suborder.
+- **Status**: The current order status.
+- **Lease Remaining**: The remaining time until the order is complete and gets the Done status.
+- **Cost to Date**: The total amount of SPPI tokens spent on the order so far.
+- **Cost Per Hour** (hidden by default): The total cost of all the offers priced per hour. Every hour, the order balance decreases by this amount.
+- **Balance**: The remaining order balance. When it reaches zero, the order gets the Done status. You can replenish the balance using the **Extend Lease** button.
 
 ## Events tab
 

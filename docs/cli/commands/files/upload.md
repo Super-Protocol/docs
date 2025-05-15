@@ -9,7 +9,7 @@ Uploads a file to remote storage such as Storj.
 
 The primary purpose of this command is to make the uploading files available for download and execution. This is necessary in two cases:
 
-- With the [`workflows create`](/cli/commands/workflows/create) command, **users** can add the uploaded solution or data to an order instead of a Marketplace offer. In this case, a short-term storage period is enough.
+- With the [`workflows create`](/cli/commands/workflows/create) command, **users** can add the uploaded <a id="solution"><span className="dashed-underline">solution</span></a> or <a id="data"><span className="dashed-underline">data</span></a> to an <a id="order"><span className="dashed-underline">order</span></a> instead of an <a id="offer"><span className="dashed-underline">offer</span></a>. In this case, a short-term storage period is enough.
 - Solution and data **providers** can store the contents of their offers to make them available for customers' orders. This requires a long-term storage period.
 
 Depending on the options, the command provides two ways to upload and store the files. Choose one that suits you better:
@@ -36,8 +36,6 @@ The output of the command is a resource JSON file with the information for a com
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
@@ -60,15 +58,7 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Examples
 
-The following are three examples of using the `workflows create` command:
-
-- Uploading to remote storage
-- Creating a storage order
-- Using additional options.
-
-### Example 1. Upload to remote storage directly
-
-The following command uploads the `content.tar.gz` file located in the SPCTL root directory:
+### Example 1. Upload to storage directly
 
 ```
 ./spctl files upload content.tar.gz
@@ -76,24 +66,20 @@ The following command uploads the `content.tar.gz` file located in the SPCTL roo
 
 To execute this command successfully, you need a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/cli#set-up-storj-access-optional) section to create a bucket and access grants and set up SPCTL.
 
-### Example 2. Upload by creating a storage order
-
-The following command uploads the `content.tar.gz` located in the SPCTL root directory:
+### Example 2. Upload and create a storage order
 
 ```
-./spctl files upload content.tar.gz --storage 25,33 --min-rent-minutes 120
+./spctl files upload content.tar.gz --storage 47,49 --min-rent-minutes 120
 ```
 
 Where:
 
-- `--storage 25,33`: create a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D25&tab=pricing) (offer ID: 25) and the requirement slot with ID 33.
-- `--min-rent-minutes 120`: set the lease period for 120 minutes.
+- `--storage 47,49`: Create a storage order using the [Storj DCS Offer](https://marketplace.superprotocol.com/storage?offer=offerId%3D47&tab=pricing) (offer ID: 47) and the requirement slot with ID 49.
+- `--min-rent-minutes 120`: Set the lease period for 120 minutes.
 
 Since the `--storage` option is set, the command does not require a Storj account. However, when the lease period is over, the content will become unavailable unless you [replenish the order deposit](/cli/commands/orders/replenish-deposit).
 
-### Example 3. Use additional options
-
-The following command uploads the `content.tar.gz` file located in the `data` directory in the SPCTL root directory:
+### Example 3. Upload using additional options
 
 ```
 ./spctl files upload ./data/content.tar.gz \
@@ -103,10 +89,3 @@ The following command uploads the `content.tar.gz` file located in the `data` di
     --storage 25,33 \
     --min-rent-minutes 120
 ```
-
-Where:
-
-- `--filename data.tar.gz`: name the uploaded file `data.tar.gz`
-- `--output ./data-resource.json`: name the output resource JSON file `data-resource.json` and save it to the SPCTL root directory
-- `--metadata ./meta.json`: add the `meta.json` metadata file to the resource file during the upload
-- Other options are explained in the previous example.

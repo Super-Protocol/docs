@@ -6,7 +6,7 @@ sidebar_position: 7
 
 ---
 
-This command group contains commands to view and update [providers](/fundamentals/offers).
+This group contains commands to view and update [providers](/fundamentals/offers).
 
 ## Commands
 

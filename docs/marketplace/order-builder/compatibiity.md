@@ -16,14 +16,14 @@ This message appears when the selected model and a dataset do not belong to the 
 
 ## Not compatible with the engine
 
-This message appears when the selected engine does not support the model or dataset. An example of such a message:
+This message appears when the selected <a id="engine"><span className="dashed-underline">engine</span></a> does not support the model or dataset. An example of such a message:
 
 <img src={require('../images/compatibility-issues-1.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Compute configuration is not sufficient
 
-This message appears when the selected compute configuration does not meet the combined requirements of the models, datasets, and engine added to the order.
+This message appears when the selected <a id="compute"><span className="dashed-underline">compute</span></a> configuration does not meet the combined requirements of the models, datasets, and engine added to the order.
 
 <img src={require('../images/compatibility-issues-3.png').default} width="auto" height="auto" border="1"/>
 <br/>

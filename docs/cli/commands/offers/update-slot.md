@@ -6,9 +6,9 @@ sidebar_label: "update-slot"
 sidebar_position: 9
 ---
 
-Updates a [requirement slot](/fundamentals/slots#requirements) in an existing offer using the information in a JSON file.
+Updates a [requirement slot](/fundamentals/slots#requirements) of an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/cli/commands/offers/get-slot) command to get additional information on a slot.
 
@@ -24,8 +24,6 @@ Refer to [Offer requirements] to create the initial offer requirements. Refer to
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -45,8 +43,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command updates a slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39 using the information in the file `offer-slot.json` in the SPCTL directory:
-
 ```
-./spctl offers update-slot value --offer 39 --slot 47 --path ./offer-slot.json
+./spctl offers update-slot value --offer 46 --slot 45 --path ./offer-slot.json
 ```

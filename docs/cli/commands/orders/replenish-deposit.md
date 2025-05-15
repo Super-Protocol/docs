@@ -7,7 +7,7 @@ sidebar_label: "replenish-deposit"
 
 Replenishes the order deposit.
 
-Certain orders require a positive deposit balance to keep running.
+Certain <a id="order"><span className="dashed-underline">orders</span></a> require a positive deposit balance to keep running.
 
 ## Syntax
 
@@ -16,8 +16,6 @@ Certain orders require a positive deposit balance to keep running.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -34,8 +32,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command adds 3 SPPI tokens to the deposit of the order with ID 1312:
 
 ```
 ./spctl orders replenish-deposit 1312 3

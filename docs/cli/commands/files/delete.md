@@ -17,8 +17,6 @@ The resource JSON file is created as a result of the [`files upload`](/cli/comma
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
@@ -33,8 +31,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command deletes a file in remote storage using the information in the `resource-old-data.json` file located in the SPCTL root directory:
 
 ```
 ./spctl files delete ./resource-old-data.json

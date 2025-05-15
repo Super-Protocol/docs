@@ -16,8 +16,6 @@ Displays the information on a provider using its authority account address.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
@@ -34,9 +32,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command displays the name, address, and description of the provider with the authority account 0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa:
-
 ```
-./spctl providers get 0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa \
-    --fields name,address,description
+./spctl providers get 0xB9f0b77BDC567E453fbAe9fBe3E60Bd503605BAa --fields name,address,description
 ```

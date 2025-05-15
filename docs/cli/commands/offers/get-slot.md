@@ -6,9 +6,9 @@ sidebar_label: "get-slot"
 sidebar_position: 11
 ---
 
-Displays the information for a [requirement slot](/fundamentals/slots#requirements) in an offer.
+Displays the information for a [requirement slot](/fundamentals/slots#requirements) of an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer.
+Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all the offer's slots.
 
 ## Syntax
 
@@ -20,8 +20,6 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -41,8 +39,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command displays the information on a requirement slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39:
-
 ```
-./spctl offers get-slot value --offer 39 --slot 47
+./spctl offers get-slot value --offer 39 --slot 38
 ```

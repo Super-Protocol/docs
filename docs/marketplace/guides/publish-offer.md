@@ -45,8 +45,8 @@ Uploading models and creating <a id="offer"><span className="dashed-underline">o
 
 - **Name**: Type in the model name. Providing a meaningful name makes it easier to find the offer on the Marketplace.
 - **Category**: Select the type of task that the model is designed to perform.
-- **Engine**: Select compatible engines; it is recommended to select both variants:
-    + **GPU-only** engines require CPU+GPU compute offers.
+- **Engine**: Select compatible <a id="engine"><span className="dashed-underline">engines</span></a>; it is recommended to select both variants:
+    + **GPU-only** engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
     + **CPU-only** engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
 - **Upload**: Click to upload files or a directory. The selected directory will become the root after upload.
 
@@ -149,3 +149,7 @@ If the uploaded model exists in several formats, create requirement slots for ea
 Click **Publish Offer** in the bottom-right corner to validate and publish the offer on the Marketplace. If validation is unsuccessful, you will see yellow indicators marking the fields that need to be configured before the offer can be published.
 
 If you want to unpublish the offer, click the **[ ⋮ ]** button in the top-right corner of the screen. Note that offers cannot be completely deleted due to the blockchain immutability. However, unpublished offers do not appear on the Marketplace and cannot be used in orders.
+
+## Contact Super Protocol
+
+If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ---
 
-This command group contains commands to prepare a solution for deployment on Super Protocol and generate a key for signing a Docker container with a solution.
+This group contains commands to prepare a <a id="solution"><span className="dashed-underline">solution</span></a> for deployment on Super Protocol and generate a key for signing a Docker container with a solution.
 
 ## Commands
 

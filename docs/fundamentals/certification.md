@@ -5,13 +5,13 @@ slug: "/certification"
 sidebar_position: 6
 ---
 
-Super Protocol uses a certification system for signing data, verifying signatures, and ensuring applications operate within a trusted <a id="tee"><span className="dashed-underline">confidential computing environment</span></a>. Verified data is published on the blockchain on behalf of confidential containers, allowing anyone to validate application integrity and ensure confidentiality. End users only interact with issued certificates and verify signatures, while the complexities of Remote Attestation are seamlessly managed in the background.
+Super Protocol uses a certification system for signing data, verifying signatures, and ensuring applications operate within a trusted confidential computing environment. Verified data is published on the blockchain on behalf of confidential containers, allowing anyone to validate application integrity and ensure confidentiality. End users only interact with issued certificates and verify signatures, while the complexities of Remote Attestation are seamlessly managed in the background.
 
 All the system components are open-source, ensuring transparency and verifiability.
 
 ## Architecture
 
-The backbone of the system is a hierarchical structure of <a id="ca"><span className="dashed-underline">Certification Authorities</span></a> operating inside Trusted Execution Environments (TEE)—Intel SGX enclaves.
+The backbone of the system is a hierarchical structure of <a id="ca"><span className="dashed-underline">Certification Authorities</span></a> operating inside <a id="tee"><span className="dashed-underline">Trusted Execution Environments</span></a> (TEE)—Intel SGX enclaves.
 
 <img src={require('./images/certification-system-architecture.png').default} width="auto" height="auto"/>
 <br/>
@@ -33,7 +33,7 @@ To receive an order certificate, the Trusted Loader sends a request to a SubRoot
 
 Orders in Super Protocol are created with necessary input data. This execution environment is referred to as *Workload Info*.
 
-The Workload Info includes an array called `runtimeInfo[]` with metadata about solutions and datasets used in the order. Each such order component has an entry in this array, which includes:
+The Workload Info includes an array called `runtimeInfo[]` with metadata about <a id="solution"><span className="dashed-underline">solutions</span></a> and datasets used in the order. Each such order component has an entry in this array, which includes:
 
 - Type
 - Hash

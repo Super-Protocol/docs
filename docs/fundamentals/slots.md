@@ -5,9 +5,9 @@ slug: "/slots"
 sidebar_position: 4
 ---
 
-_Requirements_ describe the parameters that a solution, data, or storage <a id="offer"><span className="dashed-underline">offer</span></a> needs to run.
+_Requirements_ describe the parameters that a <a id="solution"><span className="dashed-underline">solution</span></a>, data, or storage <a id="offer"><span className="dashed-underline">offer</span></a> needs to run.
 
-_Configurations_ provide flexibility in selecting computing resources and internet access for offer deployment. The compute offer configuration added to an <a id="order"><span className="dashed-underline">order</span></a> must meet all the <a id="value-offer"><span className="dashed-underline">value offer</span></a> requirements in this order.
+_Configurations_ provide flexibility in selecting computing resources and internet access for offer deployment. The compute offer configuration added to an <a id="order"><span className="dashed-underline">order</span></a> must meet all the requirements in this order.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ Additionally, providers can make their offers available for a fixed price or per
 
 ## Configuration
 
-_Configuration_ is a way to divide the resources of a physical confidential computing device into smaller parts. This division enables a better distribution of [compute offer](/fundamentals/offers#types-of-offers) resources between orders. Customers usually do not need the resources of the whole machine for their orders.
+_Configuration_ is a way to divide the resources of a physical confidential computing device into smaller parts. This division enables a better distribution of compute offer resources between orders. Customers usually do not need the resources of the whole machine for their orders.
 
 Configuration is a combination of _configuration slots_ and _configuration options_. Configuration slots are responsible for compute resources:
 

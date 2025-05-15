@@ -7,43 +7,37 @@ sidebar_position: 3
 
 _Orders_ and _suborders_ on Super Protocol are digital contracts between customers and providers for leasing computing services, software products, and data—collectively referred to as <a id="offer"><span className="dashed-underline">offers</span></a>.
 
-The term _order_ always implies the usage of a compute offer. Every additional offer added to the order creates a separate _suborder_ with the respective provider. If you add your uploaded solutions and data, they create no suborders.
+The term _order_ always implies the usage of a compute offer. Every additional offer added to the order creates a separate _suborder_ with the respective provider. If you add your uploaded <a id="solution"><span className="dashed-underline">solutions</span></a> and data, they create no suborders.
 
 Every order and suborder has a unique identification number—_order ID_. It is incremental and continuous for both orders and suborders.
 
 <img src={require('../marketplace/images/order.png').default} width="auto" height="auto"/>
 <br/>
 
-## Order composition
+## Order creation
 
 Most orders consist of four building blocks:
 
-- **Solution**: Applications, engines, scripts, base images, and other programs.
-- **Data**: Any data required by solutions. AI models fall into this category.
-- **Compute**: Confidential computing resources required to execute solutions.
-- **Storage**: Decentralized storage used to keep order results after execution.
-
-Solutions and data may be either leased from the Marketplace or uploaded by users.
-
-Compute and storage can currently only be provided by Super Protocol.
-
-## Order creation
+- **Solution**: <a id="engine"><span className="dashed-underline">Engines</span></a>, applications, scripts, base images, and other programs intended to launch on Super Protocol.
+- **Data**: AI models, webpages, configs, datasets, databases, and any other data that solutions may require.
+- **Compute**: Confidential computing resources required to execute solutions and data inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> (TEE).
+- **Storage**: Decentralized storage that keeps order results after execution.
 
 There are two ways to place an order:
 
-- The [Marketplace web app](https://marketplace.superprotocol.com/) is user-friendly, but limited to deploying AI models using the engines available on the Marketplace.
+- The [Marketplace web app](https://marketplace.superprotocol.com/) has a convenient graphical user interface, but limited to deploying AI models using the engines available on the Marketplace.
 - The [command-line interface (CLI)](/cli) allows the launch of any applications and provides additional functionality.
 
-Orders exist on the blockchain and are visible to anyone. So, while the solutions and data inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment (TEE)</span></a> remain confidential, the general information about any order is available using the CLI.
+Orders exist on the blockchain and thus are visible to anyone. The general information about any order is readily available using the [`orders get`](/cli/commands/orders/get) command. However, the solutions and data inside a TEE remain confidential.
 
-The order result is kept by the storage suborder for as long as the customer keeps paying for it. Only the customer who placed the order knows the private key necessary to decrypt the result.
+The storage suborder keeps the encrypted order result for as long as the customer keeps paying for it. Only the customer who placed the order knows the private key necessary to decrypt the result.
 
 ## Usage scenarios
 
 Depending on the solution, there are two typical usage scenarios:
 
 - One-off orders perform a specific computation and produce a result, such as an order to fine-tune an AI model.
-- Long-term orders keep running as long as the order has money in the balance. For example, an order to deploy an AI model using an engine with a web interface accessible through a confidential tunnel.
+- Long-term orders keep running as long as the order has money in the balance. For example, an order to deploy an AI model using an engine with a web interface accessible through a confidential <a id="tunnel"><span className="dashed-underline">tunnel</span></a>.
 
 _Lease time_ is the duration for which a customer rents the services of an offer. Solutions, data, and storage are suborders, so their lease time is tied to the compute lease time.
 

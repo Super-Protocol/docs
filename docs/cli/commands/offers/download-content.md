@@ -6,7 +6,7 @@ sidebar_label: "download-content"
 sidebar_position: 4
 ---
 
-Downloads the content of an offer.
+Downloads the content of an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 The command only works with offers that allow this operation.
 
@@ -18,8 +18,6 @@ The command only works with offers that allow this operation.
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -37,8 +35,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Example
 
-The following command downloads the content of the [Python Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D5) (offer ID: 5):
-
 ```
-./spctl offers download-content 5
+./spctl offers download-content 12
 ```

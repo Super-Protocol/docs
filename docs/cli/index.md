@@ -8,7 +8,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-**SPCTL**—Super Protocol Control—is a versatile tool to access the Marketplace CLI. With this tool, you can create and manage orders, offers, providers, keys, files, and more.
+**SPCTL**—Super Protocol Control—is a versatile tool to access the Marketplace CLI. With this tool, you can create and manage <a id="order"><span className="dashed-underline">orders</span></a>, <a id="offer"><span className="dashed-underline">offers</span></a>, providers, keys, files, and more.
 
 ## Download SPCTL
 
@@ -101,15 +101,15 @@ You can configure SPCTL using the `./spctl setup` command or by manually creatin
         |`"writeAccessToken"`   | (optional) Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket.|
         |`"readAccessToken"`    | (optional) Storj access grant with **Read** permission for this bucket.|
 
-        3. Generate a private key for order result encryption using the [workflows generate-key](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
+        3. Generate a private key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
     </TabItem>
 </Tabs>
 
 ## Configure SPCTL for providers
 
-This section is for offer providers only. Skip it if you are a regular user.
+This section is for providers only. Skip it if you are a regular user.
 
-Providers need another copy of SPCTL configured for their accounts to manage offers.
+Providers need another copy of SPCTL configured to manage their offers.
 
 <Tabs>
     <TabItem value="provider-tools" label="Provider Tools" default>
@@ -182,7 +182,7 @@ Providers need another copy of SPCTL configured for their accounts to manage off
             },
         ```
 
-        3. Generate a private key for order result encryption using the [workflows generate-key](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
+        3. Generate a private key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
     </TabItem>
 </Tabs>
 
@@ -198,7 +198,7 @@ If you use a free Storj account, your files will become unavailable after the en
 
 :::
 
-2. Create a bucket for your encrypted solutions and data. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
+2. Create a bucket for your encrypted <a id="solution"><span className="dashed-underline">solutions</span></a> and <a id="data"><span className="dashed-underline">data</span></a>. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
 
 3. Create two access grants for this bucket. One should provide **Full** permission (**Read**, **List**, **Write**, **Delete**), and the other one **Read** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
 

@@ -15,8 +15,6 @@ Displays the balance of SPPI and BNB tokens in your wallet.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Option
 
 | **Name** | **Description** |
@@ -25,8 +23,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command checks the balance of the account specified in the `config-provider.json` file.
 
 ```
 ./spctl tokens balance --config ./config-provider.json
