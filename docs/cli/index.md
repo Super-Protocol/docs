@@ -93,13 +93,13 @@ You can configure SPCTL using the `./spctl setup` command or by manually creatin
 
         2. Do not change the preconfigured values and provide values to the following keys:
 
-        |**Key**                |**Description**|
-        |:-|:-|
-        |`"accountPrivateKey"`  | An EVM wallet private key. Super Protocol recommends creating a separate wallet for the testnet.|
-        |`"bucket"`             | (optional) Name of a Storj bucket.|
-        |`"prefix"`             | (optional) Path to a directory inside the bucket. It can be empty.|
-        |`"writeAccessToken"`   | (optional) Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket.|
-        |`"readAccessToken"`    | (optional) Storj access grant with **Read** permission for this bucket.|
+        | **Key**               | *Description** |
+        | :- | :- |
+        | `"accountPrivateKey"` | An EVM wallet private key. Super Protocol recommends creating a separate wallet for the testnet. |
+        | `"bucket"`            | (optional) Name of a Storj bucket. |
+        | `"prefix"`            | (optional) Path to a directory inside the bucket. It can be empty. |
+        | `"writeAccessToken"`  | (optional) Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
+        | `"readAccessToken"`   | (optional) Storj access grant with **Read** permission for this bucket. |
 
         3. Generate a private key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
     </TabItem>
@@ -204,11 +204,11 @@ If you use a free Storj account, your files will become unavailable after the en
 
 4. Open SPCTL's `config.json` in a text editor and provide values to the following key:
 
-|**Key**                |**Description**|
-|:-|:-|
-|`"bucket"`             | Name of a Storj bucket.|
-|`"writeAccessToken"`   | Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket.|
-|`"readAccessToken"`    | Storj access grant with **Read** permission for this bucket.|
+| **Key**              | **Description** |
+| :- | :- |
+| `"bucket"`           | Name of a Storj bucket. |
+| `"writeAccessToken"` | Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
+| `"readAccessToken"`  | Storj access grant with **Read** permission for this bucket. |
 
 ## Support
 

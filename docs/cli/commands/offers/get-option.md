@@ -22,8 +22,8 @@ Displays the information on a [configuration option](/fundamentals/slots) of a <
 
 | **Name** | **Description** |
 | :- | :- |
-| `--offer <offerId>` | ID of the offer. |
-| `--option <optionId>` | ID of the configuration option. |
+| `--offer <offerId>` | Offer ID. |
+| `--option <optionId>` | Configuration option ID. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 

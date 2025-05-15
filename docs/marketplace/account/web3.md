@@ -25,12 +25,12 @@ This window allows you to manage your [Web3 User account](/marketplace/account#w
 You have two options of decentralized storage to upload files:
 
 - **Super Protocol cloud**:
-    + Recommended for most users.
-    + Does not require additional setup.
-    + Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
+    - Recommended for most users.
+    - Does not require additional setup.
+    - Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
 - **Your Storj account**:
-    + Intended for advanced users.
-    + Requires creating and setting up a Storj account.
-    + Gives sole control over the uploaded content and storage account.
+    - Intended for advanced users.
+    - Requires creating and setting up a Storj account.
+    - Gives sole control over the uploaded content and storage account.
 
 Read [How to Set Up Storage](/marketplace/guides/storage) for step-by-step instructions.

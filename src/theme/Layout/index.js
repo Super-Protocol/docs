@@ -18,23 +18,43 @@ export default function Layout(props) {
       <Tooltip clickable anchorSelect="#offer">
         <a href="https://docs.superprotocol.com/fundamentals/offers/"><i>Offer</i></a> is a computing service, software product, or data available on the Marketplace for lease and use in orders.<br/>
         Offers are divided into four categories:<br/>
+          ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
           ᐧ Solution offers: Engines, applications, scripts, base images, and other software.<br/>
           ᐧ Data offers: AI models, webpages, configs, datasets, databases, and any other data that solutions may require.<br/>
-          ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
           ᐧ Storage offers: Decentralized storage that keeps order results after execution.
       </Tooltip>
 
       <Tooltip clickable anchorSelect="#offer-bottom" place='bottom'>
         <a href="https://docs.superprotocol.com/fundamentals/offers/"><i>Offer</i></a> is a computing service, software product, or data available on the Marketplace for lease and use in orders.<br/>
         Offers are divided into four categories:<br/>
+          ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
           ᐧ Solution offers: Engines, applications, scripts, base images, and other software.<br/>
           ᐧ Data offers: AI models, webpages, configs, datasets, databases, and any other data that solutions may require.<br/>
-          ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
           ᐧ Storage offers: Decentralized storage that keeps order results after execution.
       </Tooltip>
 
       <Tooltip clickable anchorSelect="#value-offer">
         <i>Value offer</i> is a collective term for solution, data, and storage <a href="https://docs.superprotocol.com/fundamentals/offers/">offers</a>.
+      </Tooltip>
+      
+      <Tooltip clickable anchorSelect="#slot">
+        <a href="https://docs.superprotocol.com/fundamentals/slots"><i>Slot</i></a> is a set of computing resources that may include CPU, GPU, RAM, disk space, etc.<br/><br/>
+
+        <i>Requirement slot</i> specifies how much computing resources a value offer needs to run.<br/><br/>
+
+        <i>Configuration slot</i> represents a portion of a compute offer's resources available for lease.
+      </Tooltip>
+
+      <Tooltip clickable anchorSelect="#requirements">
+        <a href="https://docs.superprotocol.com/fundamentals/slots"><i>Requirements</i></a> specify how much computing resources a value offer needs to run.<br/>
+        A <i>requirement slot</i> is a particular set of requirements that may include CPU, RAM, disk space, bandwidth, traffic, etc.
+      </Tooltip>
+
+      <Tooltip clickable anchorSelect="#configuration">
+        <a href="https://docs.superprotocol.com/fundamentals/slots"><i>Configuration slots</i> and <i>options</i></a> divide the resources of a physical confidential computing machine into smaller parts for better distribution between orders:<br/>
+          ᐧ Configuration slots are responsible for computing resources, such as CPU, GPU, RAM, VRAM, and disk space.<br/>
+          ᐧ Configuration options are responsible for network-related resources, such as bandwidth, traffic, and external port availability.<br/><br/>
+        <i>Configuration</i> is a combination of configuration slots and configuration options.
       </Tooltip>
 
       <Tooltip anchorSelect="#engine">
@@ -42,7 +62,7 @@ export default function Layout(props) {
       </Tooltip>
 
       <Tooltip anchorSelect="#compute">
-        <i>Compute</i> means confidential computing resources required to deploy models, launch confidential tunnels,<br/> and execute solutions inside a Trusted Execution Environment.
+        <i>Compute</i> means confidential computing resources used to deploy models, launch confidential tunnels,<br/> and execute solutions inside a Trusted Execution Environment.
       </Tooltip>
 
       <Tooltip anchorSelect="#solution">
@@ -50,7 +70,7 @@ export default function Layout(props) {
       </Tooltip>
 
       <Tooltip anchorSelect="#data">
-        <i>Data</i> is an AI model, webpage, config, dataset, database, etc., that solutions may require.
+        <i>Data</i> is an AI model, webpage, config, dataset, database, or other information that solutions may require.
       </Tooltip>
 
       <Tooltip clickable anchorSelect="#order">

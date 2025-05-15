@@ -140,11 +140,11 @@ The **Events** tab contains information on what is happening with the order.
 - **Name**: The name of the offer.
 - **Status**: The status of the order or suborder when the event occurred.
 - **Event**: The code of what happened. The main blockchain events:
-    + **OrderCreated**: The order or suborder is created on the blockchain.
-    + **OrderStarted**: The compute order has started.
-    + **OrderStatusUpdated**: The order or suborder status has changed without any new events.
-    + **OrderEncryptedResultUpdated**: The resource path to the order result was written to the blockchain.
-    + **OrderChangeWithdrawn**: The remaining token balance was returned to the customer.
-    + **OrderProfitWithdrawn**: The provider withdrew the offer payment from the order balance.
+    - **OrderCreated**: The order or suborder is created on the blockchain.
+    - **OrderStarted**: The compute order has started.
+    - **OrderStatusUpdated**: The order or suborder status has changed without any new events.
+    - **OrderEncryptedResultUpdated**: The resource path to the order result was written to the blockchain.
+    - **OrderChangeWithdrawn**: The remaining token balance was returned to the customer.
+    - **OrderProfitWithdrawn**: The provider withdrew the offer payment from the order balance.
 - **Value**: The transaction value in SPPI tokens, if applicable.
 - **Txn Hash**: The transaction hash. Clicking it opens the transaction in the [OKLink block explorer](https://www.oklink.com/).

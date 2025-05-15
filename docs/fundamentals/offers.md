@@ -37,7 +37,7 @@ A compute offer is a combination of two parts:
 - A record on the blockchain containing the parameters that govern how to order the offer.
 - A physical confidential computing device connected to Super Protocol.
 
-To balance the load and set better prices for the users, the compute provider can divide the resources of the physical machine into smaller parts—configuration [slots and options](/fundamentals/slots#configuration).
+To balance the load and set better prices for the users, the compute provider can divide the resources of the physical machine into smaller parts—<a id="configuration"><span className="dashed-underline">configuration slots and options</span></a>.
 
 ### Solution and data
 
@@ -106,10 +106,10 @@ Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 Every offer comes with the following descriptive parameters:
 
 - **Type**:
-    + Compute
-    + Solution
-    + Data
-    + Storage
+    - Compute
+    - Solution
+    - Data
+    - Storage
 - **Id**: unique identification number of the offer.
 - **Description**: text description of the offer.
 - **Provider**: name of the provider who created the offer.

@@ -38,23 +38,23 @@ Web3 users can receive up to **1.5 SPPI** tokens and **0.0001 BNB** tokens daily
 
 ## Model limits
 
-If you want to upload and deploy your model, its total size should not exceed 13 GB; otherwise, deployment may fail. More machines with larger slots to support bigger models will be available in the future.
+If you want to upload and deploy your model, its total size should not exceed 13 GB; otherwise, deployment may fail. More machines with larger <a id="configuration"><span className="dashed-underline">slots</span></a> to support bigger models will be available in the future.
 
 Also, deployed models must belong to a category supported by one of the AI engines:
 
 - **Text Generation Web UI** supports text-based tasks:
-  + Text Generation
-  + Text Classification
-  + Translation
-  + Text2Text Generation
+  - Text Generation
+  - Text Classification
+  - Translation
+  - Text2Text Generation
 - **ComfyUI** supports various image- and video-related tasks:
-  + Image Classification
-  + Object Detection
-  + Image Segmentation
-  + Text-to-Image
-  + Image-to-Text
-  + Image-to-Image
-  + Image-to-Video
-  + Video Classification
-  + Text-to-Video
-  + Mask Generation
+  - Image Classification
+  - Object Detection
+  - Image Segmentation
+  - Text-to-Image
+  - Image-to-Text
+  - Image-to-Image
+  - Image-to-Video
+  - Video Classification
+  - Text-to-Video
+  - Mask Generation

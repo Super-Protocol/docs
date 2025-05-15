@@ -47,5 +47,5 @@ Trusted Loader generates and publishes a report in the blockchain, allowing anyo
 
 - The public components of all the certificates in the chain
 - Workload Info:
-    + Order creation date
-    + The `runtimeInfo[]` array
+    - Order creation date
+    - The `runtimeInfo[]` array

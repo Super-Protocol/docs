@@ -23,7 +23,7 @@ This message appears when the selected <a id="engine"><span className="dashed-un
 
 ## Compute configuration is not sufficient
 
-This message appears when the selected <a id="compute"><span className="dashed-underline">compute</span></a> configuration does not meet the combined requirements of the models, datasets, and engine added to the order.
+This message appears when the selected <a id="configuration"><span className="dashed-underline">compute configuration</span></a> does not meet the combined <a id="requirements"><span className="dashed-underline">requirements</span></a> of the models, datasets, and engine added to the order.
 
 <img src={require('../images/compatibility-issues-3.png').default} width="auto" height="auto" border="1"/>
 <br/>

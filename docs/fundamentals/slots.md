@@ -5,7 +5,7 @@ slug: "/slots"
 sidebar_position: 4
 ---
 
-_Requirements_ describe the parameters that a <a id="solution"><span className="dashed-underline">solution</span></a>, data, or storage <a id="offer"><span className="dashed-underline">offer</span></a> needs to run.
+_Requirements_ specify how much computing resources an <a id="offer"><span className="dashed-underline">offer</span></a> needs to run.
 
 _Configurations_ provide flexibility in selecting computing resources and internet access for offer deployment. The compute offer configuration added to an <a id="order"><span className="dashed-underline">order</span></a> must meet all the requirements in this order.
 

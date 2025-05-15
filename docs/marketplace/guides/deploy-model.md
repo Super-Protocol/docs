@@ -30,8 +30,8 @@ Uploading models and creating <a id="offer"><span className="dashed-underline">o
 - **Name**: Type in the model name. Providing a meaningful name makes it easier to find the model later.
 - **Category**: Select the type of task that the model is designed to perform.
 - **Engine**: Select compatible <a id="engine"><span className="dashed-underline">engines</span></a>; it is recommended to select both variants:
-    + **GPU-only** engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
-    + **CPU-only** engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
+    - **GPU-only** engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
+    - **CPU-only** engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
 - **Upload**: Click to upload files or a directory. The selected directory will become the root after upload.
 
 :::note
