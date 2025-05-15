@@ -11,12 +11,12 @@ sidebar_position: 21
 <br/>
 <br/>
 
-Super Protocol uses *SSL/TLS certificates* to encrypt the data exchange between the user's browser and the web server inside the Tunnel Client deployment. Besides, Super Protocol Certification Authorities [issue certificates](/fundamentals/certification) for every <a id="order"><span className="dashed-underline">order</span></a>.
+Super Protocol uses *SSL/TLS certificates* to encrypt the data exchange between the user's browser and the web server inside a <a id="tunnel"><span className="dashed-underline">tunnel client</span></a> deployment. Besides, Super Protocol Certification Authorities [issue certificates](/fundamentals/certification) for every <a id="order"><span className="dashed-underline">order</span></a>.
 
 The Check Confidentiality service performs the following:
 
 - Validates the order certificate chain to ensure the order is being processed in a correct TEE.
-- Validates the integrity of the [Tunnel Client](/fundamentals/tunnels) deployment.
+- Validates the integrity of the tunnel client deployment.
 - Checks if the <a id="solution"><span className="dashed-underline">solution</span></a> is a Marketplace <a id="offer"><span className="dashed-underline">offer</span></a> (for instance, a specific <a id="engine"><span className="dashed-underline">engine</span></a>). Otherwise, you will see a warning "Deployed solution is not an offer" meaning the solution cannot be verified.
 
 <img src={require('./images/check-confidentiality-not-offer.png').default} width="auto" height="auto" border="1"/>
@@ -27,10 +27,10 @@ To view the service report, paste the domain URL, for example, **Access Link** a
 
 ## Validation
 
-The Tunnel Client signs the fingerprint of the domain SSL/TLS certificate with the order certificate's private key. Then, it provides to the Check Confidentiality service:
+The tunnel client signs the fingerprint of the domain SSL/TLS certificate with the order certificate's private key. Then, it provides to the Check Confidentiality service:
 
 - The SSL/TLS certificate fingerprint—the expected fingerprint.
-- The fingerprint signature. A valid signature means the Tunnel Client has the private key to the order certificate.
+- The fingerprint signature. A valid signature means the tunnel client has the private key to the order certificate.
 - The order certificate chain to check that all the certificates in the chain have not expired or been revoked. A valid certificate chain means the order is being processed in a correct TEE.
 
 ## Fingerprint comparison

@@ -24,7 +24,7 @@ Pricing and restrictions:
 - <a id="compute"><span className="dashed-underline">Compute</span></a> costs 0.2126 SPPI tokens per hour in most cases.
 - Currently, models from the Marketplace cost 0 SPPI per order.
 - Engines cost 0 SPPI per order.
-- Setting up a confidential tunnel costs 0.1-0.2 SPPI per order.
+- Setting up a confidential <a id="tunnel"><span className="dashed-underline">tunnel</span></a> costs 0.1-0.2 SPPI per order.
 
 For example, a two-hour GPU-order would cost:
 

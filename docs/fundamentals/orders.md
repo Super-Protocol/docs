@@ -37,7 +37,7 @@ The storage suborder keeps the encrypted order result for as long as the custome
 Depending on the solution, there are two typical usage scenarios:
 
 - One-off orders perform a specific computation and produce a result, such as an order to fine-tune an AI model.
-- Long-term orders keep running as long as the order has money in the balance. For example, an order to deploy an AI model using an engine with a web interface accessible through a confidential tunnel.
+- Long-term orders keep running as long as the order has money in the balance. For example, an order to deploy an AI model using an engine with a web interface accessible through a confidential <a id="tunnel"><span className="dashed-underline">tunnel</span></a>.
 
 _Lease time_ is the duration for which a customer rents the services of an offer. Solutions, data, and storage are suborders, so their lease time is tied to the compute lease time.
 

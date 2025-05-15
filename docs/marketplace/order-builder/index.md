@@ -87,7 +87,7 @@ Refer to the [Text Generation Web UI API documentation](https://github.com/oobab
 
 ### Tunnels
 
-Placing a deployment order also places an order for a [confidential tunnel](https://docs.superprotocol.com/fundamentals/tunnels) to access the engine's web UI via HTTPS. The engine settings include the **Tunnels** tab with **Domain Settings**:
+Placing a deployment order also places an order for a confidential <a id="tunnel"><span className="dashed-underline">tunnel</span></a> to access the engine's web UI via HTTPS. The engine settings include the **Tunnels** tab with **Domain Settings**:
 
 - **Temporary Domain** uses pre-configured settings to create a domain on `superprotocol.io` with a randomly generated name, for example, `mund-avys-kefs.superprotocol.io`. It is the recommended option that does not require additional setup.
 - **Manual Configuration** will allow advanced users to host a model on a custom domain. This feature is not yet available.

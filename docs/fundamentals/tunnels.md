@@ -9,8 +9,8 @@ _Tunneling_ is a communication method that encapsulates data within a different 
 
 Super Protocol uses tunnels to provide decentralized confidential computing as a web service. A tunnel consists of two components with a confidential connection between them:
 
-- The _tunnel server_ has a public IP address and is accessible over HTTPS via a browser or API.
-- The _tunnel client_, which hosts a web server, remains hidden behind the tunnel server and protected from external threats.
+- A _tunnel server_ has a public IP address and is accessible over HTTPS via a browser or API.
+- A _tunnel client_ hosts a web server; it remains hidden behind the tunnel server and protected from external threats.
 
 Both the tunnel server and tunnel client operate inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> (TEE) on separate compute machines, ensuring data confidentiality and secure execution.
 
