@@ -40,7 +40,7 @@ Web3 users can receive up to **1.5 SPPI** tokens and **0.0001 BNB** tokens daily
 
 If you want to upload and deploy your model, its total size should not exceed 13 GB; otherwise, deployment may fail. More machines with larger <a id="configuration"><span className="dashed-underline">slots</span></a> to support bigger models will be available in the future.
 
-Also, deployed models must belong to a category supported by one of the AI engines:
+Also, deployed models must belong to a category supported by one of the <a id="engine"><span className="dashed-underline">engines</span></a>:
 
 - **Text Generation Web UI** supports text-based tasks:
   - Text Generation

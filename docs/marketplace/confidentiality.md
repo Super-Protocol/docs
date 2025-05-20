@@ -23,7 +23,7 @@ The Check Confidentiality service performs the following:
 <br/>
 <br/>
 
-To view the service report, paste the domain URL, for example, **Access Link** available on the [**Order**](/marketplace/all-orders/order) screen of a deployed model.
+To view the service report, paste the domain URL, for example, **Access Link** available on the [**Order** screen](/marketplace/all-orders/order) of a deployed model.
 
 ## Validation
 
