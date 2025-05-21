@@ -18,7 +18,7 @@ The confirmation process depends on the account type:
 - **Web3 users** must confirm transactions in MetaMask. If the MetaMask browser extension do not open automatically, open it manually, select the transaction in the **Activity** tab, and confirm it.
 - **Web2 users** do not need to confirm transactions, as they do not pay using decentralized wallets. Instead, payment relies on Super Protocol. The transactions are processed automatically.
 
-Note that **Deploy** orders require confirmation of two transactions—one to pay for the Tunnels Launcher order and another for the main (Deploy) order. Tunnels Launcher creates a set of [confidential tunnels](/fundamentals/tunnels) necessary to access the running model from the internet.
+Note that **Deploy** orders require confirmation of two transactions—one to pay for the Tunnels Launcher order and another for the main (Deploy) order. Tunnels Launcher creates a confidential <a id="tunnel"><span className="dashed-underline">tunnel</span></a> necessary to access the running model from the internet.
 
 Once the order is placed successfully, you will be redirected to its [**Order**](/marketplace/all-orders/order) screen.
 

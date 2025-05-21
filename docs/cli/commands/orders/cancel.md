@@ -5,7 +5,7 @@ slug: "/commands/orders/cancel"
 sidebar_label: "cancel"
 ---
 
-Cancels an order.
+Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 
 ## Syntax
 
@@ -15,13 +15,11 @@ Cancels an order.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
 | :- | :- |
-| `<orderId>` | ID of the order. |
+| `<orderId>` | Order ID. |
 
 ## Options
 
@@ -31,8 +29,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command cancels the order with ID 1312:
 
 ```
 ./spctl orders cancel 1312

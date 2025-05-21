@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ---
 
-This command group contains commands to  create an [order](/fundamentals/orders) and generate a private key to access order results.
+This group contains commands to  create an <a id="order"><span className="dashed-underline">order</span></a> and generate a private key to access order results.
 
 ## Commands
 

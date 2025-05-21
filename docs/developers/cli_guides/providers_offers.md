@@ -167,9 +167,9 @@ Offer providers need the following Super Protocol accounts:
 
 - _Testnet user account_. the Testnet account provided by Super Protocol
 - Three _provider accounts_:
-  + _Authority account_: can change provider's records; the main provider account
-  + _Action account_: executes actions on behalf of the authority account
-  + _Token receiver account_: receives rewards in SPPI tokens for providing offers on Super Protocol.
+  - _Authority account_: can change provider's records; the main provider account
+  - _Action account_: executes actions on behalf of the authority account
+  - _Token receiver account_: receives rewards in SPPI tokens for providing offers on Super Protocol.
 
 ### Create accounts
 
@@ -280,7 +280,7 @@ Image Classification is a solution offer, hence `"offerType": "2"`. It depends o
 
 **Example 2**
 
-For a data offer identical to [Image Classification Dataset #1](https://marketplace.superprotocol.com/data?offer=offerId%3D18), the part of `offer-info.json` that you have to fill out should look like this:
+For a data offer identical to [Image Classification Dataset #1](https://marketplace.superprotocol.com/marketplace?offer=offerId%3D30), the part of `offer-info.json` that you have to fill out should look like this:
 
 ```json
 "name": "Image Classification Dataset #1",
@@ -472,7 +472,7 @@ For example:
 ./provider-tools deploy data --path "/mnt/hdd/provider-tools/data-execution-controller"
 ```
 
-When the order is created, you will see the ID of the Offer Provisioner order in the terminal output. For example:
+When the order is created, you will see its ID in the terminal output. For example:
 
 ```
 {"Successfully created workflow with id: 3394. You can go to https://marketplace.superprotocol.com/order/3394 to track order status."}

@@ -2,7 +2,7 @@
 id: "storage"
 title: "Set Up Personal Storage"
 slug: "/guides/storage"
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 This guide provides step-by-step instructions on how to set up your personal Storj account.
@@ -44,14 +44,14 @@ Open the [Marketplace web app](https://marketplace.superprotocol.com/). Log in a
 
 Select the **Your Storj account** radio button, fill in the fields, and click **Save**.
 
-| **Field** | **Value** |
+| **Field**            | **Value** |
 | :- | :- |
-| Bucket | Name of the Storj bucket |
-| Path | Path to a directory inside the bucket; it can be empty |
-| S3 Access Key (Full) | Access Key with **Full** permission |
-| S3 Secret Key (Full) | Secret Key with **Full** permission |
-| S3 Access Key (Read) | Access Key with **Read** permission |
-| S3 Secret Key (Read) | Secret Key with **Read** permissions |
+| Bucket               | Name of the Storj bucket. |
+| Path                 | Path to a directory inside the bucket; it can be empty. |
+| S3 Access Key (Full) | Access Key with **Full** permission. |
+| S3 Secret Key (Full) | Secret Key with **Full** permission. |
+| S3 Access Key (Read) | Access Key with **Read** permission. |
+| S3 Secret Key (Read) | Secret Key with **Read** permissions. |
 
 <img src={require('../images/web3-storage.png').default} width="auto" height="auto" border="1"/>
 <br/>

@@ -16,8 +16,6 @@ Lists all registered providers.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Options  
 
 | <div style={{width:265}}>**Name**</div> | **Description** |
@@ -29,8 +27,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command displays the names, descriptions, authority account addresses, and action account addresses of all registered providers:
 
 ```
 ./spctl providers list --fields name,description,authority_account,action_account

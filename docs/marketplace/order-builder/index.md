@@ -5,11 +5,11 @@ slug: "/order-builder"
 sidebar_position: 7
 ---
 
-_Order Builder_ is a tool to configure <a id="order"><span className="dashed-underline">orders</span></a> to deploy AI models. Deployment orders consist of three main components:
+_Order Builder_ is a tool to configure <a id="order"><span className="dashed-underline">orders</span></a> to deploy AI models. A deployment order consists of three main components:
 
-- **Model**
-- **Engine**
-- **Compute**
+- **AI model**
+- <a id="engine"><span className="dashed-underline">**Engine**</span></a>
+- <a id="compute"><span className="dashed-underline">**Compute**</span></a>
 
 <img src={require('../images/order-builder.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -18,9 +18,9 @@ _Order Builder_ is a tool to configure <a id="order"><span className="dashed-und
 
 If no model is currently added to the Order Builder, go to the **Marketplace** or **My Content** using the links and click the **Deploy** button next to the desired model. This will add the model to the order along with automatically selected engine and compute <a id="offer"><span className="dashed-underline">offers</span></a>.
 
-If the model offer has multiple [requirement slots](/fundamentals/slots), the **Deploy** button adds the first slot configured for GPU deployment. To deploy the model on CPU, click the model's name to open its [**Offer**](/marketplace/models/offer) window, go to the **Pricing** tab, and click the blue **[+]** button next to the desired slot.
+If the model offer has multiple <a id="requirements"><span className="dashed-underline">requirement slots</span></a>, the **Deploy** button adds the first slot configured for GPU deployment. To deploy the model on CPU, click the model's name to open its [**Offer**](/marketplace/models/offer) window, go to the **Pricing** tab, and click the blue **[+]** button next to the desired slot.
 
-To view the model's selected slot, expand the **Requirements**. If you add your uploaded model to the order, its requirements are not specified. The system does not include such models in the automatic calculation of the compute configuration.
+To view the model's selected slot, expand the **Requirements**. If you add your uploaded model to the order, its requirements are not specified. The system does not include such models in the automatic calculation of the <a id="configuration"><span className="dashed-underline">compute configuration</span></a>.
 
 :::warning
 
@@ -30,9 +30,9 @@ Ensure your uploaded model fits into the maximum compute configuration [allowed 
 
 ## Engine
 
-The term _engine_ refers to the software necessary to deploy models and provide a user interface.
+_Engine_ is an application designed to launch AI models, execute model tasks, customize parameters, and provide an interface to interact with models.
 
-Currently, Super Protocol supports two AI engines:
+Currently, Super Protocol supports two engines:
 
 - **Text Generation Web UI** for text-to-text models.
 - **ComfyUI** for image- and video-related tasks.
@@ -87,7 +87,7 @@ Refer to the [Text Generation Web UI API documentation](https://github.com/oobab
 
 ### Tunnels
 
-Placing a deployment order also places an order for a [confidential tunnel](https://docs.superprotocol.com/fundamentals/tunnels) to access the engine's web UI via HTTPS. The engine settings include the **Tunnels** tab with **Domain Settings**:
+Placing a deployment order also places an order for a confidential <a id="tunnel"><span className="dashed-underline">tunnel</span></a> to access the engine's web UI via HTTPS. The engine settings include the **Tunnels** tab with **Domain Settings**:
 
 - **Temporary Domain** uses pre-configured settings to create a domain on `superprotocol.io` with a randomly generated name, for example, `mund-avys-kefs.superprotocol.io`. It is the recommended option that does not require additional setup.
 - **Manual Configuration** will allow advanced users to host a model on a custom domain. This feature is not yet available.
@@ -102,7 +102,7 @@ The system automatically calculates a [compute configuration](/fundamentals/slot
 
 **In Queue** shows the number of orders waiting for an empty slot on this machine. If the number is greater than zero, your order may take longer to process. Consider choosing another compute offer.
 
-Clicking the machine's name opens its [**Offer**](/marketplace/models/offer) window.
+Clicking the machine's name opens its [**Offer** window](/marketplace/models/offer).
 
 <img src={require('../images/order-builder-queue.png').default} width="auto" height="auto" border="1"/>
 <br/>
