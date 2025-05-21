@@ -7,7 +7,7 @@ sidebar_label: "download-result"
 
 Downloads the order result—a TAR.GZ archive file containing:
 
-- A log file with any errors occured during the execution.
+- A log file with any errors occurred during the execution.
 - A directory with the execution result.
 
 If the order status is `Error`, the result archive will contain a text file with the error message.
@@ -25,7 +25,7 @@ If the order status is `Error`, the result archive will contain a text file with
 
 | **Name** | **Description** |
 | :- | :- |
-| `<orderId>` | ID of the order. |
+| `<orderId>` | Order ID. |
 
 ## Options
 

@@ -23,7 +23,7 @@ The command only works with offers that allow this operation.
 
 | **Name** | **Description** |
 | :- | :- |
-| `<offerId>` | ID of the offer. |
+| `<offerId>` | Offer ID. |
 
 ## Options
 

@@ -22,7 +22,7 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 
 | **Name** | **Description** |
 | :- | :- |
-| `<offerId>` | ID of the offer. |
+| `<offerId>` | Offer ID. |
 
 ## Option
 
@@ -34,5 +34,5 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 ## Example
 
 ```
-./spctl offers enable 39
+./spctl offers disable 39
 ```

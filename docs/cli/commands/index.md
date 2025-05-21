@@ -5,9 +5,7 @@ slug: "/commands"
 sidebar_position: 2
 ---
 
-This section contains the list of commands for the Super Protocol CLI tool SPCTL.
-
-[Configure SPCTL](/cli) before using these commands. Also keep in mind [testnet limitations](/marketplace/limitations).
+This section contains Super Protocol CLI commands. [Install and configure SPCTL](/cli) to access the CLI.
 
 ## Command groups
 
@@ -36,14 +34,12 @@ _Commands_ perform a specific function, like placing an order or showing the lis
 
 For example, the [`tokens`](/cli/commands/tokens) command group includes the following commands:
 
-- [`balance`](/cli/commands/tokens/balance): checks the balance
-- [`request`](/cli/commands/tokens/request): requests testnet tokens.
+- [`balance`](/cli/commands/tokens/balance): Checks the balance.
+- [`request`](/cli/commands/tokens/request): Requests testnet tokens.
 
-_Options_ modify the command behavior and are prefixed by double hyphen `--`. For example, `--help` is an option that displays help information for a command.
+_Options_ modify the command behavior and are prefixed by double hyphen `--`; for example, `--help`. Options can be mandatory or optional.
 
-_Arguments_ provide values for commands and options. Arguments that follow a command are always required by the command and mandatory to use. Arguments that follow an option can be mandatory—required by the option—or be optional. Angle brackets `< >` indicate argument placeholders in the command syntax. When executing a command, replace placeholders, including the brackets, with values. For example, replace `<offerId>` with `12` for [Python Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D12).
-
-Options, too, can be mandatory or optional. Most options require at least one argument.
+_Arguments_ provide values for commands and options. Angle brackets `< >` indicate argument placeholders in the command syntax. When executing a command, replace placeholders, including the brackets, with values. For example, replace `<offerId>` with `12` for [Python Base Image](https://marketplace.superprotocol.com/?offer=offerId%3D12).
 
 Command syntax may also contain the following special characters:
 
@@ -62,10 +58,10 @@ The following is a mandatory option `--solution` of the [`workflows create`](/cl
 --solution {<offerId>,[<slotId>] | <path>}
 ```
 
-The format `{<offerId>,[<slotId>] | <path>}` requires you to choose either `<offerId>,[<slotId>]` or `<path>`:
+The format `{<offerId>,[<slotId>] | <path>}` requires you to choose one of the following:
 
-- `<offerId>,[<slotId>]` are a mandatory argument `<offerId>` and an optional argument `<slotId>` (note the square brackets `[ ]`), separated by a comma.
-- `<path>` is a mandatory argument.
+- `<offerId>,[<slotId>]`: a mandatory argument `<offerId>` and an optional argument `<slotId>`, separated by a comma.
+- `<path>`: a mandatory argument.
 
 So, the final format of this option must be one of the following:
 

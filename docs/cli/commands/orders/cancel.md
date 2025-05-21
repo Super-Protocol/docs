@@ -19,7 +19,7 @@ Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 
 | **Name** | **Description** |
 | :- | :- |
-| `<orderId>` | ID of the order. |
+| `<orderId>` | Order ID. |
 
 ## Options
 

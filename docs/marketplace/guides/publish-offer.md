@@ -46,8 +46,8 @@ Uploading models and creating <a id="offer"><span className="dashed-underline">o
 - **Name**: Type in the model name. Providing a meaningful name makes it easier to find the offer on the Marketplace.
 - **Category**: Select the type of task that the model is designed to perform.
 - **Engine**: Select compatible <a id="engine"><span className="dashed-underline">engines</span></a>; it is recommended to select both variants:
-    + **GPU-only** engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
-    + **CPU-only** engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
+    - **GPU-only** engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
+    - **CPU-only** engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
 - **Upload**: Click to upload files or a directory. The selected directory will become the root after upload.
 
 :::note
@@ -105,7 +105,7 @@ Fields required to publish the offer are marked with \*.
 
 ## 6. Create requirement slots
 
-In the **Pricing** tab, click the **Add Slot** button to open an editable template for a requirement slot.
+In the **Pricing** tab, click the **Add Slot** button to open an editable template for a <a id="requirements"><span className="dashed-underline">requirement slot</span></a>.
 
 <img src={require('../images/offer-builder-pricing.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -120,8 +120,8 @@ If the offer supports both GPU-only and CPU-only engines, create at least one sl
         Complete the following fieds:
 
         - **Price**: Set the price in SPPI tokens for leasing the model and select the pricing type:
-            + **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
-            + **Per Hour**: Payment is based on the number of hours the offer is leased.
+            - **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
+            - **Per Hour**: Payment is based on the number of hours the offer is leased.
         - **Disk**: Set the required disk space in gigabytes (GB). It should not be less than the sum of all model files.
         - **GPU RAM**: Set the required video RAM in gigabytes (GB).
         - **Min Time** and **Max Time**: Set the minimum and maximum lease duration limits, as defined by the provider. `0` means no limit.
@@ -131,8 +131,8 @@ If the offer supports both GPU-only and CPU-only engines, create at least one sl
         Complete the following fieds:
 
         - **Price**: Set the price in SPPI tokens for leasing the model and select the pricing type:
-            + **Fixed**: A one-time payment for each order, regardless of the lease duration.
-            + **Per Hour**: Payment is based on the number of hours the offer is leased.
+            - **Fixed**: A one-time payment for each order, regardless of the lease duration.
+            - **Per Hour**: Payment is based on the number of hours the offer is leased.
         - **Disk**: Set the required disk space in gigabytes (GB). It should not be less than the sum of all model files.
         - **CPU RAM**: Set the required RAM in gigabytes (GB).
         - **Min Time** and **Max Time**: Set the minimum and maximum lease duration limits, as defined by the provider. `0` means no limit.

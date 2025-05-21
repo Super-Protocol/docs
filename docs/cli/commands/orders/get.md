@@ -24,7 +24,7 @@ This command allows you to check any order, not only yours. The information on a
 
 | **Name** | **Description** |
 | :- | :- |
-| `<orderId>` | ID of the order. |
+| `<orderId>` | Order ID. |
 
 ## Options
 

@@ -18,9 +18,9 @@ _Order Builder_ is a tool to configure <a id="order"><span className="dashed-und
 
 If no model is currently added to the Order Builder, go to the **Marketplace** or **My Content** using the links and click the **Deploy** button next to the desired model. This will add the model to the order along with automatically selected engine and compute <a id="offer"><span className="dashed-underline">offers</span></a>.
 
-If the model offer has multiple [requirement slots](/fundamentals/slots), the **Deploy** button adds the first slot configured for GPU deployment. To deploy the model on CPU, click the model's name to open its [**Offer**](/marketplace/models/offer) window, go to the **Pricing** tab, and click the blue **[+]** button next to the desired slot.
+If the model offer has multiple <a id="requirements"><span className="dashed-underline">requirement slots</span></a>, the **Deploy** button adds the first slot configured for GPU deployment. To deploy the model on CPU, click the model's name to open its [**Offer**](/marketplace/models/offer) window, go to the **Pricing** tab, and click the blue **[+]** button next to the desired slot.
 
-To view the model's selected slot, expand the **Requirements**. If you add your uploaded model to the order, its requirements are not specified. The system does not include such models in the automatic calculation of the compute configuration.
+To view the model's selected slot, expand the **Requirements**. If you add your uploaded model to the order, its requirements are not specified. The system does not include such models in the automatic calculation of the <a id="configuration"><span className="dashed-underline">compute configuration</span></a>.
 
 :::warning
 
@@ -102,7 +102,7 @@ The system automatically calculates a [compute configuration](/fundamentals/slot
 
 **In Queue** shows the number of orders waiting for an empty slot on this machine. If the number is greater than zero, your order may take longer to process. Consider choosing another compute offer.
 
-Clicking the machine's name opens its [**Offer**](/marketplace/models/offer) window.
+Clicking the machine's name opens its [**Offer** window](/marketplace/models/offer).
 
 <img src={require('../images/order-builder-queue.png').default} width="auto" height="auto" border="1"/>
 <br/>

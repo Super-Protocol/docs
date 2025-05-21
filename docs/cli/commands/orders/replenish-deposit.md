@@ -7,7 +7,7 @@ sidebar_label: "replenish-deposit"
 
 Replenishes the order deposit.
 
-Certain <a id="order"><span className="dashed-underline">orders</span></a> require a positive deposit balance to keep running.
+Certain <a id="order"><span className="dashed-underline">orders</span></a> require a positive balance to keep running.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ Certain <a id="order"><span className="dashed-underline">orders</span></a> requi
 
 | **Name** | **Description** |
 | :- | :- |
-| `<orderId>` | ID of the order. |
+| `<orderId>` | Order ID. |
 | `<tokenAmount>` | Amount of SPPI tokens to deposit. |
 
 ## Option

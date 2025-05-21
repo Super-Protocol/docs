@@ -22,7 +22,7 @@ Enables an existing disabled <a id="offer"><span className="dashed-underline">of
 
 | **Name** | **Description** |
 | :- | :- |
-| `<offerId>` | ID of the offer. |
+| `<offerId>` | Offer ID. |
 
 ## Options
 
