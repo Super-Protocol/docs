@@ -6,7 +6,7 @@ sidebar_label: "get-slot"
 sidebar_position: 11
 ---
 
-Displays the information for a <a id="slot"><span className="dashed-underline">slot</span></a> in and <a id="offer"><span className="dashed-underline">offer</span></a>.
+Displays the information for a <a id="slot"><span className="dashed-underline">slot</span></a> in an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all the offer's slots.
 

@@ -21,7 +21,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
 <Tabs>
   <TabItem value="docker" label="Using the script" default>
 
-    Prerequisits:
+    Prerequisites:
 
     - Linux or MacOS. On Windows, use the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install).
     - [Docker](https://www.docker.com/)
