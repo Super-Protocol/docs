@@ -50,9 +50,9 @@ The offerInfo JSON file may contain the following objects, arrays, and strings:
 | `restrictions`    | Object that specifies the offers that should be executed together with the current one|This object contains the `offers` and `types` arrays |
 | `offers`          | Array of IDs of required offers, including their dependencies | Put each ID in quotation marks and separate them with a comma |
 | `types`           | Array of types of the required offers, the same codes as in `offerType` | State the type for each offer in `offers`. Put each type in quotation marks and separate them with a comma |
-| `metadata`        | Any additional information  | May be empty or contain information about whether or not the current offer is a grouping one. For example, `"{\"groupingOffers\":true}"`. |
+| `metadata`        | Any additional information  | May be empty or contain information about whether the current offer is a grouping one. For example, `"{\"groupingOffers\":true}"`. |
 | `input`           | Metadata about permitted inputs (not implemented yet) | Leave empty. |
-| `output`          | Metadata about permitted inputs (not implemented yet) | Leave empty. |
+| `output`          | Metadata about permitted outputs (not implemented yet) | Leave empty. |
 | `allowedArgs`     | Deprecated | Leave empty. |
 | `allowedAccounts` | List of accounts allowed to use the current offer | Leave empty to allow all accounts. |
 | `argsPublicKey`   | Encryption information in a string format:<br/>`algo`: algorithm for encrypting arguments<br/>`encoding`: encoding scheme<br/>`key`: public key | Example:<br/>`"argsPublicKey":`<br/>`"{\"algo\":\"ECIES\",`<br/>`\"encoding\":\"base64\",`<br/>`\"key\":\"<PUBLIC_KEY>\"}"`  |

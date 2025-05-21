@@ -5,13 +5,13 @@ slug: "/slots"
 sidebar_position: 4
 ---
 
-_Requirements_ specify how much computing resources an <a id="offer"><span className="dashed-underline">offer</span></a> needs to run.
+_Requirements_ specify how many computing resources an <a id="offer"><span className="dashed-underline">offer</span></a> needs to run.
 
 _Configurations_ provide flexibility in selecting computing resources and internet access for offer deployment. The compute offer configuration added to an <a id="order"><span className="dashed-underline">order</span></a> must meet all the requirements in this order.
 
 ## Requirements
 
-Requirements specify how much computing resources a value offer needs to run. A _requirement slot_ is a specific set of requirements that may include the following:
+Requirements specify how many computing resources a value offer needs to run. A _requirement slot_ is a specific set of requirements that may include the following:
 
 - Number of CPU cores
 - RAM
