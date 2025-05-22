@@ -131,7 +131,7 @@ If the offer supports both GPU-only and CPU-only engines, create at least one sl
         Complete the following fieds:
 
         - **Price**: Set the price in SPPI tokens for leasing the model and select the pricing type:
-            - **Fixed**: A one-time payment for each order, regardless of the lease duration.
+            - **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
             - **Per Hour**: Payment is based on the number of hours the offer is leased.
         - **Disk**: Set the required disk space in gigabytes (GB). It should not be less than the sum of all model files.
         - **CPU RAM**: Set the required RAM in gigabytes (GB).

@@ -15,11 +15,11 @@ Super Protocol launched the first public release of Marketplace 2.0 on November 
 - Support for Intel TDX and NVIDIA GPU confidential computing.
 - Ability to upload model files to the Super Cloud or personal Storj accounts.
 - AI model deployment using various <a id="engine"><span className="dashed-underline">engines</span></a> and settings.
+- Publishing <a id="offer"><span className="dashed-underline">offers</span></a> in the Marketplace from uploaded files.
 - Redesigned UI/UX.
 
 Upcoming features in the future development phases:
 
-- Publishing <a id="offer"><span className="dashed-underline">offers</span></a> in the Marketplace from uploaded files. Currently, publishing is limited to selected researchers, testers, and developers.
 - Fine-tuning models by creating new layers for base models.
 - Support for datasets.
 - Expanded model availability in the Marketplace.
