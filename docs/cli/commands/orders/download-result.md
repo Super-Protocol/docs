@@ -5,12 +5,10 @@ slug: "/commands/orders/download-result"
 sidebar_label: "download-result"
 ---
 
-Downloads the order result.
+Downloads the order result—a TAR.GZ archive file containing:
 
-This command downloads a TAR.GZ archive file containing:
-
-- Log file with any errors occured during the execution of the script
-- Directory with the result.
+- A log file with any errors occurred during the execution.
+- A directory with the execution result.
 
 If the order status is `Error`, the result archive will contain a text file with the error message.
 
@@ -23,13 +21,11 @@ If the order status is `Error`, the result archive will contain a text file with
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
 | :- | :- |
-| `<orderId>` | ID of the order. |
+| `<orderId>` | Order ID. |
 
 ## Options
 
@@ -40,8 +36,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command downloads the result of the order 1312 and saves it to the `1312.tar.gz` file in the `results` directory:
 
 ```
 ./spctl orders download-result 1312 --save-to ./results/1312.tar.gz

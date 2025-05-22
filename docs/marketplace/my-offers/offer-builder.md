@@ -43,9 +43,9 @@ This tab contains general information about the offer.
 - **About\***: Offer description with Markdown support. If the model files contain a `README.md` file, the description will be taken from it.
 - **Name\***: The offer name. Providing a meaningful name makes it easier to find the model on the Marketplace.
 - **Category\***: The tasks for which the model is intended.
-- **Engine\***: A solution that launches the model and provides a user interface. Each engine exists in two variants:
-    + GPU-only engines require CPU+GPU compute offers.
-    + CPU-only engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
+- **Engine\***: A <a id="solution"><span className="dashed-underline">solution</span></a> designed to launch AI models, customize parameters, configure workflows, and provide an interface to interact with models. Each engine exists in two variants:
+    - GPU-only engines require CPU+GPU <a id="compute"><span className="dashed-underline">compute</span></a> offers.
+    - CPU-only engines can run on both CPU-only and CPU+GPU compute offers. However, models work much slower in this mode.
 - **Parameters**: Model parameters in millions or billions.
 - **License\***: The license under which the model is distributed.
 - **Source URL**: A link to the resource with the model files.
@@ -56,7 +56,7 @@ Fields required to publish the offer are marked with \*.
 
 ## Pricing
 
-This tab contains requirement slots and their prices.
+This tab contains <a id="requirements"><span className="dashed-underline">requirement slots</span></a> and their prices.
 
 <img src={require('../images/offer-builder-pricing.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -71,8 +71,8 @@ To support both CPU-only and GPU-only engines, create separate requirement slots
 The **Add Slot** button opens an editable template for a slot that allows you to set the offer requirements:
 
 - **Price**: The price in SPPI tokens for leasing the model and the pricing type:
-    + **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
-    + **Per Hour**: Payment is based on the number of hours the offer is leased.
+    - **Fixed**: A one-time payment for each <a id="order"><span className="dashed-underline">order</span></a>, regardless of the lease duration.
+    - **Per Hour**: Payment is based on the number of hours the offer is leased.
 - **CPU vCores**: Number of virtual CPU cores; can be fractional. Set to `0` to create a slot for GPU-only engines.
 - **CPU RAM**: RAM in gigabytes (GB). Set to `0` to create a slot for GPU-only engines.
 - **GPU vCores**: Number of virtual GPU cores; can be fractional. Set to `0` to create a slot for CPU-only engines.

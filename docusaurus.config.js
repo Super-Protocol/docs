@@ -8,13 +8,13 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Super Protocol",
+  title: "Super Protocol Docs",
   url: "https://docs.superprotocol.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "favicon.ico",
-  organizationName: "Super Protocol", // Usually your GitHub org/user name.
+  favicon: "img/favicon.ico",
+  organizationName: "Super-Protocol", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
   i18n: {
     defaultLocale: 'en',
@@ -153,6 +153,13 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 3,
       },
+      metadata: [
+        {name: 'description', content: 'Technical documentation for Super Protocol.'},
+        {property: 'og:title', content: 'Super Protocol Docs'},
+        {property: 'og:description', content: 'Technical documentation for Super Protocol.'},
+        {property: 'og:image', content: 'https://docs.superprotocol.com/img/icon.png'},
+        {property: 'og:url', content: 'https://docs.superprotocol.com'},
+      ]
     }),
   stylesheets: [
     {

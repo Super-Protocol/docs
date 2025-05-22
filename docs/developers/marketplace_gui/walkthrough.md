@@ -25,7 +25,7 @@ Go to the `Solutions` tab and click on the `Tunnels Launcher` offer. It will ope
 
 :::
 
-Here you can pick the desired requirements for Tunnels Launcher. Learn more about [Requirements](/fundamentals/slots). In short: requirements specify how much computing and internet resources the solution or data offer needs to run. You can also read about [offers](/fundamentals/offers).
+Here you can pick the desired requirements for Tunnels Launcher. Learn more about [Requirements](/fundamentals/slots). In short: requirements specify how many computing and internet resources the solution or data offer needs to run. You can also read about [offers](/fundamentals/offers).
 
 You can also see in the `Restricted` tab that this Solution requires another offer: a `NodeJS base image`. It is added to the order automatically.
 

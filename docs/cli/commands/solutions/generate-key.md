@@ -5,7 +5,7 @@ slug: "/commands/solutions/generate-key"
 sidebar_label: "generate-key"
 ---
 
-Generates a signing key necessary to prepare a solution.
+Generates a signing key necessary to prepare a <a id="solution"><span className="dashed-underline">solution</span></a>.
 
 Docker needs this key to [pack a solution](/cli/commands/solutions/prepare) into a container.
 
@@ -16,8 +16,6 @@ Docker needs this key to [pack a solution](/cli/commands/solutions/prepare) into
     [--config <path>]
     [--help | -h]
 ```
-
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 ## Arguments
 
@@ -33,8 +31,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command generates a signing key and saves it to the `new-key` file in the SPCTL root directory:
 
 ```
 ./spctl solutions generate-key ./new-key

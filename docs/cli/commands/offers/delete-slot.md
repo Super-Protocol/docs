@@ -6,9 +6,9 @@ sidebar_label: "delete-slot"
 sidebar_position: 10
 ---
 
-Deletes a [requirement slot](/fundamentals/slots#requirements) in an [offer](/fundamentals/offers).
+Deletes a <a id="slot"><span className="dashed-underline">slot</span></a> in an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/cli/commands/offers/get-slot) command to get additional information on a slot.
 
@@ -22,8 +22,6 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
@@ -34,14 +32,12 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 
 | **Name** | **Description** |
 | :- | :- |
-| `--offer <offerId>` | ID of the offer. |
-| `--slot <slotId>` | ID of the slot. |
+| `--offer <offerId>` | Offer ID. |
+| `--slot <slotId>` | Slot ID. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command deletes a requirement slot with ID 47 in a <a id="value-offer"><span className="dashed-underline">value offer</span></a> with ID 39:
 
 ```
 ./spctl offers delete-slot value --offer 39 --slot 47

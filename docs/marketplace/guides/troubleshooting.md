@@ -53,7 +53,7 @@ Solution: upload a variant of the model with a lower-bit quantization or choose 
 
 Some models rely on scripts without which they will not run. If you deploy such a model with the default settings, the order will end with an error. An example of such a model is [cerebras/btlm-3b-8k-base](https://huggingface.co/cerebras/btlm-3b-8k-base).
 
-Solution: allow executing remote code in the engine settings before placing the order:
+Solution: allow executing remote code in the <a id="engine"><span className="dashed-underline">engine</span></a> settings before placing the order:
 
 1. In the Order Builder, open the engine settings.
 

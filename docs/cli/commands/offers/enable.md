@@ -6,9 +6,9 @@ sidebar_label: "enable"
 sidebar_position: 7
 ---
 
-Enables an existing disabled offer.
+Enables an existing disabled <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
@@ -18,13 +18,11 @@ Enables an existing disabled offer.
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
 | **Name** | **Description** |
 | :- | :- |
-| `<offerId>` | ID of the offer. |
+| `<offerId>` | Offer ID. |
 
 ## Options
 
@@ -34,8 +32,6 @@ Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
 | `--help`, `-h` | Help for the command. |
 
 ## Example
-
-The following command enables the offer with ID 39:
 
 ```
 ./spctl offers enable 39

@@ -1,22 +1,22 @@
 ---
 id: "offers"
-title: "Offers and Providers"
+title: "Providers and Offers"
 slug: "/offers"
 sidebar_position: 2
 ---
 
-_Offer_ is an open listing for a resource available on the Marketplace. To add an offer to an <a id="order"><span className="dashed-underline">order</span></a>, users must pay the price in SPPI tokens set by the offer provider.
+_Offer_ is an open listing for a computing service, software product, or data available on the Marketplace. To add an offer to an <a id="order"><span className="dashed-underline">order</span></a>, users must pay the price in SPPI tokens set by the offer provider.
 
-_Offer providers_ share and monetize their applications and datasets by creating and maintaining _community offers_ on the Super Protocol Marketplace. 
+_Providers_ share and monetize their applications and datasets by creating and maintaining _community offers_ on the Super Protocol Marketplace. 
 
 ## Types of offers
 
 Offers are the basic building blocks of the Marketplace. Four types of offers exist in Super Protocol:
 
-- _Compute offers_: confidential computing resources to execute solutions and data inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a>.
-- _Solution offers_: applications such as AI frameworks, base images, tunnels, oracles, etc.
+- _Compute offers_: Confidential computing resources required to deploy models, launch confidential <a id="tunnel"><span className="dashed-underline">tunnels</span></a>, and execute <a id="solution"><span className="dashed-underline">solutions</span></a> inside a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> (TEE).
+- _Solution offers_: Applications such as AI frameworks, base images, tunnels, oracles, etc.
 - _Data offers_: AI models, webpages, configs, datasets, databases, etc.
-- _Storage offers_: decentralized storage, such as Storj, to keep the offer content, order results, and service files.
+- _Storage offers_: Decentralized storage, such as Storj, to keep the offer content, order results, and service files.
 
 _Value offer_ is a collective term for solution, data, and storage offers.
 
@@ -30,14 +30,14 @@ Every offer has an identification number—_offer ID_. It is incremental and uni
 
 ### Compute
 
-Compute offer is the main component in any order. It provides the resources and a Trusted Execution Environment necessary to perform a secure execution of solutions.
+Compute offer is the main component in any order. It provides the resources and a TEE necessary to perform a secure execution of solutions.
 
 A compute offer is a combination of two parts:
 
-- A record on the blockchain containing the parameters that govern how to order the offer
+- A record on the blockchain containing the parameters that govern how to order the offer.
 - A physical confidential computing device connected to Super Protocol.
 
-To balance the load and set better prices for the users, the compute provider can divide the resources of the physical machine into smaller parts—configuration [slots and options](/fundamentals/slots#configuration).
+To balance the load and set better prices for the users, the compute provider can divide the resources of the physical machine into smaller parts—<a id="configuration"><span className="dashed-underline">configuration slots and options</span></a>.
 
 ### Solution and data
 
@@ -52,7 +52,7 @@ An order can include several solution and data offers. For example, a solution o
 
 ### Storage
 
-Storage offers are necessary to store the order results. It is also possible to create independent [storage orders](/fundamentals/orders#storage) for encrypted solution and data files for respective community offers.
+Storage offers are necessary to store the order results. It is also possible to create independent storage orders for encrypted solution and data files for respective community offers.
 
 A storage offer is a combination of two parts:
 
@@ -106,17 +106,17 @@ Offers may be flagged as Inactive in the Marketplace GUI for two reasons:
 Every offer comes with the following descriptive parameters:
 
 - **Type**:
-    + Compute
-    + Solution
-    + Data
-    + Storage
+    - Compute
+    - Solution
+    - Data
+    - Storage
 - **Id**: unique identification number of the offer.
 - **Description**: text description of the offer.
 - **Provider**: name of the provider who created the offer.
 - **Published date**: the date when the offer was created.
 - **Updated date**: the date when changes were made to the offer.
-- **MRENCLAVE**: value that represents the hash of the code and data inside a Trusted Execution Environment.
-- **MRSIGNER**: value for identifying the signing entity of a Trusted Execution Environment.
+- **MRENCLAVE**: value that represents the hash of the code and data inside a TEE.
+- **MRSIGNER**: value for identifying the signing entity of a TEE.
 
 ## Rules
 
@@ -137,7 +137,7 @@ _Configuration slots_ are sets of compute-related parameters of compute offers:
 - The number of CPU cores
 - RAM
 - Disk space
-- Minimum and maximum [lease time](/fundamentals/orders#lease-deposit-and-balance)
+- Minimum and maximum [lease time](/fundamentals/orders#usage-scenarios)
 
 _Configuration options_ are sets of network-related parameters of compute offers:
 
@@ -145,6 +145,6 @@ _Configuration options_ are sets of network-related parameters of compute offers
 - Traffic
 - External port availability
 
-Compute providers can create multiple configuration slots and options for every offer and price them differently. The customer must choose a compute configuration to meet the sum of all the solution, data, and storage requirements in the order.
+Compute providers can create multiple configuration slots and options for every offer and price them differently. A compute configuration selected for an order must meet the sum of all the solution, data, and storage requirements in this order.
 
 Read more in [Slots and Options](/fundamentals/slots).

@@ -20,12 +20,12 @@ This window shows the settings of your [Web2 User account](/marketplace/account#
 Super Protocol supports two options of decentralized storage to upload files:
 
 - **Super Protocol cloud**:
-    + Does not require additional setup.
-    + Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
-    + Costs SPPI tokens for additional storage beyond the basic free package.
+    - Does not require additional setup.
+    - Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
+    - Costs SPPI tokens for additional storage beyond the basic free package.
 - **Your Storj account**:
-    + Available to Web3 users only.
-    + Requires creating and setting up a Storj account.
-    + Gives sole control over the uploaded content and storage account.
+    - Available to Web3 users only.
+    - Requires creating and setting up a Storj account.
+    - Gives sole control over the uploaded content and storage account.
 
 To enable uploading to your personal Storj account, [log in as a Web3 user](/marketplace/guides/log-in).

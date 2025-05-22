@@ -6,92 +6,82 @@ sidebar_label: "add-slot"
 sidebar_position: 8
 ---
 
-Creates an additional [requirement slot](/fundamentals/slots#requirements) in an offer using the information in an offer slot JSON file.
+Adds a <a id="slot"><span className="dashed-underline">slot</span></a> to an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-Refer to the [Providers and Offers] guide to create the initial offer requirements.
-
-**Important:** This command requires SPCTL with the [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
 
 ## Syntax
 
 ```
 ./spctl offers add-slot <offerType>
     --offer <offerId>
-    [--path <path>]
+    [--path <slotInfo>]
     [--config <path>]
     [--help | -h]
 ```
 
-Read about the Super Protocol [command syntax](/cli/commands#command-syntax).
-
 ## Arguments
 
-| **Name** | **Description** |
+| **Name**      | **Description** |
 | :- | :- |
 | `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
 
 ## Options
 
-| **Name** | **Description** |
+| **Name**            | **Description** |
 | :- | :- |
-| `--offer <offerId>` | ID of the offer. |
-| `--path <path>` | Path to the offer slot JSON file. The default is `./offerSlot.json`. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| `--offer <offerId>` | Offer ID. |
+| `--path <slotInfo>` | Path to a slot-info JSON file. The default is `./slotInfo.json`. |
+| `--config <path>`   | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--help`, `-h`      | Help for the command. |
 
-## Offer slot file
+## Slot info
 
-The offer slot JSON file must contain the following objects and strings:
+A slot-info JSON file must contain the following objects:
 
-- `info`: object with computing power configuration
-  + `cpuCores`: number of CPU cores required, a float value
-  + `gpuCores`: number of GPU cores required, a float value
-  + `diskUsage`: bytes
-  + `ram`: bytes
-- `usage`: object with terms and conditions of usage
-  + `maxTimeMinutes`: minutes; `0` for no limit
-  + `minTimeMinutes`: minutes; `0` for no limit
-  + `price`: denominations of SPPI token
-  + `priceType`: `1` for fixed price, `0` for price per hour; learn more about [price types](/fundamentals/orders#cost-and-pricing)
-- `option`: object with internet access configuration (only for <a id="value-offer"><span className="dashed-underline">value offers</span></a>)
-  + `bandwidth`: bits per second
-  + `traffic`: bytes
-  + `externalPort`: `1` for yes, `0` for no
+- `info`: An object with requirements:
+  - `cpuCores`: The number of virtual CPU cores, a float value.
+  - `gpuCores`: The number of virtual GPU cores, a float value.
+  - `diskUsage`: Disk space in bytes.
+  - `ram`: RAM in bytes.
+  - `vram`: Video RAM in bytes.
+- `usage`: An object with terms and conditions of usage:
+  - `maxTimeMinutes`: Maximum lease duration limits in minutes; `0` for no limit.
+  - `minTimeMinutes`: Minimum lease duration limits in minutes; `0` for no limit.
+  - `price`: Lease price in denominations of SPPI token (10<sup>18</sup> = 1 SPPI).
+  - `priceType`: [Pricing type](/fundamentals/orders#cost-and-pricing): `1` for fixed price, `0` for price per hour.
+- `option`: An object with internet access requirements (only for value offers):
+  - `bandwidth`: Data transfer rate in bits per second.
+  - `traffic`: Total required data transfer usage in bytes.
+  - `externalPort`: `1` for yes, `0` for no.
 
-Offer slot JSON file template with example values:
+A template with example values:
 
-```json title="offer-new-slot.json"
+```json title="slotInfo.json"
 {
-  "info": {
-    "cpuCores": 3,
-    "gpuCores": 0,
-    "diskUsage": 536870912,
-    "ram": 34359738368
+  "info":{
+    "cpuCores":3,
+    "gpuCores":0,
+    "diskUsage":16106127360,
+    "ram":34359738368,
+    "vram":0
   },
-  "usage": {
-    "maxTimeMinutes": 0,
-    "minTimeMinutes": 60,
-    "price": "400000000000000000",
-    "priceType": "1" 
+  "usage":{
+    "maxTimeMinutes":0,
+    "minTimeMinutes":60,
+    "price":"400000000000000000",
+    "priceType":"1" 
   },
-  "option": {
-    "bandwidth": 0,
-    "traffic": 0,
-    "externalPort": 0
+  "option":{
+    "bandwidth":0,
+    "traffic":0,
+    "externalPort":0
   }
 }
 ```
 
-Note that some of the data is represented differently in the Marketplace GUI:
-- `diskUsage` and `ram` values are converted to gibibytes (GiB) by the formula `initialValue / (1024 ^ 3)`
-- `price` value is converted to SPPI tokens by the formula `initialValue / (10 ^ 18)`
-- `bandwidth` value is converted to megabits per second (Mbps) by the formula `initialValue / (10 ^ 6)`
-- `traffic` value is converted to gigabytes (GB) by the formula `initialValue / (10 ^ 9)`
-
 ## Example
 
-The following command adds a new requirement slot to a value offer with ID 39 using the `offer-new-slot.json` file located in the SPCTL directory:
-
 ```
-./spctl offers add-slot value --offer 39 --path ./offer-new-slot.json
+./spctl offers add-slot value --offer 39 --path ./new-slot.json
 ```

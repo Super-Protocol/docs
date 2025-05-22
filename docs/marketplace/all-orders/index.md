@@ -19,7 +19,7 @@ The table in the center of the screen provides essential information about your 
 - **Status**: Current status of the order. Read about [statuses](/fundamentals/orders#order-status).
 - **Cost to Date**: The total amount of SPPI tokens spent on the order so far.
 - **Balance**: The remaining order balance. When it reaches zero, the order processing stops. To replenish the balance, open the **Order** screen and click the **Extend Lease** button.
-- **Engine**: A solution necessary to deploy the model and provides a user interface.
+- **Engine**: A <a id="solution"><span className="dashed-underline">solution</span></a> that launches the model and provides an interface to interact with it.
 - **Model**: The main model used in the order.
 - **Datasets**: The main dataset used in the order. Support for datasets will be added in future releases.
 

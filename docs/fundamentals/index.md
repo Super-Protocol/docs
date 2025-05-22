@@ -11,8 +11,8 @@ This section describes the most essential concepts of Super Protocol.
 
 Super Protocol Marketplace is a distributed blockchain-based ecosystem governed by smart contracts. It connects the sellers and buyers of digital products and services:
 
-- Providers who <a id="offer"><span className="dashed-underline">offer</span></a> solutions, data, and compute resources.
-- Customers who lease the offers and pay for the usage.
+- Providers who offer <a id="solution"><span className="dashed-underline">solutions</span></a>, <a id="data"><span className="dashed-underline">data</span></a>, and <a id="compute"><span className="dashed-underline">compute</span></a> resources.
+- Customers who lease these <a id="offer"><span className="dashed-underline">offers</span></a> and pay for the usage.
 
 Providers create offers to share and monetize their compute resources as well as solutions, scripts, datasets, AI models, libraries, frameworks, etc. Read more about [offers and providers](/fundamentals/offers).
 
@@ -25,11 +25,11 @@ The Super Protocol Marketplace is accessible via one of the following:
 
 ## Trusted Execution Environment
 
-A _Trusted Execution Environment_ is a secure area in memory, [CPU](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html), and [GPU](https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/). This area is protected from unauthorized access from the outside, so the data inside a Trusted Execution Environment cannot be read or edited without the authorized code.
+A _Trusted Execution Environment_ (TEE) is a secure area in memory, [CPU](https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/overview.html), and [GPU](https://www.nvidia.com/en-us/data-center/solutions/confidential-computing/). This area is protected from unauthorized access from the outside, so the data inside a TEE cannot be read or edited without the authorized code.
 
 Confidentiality is an integral part of Super Protocol. All the user data in Super Protocol is encrypted and protected while stored, in transfer, and in use.
 
-Trusted Execution Environment ensures confidentiality and protects both providers and customers. Only the customer can access their orders. Customers themselves cannot download, modify, or otherwise access the provider's offer content even if they use it in their orders. Neither the Super Protocol team nor the owner of the computing device have access to the order and offer content.
+TEE ensures confidentiality and protects both providers and customers. Only the customer can access their orders. Customers themselves cannot download, modify, or otherwise access the provider's offer content even if they use it in their orders. Neither the Super Protocol team nor the owner of the computing device have access to the order and offer content.
 
 ## Providers
 
