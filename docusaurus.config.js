@@ -76,6 +76,17 @@ const config = {
         rehypePlugins: [katex],
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "data-for-ai",
+        path: "./docs/data-for-ai",
+        routeBasePath: "/data-for-ai",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
   ],
   presets: [
     [
