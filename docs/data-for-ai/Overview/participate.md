@@ -33,7 +33,7 @@ Earn bonus points every time your referrals submit valid data links.
 5. **Climb the Leaderboard**
 
 The top **1,000 participants** will share in the prize pool:<br/>
-**$30,000 USDT + Super Stakes** (convertible at TGE).
+**$30,000 USDT + Super Stakes** (convertible into Super Tokens at the token generation event).
 
 ---
 
