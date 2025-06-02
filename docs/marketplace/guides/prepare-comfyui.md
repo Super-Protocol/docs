@@ -8,7 +8,7 @@ sidebar_position: 6
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions for preparing a **ComfyUI** workflow with custom nodes before uploading it . You cannot upload custom nodes directly to the deployed ComfyUI for security reasons.
+This guide provides step-by-step instructions for preparing a **ComfyUI** workflow with custom nodes before uploading it. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
 
 :::note
 
@@ -46,9 +46,9 @@ You can prepare your model, workflow, and custom node files manually or using Do
 
     5. Load and customize the workflow. Use the following methods to add model files to the container:
 
-    **Use a downloader**
+    **Install a downloader node**
 
-    In ComfyUI, open **Custom Node Manager** and install a custom node to download model files. For example, [ComfyUI Model Downloader](https://github.com/ciri/comfyui-model-downloader) supports downloading models from Hugging Face and CivitAI. Download model files using the installed node.
+    In ComfyUI, open **Custom Node Manager** and install a custom node to download model files. For example, [ComfyUI Model Downloader](https://github.com/ciri/comfyui-model-downloader) supports Hugging Face and CivitAI. Download model files using the installed node.
 
     **Download directly to the container**
 
