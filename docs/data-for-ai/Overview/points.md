@@ -20,8 +20,8 @@ Your points may come from the following:
 | Strike Bonus        | **280** (for exactly 30 valid data links in a day) |
 | Referral Submission | **35\*** points for each referral’s valid data link |
 
-**\*** Points issued for a submitted link, directly and through referrals, increase by 4% each day of the campaign.
+**\*** Points for submitting a link, directly and through referrals, increase by 4% daily during the campaign.
 
 ## Super Stakes
 
-Super Stakes are a separate, long-term reward. The amount of Super Stakes you get depends on your rank on the Leaderboard. At the Token Generation Event (TGE), Super Stakes will be converted into Super Tokens, the native token of the Super Protocol ecosystem.
+Super Stakes are a separate, long-term reward. The amount of Super Stakes you get depends on your rank on the Leaderboard. At the token generation event, Super Stakes will be converted into Super Tokens, the native token of the Super Protocol ecosystem.

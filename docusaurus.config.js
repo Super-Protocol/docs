@@ -13,7 +13,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "/img/favicon.ico",
   organizationName: "Super-Protocol", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
   i18n: {
