@@ -62,6 +62,10 @@ const config = {
             from: "/",
             to: "/marketplace",
           },
+          {
+            from: "/data-for-ai",
+            to: "/data-for-ai/overview/about",
+          },
         ],
       },
     ],
