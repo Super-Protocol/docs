@@ -62,6 +62,10 @@ const config = {
             from: "/",
             to: "/marketplace",
           },
+          {
+            from: "/data-for-ai",
+            to: "/data-for-ai/overview/about",
+          },
         ],
       },
     ],
@@ -71,6 +75,17 @@ const config = {
         id: "whitepaper",
         path: "./docs/whitepaper",
         routeBasePath: "/whitepaper",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "data-for-ai",
+        path: "./docs/data-for-ai",
+        routeBasePath: "/data-for-ai",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
