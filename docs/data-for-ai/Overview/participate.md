@@ -21,19 +21,19 @@ The approximate transaction cost is:<br/>
 
 3. **Submit Valid Data Links**
 
-Search the approved data sources and find **unique, unsubmitted** URLs.<br/>
+[Search the approved data sources](/data-for-ai/overview/search) and find **unique, unsubmitted** URLs.<br/>
 Submit up to **30 valid links per day**.<br/>
 Hit the daily cap and earn a **+280 Strike Bonus**.
 
 4. **Invite Friends**
 
-Share your unique referral link.
+Share your unique referral link.<br/>
 Earn bonus points every time your referrals submit valid data links.
 
 5. **Climb the Leaderboard**
 
 The top **1,000 participants** will share in the prize pool:<br/>
-**$30,000 USDT + Super Stakes** (convertible at TGE).
+**$30,000 USDT + Super Stakes** (convertible into Super Tokens at the token generation event).
 
 ---
 

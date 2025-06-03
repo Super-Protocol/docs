@@ -39,6 +39,6 @@ This campaign is the first step. In future phases, contributors will be able to 
 
 ## Where You Come In
 
-Contribute real-world data. Climb the leaderboard. Earn your share of $30,000 in USDT and Super Stakes (convertible at TGE).
+Contribute real-world data. Climb the leaderboard. Earn your share of $30,000 in USDT and Super Stakes (convertible into Super Tokens at the token generation event).
 
 This isn’t just a data campaign. It’s the foundation for an AI system that doesn’t require trust, because everything is verifiable, transparent, and owned.
