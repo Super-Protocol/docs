@@ -2,7 +2,7 @@
 id: "points"
 title: "Points and Super Stakes"
 slug: "/overview/points"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 ## Points
