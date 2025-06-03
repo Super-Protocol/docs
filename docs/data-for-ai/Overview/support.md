@@ -2,7 +2,7 @@
 id: "support"
 title: "Support"
 slug: "/overview/support"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 If you have questions, encounter issues, or need assistance during the campaign, we’re here to help.

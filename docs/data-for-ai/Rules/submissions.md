@@ -29,9 +29,9 @@ The daily submission limit resets at 12:00 PM UTC.
 
 Only links from the following approved sources are eligible:
  
-[www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm)
+[www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm) (See how to [Retrieve FDA Device Summary Data](/data-for-ai/overview/search#retrieve-fda-device-summary-data))
 
-[accessgudid.nlm.nih.gov/advanced-search](https://accessgudid.nlm.nih.gov/advanced-search)
+[accessgudid.nlm.nih.gov/advanced-search](https://accessgudid.nlm.nih.gov/advanced-search) (See how to [Retrieve Device Records from GUDID](/data-for-ai/overview/search#retrieve-device-records-from-gudid))
 
 Additional approved sources may be added during the campaign.
 
@@ -46,12 +46,12 @@ Submissions will be rejected if:
 
 ## Submission Errors
 
-When you submit links, you may encounter errors. Here is the list:
+When you submit links, you may encounter errors.
 
-| **Error** | **Description** |
-| :- | :- |
-| This link has been submitted before. | Each link may be successfully submitted only once. |
+| **Error**                                | **Description** |
+| :-                                       | :- |
+| This link has been submitted before.     | Each link may be successfully submitted only once. |
 | Reached the maximum of 30 links per day. | And you should get a Strike Bonus. |
-| HTTPS protocol is required. | The URL does not use the HTTPS protocol. |
+| HTTPS protocol is required.              | The URL does not use the HTTPS protocol. |
 | The link is not from an approved source. | Links must only use the approved databases. |
-| This link is not a valid URL. | Not a valid URL format. |
+| This link is not a valid URL.            | Not a valid URL format. |
