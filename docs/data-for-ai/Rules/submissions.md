@@ -5,7 +5,7 @@ slug: "/rules/submissions"
 sidebar_position: 1
 ---
 
-## Submission Rewards
+## Submission rewards
 
 Each time you submit a valid data link—a URL leading to data for AI training—you earn points. The point value increases by 4% each day for all participants, meaning every submission made on a later day is worth more than one submitted earlier in the campaign.
 
@@ -19,23 +19,23 @@ Day 14 (Final Day): ~168 points per valid link
 
 If you submit exactly 30 valid links in a single day, you will receive a **Strike Bonus** of +280 points.
 
-## Daily Limit
+## Daily limit
 
 You may submit up to 30 valid data links per day.
 
 The daily submission limit resets at 12:00 PM UTC.
 
-## Accepted Databases
+## Accepted databases
 
 Only links from the following approved sources are eligible:
  
-[www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm) (See how to [Retrieve FDA Device Summary Data](/data-for-ai/overview/search#retrieve-fda-device-summary-data))
+[www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm)
 
-[accessgudid.nlm.nih.gov/advanced-search](https://accessgudid.nlm.nih.gov/advanced-search) (See how to [Retrieve Device Records from GUDID](/data-for-ai/overview/search#retrieve-device-records-from-gudid))
+[accessgudid.nlm.nih.gov/advanced-search](https://accessgudid.nlm.nih.gov/advanced-search)
 
 Additional approved sources may be added during the campaign.
 
-## Rejection Criteria
+## Rejection criteria
 
 Submissions will be rejected if:
 
@@ -44,7 +44,7 @@ Submissions will be rejected if:
 - The link is broken or inaccessible.
 - The file is not in one of the required formats: PDF, XLSX, XML, or DOCX
 
-## Submission Errors
+## Submission errors
 
 When you submit links, you may encounter errors.
 

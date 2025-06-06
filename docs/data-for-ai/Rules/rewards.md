@@ -5,7 +5,7 @@ slug: "/rules/rewards"
 sidebar_position: 3
 ---
 
-## Reward Recipients
+## Reward recipients
 
 Only the top 1,000 participants will get prizes, and the rewards will depend on the rank. The rank is determined by the user’s total points: own points plus referral points.
 
@@ -19,7 +19,7 @@ Only the top 1,000 participants will get prizes, and the rewards will depend on 
 
 Tiebreaker: whoever earned points **earlier** wins the higher rank.
 
-## Claiming Rewards
+## Claiming rewards
 
 The relevant dates and conditions for claiming rewards:
 
