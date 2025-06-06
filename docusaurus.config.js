@@ -58,10 +58,10 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          {
+          /*{
             from: "/",
             to: "/marketplace",
-          },
+          },*/
           {
             from: "/data-for-ai",
             to: "/data-for-ai/overview/about",
