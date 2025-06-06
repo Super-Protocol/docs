@@ -42,21 +42,19 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
     4. Copy the **Summary** link.<br/>
     Click the link and copy the URL from the browser address bar. Or right-click the link and select **Copy link address**.
 
-    5. Submit the URL.<br/>
-    Read how to [submit a link](/data-for-ai/overview/participate).
+    5. Submit the URL.
   </TabItem>
   <TabItem value="no-mm" label="Retrieve Device Records from GUDID" default>
     1. Open [GUDID Advanced Search](https://accessgudid.nlm.nih.gov/advanced-search).
 
-    2. In the Builder, click the **Search In** dropdown and select **Device Class** (last item). Choose any class.
+    2. In the Builder, click the **Search In** dropdown and select any class. **Device Class** (last item) is a good starting point.
 
     3. Click **Search** and open any result.
 
     4. Copy the **Download: XML** link in the upper-right corner of the record.<br/>
     Click the link and copy the URL from the browser address bar. Or right-click the link and select **Copy link address**.
 
-    5. Submit the URL.<br/>
-    Read how to [submit a link](/data-for-ai/overview/participate).
+    5. Submit the URL.
   </TabItem>
 </Tabs>
 
