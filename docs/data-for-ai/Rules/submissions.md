@@ -21,9 +21,12 @@ If you submit exactly 30 valid links in a single day, you will receive a **Strik
 
 ## Daily limit
 
-You may submit up to 30 valid data links per day.
+To help prevent bot activity, each participant is allowed up to **30** submission attempts per day.
 
-The daily submission limit resets at 12:00 PM UTC.
+- Duplicate links (already submitted) do not count toward your limit.
+- Invalid links (wrong domain, broken files) do count as attempts.
+
+The limit resets daily at 12:00 PM UTC.
 
 ## Accepted databases
 
@@ -55,3 +58,21 @@ When you submit links, you may encounter errors.
 | HTTPS protocol is required.              | The URL does not use the HTTPS protocol. |
 | The link is not from an approved source. | Links must only use the approved databases. |
 | This link is not a valid URL.            | Not a valid URL format. |
+
+## Your dashboard
+
+<img src={require('../images/counters.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+**Rank**: Your current leaderboard position. Only ranks 1 to 1,000 receive rewards. In case of a tie, the earlier registration wins.
+
+**Points**: Your total points, including referral points, that determine your rank.
+
+**Referral Points**: Points earned from your referees' valid submissions. Included in your total.
+
+**Referees**: The number of people registered using your referral link.
+
+**Total Links**: The total valid links you've submitted during the campaign. Referral submissions are not included.
+
+**Links Today**: The number of submission attempts made today (max 30).
