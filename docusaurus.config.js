@@ -86,7 +86,7 @@ const config = {
         id: "data-for-ai",
         path: "./docs/data-for-ai",
         routeBasePath: "/data-for-ai",
-        //sidebarPath: "./sidebars.js",
+        sidebarPath: require.resolve("./sidebar.js"),
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
