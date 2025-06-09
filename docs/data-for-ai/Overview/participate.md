@@ -60,7 +60,7 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
 
 Watch our [video guide](https://www.youtube.com/watch?v=q2GNQAXIH3o) on how to find and submit links.
 
-Submit up to **30 valid links per day**.
+Submit up to **30 valid links per day**. You will receive points when the submitted links are verified; it may take up to two hours.
 
 Hit the daily cap and earn a **+280 Strike Bonus**.
 
