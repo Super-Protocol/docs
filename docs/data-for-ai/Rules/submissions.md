@@ -17,6 +17,8 @@ Day 3: ~108.2 points<br/>
 ...<br/>
 Day 14 (Final Day): ~168 points per valid link
 
+You receive points when the submitted links are verified; it may take up to two hours.
+
 If you submit exactly 30 valid links in a single day, you will receive a **Strike Bonus** of +280 points.
 
 ## Daily limit
@@ -67,7 +69,7 @@ When you submit links, you may encounter errors.
 
 **Rank**: Your current leaderboard position. Only ranks 1 to 1,000 receive rewards. In case of a tie, the earlier registration wins.
 
-**Points**: Your total points, including referral points, that determine your rank.
+**Points**: Your total points, including referral points, that determine your rank. You receive points when the submitted links are verified; it may take up to two hours.
 
 **Referral Points**: Points earned from your referees' valid submissions. Included in your total.
 
