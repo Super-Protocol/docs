@@ -33,10 +33,12 @@ The limit resets daily at 12:00 PM UTC.
 ## Accepted databases
 
 Only links from the following approved sources are eligible:
- 
-[www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm)
 
-[accessgudid.nlm.nih.gov/advanced-search](https://accessgudid.nlm.nih.gov/advanced-search)
+[European database of suspected adverse drug reaction reports](https://www.adrreports.eu/en/search.html#)
+ 
+[FDA' 510(k) Premarket Notifications](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm)
+
+[Global Unique Device Identification Database (GUDID)](https://accessgudid.nlm.nih.gov/advanced-search)
 
 Additional approved sources may be added during the campaign.
 
