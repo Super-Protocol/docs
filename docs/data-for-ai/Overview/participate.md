@@ -30,7 +30,52 @@ The approximate transaction cost is:
 Search the [approved data sources](/data-for-ai/rules/submissions#accepted-databases) and find **unique, unsubmitted** URLs.
 
 <Tabs>
-  <TabItem value="fda" label="Retrieve FDA Device Summary Data" default>
+  <TabItem value="eudra" label="EudraVigilance" default>
+    The flow slightly differs for desktop and mobile devices.
+
+    **Desktop**:
+
+    1. Go to the [EudraVigilance website](https://www.adrreports.eu/en/search.html#).
+
+    2. Click any letter (A–Z).
+
+    3. Click on any green medicine name from the list that appears.
+
+    4. Find and click the **Line Listing** tab (last one).<br/>
+    If you don't see it, click the double arrows [**»**] at the top right to reveal hidden tabs, then select **Line Listing**.
+
+    5. Click **Run Line Listing Report**.<br/>
+    If you see a **No Results** message, change the **Gateway Date** from 2025 to an earlier year (2024 or 2023) and try again.
+
+    6. Scroll down, click **Export**, and select **PDF**.
+
+    7. In the PDF file, find the **ICSR** links in the rightmost column.
+
+    8. Right-click a link and select **Copy link address**.
+
+    9. Submit the URL.
+
+    **Mobile**:
+
+    1. Go to the [EudraVigilance website](https://www.adrreports.eu/en/search.html#).
+
+    2. Click any letter (A–Z).
+
+    3. Click on any green medicine name from the list that appears.
+
+    4. Find and click the **Line Listing** tab (last one).<br/>
+    If you don't see it, click the double arrows **»** at the top right to reveal hidden tabs, then select **Line Listing**.
+
+    5. Click **Run Line Listing Report**.<br/>
+    If you see a **No Results** message, change the **Gateway Date** from 2025 to an earlier year (2024 or 2023) and try again.
+
+    6. Find and copy the **ICSR** links in the rightmost column.<br/>
+    Click a link and copy the URL from the browser address bar.
+
+    7. Submit the URL.
+
+  </TabItem>
+  <TabItem value="fda" label=" FDA's 510(k)s">
     1. Open the [FDA 510(k) Search Page](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm).
 
     2. Click the **Panel** dropdown and select a category.<br/>
@@ -44,7 +89,7 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
 
     5. Submit the URL.
   </TabItem>
-  <TabItem value="no-mm" label="Retrieve Device Records from GUDID" default>
+  <TabItem value="gudid" label="GUDID">
     1. Open [GUDID Advanced Search](https://accessgudid.nlm.nih.gov/advanced-search).
 
     2. In the Builder, click the **Search In** dropdown and select **Device Class** (last item). Pick any class and click **Search**.
