@@ -60,10 +60,10 @@ const sidebars = {
       label: 'Rules',
       collapsed: false, // expanded by default
       items: [
-        'Rules/disputes',
+        'Rules/submissions',
         'Rules/referrals',
         'Rules/rewards',
-        'Rules/submissions',
+        'Rules/disputes',
       ],
     },
   ],
