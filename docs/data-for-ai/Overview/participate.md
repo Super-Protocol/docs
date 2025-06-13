@@ -76,6 +76,8 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
 
   </TabItem>
   <TabItem value="fda" label=" FDA's 510(k)s">
+    **Unique links are running low! Switch to other sources.**
+
     1. Open the [FDA 510(k) Search Page](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm).
 
     2. Click the **Panel** dropdown and select a category.<br/>
@@ -90,6 +92,8 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
     5. Submit the URL.
   </TabItem>
   <TabItem value="gudid" label="GUDID">
+    **Unique links are running low! Switch to other sources.**
+
     1. Open [GUDID Advanced Search](https://accessgudid.nlm.nih.gov/advanced-search).
 
     2. In the Builder, click the **Search In** dropdown and select **Device Class** (last item). Pick any class and click **Search**.
