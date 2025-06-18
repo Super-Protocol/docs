@@ -82,7 +82,7 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
     3. Copy the study ID from the URL.<br/>
     For example, if the URL is `https://clinicaltrials.gov/study/NCT07025785?rank=1`, the study ID is `NCT07025785`.
 
-    4. Add the copied ID at the end of the following URL:<br/>
+    4. Add the copied ID to the end of the following URL:<br/>
     `https://clinicaltrials.gov/api/legacy/public-xml/`<br/>
     For example, `https://clinicaltrials.gov/api/legacy/public-xml/NCT07025785`.
 
