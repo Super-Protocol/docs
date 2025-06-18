@@ -73,12 +73,25 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
     Click a link and copy the URL from the browser address bar.
 
     7. Submit the URL.
-
   </TabItem>
-  <TabItem value="fda" label=" FDA's 510(k)s">
+  <TabItem value="clinicaltrials" label="ClinicalTrials.gov">
+    1. Go to the [ClinicalTrials.gov website](https://clinicaltrials.gov/search).
+
+    2. Open a study page in the search results.
+
+    3. Copy the study ID from the URL.<br/>
+    For example, if the URL is `https://clinicaltrials.gov/study/NCT07025785?rank=1`, the study ID is `NCT07025785`.
+
+    4. Add the copied ID to the end of the following URL:<br/>
+    `https://clinicaltrials.gov/api/legacy/public-xml/`<br/>
+    For example, `https://clinicaltrials.gov/api/legacy/public-xml/NCT07025785`.
+
+    5. Submit the resulting URL.
+  </TabItem>
+  <TabItem value="fda" label="FDA's 510(k)s">
     **Unique links are running low! Switch to other sources.**
 
-    1. Open the [FDA 510(k) Search Page](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm).
+    1. Go to the [FDA 510(k) Search Page](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm).
 
     2. Click the **Panel** dropdown and select a category.<br/>
     Use 1–2 filters for broader results. Avoid over-filtering to ensure you capture relevant summaries.
@@ -94,7 +107,7 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
   <TabItem value="gudid" label="GUDID">
     **Unique links are running low! Switch to other sources.**
 
-    1. Open [GUDID Advanced Search](https://accessgudid.nlm.nih.gov/advanced-search).
+    1. Go to the [GUDID Advanced Search page](https://accessgudid.nlm.nih.gov/advanced-search).
 
     2. In the Builder, click the **Search In** dropdown and select **Device Class** (last item). Pick any class and click **Search**.
 
@@ -109,7 +122,7 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
 
 Watch our [video guide](https://www.youtube.com/watch?v=q2GNQAXIH3o) on how to find and submit links.
 
-Submit up to **30 valid links per day**. You will receive points when the submitted links are verified; it may take up to two hours.
+Submit up to **30 valid links per day**. You will receive points when the submitted links are verified; it may take a few hours.
 
 Hit the daily cap and earn a **+280 Strike Bonus**.
 
