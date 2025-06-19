@@ -34,9 +34,9 @@ The limit resets daily at 12:00 PM UTC.
 
 Only links from the following approved sources are eligible:
 
-[European database of suspected adverse drug reaction reports](https://www.adrreports.eu/en/search.html#)
-
 [ClinicalTrials.gov](https://clinicaltrials.gov/search)
+
+[European database of suspected adverse drug reaction reports](https://www.adrreports.eu/en/search.html#)
  
 [FDA' 510(k) Premarket Notifications](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm)
 

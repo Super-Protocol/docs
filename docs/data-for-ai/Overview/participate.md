@@ -30,7 +30,21 @@ The approximate transaction cost is:
 Search the [approved data sources](/data-for-ai/rules/submissions#accepted-databases) and find **unique, unsubmitted** URLs.
 
 <Tabs>
-  <TabItem value="eudra" label="EudraVigilance" default>
+  <TabItem value="clinicaltrials" label="ClinicalTrials.gov" default>
+    1. Go to the [ClinicalTrials.gov website](https://clinicaltrials.gov/search).
+
+    2. Open a study page in the search results.
+
+    3. Copy the study ID from the URL.<br/>
+    For example, if the URL is `https://clinicaltrials.gov/study/NCT07025785?rank=1`, the study ID is `NCT07025785`.
+
+    4. Add the copied ID to the end of the following URL:<br/>
+    `https://clinicaltrials.gov/api/legacy/public-xml/`<br/>
+    For example, `https://clinicaltrials.gov/api/legacy/public-xml/NCT07025785`.
+
+    5. Submit the resulting URL.
+  </TabItem>
+  <TabItem value="eudra" label="EudraVigilance">
     The flow slightly differs for desktop and mobile devices.
 
     **Desktop**:
@@ -73,20 +87,6 @@ Search the [approved data sources](/data-for-ai/rules/submissions#accepted-datab
     Click a link and copy the URL from the browser address bar.
 
     7. Submit the URL.
-  </TabItem>
-  <TabItem value="clinicaltrials" label="ClinicalTrials.gov">
-    1. Go to the [ClinicalTrials.gov website](https://clinicaltrials.gov/search).
-
-    2. Open a study page in the search results.
-
-    3. Copy the study ID from the URL.<br/>
-    For example, if the URL is `https://clinicaltrials.gov/study/NCT07025785?rank=1`, the study ID is `NCT07025785`.
-
-    4. Add the copied ID to the end of the following URL:<br/>
-    `https://clinicaltrials.gov/api/legacy/public-xml/`<br/>
-    For example, `https://clinicaltrials.gov/api/legacy/public-xml/NCT07025785`.
-
-    5. Submit the resulting URL.
   </TabItem>
   <TabItem value="fda" label="FDA's 510(k)s">
     **Unique links are running low! Switch to other sources.**
