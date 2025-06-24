@@ -26,7 +26,7 @@ To check participants, referrals, rewards, and more, [read the campaign's smart 
 
 To find a participant, use the method [getParticipantInfo](https://opbnb.bscscan.com/address/0x8c77ef6ed2ee514d1754fbfc2710d70e9d6ba871#readContract#F12) and enter a wallet address. Example result:
 
-```
+```text
 0,0,true,false,0x8da2c62C23aEBeb1Aa8b5eE96d341d26a2edec6eB,68,2640,67738,390,0,237,152,0xbF4aC1b6efd5C21e5Ce93f34c8F43C8a9bCACA3F3,813,97280,10000000000000000000,500
 ```
 
@@ -54,4 +54,4 @@ Fields in the example in order of appearance:
 
 To see all winners, use the method [getTopParticipantsInfo](https://opbnb.bscscan.com/address/0x8c77ef6ed2ee514d1754fbfc2710d70e9d6ba871#readContract#F21) and check 1,000 participants.
 
-Use other smart contract's methods to get more information about the campaign results.
+Use other smart contract methods to get more information about the campaign results.
