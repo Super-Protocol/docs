@@ -14,7 +14,7 @@ This command is only available during the Testnet. Be mindful of [Testnet limita
 ```
 ./spctl tokens request
     [--tee]
-    [--matic]
+    [--bnb]
     [--config <path>]
     [--help | -h]
 ```
@@ -24,7 +24,7 @@ This command is only available during the Testnet. Be mindful of [Testnet limita
 | **Name** | **Description** |
 | :- | :- |
 | `--tee` | Request for SPPI tokens. |
-| `--matic` | Request for BNB tokens. |
+| `--bnb` | Request for BNB tokens. |
 | `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
