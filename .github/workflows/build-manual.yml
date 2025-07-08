@@ -51,6 +51,8 @@ jobs:
             type=ref,event=pr
             type=raw,value=develop-build-${{ github.run_id }}
             type=raw,value=${{ env.REPO_NAME }}-${{ github.ref_name }}-build-${{ github.run_id }}
+            ${{ github.ref == 'refs/heads/main' && 'type=raw,value=mainnet' || '' }}
+            ${{ github.ref == 'refs/heads/main' && format('type=raw,value=mainnet-build-{0}', github.run_id) || '' }}
 
       - name: "Build and push Docker image"
         uses: docker/build-push-action@v6
