@@ -30,4 +30,4 @@ If an error occurs during transaction confirmation, you will see the error messa
 <br/>
 <br/>
 
-To retry, click the **Try again** button. If the error persists, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+To retry, click the **Try again** button. If the error persists, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

@@ -96,10 +96,17 @@ The **Publish Offer** button validates and publishes the offer on the Marketplac
 
 :::note
 
-Publishing an offer makes the model available to other users for deploying. However, publishing does not provide access to model files. The content of your offer remains encrypted and inaccessible to anyone.
+Publishing an offer makes the model available to other users for deploying. However, publishing does not provide access to the model files. The content of your offer remains encrypted and inaccessible to anyone.
 
 :::
 
 The **Deploy** button adds the offer to an order and redirects you to the Order Builder. Note that you do not have to publish the offer to deploy the model.
 
 The **[ ⋮ ]** button in the top-right corner of the screen allows you to unpublish the offer. Note that offers cannot be completely deleted due to the blockchain immutability. However, unpublished offers do not appear on the Marketplace and cannot be used in orders.
+
+## Checklist
+
+When you try to deploy or publish your offer, the system checks if the offer lacks necessary information. In case some required fields were not filled in, the Completion Checklist modal window will appear, displaying Required, Optional, and Completed fields for publishing the offer and deployment without publishing.
+
+<img src={require('../images/offer-builder-checklist.png').default} width="auto" height="auto" border="1"/>
+<br/>

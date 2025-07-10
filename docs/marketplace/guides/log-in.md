@@ -8,7 +8,7 @@ sidebar_position: 1
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user. Read about [user account types](/marketplace/account).
+This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a [Web3 user](/marketplace/account#web3-user-account).
 
 :::note
 
@@ -16,12 +16,18 @@ The Marketplace web app does not officially support mobile devices. Use a deskto
 
 :::
 
-To log in as a Web3 user, you need one of the supported non-custodial wallets:
+To log in as a Web3 user, you need one of the supported software cryptocurrency wallets:
 
 - MetaMask
 - Trust Wallet
 
-Choose any and install its browser extension from your browser's extension store.
+Both are free, popular, and non-custodial. Choose either and install its browser extension from your browser's extension store.
+
+:::important
+
+Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
+
+:::
 
 <Tabs>
   <TabItem value="metamask" label="MetaMask" default>
@@ -35,7 +41,7 @@ Choose any and install its browser extension from your browser's extension store
     <br/>
     <br/>
 
-    1.2. Click your current account name:
+    1.2. Click your current account name.
 
     <img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
     <br/>
@@ -102,7 +108,7 @@ Choose any and install its browser extension from your browser's extension store
 
     ## MetaMask, step 4. Import SPPI tokens (optional)
 
-    To make MetaMask display your SPPI token balance, import the token.
+    To see your SPPI token balance in MetaMask, import the token.
 
     4.1. Open MetaMask, go to the **Tokens** tab, click the **[ ⋮ ]** button, and select **Import tokens** in the menu.
 
@@ -135,7 +141,7 @@ Choose any and install its browser extension from your browser's extension store
     <br/>
     <br/>
 
-    1.2. Click your current account name, and then **Add new wallet**:
+    1.2. Click your current account name, and then **Add new wallet**.
 
     <img src={require('../images/trust-newwallet.png').default} width="auto" height="auto" border="1"/>
     <br/>
@@ -202,7 +208,7 @@ Choose any and install its browser extension from your browser's extension store
 
     ## Trust Wallet, step 4. Import SPPI tokens (optional)
 
-    To make Trust Wallet display your SPPI token balance, import the token.
+    To see your SPPI token balance in Trust Wallet, import the token.
 
     4.1. Open Trust Wallet, go to the **Crypto** tab and click **Manage crypto** at the bottom of the list.
 
@@ -238,4 +244,4 @@ Choose any and install its browser extension from your browser's extension store
 
 ## Contact Super Protocol
 
-If you face any issues, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
