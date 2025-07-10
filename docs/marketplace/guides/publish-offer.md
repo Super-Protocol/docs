@@ -152,4 +152,4 @@ If you want to unpublish the offer, click the **[ ⋮ ]** button in the top-righ
 
 ## Contact Super Protocol
 
-If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+If you face any issues, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.

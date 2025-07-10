@@ -38,7 +38,7 @@ As a result, you should have two pairs Access Key + Secret Key.
 
 Open the [Marketplace web app](https://marketplace.superprotocol.com/). Log in as a Web3 user and open the **Account** window.
 
-<img src={require('../images/marketplace-web3acc-menu.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -58,4 +58,4 @@ Select the **Your Storj account** radio button, fill in the fields, and click **
 
 ## Contact Super Protocol
 
-If you face any issues, do not hesitate to contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+If you face any issues, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
