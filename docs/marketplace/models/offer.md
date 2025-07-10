@@ -22,6 +22,8 @@ On the right-hand side of the window, you can find metadata about the <a id="off
     - <a id="compute"><span className="dashed-underline">**Compute**</span></a>.
 - **Provider**: The name of the provider that created the offer.
 - **Category**: The tasks the model is intended for.
+- **Parameters**: The number of model parameters, if specified by the provider.
+- **Ordered**: The total number of deployments and the success rate.
 - **Source**: A link to the resource from which the model was taken.
 - **Published**: The date and time when the offer was created.
 - **Updated**: The date and time of the most recent update.
