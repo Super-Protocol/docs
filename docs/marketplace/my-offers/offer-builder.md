@@ -106,7 +106,7 @@ The **[ ⋮ ]** button in the top-right corner of the screen allows you to unpub
 
 ## Checklist
 
-When you try to deploy or publish your offer, the system checks if the offer lacks necessary information. In case some required fields were not filled in, the Completion Checklist modal window will appear, displaying Required, Optional, and Completed fields for publishing the offer and deployment without publishing.
+When you try to deploy or publish your offer, the system checks if the offer lacks necessary information. If any required fields are not filled in, the Completion Checklist modal window will appear, displaying Required, Optional, and Completed fields for publishing the offer and deployment without publishing.
 
 <img src={require('../images/offer-builder-checklist.png').default} width="auto" height="auto" border="1"/>
 <br/>
