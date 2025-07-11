@@ -69,6 +69,6 @@ Your offer, its description, and HTML links to external resources must not be re
    + Use [Markdown](https://www.markdownguide.org/) to make your post more presentable.
 4. Answer questions by our moderators. They will look at your offer and make a test order.
 5. If all is fine, your offer will be moved to the **Approved** category.
-6. If your offer becomes **Inactive**, contact the Super Protocol team in the offer's post or [create a ticket](https://discord.com/channels/951018794590023681/1094128903037128735).
+6. If your offer becomes **Inactive**, contact Super Protocol in the offer's post or [create a ticket](https://discord.com/channels/951018794590023681/1094128903037128735).
 
 Note that other users may provide feedback on your offer using the same offer's post.
