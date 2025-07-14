@@ -69,4 +69,4 @@ So, the final format of this option must be one of the following:
 - `--solution <offerId>,<slotId>`. For example, `--solution 13,15`.
 - `--solution <path>`. For example, `--solution ./python-solution.json`.
 
-Read the descriptions of arguments and options and refer to the examples for more information. If you have any issues or questions, contact the Super Protocol team on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+Read the descriptions of arguments and options and refer to the examples for more information. If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
