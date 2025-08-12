@@ -2,7 +2,7 @@
 id: "publish-offer"
 title: "Publish an Offer"
 slug: "/guides/publish-offer"
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';

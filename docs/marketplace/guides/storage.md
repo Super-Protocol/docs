@@ -2,7 +2,7 @@
 id: "storage"
 title: "Set Up Personal Storage"
 slug: "/guides/storage"
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 This guide provides step-by-step instructions on how to set up your personal Storj account.

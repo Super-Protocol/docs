@@ -2,7 +2,7 @@
 id: "deploy-model"
 title: "Deploy Your Model"
 slug: "/guides/deploy-model"
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 This guide provides step-by-step instructions for uploading and deploying an AI model.

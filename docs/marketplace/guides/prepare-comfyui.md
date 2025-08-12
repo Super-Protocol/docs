@@ -2,7 +2,7 @@
 id: "prepare-comfyui"
 title: "Prepare a ComfyUI Workflow"
 slug: "/guides/prepare-comfyui"
-sidebar_position: 6
+sidebar_position: 5
 ---
 
 import Tabs from '@theme/Tabs';

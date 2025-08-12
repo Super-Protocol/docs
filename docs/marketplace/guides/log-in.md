@@ -2,7 +2,7 @@
 id: "log-in"
 title: "Log In as a Web3 user"
 slug: "/guides/log-in"
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 import Tabs from '@theme/Tabs';
