@@ -1,7 +1,7 @@
 ---
 id: "log-in"
 title: "Log In as a Web3 user"
-slug: "/guides/log-in"
+slug: "/log-in"
 sidebar_position: 2
 ---
 
@@ -37,25 +37,25 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     1.1. Open MetaMask.
 
-    <img src={require('../images/metamask-open.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-open.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     1.2. Click your current account name.
 
-    <img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     1.3. Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
 
-    <img src={require('../images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     1.4. Type any desired account name and click **Add account**.
 
-    <img src={require('../images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
@@ -63,31 +63,31 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     2.1. Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press **Enter Marketplace**.
 
-    <img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.2. Select **Connect Wallet**.
 
-    <img src={require('../images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.3 Select **MetaMask**.
 
-    <img src={require('../images/enter-marketplace-metamask.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/enter-marketplace-metamask.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.4. In the MetaMask window, press **Connect**, then **Approve** adding a new network (opBNB Mainnet), and finally, **Confirm** the signature request.
 
-    <img src={require('../images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.5. If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-    <img src={require('../images/marketplace-web3acc-metamask.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/marketplace-web3acc-metamask.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
@@ -100,7 +100,7 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
 
-    <img src={require('../images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
@@ -112,7 +112,7 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     4.1. Open MetaMask, go to the **Tokens** tab, click the **[ ⋮ ]** button, and select **Import tokens** in the menu.
 
-    <img src={require('../images/metamask-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
@@ -120,13 +120,13 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
     
     Click **Next** and then **Import**.
 
-    <img src={require('../images/metamask-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     4.3. Check that SPPI has appeared in the **Tokens** tab.
 
-    <img src={require('../images/metamask-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/metamask-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
     <br/>
 
   </TabItem>
@@ -137,25 +137,25 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     1.1. Open Trust Wallet.
 
-    <img src={require('../images/trust-open.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-open.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     1.2. Click your current account name, and then **Add new wallet**.
 
-    <img src={require('../images/trust-newwallet.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-newwallet.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     1.3. Select **Create a new wallet**.
 
-    <img src={require('../images/trust-newwallet-create.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-newwallet-create.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     1.4. Confirm your Trust Wallet password and click **Next**.
 
-    <img src={require('../images/trust-newwallet-password.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-newwallet-password.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
  
@@ -163,31 +163,31 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     2.1. Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press **Enter Marketplace**.
 
-    <img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.2. Select **Connect Wallet**.
 
-    <img src={require('../images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.3 Select **Trust Wallet**.
 
-    <img src={require('../images/enter-marketplace-trust.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/enter-marketplace-trust.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.4. In the Trust Wallet window, press **Connect** and then **Confirm** the signature request.
 
-    <img src={require('../images/trust-connect.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-connect.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     2.5. If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-    <img src={require('../images/marketplace-web3acc-trust.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/marketplace-web3acc-trust.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
@@ -200,7 +200,7 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
 
-    <img src={require('../images/marketplace-trust-account-menu.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/marketplace-trust-account-menu.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
@@ -212,31 +212,31 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
 
     4.1. Open Trust Wallet, go to the **Crypto** tab and click **Manage crypto** at the bottom of the list.
 
-    <img src={require('../images/trust-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     4.2. Click **Don't see your crypto? Import**.
 
-    <img src={require('../images/trust-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     4.3. Find **OpBNB** in the list of networks.
 
-    <img src={require('../images/trust-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
     
     4.4. Add the following address: `0xDb8E4557E34256d3E8bBA0f7796Cf633a8F08C27`. Ensure the Super Protocol Incentives Token (SPPI) is found. Click **Add token**.
 
-    <img src={require('../images/trust-import-sppi-4.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-import-sppi-4.png').default} width="auto" height="auto" border="1"/>
     <br/>
     <br/>
 
     4.5. Check that SPPI has appeared in the **Tokens** tab.
 
-    <img src={require('../images/trust-import-sppi-5.png').default} width="auto" height="auto" border="1"/>
+    <img src={require('./images/trust-import-sppi-5.png').default} width="auto" height="auto" border="1"/>
     <br/>
 
   </TabItem>
