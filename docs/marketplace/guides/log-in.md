@@ -25,7 +25,7 @@ Both are free, popular, and non-custodial. Choose either and install its browser
 
 :::important
 
-Super Protocol is not affiliated with MetaMask or Trust Wallet in any way.
+Super Protocol is not affiliated with MetaMask or Trust Wallet.
 
 :::
 
