@@ -1,25 +1,23 @@
 ---
-id: "jupyter"
-title: "Jupyter Notebook and Super Protocol UI"
-slug: "/"
-sidebar_position: 0
+id: "gui"
+title: "Deploy using the UI (Jupyter)"
+slug: "/gui"
+sidebar_position: 1
 ---
 
-## Log in
+## Log in and get tokens
 
 1. Open the [Marketplace](https://marketplace.superprotocol.com).
  
 2. Click **Enter Marketplace** in the upper-right corner and log in using your preferred method.
 
-## Get SPPI tokens
-
-1. Click on your account name in the upper-right corner and select Account.
+3. Click on your account name in the upper-right corner and select Account.
 
 <img src={require('./images/1.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-2. In the Account window, copy your Super Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
+4. In the Account window, copy your Super Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
 
 <img src={require('./images/2.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -53,26 +51,11 @@ TII.JSON files are safe to share. The information about the uploaded content is 
 
 6. When the order is complete (Status: Done), press **Get Result** and download the TAR.GZ archive containing the order result.
 
-<<<<<<< Updated upstream
-1. Open the [Marketplace Colab page](https://marketplace.superprotocol.com/order-create-colab).
-     
-2. Press **Run Colab**.  
-     
-3. Add the application and dataset TII.JSON files generated during the upload process.  
-     
-4. Press **Run**. When the order is created, you will be redirected to the order page. Write down the order ID; you may need it later for verification.  
-     
-5. Wait until the order is complete. For small files, it typically takes around 20 minutes, but the time can be significantly longer for large files. Use the **Extend Lease** button to add tokens to the order balance if the lease time is running out.  
-     
-6. When the order is complete (Status: Done), press **Get Result** and download the TAR.GZ archive containing the order result.  
-     
-=======
->>>>>>> Stashed changes
 7. Unzip the downloaded archive. The execution result is located in the `output` folder.
 
 ## Verify
 
-1. [Download and set up SPCTL](/cli/) – the Super Protocol CLI tool.
+1. [Download and set up SPCTL](/cli/)—the Super Protocol CLI tool.
 
 2. Get the order report:
 

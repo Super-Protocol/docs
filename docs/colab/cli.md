@@ -1,12 +1,12 @@
 ---
-id: "docker"
-title: "Docker and Super Protocol CLI"
-slug: "/docker"
-sidebar_position: 1
+id: "cli"
+title: "Deploy using the CLI (Docker)"
+slug: "/cli"
+sidebar_position: 2
 ---
 
 Prerequisite:
-- [SPCTL](https://docs.superprotocol.com/cli/) – the Super Protocol CLI tool.
+- [SPCTL](https://docs.superprotocol.com/cli/)—the Super Protocol CLI tool.
 
 ### Prepare the solution
 
