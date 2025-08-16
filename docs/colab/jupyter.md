@@ -13,7 +13,7 @@ Inside the TEE, you have a special file structure:
 | :---- | :---- | :---- |
 | `/sp/inputs/input-0001` | Possible data location 1 | Read-only |
 | `/sp/inputs/input-0002` | Possible data location 2 | Read-only |
-| `/sp/outputs` | Output folder for your results | Write; you can also read own files |
+| `/sp/output` | Output folder for your results | Write; you can also read own files |
 
 :::important
 
@@ -31,7 +31,7 @@ In the Jupyter Notebook:
 
 3. Process the data as needed.
 
-4. Write the results to `/sp/outputs` so they are saved and returned after execution.
+4. Write the results to `/sp/output` so they are saved and returned after execution.
 
 ## 2. Find the input file
 
@@ -71,14 +71,14 @@ Use `input_path` as the file location if you use another method, such as the csv
 
 ## 4. Process and save the data
 
-After loading your data, process it in memory and save the results to `/sp/outputs`. Ensure your processed data, whether a DataFrame, list, dictionary, or other format, is ready before saving. For example:
+After loading your data, process it in memory and save the results to `/sp/output`. Ensure your processed data, whether a DataFrame, list, dictionary, or other format, is ready before saving. For example:
 
 ```py
 from pathlib import Path
 import pandas as pd
 
 # Create the output directory if it doesn't exist
-output_path = Path("/sp/outputs")
+output_path = Path("/sp/output")
 output_path.mkdir(parents=True, exist_ok=True)
 # Specify the output file (replace "output.csv" with the name of your file)
 output_file = output_path / "output.csv"
