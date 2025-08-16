@@ -81,6 +81,10 @@ const config = {
             from: "/guides",
             to: "/guides/log-in",
           },
+          /*{
+            from: "/colab",
+            to: "/colab/jupyter",
+          },*/
         ],
       },
     ],
@@ -102,6 +106,16 @@ const config = {
         path: "./docs/data-for-ai",
         routeBasePath: "/data-for-ai",
         sidebarPath: require.resolve("./sidebar.js"),
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "colab",
+        path: "./docs/colab",
+        routeBasePath: "/colab",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
