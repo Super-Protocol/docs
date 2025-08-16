@@ -15,7 +15,7 @@ Use the steps below as an outline of your learning curve with Super Protocol.
 
 If you are just starting out, feel your way around Super Protocol using the Marketplace GUI. 
 
-1. [Set up MetaMask](/marketplace/guides/log-in) and connect to the Marketplace GUI.
+1. [Set up MetaMask](/guides/log-in) and connect to the Marketplace GUI.
 2. Complete the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnel order to get familiar with the Super Protocol logic.
 
 ## Deploy a solution with CLI

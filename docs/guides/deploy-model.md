@@ -1,8 +1,8 @@
 ---
 id: "deploy-model"
 title: "Deploy Your Model"
-slug: "/guides/deploy-model"
-sidebar_position: 4
+slug: "/deploy-model"
+sidebar_position: 3
 ---
 
 This guide provides step-by-step instructions for uploading and deploying an AI model.
@@ -39,7 +39,7 @@ Ensure your model meets the Super Protocol requirements:
 - Text-to-Video
 - Mask Generation
 
-If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](/marketplace/guides/prepare-comfyui) before uploading. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
+If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](/guides/prepare-comfyui) before uploading. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
 
 1.2. Due to [testnet limitations](/marketplace/limitations), the total size of model files should not exceed 13 GB. Support for bigger models will be available in the future.
 
@@ -47,13 +47,13 @@ If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](
 
 2.1. Open **My Offers** and click the **New Offer** button.
 
-<img src={require('../images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 2.2. Complete all fields in the appearing window.
 
-<img src={require('../images/new-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -68,7 +68,7 @@ If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](
 
 2.4. When the upload is complete, close the window or click **Go to Offer** to open the offer in the [Offer Builder](/marketplace/my-offers/offer-builder).
 
-<img src={require('../images/new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 3. Deploy
@@ -77,19 +77,19 @@ If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](
 
 3.2. In the Order Builder, review and modify the order if necessary. Click **Pay Now** to place the order.
 
-<img src={require('../images/order-builder-pay-now.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/order-builder-pay-now.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 3.3. When the order is created, you will be redirected to the [Order](/marketplace/all-orders/order) screen. Wait until the deployment is ready. It may take 15-45 minutes, depending on the model size and other factors.
 
-<img src={require('../images/order-processing.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/order-processing.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 3.4. When your order is ready, you will see the **Deployed** status and an **Access Link** to your model's interface.
 
-<img src={require('../images/order-deployed-online.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/order-deployed-online.png').default} width="auto" height="auto" border="1"/>
 
 ## Contact Super Protocol
 

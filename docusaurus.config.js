@@ -55,6 +55,17 @@ const config = {
       },
     ],
     [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "guides",
+        path: "./docs/guides",
+        routeBasePath: "/guides",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
@@ -65,6 +76,10 @@ const config = {
           {
             from: "/data-for-ai",
             to: "/data-for-ai/overview/about",
+          },
+          {
+            from: "/guides",
+            to: "/guides/log-in",
           },
           /*{
             from: "/colab",
@@ -138,6 +153,11 @@ const config = {
           href: 'https://superprotocol.com/'
         },
         items: [
+          {
+            to: "/guides/log-in",
+            position: "right",
+            label: "Guides",
+          },
           {
             type: "doc",
             docId: "index",

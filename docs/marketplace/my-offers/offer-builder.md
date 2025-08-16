@@ -9,9 +9,9 @@ _Offer Builder_ is a tool for uploading models and creating, editing, and publis
 
 To deploy your AI model, you must upload it and create an offer. Newly created offers are unpublished, meaning only you can view them and add them to orders for deployment.
 
-You can deploy a model immediately after uploading it and creating an unpublished offer. Check the guide on how to [Deploy Your Model](/marketplace/guides/deploy-model) for step-by-step instructions.
+You can deploy a model immediately after uploading it and creating an unpublished offer. Check the guide on how to [Deploy Your Model](/guides/deploy-model) for step-by-step instructions.
 
-To make an uploaded model available to other users, you must first configure and publish its offer. Check the guide on how to [Publish an Offer](/marketplace/guides/publish-offer) for step-by-step instructions.
+To make an uploaded model available to other users, you must first configure and publish its offer. Check the guide on how to [Publish an Offer](/guides/publish-offer) for step-by-step instructions.
 
 ## Files
 
