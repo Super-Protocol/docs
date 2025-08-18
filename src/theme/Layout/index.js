@@ -19,8 +19,8 @@ export default function Layout(props) {
         <a href="https://docs.superprotocol.com/fundamentals/offers/"><i>Offer</i></a> is a computing service, software product, or data available on the Marketplace for lease and use in orders.<br/>
         Offers are divided into four categories:<br/>
           ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
-          ᐧ Solution offers: Engines, applications, scripts, base images, and other software.<br/>
-          ᐧ Data offers: AI models, webpages, configs, datasets, databases, and any other data that solutions may require.<br/>
+          ᐧ Solution offers: Engines, applications, scripts, base images, or other software.<br/>
+          ᐧ Data offers: AI models, webpages, configs, datasets, databases, or any other data that solutions may require.<br/>
           ᐧ Storage offers: Decentralized storage that keeps order results after execution.
       </Tooltip>
 
@@ -28,8 +28,8 @@ export default function Layout(props) {
         <a href="https://docs.superprotocol.com/fundamentals/offers/"><i>Offer</i></a> is a computing service, software product, or data available on the Marketplace for lease and use in orders.<br/>
         Offers are divided into four categories:<br/>
           ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
-          ᐧ Solution offers: Engines, applications, scripts, base images, and other software.<br/>
-          ᐧ Data offers: AI models, webpages, configs, datasets, databases, and any other data that solutions may require.<br/>
+          ᐧ Solution offers: Engines, applications, scripts, base images, or other software.<br/>
+          ᐧ Data offers: AI models, webpages, configs, datasets, databases, or any other data that solutions may require.<br/>
           ᐧ Storage offers: Decentralized storage that keeps order results after execution.
       </Tooltip>
 
