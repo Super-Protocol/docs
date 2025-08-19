@@ -101,9 +101,11 @@ eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDA
 
 When done, SPCTL creates `config.json` in its directory. If you need to update your account information, run `./spctl setup` again or modify `config.json` manually in a text editor.
 
-## Upload the solution
+## Prepare the solution
 
-1. Build a Docker image with your script or application.
+In the Super Protocol terms, a _solution_ refers to a utility, application, engine, or other software.
+
+1. Build a Docker image with your application.
 
 2. Save and zip the image:
 
@@ -144,7 +146,9 @@ The resulting file `resource.json` contains information on how to access and dec
 
 If you need to delete the uploaded content from the file storage, use the [`files delete`](/cli/commands/files/delete) command.
 
-## Upload the data
+## Prepare the data
+
+In the Super Protocol terms, _data_ refers to AI models, webpages, configs, datasets, databases, or any other data that solutions may require. Note that IPYNB scripts for Jupyter Notebook qualify as _data_, not a _solution_.
 
 1. Place all files into a separate directory. Ensure it does not contain hidden or system files.
 
@@ -215,11 +219,11 @@ The resulting TII.JSON file is safe to share.
 
 The information about the uploaded content is encrypted with the public key of the specified confidential virtual machine (`"offerId": "10"`). Only this machine can decrypt it and then download and decrypt the content itself. The machine runs inside a Trusted Execution Environment with no external access.
 
-Additionally, the dataset can only be used if the solution’s hash matches the value specified in `--solution-hash`.
+Additionally, the dataset can only be used if the hash of the Docker image matches the value specified in `--solution-hash`. If `--solution hash` is not specified, the data can be used with any solution.
 
 :::
 
-## Deploy
+## Run
 
 1. Place an order:
 
