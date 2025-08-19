@@ -5,13 +5,13 @@ slug: "/gui"
 sidebar_position: 1
 ---
 
-## Log in and get tokens
+## Before you begin: Log in and get tokens
 
 1. Open the [Marketplace](https://marketplace.superprotocol.com).
  
 2. Click **Enter Marketplace** in the upper-right corner and log in using your preferred method.
 
-3. Click on your account name in the upper-right corner and select Account.
+3. Click on your account name in the upper-right corner and select **Account**.
 
 <img src={require('./images/1.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -20,7 +20,6 @@ sidebar_position: 1
 4. In the Account window, copy your Super Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
 
 <img src={require('./images/2.png').default} width="auto" height="auto" border="1"/>
-<br/>
 <br/>
 
 ## Upload an IPYNB script or dataset
@@ -35,9 +34,15 @@ sidebar_position: 1
 - Hash of the uploaded content, calculated before the encryption.
 - Restrictions on the computing device and the solution offer (i.e., Jupyter Notebook).
 
-TII.JSON files are safe to share. The information about the uploaded content is encrypted with the public key of the specified confidential virtual machine (`"offerId": "10"`). Only this machine can decrypt it and then download and decrypt the content itself. The machine runs inside a Trusted Execution Environment with no external access.
+:::note
 
-## Place an order
+TII.JSON files are safe to share.
+
+The information about the uploaded content is encrypted with the public key of the specified confidential virtual machine (`"offerId": "10"`). Only this machine can decrypt it and then download and decrypt the content itself. The machine runs inside a Trusted Execution Environment with no external access.
+
+:::
+
+## Run
 
 1. Open the [Marketplace Colab page](https://marketplace.superprotocol.com/order-create-colab).
 
@@ -69,7 +74,7 @@ Replace `<ORDER_ID>` with your order ID, for example:
 ./spctl orders get-report 244834 --save-to report.json
 ```
 
-The command will display and save the order report to the `report.json` file in the SPCTL directory. This report includes the certificate chain, order metadata, and validation result.
+The command shows the order report and saves it to the `report.json` file in the SPCTL directory. This report includes the certificate chain, order metadata, and validation result.
 
 3. Ensure you see `Order report validation successful!` in the output.
 

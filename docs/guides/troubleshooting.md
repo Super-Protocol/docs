@@ -11,7 +11,7 @@ This page contains the most common issues and ways to fix them. This list is inc
 
 Issue: the **Enter Marketplace** button is stuck in the loading state.
 
-<img src={require('./images/stuck-login.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/stuck-login.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -27,7 +27,7 @@ Possible solutions:
 
 Issue: the <a id="order"><span className="dashed-underline">order</span></a> processing stops due to the **Error** status.
 
-<img src={require('./images/order-error.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/order-error.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -57,12 +57,12 @@ Solution: allow executing remote code in the <a id="engine"><span className="das
 
 1. In the Order Builder, open the engine settings.
 
-<img src={require('./images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/order-builder-engine-settings.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 2. Go to the **Model loader** tab, select your model's loader from the drop-down menu, and tick the **trust-remote-code** checkbox.
 
-<img src={require('./images/order-builder-trust-remote-code.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/order-builder-trust-remote-code.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 :::warning
