@@ -1,8 +1,8 @@
 ---
 id: "publish-offer"
 title: "Publish an Offer"
-slug: "/guides/publish-offer"
-sidebar_position: 5
+slug: "/publish-offer"
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';
@@ -20,26 +20,26 @@ Uploading models and creating <a id="offer"><span className="dashed-underline">o
 
 1.1. In the [Marketplace web app](https://marketplace.superprotocol.com/), open your account settings.
 
-<img src={require('../images/my-offers-account.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/my-offers-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 1.2. Scroll down, type in the desired **Provider Name**, and click **Create Provider**.
 
-<img src={require('../images/account-create-provider.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/account-create-provider.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 2. Create an offer
 
 2.1. In the **My Offers** screen, click the **New Offer** button.
 
-<img src={require('../images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 2.2. Complete all the fields in the appearing window.
 
-<img src={require('../images/new-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -64,20 +64,20 @@ The created offer is unpublished. You need to configure it in the Offer Builder 
 
 To open the offer in the Offer Builder, click **Go to Offer** in the **New Offer** window.
 
-<img src={require('../images/new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/new-offer-go-to-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 Alternatively, click the **Edit** button next to the offer in the **My Offers** screen.
 
-<img src={require('../images/my-offers-edit.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/my-offers-edit.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 4. Check the model files
 
 In the **Files** tab, ensure the model formats are recognized correctly.
 
-<img src={require('../images/offer-builder-format.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/offer-builder-format.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -87,7 +87,7 @@ If you need to upload more files related to this model, click the **Add Files** 
 
 In the **Description** tab, provide information about the offer. It is recommended that you complete all the fields.
 
-<img src={require('../images/offer-builder-description.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/offer-builder-description.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -107,7 +107,7 @@ Fields required to publish the offer are marked with \*.
 
 In the **Pricing** tab, click the **Add Slot** button to open an editable template for a <a id="requirements"><span className="dashed-underline">requirement slot</span></a>.
 
-<img src={require('../images/offer-builder-pricing.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../marketplace/images/offer-builder-pricing.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
