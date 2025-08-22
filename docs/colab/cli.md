@@ -8,7 +8,9 @@ sidebar_position: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Before you begin: Create an account, get tokens, and set up SPCTL
+## Before you begin
+
+### Create an account and get tokens
 
 1. Complete the first two steps of the guide [Log In as a Web3 User](https://docs.superprotocol.com/guides/log-in) (MetaMask is recommended).
 
@@ -24,29 +26,39 @@ import TabItem from '@theme/TabItem';
 <br/>
 <br/>
 
-4. Save your web3 account private key.
+### Set up SPCTL—the Super Protocol CLI tool.
 
-<p style={{marginLeft: '32px'}}>4.1. In the Metamask window, click your current account name:</p>
+1. Save your web3 account private key.
+
+<p style={{marginLeft: '32px'}}>1.1. In the Metamask window, click your current account name:</p>
 
 <img src={require('../marketplace/images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-<p style={{marginLeft: '32px'}}>4.2. Open **Account details**:</p>
+<p style={{marginLeft: '32px'}}>1.2. Open **Account details**:</p>
 
 <img src={require('./images/3.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-<p style={{marginLeft: '32px'}}>4.3. Press the **Show private key** button in the **Details** tab:</p>
+<p style={{marginLeft: '32px'}}>1.3. Press the **Show private key** button in the **Details** tab:</p>
 
 <img src={require('./images/4.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-<p style={{marginLeft: '32px'}}>4.4. Copy and save your web3 account private key. You will need it to set up SPCTL—the Super Protocol CLI tool.</p>
+<p style={{marginLeft: '32px'}}>1.4. Copy and save your web3 account private key.</p>
 
-5. Download SPCTL.
+2. Set up a Storj account.
+
+<p style={{marginLeft: '32px'}}>2.1. Register a [Storj](https://www.storj.io/) account if you do not have one yet.</p>
+
+<p style={{marginLeft: '32px'}}>2.2. Create a bucket. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.</p>
+
+<p style={{marginLeft: '32px'}}>2.3. Create two access grants for this bucket. One should provide **Full** permission (**Read**, **List**, **Write**, **Delete**), and the other one **Read** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.</p>
+
+3. Download SPCTL.
 
 <Tabs>
     <TabItem value="linux" label="Linux" default>
@@ -79,25 +91,23 @@ import TabItem from '@theme/TabItem';
 
 You can also download and install SPCTL manually from the Super Protocol [GitHub repository](https://github.com/Super-Protocol/ctl).
 
-6. Configure SPCTL.
+4. Configure SPCTL.
 
-<p style={{marginLeft: '32px'}}>6.1. Start a setup dialog:</p>
+<p style={{marginLeft: '32px'}}>4.1. Start a setup dialog:</p>
 
 ```shell
 ./spctl setup
 ```
 
-<p style={{marginLeft: '32px'}}>6.2. Enter the following Access Token when prompted:</p>
+<p style={{marginLeft: '32px'}}>4.2. Enter the following Access Token when prompted:</p>
 
 ```
 eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDAwMDU3ODI3NGEyIiwiaWF0IjoxNjc5OTk4OTQyLCJleHAiOjE3NDMxMTQxNDJ9.x2lx90D733mToYYdOWhh4hhXn3YowFW4JxFjDFtI7helgp2uqekDHFgekT5yjbBWeHTzRap7SHbDC3VvMIDe0g
 ```
 
-<p style={{marginLeft: '32px'}}>6.3. Enter your web3 account private key when prompted.</p>
+<p style={{marginLeft: '32px'}}>4.3. Enter your web3 account private key.</p>
 
-
-<p style={{marginLeft: '32px'}}>6.4. Answer `No` when promted about a Storj bucket. You can [configure Storj](/cli/#set-up-storj-access-optional) later or skip this step entirely.</p>
-
+<p style={{marginLeft: '32px'}}>4.4. Answer `y` when asked about a Storj bucket. When prompted, enter the name of the Storj bucket and the bucket access grants with **Read** and **Full** permissions.</p>
 
 When done, SPCTL creates `config.json` in its directory. If you need to update your account information, run `./spctl setup` again or modify `config.json` manually in a text editor.
 
@@ -160,7 +170,7 @@ tar -czvf <NAME>.tar.gz -C <PATH> .
 
 Replace:
 
-- `<NAME>` with a desired name of your data
+- `<NAME>` with a desired name
 - `<PATH>` with the path to the data directory
 
 Do not omit the dot `.` at the end of the command.
