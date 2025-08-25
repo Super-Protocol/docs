@@ -93,7 +93,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
     
     - Replace `<MODEL_DIRECTORY>` with the name of the output directory.
 
-    The output directory is ready for [upload](/guides/deploy-model#2-upload) to Super Protocol.
+    The output directory is ready for [upload](/guides/deploy-model#2-create-an-offer) to Super Protocol.
 
   </TabItem>
   <TabItem value="manually" label="Manually">
@@ -154,7 +154,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
                     └── my-openjourney-workflow.json
     ```
     
-    The model directory is ready for [upload](/guides/deploy-model#2-upload) to Super Protocol.
+    The model directory is ready for [upload](/guides/deploy-model#2-create-an-offer) to Super Protocol.
 
   </TabItem>
 </Tabs>

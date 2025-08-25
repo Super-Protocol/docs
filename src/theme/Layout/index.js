@@ -20,7 +20,7 @@ export default function Layout(props) {
         Offers are divided into four categories:<br/>
           ᐧ Compute offers: Confidential computing resources required to execute solutions and data inside a Trusted Execution Environment.<br/>
           ᐧ Solution offers: Engines, applications, scripts, base images, or other software.<br/>
-          ᐧ Data offers: AI models, webpages, configs, datasets, databases, or any other data that solutions may require.<br/>
+          ᐧ Data offers: AI models, webpages, configs, datasets, databases, or any other data.<br/>
           ᐧ Storage offers: Decentralized storage that keeps order results after execution.
       </Tooltip>
 
@@ -46,7 +46,7 @@ export default function Layout(props) {
       </Tooltip>
 
       <Tooltip clickable anchorSelect="#requirements">
-        <a href="https://docs.superprotocol.com/fundamentals/slots"><i>Requirements</i></a> specify how much computing resources a value offer needs to run.<br/>
+        <a href="https://docs.superprotocol.com/fundamentals/slots"><i>Requirements</i></a> specify how much computing resources an offer needs to run.<br/>
         A <i>requirement slot</i> is a particular set of requirements that may include CPU, RAM, disk space, bandwidth, traffic, etc.
       </Tooltip>
 
