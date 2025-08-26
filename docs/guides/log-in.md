@@ -244,4 +244,4 @@ Super Protocol is not affiliated with MetaMask or Trust Wallet.
 
 ## Contact Super Protocol
 
-If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
