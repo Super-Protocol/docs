@@ -39,15 +39,15 @@ If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](
 
 ## 2. Create an offer
 
-To deploy your model, you need to create a new <a id="offer"><span className="dashed-underline">offer</span></a> and upload model files. This offer will remain private and unavailable to other users until you [publish it](/guides/publish-offer).
+To deploy your model, you need to create a new <a id="offer"><span className="dashed-underline">offer</span></a> and upload model files. The offer will remain private and unavailable to other users until you [publish it](/guides/publish-offer).
 
-2.1. Open **My Offers** and click **New Offer**.
+2.1. Open [Super Protocol AI Marketplace](https://marketplace.superprotocol.com/marketplace), go to **My Offers**, and click **New Offer**.
 
 <img src={require('../marketplace/images/my-offers-new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-2.2. Type in the model name and click **Create Offer**.
+2.2. Enter the model name and click **Create Offer**.
 
 <img src={require('../marketplace/images/new-offer.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -58,7 +58,7 @@ To deploy your model, you need to create a new <a id="offer"><span className="da
 Engines exist in two variants; select both if you are not sure:
 
 - **GPU-only** to run models with GPU support; it requires CPU+GPU compute offers.
-- **CPU-only** to run models without GPU support. Note that models work significantly slower in this mode, especially big ones.
+- **CPU-only** to run models without GPU support. Note that models work significantly slower in this mode.
 
 <img src={require('../marketplace/images/offer-builder-category-engine.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -104,4 +104,4 @@ Engines exist in two variants; select both if you are not sure:
 
 ## Contact Super Protocol
 
-If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new) for assistance.
+If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
