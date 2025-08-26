@@ -5,7 +5,9 @@ slug: "/gui"
 sidebar_position: 1
 ---
 
-## Before you begin: Log in and get tokens
+## Before you begin
+
+Log in and get tokens.
 
 1. Open the [Marketplace](https://marketplace.superprotocol.com).
  
