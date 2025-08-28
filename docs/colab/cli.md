@@ -10,6 +10,8 @@ import TabItem from '@theme/TabItem';
 
 ## Before you begin
 
+Register accounts and set up SPCTL—the Super Protocol CLI tool.
+
 ### Create an account and get tokens
 
 1. Complete the first two steps of the guide [Log In as a Web3 User](https://docs.superprotocol.com/guides/log-in) (MetaMask is recommended).
@@ -26,7 +28,7 @@ import TabItem from '@theme/TabItem';
 <br/>
 <br/>
 
-### Set up SPCTL—the Super Protocol CLI tool.
+### Set up SPCTL
 
 1. Save your web3 account private key.
 
