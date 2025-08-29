@@ -22,7 +22,7 @@ Register accounts and set up SPCTL—the Super Protocol CLI tool.
 <br/>
 <br/>
 
-3. In the Account window, copy your Super Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
+3. In the Account window, copy your Login Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
 
 <img src={require('./images/2.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -326,9 +326,9 @@ The command will show the order report and save it to the `report.json` file in 
   "type": "Data",
   "size": 12901,
   "hash": {
-  "algo": "sha256",
-  "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
-  "encoding": "hex"
+    "algo": "sha256",
+    "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
+    "encoding": "hex"
   }
 },
 ```

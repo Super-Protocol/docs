@@ -19,7 +19,7 @@ Log in and get tokens.
 <br/>
 <br/>
 
-4. In the Account window, copy your Super Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
+4. In the Account window, copy your Login Wallet address and share it with your contact in Super Protocol to receive SPPI tokens.
 
 <img src={require('./images/2.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -87,9 +87,9 @@ The command shows the order report and saves it to the `report.json` file in the
   "type": "Data",
   "size": 12901,
   "hash": {
-  "algo": "sha256",
-  "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
-  "encoding": "hex"
+    "algo": "sha256",
+    "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
+    "encoding": "hex"
   }
 },
 ```
