@@ -1,14 +1,11 @@
 ---
 id: "log-in"
-title: "Log In as a Web3 User"
+title: "Log In with MetaMask"
 slug: "/log-in"
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-This guide provides step-by-step instructions on how to log in to the [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a [Web3 user](/marketplace/account#web3-user-account).
+This guide provides step-by-step instructions on how to log in to [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user using MetaMask—a popular, free, non-custodial software wallet.
 
 :::note
 
@@ -16,231 +13,115 @@ The Marketplace web app does not officially support mobile devices. Use a deskto
 
 :::
 
-To log in as a Web3 user, you need one of the supported software cryptocurrency wallets:
+## Before you begin
 
-- MetaMask
-- Trust Wallet
+Install the MetaMask extension for your browser:
 
-Both are free, popular, and non-custodial. Choose either and install its browser extension from your browser's extension store.
+- [MetaMask for Chromium](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) (Google Chrome, Microsoft Edge, Opera, Brave)
+- [MetaMask for Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/)
+- [MetaMask for Safari](https://apps.apple.com/us/app/metamask-crypto-wallet/id1438144202)
 
 :::important
 
-Super Protocol is not affiliated with MetaMask or Trust Wallet.
+Super Protocol is not affiliated with MetaMask.
 
 :::
 
-<Tabs>
-  <TabItem value="metamask" label="MetaMask" default>
-    ## MetaMask, step 1. Create a new wallet address
-    
-    Although you can use an existing EVM wallet address, it is recommended that you create a new one specifically for Super Protocol.
+## Step 1. Create a new wallet address
 
-    1.1. Open MetaMask.
+Although you can use an existing EVM wallet address, it is recommended that you create a new one specifically for Super Protocol.
 
-    <img src={require('../marketplace/images/metamask-open.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+1.1. Open MetaMask.
 
-    1.2. Click your current account name.
+<img src={require('../marketplace/images/metamask-open.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+1.2. Click your current account name.
 
-    1.3. Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
+<img src={require('../marketplace/images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+1.3. Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
 
-    1.4. Type any desired account name and click **Add account**.
+<img src={require('../marketplace/images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+1.4. Type any desired account name and click **Add account**.
 
-    ## MetaMask, step 2. Connect the account
+<img src={require('../marketplace/images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
-    2.1. Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press **Enter Marketplace**.
+## Step 2. Connect the account
 
-    <img src={require('../marketplace/images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+2.1. Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press **Enter Marketplace**.
 
-    2.2. Select **Connect Wallet**.
+<img src={require('../marketplace/images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+2.2. Select **Connect Wallet**.
 
-    2.3 Select **MetaMask**.
+<img src={require('../marketplace/images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/enter-marketplace-metamask.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+2.3 Select **MetaMask**.
 
-    2.4. In the MetaMask window, press **Connect**, then **Approve** adding a new network (opBNB Mainnet), and finally, **Confirm** the signature request.
+<img src={require('../marketplace/images/enter-marketplace-metamask.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+2.4. In the MetaMask window, press **Connect**, then **Approve** adding a new network (opBNB Mainnet), and finally, **Confirm** the signature request.
 
-    2.5. If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
+<img src={require('../marketplace/images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/marketplace-web3acc-metamask.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+2.5. If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-    ## MetaMask, step 3. Get tokens
+<img src={require('../marketplace/images/marketplace-web3acc-metamask.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
-    Web3 users need two types of tokens:
+## Step 3. Get tokens
 
-    - SPPI tokens to pay and receive payments in Super Protocol.
-    - BNB tokens to pay for opBNB blockchain transactions.
+Web3 users need two types of tokens:
 
-    Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
+- SPPI tokens to pay and receive payments in Super Protocol.
+- BNB tokens to pay for opBNB blockchain transactions.
 
-    <img src={require('../marketplace/images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
 
-    There is a limit to the daily amount of tokens you can get. Check the [Testnet Limitations](/marketplace/limitations).
+<img src={require('../marketplace/images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    ## MetaMask, step 4. Import SPPI tokens (optional)
+There is a limit to the daily amount of tokens you can get. Check the [Testnet Limitations](/marketplace/limitations).
 
-    To see your SPPI token balance in MetaMask, import the token.
+## Step 4. Import SPPI tokens (optional)
 
-    4.1. Open MetaMask, go to the **Tokens** tab, click the **[ ⋮ ]** button, and select **Import tokens** in the menu.
+To see your SPPI token balance in MetaMask, import the token.
 
-    <img src={require('../marketplace/images/metamask-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+4.1. Open MetaMask, go to the **Tokens** tab, click the **[ ⋮ ]** button, and select **Import tokens** in the menu.
 
-    4.2. Add the following address to **Token contract address**: `0xDb8E4557E34256d3E8bBA0f7796Cf633a8F08C27`. **Token symbol** `SPPI` and **Token decimal** `18` should fill in automatically.
-    
-    Click **Next** and then **Import**.
+<img src={require('../marketplace/images/metamask-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-    <img src={require('../marketplace/images/metamask-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
+4.2. Add the following address to **Token contract address**: `0xDb8E4557E34256d3E8bBA0f7796Cf633a8F08C27`. **Token symbol** `SPPI` and **Token decimal** `18` should fill in automatically.
 
-    4.3. Check that SPPI has appeared in the **Tokens** tab.
+Click **Next** and then **Import**.
 
-    <img src={require('../marketplace/images/metamask-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
-    <br/>
+<img src={require('../marketplace/images/metamask-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
 
-  </TabItem>
-  <TabItem value="trust" label="Trust Wallet">
-    ## Trust Wallet, step 1. Create a new wallet address
+4.3. Check that SPPI has appeared in the **Tokens** tab.
 
-    Although you can use an existing EVM wallet address, it is recommended that you create a new one specifically for Super Protocol.
-
-    1.1. Open Trust Wallet.
-
-    <img src={require('../marketplace/images/trust-open.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    1.2. Click your current account name, and then **Add new wallet**.
-
-    <img src={require('../marketplace/images/trust-newwallet.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    1.3. Select **Create a new wallet**.
-
-    <img src={require('../marketplace/images/trust-newwallet-create.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    1.4. Confirm your Trust Wallet password and click **Next**.
-
-    <img src={require('../marketplace/images/trust-newwallet-password.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
- 
-    ## Trust Wallet, step 2. Connect the account
-
-    2.1. Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press **Enter Marketplace**.
-
-    <img src={require('../marketplace/images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    2.2. Select **Connect Wallet**.
-
-    <img src={require('../marketplace/images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    2.3 Select **Trust Wallet**.
-
-    <img src={require('../marketplace/images/enter-marketplace-trust.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    2.4. In the Trust Wallet window, press **Connect** and then **Confirm** the signature request.
-
-    <img src={require('../marketplace/images/trust-connect.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    2.5. If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
-
-    <img src={require('../marketplace/images/marketplace-web3acc-trust.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    ## Trust Wallet, step 3. Get tokens
-
-    Web3 users need two types of tokens:
-
-    - SPPI tokens to pay and receive payments in Super Protocol.
-    - BNB tokens to pay for opBNB blockchain transactions.
-
-    Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
-
-    <img src={require('../marketplace/images/marketplace-trust-account-menu.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    There is a limit to the daily amount of tokens you can get. Check the [Testnet Limitations](/marketplace/limitations).
-
-    ## Trust Wallet, step 4. Import SPPI tokens (optional)
-
-    To see your SPPI token balance in Trust Wallet, import the token.
-
-    4.1. Open Trust Wallet, go to the **Crypto** tab and click **Manage crypto** at the bottom of the list.
-
-    <img src={require('../marketplace/images/trust-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    4.2. Click **Don't see your crypto? Import**.
-
-    <img src={require('../marketplace/images/trust-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    4.3. Find **OpBNB** in the list of networks.
-
-    <img src={require('../marketplace/images/trust-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-    
-    4.4. Add the following address: `0xDb8E4557E34256d3E8bBA0f7796Cf633a8F08C27`. Ensure the Super Protocol Incentives Token (SPPI) is found. Click **Add token**.
-
-    <img src={require('../marketplace/images/trust-import-sppi-4.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-    <br/>
-
-    4.5. Check that SPPI has appeared in the **Tokens** tab.
-
-    <img src={require('../marketplace/images/trust-import-sppi-5.png').default} width="auto" height="auto" border="1"/>
-    <br/>
-
-  </TabItem>
-</Tabs>
+<img src={require('../marketplace/images/metamask-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
 ## Contact Super Protocol
 
