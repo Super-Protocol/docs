@@ -46,7 +46,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Overview',
-      collapsed: true, // collapsed by default
+      collapsed: false, // collapsed by default
       items: [
         'Overview/about',
         'Overview/dates',
