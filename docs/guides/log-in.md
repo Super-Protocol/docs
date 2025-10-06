@@ -7,9 +7,9 @@ sidebar_position: 1
 
 This guide provides step-by-step instructions on how to log in to [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user using MetaMask—a popular, free, non-custodial software wallet.
 
-:::note
+:::important
 
-The Marketplace web app does not officially support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
+Super Protocol is not affiliated with MetaMask.
 
 :::
 
@@ -20,12 +20,6 @@ Install the MetaMask extension for your browser:
 - [MetaMask for Chromium](https://chromewebstore.google.com/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) (Google Chrome, Microsoft Edge, Opera, Brave)
 - [MetaMask for Firefox](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/)
 - [MetaMask for Safari](https://apps.apple.com/us/app/metamask-crypto-wallet/id1438144202)
-
-:::important
-
-Super Protocol is not affiliated with MetaMask.
-
-:::
 
 ## Step 1. Create a new wallet address
 

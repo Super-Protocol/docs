@@ -7,9 +7,9 @@ sidebar_position: 2
 
 This guide provides step-by-step instructions on how to log in to [Super Protocol Marketplace](https://marketplace.superprotocol.com/) as a Web3 user using Trust Wallet—a popular, free, non-custodial software wallet.
 
-:::note
+:::important
 
-The Marketplace web app does not officially support mobile devices. Use a desktop or laptop with a screen resolution of at least 1280x720.
+Super Protocol is not affiliated with Trust Wallet.
 
 :::
 
@@ -19,12 +19,6 @@ Install the Trust Wallet extension for your browser:
 
 - [Trust Wallet for Chromium](https://chromewebstore.google.com/detail/trust-wallet/egjidjbpglichdcondbcbdnbeeppgdph) (Google Chrome, Microsoft Edge, Opera, Brave)
 - [Trust Wallet for Safari](https://apps.apple.com/us/app/trust-crypto-bitcoin-wallet/id1288339409)
-
-:::important
-
-Super Protocol is not affiliated with Trust Wallet.
-
-:::
 
 ## Step 1. Create a new wallet address
 
