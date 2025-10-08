@@ -78,8 +78,8 @@ const config = {
             to: "/data-for-ai/overview/about",
           },
           {
-            from: "/oracles",
-            to: "/oracles/about",
+            from: "/hackathon",
+            to: "/hackathon/about",
           },
           {
             from: "/guides",
@@ -117,9 +117,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "oracles",
-        path: "./docs/oracles",
-        routeBasePath: "/oracles",
+        id: "hackathon",
+        path: "./docs/hackathon",
+        routeBasePath: "/hackathon",
         //sidebarPath: require.resolve("./sidebar.js"),
         remarkPlugins: [math],
         rehypePlugins: [katex],
