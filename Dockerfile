@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 RUN npm i -g solidity-docgen@v0.5.16
-RUN yarn --frozen-lockfile
-RUN yarn build
+RUN npm ci
+RUN npm run build
 
 FROM nginx:alpine
 WORKDIR /usr/share/nginx/html
