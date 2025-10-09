@@ -78,6 +78,10 @@ const config = {
             to: "/data-for-ai/overview/about",
           },
           {
+            from: "/hackathon",
+            to: "/hackathon/about",
+          },
+          {
             from: "/guides",
             to: "/guides/log-in",
           },
@@ -105,7 +109,18 @@ const config = {
         id: "data-for-ai",
         path: "./docs/data-for-ai",
         routeBasePath: "/data-for-ai",
-        sidebarPath: require.resolve("./sidebar.js"),
+        sidebarPath: require.resolve("./sidebar.js"), // To make sections expanded by default
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "hackathon",
+        path: "./docs/hackathon",
+        routeBasePath: "/hackathon",
+        //sidebarPath: require.resolve("./sidebar.js"),
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
