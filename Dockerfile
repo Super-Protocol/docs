@@ -1,4 +1,4 @@
-FROM node:18-buster AS builder
+FROM node:22-bookworm-slim AS builder
 
 ARG NPM_TOKEN
 WORKDIR /app
