@@ -1,11 +1,9 @@
 FROM node:22-bookworm-slim AS builder
 
-ARG NPM_TOKEN
 WORKDIR /app
 
 COPY . .
 RUN npm i -g solidity-docgen@v0.5.16
-RUN npm config -g set '//npm.pkg.github.com/:_authToken' ${NPM_TOKEN}
 RUN yarn --frozen-lockfile
 RUN yarn build
 
