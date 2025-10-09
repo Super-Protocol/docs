@@ -2,7 +2,7 @@
 id: "venus-protocol"
 title: "Example: Venus Protocol"
 slug: "/venus-protocol"
-sidebar_position: 6
+sidebar_position: 5
 ---
 
 Follow the steps below to migrate the Venus Protocol Oracle to the opBNB blockchain.
@@ -68,7 +68,8 @@ npx hardhat deploy --network opbnbmainnet --tags "deploy"
 
 After successful deployment, review the terminal output:
 
-[image]
+<img src={require('./images/venus-implementation.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
 ## 8. Save the implementation address
 

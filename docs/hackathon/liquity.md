@@ -2,7 +2,7 @@
 id: "liquity"
 title: "Example: Liquity"
 slug: "/liquity"
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 Follow the steps below to migrate Liquity V2 (BOLD) to the opBNB blockchain.
@@ -65,7 +65,8 @@ From the `contracts/` folder, execute:
 
 Below is an example of partial console output:
 
-[image]
+<img src={require('./images/liquity-deployment-local.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
 ## 6. Configure for opBNB Deployment
 
@@ -169,7 +170,8 @@ This simply means one auxiliary contract was not verified; the primary contracts
 
 Below is an example of a successful deployment log:
 
-[image2]
+<img src={require('./images/liquity-deployment.png').default} width="auto" height="auto" border="1"/>
+<br/>
 
 ## 9. Locate the required contract address
 
@@ -188,3 +190,16 @@ Provide the following information:
 - Original network: `1`
 - Original contract address: `0xCC5F8102eb670c89a4a3c567C13851260303c24F`
 - New opBNB contract address: your `PriceFeed` contract address
+
+:::note
+
+The original contract address can be found on [liquity.app](https://liquity.app/).
+
+<img src={require('./images/liquity-original-1.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+<img src={require('./images/liquity-original-2.png').default} width="auto" height="auto" border="1"/>
+<br/>
+
+:::
