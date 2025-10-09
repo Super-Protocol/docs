@@ -19,17 +19,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Get repo name
-        run: |
-          echo "REPO_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: actions/checkout@v4
 
       - name: Log in to the Container registry
         uses: docker/login-action@v3
@@ -40,7 +30,7 @@ jobs:
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
@@ -49,8 +39,7 @@ jobs:
             type=ref,event=branch,suffix=-build-${{ github.run_id }}
             type=ref,event=tag
             type=ref,event=pr
-            type=raw,value=develop-build-${{ github.run_id }}
-            type=raw,value=${{ env.REPO_NAME }}-${{ github.ref_name }}-build-${{ github.run_id }}
+            type=raw,value=build-${{ github.run_id }}
             ${{ github.ref == 'refs/heads/main' && 'type=raw,value=mainnet' || '' }}
             ${{ github.ref == 'refs/heads/main' && format('type=raw,value=mainnet-build-{0}', github.run_id) || '' }}
 
@@ -61,7 +50,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           push: ${{ github.event_name != 'pull_request' }}
-          build-args: |
-            ENV_FILE=${{ secrets.DEVELOP_ENV_FILE_BASE64 }}
+          build-args: NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
