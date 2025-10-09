@@ -9,21 +9,20 @@ This is the documentation website for Super Protocol - a confidential cloud and 
 ## Common Commands
 
 ### Development
-- `yarn` or `yarn install` - Install dependencies
-- `yarn start` - Start local development server with live reload
-- `yarn build` - Build static site for production
-- `yarn serve` - Serve the built site locally
-- `yarn clear` - Clear Docusaurus cache
+- `npm install` - Install dependencies
+- `npm run start` - Start local development server with live reload
+- `npm run build` - Build static site for production
+- `npm run serve` - Serve the built site locally
+- `npm run clear` - Clear Docusaurus cache
 
 ### Documentation Generation
-- `yarn contracts:gen-docs` - Generate contract documentation from Solidity files
-- `yarn write-translations` - Generate translation files
-- `yarn write-heading-ids` - Generate heading IDs for documentation
+- `npm run write-translations` - Generate translation files
+- `npm run write-heading-ids` - Generate heading IDs for documentation
 
 ### Other Commands
-- `yarn docusaurus <command>` - Direct access to Docusaurus CLI
-- `yarn deploy` - Deploy to hosting service
-- `yarn swizzle` - Customize Docusaurus components
+- `npm run docusaurus <command>` - Direct access to Docusaurus CLI
+- `npm run deploy` - Deploy to hosting service
+- `npm run swizzle` - Customize Docusaurus components
 
 ## Architecture & Structure
 
@@ -76,7 +75,7 @@ When working with documentation:
 
 ## Build Process
 
-The CI/CD pipeline runs `yarn build` on pull requests to verify the site builds successfully. The build process includes:
+The CI/CD pipeline runs `npm run build` on pull requests to verify the site builds successfully. The build process includes:
 1. Static site generation from markdown files
 2. Processing of mathematical formulas with KaTeX
 3. Search index generation
