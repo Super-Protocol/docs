@@ -5,6 +5,10 @@ slug: "/data-feeds"
 sidebar_position: 3
 ---
 
+Below is the current list of confidential data feeds. Details on how to connect them to your dApps will be available on October 13, 2025, at 11:00 UTC.
+
+This list was last updated on October 8, 2025 at 12:00 UTC. More feeds are coming soon.
+
 | **Pair**                  |
 | :-                        |
 | 1INCH / USD               |
