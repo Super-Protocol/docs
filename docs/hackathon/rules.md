@@ -1,11 +1,13 @@
 ---
-id: "oracles-rules"
+id: "rules"
 title: "How It Works"
-slug: "/oracles-rules"
+slug: "/rules"
 sidebar_position: 2
 ---
 
-## dApp selection and eligibility criteria
+## Choosing a dApp for migration
+
+### Eligibility requirements
 
 The original dApp must already use Chainlink Data Feeds in its on-chain logic. See the [list of supported data feeds](/hackathon/data-feeds).
 
@@ -50,6 +52,8 @@ When submitting a project, complete the following fields:
 - **New frontend**: web URL of the new frontend (optional).
 
 **Only one dApp with the same original contract is allowed per team**. A dApp with the same original contract may be resubmitted, but it will overwrite all prior transactions achieved for this contract.
+
+Only one dApp with the same new opBNB contract is allowed across the whole hackathon. Attempting to submit an existing opBNB contract will result in an error.
 
 ### Confirmation
 

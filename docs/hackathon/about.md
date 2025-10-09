@@ -56,7 +56,7 @@ Prizes are awarded to the team as a whole, not to individual participants or pro
 
 Official discussions and support take place in Super Protocol’s [Discord server](https://discord.gg/superprotocol), channel #hackathons.
 
-Sign up for our newsletter and social media on our [website](https://superprotocol.com/) to keep up to date.
+Sign up for our newsletter and social media on the [Super Hackathon webpage](https://hackathon.superprotocol.com/) to keep up to date.
 
 ## Participation eligibility
 
