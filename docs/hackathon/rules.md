@@ -37,8 +37,6 @@ Teams must use their own infrastructure for deployment and testing, including RP
 
 Only verified contracts will be accepted—both the original and the migrated versions must be verified on a public block explorer so their source code can be automatically analyzed.
 
-We will provide [instructions](/hackathon/migration-guide) on deploying dApps to opBNB and connecting data feeds on October 13, 2025, at 11:00 UTC.
-
 ## Submitting projects
 
 Projects must be submitted through the official [Super Hackathon webpage](https://hackathon.superprotocol.com/).
