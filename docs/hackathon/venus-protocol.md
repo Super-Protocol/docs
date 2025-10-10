@@ -9,6 +9,12 @@ Follow the steps below to migrate the Venus Protocol Oracle to the opBNB blockch
 
 This example demonstrates a complete migration workflow, from repository setup and deployment to contract verification and submission.
 
+## Prerequisites
+
+- git
+- Yarn 3.2.0
+- Node.js >= 18
+
 ## 1. Clone the repository
 
 Clone the project repository:
@@ -53,7 +59,7 @@ npx hardhat test
 Remove any previous deployment data to ensure a clean migration:
 
 ```bash
-cd deployments/opbnbmainnet && rm -rf ./*
+rm -rf deployments/opbnbmainnet/*
 ```
 
 ## 6. Deploy to opBNB mainnet
@@ -102,11 +108,19 @@ Run the verification command:
 npx hardhat verify <ChainlinkOracle_Implementation-address> --network opbnbmainnet
 ```
 
+Replace `<ChainlinkOracle_Implementation-address>` with the `ChainlinkOracle_Implementation` address you saved in Step 8. For example:
+
+```bash
+npx hardhat verify 0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2B0 --network opbnbmainnet
+```
+
+You should see `Successfully submitted source code for contract...`. Ignore the error `Error in plugin @nomiclabs/hardhat-etherscan: The Etherscan API responded with a failure status. The verification may still succeed but should be checked manually.`
+
 ## 11. Check the verified contract
 
-After verification, you can view your contract on [opbnb.bscscan.com](https://opbnb.bscscan.com/).
+Check your contract on [opbnb.bscscan.com](https://opbnb.bscscan.com/).
 
-For example: [opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2B0\#code](https://opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2B0#code)
+For example, [opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2B0\#code](https://opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2B0#code)
 
 ## 12. Submit the migration
 
@@ -121,5 +135,5 @@ In the cloned repository, open `oracle/deployments/ethereum/ChainlinkOracle_Impl
 Go to the [Super Hackathon webpage](https://hackathon.superprotocol.com/) and fill out the submission form:
 
 - Original network: `1`
-- Original contract address `0x36EFe8716fa2ff9f59D528d154D89054581866A5`
+- Original contract address: `0x36EFe8716fa2ff9f59D528d154D89054581866A5`
 - New opBNB contract address: your `ChainlinkOracle_Implementation` address
