@@ -11,13 +11,14 @@ This example demonstrates a complete migration workflow, from repository setup a
 
 ## Prerequisites
 
-- git
+- Git
 - Yarn 3.2.0
-- Node.js >= 18
+- Node.js ≥20
+- BNB for gas on opBNB
 
 ## 1. Clone the repository
 
-Clone the project repository:
+Clone the [Venus Protocol oracle repository](https://github.com/VenusProtocol/oracle):
 
 ```bash
 git clone git@github.com:VenusProtocol/oracle.git
