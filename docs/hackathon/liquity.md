@@ -9,9 +9,17 @@ Follow the steps below to migrate Liquity V2 (BOLD) to the opBNB blockchain.
 
 This guide is based on the original [Liquity V2 Development & Deployment Guide](https://github.com/liquity/bold/blob/main/INSTRUCTIONS.md) and includes additional comments to help you migrate the project to the opBNB blockchain.
 
+## Prerequisites
+
+- Git
+- Node.js ≥20
+- pnpm
+- Foundry toolchain
+- BNB for gas on opBNB
+
 ## 1. Clone the repository
 
-Clone the Liquity V2 (BOLD) repository:
+Clone the [Liquity V2 (BOLD) repository](https://github.com/liquity/bold):
 
 ```bash
 git clone git@github.com:liquity/bold.git
@@ -80,7 +88,7 @@ Copy the environment template:
 cp .env.template .env
 ```
 
-### 6.2. Update the deployment script
+### 6.2. Update the network preset
 
 Open the file `bold/contracts/utils/deploy-cli.ts` and modify the configuration for the `"mainnet"` preset to target the opBNB network.
 
@@ -99,10 +107,12 @@ Replace with:
 // network preset: mainnet
 if (networkPreset === "mainnet") {
   options.chainId ??= 204;
-  options.deployer ??= "your private key";
+  options.deployer ??= "<YOUR_PRIVATE_KEY>";
   options.rpcUrl ??= "https://opbnb.superprotocol.com/";
 }
 ```
+
+Replace `<YOUR_PRIVATE_KEY>` with your private key **with** the `0x` prefix.
 
 ### 6.3. Update the gas configuration
 
@@ -132,11 +142,11 @@ if (options.gasPrice) {
 
 Open the file `bold/contracts/script/DeployLiquity2.s.sol` and replace its contents with the updated version provided here:
 
-[DeployLiquity2.s.sol]
+[DeployLiquity2.s.sol](/files/DeployLiquity2.s.sol)
 
 This version includes the following modifications:
 
-- Constants updated for the opBNB network (instead of Ethereum mainnet).
+- Constants updated for the opBNB network instead of Ethereum mainnet.
 - `chainId` changed from `1` to `204`.
 - Unused or unavailable assets on opBNB have been omitted.
 
@@ -145,8 +155,10 @@ This version includes the following modifications:
 Deploy the project to the opBNB mainnet and verify the contracts:
 
 ```bash
-./deploy mainnet --gas-price 1 --verify --verifier etherscan --etherscan-api-key <api-key> --verifier-url https://api.etherscan.io/v2/api?chainid=204
+./deploy mainnet --gas-price 1 --verify --verifier etherscan --etherscan-api-key <ETHERSCAN_API_KEY> --verifier-url https://api.etherscan.io/v2/api?chainid=204
 ```
+
+Replace `<ETHERSCAN_API_KEY>` with your Etherscan API key. To obtain it, register on [Etherscan](https://etherscan.io/) and generate a new key in the [API Dashboard](https://etherscan.io/apidashboard).
 
 ### Notes on verification
 
