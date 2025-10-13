@@ -127,11 +127,11 @@ For example, [opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2
 
 To complete the migration, you’ll need both the original and new contract addresses.
 
-### 10.1. Locate the original deployment
+### 12.1. Locate the original deployment
 
 In the cloned repository, open `oracle/deployments/ethereum/ChainlinkOracle_Implementation.json`. Inside, find the original Chainlink Oracle address, for example: `0x36EFe8716fa2ff9f59D528d154D89054581866A5`.
 
-### 10.2. Submit the project
+### 12.2. Submit the project
 
 Go to the [Super Hackathon webpage](https://hackathon.superprotocol.com/) and fill out the submission form:
 
