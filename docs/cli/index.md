@@ -119,7 +119,7 @@ Providers need another copy of SPCTL configured to manage their offers.
 
         Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb` is your Authority Account wallet address.
 
-        Use the `--config` option with [SPCTL commands](/cli/commands) to manage your provider and orders. For example:
+        Use the `--config` option with SPCTL commands to use another config file and easily switch between accounts. For example:
 
         ```
         ./spctl orders list --my-account --type tee --config spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json

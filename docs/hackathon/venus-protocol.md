@@ -16,12 +16,27 @@ This example demonstrates a complete migration workflow, from repository setup a
 - Node.js ≥20
 - BNB for gas on opBNB
 
+## 0. Check the project eligibility
+
+Open the project's [GitHub page](https://github.com/VenusProtocol) and search for the following methods:
+
+- `latestAnswer`
+- `getAnswer`
+- `latestRound`
+- `getRoundData`
+- `latestRoundData`
+
+Since the method is called from a smart contract (.sol file), the dApp is eligible. If they were called from the frontend (.ts, .js, .tsx, or .jsx files), the dApp would be unsuitable for the Super Hackathon.
+
+<img src={require('./images/venus-eligibility.png').default} width="auto" height="auto" border="1"/>
+<br/>
+
 ## 1. Clone the repository
 
 Clone the [Venus Protocol oracle repository](https://github.com/VenusProtocol/oracle):
 
 ```bash
-git clone git@github.com:VenusProtocol/oracle.git
+git clone https://github.com/VenusProtocol/oracle.git
 ```
 
 ## 2. Install dependencies

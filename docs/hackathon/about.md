@@ -61,3 +61,14 @@ Sign up for our newsletter and social media on the [Super Hackathon webpage](htt
 ## Participation eligibility
 
 Participation is open globally, except for individuals or entities located in jurisdictions under comprehensive sanctions (U.S., EU, or UK) or listed on their sanctions or export-control lists (including OFAC SDN, BIS Denied/Entity/Unverified, EU Consolidated, and UK OFSI/UK Sanctions Lists), or owned or controlled by such parties.
+
+## Technical links
+
+GitHub:
+
+- [Chainlink Oracle](https://github.com/Super-Protocol/chainlink)
+- [Chainlink Camp Contracts](https://github.com/Super-Protocol/chainlink-camp-contracts)
+
+BNB Blockchain Explorer:
+
+- [Hackathon smart contract](https://opbnb.bscscan.com/address/0x1e29a39c8ddc364041d30f3b1da09ccfc2cddd57)
