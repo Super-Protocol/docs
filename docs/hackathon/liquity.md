@@ -17,12 +17,28 @@ This guide is based on the original [Liquity V2 Development & Deployment Guide](
 - Foundry toolchain
 - BNB for gas on opBNB
 
+## 0. Check the project eligibility
+
+Open the project's [GitHub page](https://github.com/liquity/bold) and search for the following methods:
+
+- `latestAnswer`
+- `getAnswer`
+- `latestRound`
+- `getRoundData`
+- `latestRoundData`
+
+<img src={require('./images/liquity-eligibility.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Since the method is called from a smart contract (.sol file), the dApp is eligible. If they were called from the frontend (.ts, .js, .tsx, or .jsx files), the dApp would be unsuitable for the Super Hackathon.
+
 ## 1. Clone the repository
 
 Clone the [Liquity V2 (BOLD) repository](https://github.com/liquity/bold):
 
 ```bash
-git clone git@github.com:liquity/bold.git
+git clone https://github.com/liquity/bold.git
 ```
 
 ## 2. Install dependencies

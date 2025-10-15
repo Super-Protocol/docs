@@ -7,9 +7,11 @@ sidebar_position: 2
 
 ## Choosing a dApp for migration
 
+One way to find eligible dApps is to use the [Chainlink Ecosystem search tool](https://www.chainlinkecosystem.com/ecosystem) and filter by Ethereum, Polygon, and BNB Chain, selecting projects that use Chainlink Data Feeds.
+
 ### Eligibility requirements
 
-The original dApp must already use Chainlink Data Feeds in its on-chain logic. See the [list of supported data feeds](/hackathon/data-feeds).
+The original dApp must use Chainlink Data Feeds in its on-chain logic. See the [list of supported data feeds](/hackathon/data-feeds).
 
 The interface methods (`latestAnswer`, `getAnswer`, `latestRound`, `getRoundData`, `latestRoundData`) must be called from a smart contract (.sol file). If they are called from the frontend (.ts, .js, .tsx, or .jsx files), the dApp will not be accepted.
 
@@ -24,10 +26,6 @@ Teams may submit multiple unique dApps, but each must have a different original 
 Frontends are welcome but optional—evaluation is based solely on the deployed smart contracts and their on-chain activity.
 
 The project’s license must allow forking and reuse (acceptable licenses include MIT, Apache 2.0, GPL-family, or equivalent).
-
-### Recommendations
-
-One way to find eligible dApps is to use the [Chainlink Ecosystem search tool](https://www.chainlinkecosystem.com/ecosystem) and filter by Ethereum, Polygon, and BNB Chain, selecting projects that use Chainlink Data Feeds.
 
 ## Deploying to opBNB
 

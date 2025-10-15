@@ -16,12 +16,28 @@ This example demonstrates a complete migration workflow, from repository setup a
 - Node.js ≥20
 - BNB for gas on opBNB
 
+## 0. Check the project eligibility
+
+Open the project's [GitHub page](https://github.com/VenusProtocol) and search for the following methods:
+
+- `latestAnswer`
+- `getAnswer`
+- `latestRound`
+- `getRoundData`
+- `latestRoundData`
+
+<img src={require('./images/venus-eligibility.png').default} width="auto" height="auto" border="1"/>
+<br/>
+<br/>
+
+Since the method is called from a smart contract (.sol file), the dApp is eligible. If they were called from the frontend (.ts, .js, .tsx, or .jsx files), the dApp would be unsuitable for the Super Hackathon.
+
 ## 1. Clone the repository
 
-Clone the [Venus Protocol oracle repository](https://github.com/VenusProtocol/oracle):
+Clone the [VenusProtocol/oracle repository](https://github.com/VenusProtocol/oracle):
 
 ```bash
-git clone git@github.com:VenusProtocol/oracle.git
+git clone https://github.com/VenusProtocol/oracle.git
 ```
 
 ## 2. Install dependencies
@@ -127,11 +143,11 @@ For example, [opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2
 
 To complete the migration, you’ll need both the original and new contract addresses.
 
-### 10.1. Locate the original deployment
+### 12.1. Locate the original deployment
 
 In the cloned repository, open `oracle/deployments/ethereum/ChainlinkOracle_Implementation.json`. Inside, find the original Chainlink Oracle address, for example: `0x36EFe8716fa2ff9f59D528d154D89054581866A5`.
 
-### 10.2. Submit the project
+### 12.2. Submit the project
 
 Go to the [Super Hackathon webpage](https://hackathon.superprotocol.com/) and fill out the submission form:
 
