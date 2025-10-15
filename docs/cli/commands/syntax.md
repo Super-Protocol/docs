@@ -38,15 +38,15 @@ Never include these special characters in the final command.
 The following is a mandatory option `--solution` of the [`workflows create`](/cli/commands/workflows/create) command:
 
 ```
---solution {<offerId>,[<slotId>] | <path>}
+--solution {<offerId>[,<slotId>] | <path>}
 ```
 
-The format `{<offerId>,[<slotId>] | <path>}` requires you to choose one of the following:
+The format `{<offerId>[,<slotId>] | <path>}` requires you to choose one of the following:
 
-- `<offerId>,[<slotId>]`: a mandatory argument `<offerId>` and an optional argument `<slotId>`, separated by a comma.
+- `<offerId>[,<slotId>]`: a mandatory argument `<offerId>` and an optional argument `<slotId>`, separated by a comma.
 - `<path>`: a mandatory argument.
 
-So, the final format of this option must be one of the following:
+So, the final format of this option should be one of the following:
 
 - `--solution <offerId>`. For example, `--solution 26`.
 - `--solution <offerId>,<slotId>`. For example, `--solution 26,25`.

@@ -14,7 +14,7 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 
 ```
 ./spctl offers disable <offerId>
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -28,7 +28,7 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 
 | **Name** | **Description** |
 | :- | :- |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example

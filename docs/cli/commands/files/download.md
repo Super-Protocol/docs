@@ -3,36 +3,36 @@ id: "cli-files-download"
 title: "files download"
 slug: "/commands/files/download"
 sidebar_label: "download"
+sidebar_position: 3
 ---
 
-Downloads a file from remote storage and decrypts it using the information in a resource JSON file.
-
-The resource JSON file is created as a result of the [`files upload`](/cli/commands/files/upload) command.
+Downloads files from remote storage and decrypts it using the information in a resource JSON file.
 
 ## Syntax
 
-```
-./spctl files download <resourceFilePath> <saveToPath>
-    [--config <path>]
+```shell
+./spctl files download <RESOURCE> <LOCAL_DIRECTORY>
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name** | **Description** |
-| :- | :- |
-| `<resourceFilePath>` | Path to the resource JSON file. |
-| `<saveToPath>` | Path to save the downloaded file. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `<RESOURCE>`                              | Path to a resource JSON file. This file is created as a result of the [`files upload`](/cli/commands/files/upload) command. |
+| `<LOCAL_DIRECTORY>`                       | Path to save the downloaded files. |
 
 ## Options
 
-| **Name** | **Description** |
-| :- | :- |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--use-addon`                             | Option required to download files that were [uploaded](/cli/commands/files/upload) with this option. |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
+```shell
 ./spctl files download ./resource-data.json  ./
 ```

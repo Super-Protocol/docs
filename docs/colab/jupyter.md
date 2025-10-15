@@ -13,7 +13,7 @@ Inside the TEE, you have a special file structure:
 | :---- | :---- | :---- |
 | `/sp/inputs/input-0001` | Possible data location 1 | Read-only |
 | `/sp/inputs/input-0002` | Possible data location 2 | Read-only |
-| `/sp/output` | Output folder for your results | Write; you can also read own files |
+| `/sp/output` | Output folder for your results | Read own files and write |
 
 :::important
 

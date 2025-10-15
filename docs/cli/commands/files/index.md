@@ -2,18 +2,17 @@
 id: "cli-files"
 title: "files"
 slug: "/commands/files"
-sidebar_position: 3
+sidebar_position: 2
 
 ---
 
 This group contains commands to manage files in third-party storage such as Storj.
 
-Most of these commands require a Storj account and SPCTL configured to use it. Refer to the [Set up Storj](/cli/#set-up-storj-access-optional) section to create a bucket and access grants and set up SPCTL.
-
 ## Commands
 
-| **Command** | **Description** |
-| :- | :- |
-| [files delete](/cli/commands/files/delete) | Deletes a file in remote storage. |
-| [files download](/cli/commands/files/download) | Downloads and decrypt a file from remote storage. |
-| [files upload](/cli/commands/files/upload) | Uploads a file to remote storage. |
+| **Command**                                           | **Description** |
+| :-                                                    | :- |
+| [files upload](/cli/commands/files/upload)            | Encrypts and uploads a file to remote storage. |
+| [files calculate-hash](/cli/commands/files/upload)    | Calculates the hash of a file or directory. |
+| [files download](/cli/commands/files/download)        | Downloads and decrypts a file from remote storage. |
+| [files delete](/cli/commands/files/delete)            | Deletes a file in remote storage. |

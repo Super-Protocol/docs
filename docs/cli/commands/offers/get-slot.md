@@ -17,7 +17,7 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all t
     --offer <offerId>
     --slot <slotId>
     [--save-to <path>]
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -33,8 +33,8 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all t
 | :- | :-|
 | `--offer <offerId>` | Offer ID. |
 | `--slot <slotId>` | Slot ID. |
-| `--save-to <path>` | Path to save the result file. The default is the SPCTL root directory. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--save-to <path>` | Path to save the result file. <br/>Default: the SPCTL root directory. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example

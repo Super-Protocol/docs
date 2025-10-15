@@ -1,17 +1,17 @@
 ---
-id: "cli-orders-cancel"
-title: "orders cancel"
-slug: "/commands/orders/cancel"
-sidebar_label: "cancel"
-sidebar_position: 4
+id: "cli-files-calculate-hash"
+title: "files calculate-hash"
+slug: "/commands/files/calculate-hash"
+sidebar_label: "calculate-hash"
+sidebar_position: 2
 ---
 
-Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
+Calculates the hash of a file or directory taking into account the file names.
 
 ## Syntax
 
 ```shell
-./spctl orders cancel <ORDER_ID> ...
+./spctl files calculate-hash <PATH>
     [--config <CONFIG_PATH>]
     [--help | -h]
 ```
@@ -20,7 +20,7 @@ Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 
 | <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
 | :-                                        | :- |
-| `<ORDER_ID>`                              | Order ID. |
+| `<PATH>`                                  | Path to a file or directory. |
 
 ## Options
 
@@ -32,5 +32,5 @@ Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 ## Example
 
 ```shell
-./spctl orders cancel 1312
+./spctl files calculate-hash ./content/
 ```

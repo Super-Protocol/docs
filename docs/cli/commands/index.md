@@ -2,7 +2,7 @@
 id: "cli-commands"
 title: "CLI Commands"
 slug: "/commands"
-sidebar_position: 2
+sidebar_position: 99
 ---
 
 This section contains Super Protocol CLI commands. [Install and configure SPCTL](/cli) to access the CLI.

@@ -28,4 +28,4 @@ Super Protocol supports two options of decentralized storage to upload files:
     - Requires creating and setting up a Storj account.
     - Gives sole control over the uploaded content and storage account.
 
-To enable uploading to your personal Storj account, [log in as a Web3 user](/guides/log-in).
+To enable uploading to your personal Storj account, [log in as a Web3 user](/marketplace/guides/log-in).
