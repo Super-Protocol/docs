@@ -14,7 +14,7 @@ Displays the information on a [configuration option](/fundamentals/slots) of a <
 ./spctl offers get-option
     --offer <offerId>
     --option <optionId>
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -24,7 +24,7 @@ Displays the information on a [configuration option](/fundamentals/slots) of a <
 | :- | :- |
 | `--offer <offerId>` | Offer ID. |
 | `--option <optionId>` | Configuration option ID. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example

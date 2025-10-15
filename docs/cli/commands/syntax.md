@@ -15,10 +15,12 @@ _Command groups_ contain functionally related commands. See the [full list of co
 
 _Commands_ perform a specific function, like placing an order or showing the list of providers.
 
-For example, the [`tokens`](/cli/commands/tokens) command group includes the following commands:
+For example, the [`files`](/cli/commands/files) command group includes the following commands:
 
-- [`balance`](/cli/commands/tokens/balance): Checks the balance.
-- [`request`](/cli/commands/tokens/request): Requests testnet tokens.
+- [`upload`](/cli/commands/files/upload)
+- [`calculate-hash`](/cli/commands/files/calculate-hash)
+- [`download`](/cli/commands/files/download)
+- [`delete`](/cli/commands/files/delete)
 
 _Options_ modify the command behavior and are prefixed by double hyphen `--`; for example, `--help`. Options can be mandatory or optional.
 
@@ -38,15 +40,15 @@ Never include these special characters in the final command.
 The following is a mandatory option `--solution` of the [`workflows create`](/cli/commands/workflows/create) command:
 
 ```
---solution {<offerId>,[<slotId>] | <path>}
+--solution {<offerId>[,<slotId>] | <path>}
 ```
 
-The format `{<offerId>,[<slotId>] | <path>}` requires you to choose one of the following:
+The format `{<offerId>[,<slotId>] | <path>}` requires you to choose one of the following:
 
-- `<offerId>,[<slotId>]`: a mandatory argument `<offerId>` and an optional argument `<slotId>`, separated by a comma.
+- `<offerId>[,<slotId>]`: a mandatory argument `<offerId>` and an optional argument `<slotId>`, separated by a comma.
 - `<path>`: a mandatory argument.
 
-So, the final format of this option must be one of the following:
+So, the final format of this option should be one of the following:
 
 - `--solution <offerId>`. For example, `--solution 26`.
 - `--solution <offerId>,<slotId>`. For example, `--solution 26,25`.

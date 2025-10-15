@@ -3,35 +3,36 @@ id: "cli-files-delete"
 title: "files delete"
 slug: "/commands/files/delete"
 sidebar_label: "delete"
+sidebar_position: 4
 ---
 
-Deletes a file in remote storage using the information in a resource JSON file.
-
-The resource JSON file is created as a result of the [`files upload`](/cli/commands/files/upload) command.
+Deletes files in remote storage using the information in a resource JSON file.
 
 ## Syntax
 
-```
-./spctl files delete <resourceFilePath>
-    [--config <path>]
+```shell
+./spctl files delete <RESOURCE>
+    [--use-addon]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name** | **Description** |
-| :- | :- |
-| `<resourceFilePath>` | Path to the resource JSON file. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `<RESOURCE>`                              | Path to a resource JSON file. This file is created as a result of the [`files upload`](/cli/commands/files/upload) command. |
 
 ## Options
 
-| **Name** | **Description** |
-| :- | :- |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--use-addon`                             | Option required to delete files that were [uploaded](/cli/commands/files/upload) with this option. |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
+```shell
 ./spctl files delete ./resource-old-data.json
 ```

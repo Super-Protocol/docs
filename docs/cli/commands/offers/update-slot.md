@@ -21,7 +21,7 @@ Refer to the description of the [`offers add-slot`](/cli/commands/offers/add-slo
     --offer <offerId>
     --slot <slotId>
     [--path <slotInfo>]
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -37,8 +37,8 @@ Refer to the description of the [`offers add-slot`](/cli/commands/offers/add-slo
 | :- | :- |
 | `--offer <offerId>` | Offer ID. |
 | `--slot <slotId>` | Slot ID. |
-| `--path <slotInfo>` | Path to the slotInfo JSON file. The default is `./slotInfo.json`. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--path <slotInfo>` | Path to the slotInfo JSON file. <br/>Default: `./slotInfo.json`. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example

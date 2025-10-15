@@ -18,7 +18,7 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
 ./spctl offers delete-slot <offerType>
     --offer <offerId>
     --slot <slotId>
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -34,7 +34,7 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all s
 | :- | :- |
 | `--offer <offerId>` | Offer ID. |
 | `--slot <slotId>` | Slot ID. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example

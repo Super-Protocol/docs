@@ -11,7 +11,7 @@ This quick guide will take you step by step through deploying a solution and dat
 
 ### Step 1. Pack a solution
 
-To prepare a solution for execution inside a Trusted Execution Environment, pack and sign it with [Gramine](https://gramineproject.io/). To do this, run the [`solutions prepare`](/cli/commands/solutions/prepare) command.
+To prepare a solution for execution inside a Trusted Execution Environment, pack and sign it with [Gramine](https://gramineproject.io/). To do this, run the `solutions prepare` command.
 
 It will create a TAR.GZ archive with the solution and a JSON file with essential metadata.
 

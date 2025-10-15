@@ -40,7 +40,7 @@ Create an order for Tunnel Server using the `tunnel-server-data.json` file conta
 ./spctl workflows create --tee 1 --solution 6,2 --solution 11,10 --data tunnel-server-data.json --storage 25,30 --orders-limit 10 --min-rent-minutes 60
 ```
 
-**Tip:** to create order make sure that you have sufficient amount of SPPI and BNB tokens in your testnet wallet. You can get more tokens using the [tokens request](/cli/commands/tokens/request) command. Be mindful of testnet [limitations](/marketplace/limitations).
+**Tip:** to create order make sure that you have sufficient amount of SPPI and BNB tokens in your testnet wallet. You can get more tokens using the tokens request command. Be mindful of testnet [limitations](/marketplace/limitations).
 
 The last line of the output will look like this:
 

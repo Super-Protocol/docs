@@ -25,7 +25,7 @@ _Web3 User account_ provides access to all Marketplace capabilities, including:
 - Creation and monetization of model and dataset offers on the Marketplace.
 - Ability to request additional SPPI tokens.
 
-Read [How to Log In as a Web3 User](/guides/log-in) for step-by-step instructions.
+Read [How to Log In as a Web3 User](/marketplace/guides/log-in) for step-by-step instructions.
 
 ## Web2 User account
 

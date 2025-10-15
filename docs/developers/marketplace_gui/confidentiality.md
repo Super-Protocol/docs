@@ -9,7 +9,7 @@ _Quote verification_ checks the authenticity and integrity of a Trusted Executio
 
 In simple terms, quote verification ensures that the content of a domain is running in a TEE. Additionally, if the content is Super Protocol solution offers, the quote verification links the content to the offers.
 
-For quote verification, use the [`quotes validate`](/cli/commands/quotes/validate) CLI command or the **Check confidentiality** function in the Marketplace GUI.
+For quote verification, use the `quotes validate` CLI command or the **Check confidentiality** function in the Marketplace GUI.
 
 ## Check how it works
 

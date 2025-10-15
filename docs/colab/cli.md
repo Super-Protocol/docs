@@ -14,7 +14,7 @@ Register accounts and set up SPCTL—the Super Protocol CLI tool.
 
 ### Create an account and get tokens
 
-1. Complete the first two steps of the guide [Log In as a Web3 User](https://docs.superprotocol.com/guides/log-in) (MetaMask is recommended).
+1. Complete the first two steps of the guide [Log In as a Web3 User](/marketplace/guides/log-in) (MetaMask is recommended).
 
 2. In the [Marketplace](https://marketplace.superprotocol.com/), click on your account name in the upper-right corner and select **Account**.
 

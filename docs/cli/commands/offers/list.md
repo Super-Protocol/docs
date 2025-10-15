@@ -12,11 +12,11 @@ Displays a list of available <a id="offer"><span className="dashed-underline">of
 
 ```
 ./spctl offers list <offerType>
-    [--fields <field>,[<field>,...]]
+    [--fields <field>[,<field>,...]]
     [--ids <offerId> [<offerId> ...]]
     [--limit <number>]
     [--cursor <cursorString>]
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -30,24 +30,24 @@ Displays a list of available <a id="offer"><span className="dashed-underline">of
 
 For the `tee` offer type:
 
-| <div style={{width:265}}>**Name**</div> | **Description** |
+| <div style={{width:275}}>**Name**</div> | **Description** |
 | :- | :- |
-| `--fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, `total_cores`, `free_cores`, `cancelable`, `modified_date`. |
+| `--fields <field>[,<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `name`, `orders_in_queue`. Additional fields: `description`, `provider_address`, `provider_name`, `total_cores`, `free_cores`, `cancelable`, `modified_date`. |
 
 For the `value` offer type:
 
-| <div style={{width:265}}>**Name**</div> | **Description** |
+| <div style={{width:275}}>**Name**</div> | **Description** |
 | :- | :- |
-| `--fields <field>,[<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `name`, `type`. Additional fields: `description`, `provider_address`, `provider_name`, `cancelable`, `modified_date`. |
+| `--fields <field>[,<field>,...]` | Columns in the output table, separated by commas. Default fields: `id`, `name`, `type`. Additional fields: `description`, `provider_address`, `provider_name`, `cancelable`, `modified_date`. |
 
 For both offer types:
 
 | <div style={{width:275}}>**Name**</div> | **Description** |
 | :- | :- |
 | `--ids <offerId> [<offerId> ...]` | Filter by offer IDs. This option accepts multiple values separated by spaces. |
-| `--limit <number>` | Number of rows to display. The default is `10`. |
+| `--limit <number>` | Number of rows to display. <br/>Default: `10`. |
 | `--cursor <cursorString>` | Cursor for pagination. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Examples

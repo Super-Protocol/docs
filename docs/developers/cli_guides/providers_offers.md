@@ -87,7 +87,7 @@ Go to your SPCTL directory and create the offer content using your Testnet user 
 
 **For solution offers**
 
-Use the [`solutions prepare`](/cli/commands/solutions/prepare) command. It will pack and sign the solution with [Gramine](https://gramineproject.io/) to prepare it for execution inside a Trusted Execution Environment. The command will create a TAR.GZ archive with the solution and a metadata JSON file.
+Use the `solutions prepare` command. It will pack and sign the solution with [Gramine](https://gramineproject.io/) to prepare it for execution inside a Trusted Execution Environment. The command will create a TAR.GZ archive with the solution and a metadata JSON file.
 
 You can find a detailed example of preparing a Python solution in the [Python deployment guide](/developers/deployment_guides/python/solution_prep).
 

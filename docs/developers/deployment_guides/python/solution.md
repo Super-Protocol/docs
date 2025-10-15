@@ -114,7 +114,7 @@ If done correctly, the `output` directory should contain `.csv` file with result
 
 Now that we are happy with the way solution runs locally, the next steps are related to preparation for deployment to Super Protocol.
 
-Run the following [command](/cli/commands/solutions/generate-key) in the directory where you placed the SPCTL executable to generate the signing key for the solution:
+Run the following command in the directory where you placed the SPCTL executable to generate the signing key for the solution:
 
 ```
 ./spctl solutions generate-key signing-key
@@ -122,7 +122,7 @@ Run the following [command](/cli/commands/solutions/generate-key) in the directo
 
 ## Pack the solution
 
-When the Docker image should run inside an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following [command](/cli/commands/solutions/prepare) to prepare and pack the solution:
+When the Docker image should run inside an Intel SGX enclave, the image has to be built and signed with [Gramine](https://gramine.readthedocs.io/en/latest/gsc-installation.html) (a.k.a graminized). Execute the following command to prepare and pack the solution:
 
 ```
 ./spctl solutions prepare --pack-solution solution.tar.gz  --write-default-manifest \

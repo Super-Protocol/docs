@@ -13,7 +13,7 @@ Displays the information on an <a id="offer"><span className="dashed-underline">
 ```
 ./spctl offers get-info <offerType> <offerId>
     [--save-to <path>]
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -29,7 +29,7 @@ Displays the information on an <a id="offer"><span className="dashed-underline">
 | **Name**           | **Description** 
 | :- | :- |
 | `--save-to <path>` | Path to save the output to a file. |
-| `--config <path>`  | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--config <CONFIG_PATH>`  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h`     | Help for the command. |
 
 ## Example

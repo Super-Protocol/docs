@@ -17,7 +17,7 @@ Refer to the [Providers and Offers] guide to create the initial offer descriptio
 ```
 ./spctl offers update <offerType> <offerId>
     [--path <offerInfo>]
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -32,8 +32,8 @@ Refer to the [Providers and Offers] guide to create the initial offer descriptio
 
 | **Name** | **Description** |
 | :- | :- |
-| `--path <offerInfo>` | Path to the offerInfo JSON file. The default is `./offerInfo.json`. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--path <offerInfo>` | Path to the offerInfo JSON file. <br/>Default: `./offerInfo.json`. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Offer description file
@@ -43,8 +43,8 @@ The offerInfo JSON file may contain the following objects, arrays, and strings:
 | **String, array, <br/>or object** | **Description** | **Comments** |
 | :- |:- |:- |
 | `name`            | Offer name | |
-| `group`           | Offer group type | `0` for data and solution offers.<br/>`2` for storage offers (not implemented yet). |
-| `offerType`       | Offer type  | `1` for storage offers (not implemented yet).<br/>`2` for solution offers.<br/>`3` for data offers. |
+| `group`           | Offer group type | `0` for data and solution offers. <br/>`2` for storage offers (not implemented yet). |
+| `offerType`       | Offer type  | `1` for storage offers (not implemented yet). <br/>`2` for solution offers. <br/>`3` for data offers. |
 | `cancelable`      | Flag indicating if the offer is cancelable. | `true` or `false` |
 | `description`     | Offer description  | |
 | `restrictions`    | Object that specifies the offers that should be executed together with the current one|This object contains the `offers` and `types` arrays |
@@ -56,7 +56,7 @@ The offerInfo JSON file may contain the following objects, arrays, and strings:
 | `allowedArgs`     | Deprecated | Leave empty. |
 | `allowedAccounts` | List of accounts allowed to use the current offer | Leave empty to allow all accounts. |
 | `argsPublicKey`   | Encryption information in a string format:<br/>`algo`: algorithm for encrypting arguments<br/>`encoding`: encoding scheme<br/>`key`: public key | Example:<br/>`"argsPublicKey":`<br/>`"{\"algo\":\"ECIES\",`<br/>`\"encoding\":\"base64\",`<br/>`\"key\":\"<PUBLIC_KEY>\"}"`  |
-| `resultResource`  | Unencrypted content available for downloading, in a string format:<br/>`type`, `storageType`, `credentials` to access content, including `token`, `storageId`, and `filepath` |Currently, only Storj is supported. Use `STORAGE_PROVIDER` for `type` and `STORJ` for `storageType`. `token` should be a Storj access grant with **Read** permission, `storageId` is the bucket name, and `filepath` is the path to the content file in the bucket.<br/><br/>It is mainly used for base image solutions:<br/>`"resultResource":`<br/>`"{\"type\":\"STORAGE_PROVIDER\",`<br/>`\"storageType\":\"STORJ\",`<br/>`\"credentials\":`<br/>`{\"token\":\"<READ_ACCESS_TOKEN>\",`<br/>`\"storageId\":\"<BUCKET_NAME>\"},`<br/>`\"filepath\":\"<FILE_NAME>\"}"` |
+| `resultResource`  | Unencrypted content available for downloading, in a string format:<br/>`type`, `storageType`, `credentials` to access content, including `token`, `storageId`, and `filepath` |Currently, only Storj is supported. Use `STORAGE_PROVIDER` for `type` and `STORJ` for `storageType`. `token` should be a Storj access grant with **Read** permission, `storageId` is the bucket name, and `filepath` is the path to the content file in the bucket. <br/><br/>It is mainly used for base image solutions:<br/>`"resultResource":`<br/>`"{\"type\":\"STORAGE_PROVIDER\",`<br/>`\"storageType\":\"STORJ\",`<br/>`\"credentials\":`<br/>`{\"token\":\"<READ_ACCESS_TOKEN>\",`<br/>`\"storageId\":\"<BUCKET_NAME>\"},`<br/>`\"filepath\":\"<FILE_NAME>\"}"` |
 | `linkage`         | Verification of the solutions linked to the current offer (not implemented yet) | Leave empty. |
 | `hash`            | Verification of the solutions linked to the current offer (not implemented yet) | Leave empty. |
 

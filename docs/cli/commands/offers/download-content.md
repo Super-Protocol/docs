@@ -15,7 +15,7 @@ The command only works with offers that allow this operation.
 ```
 ./spctl offers download-content <offerId>
     [--save-to <path>]
-    [--config <path>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
@@ -29,8 +29,8 @@ The command only works with offers that allow this operation.
 
 | **Name** | **Description** |
 | :- | :- |
-| `--save-to <path>` | Path to save the content. The default is the original filename. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
+| `--save-to <path>` | Path to save the content. <br/>Default: the original filename. |
+| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h` | Help for the command. |
 
 ## Example
