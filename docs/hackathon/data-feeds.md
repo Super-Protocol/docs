@@ -1,11 +1,9 @@
 ---
 id: "data-feeds"
-title: "Confidential Data Feeds"
+title: "Confidential data feeds"
 slug: "/data-feeds"
 sidebar_position: 3
 ---
-
-Below is the current list of confidential data feeds.
 
 This list was last updated on October 10, 2025. More feeds are coming soon.
 
