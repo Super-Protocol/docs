@@ -13,7 +13,7 @@ One way to find eligible dApps is to use the [Chainlink Ecosystem search tool](h
 
 The original dApp must use Chainlink Data Feeds in its on-chain logic. See the [list of supported data feeds](/hackathon/data-feeds).
 
-The interface methods (`latestAnswer`, `getAnswer`, `latestRound`, `getRoundData`, `latestRoundData`) must be called from a smart contract (.sol file). If they are called from the frontend (.ts, .js, .tsx, or .jsx files), the dApp will not be accepted.
+The interface methods (`latestAnswer`, `getAnswer`, `latestRound`, `getRoundData`, `latestRoundData`, `getAssetPrice`) must be called from a smart contract (.sol file). If they are called from the frontend (.ts, .js, .tsx, or .jsx files), the dApp will not be accepted.
 
 The dApp must be open-source and have been publicly deployed before September 1, 2025, on Ethereum, Polygon, or BNB Chain.
 
@@ -34,6 +34,11 @@ All projects must be migrated to opBNB no earlier than the official hackathon st
 Teams must use their own infrastructure for deployment and testing, including RPC endpoints, wallets, and funding.
 
 Only verified contracts will be accepted—both the original and the migrated versions must be verified on a public block explorer so their source code can be automatically analyzed.
+
+See the example migrations:
+
+- [Venus Protocol](/hackathon/venus-protocol)
+- [Liquity](/hackathon/liquity)
 
 ## Submitting projects
 
