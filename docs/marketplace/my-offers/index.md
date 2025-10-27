@@ -11,7 +11,7 @@ This screen allows you to browse your <a id="offer"><span className="dashed-unde
 <br/>
 <br/>
 
-The **New Offer** button opens a [modal window](/marketplace/my-offers/new-offer) where you can upload a model and create an offer. After uploading, you can deploy the model. Additionally, you can configure and publish the offer on the Marketplace to lease the uploaded model to other users. Refer to the guides on [Deploying Your Model](/guides/deploy-model) and [Publishing an Offer](/guides/publish-offer) for step-by-step instructions.
+The **New Offer** button opens a [modal window](/marketplace/my-offers/new-offer) where you can upload a model and create an offer. After uploading, you can deploy the model. Additionally, you can configure and publish the offer on the Marketplace to lease the uploaded model to other users. Refer to the guides on [Deploying Your Model](/marketplace/guides/deploy-model) and [Publishing an Offer](/marketplace/guides/publish-offer) for step-by-step instructions.
 
 The table in the center of the screen lists all your offers—both published and unpublished.
 

@@ -1,7 +1,7 @@
 ---
 id: "log-in"
 title: "Log In with MetaMask"
-slug: "/log-in"
+slug: "/guides/log-in"
 sidebar_position: 1
 ---
 
@@ -27,56 +27,56 @@ Although you can use an existing EVM wallet address, it is recommended that you 
 
 1.1. Open MetaMask.
 
-<img src={require('../marketplace/images/metamask-open.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-open.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 1.2. Click your current account name.
 
-<img src={require('../marketplace/images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-newacc-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 1.3. Press **Add account or hardware wallet** and then select **Add a new Ethereum account**.
 
-<img src={require('../marketplace/images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-newacc-add.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 1.4. Type any desired account name and click **Add account**.
 
-<img src={require('../marketplace/images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-newacc-name.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Step 2. Connect the account
 
 2.1. Open the [Marketplace web app](https://marketplace.superprotocol.com/) and press **Enter Marketplace**.
 
-<img src={require('../marketplace/images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/enter-marketplace-button.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 2.2. Select **Connect Wallet**.
 
-<img src={require('../marketplace/images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/enter-marketplace-connect-wallet.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 2.3 Select **MetaMask**.
 
-<img src={require('../marketplace/images/enter-marketplace-metamask.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/enter-marketplace-metamask.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 2.4. In the MetaMask window, press **Connect**, then **Approve** adding a new network (opBNB Mainnet), and finally, **Confirm** the signature request.
 
-<img src={require('../marketplace/images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-add-opbnb.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 2.5. If you connect successfully, you will see your account address in the top-right corner of the Marketplace screen.
 
-<img src={require('../marketplace/images/marketplace-web3acc-metamask.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/marketplace-web3acc-metamask.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Step 3. Get tokens
@@ -88,7 +88,7 @@ Web3 users need two types of tokens:
 
 Both types are necessary to place <a id="order"><span className="dashed-underline">orders</span></a>. During the testnet, you can request free tokens in the **Account** setting.
 
-<img src={require('../marketplace/images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -100,7 +100,7 @@ To see your SPPI token balance in MetaMask, import the token.
 
 4.1. Open MetaMask, go to the **Tokens** tab, click the **[ ⋮ ]** button, and select **Import tokens** in the menu.
 
-<img src={require('../marketplace/images/metamask-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-import-sppi-1.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -108,13 +108,13 @@ To see your SPPI token balance in MetaMask, import the token.
 
 Click **Next** and then **Import**.
 
-<img src={require('../marketplace/images/metamask-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-import-sppi-2.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 4.3. Check that SPPI has appeared in the **Tokens** tab.
 
-<img src={require('../marketplace/images/metamask-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/metamask-import-sppi-3.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## Contact Super Protocol

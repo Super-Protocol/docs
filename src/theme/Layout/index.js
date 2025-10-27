@@ -74,8 +74,8 @@ export default function Layout(props) {
       </Tooltip>
 
       <Tooltip clickable anchorSelect="#order">
-        <a href="https://docs.superprotocol.com/fundamentals/orders/"><i>Orders</i> and <i>suborders</i></a> are digital contracts between customers and providers to lease offers.<br/><br/>
-        The term <i>main order</i>—or simply <i>order</i>—implies leasing a compute offer.<br/><br/>
+        <a href="https://docs.superprotocol.com/fundamentals/orders/"><i>Orders</i></a> are digital contracts between customers and providers to lease offers.<br/><br/>
+        The term <i>main order</i> implies leasing a compute offer.<br/><br/>
         The term <i>suborder</i> implies leasing an AI model, engine, or any other offer besides a compute offer.
       </Tooltip>
 
@@ -85,6 +85,10 @@ export default function Layout(props) {
         In Super Protocol, a tunnel consists of two components with a confidential connection between them:<br/>
           ᐧ A <i>tunnel server</i> has a public IP address and is accessible over HTTPS via a browser or API.<br/>
           ᐧ A <i>tunnel client</i> hosts a web server; it remains hidden behind the tunnel server and protected from external threats.
+      </Tooltip>
+
+      <Tooltip anchorSelect="#cvm">
+        Confidential Virtual Machine
       </Tooltip>
     </>
   );

@@ -22,22 +22,34 @@ const config = {
   },
   plugins: [
     [
-      "@docusaurus/plugin-content-docs",
+      "@docusaurus/plugin-client-redirects",
       {
-        id: "marketplace",
-        path: "./docs/marketplace",
-        routeBasePath: "/marketplace",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
+        redirects: [
+          /*{
+            from: "/",
+            to: "/marketplace",
+          },*/
+          {
+            from: "/data-for-ai",
+            to: "/data-for-ai/overview/about",
+          },
+          {
+            from: "/hackathon",
+            to: "/hackathon/about",
+          },
+          /*{
+            from: "/colab",
+            to: "/colab/jupyter",
+          },*/
+        ],
       },
     ],
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "fundamentals",
-        path: "./docs/fundamentals",
-        routeBasePath: "/fundamentals",
+        id: "marketplace",
+        path: "./docs/marketplace",
+        routeBasePath: "/marketplace",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
@@ -57,39 +69,12 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "guides",
-        path: "./docs/guides",
-        routeBasePath: "/guides",
+        id: "fundamentals",
+        path: "./docs/fundamentals",
+        routeBasePath: "/fundamentals",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-client-redirects",
-      {
-        redirects: [
-          /*{
-            from: "/",
-            to: "/marketplace",
-          },*/
-          {
-            from: "/data-for-ai",
-            to: "/data-for-ai/overview/about",
-          },
-          {
-            from: "/hackathon",
-            to: "/hackathon/about",
-          },
-          {
-            from: "/guides",
-            to: "/guides/log-in",
-          },
-          /*{
-            from: "/colab",
-            to: "/colab/jupyter",
-          },*/
-        ],
       },
     ],
     [
@@ -169,11 +154,6 @@ const config = {
         },
         items: [
           {
-            to: "/guides/log-in",
-            position: "right",
-            label: "Guides",
-          },
-          {
             type: "doc",
             docId: "index",
             position: "right",
@@ -184,15 +164,15 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Fundamentals",
-            docsPluginId: "fundamentals",
+            label: "CLI",
+            docsPluginId: "cli",
           },
           {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "CLI",
-            docsPluginId: "cli",
+            label: "Fundamentals",
+            docsPluginId: "fundamentals",
           },
           /*{
             type: "doc",
