@@ -24,7 +24,7 @@ For <a id="solution"><span className="dashed-underline">solutions</span></a> and
         [--solution-configuration <PATH>]
         [--solution-hash <HASH>]
     [--data {<OFFER_ID>[,<SLOT_ID>] | <PATH>} [--data ...]]
-    [--deposit <SPPI>]
+    [--deposit <SPPI_AMOUNT>]
     [--min-rent-minutes <MINUTES>]
     [--config <CONFIG_PATH>]
     [--help | -h]
@@ -42,7 +42,7 @@ For <a id="solution"><span className="dashed-underline">solutions</span></a> and
 | `--solution-configuration <PATH>`                 | A solution configuration JSON file. |
 | `--solution-hash <HASH>`                          | Prevents the processing of the order if the hash of the <a id="solution"><span className="dashed-underline">solution</span></a> doesn't match. |
 | `--data {<OFFER>[,<SLOT>] \| <PATH>}`             | Data you are adding to the order: <br/><br/>• For a Marketplace offer, state the data offer ID and (optionally) a requirement slot ID, separated by a comma. If the requirement slot is not specified, it will be selected automatically. <br/>• For [uploaded](/cli/commands/files/upload) data, state the path to the data resource JSON file. <br/><br/>You can use this option multiple times. |
-| `--deposit <SPPI>`                                | [Deposit](/fundamentals/orders#usage-scenarios) in SPPI tokens. <br/>Default: the minimum required deposit. |
+| `--deposit <SPPI_AMOUNT>`                         | [Deposit](/fundamentals/orders#usage-scenarios) in SPPI tokens. <br/>Default: the minimum required deposit. |
 | `--min-rent-minutes <MINUTES>`                    | Compute [lease time](/fundamentals/orders#usage-scenarios) in minutes. Using this option will increase the required deposit. <br/>Default: the minimum required time. |
 | `--config <CONFIG_PATH>`                          | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h`                                    | Help for the command. |

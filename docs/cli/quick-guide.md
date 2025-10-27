@@ -84,7 +84,7 @@ tar -czvf <DATA_NAME>.tar.gz -C <DATA_PATH> .
 
 For example:
 
-```
+```shell
 tar -czvf my_data.tar.gz -C ./data .
 ```
 
@@ -122,7 +122,7 @@ For example:
 --tee 7
 ```
 
-Find the order ID in the ouput.
+Find the order ID in the out    put.
 
 ## 4. Download the result
 

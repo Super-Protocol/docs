@@ -20,7 +20,7 @@ Downloads files from remote storage and decrypts it using the information in a r
 
 | <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
 | :-                                        | :- |
-| `<RESOURCE>`                              | Path to a resource JSON file. This file is created as a result of the [`files upload`](/cli/commands/files/upload) command. |
+| `<RESOURCE>`                              | Path to a resource JSON file. This file is created as a result of the <br/>[`files upload`](/cli/commands/files/upload) command. |
 | `<LOCAL_DIRECTORY>`                       | Path to save the downloaded files. |
 
 ## Options

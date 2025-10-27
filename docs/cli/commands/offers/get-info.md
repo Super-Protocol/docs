@@ -10,30 +10,30 @@ Displays the information on an <a id="offer"><span className="dashed-underline">
 
 ## Syntax
 
-```
-./spctl offers get-info <offerType> <offerId>
-    [--save-to <path>]
+```shell
+./spctl offers get-info <OFFER_TYPE> <OFFER>
+    [--save-to <PATH>]
     [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name**      | **Description** |
-| :- | :- |
-| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
-| `<offerId>`   | Offer ID. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `<OFFER_TYPE>`                            | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
+| `<OFFER>`                                 | Offer ID. |
 
 ## Option
 
-| **Name**           | **Description** |
-| :- | :- |
-| `--save-to <path>` | Path to save the output to a file. |
-| `--config <CONFIG_PATH>`  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
-| `--help`, `-h`     | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--save-to <PATH>`                        | Path to save the output to a file. |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
+```shell
 ./spctl offers get-info value 30 --save-to ./offer-30.json
 ```

@@ -12,27 +12,27 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 
 ## Syntax
 
-```
-./spctl offers disable <offerId>
+```shell
+./spctl offers disable <OFFER>
     [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name** | **Description** |
-| :- | :- |
-| `<offerId>` | Offer ID. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `<OFFER>`                                 | Offer ID. |
 
 ## Option
 
-| **Name** | **Description** |
-| :- | :- |
-| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
+```shell
 ./spctl offers disable 39
 ```

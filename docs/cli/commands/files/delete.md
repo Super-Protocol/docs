@@ -21,7 +21,7 @@ Deletes files in remote storage using the information in a resource JSON file.
 
 | <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
 | :-                                        | :- |
-| `<RESOURCE>`                              | Path to a resource JSON file. This file is created as a result of the [`files upload`](/cli/commands/files/upload) command. |
+| `<RESOURCE>`                              | Path to a resource JSON file. This file is created as a result of the <br/>[`files upload`](/cli/commands/files/upload) command. |
 
 ## Options
 

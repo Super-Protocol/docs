@@ -3,7 +3,7 @@ id: "cli-offers-add-slot"
 title: "offers add-slot"
 slug: "/commands/offers/add-slot"
 sidebar_label: "add-slot"
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 Adds a <a id="slot"><span className="dashed-underline">slot</span></a> to an <a id="offer"><span className="dashed-underline">offer</span></a>.
@@ -22,13 +22,13 @@ Adds a <a id="slot"><span className="dashed-underline">slot</span></a> to an <a 
 
 ## Arguments
 
-| <div style={{width:230}}>**Name**</div> | <div style={{width:535}}>**Description**</div> |
+| <div style={{width:200}}>**Name**</div> | <div style={{width:565}}>**Description**</div> |
 | :-                                      | :- |
 | `<OFFER_TYPE>`                          | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
 
 ## Options
 
-| <div style={{width:230}}>**Name**</div> | <div style={{width:535}}>**Description**</div> |
+| <div style={{width:200}}>**Name**</div> | <div style={{width:565}}>**Description**</div> |
 | :-                                      | :- |
 | `--offer <OFFER_ID>`                    | Offer ID. |
 | `--path <SLOT_INFO>`                    | Path to a slot-info JSON file. <br/>Default: `./slotInfo.json`. |

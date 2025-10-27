@@ -10,25 +10,25 @@ Displays the information on a [configuration option](/fundamentals/slots) of a <
 
 ## Syntax
 
-```
+```shell
 ./spctl offers get-option
-    --offer <offerId>
-    --option <optionId>
+    --offer <OFFER>
+    --option <OPTION>
     [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Options
 
-| **Name** | **Description** |
-| :- | :- |
-| `--offer <offerId>` | Offer ID. |
-| `--option <optionId>` | Configuration option ID. |
-| `--config <CONFIG_PATH>` | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--offer <OFFER>`                         | Offer ID. |
+| `--option <OPTION>`                       | Configuration option ID. |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
+```shell
 ./spctl offers get-option --offer 1 --option 3
 ```

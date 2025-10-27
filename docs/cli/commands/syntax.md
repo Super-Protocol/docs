@@ -8,7 +8,7 @@ sidebar_position: 1
 Command format:
 
 ```
-./spctl <command group> <command> <arguments> <options>
+./spctl <command_group> <command> <arguments> <options>
 ```
 
 _Command groups_ contain functionally related commands. See the [full list of command groups](/cli/commands).
