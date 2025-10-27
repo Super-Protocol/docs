@@ -26,7 +26,7 @@ Displays the information on an <a id="offer"><span className="dashed-underline">
 
 ## Option
 
-| **Name**           | **Description** 
+| **Name**           | **Description** |
 | :- | :- |
 | `--save-to <path>` | Path to save the output to a file. |
 | `--config <CONFIG_PATH>`  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |

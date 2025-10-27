@@ -10,9 +10,9 @@ This group contains commands to manage files in third-party storage such as Stor
 
 ## Commands
 
-| **Command**                                           | **Description** |
-| :-                                                    | :- |
-| [files upload](/cli/commands/files/upload)            | Encrypts and uploads a file to remote storage. |
-| [files calculate-hash](/cli/commands/files/upload)    | Calculates the hash of a file or directory. |
-| [files download](/cli/commands/files/download)        | Downloads and decrypts a file from remote storage. |
-| [files delete](/cli/commands/files/delete)            | Deletes a file in remote storage. |
+| **Command**                                                   | **Description** |
+| :-                                                            | :- |
+| [files upload](/cli/commands/files/upload)                    | Encrypts and uploads a file to remote storage. |
+| [files calculate-hash](/cli/commands/files/calculate-hash)    | Calculates the hash of a file or directory. |
+| [files download](/cli/commands/files/download)                | Downloads and decrypts a file from remote storage. |
+| [files delete](/cli/commands/files/delete)                    | Deletes a file in remote storage. |

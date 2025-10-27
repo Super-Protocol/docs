@@ -1,7 +1,7 @@
 ---
 id: "deployment-guide"
 title: "Quick Deployment Guide"
-slug: "/cli/deployment-guide"
+slug: "/deployment-guide"
 sidebar_position: 2
 ---
 

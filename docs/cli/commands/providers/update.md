@@ -23,7 +23,7 @@ Updates information about a provider.
 
 | <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
 | :-                                        | :- |
-| `--path <PROVIDER_INFO>`                           | Path to the provider info JSON file. <br/>Default: `./provider.json`. |
+| `--path <PROVIDER_INFO>`                  | Path to the provider info JSON file. <br/>Default: `./provider.json`. |
 | `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h`                            | Help for the command. |
 
@@ -41,7 +41,7 @@ The provider info JSON file must contain the following keys:
 
 Template with example values:
 
-```json title="providerInfo.json"
+```json title="provider.json"
 {
   "name": "AI Model Provider",
   "description": "Various AI models",
@@ -54,5 +54,5 @@ Template with example values:
 ## Example
 
 ```shell
-./spctl providers update --path ./provider-info.json
+./spctl providers update --path ./provider.json
 ```

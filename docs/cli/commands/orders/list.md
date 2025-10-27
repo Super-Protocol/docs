@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Lists <a id="order"><span className="dashed-underline">orders</span></a> stored on the blockchain.
 
-This command displays a list of all orders and suborders, unless the `--my-account true` flag is specified.
+This command displays a list of all orders and suborders, unless the `--my-account` flag is set.
 
 ## Syntax
 
