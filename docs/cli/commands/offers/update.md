@@ -8,7 +8,7 @@ sidebar_position: 5
 
 Updates information about an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
 
 ## Syntax
 

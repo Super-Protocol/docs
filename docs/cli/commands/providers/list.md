@@ -10,7 +10,7 @@ Lists all registered providers.
 
 ## Syntax
 
-```
+```shell
 ./spctl providers list
     [--fields <FIELD>[,<FIELD>,...]]
     [--limit <NUMBER>]
@@ -25,12 +25,13 @@ Lists all registered providers.
 | :-                                        | :- |
 | `--fields <FIELD>[,<FIELD>,...]`          | Columns in the output table, separated by commas. Default fields: `address`, `name`. Additional fields: `description`, `authority_account`, `action_account`, `token_receiver`, `modified_date`, `metadata`. |
 | `--limit <NUMBER>`                        | Number of records to display. <br/>Default: `10`. |
-| `--cursor <CURSOR_STRING>`                 | Cursor for pagination. |
+| `--cursor <CURSOR_STRING>`                | Cursor for pagination. |
 | `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
-./spctl providers list --fields name,description,authority_account,action_account
+```shell
+./spctl providers list \
+    --fields name,description,authority_account,action_account
 ```

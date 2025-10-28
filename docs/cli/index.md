@@ -2,7 +2,7 @@
 id: "index"
 title: "Configure SPCTL"
 slug: "/"
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 import Tabs from '@theme/Tabs';
@@ -38,9 +38,9 @@ import TabItem from '@theme/TabItem';
 
 You can also download and install SPCTL manually from the Super Protocol [GitHub repository](https://github.com/Super-Protocol/ctl).
 
-## Configure SPCTL for users
+## For users
 
-You can configure SPCTL using the `./spctl setup` command or by manually creating a configuration file.
+You can set up SPCTL using the `./spctl setup` command or by manually creating a configuration file.
 
 <Tabs>
     <TabItem value="spctl" label="SPCTL setup" default>
@@ -105,7 +105,31 @@ You can configure SPCTL using the `./spctl setup` command or by manually creatin
     </TabItem>
 </Tabs>
 
-## Configure SPCTL for providers
+### Set up Storj access (optional)
+
+If you [upload files](/cli/commands/files/upload) without configuring Storj access, Super Protocol will automatically provide you with 20 GB of storage. However, for additional control and storage space, set up and use your Storj account.
+
+1. Register a [Storj](https://www.storj.io/) account if you do not have one yet.
+
+:::note
+
+If you use a free Storj account, your files will become unavailable after the end of the trial period.
+
+:::
+
+2. Create a bucket for your encrypted <a id="solution"><span className="dashed-underline">solutions</span></a> and <a id="data"><span className="dashed-underline">data</span></a>. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
+
+3. Create two access grants for this bucket. One should provide **Full** permission (**Read**, **List**, **Write**, **Delete**), and the other one **Read** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
+
+4. Run `./spctl setup` again or open SPCTL's `config.json` in a text editor and provide values to the following key:
+
+| **Key**              | **Description** |
+| :- | :- |
+| `"bucket"`           | Name of a Storj bucket. |
+| `"writeAccessToken"` | Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
+| `"readAccessToken"`  | Storj access grant with **Read** permission for this bucket. |
+
+## For providers
 
 This section is for providers only. Skip it if you are a regular user.
 
@@ -113,19 +137,15 @@ Providers need another copy of SPCTL configured to manage their offers.
 
 <Tabs>
     <TabItem value="provider-tools" label="Provider Tools" default>
-        If you registered a provider using Provider Tools, you should have a configuration file created automatically in the Provider Tools directory. Its name looks similar to the following:
+        If you registered a provider using Provider Tools, you should have a configuration file created automatically in the Provider Tools directory. Its name should be similar to `spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb.json`, where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb` is your Authority Account wallet address.
 
-        ```spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb.json```
+        Rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or download the SPCTL binary to the Provider Tools directory.
 
-        Where `0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb` is your Authority Account wallet address.
+        Alternatively, use the `--config` option with SPCTL commands to use the same SPCTL binary with a different account. For example:
 
-        Use the `--config` option with SPCTL commands to use another config file and easily switch between accounts. For example:
-
+        ```shell
+        ./spctl orders list --my-account --type tee --config ./spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAb.json
         ```
-        ./spctl orders list --my-account --type tee --config spctl-config-0xB9f0b77BDbAe9fBe3E60BdC567E453f503605BAa.json
-        ```
-
-        Alternatively, rename this file to `config.json` so SPCTL can recognize it as its configuration file. Copy or download the SPCTL binary to the Provider Tools directory.
     </TabItem>
     <TabItem value="pt-manual" label="Manual Configuration">
         As with your User Account's configuration file, you can manually create the provider's SPCTL configuration file.
@@ -163,14 +183,14 @@ Providers need another copy of SPCTL configured to manage their offers.
 
         2. Do not change the preconfigured values and provide values to the following keys:
 
-        |**Key**                        |**Description**|
-        |:-|:-|
-        |`"accountPrivateKey"`          | The provider's Action Account private key.|
-        |`"authorityAccountPrivateKey"` | The provider's Authority Account private key.|
-        |`"bucket"`                     | (optional) Name of a Storj bucket.|
-        |`"prefix"`                     | (optional) Path to a directory inside the bucket. It can be empty.|
-        |`"writeAccessToken"`           | (optional) Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket.|
-        |`"readAccessToken"`            | (optional) Storj access grant with **Read** permission for this bucket.|
+        | **Key**                        | **Description** |
+        | :-                             | :- |
+        | `"accountPrivateKey"`          | The provider's Action Account private key. |
+        | `"authorityAccountPrivateKey"` | The provider's Authority Account private key. |
+        | `"bucket"`                     | (optional) Name of a Storj bucket. |
+        | `"prefix"`                     | (optional) Path to a directory inside the bucket. It can be empty. |
+        | `"writeAccessToken"`           | (optional) Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
+        | `"readAccessToken"`            | (optional) Storj access grant with **Read** permission for this bucket. |
 
         You can find the section with your Authority and Action Accounts private keys in `provider-tools-config.json` in the Provider Tools directory. For example:
 
@@ -185,30 +205,6 @@ Providers need another copy of SPCTL configured to manage their offers.
         3. Generate a private key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
     </TabItem>
 </Tabs>
-
-## Set up Storj access (optional)
-
-You can use a Marketplace storage offer in the `files upload` command instead of configuring Storj. However, for additional control, set up and use your storage.
-
-1. Register a [Storj](https://www.storj.io/) account if you do not have one yet.
-
-:::note
-
-If you use a free Storj account, your files will become unavailable after the end of the trial period.
-
-:::
-
-2. Create a bucket for your encrypted <a id="solution"><span className="dashed-underline">solutions</span></a> and <a id="data"><span className="dashed-underline">data</span></a>. Refer to the [Storj documentation](https://docs.storj.io/dcs/getting-started/quickstart-objectbrowser/) for guidance.
-
-3. Create two access grants for this bucket. One should provide **Full** permission (**Read**, **List**, **Write**, **Delete**), and the other one **Read** permission. Refer to the [Storj guide](https://docs.storj.io/dcs/getting-started/quickstart-uplink-cli/uploading-your-first-object/create-first-access-grant/) to generate access grants.
-
-4. Open SPCTL's `config.json` in a text editor and provide values to the following key:
-
-| **Key**              | **Description** |
-| :- | :- |
-| `"bucket"`           | Name of a Storj bucket. |
-| `"writeAccessToken"` | Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
-| `"readAccessToken"`  | Storj access grant with **Read** permission for this bucket. |
 
 ## Support
 

@@ -30,5 +30,7 @@ Displays the information on a [configuration option](/fundamentals/slots) of a <
 ## Example
 
 ```shell
-./spctl offers get-option --offer 1 --option 3
+./spctl offers get-option \
+    --offer 1 \
+    --option 3
 ```

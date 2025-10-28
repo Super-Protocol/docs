@@ -8,7 +8,7 @@ sidebar_position: 10
 
 Updates a <a id="slot"><span className="dashed-underline">slot</span></a> in an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/cli/commands/offers/get-slot) command to get additional information on a slot.
 
@@ -44,5 +44,8 @@ Refer to the description of the [`offers add-slot`](/cli/commands/offers/add-slo
 ## Example
 
 ```shell
-./spctl offers update-slot value --offer 46 --slot 45 --path ./slot-info.json
+./spctl offers update-slot value \
+    --offer 46 \
+    --slot 45 \
+    --path ./slot-info.json
 ```

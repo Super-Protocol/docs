@@ -42,5 +42,9 @@ This command displays a list of all orders and suborders, unless the `--my-accou
 ## Example
 
 ```shell
-./spctl orders list --fields id,offer_name,status --my-account --type tee --status new,blocked,processing
+./spctl orders list \
+    --fields id,offer_name,status \
+    --my-account \
+    --type tee \
+    --status new,blocked,processing
 ```

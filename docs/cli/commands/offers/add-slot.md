@@ -8,7 +8,7 @@ sidebar_position: 9
 
 Adds a <a id="slot"><span className="dashed-underline">slot</span></a> to an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
 
 ## Syntax
 
@@ -83,5 +83,7 @@ A template with example values:
 ## Example
 
 ```shell
-./spctl offers add-slot value --offer 39 --path ./new-slot.json
+./spctl offers add-slot value \
+    --offer 39 \
+    --path ./new-slot.json
 ```

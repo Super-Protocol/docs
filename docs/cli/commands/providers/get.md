@@ -34,5 +34,6 @@ Displays the information on a provider using its authority account address.
 ## Example
 
 ```shell
-./spctl providers get 0xB9f0b77BDC567E453fbAe9fBe3E60Bd503605BAa --fields name,address,description
+./spctl providers get 0xB9f0b77BDC567E453fbAe9fBe3E60Bd503605BAa \
+    --fields name,address,description
 ```
