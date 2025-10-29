@@ -8,7 +8,7 @@ sidebar_position: 6
 
 Disables an existing enabled <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
 
 ## Syntax
 

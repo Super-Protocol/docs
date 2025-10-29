@@ -30,7 +30,7 @@ When you know the basics, try SPCTL—the Super Protocol CLI tool:
 ## Create your provider and offers with CLI
 1. Follow the [Providers and Offers](/developers/cli_guides/providers_offers) guide to create your provider and a first offer.
 2. Follow the [Moderation Guidelines](/developers/marketplace/moderation/) to approve your offer for Marketplace GUI.
-3. [Update SPCTL configuration](/cli/#configure-spctl-for-providers) as a provider to enable management of your provider and offers.
+3. [Update SPCTL configuration](/cli/#for-providers) as a provider to enable management of your provider and offers.
 4. Use [SPCTL commands](/developers/cli_guides/providers_offers#faq) to manage your provider and offers.
 
 Join us on [Discord](https://discord.gg/superprotocol). The Super Protocol team welcomes any feedback and questions!

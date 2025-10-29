@@ -61,5 +61,7 @@ For both offer types:
 ### Example 2
 
 ```shell
-./spctl offers list value --ids 25 26 27 28 --fields id,name,modified_date
+./spctl offers list value \
+    --ids 25 26 27 28 \
+    --fields id,name,modified_date
 ```

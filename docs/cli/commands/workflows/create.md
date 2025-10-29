@@ -16,14 +16,14 @@ For <a id="solution"><span className="dashed-underline">solutions</span></a> and
 
 ```shell
 ./spctl workflows create
-    --tee <OFFER_ID>[,<SLOT_ID>]
+    --tee <OFFER>[,<SLOT>]
         [--tee-slot-count <INC>]
         [--tee-options <OPTION_ID> [<OPTION_ID> ...]]
         [--tee-options-count <INC> [<INC> ...]]
-    --solution {<OFFER_ID>[,<SLOT_ID>] | <PATH>}
+    --solution {<OFFER>[,<SLOT>] | <PATH>}
         [--solution-configuration <PATH>]
         [--solution-hash <HASH>]
-    [--data {<OFFER_ID>[,<SLOT_ID>] | <PATH>} [--data ...]]
+    [--data {<OFFER>[,<SLOT>] | <PATH>} [--data ...]]
     [--deposit <SPPI_AMOUNT>]
     [--min-rent-minutes <MINUTES>]
     [--config <CONFIG_PATH>]
@@ -66,5 +66,6 @@ For <a id="solution"><span className="dashed-underline">solutions</span></a> and
     --tee 7,13 \
     --tee-slot-count 1 \
     --solution ./python-script.resource.json \
-    --data ./data.resource.json
+    --data ./data1.resource.json \
+    --data ./data2.resource.json
 ```

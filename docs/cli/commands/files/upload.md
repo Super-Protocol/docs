@@ -52,13 +52,16 @@ The output of the command is a resource JSON file with the information for the C
 ### Upload a TAR.GZ archive
 
 ```shell
-./spctl files upload ./data.tar.gz --filename data_2025.tar.gz
+./spctl files upload ./data.tar.gz \
+    --filename data_2025.tar.gz
 ```
 
 ### Upload a directory
 
 ```shell
-./spctl files upload ./content/ --output ./resource-data.json --use-addon
+./spctl files upload ./content/ \
+    --output ./resource-data.json \
+    --use-addon
 ```
 
 Because the `--filename` option is not used, the uploaded directory will have a random name in the storage, for example, `5a3cfa5be14256fc`.

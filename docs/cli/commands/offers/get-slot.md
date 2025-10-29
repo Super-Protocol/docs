@@ -40,5 +40,7 @@ Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all t
 ## Example
 
 ```shell
-./spctl offers get-slot value --offer 39 --slot 38
+./spctl offers get-slot value \
+    --offer 39 \
+    --slot 38
 ```

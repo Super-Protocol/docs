@@ -1,11 +1,11 @@
 ---
-id: "deployment-guide"
+id: "quick-guide"
 title: "Quick Deployment Guide"
-slug: "/deployment-guide"
+slug: "/guides/quick-guide"
 sidebar_position: 2
 ---
 
-This quick guide provides step-by-step instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. Its purpose is to introduce you to the logic and sequence of the CLI commands.
+This quick guide provides instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. Its purpose is to introduce you to the logic and sequence of the CLI commands.
 
 ## Prerequisites
 
@@ -18,11 +18,12 @@ This quick guide provides step-by-step instructions on deploying a <a id="soluti
 
 When writing a Dockerfile, keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
-| Location                  | Purpose                      | Access |
-| :-                        | :-                           | :- |
-| `/sp/inputs/input-0001`   | Possible data location 1     | Read-only |
-| `/sp/inputs/input-0002`   | Possible data location 2     | Read-only |
-| `/sp/output`              | Output directory for results | Write; read own files |
+| Location                  | Purpose                           | Access |
+| :-                        | :-                                | :- |
+| `/sp/inputs/input-0001`   | Possible data location 1          | Read-only |
+| `/sp/inputs/input-0002`   | Possible data location 2          | Read-only |
+| `/sp/output`              | Output directory for results      | Write; read own files |
+| `/sp/certs`               | Contains the order certificate    | Read-only |
 
 :::important
 
@@ -30,7 +31,7 @@ Always use absolute paths, such as `/sp/...`.
 
 :::
 
-You can find several examples in the [Super-Protocol/solutions](https://github.com/Super-Protocol/solutions) GitHub repository.
+You can find several Dockerfile examples in the [Super-Protocol/solutions](https://github.com/Super-Protocol/solutions) GitHub repository.
 
 ### 1.2. Build a Docker image
 
@@ -61,13 +62,17 @@ docker save my-solution:latest | gzip > my-solution.tar.gz
 From your SPCTL directory, [upload](/cli/commands/files/upload) the archive with your solution:
 
 ```shell
-./spctl files upload <ARCHIVE_PATH> --filename <YOUR_PROJECT>.tar.gz --output <YOUR_PROJECT>.resource.json
+./spctl files upload <ARCHIVE_PATH> \
+--filename <YOUR_PROJECT>.tar.gz \
+--output <YOUR_PROJECT>.resource.json
 ```
 
 For example:
 
 ```shell
-./spctl files upload ./my-solution.tar.gz --filename my-solution.tar.gz --output my-solution.resource.json
+./spctl files upload ./my-solution.tar.gz \
+--filename my-solution.tar.gz \
+--output my-solution.resource.json
 ```
 
 ## 2. Prepare data
@@ -93,36 +98,32 @@ tar -czvf my_data.tar.gz -C ./data .
 From your SPCTL directory, [upload](/cli/commands/files/upload) the archive with your data, just like you did with the solution:
 
 ```shell
-./spctl files upload <ARCHIVE_PATH> --filename <YOUR_DATA>.tar.gz --output <YOUR_DATA>.resource.json
+./spctl files upload <ARCHIVE_PATH> \
+--filename <YOUR_DATA>.tar.gz \
+--output <YOUR_DATA>.resource.json
 ```
 
 For example:
 
 ```shell
-./spctl files upload ./my-data.tar.gz --filename my-data.tar.gz --output my-data.resource.json
+./spctl files upload ./my-data.tar.gz \
+--filename my-data.tar.gz \
+--output my-data.resource.json
 ```
 
 ## 3. Deploy
 
-Place an order using the [`workflows create`](/cli/commands/workflows/create) command:
+Place an order using the [`workflows create`](/cli/commands/workflows/create) command. For example:
 
 ```shell
 ./spctl workflows create \
---solution <SOLUTION_RESOURCE_PATH> \
---data <DATA_RESOURCE_PATH> \
---tee <OFFER_ID>
-```
-
-For example:
-
-```shell
-./spctl workflows create \
+--tee 7 \
 --solution ./my-solution.resource.json \
 --data ./my-data.resource.json \
---tee 7
+--data ./more-data.resource.json
 ```
 
-Find the order ID in the out    put.
+Find the order ID in the output.
 
 ## 4. Download the result
 
