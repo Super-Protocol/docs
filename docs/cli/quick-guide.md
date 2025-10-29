@@ -117,7 +117,7 @@ Place an order using the [`workflows create`](/cli/commands/workflows/create) co
 
 ```shell
 ./spctl workflows create \
---tee 7
+--tee 7 \
 --solution ./my-solution.resource.json \
 --data ./my-data.resource.json \
 --data ./more-data.resource.json

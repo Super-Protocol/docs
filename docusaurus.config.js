@@ -120,7 +120,7 @@ const config = {
         rehypePlugins: [katex],
       },
     ],
-    [
+    /*[
       "@docusaurus/plugin-content-docs",
       {
         id: "yma",
@@ -129,7 +129,7 @@ const config = {
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
-    ],
+    ],*/
   ],
   presets: [
     [
