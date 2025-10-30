@@ -16,7 +16,7 @@ This quick guide provides instructions on deploying a <a id="solution"><span cla
 
 ### 1.1. Create a Dockerfile
 
-When writing a Dockerfile, keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
+When writing a Dockerfile and other scripts, keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
 | Location                  | Purpose                           | Access |
 | :-                        | :-                                | :- |
