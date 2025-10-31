@@ -24,7 +24,7 @@ For example, the [`files`](/cli/commands/files) command group includes the follo
 
 _Options_ modify the command behavior and are prefixed by double hyphen `--`; for example, `--help`. Options can be mandatory or optional.
 
-_Arguments_ provide values for commands and options. Angle brackets `< >` and upper case indicate argument placeholders in the command syntax. When executing a command, replace placeholders, including the brackets, with values.
+_Arguments_ provide values for commands and options. Angle brackets `< >` and upper case indicate argument placeholders in the command syntax. When executing a command, **replace placeholders, including the brackets**, with values.
 
 Command syntax may also contain the following special characters:
 
