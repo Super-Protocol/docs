@@ -38,7 +38,7 @@ The output of the command is a resource JSON file with the information for the C
 
 | <div style={{width:230}}>**Name**</div>   | <div style={{width:535}}>**Description**</div> |
 | :-                                        | :- |
-| `--filename <NAME>`                       | Desired name of the resulting file in storage. <br/>Default: a random string (with no file extension). |
+| `--filename <NAME>`                       | Desired name of the resulting file or directory in the storage. <br/>Default: a random string (with no file extension). |
 | `--output <RESOURCE>`                     | Path to save the output resource JSON file. <br/>Default: `./resource.json`. |
 | `--skip-encryption`                       | Flag for skipping file encryption before uploading. <br/>Default: `false`. |
 | `--metadata <PATH>`                       | Path to a metadata JSON file for adding fields to the resource JSON file. |
