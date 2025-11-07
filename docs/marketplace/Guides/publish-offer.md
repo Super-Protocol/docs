@@ -1,7 +1,7 @@
 ---
 id: "publish-offer"
 title: "Publish an Offer"
-slug: "/publish-offer"
+slug: "/guides/publish-offer"
 sidebar_position: 4
 ---
 
@@ -14,18 +14,18 @@ This guide provides step-by-step instructions on how to create a provider and pu
 
 1.1. In the [Marketplace web app](https://marketplace.superprotocol.com/), open your account settings.
 
-<img src={require('../marketplace/images/my-offers-account.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/my-offers-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 1.2. Scroll down, enter the desired **Provider Name**, and click **Create Provider**.
 
-<img src={require('../marketplace/images/account-create-provider.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/account-create-provider.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 2. Deploy your model
 
-Follow the [Deploy Your Model](/guides/deploy-model) guide and verify that your model runs successfully.
+Follow the [Deploy Your Model](/marketplace/guides/deploy-model) guide and verify that your model runs successfully.
 
 ## 3. Configure the offer
 
@@ -33,7 +33,7 @@ The offer you created to deploy your model is unpublished. You need to configure
 
 Go to **My Offers** and select the offer you want to publish. In the **Description** tab, provide additional information about the model. Complete all fields to improve discoverability.
 
-<img src={require('../marketplace/images/offer-builder-description.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/offer-builder-description.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -53,7 +53,7 @@ Fields required to publish the offer are marked with \*.
 
 In the **Pricing** tab, click the **Add Slot** button to open an editable template for a <a id="requirements"><span className="dashed-underline">requirement slot</span></a>.
 
-<img src={require('../marketplace/images/offer-builder-pricing.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/offer-builder-pricing.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 

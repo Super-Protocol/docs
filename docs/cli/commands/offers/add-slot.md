@@ -3,37 +3,37 @@ id: "cli-offers-add-slot"
 title: "offers add-slot"
 slug: "/commands/offers/add-slot"
 sidebar_label: "add-slot"
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 Adds a <a id="slot"><span className="dashed-underline">slot</span></a> to an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
 
 ## Syntax
 
-```
-./spctl offers add-slot <offerType>
-    --offer <offerId>
-    [--path <slotInfo>]
-    [--config <path>]
+```shell
+./spctl offers add-slot <OFFER_TYPE>
+    --offer <OFFER_ID>
+    [--path <SLOT_INFO>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name**      | **Description** |
-| :- | :- |
-| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
+| <div style={{width:200}}>**Name**</div> | <div style={{width:565}}>**Description**</div> |
+| :-                                      | :- |
+| `<OFFER_TYPE>`                          | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
 
 ## Options
 
-| **Name**            | **Description** |
-| :- | :- |
-| `--offer <offerId>` | Offer ID. |
-| `--path <slotInfo>` | Path to a slot-info JSON file. The default is `./slotInfo.json`. |
-| `--config <path>`   | Path to the SPCTL configuration file. The default is `./config.json`. |
-| `--help`, `-h`      | Help for the command. |
+| <div style={{width:200}}>**Name**</div> | <div style={{width:565}}>**Description**</div> |
+| :-                                      | :- |
+| `--offer <OFFER_ID>`                    | Offer ID. |
+| `--path <SLOT_INFO>`                    | Path to a slot-info JSON file. <br/>Default: `./slotInfo.json`. |
+| `--config <CONFIG_PATH>`                | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                          | Help for the command. |
 
 ## Slot info
 
@@ -82,6 +82,8 @@ A template with example values:
 
 ## Example
 
-```
-./spctl offers add-slot value --offer 39 --path ./new-slot.json
+```shell
+./spctl offers add-slot value \
+    --offer 39 \
+    --path ./new-slot.json
 ```

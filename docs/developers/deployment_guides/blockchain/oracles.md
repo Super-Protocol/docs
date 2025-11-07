@@ -190,7 +190,7 @@ Next, we will build a Docker image of the service. For the Docker image to run i
 ./spctl solutions generate-key signing-key
 ```
 
-Execute the following [command](/cli/commands/solutions/prepare) in the root of your project to prepare and pack the solution:
+Execute the following command in the root of your project to prepare and pack the solution:
 
 ```shell
 ./spctl solutions prepare --pack-solution oracle-solution.tar.gz --write-default-manifest --base-image-path <path to the Node.js base image archive> ./solutions/Blockchain/sp-oracle/script/run/ signing-key

@@ -1,19 +1,17 @@
 ---
-id: "cli-offers-disable"
-title: "offers disable"
-slug: "/commands/offers/disable"
-sidebar_label: "disable"
-sidebar_position: 6
+id: "cli-files-calculate-hash"
+title: "files calculate-hash"
+slug: "/commands/files/calculate-hash"
+sidebar_label: "calculate-hash"
+sidebar_position: 2
 ---
 
-Disables an existing enabled <a id="offer"><span className="dashed-underline">offer</span></a>.
-
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
+Calculates the hash of a file or directory taking into account the file names.
 
 ## Syntax
 
 ```shell
-./spctl offers disable <OFFER>
+./spctl files calculate-hash <PATH>
     [--config <CONFIG_PATH>]
     [--help | -h]
 ```
@@ -22,9 +20,9 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 
 | <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
 | :-                                        | :- |
-| `<OFFER>`                                 | Offer ID. |
+| `<PATH>`                                  | Path to a file or directory. |
 
-## Option
+## Options
 
 | <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
 | :-                                        | :- |
@@ -34,5 +32,5 @@ Disables an existing enabled <a id="offer"><span className="dashed-underline">of
 ## Example
 
 ```shell
-./spctl offers disable 39
+./spctl files calculate-hash ./content/
 ```
