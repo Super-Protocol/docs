@@ -120,6 +120,16 @@ const config = {
         rehypePlugins: [katex],
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "guides",
+        path: "./docs/guides",
+        routeBasePath: "/guides",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
   ],
   presets: [
     [

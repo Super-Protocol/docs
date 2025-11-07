@@ -10,7 +10,7 @@ This group contains commands to view and manage <a id="offer"><span className="d
 
 ## Commands
 
-| **Command**                                                       | **Description** |
+| <div style={{width:200}}>**Command**</div>                        | <div style={{width:565}}>**Description**</div> |
 | :-                                                                | :- |
 | [offers list](/cli/commands/offers/list)                          | Lists available offers. |
 | [offers get](/cli/commands/offers/get)                            | Displays information on an offer. |
@@ -22,7 +22,7 @@ This group contains commands to view and manage <a id="offer"><span className="d
 
 ### Slot-related commands
 
-| **Command**                                               | **Description** |
+| <div style={{width:200}}>**Command**</div>                | <div style={{width:565}}>**Description**</div> |
 | :-                                                        | :- |
 | [offers get-slot](/cli/commands/offers/get-slot)          | Displays information on a slot. |
 | [offers add-slot](/cli/commands/offers/add-slot)          | Adds a new slot to an existing offer. |
@@ -33,6 +33,6 @@ This group contains commands to view and manage <a id="offer"><span className="d
 
 This command only works with compute offers.
 
-| **Command**                                           | **Description** |
+| <div style={{width:200}}>**Command**</div>            | <div style={{width:565}}>**Description**</div> |
 | :-                                                    | :- |
 | [offers get-option](/cli/commands/offers/get-option)  | Displays information for an option. |

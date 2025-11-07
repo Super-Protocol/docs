@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Uploads files to remote storage such as Storj.
 
-The primary purpose of this command is to make uploaded files available for download and execution inside a <a id="cvm"><span className="dashed-underline">CVM</span></a>. The uploaded data is automatically encrypted and placed in the [storage configured](/cli#set-up-storj-access-optional) in the SPCTL's `config.json` file. If no storage was preconfigured, a free storage space of up to 20 GB will be created using the Super Protocol's Storj account.
+The primary purpose of this command is to make uploaded files available for download and execution inside a <a id="cvm"><span className="dashed-underline">CVM</span></a>. The uploaded data is automatically encrypted and placed in the [storage configured](/cli#set-up-storj-access-optional) in the SPCTL's `config.json` file. If no storage was preconfigured, a free space of up to 20 GB will be automatically created using the Super Protocol's Storj account.
 
 The input of the command can be a TAR.GZ file or a directory (with the `--use-addon` flag).
 
@@ -43,7 +43,7 @@ The output of the command is a resource JSON file with the information for the C
 | `--skip-encryption`                       | Flag for skipping file encryption before uploading. <br/>Default: `false`. |
 | `--metadata <PATH>`                       | Path to a metadata JSON file for adding fields to the resource JSON file. |
 | `--max-concurrent <NUMBER>`               | Maximum concurrent pieces to upload at once per transfer to limit the number of threads. Use only when dealing with a memory-constrained environment. |
-| `--use-addon`                             | Flag for uploading a directory instead of a single TAR.GZ archive. <br/>Use this option with the [`files delete`](/cli/commands/files/delete) and [`files download`](/cli/commands/files/download) commands to manage the data uploaded this way. |
+| `--use-addon`                             | Flag for uploading a directory instead of a single TAR.GZ archive. <br/>To manage the data uploaded this way, use this option with the [`files delete`](/cli/commands/files/delete) and [`files download`](/cli/commands/files/download) commands. |
 | `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
 | `--help`, `-h`                            | Help for the command. |
 
@@ -53,14 +53,14 @@ The output of the command is a resource JSON file with the information for the C
 
 ```shell
 ./spctl files upload ./data.tar.gz \
-    --filename data_2025.tar.gz
+    --filename data_2026.tar.gz
 ```
 
 ### Upload a directory
 
 ```shell
-./spctl files upload ./content/ \
-    --output ./resource-data.json \
+./spctl files upload ./dataset/ \
+    --output ./dataset.resource.json \
     --use-addon
 ```
 

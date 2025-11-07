@@ -11,6 +11,6 @@ SPPI tokens are necessary to pay for <a id="order"><span className="dashed-under
 
 ## Commands
 
-| **Command**                                       | **Description** |
+| <div style={{width:200}}>**Command**</div>        | <div style={{width:565}}>**Description**</div> |
 | :-                                                | :- |
 | [tokens balance](/cli/commands/tokens/balance)    | Gets the wallet balance. |

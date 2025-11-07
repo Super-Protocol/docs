@@ -10,7 +10,7 @@ This group contains commands to manage files in third-party storage such as Stor
 
 ## Commands
 
-| **Command**                                                   | **Description** |
+| <div style={{width:200}}>**Command**</div>                    | <div style={{width:565}}>**Description**</div> |
 | :-                                                            | :- |
 | [files upload](/cli/commands/files/upload)                    | Encrypts and uploads a file to remote storage. |
 | [files calculate-hash](/cli/commands/files/calculate-hash)    | Calculates the hash of a file or directory. |
