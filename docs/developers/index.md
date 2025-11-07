@@ -15,7 +15,7 @@ Use the steps below as an outline of your learning curve with Super Protocol.
 
 If you are just starting out, feel your way around Super Protocol using the Marketplace GUI. 
 
-1. [Set up MetaMask](/guides/log-in) and connect to the Marketplace GUI.
+1. [Set up MetaMask](/marketplace/guides/log-in) and connect to the Marketplace GUI.
 2. Complete the [Marketplace Walkthrough](/developers/marketplace/walkthrough/) to create a sample tunnel order to get familiar with the Super Protocol logic.
 
 ## Deploy a solution with CLI
@@ -30,7 +30,7 @@ When you know the basics, try SPCTL—the Super Protocol CLI tool:
 ## Create your provider and offers with CLI
 1. Follow the [Providers and Offers](/developers/cli_guides/providers_offers) guide to create your provider and a first offer.
 2. Follow the [Moderation Guidelines](/developers/marketplace/moderation/) to approve your offer for Marketplace GUI.
-3. [Update SPCTL configuration](/cli/#configure-spctl-for-providers) as a provider to enable management of your provider and offers.
+3. [Update SPCTL configuration](/cli/#for-providers) as a provider to enable management of your provider and offers.
 4. Use [SPCTL commands](/developers/cli_guides/providers_offers#faq) to manage your provider and offers.
 
 Join us on [Discord](https://discord.gg/superprotocol). The Super Protocol team welcomes any feedback and questions!

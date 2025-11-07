@@ -3,33 +3,34 @@ id: "cli-orders-cancel"
 title: "orders cancel"
 slug: "/commands/orders/cancel"
 sidebar_label: "cancel"
+sidebar_position: 4
 ---
 
 Cancels an <a id="order"><span className="dashed-underline">order</span></a>.
 
 ## Syntax
 
-```
-./spctl orders cancel <orderId>
-    [--config <path>]
+```shell
+./spctl orders cancel <ORDER_ID> ...
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name** | **Description** |
-| :- | :- |
-| `<orderId>` | Order ID. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `<ORDER_ID>`                              | Order ID. |
 
 ## Options
 
-| **Name** | **Description** |
-| :- | :- |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
+```shell
 ./spctl orders cancel 1312
 ```

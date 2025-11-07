@@ -3,12 +3,12 @@ id: "cli-offers-update-slot"
 title: "offers update-slot"
 slug: "/commands/offers/update-slot"
 sidebar_label: "update-slot"
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 Updates a <a id="slot"><span className="dashed-underline">slot</span></a> in an <a id="offer"><span className="dashed-underline">offer</span></a>.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#configure-spctl-for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
 
 Use the [`offers get`](/cli/commands/offers/get) command to get the IDs of all slots in an offer. Use the [`offers get-slot`](/cli/commands/offers/get-slot) command to get additional information on a slot.
 
@@ -16,33 +16,36 @@ Refer to the description of the [`offers add-slot`](/cli/commands/offers/add-slo
 
 ## Syntax
 
-```
-./spctl offers update-slot <offerType>
-    --offer <offerId>
-    --slot <slotId>
-    [--path <slotInfo>]
-    [--config <path>]
+```shell
+./spctl offers update-slot <OFFER_TYPE>
+    --offer <OFFER>
+    --slot <SLOT>
+    [--path <SLOT_INFO>]
+    [--config <CONFIG_PATH>]
     [--help | -h]
 ```
 
 ## Arguments
 
-| **Name** | **Description** |
-| :- | :- |
-| `<offerType>` | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `<OFFER_TYPE>`                            | Type of the offer: `tee` for a compute offer or `value` for a solution, data, or storage offer. |
 
 ## Options
 
-| **Name** |**Description** |
-| :- | :- |
-| `--offer <offerId>` | Offer ID. |
-| `--slot <slotId>` | Slot ID. |
-| `--path <slotInfo>` | Path to the slotInfo JSON file. The default is `./slotInfo.json`. |
-| `--config <path>` | Path to the SPCTL configuration file. The default is `./config.json`. |
-| `--help`, `-h` | Help for the command. |
+| <div style={{width:200}}>**Name**</div>   | <div style={{width:565}}>**Description**</div> |
+| :-                                        | :- |
+| `--offer <OFFER>`                         | Offer ID. |
+| `--slot <SLOT>`                           | Slot ID. |
+| `--path <SLOT_INFO>`                      | Path to the slotInfo JSON file. <br/>Default: `./slotInfo.json`. |
+| `--config <CONFIG_PATH>`                  | Path to the SPCTL configuration file. <br/>Default: `./config.json`. |
+| `--help`, `-h`                            | Help for the command. |
 
 ## Example
 
-```
-./spctl offers update-slot value --offer 46 --slot 45 --path ./new-slot.json
+```shell
+./spctl offers update-slot value \
+    --offer 46 \
+    --slot 45 \
+    --path ./slot-info.json
 ```

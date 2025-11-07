@@ -27,7 +27,6 @@ The things you can do in the Marketplace GUI and the their respective CLI comman
 | **Function**                                   | **SPCTL Command**                                                             |
 |:-----------------------------------------------|:------------------------------------------------------------------------------|
 | View details of offers available on blockchain | [`offers`](/cli/commands/offers)                                     |
-| Receive SPPI and BNB tokens                    | [`tokens request`](/cli/commands/tokens/request)                     |
 | Create orders using offers                     | [`workflows create`](/cli/commands/workflows/create)                 |
 | Use your own data for the solution offers      | [`workflows create`](/cli/commands/workflows/create)                 |
 | Generate encryption keys for orders            | [`workflows generate-key`](/cli/commands/workflows/generate-key)     |
@@ -36,7 +35,6 @@ The things you can do in the Marketplace GUI and the their respective CLI comman
 | Replenish order deposits                       | [`orders replenish-deposit`](/cli/commands/orders/replenish-deposit) |
 | Cancel orders                                  | [`orders cancel`](/cli/commands/orders/cancel)                       |
 | Receive order results                          | [`orders download-result`](/cli/commands/orders/download-result)     |
-| Check confidentiality                          | [`quotes validate`](/cli/commands/quotes/validate)                   |
 
 ## Available in the Marketplace CLI only
 
@@ -44,7 +42,6 @@ The most important functions available only in [SPCTL](/cli/commands):
 
 | **Function**                                   | **SPCTL Command**                                                               |
 |:-----------------------------------------------|:------------------------------------------------------------------------------|
-| Prepare a solution for execution | [`solutions prepare`](/cli/commands/solutions/prepare)                                     |
 | Upload files to storage                | [`files upload`](/cli/commands/files/upload)                     |
 | Create orders using your solutions              | [`workflows create`](/cli/commands/workflows/create)                       |
 | Update an offer | [`offers update`](/cli/commands/offers/update) and [`offers update-slot`](/cli/commands/offers/update-slot)|
