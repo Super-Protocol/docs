@@ -94,7 +94,7 @@ You can set up SPCTL using the `./spctl setup` command or by manually creating a
         2. Do not change the preconfigured values and provide values to the following keys:
 
         | **Key**               | *Description** |
-        | :- | :- |
+        | :-                    | :- |
         | `"accountPrivateKey"` | An EVM wallet private key. Super Protocol recommends creating a separate wallet for the testnet. |
         | `"bucket"`            | (optional) Name of a Storj bucket. |
         | `"prefix"`            | (optional) Path to a directory inside the bucket. It can be empty. |
@@ -123,11 +123,11 @@ If you use a free Storj account, your files will become unavailable after the en
 
 4. Run `./spctl setup` again or open SPCTL's `config.json` in a text editor and provide values to the following key:
 
-| **Key**              | **Description** |
-| :- | :- |
-| `"bucket"`           | Name of a Storj bucket. |
-| `"writeAccessToken"` | Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
-| `"readAccessToken"`  | Storj access grant with **Read** permission for this bucket. |
+| **Key**               | **Description** |
+| :-                    | :- |
+| `"bucket"`            | Name of a Storj bucket. |
+| `"writeAccessToken"`  | Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
+| `"readAccessToken"`   | Storj access grant with **Read** permission for this bucket. |
 
 ## For providers
 

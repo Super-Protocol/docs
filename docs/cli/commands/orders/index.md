@@ -10,7 +10,7 @@ This group contains commands to track and manage <a id="order"><span className="
 
 ## Commands
 
-| **Command**                                                           | **Description** |
+| <div style={{width:200}}>**Command**</div>                            | <div style={{width:565}}>**Description**</div> |
 | :-                                                                    | :- |
 | [orders list](/cli/commands/orders/list)                              | Lists orders. |
 | [orders get](/cli/commands/orders/get)                                | Displays information on an order. |

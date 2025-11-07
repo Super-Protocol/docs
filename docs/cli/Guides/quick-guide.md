@@ -2,7 +2,7 @@
 id: "quick-guide"
 title: "Quick Deployment Guide"
 slug: "/guides/quick-guide"
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 This quick guide provides instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. Its purpose is to introduce you to the logic and sequence of the CLI commands.
@@ -18,12 +18,13 @@ This quick guide provides instructions on deploying a <a id="solution"><span cla
 
 When writing a Dockerfile and other scripts, keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
-| Location                  | Purpose                           | Access |
-| :-                        | :-                                | :- |
-| `/sp/inputs/input-0001`   | Possible data location 1          | Read-only |
-| `/sp/inputs/input-0002`   | Possible data location 2          | Read-only |
-| `/sp/output`              | Output directory for results      | Write; read own files |
-| `/sp/certs`               | Contains the order certificate    | Read-only |
+| **Location**                                                      | **Purpose**                           | **Access** |
+| :-                                                                | :-                                    | :- |
+| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>etc.      | Possible data locations               | Read-only |
+| `/sp/output`                                                      | Output directory for results          | Write; read own files |
+| `/sp/certs`                                                       | Contains the order certificate        | Read-only |
+
+So, your solution must find the data in `/sp/inputs` and write the results to `/sp/output`.
 
 :::important
 
@@ -122,6 +123,12 @@ Place an order using the [`workflows create`](/cli/commands/workflows/create) co
 --data ./my-data.resource.json \
 --data ./more-data.resource.json
 ```
+
+:::note
+
+When you provide multiple data inputs, they are placed in separate directories inside the <a id="cvm"><span className="dashed-underline">CVM</span></a>: the first in `/sp/inputs/input-0001`, the second in `/sp/inputs/input-0002`, and so on.
+
+:::
 
 Find the order ID in the output.
 
