@@ -20,6 +20,9 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  markdown: {
+    mermaid: true,
+  },
   plugins: [
     [
       "@docusaurus/plugin-client-redirects",
@@ -230,7 +233,8 @@ const config = {
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
     }),
-  ]]
+  ],
+  "@docusaurus/theme-mermaid",]
 };
 
 export default config;
