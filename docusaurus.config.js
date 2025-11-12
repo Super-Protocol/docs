@@ -12,7 +12,6 @@ const config = {
   url: "https://docs.superprotocol.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "/img/icon.png",
   organizationName: "Super-Protocol", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
@@ -22,6 +21,9 @@ const config = {
   },
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    }
   },
   plugins: [
     [
