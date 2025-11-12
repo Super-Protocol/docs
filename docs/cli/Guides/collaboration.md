@@ -267,8 +267,8 @@ Provide Bob with these IDs. Ignore other instructions you see in the output.
 
 Replace:
 
-- `<OFFER_ID>` with the offer ID provided by Alice
-- `<SLOT_ID>` with the slot ID provided by Alice
+- `<OFFER_ID>` with the offer ID provided by Bob
+- `<SLOT_ID>` with the slot ID provided by Bob
 - `<COMPUTE>` with the desired compute offer ID.
 
 Find the order ID in the output, for example:
@@ -285,7 +285,7 @@ Workflow was created, TEE order id: ["260402"]
 
 Replace `<ORDER_ID>` with the order ID.
 
-Provide Alice with the order ID and the `Data` suborder ID.
+Provide Bob with the order ID and the `Data` suborder ID.
 
 ### Bob: 9. Complete the data suborder
 
@@ -300,7 +300,7 @@ Manually complete the data suborder:
 
 Replace:
 
-- `<SUBORDER_ID>` with the Data suborder ID
+- `<SUBORDER_ID>` with the data suborder ID
 - `<SOLUTION_HASH>` with the hash from the `solution.resource.json` file. If the solution was modified, its hash will not match the hash you enter. In this case, the suborder will not be completed, and the order will not proceed.
 
 ### Alice: 10. Download the order results

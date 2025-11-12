@@ -63,7 +63,7 @@ You can set up SPCTL using the `./spctl setup` command or by manually creating a
 
         4. Enter the private key you generated in step 1.
 
-        4. Answer `No` when promted about a Storj bucket. You can [configure Storj](/cli/#set-up-storj-access-optional) and provide this information later or skip this step entirely.
+        4. Answer `No` when prompted about a Storj bucket. You can [configure Storj](/cli/#set-up-storj-access-optional) and provide this information later or skip this step entirely.
 
         When done, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in a text editor.
     </TabItem>
