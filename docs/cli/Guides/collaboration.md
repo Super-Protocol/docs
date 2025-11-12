@@ -246,7 +246,7 @@ A: `n` (No)
 
 Wait for the offer to be created and find a line in the output with the IDs of the offer and slot, for example:
 
-```
+```text
 Slot 119654 for offer 18291 has been created successfully
 ```
 
