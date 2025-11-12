@@ -21,4 +21,4 @@ sidebar_position: 0
 
 | <div style={{width:225}}>**Guide**</div>              | <div style={{width:540}}>**Description**</div> |
 | :-                                                    | :- |
-| [Quick Deployment Guide](/cli/guides/quick-guide)     |  instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. |
+| [Quick Deployment Guide](/cli/guides/quick-guide)     | Quick instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. |

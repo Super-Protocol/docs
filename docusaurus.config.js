@@ -12,13 +12,18 @@ const config = {
   url: "https://docs.superprotocol.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   favicon: "/img/icon.png",
   organizationName: "Super-Protocol", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    }
   },
   plugins: [
     [
@@ -230,7 +235,8 @@ const config = {
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
     }),
-  ]]
+  ],
+  "@docusaurus/theme-mermaid",]
 };
 
 export default config;
