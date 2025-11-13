@@ -34,6 +34,11 @@ ol > li::marker {
     font-weight: 500;
 }
 
+/* hide the warning on unlisted pages */
+.theme-unlisted-banner {
+  display: none !important;
+}
+
 /* navbar */
 .navbar__logo {
     height: 1.12em;
