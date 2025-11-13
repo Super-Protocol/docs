@@ -2,12 +2,15 @@
 id: "collaboration"
 title: "Confidential Collaboration"
 slug: "/guides/collaboration"
-sidebar_position: 2
+displayed_sidebar: null
+unlisted: true
 ---
 
-Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one other.
+Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one another.
 
-This guide describes a simple example of confidential collaboration between two parties, **Alice** and **Bob**. Alice owns a script she wants to use to process Bob's dataset. However, the dataset contains sensitive information and cannot be shared.
+This guide describes a simple example of confidential collaboration between two parties, **Alice** and **Bob**. Alice owns a script she wants to use to process Bob's dataset.
+
+The dataset contains sensitive information and cannot be shared. At the same time, Bob must review the script to ensure it is safe to run on his data. If Alice's script is proprietary and she cannot share it with Bob, a possible alternative is to involve independent security experts who can audit the script without exposing it publicly.
 
 The computation runs on Super Protocol within a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> that is is isolated from all external access, including by Alice, Bob, the hardware owner, and the Super Protocol team. Additionally, Super Protocol's Certification System ensures verifiability, eliminating the need for trust.
 
@@ -43,7 +46,7 @@ sequenceDiagram
     Bob ->> Super Protocol / TEE: 9. Complete the data suborder
     Super Protocol / TEE ->> Storage: Download the dataset
     Super Protocol / TEE ->> Blockchain: Publish the order report
-    Super Protocol / TEE ->> Super Protocol / TEE: Execute the order
+    Super Protocol / TEE ->> Super Protocol / TEE: Process the order
     Super Protocol / TEE ->>- Storage: Upload the order results
     Alice ->> Storage: 10. Download the order results
     Alice ->> Blockchain: 11. Get the order report
@@ -52,17 +55,17 @@ sequenceDiagram
 ```
 <br/>
 
-**Preparation**:
+### Preparation
 
 Alice builds a <a id="solution"><span className="dashed-underline">solution</span></a>—a Docker image containing her script (1). She uploads the solution using SPCTL (2) and grants Bob access for verification (3).
 
-Bob downloads the solution (4) and verifies it is safe to process his data (5).
+Bob (or independent auditor) downloads the solution (4) and verifies it is safe to process his data (5).
 
 Bob uploads his dataset to remote storage using SPCTL (6). The dataset is automatically encrypted during upload, and only Bob holds the key.
 
 Bob creates an <a id="offer"><span className="dashed-underline">offer</span></a> on the Marketplace (7). The offer require Bob's manual approval for use. He shares the offer's IDs with Alice.
 
-**Execution**:
+### Execution
 
 Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol using her solution and Bob's offer ID (8). The order remains **Blocked** by the data suborder.
 
@@ -70,7 +73,7 @@ Bob manually completes the data suborder (9). The command includes the verified 
 
 Once the computation finishes, Alice can download the result (10).
 
-Both Alice and Bob can retrieve the order report (11) that confirms the authenticity of the entire process.
+Both Alice and Bob can retrieve the order report (11) that confirms the authenticity of the entire order and its environment.
 
 ## Prerequisites
 
@@ -86,9 +89,9 @@ Both Alice and Bob can retrieve the order report (11) that confirms the authenti
 
 ## Preparation
 
-### Alice: 1. Build the solution
+### Alice: 1. Build a solution
 
-1.1. Prepare the solution: write a Dockerfile that creates an image with your software. Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
+1.1. Write a Dockerfile that creates an image with the training engine. Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
 | **Location**                                                      | **Purpose**                           | **Access** |
 | :-                                                                | :-                                    | :- |
@@ -232,16 +235,16 @@ If you are registering an offer for the first time, you will be prompted to comp
 
 Follow the dialog:
 
-Q: `Have you already created a DATA offer?`
+Q: `Have you already created a DATA offer?`<br/>
 A: `n` (No)
 
-Q: `Please specify a path to the offer info json file`
+Q: `Please specify a path to the offer info json file`<br/>
 A: `./offer-info.json`
 
-Q: `Please specify a path to the slot info json file`
+Q: `Please specify a path to the slot info json file`<br/>
 A: `./slot-info.json`
 
-Q: `Do you want to add another slot?`
+Q: `Do you want to add another slot?`<br/>
 A: `n` (No)
 
 Wait for the offer to be created and find a line in the output with the IDs of the offer and slot, for example:
@@ -345,4 +348,4 @@ Additionally, find entries in the `runtimeInfo` array that start with `"type": "
 },
 ```
 
-These are hashes of the actual solution and data that were executed within a TEE. Compare them with the solution and dataset hashes from the respective resource files.
+These hashes are of the actual solution and data that were executed within a TEE. Compare them with the solution and dataset hashes from the respective resource files.
