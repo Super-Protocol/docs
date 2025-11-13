@@ -15,21 +15,24 @@ import TabItem from '@theme/TabItem';
 <Tabs>
     <TabItem value="linux" label="Linux" default>
         Open a terminal in the directory where you want to place SPCTL for Linux and run the following command:
-        ```
+
+        ```bash
         curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
         chmod +x ./spctl
         ```
     </TabItem>
     <TabItem value="macos" label="MacOS">
         Open Terminal in the directory where you want to place SPCTL for macOS and run the following command:
-        ```
+
+        ```bash
         curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-macos-x64 -o spctl
         chmod +x ./spctl
         ```
     </TabItem>
     <TabItem value="windows" label="Windows">
-        Launch [WSL](https://learn.microsoft.com/en-us/windows/wsl) from PowerShell, go to the directory where you want to place SPCTL, and run the following command:
-        ```
+        Install and launch [WSL](https://learn.microsoft.com/en-us/windows/wsl). Go to the directory where you want to place SPCTL, and run the following command:
+
+        ```bash
         curl -L https://github.com/Super-Protocol/ctl/releases/latest/download/spctl-linux-x64 -o spctl
         chmod +x ./spctl
         ```
@@ -44,22 +47,34 @@ You can set up SPCTL using the `./spctl setup` command or by manually creating a
 
 <Tabs>
     <TabItem value="spctl" label="SPCTL setup" default>
-        1. Execute the `./spctl setup` command to initiate the setup dialog.
+        1. Super Protocol recommends creating a separate wallet for the testnet. Generate a private key:
 
-        2. Enter the following Access Token when prompted:
+        ```bash
+        head -c 32 /dev/urandom | xxd -p -c 32
+        ```
+        
+        2. Execute the `./spctl setup` command to initiate the setup dialog.
+
+        3. Enter the following Access Token when prompted:
 
         ```
         eyJhbGciOiJFUzI1NiJ9.eyJhZGRyZXNzIjoiMHhBN0E5NjQ4ZGE2QTg5QjBhNzFhNGMwRDQ2Y2FENDAwMDU3ODI3NGEyIiwiaWF0IjoxNjc5OTk4OTQyLCJleHAiOjE3NDMxMTQxNDJ9.x2lx90D733mToYYdOWhh4hhXn3YowFW4JxFjDFtI7helgp2uqekDHFgekT5yjbBWeHTzRap7SHbDC3VvMIDe0g
         ```
 
-        3. Enter a private key to your testnet EVM wallet when prompted.
+        4. Enter the private key you generated in step 1.
 
-        4. Answer `No` when promted about a Storj bucket. You can [configure Storj](/cli/#set-up-storj-access-optional) and provide this information later or skip this step entirely.
+        5. Answer `No` when prompted about a Storj bucket. You can [configure Storj](/cli/#set-up-storj-access-optional) and provide this information later or skip this step entirely.
 
         When done, SPCTL creates `config.json` in the SPCTL root directory. If you need to update your account information, execute `./spctl setup` again or modify `config.json` manually in a text editor.
     </TabItem>
     <TabItem value="spctl-manual" label="Manual configuration">
-        In the SPCTL directory, create a file named `config.json`. Use the following template:
+        1. Super Protocol recommends creating a separate wallet for the testnet. Generate a private key:
+
+        ```bash
+        head -c 32 /dev/urandom | xxd -p -c 32
+        ```
+        
+        2. In the SPCTL directory, create a file named `config.json`. Use the following template:
 
         ```json title="config.json"
         {
@@ -91,17 +106,19 @@ You can set up SPCTL using the `./spctl setup` command or by manually creating a
 
         ```
 
-        2. Do not change the preconfigured values and provide values to the following keys:
+        3. Do not change the preconfigured values and set values to the following keys:
 
-        | **Key**               | *Description** |
+        | **Key**               | **Description** |
         | :-                    | :- |
-        | `"accountPrivateKey"` | An EVM wallet private key. Super Protocol recommends creating a separate wallet for the testnet. |
+        | `"accountPrivateKey"` | The private key you generated in step 1. |
         | `"bucket"`            | (optional) Name of a Storj bucket. |
-        | `"prefix"`            | (optional) Path to a directory inside the bucket. It can be empty. |
+        | `"prefix"`            | (optional) Path to a directory inside the bucket with a trailing slash, for example, `data/`. It can be empty. |
         | `"writeAccessToken"`  | (optional) Storj access grant with **Full** permission (**Read**, **List**, **Write**, **Delete**) for this bucket. |
         | `"readAccessToken"`   | (optional) Storj access grant with **Read** permission for this bucket. |
 
-        3. Generate a private key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
+        Save and close the file.
+
+        4. Generate a key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Open `config.json` again and set the generated key to `workflow.resultEncryption.key`. Save and close the file.
     </TabItem>
 </Tabs>
 
@@ -202,7 +219,9 @@ Providers need another copy of SPCTL configured to manage their offers.
             },
         ```
 
-        3. Generate a private key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Set it in `"key"` (`workflow.resultEncryption.key`) in `config.json`.
+        Save and close the file.
+
+        3. Generate a key for order result encryption using the [`workflows generate-key`](/cli/commands/workflows/generate-key) command. Open `config.json` again and set the generated key to `workflow.resultEncryption.key`. Save and close the file.
     </TabItem>
 </Tabs>
 
