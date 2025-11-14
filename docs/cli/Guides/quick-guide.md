@@ -2,7 +2,7 @@
 id: "quick-guide"
 title: "Quick Deployment Guide"
 slug: "/guides/quick-guide"
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 This quick guide provides instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. Its purpose is to introduce you to the logic and sequence of the CLI commands.
