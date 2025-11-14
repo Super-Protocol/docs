@@ -85,13 +85,13 @@ Both Alice and Bob can retrieve the order report (11) that confirms the authenti
 **Bob**:
 
 - [SPCTL](/cli)
-- Provider Tools
+- [Provider Tools](/cli/guides/provider-tools)
 
 ## Preparation
 
 ### Alice: 1. Build a solution
 
-1.1. Write a Dockerfile that creates an image with the training engine. Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
+1.1. Write a Dockerfile that creates an image with your code. Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
 | **Location**                                                      | **Purpose**                           | **Access** |
 | :-                                                                | :-                                    | :- |
@@ -351,3 +351,7 @@ Additionally, find entries in the `runtimeInfo` array that start with `"type": "
 ```
 
 These hashes are of the actual solution and data that were executed within a TEE. Compare them with the solution and dataset hashes from the respective resource files.
+
+## Support
+
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).

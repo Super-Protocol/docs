@@ -2,7 +2,7 @@
 id: "fine-tune"
 title: "Confidential Fine-Tuning"
 slug: "/guides/fine-tune"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one another.
@@ -23,7 +23,7 @@ The following is just one example of confidential collaboration. Super Protocol'
 
 ## General workflow
 
-**Prepare the solution**
+**Prepare the solution**:
 
 ```mermaid
 sequenceDiagram
@@ -47,7 +47,7 @@ Alice and Bob download the solution ([4](/cli/guides/fine-tune#alice-and-bob-4-d
 
 If Carol cannot share the code with Alice and Bob, and a third-party auditor is involved, the workflow will differ slightly. After uploading, Carol must also create a solution <a id="offer"><span className="dashed-underline">offer</span></a> on Super Protocol Marketplace (similar to Bob's [Step 8](/cli/guides/fine-tune#bob-8-create-an-offer)).
 
-**Prepare the data**
+**Prepare the data**:
 
 ```mermaid
 sequenceDiagram
@@ -68,7 +68,7 @@ Alice uploads her model ([6](/cli/guides/fine-tune#alice-6-upload-the-model)) an
 
 Bob creates an offer on the Marketplace ([8](/cli/guides/fine-tune#bob-8-create-an-offer)). The offer requires Bob's manual approval for use. He shares the offer's IDs with Alice.
 
-**Execute**
+**Execute**:
 
 ```mermaid
 sequenceDiagram
@@ -113,7 +113,7 @@ Both Alice and Bob can retrieve the order report ([12](/cli/guides/fine-tune#ali
 **Bob**:
 
 - [SPCTL](/cli)
-- Provider Tools
+- [Provider Tools](/cli/guides/provider-tools)
 
 **Carol**:
 
@@ -411,3 +411,7 @@ Additionally, find entries in the `runtimeInfo` array that start with `"type": "
 ```
 
 These hashes are of the actual solution and data that were executed within a TEE. Compare them with the solution and dataset hashes from the respective resource files.
+
+## Support
+
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
