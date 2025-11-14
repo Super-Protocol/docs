@@ -8,7 +8,7 @@ sidebar_position: 3
 
 Updates information about a provider.
 
-**Important:** This command requires SPCTL with a [provider configuration file](/cli/#for-providers).
+**Important:** This command requires SPCTL with a [provider configuration file](/cli/guides/provider-tools#providers-spctl).
 
 ## Syntax
 

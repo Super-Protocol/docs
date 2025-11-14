@@ -214,4 +214,4 @@ Then, click the **Connect Wallet** button in the Marketplace GUI again and sel
 
 ## Support
 
-If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol). Community Managers will be happy to help.
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
