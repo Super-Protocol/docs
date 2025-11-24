@@ -64,7 +64,7 @@ sequenceDiagram
 ```
 <br/>
 
-Alice uploads her model ([6](/cli/guides/fine-tune#alice-6-upload-the-model)) and Bob uploads his dataset ([7](/cli/guides/fine-tune#bob-7-upload-the-dataset)) to remote storage using SPCTL. The dataset is automatically encrypted during upload, and only Bob holds the key.
+Alice uploads her model ([6](/cli/guides/fine-tune#alice-6-upload-the-model)) and Bob uploads his dataset ([7](/cli/guides/fine-tune#bob-7-upload-the-dataset)) to remote storage using SPCTL. Files are automatically encrypted during upload, and only the uploader holds the key.
 
 Bob creates an offer on the Marketplace ([8](/cli/guides/fine-tune#bob-8-create-an-offer)). The offer requires Bob's manual approval for use. He shares the offer's IDs with Alice.
 
@@ -179,15 +179,15 @@ If you did not include training scripts in the image, upload them separately:
 
 Replace `<SCRIPTS_DIR>` with the path to the directory containing your training scripts.
 
+:::important
+
+The output resource files contain information needed to access and decrypt the uploaded files. Be careful with sharing resource files if the uploaded content is sensitive.
+
+:::
+
 ### Carol: 3. Send the solution to Alice and Bob
 
 Send the output resource files from the previous step to Alice and Bob (or independent auditors).
-
-:::warning
-
-Although SPCTL encrypts data during upload, the output resource files contain information on how to access and decrypt it.
-
-:::
 
 ### Alice and Bob: 4. Download the solution
 
@@ -324,7 +324,7 @@ Provide Alice with these IDs. Ignore other instructions you see in the output.
    --solution ./solution.resource.json \
    --data ./model.resource.json \
    --data <OFFER_ID>,<SLOT_ID> \
-   --tee <COMPUTE>
+   --tee <COMPUTE> \
    [--data ./scripts.resource.json]
 ```
 
@@ -403,9 +403,9 @@ Additionally, find entries in the `runtimeInfo` array that start with `"type": "
  "type": "Data",
  "size": 12901,
  "hash": {
- "algo": "sha256",
- "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
- "encoding": "hex"
+   "algo": "sha256",
+   "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
+   "encoding": "hex"
  }
 },
 ```

@@ -8,13 +8,13 @@ unlisted: true
 
 Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one another.
 
-This guide describes a simple example of confidential collaboration between two parties, **Alice** and **Bob**. Alice owns a script she wants to use to process Bob's dataset.
+This guide describes an example of confidential collaboration between two parties, **Alice** and **Bob**. Alice owns a script she wants to use to process Bob's dataset.
 
 The dataset contains sensitive information and cannot be shared. At the same time, Bob must review the script to ensure it is safe to run on his data. If Alice's script is proprietary and she cannot share it with Bob, a possible alternative is to involve independent security experts who can audit the script without exposing it publicly.
 
 The computation runs on Super Protocol within a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> that is isolated from all external access, including that of Alice, Bob, the hardware owner, and the Super Protocol team. Additionally, Super Protocol's Certification System ensures verifiability, eliminating the need for trust.
 
-The following is just one example of confidential collaboration. Super Protocol's architecture enables a range of more complex scenarios involving multiple parties and assets.
+The following is just one relatively simple example of confidential collaboration. Super Protocol's architecture enables a range of more complex scenarios involving multiple parties and assets.
 
 ## General workflow
 

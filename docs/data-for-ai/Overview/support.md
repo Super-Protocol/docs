@@ -5,7 +5,7 @@ slug: "/overview/support"
 sidebar_position: 6
 ---
 
-If you have questions, encounter issues, or need assistance during the campaign, we’re here to help.
+If you have questions, encounter issues, or need assistance during the campaign, we're here to help.
 
 ## Support ticket
 
@@ -15,4 +15,4 @@ For official support via email, please [submit a request](https://superprotocol.
 
 If you prefer real-time communication, you can also get help through our [Discord server](https://discord.com/invite/superprotocol). The channel is **#data-for-ai**.
 
-We’re committed to supporting you throughout the campaign.
+We're committed to supporting you throughout the campaign.

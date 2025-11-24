@@ -24,7 +24,7 @@ Super Protocol is very unique in a way that it allows equipment owners to engage
 
 Data in the modern world is being created everywhere, while new, more advanced processing algorithms allow for an ever larger number of ways to use this data. However, there are quite a few challenges here. Obviously, large volumes of data are not originally meant to be public, which means it requires anonymization or confidential computing.
 
-High-quality anonymization is not always possible without losing data utility. Additionally, many of today’s analytical tools enable successful [data de-anonymization](https://www.cs.utexas.edu/~shmat/shmat_oak09.pdf) under many different circumstances: “To demonstrate its effectiveness on real-world networks, we show that a third of the users who can be verified to have accounts on both Twitter, a popular microblogging service, and Flickr, an online photo-sharing site, can be re-identified in the anonymous Twitter graph with only a 12% error rate.”
+High-quality anonymization is not always possible without losing data utility. Additionally, many of today's analytical tools enable successful [data de-anonymization](https://www.cs.utexas.edu/~shmat/shmat_oak09.pdf) under many different circumstances: “To demonstrate its effectiveness on real-world networks, we show that a third of the users who can be verified to have accounts on both Twitter, a popular microblogging service, and Flickr, an online photo-sharing site, can be re-identified in the anonymous Twitter graph with only a 12% error rate.”
 
 Almost any data owner would benefit from monetizing it—as long as it does not harm their business as a whole. This is borne out by the widespread development of technologies for analyzing big data.
 

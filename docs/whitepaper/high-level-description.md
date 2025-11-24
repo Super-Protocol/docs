@@ -9,7 +9,7 @@ sidebar_position: 5
   <img src={require('./images/high-level-01.png').default} />
 </p>
 
-From a bird’s eye view, Super Protocol involves the interactions shown in the above diagram. The interactions include the following entities:
+From a bird's eye view, Super Protocol involves the interactions shown in the above diagram. The interactions include the following entities:
 
 - **Provider Offers.** In a form of a provider offer, the provider offers their resources or values in exchange for a certain reward. The offer can fall into one of three categories:
   - **Input.** Offers of this type are used for cooperative processing within a trusted execution environment (TEE). These can be data offers or solution offers.
