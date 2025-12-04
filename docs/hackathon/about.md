@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## Hackathon
 
-The [Super Hackathon](https://hackathon.superprotocol.com/) is a global Web3 event designed to demonstrate the scalability and security of Super Protocol’s cloud under real on-chain load. Participants will migrate existing open-source dApps to opBNB, integrate confidential oracle data feeds, and generate verifiable transactions to stress-test performance. The goal is to showcase how real-world decentralized services can operate efficiently, privately, and transparently at scale.
+The [Super Hackathon](https://hackathon.superprotocol.com/) is a global Web3 event designed to demonstrate the scalability and security of Super Protocol's cloud under real on-chain load. Participants will migrate existing open-source dApps to opBNB, integrate confidential oracle data feeds, and generate verifiable transactions to stress-test performance. The goal is to showcase how real-world decentralized services can operate efficiently, privately, and transparently at scale.
 
 ## Super Protocol
 
@@ -15,7 +15,7 @@ The [Super Hackathon](https://hackathon.superprotocol.com/) is a global Web3 eve
 
 ## Confidential oracles
 
-Confidential oracles are a key showcase of Super Protocol’s architecture and the advantages of confidential execution. Built on Chainlink Data Feeds and executed inside TEEs, they keep all data and computations private while remaining verifiable on-chain.
+Confidential oracles are a key showcase of Super Protocol's architecture and the advantages of confidential execution. Built on Chainlink Data Feeds and executed inside TEEs, they keep all data and computations private while remaining verifiable on-chain.
 
 Traditional oracles rely on thousands of untrusted nodes to reach consensus, making the whole process quite expensive. Super Protocol achieves the same trust with far fewer nodes, as each operates inside a TEE that cryptographically guarantees honest execution. A single node with 3 CPUs and 4 GB RAM can handle the workload of about 1,000 Chainlink nodes, delivering major improvements in speed and cost efficiency.
 
@@ -54,7 +54,7 @@ Prizes are awarded to the team as a whole, not to individual participants or pro
 
 ## Community & support
 
-Official discussions and support take place in Super Protocol’s [Discord server](https://discord.gg/superprotocol), channel #hackathons.
+Official discussions and support take place in Super Protocol's [Discord server](https://discord.gg/superprotocol), channel #hackathons.
 
 Sign up for our newsletter and social media on the [Super Hackathon webpage](https://hackathon.superprotocol.com/) to keep up to date.
 

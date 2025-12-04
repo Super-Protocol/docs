@@ -17,7 +17,7 @@ The interface methods (`latestAnswer`, `getAnswer`, `latestRound`, `getRoundData
 
 The dApp must be open-source and have been publicly deployed before September 1, 2025, on Ethereum, Polygon, or BNB Chain.
 
-The chosen dApp’s original smart contracts must be verified on a public block explorer (e.g., Etherscan, BscScan, etc.).
+The chosen dApp's original smart contracts must be verified on a public block explorer (e.g., Etherscan, BscScan, etc.).
 
 The migration should require minimal code changes—no more than 5% of the original codebase.
 
@@ -25,7 +25,7 @@ Teams may submit multiple unique dApps, but each must have a different original 
 
 Frontends are welcome but optional—evaluation is based solely on the deployed smart contracts and their on-chain activity.
 
-The project’s license must allow forking and reuse (acceptable licenses include MIT, Apache 2.0, GPL-family, or equivalent).
+The project's license must allow forking and reuse (acceptable licenses include MIT, Apache 2.0, GPL-family, or equivalent).
 
 ## Deploying to opBNB
 

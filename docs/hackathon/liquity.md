@@ -94,7 +94,7 @@ Below is an example of partial console output:
 
 ## 6. Configure for opBNB Deployment
 
-Now that local deployment works, let’s prepare the project for deployment to the opBNB mainnet.
+Now that local deployment works, let's prepare the project for deployment to the opBNB mainnet.
 
 ### 6.1. Create the environment file
 

@@ -141,7 +141,7 @@ For example, [opbnb.bscscan.com/address/0x6DA2Fe3A44dc2837e1ffc450339Ae107AE1AC2
 
 ## 12. Submit the migration
 
-To complete the migration, you’ll need both the original and new contract addresses.
+To complete the migration, you'll need both the original and new contract addresses.
 
 ### 12.1. Locate the original deployment
 

@@ -15,7 +15,7 @@ These Github Actions are automating the commands outlined in the [previous step]
 
 1. Go to [GitHub](https://github.com) and log in to your account.
 
-2. Click the [New Repository](https://github.com/new) button in the top-right. Enter `superprotocol-test-app` as repository name. You’ll have an option there to initialize the repository with a README file. Add `Node` as `.gitignore` template.
+2. Click the [New Repository](https://github.com/new) button in the top-right. Enter `superprotocol-test-app` as repository name. You'll have an option there to initialize the repository with a README file. Add `Node` as `.gitignore` template.
 
 3. Click the “Create repository” button.
 
