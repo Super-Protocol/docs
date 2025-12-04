@@ -54,13 +54,13 @@ sequenceDiagram
     actor Alice
     actor Bob
     participant Storage
-    participant Super Protocol / TEE
+    participant Super Protocol
 
-    note over Alice,Super Protocol / TEE: Prepare the data
+    note over Alice,Super Protocol: Prepare the data
 
     Alice ->> Storage: 6. Upload the model
     Bob ->> Storage: 7. Upload the dataset
-    Bob ->> Super Protocol / TEE: 8. Create an offer
+    Bob ->> Super Protocol: 8. Create an offer
 ```
 <br/>
 
@@ -81,10 +81,8 @@ sequenceDiagram
     note over Alice,Blockchain: Execute
 
     Alice ->>+ Super Protocol / TEE: 9. Place an order
-    Super Protocol / TEE ->> Storage: Download the solution
-    Super Protocol / TEE ->> Storage: Download the model
-    Bob ->> Super Protocol / TEE: 10. Complete the suborder
-    Super Protocol / TEE ->> Storage: Download the dataset
+    Bob ->> Super Protocol / TEE: 10. Approve the usage of the dataset
+    Super Protocol / TEE ->> Storage: Download the solution, model, and dataset
     Super Protocol / TEE ->> Blockchain: Publish the order report
     Super Protocol / TEE ->> Super Protocol / TEE: Process the order
     Super Protocol / TEE ->>- Storage: Upload the order results
@@ -94,13 +92,11 @@ sequenceDiagram
 ```
 <br/>
 
-Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol ([9](/cli/guides/fine-tune#alice-9-place-an-order)), adding the solution, her model, and Bob's offer. The order does not proceed automatically and remains `Blocked` by the data suborder with Bob's dataset.
+Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol ([9](/cli/guides/fine-tune#alice-9-place-an-order)), adding the solution, her model, and Bob's offer. The order does not proceed automatically and remains `Blocked`.
 
-Bob manually completes the respective data suborder ([10](/cli/guides/fine-tune#bob-10-complete-the-data-suborder)). The command he uses includes the solution hash. The completion will be successful only if this hash matches the actual solution hash.
+Bob manually approves the usage of his dataset for the image with a specific hash ([10](/cli/guides/fine-tune#bob-10-complete-the-data-suborder)). If this hash matches the actual solution hash, the <a id="cvm"><span className="dashed-underline">CVM</span></a> begins to process the order. If the hashes do not match, the order will be terminated with an error.
 
-If the suborder is completed successfully, the execution of the main order proceeds.
-
-When the main order is complete, Alice downloads the result ([11](/cli/guides/fine-tune#alice-11-download-the-order-results)). All the data within the TEE (solution, AI model, dataset, order results, etc.) is automatically deleted.
+When the order is complete, Alice downloads the result ([11](/cli/guides/fine-tune#alice-11-download-the-order-results)). All the data within the TEE (solution, AI model, dataset, order results, etc.) is automatically deleted.
 
 Both Alice and Bob can retrieve the order report ([12](/cli/guides/fine-tune#alice-and-bob-12-get-the-order-report)) that confirms the authenticity of the entire trusted setup.
 
@@ -149,7 +145,7 @@ You can find several Dockerfile examples in the [Super-Protocol/solutions](https
 1.2. Build an image:
 
 ```shell
-docker build -t <SOLUTION> .
+docker build --platform linux/amd64 -t <SOLUTION> .
 ```
 
 Replace `<SOLUTION>` with the name of your solution.
@@ -386,7 +382,7 @@ If the order ended up with an error, the results will contain execution logs tha
 
 ### Alice and Bob: 12. Get the order report
 
-You can get the order report as soon as the order status becomes `Processing` without waiting for the order to complete:
+You can get the order report as soon as the CVM downloads the order components and starts the execution, without waiting for the order to complete:
 
 ```shell
 ./spctl orders get-report <ORDER_ID> --save-to report.json
