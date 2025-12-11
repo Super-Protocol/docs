@@ -48,9 +48,10 @@ sequenceDiagram
     Super Protocol / TEE ->> Super Protocol / TEE: Process the order
     Super Protocol / TEE ->>- Storage: Upload the order results
     Alice ->> Storage: 10. Download the order results
+    end
+    
     Alice ->> Blockchain: 11. Get the order report
     Bob ->> Blockchain: 11. Get the order report
-    end
 ```
 <br/>
 
