@@ -36,7 +36,7 @@ chmod +x ./provider-tools
   </TabItem>
 </Tabs>
 
-## Set Up
+## Set up
 
 ```shell
 ./provider-tools setup

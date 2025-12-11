@@ -41,7 +41,7 @@ import TabItem from '@theme/TabItem';
 
 You can also download and install SPCTL manually from the Super Protocol [GitHub repository](https://github.com/Super-Protocol/ctl).
 
-## Set Up
+## Set up
 
 You can set up SPCTL using the `./spctl setup` command or by manually creating a configuration file.
 
@@ -103,7 +103,6 @@ You can set up SPCTL using the `./spctl setup` command or by manually creating a
                 }
             }
         }
-
         ```
 
         3. Do not change the preconfigured values and set values to the following keys:
