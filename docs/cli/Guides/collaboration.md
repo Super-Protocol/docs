@@ -92,11 +92,11 @@ Both Alice and Bob can retrieve the order report ([11](/cli/guides/collaboration
 
 1.1. Write a Dockerfile that creates an image with your code. Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
-| **Location**                                                      | **Purpose**                           | **Access** |
-| :-                                                                | :-                                    | :- |
-| `/sp/inputs/input-0001/`<br/>`/sp/inputs/input-0002/`<br/>etc.      | Possible data locations               | Read-only |
-| `/sp/output/`                                                      | Output directory for results          | Write; read own files |
-| `/sp/certs/`                                                       | Contains the order certificate        | Read-only |
+| **Location**                                                   | **Purpose**                                                   | **Access** |
+| :-                                                             | :-                                                            | :- |
+| `/sp/inputs/input-0001/`<br/>`/sp/inputs/input-0002/`<br/>etc. | Possible data locations                                       | Read-only |
+| `/sp/output/`                                                  | Output directory for results                                  | Write; read own files |
+| `/sp/certs/`                                                   | Contains the order certificate, private key, and workloadInfo | Read-only |
 
 Your scripts must find the data in `/sp/inputs/` and write the results to `/sp/output/`.
 

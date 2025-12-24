@@ -1,21 +1,21 @@
 ---
 id: "fine-tune"
-title: "Confidential Fine-Tuning"
+title: "Confidential Collaboration"
 slug: "/guides/fine-tune"
 sidebar_position: 3
 ---
 
 Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one another.
 
-This guide describes an example of confidential collaboration on Super Protocol: a fine-tuning of a pre-trained AI model. The scenario involves three parties:
+This guide describes a scenario of confidential collaboration on Super Protocol. It uses fine-tuning of a pre-trained AI model as an example, but the general principle presented here may be applied to other cases.
+
+The scenario involves three parties:
 
 - **Alice** owns the AI model.
 - **Bob** owns the dataset.
 - **Carol** provides the training engine and scripts.
 
-Neither Alice nor Bob is willing to share their intellectual property with other parties. At the same time, Carol must share her training engine and scripts with both parties so they can verify that the code is safe to run on their data.
-
-If Carol's training engine or scripts are proprietary and she cannot share them with Alice and Bob, a possible alternative is to involve independent security experts who can audit the code without exposing it publicly.
+Neither Alice nor Bob is willing to share their intellectual property with other parties. At the same time, Carol must share her training engine and scripts with both parties so they can verify that the code is safe to run on their data. If Carol's training engine or scripts are proprietary and she cannot share them with Alice and Bob, a possible alternative is to involve independent security experts who can audit the code without exposing it publicly.
 
 The computation runs on Super Protocol within a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> that is isolated from all external access, including that of Alice, Bob, Carol, the hardware owner, and the Super Protocol team. Additionally, Super Protocol's Certification System provides verifiability, eliminating the need for trust.
 
@@ -124,11 +124,11 @@ Both Alice and Bob can retrieve the order report ([12](/cli/guides/fine-tune#ali
 
 Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
-| **Location**                                                      | **Purpose**                                                               | **Access** |
-| :-                                                                | :-                                                                        | :- |
-| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>etc.      | Possible data locations<br/> (AI model, dataset, training scripts, etc.)  | Read-only |
-| `/sp/output`                                                      | Output directory for results                                              | Write; read own files |
-| `/sp/certs`                                                       | Contains the order certificate                                            | Read-only |
+| **Location**                                                  | **Purpose**                                                               | **Access** |
+| :-                                                            | :-                                                                        | :- |
+| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>etc.  | Possible data locations<br/> (AI model, dataset, training scripts, etc.)  | Read-only |
+| `/sp/output`                                                  | Output directory for results                                              | Read and write |
+| `/sp/certs`                                                   | Contains the order certificate, private key, and workloadInfo             | Read-only |
 
 Your solution must find the data in `/sp/inputs` and write the results to `/sp/output`.
 
