@@ -195,13 +195,13 @@ const config = {
             position: "right",
             label: "Developers",
           },*/
-          {
+          /*{
             type: "doc",
             docId: "index",
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
-          },
+          },*/
         ],
       },
       prism: {
@@ -230,7 +230,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: [/*"developers", */"marketplace", "whitepaper", "fundamentals", "cli"],
+      docsRouteBasePath: [/*"developers", */"marketplace", /*"whitepaper", */"fundamentals", "cli"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
