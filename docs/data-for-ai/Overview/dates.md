@@ -14,4 +14,4 @@ June 9 – June 23, 12:00 PM UTC<br/>
 → All activity counts toward leaderboard ranking and final rewards.
 
 **Daily Reset:**<br/>
-Every day at 12:00 PM UTC, submission limits are reset, and the points’ value increases by 4%.
+Every day at 12:00 PM UTC, submission limits are reset, and the points' value increases by 4%.

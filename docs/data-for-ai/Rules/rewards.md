@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## Reward recipients
 
-Only the top 1,000 participants will get prizes, and the rewards will depend on the rank. The rank is determined by the user’s total points: own points plus referral points.
+Only the top 1,000 participants will get prizes, and the rewards will depend on the rank. The rank is determined by the user's total points: own points plus referral points.
 
 | **Rank**  | **USDT**    | **Super Stakes** |
 | :-        | :-          | :- |
@@ -41,7 +41,7 @@ The top 50 participants might be subject to KYC checks to verify identity and pr
 
 ## Leaderboard
 
-To check winners, participants, referrals, rewards, and more, [read the campaign’s smart contract](https://opbnb.bscscan.com/address/0x8c77ef6ed2ee514d1754fbfc2710d70e9d6ba871#readContract) on the opBNB network.
+To check winners, participants, referrals, rewards, and more, [read the campaign's smart contract](https://opbnb.bscscan.com/address/0x8c77ef6ed2ee514d1754fbfc2710d70e9d6ba871#readContract) on the opBNB network.
 
 ### Check a participant
 
@@ -65,7 +65,7 @@ Fields in the example in order of appearance:
 | `0`                                           | Number of links validated today. Always `0` because the campaign has ended. |
 | `true`                                        | Flag indicating if the address is registered as a campaign participant. |
 | `false`                                       | Flag indicating if the address has claimed the reward. |
-| `0x8da2c62C23aEBeb1Aa8b5eE96d341d26a2edec6eB` | The referrer’s address. |
+| `0x8da2c62C23aEBeb1Aa8b5eE96d341d26a2edec6eB` | The referrer's address. |
 | `68`                                          | Number of referees. |
 | `2640`                                        | Points the participant earned for their referrer. |
 | `67738`                                       | Points the participant earned from their referees. |
@@ -73,7 +73,7 @@ Fields in the example in order of appearance:
 | `0`                                           | Total number of duplicate links submitted. |
 | `237`                                         | Total number of valid links submitted. |
 | `152`                                         | Total number of invalid links submitted. |
-| `0xbF4aC1b6efd5C21e5Ce93f34c8F43C8a9bCACA3F3` | The participant’s address. |
+| `0xbF4aC1b6efd5C21e5Ce93f34c8F43C8a9bCACA3F3` | The participant's address. |
 | `813`                                         | Current rank in the leaderboard. |
 | `97280`                                       | Total points earned. |
 | `10000000000000000000`                        | USDT reward, in denominations. 10<sup>18</sup> = 1 USDT. |

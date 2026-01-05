@@ -1,21 +1,21 @@
 ---
 id: "fine-tune"
-title: "Confidential Fine-Tuning"
+title: "Confidential Collaboration"
 slug: "/guides/fine-tune"
 sidebar_position: 3
 ---
 
 Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one another.
 
-This guide describes an example of confidential collaboration on Super Protocol: a fine-tuning of a pre-trained AI model. The scenario involves three parties:
+This guide describes a scenario of confidential collaboration on Super Protocol. It uses fine-tuning of a pre-trained AI model as an example, but the general principle presented here may be applied to other cases.
+
+The scenario involves three parties:
 
 - **Alice** owns the AI model.
 - **Bob** owns the dataset.
 - **Carol** provides the training engine and scripts.
 
-Neither Alice nor Bob is willing to share their intellectual property with other parties. At the same time, Carol must share her training engine and scripts with both parties so they can verify that the code is safe to run on their data.
-
-If Carol's training engine or scripts are proprietary and she cannot share them with Alice and Bob, a possible alternative is to involve independent security experts who can audit the code without exposing it publicly.
+Neither Alice nor Bob is willing to share their intellectual property with other parties. At the same time, Carol must share her training engine and scripts with both parties so they can verify that the code is safe to run on their data. If Carol's training engine or scripts are proprietary and she cannot share them with Alice and Bob, a possible alternative is to involve independent security experts who can audit the code without exposing it publicly.
 
 The computation runs on Super Protocol within a <a id="tee"><span className="dashed-underline">Trusted Execution Environment</span></a> that is isolated from all external access, including that of Alice, Bob, Carol, the hardware owner, and the Super Protocol team. Additionally, Super Protocol's Certification System provides verifiability, eliminating the need for trust.
 
@@ -54,17 +54,17 @@ sequenceDiagram
     actor Alice
     actor Bob
     participant Storage
-    participant Super Protocol / TEE
+    participant Super Protocol
 
-    note over Alice,Super Protocol / TEE: Prepare the data
+    note over Alice,Super Protocol: Prepare the data
 
     Alice ->> Storage: 6. Upload the model
     Bob ->> Storage: 7. Upload the dataset
-    Bob ->> Super Protocol / TEE: 8. Create an offer
+    Bob ->> Super Protocol: 8. Create an offer
 ```
 <br/>
 
-Alice uploads her model ([6](/cli/guides/fine-tune#alice-6-upload-the-model)) and Bob uploads his dataset ([7](/cli/guides/fine-tune#bob-7-upload-the-dataset)) to remote storage using SPCTL. The dataset is automatically encrypted during upload, and only Bob holds the key.
+Alice uploads her model ([6](/cli/guides/fine-tune#alice-6-upload-the-model)) and Bob uploads his dataset ([7](/cli/guides/fine-tune#bob-7-upload-the-dataset)) to remote storage using SPCTL. Files are automatically encrypted during upload, and only the uploader holds the key.
 
 Bob creates an offer on the Marketplace ([8](/cli/guides/fine-tune#bob-8-create-an-offer)). The offer requires Bob's manual approval for use. He shares the offer's IDs with Alice.
 
@@ -81,10 +81,8 @@ sequenceDiagram
     note over Alice,Blockchain: Execute
 
     Alice ->>+ Super Protocol / TEE: 9. Place an order
-    Super Protocol / TEE ->> Storage: Download the solution
-    Super Protocol / TEE ->> Storage: Download the model
-    Bob ->> Super Protocol / TEE: 10. Complete the suborder
-    Super Protocol / TEE ->> Storage: Download the dataset
+    Bob ->> Super Protocol / TEE: 10. Approve the usage of the dataset
+    Super Protocol / TEE ->> Storage: Download the solution, model, and dataset
     Super Protocol / TEE ->> Blockchain: Publish the order report
     Super Protocol / TEE ->> Super Protocol / TEE: Process the order
     Super Protocol / TEE ->>- Storage: Upload the order results
@@ -94,13 +92,11 @@ sequenceDiagram
 ```
 <br/>
 
-Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol ([9](/cli/guides/fine-tune#alice-9-place-an-order)), adding the solution, her model, and Bob's offer. The order does not proceed automatically and remains `Blocked` by the data suborder with Bob's dataset.
+Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol ([9](/cli/guides/fine-tune#alice-9-place-an-order)), adding the solution, her model, and Bob's offer. The order does not proceed automatically and remains `Blocked`.
 
-Bob manually completes the respective data suborder ([10](/cli/guides/fine-tune#bob-10-complete-the-data-suborder)). The command he uses includes the solution hash. The completion will be successful only if this hash matches the actual solution hash.
+Bob manually approves the usage of his dataset for the image with a specific hash ([10](/cli/guides/fine-tune#bob-10-complete-the-data-suborder)). If this hash matches the actual solution hash, the <a id="cvm"><span className="dashed-underline">CVM</span></a> begins to process the order. If the hashes do not match, the order will be terminated with an error.
 
-If the suborder is completed successfully, the execution of the main order proceeds.
-
-When the main order is complete, Alice downloads the result ([11](/cli/guides/fine-tune#alice-11-download-the-order-results)). All the data within the TEE (solution, AI model, dataset, order results, etc.) is automatically deleted.
+When the order is complete, Alice downloads the result ([11](/cli/guides/fine-tune#alice-11-download-the-order-results)). All the data within the TEE (solution, AI model, dataset, order results, etc.) is automatically deleted.
 
 Both Alice and Bob can retrieve the order report ([12](/cli/guides/fine-tune#alice-and-bob-12-get-the-order-report)) that confirms the authenticity of the entire trusted setup.
 
@@ -128,11 +124,11 @@ Both Alice and Bob can retrieve the order report ([12](/cli/guides/fine-tune#ali
 
 Keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
-| **Location**                                                      | **Purpose**                                                               | **Access** |
-| :-                                                                | :-                                                                        | :- |
-| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>etc.      | Possible data locations<br/> (AI model, dataset, training scripts, etc.)  | Read-only |
-| `/sp/output`                                                      | Output directory for results                                              | Write; read own files |
-| `/sp/certs`                                                       | Contains the order certificate                                            | Read-only |
+| **Location**                                                  | **Purpose**                                                               | **Access** |
+| :-                                                            | :-                                                                        | :- |
+| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>etc.  | Possible data locations<br/> (AI model, dataset, training scripts, etc.)  | Read-only |
+| `/sp/output`                                                  | Output directory for results                                              | Read and write |
+| `/sp/certs`                                                   | Contains the order certificate, private key, and workloadInfo             | Read-only |
 
 Your solution must find the data in `/sp/inputs` and write the results to `/sp/output`.
 
@@ -149,7 +145,7 @@ You can find several Dockerfile examples in the [Super-Protocol/solutions](https
 1.2. Build an image:
 
 ```shell
-docker build -t <SOLUTION> .
+docker build --platform linux/amd64 -t <SOLUTION> .
 ```
 
 Replace `<SOLUTION>` with the name of your solution.
@@ -179,15 +175,15 @@ If you did not include training scripts in the image, upload them separately:
 
 Replace `<SCRIPTS_DIR>` with the path to the directory containing your training scripts.
 
+:::important
+
+The output resource files contain information needed to access and decrypt the uploaded files. Be careful with sharing resource files if the uploaded content is sensitive.
+
+:::
+
 ### Carol: 3. Send the solution to Alice and Bob
 
 Send the output resource files from the previous step to Alice and Bob (or independent auditors).
-
-:::warning
-
-Although SPCTL encrypts data during upload, the output resource files contain information on how to access and decrypt it.
-
-:::
 
 ### Alice and Bob: 4. Download the solution
 
@@ -324,7 +320,7 @@ Provide Alice with these IDs. Ignore other instructions you see in the output.
    --solution ./solution.resource.json \
    --data ./model.resource.json \
    --data <OFFER_ID>,<SLOT_ID> \
-   --tee <COMPUTE>
+   --tee <COMPUTE> \
    [--data ./scripts.resource.json]
 ```
 
@@ -386,7 +382,7 @@ If the order ended up with an error, the results will contain execution logs tha
 
 ### Alice and Bob: 12. Get the order report
 
-You can get the order report as soon as the order status becomes `Processing` without waiting for the order to complete:
+You can get the order report as soon as the CVM downloads the order components and starts the execution, without waiting for the order to complete:
 
 ```shell
 ./spctl orders get-report <ORDER_ID> --save-to report.json
@@ -403,9 +399,9 @@ Additionally, find entries in the `runtimeInfo` array that start with `"type": "
  "type": "Data",
  "size": 12901,
  "hash": {
- "algo": "sha256",
- "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
- "encoding": "hex"
+   "algo": "sha256",
+   "hash": "8598805cd2136a4beff17559a7228854f6a8cc0b027856ea5c196fb8d0602501",
+   "encoding": "hex"
  }
 },
 ```

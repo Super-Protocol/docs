@@ -1,6 +1,6 @@
 ---
 id: "provider-tools"
-title: "Set Up Provider Tools"
+title: "Configure Provider Tools"
 slug: "/guides/provider-tools"
 sidebar_position: 1
 ---
@@ -36,7 +36,7 @@ chmod +x ./provider-tools
   </TabItem>
 </Tabs>
 
-## Set Up
+## Set up
 
 ```shell
 ./provider-tools setup
