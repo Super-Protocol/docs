@@ -23,7 +23,7 @@ sidebar_position: 0
 | [Configure SPCTL](/cli)                                   | How to set up SPCTL—a Super Protocol CLI tool. |
 | [Configure Provider Tools](/cli/guides/provider-tools)    | How to set up Provider Tools—a Super Protocol CLI utility for registering <a id="provider"><span className="dashed-underline">providers</span></a> and creating <a id="offer"><span className="dashed-underline">offers</span></a>. |
 | [Quick Deployment Guide](/cli/guides/quick-guide)         | Quick instructions on deploying a <a id="solution"><span className="dashed-underline">solution</span></a> and <a id="data"><span className="dashed-underline">data</span></a> on Super Protocol. |
-| [Confidential Collaboration](/cli/guides/fine-tune)       | A scenario of confidential collaboration on Super Protocol. |
+| [Confidential Collaboration](/cli/guides/multi-party-collab)       | A scenario of confidential collaboration on Super Protocol. |
 
 ### Solutions
 

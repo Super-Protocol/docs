@@ -1,13 +1,11 @@
 ---
 id: "vllm"
-title: "vLLM"
+title: "Inference With vLLM"
 slug: "/guides/solutions/vllm"
-sidebar_position: 4
+sidebar_position: 6
 ---
 
-This guide provides step-by-step instructions for running an AI model inference using the Super Protocol packaging of [vLLM](https://www.vllm.ai/), an inference and serving engine for LLMs.
-
-The <a id="solution"><span className="dashed-underline">solution</span></a> allows you to run LLM inference within Super Protocol's Trusted Execution Environment (TEE).
+This guide provides step-by-step instructions for running an AI model inference using the Super Protocol packaging of [vLLM](https://www.vllm.ai/), an inference and serving engine for LLMs. This <a id="solution"><span className="dashed-underline">solution</span></a> allows you to run LLM inference within Super Protocol's Trusted Execution Environment (TEE).
 
 ## Prerequisites
 

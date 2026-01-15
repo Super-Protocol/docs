@@ -1,6 +1,6 @@
 ---
 id: "provider-tools"
-title: "Configure Provider Tools"
+title: "Provider Tools"
 slug: "/guides/provider-tools"
 sidebar_position: 1
 ---
