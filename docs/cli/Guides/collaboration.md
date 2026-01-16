@@ -1,6 +1,6 @@
 ---
 id: "collaboration"
-title: "Confidential Collaboration"
+title: "Two-party Collaboration"
 slug: "/guides/collaboration"
 displayed_sidebar: null
 unlisted: true

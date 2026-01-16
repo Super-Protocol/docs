@@ -1,13 +1,13 @@
 ---
 id: "unsloth"
-title: "Unsloth"
+title: "Fine-Tuning With Unsloth"
 slug: "/guides/solutions/unsloth"
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 This guide provides step-by-step instructions for fine-tuning an AI model using the Super Protocol packaging of [Unsloth](https://unsloth.ai/), an open-source framework for LLM fine-tuning and reinforcement learning.
 
-The <a id="solution"><span className="dashed-underline">solution</span></a> allows you to run fine-tuning within Super Protocol's Trusted Execution Environment (TEE). This provides enhanced security and privacy and enables a range of [confidential collaboration](https://docs.develop.superprotocol.com/cli/guides/fine-tune) scenarios.
+The <a id="solution"><span className="dashed-underline">solution</span></a> allows you to run fine-tuning within Super Protocol's Trusted Execution Environment (TEE). This provides enhanced security and privacy and enables a range of [confidential collaboration](https://docs.develop.superprotocol.com/cli/guides/multi-party-collab) scenarios.
 
 ## Prerequisites
 

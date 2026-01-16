@@ -1,13 +1,13 @@
 ---
 id: "fine-tune"
-title: "Confidential Collaboration"
-slug: "/guides/fine-tune"
-sidebar_position: 3
+title: "Multi-Party Collaboration"
+slug: "/guides/multi-party-collab"
+sidebar_position: 7
 ---
 
 Super Protocol enables independent parties to jointly compute over their private inputs without revealing those inputs to one another.
 
-This guide describes a scenario of confidential collaboration on Super Protocol. It uses fine-tuning of a pre-trained AI model as an example, but the general principle presented here may be applied to other cases.
+This guide describes a scenario of a multi-party confidential collaboration on Super Protocol. It uses fine-tuning of a pre-trained AI model as an example, but the general principle presented here may be applied to other cases.
 
 The scenario involves three parties:
 
@@ -41,11 +41,11 @@ sequenceDiagram
 ```
 <br/>
 
-Carol builds a <a id="solution"><span className="dashed-underline">solution</span></a>—a Docker image containing her training engine and script ([1](/cli/guides/fine-tune#carol-1-build-a-solution)). She uploads the solution using SPCTL ([2](/cli/guides/fine-tune#carol-2-upload-the-solution)) and grants Alice and Bob access for verification ([3](/cli/guides/fine-tune#carol-3-send-the-solution-to-alice-and-bob)).
+Carol builds a <a id="solution"><span className="dashed-underline">solution</span></a>—a Docker image containing her training engine and script ([1](/cli/guides/multi-party-collab#carol-1-build-a-solution)). She uploads the solution using SPCTL ([2](/cli/guides/multi-party-collab#carol-2-upload-the-solution)) and grants Alice and Bob access for verification ([3](/cli/guides/multi-party-collab#carol-3-send-the-solution-to-alice-and-bob)).
 
-Alice and Bob download the solution ([4](/cli/guides/fine-tune#alice-and-bob-4-download-the-solution)) and verify that it is safe to process their <a id="data"><span className="dashed-underline">data</span></a> ([5](/cli/guides/fine-tune#alice-and-bob-5-verify-the-solution)).
+Alice and Bob download the solution ([4](/cli/guides/multi-party-collab#alice-and-bob-4-download-the-solution)) and verify that it is safe to process their <a id="data"><span className="dashed-underline">data</span></a> ([5](/cli/guides/multi-party-collab#alice-and-bob-5-verify-the-solution)).
 
-If Carol cannot share the code with Alice and Bob, and a third-party auditor is involved, the workflow will differ slightly. After uploading, Carol must also create a solution <a id="offer"><span className="dashed-underline">offer</span></a> on Super Protocol Marketplace (similar to Bob's [Step 8](/cli/guides/fine-tune#bob-8-create-an-offer)).
+If Carol cannot share the code with Alice and Bob, and a third-party auditor is involved, the workflow will differ slightly. After uploading, Carol must also create a solution <a id="offer"><span className="dashed-underline">offer</span></a> on Super Protocol Marketplace (similar to Bob's [Step 8](/cli/guides/multi-party-collab#bob-8-create-an-offer)).
 
 **Prepare the data**:
 
@@ -64,9 +64,9 @@ sequenceDiagram
 ```
 <br/>
 
-Alice uploads her model ([6](/cli/guides/fine-tune#alice-6-upload-the-model)) and Bob uploads his dataset ([7](/cli/guides/fine-tune#bob-7-upload-the-dataset)) to remote storage using SPCTL. Files are automatically encrypted during upload, and only the uploader holds the key.
+Alice uploads her model ([6](/cli/guides/multi-party-collab#alice-6-upload-the-model)) and Bob uploads his dataset ([7](/cli/guides/multi-party-collab#bob-7-upload-the-dataset)) to remote storage using SPCTL. Files are automatically encrypted during upload, and only the uploader holds the key.
 
-Bob creates an offer on the Marketplace ([8](/cli/guides/fine-tune#bob-8-create-an-offer)). The offer requires Bob's manual approval for use. He shares the offer's IDs with Alice.
+Bob creates an offer on the Marketplace ([8](/cli/guides/multi-party-collab#bob-8-create-an-offer)). The offer requires Bob's manual approval for use. He shares the offer's IDs with Alice.
 
 **Execute**:
 
@@ -92,13 +92,13 @@ sequenceDiagram
 ```
 <br/>
 
-Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol ([9](/cli/guides/fine-tune#alice-9-place-an-order)), adding the solution, her model, and Bob's offer. The order does not proceed automatically and remains `Blocked`.
+Alice places an <a id="order"><span className="dashed-underline">order</span></a> on Super Protocol ([9](/cli/guides/multi-party-collab#alice-9-place-an-order)), adding the solution, her model, and Bob's offer. The order does not proceed automatically and remains `Blocked`.
 
-Bob manually approves the usage of his dataset for the image with a specific hash ([10](/cli/guides/fine-tune#bob-10-complete-the-data-suborder)). If this hash matches the actual solution hash, the <a id="cvm"><span className="dashed-underline">CVM</span></a> begins to process the order. If the hashes do not match, the order will be terminated with an error.
+Bob manually approves the usage of his dataset for the image with a specific hash ([10](/cli/guides/multi-party-collab#bob-10-complete-the-data-suborder)). If this hash matches the actual solution hash, the <a id="cvm"><span className="dashed-underline">CVM</span></a> begins to process the order. If the hashes do not match, the order will be terminated with an error.
 
-When the order is complete, Alice downloads the result ([11](/cli/guides/fine-tune#alice-11-download-the-order-results)). All the data within the TEE (solution, AI model, dataset, order results, etc.) is automatically deleted.
+When the order is complete, Alice downloads the result ([11](/cli/guides/multi-party-collab#alice-11-download-the-order-results)). All the data within the TEE (solution, AI model, dataset, order results, etc.) is automatically deleted.
 
-Both Alice and Bob can retrieve the order report ([12](/cli/guides/fine-tune#alice-and-bob-12-get-the-order-report)) that confirms the authenticity of the entire trusted setup.
+Both Alice and Bob can retrieve the order report ([12](/cli/guides/multi-party-collab#alice-and-bob-12-get-the-order-report)) that confirms the authenticity of the entire trusted setup.
 
 ## Prerequisites
 
@@ -138,7 +138,7 @@ Always use absolute paths, such as `/sp/...`.
 
 :::
 
-You may either include the training scripts in the image or upload them separately using SPCTL. In this case, Alice will need to attach the uploaded scripts to the order as `--data` at [Step 9](/cli/guides/fine-tune#alice-9-place-an-order).
+You may either include the training scripts in the image or upload them separately using SPCTL. In this case, Alice will need to attach the uploaded scripts to the order as `--data` at [Step 9](/cli/guides/multi-party-collab#alice-9-place-an-order).
 
 You can find several Dockerfile examples in the [Super-Protocol/solutions](https://github.com/Super-Protocol/solutions) GitHub repository.
 

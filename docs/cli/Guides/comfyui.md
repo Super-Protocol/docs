@@ -1,8 +1,8 @@
 ---
 id: "comfyui"
-title: "ComfyUI"
+title: "Custom ComfyUI Workflow"
 slug: "/guides/solutions/comfyui"
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';

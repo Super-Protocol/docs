@@ -75,7 +75,8 @@ Statuses:
 - **New**: The order is waiting for the response from the compute provider.
 - **In Queue**: The order is waiting in the queue for the compute to become available. This status appears only if the compute is overloaded with orders.
 - **Processing**: The compute is executing the order inside a TEE.
-- **Done**: The order is completed.
+- **Done**: The order is completed successfully.
+- **Error**: The order completed with an error.
 
 Note that the **Processing** and **Done** statuses may have different meanings depending on the usage scenario. For one-time orders, such as executing a Python script, **Processing** means that the machine is working with the solution and data. When this is over, the main order becomes **Done**.
 
