@@ -87,8 +87,20 @@ export default function Layout(props) {
           ᐧ A <i>tunnel client</i> hosts a web server; it remains hidden behind the tunnel server and protected from external threats.
       </Tooltip>
 
+      <Tooltip anchorSelect="#tcb">
+        <i>TEE Confirmation Block</i> (TCB) contains a unique device ID, equipment benchmark results, <br/>various hashes, device signature, and a certificate chain for signature verification.<br/><br/>
+        
+        Trusted Loader generates and publishes TCB on the blockchain every 24 hours.
+      </Tooltip>
+
+      // Stabs and abbreviations
+
       <Tooltip anchorSelect="#cvm">
         Confidential Virtual Machine
+      </Tooltip>
+
+      <Tooltip anchorSelect="#tl">
+        Trusted Loader
       </Tooltip>
     </>
   );
