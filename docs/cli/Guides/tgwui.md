@@ -232,3 +232,7 @@ The most important statuses (see the [full list](/fundamentals/orders#compute-or
 - **In Queue**: The order is waiting for the compute to become available. This status appears only if the compute is overloaded with orders. If this status persists for a few minutes, place a new main order the same tunnel order and engine configuration but another compute offer.
 - **Done**: The order is completed successfully and the model's UI is no longer available.
 - **Error**: The order completed with an error. [Download the order results](/cli/commands/orders/download-result) to get more information about the error.
+
+## Support
+
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
