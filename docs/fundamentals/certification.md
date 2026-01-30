@@ -28,7 +28,7 @@ The Certification System is organized as a hierarchy of <a id="ca"><span classNa
 
 The chain consists of three levels:
 
-- Root CA is the top-level certificate authority that establishes the trust anchor for the entire system. At the start, it generates a self-signed certificate, embedding the SGX attestation quote.
+- Root CA is the top-level certificate authority that establishes the trust anchor for the entire system. At the start, it generates a self-signed certificate that embeds the SGX attestation quote.
 - SubRoot CAs are intermediate certificate authorities. They submit their quotes and public keys to the Root CA and request certificates. The Root CA verifies these incoming requests and then issues and signs certificates for the SubRoot CAs. Once a SubRoot CA is certified by the Root CA, it can certify any TEE-backed environment that proves it is actually confidential.
 - End certificates are issued to specific workloads, entire <a id="ca"><span className="dashed-underline">Confidential Virtual Machines</span></a> (CVMs) running in TEEs, and in some other cases. These certificates are not CAs and cannot be used to sign or issue other certificates.
 
@@ -36,7 +36,7 @@ Each level in the hierarchy receives its certificate from the level above, creat
 
 ## Trusted Loader
 
-Trusted Loader is a special service that prepares and launches the workload associated with an <a id="order"><span className="dashed-underline">order</span></a> inside a CVM running in a TEE. It runs in a privileged position within the execution environment, allowing it to access the underlying attestation capabilities of the platform. Workloads themselves do not have such access.
+Trusted Loader is a special service that prepares and launches the workload associated with an <a id="order"><span className="dashed-underline">order</span></a> inside a CVM running in a TEE. Loader occupies a privileged position within the execution environment, enabling it to access the platform's underlying attestation capabilities. Workloads themselves do not have such access.
 
 Trusted Loader also:
 
@@ -63,7 +63,7 @@ Note that the Certification System does not determine whether a CVM is correct o
 
 Orders in Super Protocol are created with a workload description known as *Workload Info*.
 
-Workload Info includes an array called `runtimeInfo`. It contains information about <a id="solution"><span className="dashed-underline">solutions</span></a> and <a id="data"><span className="dashed-underline">data</span></a> associated with the order. Each such order component has an entry in this array, which includes:
+Workload Info includes an array called `runtimeInfo` that contains information about <a id="solution"><span className="dashed-underline">solutions</span></a> and <a id="data"><span className="dashed-underline">data</span></a> associated with the order. Each data and solution component of the order has an entry in this array, which includes:
 
 - Type (solution or data)
 - Hash
