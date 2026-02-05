@@ -1,7 +1,7 @@
 ---
-id: "quick-guide"
+id: "deploy-app"
 title: "Deploy Your App"
-slug: "/guides/quick-guide"
+slug: "/guides/deploy-app"
 sidebar_position: 2
 ---
 
@@ -18,13 +18,13 @@ This quick guide provides instructions on deploying your own <a id="solution"><s
 
 When writing a Dockerfile and other scripts, keep in mind the special file structure inside the <a id="tee"><span className="dashed-underline">TEE</span></a>:
 
-| **Location**                                                      | **Purpose**                                                   | **Access** |
+| <div style={{width:190}}>**Location**</div>                       | **Purpose**                                                   | <div style={{width:120}}>**Access**</div> |
 | :-                                                                | :-                                                            | :- |
-| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>etc.      | Possible data locations                                       | Read-only |
-| `/sp/output`                                                      | Output directory for results                                  | Write; read own files |
+| `/sp/inputs/input-0001`<br/>`/sp/inputs/input-0002`<br/>...       | Possible data locations                                       | Read-only |
+| `/sp/output`                                                      | Output directory for results                                  | Read and write |
 | `/sp/certs`                                                       | Contains the order certificate, private key, and workloadInfo | Read-only |
 
-So, your solution must find the data in `/sp/inputs` and write the results to `/sp/output`.
+When you provide multiple data inputs, they are placed in separate directories inside the <a id="cvm"><span className="dashed-underline">CVM</span></a>: the first in `/sp/inputs/input-0001`, the second in `/sp/inputs/input-0002`, and so on. Your solution must find the data in `/sp/inputs` and write the results to `/sp/output`.
 
 :::important
 
@@ -32,7 +32,9 @@ Always use absolute paths, such as `/sp/...`.
 
 :::
 
-You can find several Dockerfile examples in the [Super-Protocol/solutions](https://github.com/Super-Protocol/solutions) GitHub repository.
+Check the [example](/cli/guides/deploy-app/example) at the end of this guide.
+
+More Dockerfile examples can be found in the [Super-Protocol/solutions](https://github.com/Super-Protocol/solutions) GitHub repository.
 
 ### 1.2. Build a Docker image
 
@@ -124,17 +126,11 @@ Place an order using the [`workflows create`](/cli/commands/workflows/create) co
 --data ./more-data.resource.json
 ```
 
-:::note
-
-When you provide multiple data inputs, they are placed in separate directories inside the <a id="cvm"><span className="dashed-underline">CVM</span></a>: the first in `/sp/inputs/input-0001`, the second in `/sp/inputs/input-0002`, and so on.
-
-:::
-
 Find the order ID in the output.
 
 ## 4. Download the result
 
-Wait a few minutes and [check the order status](/cli/commands/orders/get):
+Wait a few minutes and check the order status:
 
 ```shell
 ./spctl orders get <ORDER_ID>
@@ -146,7 +142,7 @@ For example:
 ./spctl orders get 256587
 ```
 
-If the status is `Done`, the order is ready, and you can [download the order result](/cli/commands/orders/download-result):
+If the status is `Done` or `Error`, you can [download the order result](/cli/commands/orders/download-result):
 
 ```shell
 ./spctl orders download-result <ORDER_ID>

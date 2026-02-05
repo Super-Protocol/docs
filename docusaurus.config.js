@@ -42,10 +42,10 @@ const config = {
             from: "/hackathon",
             to: "/hackathon/about",
           },
-          /*{
-            from: "/colab",
-            to: "/colab/jupyter",
-          },*/
+          {
+            from: "/cli/guides/quick-guide",
+            to: "/cli/guides/deploy-app",
+          },
         ],
       },
     ],
