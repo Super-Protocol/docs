@@ -9,7 +9,7 @@ This guide provides step-by-step instructions for running an AI model inference 
 
 ## Prerequisites
 
-- [SPCTL](https://docs.develop.superprotocol.com/cli/)
+- [SPCTL](/cli/)
 - Git
 - BNB and SPPI tokens (opBNB) to pay for transactions and orders
 

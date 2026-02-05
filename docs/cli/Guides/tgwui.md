@@ -12,7 +12,7 @@ This guide provides step-by-step instructions for uploading and deploying an AI 
 
 ## Prerequisites
 
-- [SPCTL](https://docs.develop.superprotocol.com/cli/)
+- [SPCTL](/cli/)
 - BNB and SPPI tokens (opBNB) to pay for transactions and orders
 
 ## 1. Prepare
@@ -91,19 +91,20 @@ Replace `<ORDER_ID>` with the tunnel order ID from the previous step.
 ./spctl orders download-result <ORDER_ID>
 ```
 
-3.5. Extract the downloaded `result.tar.gz`, open `output/result.json`, and find the domain address. For example:
+3.5. Extract the downloaded `result.tar.gz`, open `output/result.json`, and find the domain. For example:
 
 ```json title="result.json"
 "domain":"pret-tons-wade.superprotocol.io"
 ```
 
-Your model's web UI will be available at this address.
+Your model's web UI will be available at this URL.
 
 ## 4. Prepare engine configuration files
 
 4.1. Open the SPCTL's `config.json` and find the `workflow.resultEncryption.key` property that contains the key used for decrypting workflow results; for example: `NapSrwQRz2tL9ZftJbi6DATpCDn0BRImpSStU9xZT/s=`.
 
-4.2.
+4.2. Create configuration files:
+
 <Tabs>
     <TabItem value="tgwui" label="TGWUI" default>
         Create a file named `engine-configuration-tgwui.json` and paste the following:
@@ -150,7 +151,7 @@ Your model's web UI will be available at this address.
         }
         ```
     </TabItem>
-    <TabItem value="comfyui" label="ComfyUI" default>
+    <TabItem value="comfyui" label="ComfyUI">
         Create a file named `engine-configuration-comfyui.json` and paste the following:
 
         ```json title="engine-configuration-comfyui.json"
@@ -184,10 +185,10 @@ Save and close the file.
 
 ## 5. Deploy the model
 
-5.1.
+5.1. Create the main order to deploy your uploaded model:
+
 <Tabs>
     <TabItem value="tgwui" label="TGWUI" default>
-        Create the main order to deploy your uploaded model:
 
         ```shell
         ./spctl workflows create --tee <COMPUTE_OFFER> --solution 25 --solution-configuration ./engine-configuration-tgwui.json --data ./model.resource.json
@@ -197,8 +198,7 @@ Save and close the file.
 
         Note that `--solution 25` refers to [Text Generation Web UI with GPU support](https://marketplace.superprotocol.com/marketplace/models?offer=offerId%3D25). If you need the CPU version, use `--solution 26` instead.
     </TabItem>
-    <TabItem value="comfyui" label="ComfyUI" default>
-        Create the main order to deploy your uploaded model:
+    <TabItem value="comfyui" label="ComfyUI">
 
         ```shell
         ./spctl workflows create --tee <COMPUTE_OFFER> --solution 27 --solution-configuration ./engine-configuration-comfyui.json --data ./model.resource.json
