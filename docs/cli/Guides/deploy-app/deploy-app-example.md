@@ -36,7 +36,7 @@ Keep in mind that file locations inside a CVM will differ from a local run:
 - Data (`input.txt`) must be found in one of the `/sp/inputs/input-xxxx` directories.
 - `result.txt` must be placed into `/sp/output` to be available to download once the execution is finished.
 
-1.1. Create an new file named `entrypoint.sh` and add the following code:
+1.1. Create a new file named `entrypoint.sh` and add the following code:
 
 ```sh title="entrypoint.sh"
 #!/bin/sh
@@ -66,7 +66,7 @@ fi
 exec python3 "${SCRIPT_PATH}"
 ```
 
-Create an new file named `Dockerfile` and add the following code:
+Create a new file named `Dockerfile` and add the following code:
 
 ```dockerfile title="Dockerfile"
 FROM ubuntu:22.04

@@ -151,7 +151,7 @@ Your model's web UI will be available at this URL.
         }
         ```
     </TabItem>
-    <TabItem value="comfyui" label="ComfyUI" default>
+    <TabItem value="comfyui" label="ComfyUI">
         Create a file named `engine-configuration-comfyui.json` and paste the following:
 
         ```json title="engine-configuration-comfyui.json"
@@ -198,7 +198,7 @@ Save and close the file.
 
         Note that `--solution 25` refers to [Text Generation Web UI with GPU support](https://marketplace.superprotocol.com/marketplace/models?offer=offerId%3D25). If you need the CPU version, use `--solution 26` instead.
     </TabItem>
-    <TabItem value="comfyui" label="ComfyUI" default>
+    <TabItem value="comfyui" label="ComfyUI">
 
         ```shell
         ./spctl workflows create --tee <COMPUTE_OFFER> --solution 27 --solution-configuration ./engine-configuration-comfyui.json --data ./model.resource.json
