@@ -7,13 +7,11 @@ sidebar_position: 6
 
 This guide provides step-by-step instructions on how to set up your personal Storj account.
 
-The guide is intended for advanced Web3 users; feel free to skip it and continue using the default recommended option—**Super Protocol cloud**. Read about [types of storage](/marketplace/account/web3#storage).
+The guide is intended for advanced users; feel free to skip it and continue using the default recommended option—**Super Protocol cloud**. Read about [types of storage](/marketplace/account#storage).
 
-<img src={require('../images/web3-account.png').default} width="auto" height="auto" border="1"/>
+<img src={require('../images/web2-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
-
-Web2 users must first [log in as a Web3 user](/marketplace/guides/log-in) to be able to upload to a personal Storj account instead of the Super Protocol cloud.
 
 ## Step 1. Register a Storj account
 
