@@ -34,7 +34,7 @@ As a result, you should have two pairs Access Key + Secret Key.
 
 ## Step 4. Set up your Super Protocol Web3 account
 
-Open the [Marketplace web app](https://marketplace.superprotocol.com/). Log in as a Web3 user and open the **Account** window.
+Open the [Marketplace web app](https://marketplace.superprotocol.com/), sign in and open the **Account** window.
 
 <img src={require('../images/marketplace-mm-account-menu.png').default} width="auto" height="auto" border="1"/>
 <br/>

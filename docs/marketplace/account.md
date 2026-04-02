@@ -46,7 +46,7 @@ You have two options of decentralized storage to upload files:
     - Uses Super Protocol's Storj account and thus relies on Super Protocol as the storage provider.
 - **Your Storj account**:
     - Intended for advanced users.
-    - Requires creating and [setting up a Storj account](http://localhost:3000/marketplace/guides/storage).
+    - Requires creating and [setting up a Storj account](/marketplace/guides/storage).
     - Gives sole control over the uploaded content and storage account.
 
 Read [How to Set Up Storage](/marketplace/guides/storage) for step-by-step instructions.
