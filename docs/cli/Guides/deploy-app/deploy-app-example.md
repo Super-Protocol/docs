@@ -98,7 +98,7 @@ RUN chmod +x /usr/local/bin/usd_to_crypto.py
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# Set /sp as workdir (doesn't matter in this case; entrypoint.sh uses /sp/output as workdir)
+# Set /sp as workdir (doesn't matter in this case -- entrypoint.sh uses /sp/output as workdir)
 WORKDIR /sp
 
 # Set entrypoint
@@ -137,8 +137,8 @@ tar -czvf input.tar.gz ./input.txt
 
 ```shell
 ./spctl files upload ./input.tar.gz \
---filename input.tar.gz \
---output input.resource.json
+    --filename input.tar.gz \
+    --output input.resource.json
 ```
 
 ### 3. Deploy
@@ -147,9 +147,9 @@ Place an order:
 
 ```shell
 ./spctl workflows create \
---tee 7 \
---solution ./usd_to_crypto.resource.json \
---data ./input.resource.json
+    --tee 7 \
+    --solution ./usd_to_crypto.resource.json \
+    --data ./input.resource.json
 ```
 
 Find the order ID in the output, for example:
