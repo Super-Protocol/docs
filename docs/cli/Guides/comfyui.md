@@ -1,14 +1,14 @@
 ---
-id: "prepare-comfyui"
-title: "Prepare a ComfyUI Workflow"
-slug: "/guides/prepare-comfyui"
-sidebar_position: 5
+id: "comfyui"
+title: "Custom ComfyUI Workflow"
+slug: "/guides/solutions/comfyui"
+sidebar_position: 4
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-This guide provides step-by-step instructions for preparing a **ComfyUI** workflow with custom nodes before uploading it. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
+This guide provides step-by-step instructions for preparing a **ComfyUI** workflow with custom nodes to run on Super Protocol. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
 
 :::note
 
@@ -28,7 +28,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
     
     1. Clone the [Super-Protocol/solutions](https://github.com/Super-Protocol/solutions/) GitHub repository to the location of your choosing:
 
-    ```
+    ```shell
     git clone https://github.com/Super-Protocol/solutions.git --depth 1
     ```
 
@@ -54,13 +54,13 @@ You can prepare your model, workflow, and custom node files manually or using Do
 
     Access the running container with the following command:
 
-    ```
+    ```shell
     docker exec -it comfyui bash
     ```
 
     Go to the `models` directory inside the container and download the model files to the corresponding subdirectories using the `wget` command. For example:
 
-    ```
+    ```shell
     wget https://huggingface.co/prompthero/openjourney/resolve/main/mdjrny-v4.safetensors
     ```
 
@@ -68,7 +68,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
 
     If you have the model on your computer, copy its files to the container using the following command:
 
-    ```
+    ```shell
     docker cp <LOCAL_FILE> comfyui:<CONTAINER_FILE>
     ```
 
@@ -77,7 +77,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
 
     For example:
 
-    ```
+    ```shell
     docker cp ~/Downloads/openjourney/mdjrny-v4.safetensors comfyui:/opt/ComfyUI/models/checkpoints/mdjrny-v4.safetensors
     ```
 
@@ -87,7 +87,7 @@ You can prepare your model, workflow, and custom node files manually or using Do
 
     8. Unpack the archive using the following command:
 
-    ```
+    ```shell
     tar -xvzf snapshot.tar.gz -C <MODEL_DIRECTORY>
     ```
     
@@ -159,6 +159,6 @@ You can prepare your model, workflow, and custom node files manually or using Do
   </TabItem>
 </Tabs>
 
-## Contact Super Protocol
+## Support
 
-If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).

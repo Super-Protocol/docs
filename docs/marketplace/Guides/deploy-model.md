@@ -33,7 +33,7 @@ Ensure your model meets the Super Protocol requirements:
 - Text-to-Video
 - Mask Generation
 
-If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](/marketplace/guides/prepare-comfyui) before uploading. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
+If you plan to deploy a ComfyUI workflow with custom nodes, [prepare the files](/cli/guides/solutions/comfyui) before uploading. For security reasons, you cannot upload custom nodes directly to a deployed ComfyUI.
 
 1.2. Due to [testnet limitations](/marketplace/limitations), the total size of model files should not exceed 13 GB. Support for bigger models will be available in the future.
 

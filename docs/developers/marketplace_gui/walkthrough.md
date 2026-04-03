@@ -7,9 +7,9 @@ sidebar_position: 2
 
 ## 1. Introduction
 
-To better understand how Super Protocol works, let’s take a step-by-step walkthrough through the Marketplace GUI.
+To better understand how Super Protocol works, let's take a step-by-step walkthrough through the Marketplace GUI.
 
-As an example we’ll deploy the [Super Chat](/developers/offers/superchat) app with the tunnels. Please note that for this walkthrough we'll be using [Tunnels Launcher](/developers/offers/launcher), which cuts a few corners in order to streamline the experience. For the full tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
+As an example we'll deploy the [Super Chat](/developers/offers/superchat) app with the tunnels. Please note that for this walkthrough we'll be using [Tunnels Launcher](/developers/offers/launcher), which cuts a few corners in order to streamline the experience. For the full tunnels deployment capabilities please refer to [this guide](/developers/deployment_guides/tunnels).
 
 You might want to read up on the fundamental Super Protocol concepts - such as [offers](/fundamentals/offers), [orders](/fundamentals/orders), [requirements and configurations](/fundamentals/slots), and [tunnels](/fundamentals/tunnels) - in advance, or - just dive into it and figure it out as you go. Your choice.
 
@@ -142,7 +142,7 @@ To create this order via CLI, click the **Copy CLI workflow** button. It will ge
 
 :::info Step 6. Set up a passphrase.
 
-Either input your own passphrase or generate a new one. Then press the `Place Order` button. Save your passphrase! You won’t be able to access your order results without it. For testing it's easier to have a single passphrase for all orders.
+Either input your own passphrase or generate a new one. Then press the `Place Order` button. Save your passphrase! You won't be able to access your order results without it. For testing it's easier to have a single passphrase for all orders.
 
 :::
 

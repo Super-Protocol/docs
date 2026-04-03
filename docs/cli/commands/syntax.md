@@ -55,3 +55,7 @@ So, the final format of this option should be one of the following:
 - `--solution <PATH>`. For example, `--solution ./solution.resource.json`.
 
 Read the descriptions of arguments and options and refer to the examples for more information. If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+
+## Support
+
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).

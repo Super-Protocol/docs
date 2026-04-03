@@ -42,10 +42,18 @@ const config = {
             from: "/hackathon",
             to: "/hackathon/about",
           },
-          /*{
-            from: "/colab",
-            to: "/colab/jupyter",
-          },*/
+          {
+            from: "/cli/guides/quick-guide",
+            to: "/cli/guides/deploy-app",
+          },
+          {
+            from: "/marketplace/account/web2",
+            to: "/marketplace/account#account-window"
+          },
+          {
+            from: "/marketplace/account/web3",
+            to: "/marketplace/account#account-window"
+          },
         ],
       },
     ],
@@ -195,13 +203,13 @@ const config = {
             position: "right",
             label: "Developers",
           },*/
-          {
+          /*{
             type: "doc",
             docId: "index",
             position: "right",
             label: "Whitepaper",
             docsPluginId: "whitepaper",
-          },
+          },*/
         ],
       },
       prism: {
@@ -230,7 +238,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: [/*"developers", */"marketplace", "whitepaper", "fundamentals", "cli"],
+      docsRouteBasePath: [/*"developers", */"marketplace", /*"whitepaper", */"fundamentals", "cli"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
