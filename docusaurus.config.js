@@ -46,6 +46,14 @@ const config = {
             from: "/cli/guides/quick-guide",
             to: "/cli/guides/deploy-app",
           },
+          {
+            from: "/marketplace/account/web2",
+            to: "/marketplace/account#account-window"
+          },
+          {
+            from: "/marketplace/account/web3",
+            to: "/marketplace/account#account-window"
+          },
         ],
       },
     ],
