@@ -12,14 +12,16 @@ This guide provides step-by-step instructions for deploying MedGemma and Apertus
 - [kubectl](https://kubernetes.io/docs/tasks/tools/)
 - [helm](https://helm.sh/docs/intro/install/)
 - A domain
-- For [MedGemma](https://huggingface.co/google/medgemma-1.5-4b-it): an HF_TOKEN from an account that has already accepted the model's terms
+- For [MedGemma](https://huggingface.co/google/medgemma-1.5-4b-it): a Hugging Face token from an account that has already accepted the model's terms
 
 Also, download and rename deployment scripts:
 
 - [`deploy_medgemma_official.sh`](/files/deploy_medgemma_official.sh)
 - [`deploy_apertus_official.sh`](/files/deploy_apertus_official.sh)
 
-## 1. Sign in using MetaMask
+## 1. Sign in to Super Swarm
+
+In the Super Swarm dashboard, sign in using MetaMask:
 
 <img src={require('../images/swarm-log-in.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -56,9 +58,9 @@ Replace `<xxxx-xxx-xxx-xxxx>-kubeconfig.yaml` with the name of the downloaded co
 
 In both scripts (`deploy_medgemma_official.sh` and `deploy_apertus_official.sh`), find `BASE_DOMAIN="${BASE_DOMAIN:-monai-swarm.win}"` and replace `monai-swarm.win` with your domain.
 
-## 6. Create an API key
+## 6. Set the API key
 
-Execute the following command and type a desired key:
+Choose any password that will protect your API endpoints. Execute the following command and type your chosen secret (characters won't be displayed):
 
 ```shell
 read -rs API_KEY && export API_KEY
@@ -66,7 +68,7 @@ read -rs API_KEY && export API_KEY
 
 ## 7. Deploy the model
 
-Apertus:
+### Apertus
 
 ```shell
 bash deploy_apertus_official.sh
@@ -84,7 +86,7 @@ max-num-seqs=8
 max-num-batched-tokens=4096
 ```
 
-MedGemma:
+### MedGemma
 
 ```shell
 export HF_TOKEN=hf_xxx
@@ -93,7 +95,7 @@ bash deploy_medgemma_official.sh
 
 Replace `hf_xxx` with an HF_TOKEN.
 
-Alternatively, create a `.hf_token` file next to `deploy_medgemma_official.sh`; the script will read it automatically.
+Alternatively, create a `.hf_token` file with the token next to `deploy_medgemma_official.sh`; the script will read it automatically.
 
 A working MedGemma config is already set in the script:
 
@@ -142,9 +144,9 @@ In the Super Swarm dashboard, go to **Kubernetes** and publish the cluster.
 In the test requests below, replace:
 
 - `<DOMAIN>` with your domain.
-- `<API_KEY>` with the API key you set in [Step 6](/cli/guides/swarm-vllm#6-create-an-api-key).
+- `<API_KEY>` with the key you set in [Step 6](/cli/guides/swarm-vllm#6-set-the-api-key).
 
-Apertus:
+### Apertus
 
 ```shell
 curl https://apertus-vllm.<DOMAIN>/v1/completions \
@@ -158,7 +160,7 @@ curl https://apertus-vllm.<DOMAIN>/v1/completions \
   }'
 ```
 
-MedGemma:
+### MedGemma
 
 ```shell
 curl https://medgemma-vllm.<DOMAIN>/v1/chat/completions \
