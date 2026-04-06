@@ -14,37 +14,41 @@ This guide provides step-by-step instructions for deploying MedGemma and Apertus
 - A domain
 - For [MedGemma](https://huggingface.co/google/medgemma-1.5-4b-it): a Hugging Face token from an account that has already accepted the model's terms
 
-Also, download and rename deployment scripts:
+## 1. Download and update deployment scripts
+
+Download and rename the scripts:
 
 - [`deploy_medgemma_official.sh`](/files/deploy_medgemma_official.sh)
 - [`deploy_apertus_official.sh`](/files/deploy_apertus_official.sh)
 
-## 1. Sign in to Super Swarm
+In both scripts, find `BASE_DOMAIN="${BASE_DOMAIN:-monai-swarm.win}"` and replace `monai-swarm.win` with your domain.
+
+## 2. Sign in to Super Swarm
 
 In the Super Swarm dashboard, sign in using MetaMask:
 
 <img src={require('../images/swarm-log-in.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## 2. Create a Kubernetes cluster
+## 3. Create a Kubernetes cluster
 
-2.1. Go to **Kubernetes** and press **Create Cluster**:
+**3.1.** Go to **Kubernetes** and press **Create Cluster**:
 
 <img src={require('../images/kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-2.2. Add a GPU to the cluster, allocate resources, and press **Create Cluster**:
+**3.2.** Add a GPU to the cluster, allocate resources, and press **Create Cluster**:
 
 <img src={require('../images/create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## 3. Download the cluster configuration file
+## 4. Download the cluster configuration file
 
 <img src={require('../images/kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
-## 4. Point `kubectl` to the configuration file
+## 5. Point `kubectl` to the configuration file
 
 Execute the following command:
 
@@ -54,13 +58,9 @@ export KUBECONFIG=<xxxx-xxx-xxx-xxxx>-kubeconfig.yaml
 
 Replace `<xxxx-xxx-xxx-xxxx>-kubeconfig.yaml` with the name of the downloaded configuration file.
 
-## 5. Update the scripts
-
-In both scripts (`deploy_medgemma_official.sh` and `deploy_apertus_official.sh`), find `BASE_DOMAIN="${BASE_DOMAIN:-monai-swarm.win}"` and replace `monai-swarm.win` with your domain.
-
 ## 6. Set the API key
 
-Choose any password that will protect your API endpoints. Execute the following command and type your chosen secret (characters won't be displayed):
+Choose a password that will protect your API endpoints. Execute the following command and type your chosen secret (characters won't be displayed):
 
 ```shell
 read -rs API_KEY && export API_KEY
@@ -141,12 +141,12 @@ In the Super Swarm dashboard, go to **Kubernetes** and publish the cluster.
 
 ## 11. Send test requests
 
-In the test requests below, replace:
+### Apertus
+
+In the following test request, replace:
 
 - `<DOMAIN>` with your domain.
 - `<API_KEY>` with the key you set in [Step 6](/cli/guides/swarm-vllm#6-set-the-api-key).
-
-### Apertus
 
 ```shell
 curl https://apertus-vllm.<DOMAIN>/v1/completions \
@@ -162,6 +162,14 @@ curl https://apertus-vllm.<DOMAIN>/v1/completions \
 
 ### MedGemma
 
+In the following test request, replace:
+
+- `<DOMAIN>` with your domain.
+- `<API_KEY>` with the key you set in [Step 6](/cli/guides/swarm-vllm#6-set-the-api-key).
+- `<BASE64_IMAGE>` with a base64-encoded image. To convert an image, use the command: `base64 -i your-image.png`.
+
+Ensure that `image/png` matches your actual file type; use `image/jpeg` for JPG files, for example.
+
 ```shell
 curl https://medgemma-vllm.<DOMAIN>/v1/chat/completions \
   -H 'Authorization: Bearer <API_KEY>' \
@@ -173,7 +181,7 @@ curl https://medgemma-vllm.<DOMAIN>/v1/chat/completions \
         "role": "user",
         "content": [
           {"type": "text", "text": "Describe this image briefly."},
-          {"type": "image_url", "image_url": {"url": "data:image/png;base64,PASTE_BASE64_HERE"}} 
+          {"type": "image_url", "image_url": {"url": "data:image/png;base64,<BASE64_IMAGE>"}}
         ]
       }
     ],
