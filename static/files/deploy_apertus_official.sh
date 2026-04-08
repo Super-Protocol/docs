@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-BASE_DOMAIN="${BASE_DOMAIN:-monai-swarm.win}"
+BASE_DOMAIN="${BASE_DOMAIN:-superprotocol.com}"
 API_HOST="${API_HOST:-apertus-vllm.${BASE_DOMAIN}}"
 MODEL_NAME="${MODEL_NAME:-swiss-ai/Apertus-8B-2509}"
 MODEL_ENTRY_NAME="${MODEL_ENTRY_NAME:-apertus}"
