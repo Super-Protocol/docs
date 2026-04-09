@@ -64,13 +64,13 @@ In the Super Swarm dashboard, sign in using either Google (recommended) or MetaM
 
 ## 5. Provide access to the bucket
 
-**5.1.** In Object Storage, click **Policy Rules**:
+**5.1.** In **Object Storage**, click **Policy Rules**:
 
 <img src={require('../images/swarm-object-storage-policy-rules.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-**5.2.** Click **+Grant Access** in the top-right corner, select a Service Account, and click **Grant Access**:
+**5.2.** Click **+Grant Access** in the top-right corner, select a **Service Account**, and click **Grant Access**:
 
 <img src={require('../images/swarm-policy-rules-grant-access.png').default} width="auto" height="auto" border="1"/>
 <br/>
@@ -119,8 +119,8 @@ Ensure `AWS_DEFAULT_REGION` matches the region in the **Connect Info**.
 
 ```shell
 aws s3 sync ./qwen-1.5b s3://${S3_BUCKET}/models/qwen-1.5b/ \
-    --endpoint-url ${S3_ENDPOINT} \
-    --exclude ".cache/*"
+  --endpoint-url ${S3_ENDPOINT} \
+  --exclude ".cache/*"
 ```
 
 **7.4.** Check if the model was uploaded successfully:
@@ -182,7 +182,7 @@ Back in the Super Swarm dashboard, go to **Ingresses** and check the hostname li
 <br/>
 <br/>
 
-At your DNS provider, add a CNAME record pointing to the hostname and a TXT record for domain verification. 
+At your DNS provider, add a CNAME record pointing to the hostname and a TXT record for domain verification.
 
 Ensure the statuses have changed to **Verified** and **Delegated**. This may take a couple of minutes.
 
