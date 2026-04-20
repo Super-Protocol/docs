@@ -126,19 +126,19 @@ kubectl get ingress
 
 Expected output:
 
-- Two pods in `1/1 Running`
-- Two services
-- Two ingresses
+- A pod in `1/1 Running`
+- A service
+- An ingress
 
 ## 9. Confirm DNS records
 
-Back in the Super Swarm dashboard, go to **Ingresses** and note the two hostnames listed there.
+Back in the Super Swarm dashboard, go to **Ingresses** and note a hostname listed there.
 
 <img src={require('../images/swarm-ingresses-vllm.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-For each hostname, add a CNAME record pointing to it and a TXT record for domain verification at your DNS provider.
+At your DNS provider, add a CNAME record pointing to the hostname and a TXT record for domain verification.
 
 Back in the Super Swarm dashboard, ensure the statuses are **Verified** and **Delegated**. This may take a couple of minutes.
 
