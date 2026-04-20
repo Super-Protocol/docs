@@ -132,7 +132,7 @@ Expected output:
 
 ## 9. Confirm DNS records
 
-Back in the Super Swarm dashboard, go to **Ingresses** and note the two hostnames listed there.
+Back in the Super Swarm dashboard, go to **Ingresses** and note a hostname listed there.
 
 <img src={require('../images/swarm-ingresses-vllm.png').default} width="auto" height="auto" border="1"/>
 <br/>
