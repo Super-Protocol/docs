@@ -2,7 +2,7 @@
 id: "swarm-vllm"
 title: "Super Swarm: LLM Deployment (API)"
 slug: "/guides/swarm-vllm"
-sidebar_position: 20
+sidebar_position: 99
 displayed_sidebar: null
 unlisted: true
 ---

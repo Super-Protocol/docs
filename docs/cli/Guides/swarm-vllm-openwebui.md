@@ -1,8 +1,8 @@
 ---
 id: "swarm-vllm-openwebui"
-title: "Super Swarm: vLLM + Open WebUI"
+title: "Deploy vLLM + Open WebUI"
 slug: "/guides/swarm-vllm-openwebui"
-sidebar_position: 20
+sidebar_position: 1
 ---
 
 This guide provides step-by-step instructions for deploying an LLM on Super Swarm using [vLLM](https://github.com/vllm-project/vllm) and [Open WebUI](https://github.com/open-webui/open-webui). The guides uses MedGemma as an example; modify the deployment script accordingly if you want to launch another model.
