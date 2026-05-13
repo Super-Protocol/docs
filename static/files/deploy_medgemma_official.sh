@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-BASE_DOMAIN="${BASE_DOMAIN:-monai-swarm.win}"
+BASE_DOMAIN="${BASE_DOMAIN:-superprotocol.com}"
 API_HOST="${API_HOST:-medgemma-vllm.${BASE_DOMAIN}}"
 MODEL_NAME="${MODEL_NAME:-google/medgemma-1.5-4b-it}"
 MODEL_ENTRY_NAME="${MODEL_ENTRY_NAME:-medgemma}"

@@ -30,42 +30,19 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          /*{
+          /*{ // See src/pages/index.js
             from: "/",
-            to: "/marketplace",
+            to: "/cli",
           },*/
           {
-            from: "/data-for-ai",
-            to: "/data-for-ai/overview/about",
+            from: "/archive/data-for-ai",
+            to: "/archive/data-for-ai/overview/about",
           },
           {
-            from: "/hackathon",
-            to: "/hackathon/about",
-          },
-          {
-            from: "/cli/guides/quick-guide",
-            to: "/cli/guides/deploy-app",
-          },
-          {
-            from: "/marketplace/account/web2",
-            to: "/marketplace/account#account-window"
-          },
-          {
-            from: "/marketplace/account/web3",
-            to: "/marketplace/account#account-window"
+            from: "/archive/hackathon",
+            to: "/archive/hackathon/about",
           },
         ],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "marketplace",
-        path: "./docs/marketplace",
-        routeBasePath: "/marketplace",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
       },
     ],
     [
@@ -90,59 +67,6 @@ const config = {
         rehypePlugins: [katex],
       },
     ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "whitepaper",
-        path: "./docs/whitepaper",
-        routeBasePath: "/whitepaper",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "data-for-ai",
-        path: "./docs/data-for-ai",
-        routeBasePath: "/data-for-ai",
-        sidebarPath: require.resolve("./sidebar.js"), // To make sections expanded by default
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "hackathon",
-        path: "./docs/hackathon",
-        routeBasePath: "/hackathon",
-        //sidebarPath: require.resolve("./sidebar.js"),
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "colab",
-        path: "./docs/colab",
-        routeBasePath: "/colab",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "guides",
-        path: "./docs/guides",
-        routeBasePath: "/guides",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
   ],
   presets: [
     [
@@ -150,8 +74,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "./docs/developers",
-          routeBasePath: "/developers",
+          path: "./docs/archive",
+          routeBasePath: "/archive",
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -180,13 +104,6 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Marketplace",
-            docsPluginId: "marketplace",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
             label: "CLI",
             docsPluginId: "cli",
           },
@@ -197,19 +114,6 @@ const config = {
             label: "Fundamentals",
             docsPluginId: "fundamentals",
           },
-          /*{
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "Developers",
-          },*/
-          /*{
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "Whitepaper",
-            docsPluginId: "whitepaper",
-          },*/
         ],
       },
       prism: {
@@ -221,9 +125,9 @@ const config = {
         maxHeadingLevel: 3,
       },
       metadata: [
-        {name: 'description', content: 'Technical documentation for Super Protocol.'},
+        {name: 'description', content: 'Super Protocol\'s technical documentation'},
         {property: 'og:title', content: 'Super Protocol Docs'},
-        {property: 'og:description', content: 'Technical documentation for Super Protocol.'},
+        {property: 'og:description', content: 'Super Protocol\'s technical documentation'},
         {property: 'og:image', content: 'https://docs.superprotocol.com/img/icon.png'},
         {property: 'og:url', content: 'https://docs.superprotocol.com'},
       ]
@@ -238,7 +142,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: [/*"developers", */"marketplace", /*"whitepaper", */"fundamentals", "cli"],
+      docsRouteBasePath: ["cli", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
