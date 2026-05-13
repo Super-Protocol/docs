@@ -1,8 +1,8 @@
 ---
 id: "swarm-vllm-s3"
-title: "Super Swarm: LLM Deployment with S3 Storage"
+title: "Deploy LLM from S3 Storage"
 slug: "/guides/swarm-vllm-s3"
-sidebar_position: 21
+sidebar_position: 2
 ---
 
 This guide provides step-by-step instructions for deploying an LLM on Super Swarm using an S3 object storage, with Qwen2.5 as an example. Modify the deployment script if you want to launch another model.

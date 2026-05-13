@@ -1,0 +1,21 @@
+---
+id: "cli-orders"
+title: "orders"
+slug: "/cli/commands/orders"
+sidebar_position: 4
+
+---
+
+This group contains commands to track and manage <a id="order"><span className="dashed-underline">orders</span></a>. Note that [Marketplace web app](https://marketplace.superprotocol.com/marketplace) may be more convenient to use than most of the commands in this group.
+
+## Commands
+
+| <div style={{width:200}}>**Command**</div>                            | <div style={{width:565}}>**Description**</div> |
+| :-                                                                    | :- |
+| [orders list](/archive/cli/commands/orders/list)                              | Lists orders. |
+| [orders get](/archive/cli/commands/orders/get)                                | Displays information on an order. |
+| [orders replenish-deposit](/archive/cli/commands/orders/replenish-deposit)    | Replenishes the order deposit. |
+| [orders cancel](/archive/cli/commands/orders/cancel)                          | Cancels an order. |
+| [orders download-result](/archive/cli/commands/orders/download-result)        | Downloads the order result. |
+| [orders complete](/archive/cli/commands/orders/complete)                      | Completes an order. |
+| [orders get-report](/archive/cli/commands/orders/get-report)                  | Downloads the order report. |
