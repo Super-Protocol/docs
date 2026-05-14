@@ -1,10 +1,8 @@
 ---
 id: "swarm-vllm"
-title: "Super Swarm: LLM Deployment (API)"
-slug: "/guides/swarm-vllm"
-sidebar_position: 99
-displayed_sidebar: null
-unlisted: true
+title: "Deploy LLM (API)"
+slug: "/swarm-vllm"
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
@@ -38,25 +36,25 @@ Modify the deployment parameters if you are using another model.
 
 In the Super Swarm dashboard, sign in using either Google (recommended) or MetaMask.
 
-<img src={require('../images/swarm-sign-in.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-sign-in.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 3. Create a Kubernetes cluster
 
 **3.1.** Go to **Kubernetes** and click **Create Cluster**:
 
-<img src={require('../images/swarm-kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **3.2.** Provide a name, add a **GPU** to the cluster, allocate resources, and click **Create Cluster**:
 
-<img src={require('../images/swarm-create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 4. Download the cluster configuration file
 
-<img src={require('../images/swarm-kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 5. Point `kubectl` to the configuration file
@@ -136,7 +134,7 @@ Expected output:
 
 Back in the Super Swarm dashboard, go to **Ingresses** and note a hostname listed there.
 
-<img src={require('../images/swarm-ingresses-vllm.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-ingresses-vllm.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -144,14 +142,14 @@ At your DNS provider, add a CNAME record pointing to the hostname and a TXT reco
 
 Back in the Super Swarm dashboard, ensure the statuses are **Verified** and **Delegated**. This may take a couple of minutes.
 
-<img src={require('../images/swarm-ingresses-vllm-verified.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-ingresses-vllm-verified.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 10. Publish the cluster
 
 Go to **Kubernetes** and publish the cluster.
 
-<img src={require('../images/swarm-kubernetes-publish-cluster.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-publish-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 11. Send test requests
