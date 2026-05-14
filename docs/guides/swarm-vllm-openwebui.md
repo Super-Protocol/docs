@@ -93,20 +93,13 @@ max-num-batched-tokens=2048
 
 Back in the Super Swarm dashboard, go to **Ingresses** and note two hostnames listed there.
 
-```
 <img src={require('./images/swarm-ingresses-vllm-openwebui.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
-```
 
-At your DNS provider, add a CNAME record pointing to a hostname and a TXT record for domain verification. Do this for both hostnames.
+At your DNS provider, add a TXT record for domain verification and a CNAME record pointing to a hostname (DNS only, no proxy). Do this for both hostnames.
 
 Back in the Super Swarm dashboard, ensure the statuses have changed to **Verified** and **Delegated**. This may take a couple of minutes.
-
-```
-<img src={require('./images/swarm-ingresses-vllm-openwebui-verified.png').default} width="auto" height="auto" border="1"/>
-<br/>
-```
 
 ## 8. Publish the cluster
 

@@ -22,7 +22,7 @@ sidebar_position: 0
   width="100%"
   style={{aspectRatio: '16/9'}}
   src="https://www.youtube.com/embed/GfVSwvl_BrY"
-  title="Super Swarm in Action"
+  title="Confidential LLM Deployment"
   frameBorder="0"
   allowFullScreen
 />
