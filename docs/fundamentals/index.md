@@ -2,7 +2,7 @@
 id: "index"
 title: "Super Swarm Certification System"
 slug: "/"
-sidebar_position: 1
+sidebar_position: 0
 ---
 
 When a node (a confidential virtual machine, VM) joins a Super Swarm network, it goes through a cryptographic onboarding process that establishes hardware-backed trust before participating in any cluster operations. This document explains how that process works: what certificates are generated, how they relate to one another, and what exactly is verified.
