@@ -30,9 +30,10 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          /*{ // See src/pages/index.js
+          /*// Use src/pages/index.js instead
+          {
             from: "/",
-            to: "/cli",
+            to: "/guides",
           },*/
           {
             from: "/archive/data-for-ai",
@@ -59,6 +60,17 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
+        id: "archive",
+        path: "./docs/archive",
+        routeBasePath: "/archive",
+        //sidebarPath: "./sidebars.js",
+        remarkPlugins: [math],
+        rehypePlugins: [katex],
+      },
+    ],
+    /*[
+      "@docusaurus/plugin-content-docs",
+      {
         id: "cli",
         path: "./docs/cli",
         routeBasePath: "/cli",
@@ -66,7 +78,7 @@ const config = {
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
-    ],
+    ],*/
   ],
   presets: [
     [
@@ -74,8 +86,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "./docs/archive",
-          routeBasePath: "/archive",
+          path: "./docs/guides",
+          routeBasePath: "/guides",
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -100,6 +112,20 @@ const config = {
           href: 'https://superprotocol.com/'
         },
         items: [
+          /*{
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "Super Swarm",
+            docsPluginId: "superswarm",
+          },*/
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "Guides & Demo",
+            docsPluginId: "default",
+          },
           {
             type: "doc",
             docId: "index",
@@ -107,12 +133,19 @@ const config = {
             label: "Fundamentals",
             docsPluginId: "fundamentals",
           },
-          {
+          /*{
             type: "doc",
             docId: "index",
             position: "right",
             label: "CLI",
             docsPluginId: "cli",
+          },*/
+          {
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "Archive",
+            docsPluginId: "archive",
           },
         ],
       },
@@ -142,7 +175,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: ["cli", "fundamentals"],
+      docsRouteBasePath: ["guides", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,

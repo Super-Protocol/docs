@@ -1,7 +1,7 @@
 ---
 id: "swarm-vllm-s3"
 title: "Deploy LLM from S3 Storage"
-slug: "/guides/swarm-vllm-s3"
+slug: "/swarm-vllm-s3"
 sidebar_position: 2
 ---
 
@@ -26,39 +26,39 @@ Modify the deployment configuration and `vllmConfig` if you are deploying anothe
 
 In the Super Swarm dashboard, sign in using either Google (recommended) or MetaMask.
 
-<img src={require('../images/swarm-sign-in.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-sign-in.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 3. Create a service account
 
 **3.1.** Open **Service Accounts** and click **Create Service Account**:
 
-<img src={require('../images/swarm-create-service-account.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-service-account.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **3.2.** Provide a name and click **Create**:
 
-<img src={require('../images/swarm-create-service-account-window.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-service-account-window.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **3.3.** Copy and save both Access and Secret keys and click **Done**:
 
-<img src={require('../images/swarm-create-service-account-keys.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-service-account-keys.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 4. Create a bucket
 
 **4.1.** Open **Object Storage** and click **Create Bucket**:
 
-<img src={require('../images/swarm-object-storage.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-object-storage.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **4.2.** Provide a name for the bucket and click **Create Bucket**:
 
-<img src={require('../images/swarm-create-bucket.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-bucket.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -66,13 +66,13 @@ In the Super Swarm dashboard, sign in using either Google (recommended) or MetaM
 
 **5.1.** In **Object Storage**, click **Policy Rules**:
 
-<img src={require('../images/swarm-object-storage-policy-rules.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-object-storage-policy-rules.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **5.2.** Click **+Grant Access** in the top-right corner, select a **Service Account**, and click **Grant Access**:
 
-<img src={require('../images/swarm-policy-rules-grant-access.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-policy-rules-grant-access.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 6. Download a model from Hugging Face
@@ -91,11 +91,11 @@ hf download Qwen/Qwen2.5-1.5B-Instruct --local-dir ./qwen-1.5b
 
 **7.1.** In **Object Storage**, click **Connect Info** to see your S3 Endpoint, Bucket ID, and the region:
 
-<img src={require('../images/swarm-object-storage-connect-info.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-object-storage-connect-info.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
-<img src={require('../images/swarm-connect-info.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-connect-info.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -110,7 +110,7 @@ export S3_BUCKET="<YOUR_BUCKET_ID>"
 ```
 
 Replace:
-- `<YOUR_ACCESS_KEY>` and `<YOUR_SECRET_KEY>` with the keys you obtained in [Step 3](/cli/guides/swarm-vllm-s3#3-create-a-service-account).
+- `<YOUR_ACCESS_KEY>` and `<YOUR_SECRET_KEY>` with the keys you obtained in [Step 3](/guides/swarm-vllm-s3#3-create-a-service-account).
 - `<YOUR_S3_ENDPOINT>` and `<YOUR_BUCKET_ID>` with corresponding values in the **Connect Info**.
 
 Ensure `AWS_DEFAULT_REGION` matches the region in the **Connect Info**.
@@ -134,18 +134,18 @@ aws s3 ls s3://${S3_BUCKET}/models/qwen-1.5b/ \
 
 **8.1.** Go to **Kubernetes** and click **Create Cluster**:
 
-<img src={require('../images/swarm-kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **8.2.** Provide a name, add a **GPU** to the cluster, allocate resources, and click **Create Cluster**:
 
-<img src={require('../images/swarm-create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 9. Download the cluster configuration file
 
-<img src={require('../images/swarm-kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 10. Point `kubectl` to the configuration file
@@ -178,7 +178,7 @@ bash deploy_qwen_s3.sh
 
 Back in the Super Swarm dashboard, go to **Ingresses** and check the hostname listed there:
 
-<img src={require('../images/swarm-ingresses-s3.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-ingresses-s3.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -186,14 +186,14 @@ At your DNS provider, add a CNAME record pointing to the hostname and a TXT reco
 
 Ensure the statuses have changed to **Verified** and **Delegated**. This may take a couple of minutes.
 
-<img src={require('../images/swarm-ingresses-s3-verified.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-ingresses-s3-verified.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 14. Publish the cluster
 
 Go to **Kubernetes** and publish the cluster.
 
-<img src={require('../images/swarm-kubernetes-publish-cluster.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-publish-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 

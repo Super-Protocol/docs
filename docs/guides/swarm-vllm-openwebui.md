@@ -1,7 +1,7 @@
 ---
 id: "swarm-vllm-openwebui"
 title: "Deploy vLLM + Open WebUI"
-slug: "/guides/swarm-vllm-openwebui"
+slug: "/swarm-vllm-openwebui"
 sidebar_position: 1
 ---
 
@@ -26,27 +26,27 @@ Modify the deployment parameters if you are using another model.
 
 In the Super Swarm dashboard, sign in using either Google (recommended) or MetaMask.
 
-<img src={require('../images/swarm-sign-in.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-sign-in.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 3. Create a Kubernetes cluster
 
 **3.1.** Go to **Kubernetes** and click **Create Cluster**:
 
-<img src={require('../images/swarm-kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-create-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
 **3.2.** Provide a name, add a **GPU** to the cluster, allocate resources, and click **Create Cluster**:
 
-<img src={require('../images/swarm-create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-create-kubernetes-space.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 4. Download the cluster configuration file
 
 Download the `kubeconfig`:
 
-<img src={require('../images/swarm-kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-download-kubeconfig.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
 
@@ -93,26 +93,19 @@ max-num-batched-tokens=2048
 
 Back in the Super Swarm dashboard, go to **Ingresses** and note two hostnames listed there.
 
-```
-<img src={require('../images/swarm-ingresses-vllm-openwebui.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-ingresses-vllm-openwebui.png').default} width="auto" height="auto" border="1"/>
 <br/>
 <br/>
-```
 
-At your DNS provider, add a CNAME record pointing to a hostname and a TXT record for domain verification. Do this for both hostnames.
+At your DNS provider, add a TXT record for domain verification and a CNAME record pointing to a hostname (DNS only, no proxy). Do this for both hostnames.
 
 Back in the Super Swarm dashboard, ensure the statuses have changed to **Verified** and **Delegated**. This may take a couple of minutes.
-
-```
-<img src={require('../images/swarm-ingresses-vllm-openwebui-verified.png').default} width="auto" height="auto" border="1"/>
-<br/>
-```
 
 ## 8. Publish the cluster
 
 Go to **Kubernetes** and publish the cluster.
 
-<img src={require('../images/swarm-kubernetes-publish-cluster.png').default} width="auto" height="auto" border="1"/>
+<img src={require('./images/swarm-kubernetes-publish-cluster.png').default} width="auto" height="auto" border="1"/>
 <br/>
 
 ## 9. Test the deployment
