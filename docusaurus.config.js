@@ -30,53 +30,20 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          /*{
+          /*// Use src/pages/index.js instead
+          {
             from: "/",
-            to: "/marketplace",
+            to: "/guides",
           },*/
           {
-            from: "/data-for-ai",
-            to: "/data-for-ai/overview/about",
+            from: "/archive/data-for-ai",
+            to: "/archive/data-for-ai/overview/about",
           },
           {
-            from: "/hackathon",
-            to: "/hackathon/about",
-          },
-          {
-            from: "/cli/guides/quick-guide",
-            to: "/cli/guides/deploy-app",
-          },
-          {
-            from: "/marketplace/account/web2",
-            to: "/marketplace/account#account-window"
-          },
-          {
-            from: "/marketplace/account/web3",
-            to: "/marketplace/account#account-window"
+            from: "/archive/hackathon",
+            to: "/archive/hackathon/about",
           },
         ],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "marketplace",
-        path: "./docs/marketplace",
-        routeBasePath: "/marketplace",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "cli",
-        path: "./docs/cli",
-        routeBasePath: "/cli",
-        //sidebarPath: "./sidebars.js",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
       },
     ],
     [
@@ -93,56 +60,25 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "whitepaper",
-        path: "./docs/whitepaper",
-        routeBasePath: "/whitepaper",
+        id: "archive",
+        path: "./docs/archive",
+        routeBasePath: "/archive",
         //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
     ],
-    [
+    /*[
       "@docusaurus/plugin-content-docs",
       {
-        id: "data-for-ai",
-        path: "./docs/data-for-ai",
-        routeBasePath: "/data-for-ai",
-        sidebarPath: require.resolve("./sidebar.js"), // To make sections expanded by default
+        id: "cli",
+        path: "./docs/cli",
+        routeBasePath: "/cli",
+        //sidebarPath: "./sidebars.js",
         remarkPlugins: [math],
         rehypePlugins: [katex],
       },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "hackathon",
-        path: "./docs/hackathon",
-        routeBasePath: "/hackathon",
-        //sidebarPath: require.resolve("./sidebar.js"),
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "colab",
-        path: "./docs/colab",
-        routeBasePath: "/colab",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "guides",
-        path: "./docs/guides",
-        routeBasePath: "/guides",
-        remarkPlugins: [math],
-        rehypePlugins: [katex],
-      },
-    ],
+    ],*/
   ],
   presets: [
     [
@@ -150,8 +86,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: "./docs/developers",
-          routeBasePath: "/developers",
+          path: "./docs/guides",
+          routeBasePath: "/guides",
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
@@ -176,19 +112,19 @@ const config = {
           href: 'https://superprotocol.com/'
         },
         items: [
+          /*{
+            type: "doc",
+            docId: "index",
+            position: "right",
+            label: "Super Swarm",
+            docsPluginId: "superswarm",
+          },*/
           {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Marketplace",
-            docsPluginId: "marketplace",
-          },
-          {
-            type: "doc",
-            docId: "index",
-            position: "right",
-            label: "CLI",
-            docsPluginId: "cli",
+            label: "Guides & Demo",
+            docsPluginId: "default",
           },
           {
             type: "doc",
@@ -201,15 +137,16 @@ const config = {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Developers",
+            label: "CLI",
+            docsPluginId: "cli",
           },*/
-          /*{
+          {
             type: "doc",
             docId: "index",
             position: "right",
-            label: "Whitepaper",
-            docsPluginId: "whitepaper",
-          },*/
+            label: "Archive",
+            docsPluginId: "archive",
+          },
         ],
       },
       prism: {
@@ -221,9 +158,9 @@ const config = {
         maxHeadingLevel: 3,
       },
       metadata: [
-        {name: 'description', content: 'Technical documentation for Super Protocol.'},
+        {name: 'description', content: 'Super Protocol\'s technical documentation'},
         {property: 'og:title', content: 'Super Protocol Docs'},
-        {property: 'og:description', content: 'Technical documentation for Super Protocol.'},
+        {property: 'og:description', content: 'Super Protocol\'s technical documentation'},
         {property: 'og:image', content: 'https://docs.superprotocol.com/img/icon.png'},
         {property: 'og:url', content: 'https://docs.superprotocol.com'},
       ]
@@ -238,7 +175,7 @@ const config = {
     "@easyops-cn/docusaurus-search-local",
     ({
       hashed: true,
-      docsRouteBasePath: [/*"developers", */"marketplace", /*"whitepaper", */"fundamentals", "cli"],
+      docsRouteBasePath: ["guides", "fundamentals"],
       language: ["en"],
       highlightSearchTermsOnTargetPage: true,
       explicitSearchResultPath: true,
