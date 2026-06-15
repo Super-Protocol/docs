@@ -119,4 +119,4 @@ Click **Next** and then **Import**.
 
 ## Contact Super Protocol
 
-If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](mailto:community@superprotocol.com).

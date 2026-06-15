@@ -9,7 +9,7 @@ If you have questions, encounter issues, or need assistance during the campaign,
 
 ## Support ticket
 
-For official support via email, please [submit a request](https://superprotocol.zendesk.com/hc/en-us/requests/new) through our help desk. Our team will promptly follow up with you by email.
+For official support via email, please [submit a request](mailto:community@superprotocol.com) through our help desk. Our team will promptly follow up with you by email.
 
 ## Discord
 

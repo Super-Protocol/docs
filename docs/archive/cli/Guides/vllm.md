@@ -96,4 +96,4 @@ VLLM_API_KEY=9c6dbf44-cef7-43a4-b362-43295b244446 \
 
 ## Support
 
-If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](mailto:community@superprotocol.com).
