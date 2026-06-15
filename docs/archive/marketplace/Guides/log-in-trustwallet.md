@@ -128,4 +128,4 @@ To see your SPPI token balance in Trust Wallet, import the token.
 
 ## Contact Super Protocol
 
-If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+If you face any issues, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](mailto:community@superprotocol.com).
