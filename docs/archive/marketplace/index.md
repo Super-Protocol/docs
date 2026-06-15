@@ -26,4 +26,4 @@ Upcoming features in the future development phases:
 - Additional engines and support for more model categories.
 - A light UI theme.
 
-Any feedback would be very much appreciated—please join our [Discord](https://discord.gg/superprotocol) or use the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+Any feedback would be very much appreciated—please join our [Discord](https://discord.gg/superprotocol) or use the [contact form](mailto:community@superprotocol.com).

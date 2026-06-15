@@ -161,4 +161,4 @@ You can prepare your model, workflow, and custom node files manually or using Do
 
 ## Support
 
-If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](https://superprotocol.zendesk.com/hc/en-us/requests/new).
+If you have any issues or questions, contact Super Protocol on [Discord](https://discord.gg/superprotocol) or via the [contact form](mailto:community@superprotocol.com).
